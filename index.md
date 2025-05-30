@@ -14,7 +14,7 @@ seo:
 
   <!-- 1. School (Math, Physics) -->
   <a class="category-card" href="/categories/school/">
-    <span>🧮</span>
+    <span>📐</span>
     <div>Шкільні<br><small>Математика, фізика та ін.</small></div>
   </a>
 
