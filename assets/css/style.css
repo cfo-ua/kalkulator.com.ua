@@ -307,3 +307,25 @@ footer {
     padding: 0.6em 0.4em;
   }
 }
+
+/* 404 Page Styles */
+.page-404 {
+  text-align: center;
+  margin-top: 3em;
+}
+.page-404 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.page-404 p {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 2em;
+}
+.page-404 .category-card {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1.05rem;
+}
