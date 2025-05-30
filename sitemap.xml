@@ -8,5 +8,6 @@
     <loc>https://kalkulator.com.ua/calculators/loan/</loc>
     <priority>0.8</priority>
   </url>
-  <!-- Add more calculators here, or generate automatically via Jekyll plugin if building locally -->
+  <!-- Add more calculators here as needed. 
+       If your site is static (not using Jekyll plugins), manually add each calculator URL here. -->
 </urlset>
