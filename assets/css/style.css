@@ -72,6 +72,14 @@ header {
   min-width: 0;
 }
 
+.logo img,
+.logo svg {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
 .logo:hover, .logo:focus {
   color: var(--accent);
 }
