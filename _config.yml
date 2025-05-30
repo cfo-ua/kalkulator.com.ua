@@ -8,3 +8,26 @@ collections:
     output: true
     permalink: /:collection/:name/
 markdown: kramdown
+
+# Enable Jekyll plugins on GitHub Pages (autogenerates sitemap.xml and robots.txt)
+plugins:
+  - jekyll-sitemap
+
+# Set timezone for proper date handling
+timezone: Europe/Kiev
+
+# Defaults for SEO and layouts (optional, improves DRYness)
+defaults:
+  - scope:
+      path: ""
+      type: calculators
+    values:
+      layout: calculator
+      seo:
+        keywords: ["калькулятор", "онлайн калькулятор", "україна"]
+
+# (Optional) Configuration for Markdown rendering
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
