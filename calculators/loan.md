@@ -1,6 +1,7 @@
 ---
 layout: calculator
 title: "Кредитний калькулятор"
+category: financial
 seo:
   title: "Кредитний калькулятор — Фінанси | kalkulator.com.ua"
   description: "Розрахуйте щомісячний платіж по кредиту онлайн. Зручно для банків та швидких розрахунків."
@@ -23,11 +24,6 @@ faq:
     answer: Ні, калькулятор враховує лише основні параметри кредиту. Для точного розрахунку звертайтесь до банку.
   - question: Чи можна розрахувати дострокове погашення?
     answer: Ця версія калькулятора не враховує дострокові виплати, але ми плануємо додати цю функцію пізніше.
-related:
-  - url: /calculators/deposit/
-    name: Депозитний калькулятор
-  - url: /calculators/simple/
-    name: Простий калькулятор
 ---
 
 <form id="loan-form">
@@ -46,3 +42,22 @@ related:
   <button type="submit">Розрахувати</button>
 </form>
 <div id="loan-result" class="result"></div>
+
+{%- comment -%}
+<div class="ads">
+  [Тут буде реклама]
+</div>
+{%- endcomment -%}
+
+{% assign current_category = page.category | default: page.categories[0] %}
+{% assign related_calcs = site.pages | where: "category", current_category | where_exp: "item", "item.url != page.url" | limit: 5 %}
+{% if related_calcs.size > 0 %}
+<div class="related">
+  <h2>Схожі калькулятори</h2>
+  <ul>
+    {% for calc in related_calcs %}
+    <li><a href="{{ calc.url }}">{{ calc.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
