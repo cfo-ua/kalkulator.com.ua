@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Кредитний калькулятор"
-category: financial
+category: [financial]
 seo:
   title: "Кредитний калькулятор — Фінанси | kalkulator.com.ua"
   description: "Розрахуйте щомісячний платіж по кредиту онлайн. Зручно для банків та швидких розрахунків."
