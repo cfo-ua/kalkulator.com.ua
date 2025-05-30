@@ -104,8 +104,9 @@ header {
 }
 
 .intro {
-  margin: var(--air);
+  margin: var(--air) auto;
   text-align: center;
+  max-width: 600px;
 }
 
 main {
@@ -113,6 +114,9 @@ main {
   max-width: 720px;
   margin: 0 auto;
   padding: var(--air) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Calculator block */
@@ -122,6 +126,8 @@ main {
   box-shadow: var(--shadow);
   padding: 2em;
   margin: var(--air) 0;
+  max-width: 420px;
+  width: 100%;
 }
 .calculator-block label {
   display: block;
@@ -164,6 +170,8 @@ main {
 
 .seo-content, .faq, .related {
   margin: var(--air) 0;
+  width: 100%;
+  max-width: 600px;
 }
 .seo-content pre {
   background: #ececec;
@@ -205,6 +213,7 @@ main {
 .ads {
   margin: 2em 0 1em 0;
   text-align: center;
+  width: 100%;
 }
 .ad-placeholder {
   background: #f0f0f6;
@@ -223,95 +232,17 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-/* Responsive for mobile */
-@media (max-width: 600px) {
-  .nav {
-    padding: 0 1em;
-  }
-  .categories {
-    grid-template-columns: 1fr;
-    gap: 1.2em;
-    padding: 0 0.4em;
-  }
-  main {
-    padding: 1.2em 0;
-  }
-  .calculator-block {
-    padding: 1em;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    width: 190px;
-    box-shadow: var(--shadow);
-    border-radius: 0 0 0 12px;
-    z-index: 50;
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  .menu-btn {
-    display: block;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .nav {
-    padding: 0 0.5em;
-    height: 56px;
-  }
-  .logo img {
-    height: 28px;
-  }
-  main {
-    padding: 1em 0.5em 2em 0.5em;
-  }
-  h1 {
-    font-size: 1.5rem;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    text-align: left;
-  }
-  .intro {
-    margin: 0.7em 0 1.2em 0;
-    font-size: 1.05em;
-    text-align: left;
-    padding-right: 0.5em;
-  }
-  .categories {
-    grid-template-columns: 1fr;
-    gap: 1.1em;
-    padding: 0;
-  }
-  .category-card {
-    min-height: 60px;
-    padding: 0.8em 0.7em;
-    gap: 0.7em;
-    font-size: 0.98rem;
-  }
-  .category-card span {
-    font-size: 1.7em;
-  }
-}
-
-@media (max-width: 400px) {
-  main {
-    padding: 0.7em 0.2em 1.5em 0.2em;
-  }
-  .category-card {
-    padding: 0.6em 0.4em;
-  }
-}
-
 /* 404 Page Styles */
 .page-404 {
   text-align: center;
   margin-top: 3em;
+  padding: 2em 1em 3em 1em;
+  border-radius: var(--radius);
+  background: #f7f7f9;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page-404 h1 {
   font-size: 3rem;
@@ -328,4 +259,66 @@ footer {
   margin: 0 auto;
   display: inline-block;
   font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 0.6em;
+    height: 56px;
+  }
+  .logo img {
+    height: 28px;
+  }
+  main {
+    padding: 1.2em 0 2em 0;
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    width: 100%;
+  }
+  .intro {
+    margin: 0.7em auto 1.2em auto;
+    font-size: 1.05em;
+    text-align: center;
+    padding: 0 0.5em;
+    width: 100%;
+  }
+  .categories {
+    grid-template-columns: 1fr;
+    gap: 1.1em;
+    padding: 0 0.5em;
+    width: 100%;
+  }
+  .category-card {
+    min-height: 60px;
+    padding: 1em 0.8em;
+    gap: 0.7em;
+    font-size: 1.05rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  .category-card span {
+    font-size: 1.7em;
+  }
+  .calculator-block {
+    padding: 1.2em 0.8em;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+  .seo-content, .faq, .related, .ads {
+    padding: 0 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .page-404 {
+    padding: 2em 0.5em 3em 0.5em;
+    width: 100%;
+    max-width: 98vw;
+  }
 }
