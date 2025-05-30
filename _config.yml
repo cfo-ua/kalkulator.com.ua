@@ -1,0 +1,10 @@
+title: "kalkulator.com.ua"
+description: "Онлайн калькулятори для України"
+baseurl: "" # Required for GitHub Pages
+url: "https://kalkulator.com.ua"
+exclude: ["README.md"]
+collections:
+  calculators:
+    output: true
+    permalink: /:collection/:name/
+markdown: kramdown
