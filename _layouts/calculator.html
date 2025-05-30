@@ -28,19 +28,26 @@
       {% endfor %}
     </section>
     {% endif %}
-    {% if page.related %}
+
+    {%- assign current_category = page.category | default: page.categories[0] -%}
+    {%- assign related_calcs = site.pages | where_exp: "item", "item.categories contains current_category and item.url != page.url" | limit: 5 -%}
+    {% if related_calcs.size > 0 %}
     <section class="related">
       <h2>Схожі калькулятори</h2>
       <ul>
-        {% for related in page.related %}
-        <li><a href="{{ related.url }}">{{ related.name }}</a></li>
+        {% for calc in related_calcs %}
+        <li><a href="{{ calc.url }}">{{ calc.title }}</a></li>
         {% endfor %}
       </ul>
     </section>
     {% endif %}
+
+    {# Ads block is now removed/disabled #}
+    {%- comment -%}
     <aside class="ads">
       <div class="ad-placeholder">[Тут буде реклама]</div>
     </aside>
+    {%- endcomment -%}
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
