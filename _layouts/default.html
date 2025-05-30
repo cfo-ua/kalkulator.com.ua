@@ -3,13 +3,25 @@
 <head>
   {% include seo.html %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   {% include header.html %}
   <main>
     {{ content }}
   </main>
-  {% include footer.html %}
+  <footer>
+    <div class="footer-content">
+      &copy; <span id="year"></span> kalkulator.com.ua
+    </div>
+    <script>
+      // Set copyright year dynamically for static hosting compatibility
+      document.addEventListener("DOMContentLoaded", function() {
+        var y = document.getElementById('year');
+        if (y) y.textContent = new Date().getFullYear();
+      });
+    </script>
+  </footer>
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
