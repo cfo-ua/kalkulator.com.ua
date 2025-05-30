@@ -1,0 +1,260 @@
+:root {
+  --main-color: #1a1a1a;
+  --accent: #0071e3;
+  --bg: #fff;
+  --border: #e5e5e5;
+  --radius: 14px;
+  --shadow: 0 1px 6px rgba(60,60,60,0.06);
+  --air: 24px;
+}
+
+html {
+  font-size: 18px;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  color: var(--main-color);
+  font-family: 'Inter', 'SF Pro', Arial, sans-serif;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--air);
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--main-color);
+  text-decoration: none;
+  gap: 0.5em;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Home page cards */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--air);
+  margin: var(--air) 0;
+  padding: 0 var(--air);
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1.3em 1em;
+  background: #f7f7f9;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 1.05rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, background 0.2s;
+  min-height: 64px;
+}
+.category-card:hover {
+  box-shadow: 0 1px 10px rgba(60,60,60,0.15);
+  background: #eaf3ff;
+}
+.category-card span {
+  font-size: 2em;
+}
+
+.intro {
+  margin: var(--air);
+  text-align: center;
+}
+
+main {
+  flex: 1 1 auto;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--air) 0;
+}
+
+/* Calculator block */
+.calculator-block {
+  background: #f7f7f9;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2em;
+  margin: var(--air) 0;
+}
+.calculator-block label {
+  display: block;
+  margin: 0.8em 0 0.3em 0;
+  font-weight: 500;
+}
+.calculator-block input[type="number"] {
+  width: 100%;
+  padding: 0.4em 0.7em;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 1em;
+  background: #fff;
+  transition: border 0.2s;
+}
+.calculator-block input[type="number"]:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+.calculator-block button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.calculator-block button:hover {
+  background: #005bb5;
+}
+.result {
+  font-size: 1.2em;
+  color: var(--accent);
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+.seo-content, .faq, .related {
+  margin: var(--air) 0;
+}
+.seo-content pre {
+  background: #ececec;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.faq details {
+  margin-bottom: 1em;
+  background: #f7f7f9;
+  padding: 0.7em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.related ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2em;
+}
+.related li {
+  margin: 0;
+}
+.related a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.related a:hover {
+  text-decoration: underline;
+}
+
+.ads {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+.ad-placeholder {
+  background: #f0f0f6;
+  padding: 1.5em;
+  border-radius: 8px;
+  color: #999;
+}
+
+/* Footer */
+footer {
+  background: #f7f7f9;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 0.95em;
+  color: #777;
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 1em;
+  }
+  .categories {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+    padding: 0 0.4em;
+  }
+  main {
+    padding: 1.2em 0;
+  }
+  .calculator-block {
+    padding: 1em;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 190px;
+    box-shadow: var(--shadow);
+    border-radius: 0 0 0 12px;
+    z-index: 50;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
