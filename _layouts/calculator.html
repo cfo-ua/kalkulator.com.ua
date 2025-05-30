@@ -30,7 +30,14 @@
     {% endif %}
 
     {%- assign current_category = page.category | default: page.categories[0] -%}
-    {%- assign related_calcs = site.pages | where_exp: "item", "item.categories contains current_category and item.url != page.url" | limit: 5 -%}
+    {%- assign related_by_cat = site.pages | where_exp: "item", "item.categories contains current_category" -%}
+    {%- assign related_calcs = "" | split: "" -%}
+    {%- for calc in related_by_cat -%}
+      {%- if calc.url != page.url -%}
+        {%- assign related_calcs = related_calcs | push: calc -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign related_calcs = related_calcs | slice: 0, 5 -%}
     {% if related_calcs.size > 0 %}
     <section class="related">
       <h2>Схожі калькулятори</h2>
