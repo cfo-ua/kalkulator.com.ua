@@ -11,103 +11,106 @@ document.addEventListener("DOMContentLoaded", function () {
     rate,
     months,
     replenish = 0,
-    replenishEnable = false,
-    noReplenishFirst = false,
-    prolong = 0
+    capitalize = true
   }) {
     let totalInterest = 0;
     let totalReplenish = 0;
-    let totalMonths = months * (prolong + 1);
     let currentPrincipal = principal;
 
-    for (let p = 0; p <= prolong; p++) {
+    if (capitalize) {
+      // Compound interest with monthly replenishment
       for (let i = 0; i < months; i++) {
-        // For the very first month, option to skip replenishment
-        if (replenishEnable && (p > 0 || i > 0 || !noReplenishFirst)) {
-          // Add replenishment at beginning of month
+        if (replenish > 0 && i > 0) {
           currentPrincipal += replenish;
           totalReplenish += replenish;
         }
-        // Interest for the month (on all capital)
         let monthInterest = currentPrincipal * (rate / 12 / 100);
         totalInterest += monthInterest;
-        // Capitalization: add interest to principal
         currentPrincipal += monthInterest;
+      }
+    } else {
+      // No capitalization: payout interest each month, replenishment increases base
+      for (let i = 0; i < months; i++) {
+        if (replenish > 0 && i > 0) {
+          currentPrincipal += replenish;
+          totalReplenish += replenish;
+        }
+        let monthInterest = currentPrincipal * (rate / 12 / 100);
+        totalInterest += monthInterest;
+        // principal does NOT increase from interest
       }
     }
     return {
       totalInterest,
       totalReplenish,
-      totalMonths,
       finalPrincipal: currentPrincipal
     };
   }
 
   if (form) {
+    // Replenish checkbox enables/disables input
+    const replenishEnable = document.getElementById('deposit-replenish-enable');
+    const replenishInput = document.getElementById('deposit-replenish');
+    replenishEnable.addEventListener('change', function () {
+      replenishInput.disabled = !this.checked;
+      if (!this.checked) replenishInput.value = 0;
+      replenishInput.style.background = this.checked ? '#fff' : '#f2f2f2';
+    });
+    replenishInput.disabled = !replenishEnable.checked;
+    replenishInput.style.background = replenishEnable.checked ? '#fff' : '#f2f2f2';
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const rate = Number(document.getElementById('deposit-rate').value);
       const months = Number(document.getElementById('deposit-months').value);
       const principal = Number(document.getElementById('deposit-amount').value);
-      const replenishEnable = document.getElementById('deposit-replenish-enable').checked;
-      const replenish = replenishEnable ? Number(document.getElementById('deposit-replenish').value) : 0;
-      const noReplenishFirst = document.getElementById('no-replenish-first').checked;
-      const prolong = Number(document.getElementById('deposit-prolong').value);
+      const replenishEnableChecked = replenishEnable.checked;
+      const replenish = replenishEnableChecked ? Number(replenishInput.value) : 0;
 
-      if (principal < 0 || months < 1 || months > 36 || rate < 0 || replenish < 0 || prolong < 0 || prolong > 5) {
+      const payoutType = form.querySelector('input[name="deposit-payout"]:checked').value;
+      const capitalize = payoutType === 'capitalize';
+
+      if (principal < 0 || months < 1 || months > 36 || rate < 0 || replenish < 0) {
         result.textContent = "Будь ласка, введіть коректні дані.";
         return;
       }
 
-      const { totalInterest, totalReplenish, totalMonths, finalPrincipal } = calculateDeposit({
+      const { totalInterest, totalReplenish, finalPrincipal } = calculateDeposit({
         principal,
         rate,
         months,
         replenish,
-        replenishEnable,
-        noReplenishFirst,
-        prolong
+        capitalize
       });
 
       const tax = totalInterest * 0.23; // 18% ПДФО + 5% військовий збір
       const netInterest = totalInterest - tax;
-      const avgMonthlyNet = netInterest / totalMonths;
 
-      // Output block
+      // Effective APR for display (in case of capitalization)
+      let effectiveRate = "";
+      if (capitalize) {
+        effectiveRate = ((finalPrincipal - principal - totalReplenish) / (principal + totalReplenish) * 12 / months * 100);
+        // For short term deposits, this can be misleading if replenishments are big, so for clarity:
+        effectiveRate = isNaN(effectiveRate) ? "" : (effectiveRate.toFixed(2) + "% на рік");
+      } else {
+        effectiveRate = (rate.toFixed(2) + "% на рік");
+      }
+
+      // Output block (blue, as on your screenshot)
       result.innerHTML = `
-        <div style="font-size:1.4em; font-weight:600; color:#269c26; margin-bottom:0.3em;">
-          ${formatUA(netInterest)} ₴
-        </div>
-        <div style="font-size:1em; color:#222; margin-bottom:1.2em;">
-          Середній щомісячний дохід — <b>${formatUA(avgMonthlyNet)}</b> ₴<br>
-          Після сплати податку <input type="checkbox" checked disabled style="vertical-align:middle;">
-        </div>
-        <hr>
-        <div style="text-align:left; font-size:1em;">
-          <b>Розрахунок:</b><br>
+        <div style="text-align:left; font-size:1.08em; color:#157aff; font-weight:600;">
+          <span style="font-size:1.08em; font-weight:700; color:#157aff; display:block; margin-bottom:0.7em;">Розрахунок:</span>
           <span>Сума вкладу: <b>${formatUA(principal)} ₴</b></span><br>
           <span>Сума поповнень: <b>${formatUA(totalReplenish)} ₴</b></span><br>
-          <span>Процентна ставка: <b>${rate}% на рік</b></span><br>
+          <span>Процентна ставка: <b>${effectiveRate}</b></span><br>
           <span>Проценти (дохід): <b>${formatUA(totalInterest)} ₴</b></span><br>
           <span>Податок (18% ПДФО + 5% військовий збір): <b>${formatUA(tax)} ₴</b></span><br>
           <br>
           <b>Після сплати податку:</b><br>
-          <span>Проценти (дохід): <b style="color:#269c26;">${formatUA(netInterest)} ₴</b></span>
+          <span>Проценти (дохід): <b>${formatUA(netInterest)} ₴</b></span>
         </div>
       `;
     });
-
-    // Enable/disable replenish input UX
-    const replenishEnable = document.getElementById('deposit-replenish-enable');
-    const replenishInput = document.getElementById('deposit-replenish');
-    if (replenishEnable && replenishInput) {
-      replenishEnable.addEventListener('change', function () {
-        replenishInput.disabled = !this.checked;
-        replenishInput.style.background = this.checked ? '#fff' : '#f2f2f2';
-      });
-      replenishInput.disabled = !replenishEnable.checked;
-      replenishInput.style.background = replenishEnable.checked ? '#fff' : '#f2f2f2';
-    }
   }
 });
