@@ -3,6 +3,7 @@
 <meta name="keywords" content="{% if page.seo.keywords %}{{ page.seo.keywords | join: ', ' }}{% endif %}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo.svg' | relative_url }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ page.url | absolute_url | replace: 'index.html','' }}">
 {%- if page.seo.structured_data -%}
 <script type="application/ld+json">
 {{ page.seo.structured_data | strip_newlines }}
