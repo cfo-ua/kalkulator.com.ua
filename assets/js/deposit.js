@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return val.toLocaleString('uk-UA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
   }
 
+  // Average balance for correct "ефективна ставка" with replenishments
+  function calculateAverageBalance({principal, replenish, months}) {
+    if (replenish <= 0) return principal; // No replenishments
+    // Each replenishment is present for (months - i) months, i = 1..months-1 (since initial is principal)
+    // Average balance = (principal * months + replenish * Σ(months - i for i = 1..months-1)) / months
+    // But replenishment is from month 2 to months (total months-1 replenishments)
+    let sum = principal * months;
+    for (let i = 1; i < months; ++i) {
+      sum += replenish * (months - i);
+    }
+    return sum / months;
+  }
+
   function calculateDeposit({
     principal,
     rate,
@@ -87,23 +100,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const tax = totalInterest * 0.23; // 18% ПДФО + 5% військовий збір
       const netInterest = totalInterest - tax;
 
-      // Effective APR for display (in case of capitalization)
+      // Ефективна ставка: реально отриманий дохід (до податків) за рік до середнього залишку
       let effectiveRate = "";
       if (capitalize) {
-        effectiveRate = ((finalPrincipal - principal - totalReplenish) / (principal + totalReplenish) * 12 / months * 100);
-        // For short term deposits, this can be misleading if replenishments are big, so for clarity:
-        effectiveRate = isNaN(effectiveRate) ? "" : (effectiveRate.toFixed(2) + "% на рік");
+        // Use average balance for the period
+        let avgBalance = calculateAverageBalance({principal, replenish, months});
+        effectiveRate = (avgBalance > 0)
+          ? ((totalInterest / avgBalance) * (12 / months) * 100).toFixed(2) + "% на рік"
+          : rate.toFixed(2) + "% на рік";
       } else {
-        effectiveRate = (rate.toFixed(2) + "% на рік");
+        effectiveRate = rate.toFixed(2) + "% на рік";
       }
 
-      // Output block (blue, as on your screenshot)
       result.innerHTML = `
         <div style="text-align:left; font-size:1.08em; color:#157aff; font-weight:600;">
           <span style="font-size:1.08em; font-weight:700; color:#157aff; display:block; margin-bottom:0.7em;">Розрахунок:</span>
           <span>Сума вкладу: <b>${formatUA(principal)} ₴</b></span><br>
           <span>Сума поповнень: <b>${formatUA(totalReplenish)} ₴</b></span><br>
-          <span>Процентна ставка: <b>${effectiveRate}</b></span><br>
+          <span>Ефективна ставка: <b>${effectiveRate}</b></span><br>
           <span>Проценти (дохід): <b>${formatUA(totalInterest)} ₴</b></span><br>
           <span>Податок (18% ПДФО + 5% військовий збір): <b>${formatUA(tax)} ₴</b></span><br>
           <br>
