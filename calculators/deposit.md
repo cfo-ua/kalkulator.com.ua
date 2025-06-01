@@ -56,16 +56,19 @@ faq:
     </label>
     <input type="number" id="deposit-replenish" min="0" step="100" value="0" style="max-width:110px;" disabled>
   </div>
-  <div>
-    <label>
-      <input type="radio" name="deposit-payout" value="capitalize" checked>
-      Відсотки додаються до вкладу (капіталізація)
-    </label>
-    <label style="margin-left:1.5em;">
-      <input type="radio" name="deposit-payout" value="monthly">
-      Відсотки виплачуються щомісяця
-    </label>
-  </div>
+  <fieldset style="border: none; padding: 0; margin: 1em 0 0.5em 0;">
+    <legend style="font-size:1em;font-weight:600;margin-bottom:0.2em;">Спосіб виплати відсотків</legend>
+    <div style="display: flex; flex-direction: column; gap: 0.3em;">
+      <label style="display:flex; align-items:center; gap:0.6em;">
+        <input type="radio" name="deposit-payout" value="capitalize" checked>
+        Відсотки додаються до вкладу (капіталізація)
+      </label>
+      <label style="display:flex; align-items:center; gap:0.6em;">
+        <input type="radio" name="deposit-payout" value="monthly">
+        Відсотки виплачуються щомісяця
+      </label>
+    </div>
+  </fieldset>
   <button type="submit">Розрахувати</button>
 </form>
 <div id="deposit-result" class="result"></div>
