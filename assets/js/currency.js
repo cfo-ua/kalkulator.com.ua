@@ -1,3 +1,4 @@
+// Currency List (in Ukrainian, UAH always present)
 const TOP_CURRENCIES = [
   { code: "USD", name: "Долар США" },
   { code: "EUR", name: "Євро" },
@@ -12,8 +13,6 @@ const TOP_CURRENCIES = [
 ];
 const UAH = { code: "UAH", name: "Гривня" };
 
-let rates = {}; // { "USD": {rate: Number, units: Number, date: "YYYY-MM-DD"}, ... }
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('currency-form');
   const amountInput = document.getElementById('currency-amount');
@@ -25,21 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const chartCanvas = document.getElementById('currency-chart');
   let chartInstance = null;
 
-  // Set default date to today, but clamp max to today
+  // Set today's date as default and max
   if (dateInput) {
-    const today = new Date();
-    const todayStr = today.toISOString().slice(0, 10);
+    const todayStr = (new Date()).toISOString().slice(0, 10);
     dateInput.value = todayStr;
     dateInput.max = todayStr;
   }
-
-  // Prevent picking future dates
-  dateInput.addEventListener('input', function() {
-    const todayStr = new Date().toISOString().slice(0, 10);
-    if (this.value > todayStr) {
-      this.value = todayStr;
-    }
-  });
 
   // Populate currency dropdowns
   function populateCurrencies() {
@@ -61,27 +51,47 @@ document.addEventListener("DOMContentLoaded", function () {
     toSelect.value = "USD";
   }
 
-  // Fetch NBU rates for given date, fallback up to 7 days back if no data
+  // Fetch NBU rates for a specific date, fallback up to 7 days prior
   async function fetchRatesWithFallback(dateStr) {
     let date = new Date(dateStr);
     for (let i = 0; i < 7; ++i) {
       const tryDateStr = date.toISOString().slice(0, 10);
       const yyyymmdd = tryDateStr.replace(/-/g, "");
       let url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json&date=" + yyyymmdd;
-      const resp = await fetch(url, {cache: "reload"});
-      if (resp.ok) {
-        const data = await resp.json();
-        if (Array.isArray(data) && data.length > 0) {
-          return { rates: data, usedDate: tryDateStr, tried: i };
+      try {
+        const resp = await fetch(url, {cache: "reload"});
+        if (resp.ok) {
+          const data = await resp.json();
+          if (Array.isArray(data) && data.length > 0) {
+            return { rates: data, usedDate: tryDateStr, tried: i };
+          }
         }
+      } catch (e) {
+        // Network error, try previous day
       }
-      // Go back 1 day
-      date.setDate(date.getDate() - 1);
+      date.setDate(date.getDate() - 1); // Go back 1 day
     }
     return { rates: [], usedDate: dateStr, tried: 7 };
   }
 
-  // Perform conversion from 'from' to 'to' currency
+  // Prepare rates object for conversion
+  function prepareRates(data, usedDate) {
+    const filtered = {};
+    filtered["UAH"] = { rate: 1, units: 1, date: usedDate };
+    TOP_CURRENCIES.forEach(cur => {
+      const found = data.find(row => row.CurrencyCodeL === cur.code);
+      if (found) {
+        filtered[cur.code] = {
+          rate: Number(found.Amount),
+          units: Number(found.Units),
+          date: found.StartDate ? found.StartDate.split(".").reverse().join("-") : usedDate
+        };
+      }
+    });
+    return filtered;
+  }
+
+  // Conversion logic
   function convert(amount, from, to, rates) {
     if (!rates[from] || !rates[to]) return null;
     let valueOut;
@@ -101,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return Number(val).toLocaleString('uk-UA', { minimumFractionDigits: 2, maximumFractionDigits: digits });
   }
 
-  // Handle conversion UI
+  // Main conversion handler
   async function handleConvert(e) {
     if (e) e.preventDefault();
     const amount = Number(amountInput.value);
@@ -121,20 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chartBlock.style.display = "none";
         return;
       }
-      // Prepare rates object as before...
-      const filtered = {};
-      filtered["UAH"] = { rate: 1, units: 1, date: usedDate };
-      TOP_CURRENCIES.forEach(cur => {
-        const found = data.find(row => row.CurrencyCodeL === cur.code);
-        if (found) {
-          filtered[cur.code] = {
-            rate: Number(found.Amount),
-            units: Number(found.Units),
-            date: found.StartDate ? found.StartDate.split(".").reverse().join("-") : usedDate
-          };
-        }
-      });
-      rates = filtered;
+      const rates = prepareRates(data, usedDate);
       const converted = convert(amount, from, to, rates);
       if (converted == null || isNaN(converted)) {
         resultBlock.innerHTML = `<span style='color:#d32f2f;'>Дані по валюті недоступні на цю дату.</span>`;
@@ -164,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <span style="font-size:0.96em;color:#555;">Джерело: <a href="https://bank.gov.ua/" target="_blank" rel="noopener nofollow">bank.gov.ua</a></span>
         </span>
       `;
-      // Show chart as before (for the found date)
+      // Show chart as before (for found date)
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
         renderChart((from === "UAH") ? to : from, usedDate);
       } else {
@@ -176,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Chart.js loader (from CDN)
+  // Chart.js loader from CDN
   function ensureChartJs(callback) {
     if (window.Chart) return callback();
     const script = document.createElement('script');
@@ -197,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         d.setDate(d.getDate() - i);
         labels.push(d.toISOString().slice(0, 10));
       }
+      // Fetch actual available rates for each day (with fallback)
       const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
       try {
         const ratesArr = await Promise.all(promises);
@@ -251,5 +249,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialization
   populateCurrencies();
   handleConvert();
-
 });
