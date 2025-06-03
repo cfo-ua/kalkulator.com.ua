@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const dateInput = document.getElementById('currency-date');
   const resultBlock = document.getElementById('currency-result');
   const chartBlock = document.getElementById('currency-chart-block');
-  const chartCard = chartBlock; // for styling
   const chartCanvas = document.getElementById('currency-chart');
   let chartInstance = null;
 
@@ -184,16 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Apple-style chart rendering
   function renderChart(curCode, dateStr) {
-    // Chart container: apple-style, wide and minimal
     chartBlock.style.display = "block";
-    chartBlock.classList.add("chart-card");
-    let wrap = chartBlock.querySelector('.chart-canvas-wrap');
-    if (!wrap) {
-      wrap = document.createElement('div');
-      wrap.className = "chart-canvas-wrap";
-      chartBlock.appendChild(wrap);
-      wrap.appendChild(chartCanvas);
-    }
     ensureChartJs(async function () {
       const endDate = dateStr ? new Date(dateStr) : new Date();
       const labels = [];
@@ -229,11 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
               pointRadius: 0,
               pointHoverRadius: 5,
               fill: true,
-              cubicInterpolationMode: 'monotone',
-              shadowOffsetX: 0,
-              shadowOffsetY: 2,
-              shadowBlur: 8,
-              shadowColor: "rgba(21,122,255,0.11)"
+              cubicInterpolationMode: 'monotone'
             }]
           },
           options: {
