@@ -68,6 +68,7 @@ faq:
 </form>
 <div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
 
+<!--CHART_SPLIT-->
 <!-- CHART: outside of calculator-block, fullscreen and mobile friendly -->
 <div id="currency-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
   <h3 style="margin-bottom:0.9em;text-align:center;">Графік зміни курсу</h3>
