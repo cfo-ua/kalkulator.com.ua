@@ -33,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     dateInput.max = todayStr;
   }
 
+  // Prevent picking future dates
+  dateInput.addEventListener('input', function() {
+    const todayStr = new Date().toISOString().slice(0, 10);
+    if (this.value > todayStr) {
+      this.value = todayStr;
+    }
+  });
+
   // Populate currency dropdowns
   function populateCurrencies() {
     const all = [UAH, ...TOP_CURRENCIES];
@@ -53,30 +61,24 @@ document.addEventListener("DOMContentLoaded", function () {
     toSelect.value = "USD";
   }
 
-  // Fetch NBU rates for given date (YYYY-MM-DD), returns Promise<rates>
-  async function fetchRates(dateStr) {
-    let url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json";
-    if (dateStr) {
-      const yyyymmdd = dateStr.replace(/-/g, "");
-      url += `&date=${yyyymmdd}`;
-    }
-    const resp = await fetch(url, {cache: "reload"});
-    if (!resp.ok) throw new Error("Не вдалося отримати курс НБУ.");
-    const data = await resp.json();
-    // Filter only top-10 and UAH (UAH will be set to 1)
-    const filtered = {};
-    filtered["UAH"] = { rate: 1, units: 1, date: dateStr || new Date().toISOString().slice(0, 10) };
-    TOP_CURRENCIES.forEach(cur => {
-      const found = data.find(row => row.CurrencyCodeL === cur.code);
-      if (found) {
-        filtered[cur.code] = {
-          rate: Number(found.rate || found.Amount),
-          units: Number(found.units || found.Units),
-          date: found.StartDate ? found.StartDate.split(".").reverse().join("-") : (dateStr || new Date().toISOString().slice(0, 10))
-        };
+  // Fetch NBU rates for given date, fallback up to 7 days back if no data
+  async function fetchRatesWithFallback(dateStr) {
+    let date = new Date(dateStr);
+    for (let i = 0; i < 7; ++i) {
+      const tryDateStr = date.toISOString().slice(0, 10);
+      const yyyymmdd = tryDateStr.replace(/-/g, "");
+      let url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json&date=" + yyyymmdd;
+      const resp = await fetch(url, {cache: "reload"});
+      if (resp.ok) {
+        const data = await resp.json();
+        if (Array.isArray(data) && data.length > 0) {
+          return { rates: data, usedDate: tryDateStr, tried: i };
+        }
       }
-    });
-    return filtered;
+      // Go back 1 day
+      date.setDate(date.getDate() - 1);
+    }
+    return { rates: [], usedDate: dateStr, tried: 7 };
   }
 
   // Perform conversion from 'from' to 'to' currency
@@ -113,9 +115,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     resultBlock.innerHTML = "<span style='color:#888;'>Завантаження курсу...</span>";
     try {
-      rates = await fetchRates(date);
+      const { rates: data, usedDate, tried } = await fetchRatesWithFallback(date);
+      if (!data || data.length === 0) {
+        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цю дату не був опублікований НБУ. Спробуйте іншу дату (будній день).</span>`;
+        chartBlock.style.display = "none";
+        return;
+      }
+      // Prepare rates object as before...
+      const filtered = {};
+      filtered["UAH"] = { rate: 1, units: 1, date: usedDate };
+      TOP_CURRENCIES.forEach(cur => {
+        const found = data.find(row => row.CurrencyCodeL === cur.code);
+        if (found) {
+          filtered[cur.code] = {
+            rate: Number(found.Amount),
+            units: Number(found.Units),
+            date: found.StartDate ? found.StartDate.split(".").reverse().join("-") : usedDate
+          };
+        }
+      });
+      rates = filtered;
       const converted = convert(amount, from, to, rates);
-      if (converted == null || isNaN(converted)) throw new Error("Дані по валюті недоступні.");
+      if (converted == null || isNaN(converted)) {
+        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Дані по валюті недоступні на цю дату.</span>`;
+        chartBlock.style.display = "none";
+        return;
+      }
       const fromRate = rates[from];
       const toRate = rates[to];
       let infoRate = "";
@@ -127,17 +152,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const cross = (toRate.rate / toRate.units) / (fromRate.rate / fromRate.units);
         infoRate = `1 ${from} = ${formatNum(cross, 6)} ${to}`;
       }
-      // Statement about official source
+      let usedDateMsg = (tried > 0)
+        ? `<br><span style="font-size:0.95em;color:#c55;">Курс знайдено на ${usedDate.split('-').reverse().join('.')} (найближча доступна дата)</span>`
+        : "";
       resultBlock.innerHTML = `
         <b>${formatNum(amount,4)} ${from}</b> = <b>${formatNum(converted,4)} ${to}</b><br>
         <span style="font-size:1em; color:#333;">${infoRate}<br>
-        Офіційний курс НБУ на ${date.split('-').reverse().join('.')}<br>
+        Офіційний курс надається <b>НБУ</b> на ${usedDate.split('-').reverse().join('.')}
+        ${usedDateMsg}
+        <br>
         <span style="font-size:0.96em;color:#555;">Джерело: <a href="https://bank.gov.ua/" target="_blank" rel="noopener nofollow">bank.gov.ua</a></span>
         </span>
       `;
-      // Show chart if UAH <-> [top-10] (not for cross conversions)
+      // Show chart as before (for the found date)
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
-        renderChart((from === "UAH") ? to : from, date);
+        renderChart((from === "UAH") ? to : from, usedDate);
       } else {
         chartBlock.style.display = "none";
       }
@@ -168,12 +197,13 @@ document.addEventListener("DOMContentLoaded", function () {
         d.setDate(d.getDate() - i);
         labels.push(d.toISOString().slice(0, 10));
       }
-      const promises = labels.map(date => fetchRates(date));
+      const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
       try {
         const ratesArr = await Promise.all(promises);
-        ratesArr.forEach(r => {
-          if (r[curCode]) {
-            data.push(r[curCode].rate / r[curCode].units);
+        ratesArr.forEach(rArr => {
+          const found = rArr.find(row => row.CurrencyCodeL === curCode);
+          if (found) {
+            data.push(Number(found.Amount) / Number(found.Units));
           } else {
             data.push(null);
           }
