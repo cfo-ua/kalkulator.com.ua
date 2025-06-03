@@ -45,27 +45,30 @@ faq:
     answer: "<b>Курси надає офіційно Національний банк України (НБУ).</b> Ми не є банком і не здійснюємо фінансових операцій."
 ---
 
+<!-- Calculator UI: vertical selects, compact layout -->
 <form id="currency-form" autocomplete="off" style="max-width:440px;margin:0 auto;">
   <label for="currency-amount" style="display:block;margin-bottom:0.5em;">Сума</label>
   <input type="number" id="currency-amount" min="0" step="any" value="1000" required style="width:100%;padding:0.7em 1em;font-size:1.18em;border-radius:9px;border:1.5px solid #e0e0e0;margin-bottom:1.1em;">
-  <div style="display:flex;gap:1em;align-items:center;justify-content:space-between;margin-bottom:1.2em;">
-    <div style="flex:1;">
+
+  <div style="display:flex;flex-direction:column;gap:0.4em;margin-bottom:1.2em;">
+    <div>
       <label for="currency-from" style="display:block;margin-bottom:0.25em;">З</label>
       <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
-    <span style="font-size:2.1em;line-height:1;color:#157aff;">→</span>
-    <div style="flex:1;">
+    <div>
       <label for="currency-to" style="display:block;margin-bottom:0.25em;">В</label>
       <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
   </div>
+
   <label for="currency-date" style="display:block;margin-bottom:0.4em;">Дата курсу</label>
   <input type="date" id="currency-date" style="padding:0.45em 0.7em;font-size:1em;border-radius:8px;border:1.5px solid #e0e0e0;margin-bottom:1.2em;width:100%;">
-  <button type="submit" style="margin-top:0.6em;width:100%;padding:0.8em;font-size:1.11em;border-radius:10px;background:#157aff;color:#fff;font-weight:600;border:none;box-shadow:0 2px 8px 0 rgba(60,60,60,0.07);transition:background 0.15s;">Конвертувати</button>
+
+  <button type="submit" style="margin-top:0.6em;width:100%;padding:0.8em;font-size:1.11em;border-radius:10px;background:#157aff;color:#fff;font-weight:600;border:none;box-shadow:0 2px 8px 0 rgba(60,60,60,0.07);">Конвертувати</button>
 </form>
 <div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
 
-<!-- CHART BLOCK: moved out of .calculator-block for fullscreen width -->
+<!-- CHART: outside of calculator-block, fullscreen and mobile friendly -->
 <div id="currency-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
   <h3 style="margin-bottom:0.9em;text-align:center;">Графік зміни курсу</h3>
   <div class="chart-canvas-wrap">
