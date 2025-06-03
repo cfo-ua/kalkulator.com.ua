@@ -1,4 +1,3 @@
-// Top-10 allowed currencies (no RUB, BYR)
 const TOP_CURRENCIES = [
   { code: "USD", name: "Долар США" },
   { code: "EUR", name: "Євро" },
@@ -11,7 +10,6 @@ const TOP_CURRENCIES = [
   { code: "SEK", name: "Шведська крона" },
   { code: "JPY", name: "Японська єна" }
 ];
-// Always include UAH
 const UAH = { code: "UAH", name: "Гривня" };
 
 let rates = {}; // { "USD": {rate: Number, units: Number, date: "YYYY-MM-DD"}, ... }
@@ -27,16 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const chartCanvas = document.getElementById('currency-chart');
   let chartInstance = null;
 
-  // Set default date to today
+  // Set default date to today, but clamp max to today
   if (dateInput) {
-    const today = new Date().toISOString().slice(0, 10);
-    dateInput.value = today;
-    dateInput.max = today;
+    const today = new Date();
+    const todayStr = today.toISOString().slice(0, 10);
+    dateInput.value = todayStr;
+    dateInput.max = todayStr;
   }
 
   // Populate currency dropdowns
   function populateCurrencies() {
-    // Always list UAH first, then others
     const all = [UAH, ...TOP_CURRENCIES];
     fromSelect.innerHTML = "";
     toSelect.innerHTML = "";
@@ -57,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch NBU rates for given date (YYYY-MM-DD), returns Promise<rates>
   async function fetchRates(dateStr) {
-    // NBU expects YYYYMMDD
     let url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json";
     if (dateStr) {
       const yyyymmdd = dateStr.replace(/-/g, "");
@@ -85,16 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Perform conversion from 'from' to 'to' currency
   function convert(amount, from, to, rates) {
     if (!rates[from] || !rates[to]) return null;
-    // Convert 'from' to UAH, then UAH to 'to'
-    // amount_in_UAH = amount * (rate[from] / units[from]) if from !== UAH
-    // amount_in_to = amount_in_UAH / (rate[to] / units[to])
-    let valueInUah, valueOut;
+    let valueOut;
     if (from === "UAH") {
       valueOut = amount / (rates[to].rate / rates[to].units);
     } else if (to === "UAH") {
       valueOut = amount * (rates[from].rate / rates[from].units);
     } else {
-      valueInUah = amount * (rates[from].rate / rates[from].units);
+      const valueInUah = amount * (rates[from].rate / rates[from].units);
       valueOut = valueInUah / (rates[to].rate / rates[to].units);
     }
     return valueOut;
@@ -114,13 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const date = dateInput.value;
     if (!amount || amount <= 0) {
       resultBlock.innerHTML = "<span style='color:#d32f2f;'>Введіть коректну суму.</span>";
+      chartBlock.style.display = "none";
       return;
     }
-    resultBlock.innerHTML = "Завантаження курсу...";
+    resultBlock.innerHTML = "<span style='color:#888;'>Завантаження курсу...</span>";
     try {
       rates = await fetchRates(date);
       const converted = convert(amount, from, to, rates);
-      if (converted == null) throw new Error("Дані по валюті недоступні.");
+      if (converted == null || isNaN(converted)) throw new Error("Дані по валюті недоступні.");
       const fromRate = rates[from];
       const toRate = rates[to];
       let infoRate = "";
@@ -129,13 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (to === "UAH") {
         infoRate = `1 ${from} = ${formatNum(fromRate.rate / fromRate.units, 4)} грн`;
       } else {
-        // Cross-rate via UAH
         const cross = (toRate.rate / toRate.units) / (fromRate.rate / fromRate.units);
         infoRate = `1 ${from} = ${formatNum(cross, 6)} ${to}`;
       }
+      // Statement about official source
       resultBlock.innerHTML = `
         <b>${formatNum(amount,4)} ${from}</b> = <b>${formatNum(converted,4)} ${to}</b><br>
-        <span style="font-size:1em; color:#333;">${infoRate} <br> Офіційний курс НБУ на ${date.split('-').reverse().join('.')}</span>
+        <span style="font-size:1em; color:#333;">${infoRate}<br>
+        Офіційний курс НБУ на ${date.split('-').reverse().join('.')}<br>
+        <span style="font-size:0.96em;color:#555;">Джерело: <a href="https://bank.gov.ua/" target="_blank" rel="noopener nofollow">bank.gov.ua</a></span>
+        </span>
       `;
       // Show chart if UAH <-> [top-10] (not for cross conversions)
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
@@ -162,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderChart(curCode, dateStr) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
-      // Prepare array of last 30 days, up to selected date
       const endDate = dateStr ? new Date(dateStr) : new Date();
       const labels = [];
       const data = [];
@@ -171,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
         d.setDate(d.getDate() - i);
         labels.push(d.toISOString().slice(0, 10));
       }
-      // Fetch all rates in parallel (max 30 requests)
       const promises = labels.map(date => fetchRates(date));
       try {
         const ratesArr = await Promise.all(promises);
@@ -182,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
             data.push(null);
           }
         });
-        // Draw chart
         if (chartInstance) chartInstance.destroy();
         chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
           type: 'line',
@@ -192,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
               label: `Курс ${curCode}/UAH`,
               data: data,
               borderColor: "#157aff",
-              backgroundColor: "rgba(21,122,255,0.07)",
+              backgroundColor: "rgba(21,122,255,0.10)",
               tension: 0.1,
               pointRadius: 2
             }]
