@@ -13,13 +13,17 @@ const TOP_CURRENCIES = [
 const UAH = { code: "UAH", name: "Гривня" };
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Defensive: only run if currency-form exists
   const form = document.getElementById('currency-form');
+  if (!form) return;
+
   const amountInput = document.getElementById('currency-amount');
   const fromSelect = document.getElementById('currency-from');
   const toSelect = document.getElementById('currency-to');
   const dateInput = document.getElementById('currency-date');
   const resultBlock = document.getElementById('currency-result');
   const chartBlock = document.getElementById('currency-chart-block');
+  const chartCard = chartBlock; // for styling
   const chartCanvas = document.getElementById('currency-chart');
   let chartInstance = null;
 
@@ -178,9 +182,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   }
 
-  // Render chart for last 30 days for selected currency
+  // Apple-style chart rendering
   function renderChart(curCode, dateStr) {
+    // Chart container: apple-style, wide and minimal
     chartBlock.style.display = "block";
+    chartBlock.classList.add("chart-card");
+    let wrap = chartBlock.querySelector('.chart-canvas-wrap');
+    if (!wrap) {
+      wrap = document.createElement('div');
+      wrap.className = "chart-canvas-wrap";
+      chartBlock.appendChild(wrap);
+      wrap.appendChild(chartCanvas);
+    }
     ensureChartJs(async function () {
       const endDate = dateStr ? new Date(dateStr) : new Date();
       const labels = [];
@@ -207,22 +220,69 @@ document.addEventListener("DOMContentLoaded", function () {
           data: {
             labels: labels.map(d => d.split('-').reverse().join('.')),
             datasets: [{
-              label: `Курс ${curCode}/UAH`,
+              label: '',
               data: data,
               borderColor: "#157aff",
-              backgroundColor: "rgba(21,122,255,0.10)",
-              tension: 0.1,
-              pointRadius: 2
+              backgroundColor: "rgba(21,122,255,0.07)",
+              borderWidth: 2,
+              tension: 0.35,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              fill: true,
+              cubicInterpolationMode: 'monotone',
+              shadowOffsetX: 0,
+              shadowOffsetY: 2,
+              shadowBlur: 8,
+              shadowColor: "rgba(21,122,255,0.11)"
             }]
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
-              legend: { display: false }
+              legend: { display: false },
+              tooltip: {
+                enabled: true,
+                backgroundColor: "#222",
+                titleColor: "#fff",
+                bodyColor: "#fff"
+              }
+            },
+            layout: {
+              padding: { left: 0, right: 0, top: 8, bottom: 10 }
             },
             scales: {
-              x: { title: { display: false }},
-              y: { title: { display: true, text: `UAH за 1 ${curCode}` } }
+              x: {
+                grid: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  display: false
+                }
+              },
+              y: {
+                grid: {
+                  color: "#e7ecf3",
+                  borderDash: [4,4],
+                  drawBorder: false,
+                },
+                ticks: {
+                  color: "#6c7a89",
+                  font: { size: 11 },
+                  padding: 4,
+                  precision: 3,
+                  callback: function(value) {
+                    return value;
+                  }
+                }
+              }
+            },
+            elements: {
+              line: {
+                borderJoinStyle: 'round',
+                borderCapStyle: 'round'
+              }
             }
           }
         });
