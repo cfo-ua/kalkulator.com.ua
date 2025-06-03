@@ -45,32 +45,19 @@ faq:
     answer: "<b>Курси надає офіційно Національний банк України (НБУ).</b> Ми не є банком і не здійснюємо фінансових операцій."
 ---
 
-<form id="currency-form" autocomplete="off" style="max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:1em;">
-  <div style="display:flex;flex-direction:column;gap:0.4em;">
-    <label for="currency-amount">Сума</label>
-    <input type="number" id="currency-amount" min="0" step="any" value="1000" required style="width:100%;padding:0.7em 1em;font-size:1.14em;border-radius:9px;border:1.5px solid #e0e0e0;">
-  </div>
-  <div style="display:flex;gap:0.6em;align-items:end;">
-    <div style="flex:1;">
-      <label for="currency-from">З</label>
-      <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
-    </div>
-    <span style="font-size:1.5em;">→</span>
-    <div style="flex:1;">
-      <label for="currency-to">В</label>
-      <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
-    </div>
-  </div>
-  <div style="display:flex;flex-direction:column;gap:0.3em;">
-    <label for="currency-date">Дата курсу</label>
-    <input type="date" id="currency-date" required style="padding:0.45em 0.7em;font-size:1em;border-radius:8px;border:1.5px solid #e0e0e0;">
-  </div>
-  <button type="submit" style="margin-top:0.4em;width:100%;padding:0.8em;font-size:1.11em;border-radius:10px;background:#157aff;color:#fff;font-weight:600;border:none;box-shadow:0 2px 8px 0 rgba(60,60,60,0.07);transition:background 0.15s;">Конвертувати</button>
+---
+# ... (metadata unchanged)
+---
+
+<form id="currency-form" autocomplete="off" style="max-width:440px;margin:0 auto;">
+  <!-- ... form unchanged ... -->
 </form>
+<div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
 
-<div id="currency-result" class="result" style="margin-top:1.1em;min-height:2.2em;"></div>
-
-<div id="currency-chart-block" style="margin-top:2em; display:none; max-width:480px;margin-left:auto;margin-right:auto;">
-  <h3 style="margin-bottom:0.7em;text-align:center;">Графік зміни курсу</h3>
-  <canvas id="currency-chart" width="100%" height="320"></canvas>
+<!-- CHART BLOCK: moved out of .calculator-block for fullscreen width -->
+<div id="currency-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
+  <h3 style="margin-bottom:0.9em;text-align:center;">Графік зміни курсу</h3>
+  <div class="chart-canvas-wrap">
+    <canvas id="currency-chart"></canvas>
+  </div>
 </div>
