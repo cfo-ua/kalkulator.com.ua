@@ -1,4 +1,3 @@
-// Currency List (in Ukrainian, UAH always present)
 const TOP_CURRENCIES = [
   { code: "USD", name: "Долар США" },
   { code: "EUR", name: "Євро" },
@@ -66,9 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return { rates: data, usedDate: tryDateStr, tried: i };
           }
         }
-      } catch (e) {
-        // Network error, try previous day
-      }
+      } catch (e) {}
       date.setDate(date.getDate() - 1); // Go back 1 day
     }
     return { rates: [], usedDate: dateStr, tried: 7 };
@@ -77,14 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prepare rates object for conversion
   function prepareRates(data, usedDate) {
     const filtered = {};
-    filtered["UAH"] = { rate: 1, units: 1, date: usedDate };
+    // Hardcode UAH
+    filtered["UAH"] = { rate: 1, date: usedDate };
     TOP_CURRENCIES.forEach(cur => {
-      const found = data.find(row => row.CurrencyCodeL === cur.code);
+      const found = data.find(row => row.cc === cur.code);
       if (found) {
         filtered[cur.code] = {
-          rate: Number(found.Amount),
-          units: Number(found.Units),
-          date: found.StartDate ? found.StartDate.split(".").reverse().join("-") : usedDate
+          rate: Number(found.rate),
+          date: found.exchangedate ? found.exchangedate.split(".").reverse().join("-") : usedDate
         };
       }
     });
@@ -96,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!rates[from] || !rates[to]) return null;
     let valueOut;
     if (from === "UAH") {
-      valueOut = amount / (rates[to].rate / rates[to].units);
+      valueOut = amount / rates[to].rate;
     } else if (to === "UAH") {
-      valueOut = amount * (rates[from].rate / rates[from].units);
+      valueOut = amount * rates[from].rate;
     } else {
-      const valueInUah = amount * (rates[from].rate / rates[from].units);
-      valueOut = valueInUah / (rates[to].rate / rates[to].units);
+      const valueInUah = amount * rates[from].rate;
+      valueOut = valueInUah / rates[to].rate;
     }
     return valueOut;
   }
@@ -142,28 +139,27 @@ document.addEventListener("DOMContentLoaded", function () {
       const toRate = rates[to];
       let infoRate = "";
       if (from === "UAH") {
-        infoRate = `1 ${to} = ${formatNum(toRate.rate / toRate.units, 4)} грн`;
+        infoRate = `1 ${to} = ${formatNum(toRate.rate, 4)} грн`;
       } else if (to === "UAH") {
-        infoRate = `1 ${from} = ${formatNum(fromRate.rate / fromRate.units, 4)} грн`;
+        infoRate = `1 ${from} = ${formatNum(fromRate.rate, 4)} грн`;
       } else {
-        const cross = (toRate.rate / toRate.units) / (fromRate.rate / fromRate.units);
+        const cross = toRate.rate / fromRate.rate;
         infoRate = `1 ${from} = ${formatNum(cross, 6)} ${to}`;
       }
       let usedDateMsg = (tried > 0)
-        ? `<br><span style="font-size:0.95em;color:#c55;">Курс знайдено на ${usedDate.split('-').reverse().join('.')} (найближча доступна дата)</span>`
+        ? `<br><span style="font-size:0.95em;color:#c55;">Курс знайдено на ${rates[from].date.split('-').reverse().join('.')} (найближча доступна дата)</span>`
         : "";
       resultBlock.innerHTML = `
         <b>${formatNum(amount,4)} ${from}</b> = <b>${formatNum(converted,4)} ${to}</b><br>
         <span style="font-size:1em; color:#333;">${infoRate}<br>
-        Офіційний курс надається <b>НБУ</b> на ${usedDate.split('-').reverse().join('.')}
+        Офіційний курс надається <b>НБУ</b> на ${rates[from].date.split('-').reverse().join('.')}
         ${usedDateMsg}
         <br>
         <span style="font-size:0.96em;color:#555;">Джерело: <a href="https://bank.gov.ua/" target="_blank" rel="noopener nofollow">bank.gov.ua</a></span>
         </span>
       `;
-      // Show chart as before (for found date)
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
-        renderChart((from === "UAH") ? to : from, usedDate);
+        renderChart((from === "UAH") ? to : from, rates[from].date);
       } else {
         chartBlock.style.display = "none";
       }
@@ -194,14 +190,13 @@ document.addEventListener("DOMContentLoaded", function () {
         d.setDate(d.getDate() - i);
         labels.push(d.toISOString().slice(0, 10));
       }
-      // Fetch actual available rates for each day (with fallback)
       const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
       try {
         const ratesArr = await Promise.all(promises);
         ratesArr.forEach(rArr => {
-          const found = rArr.find(row => row.CurrencyCodeL === curCode);
+          const found = rArr.find(row => row.cc === curCode);
           if (found) {
-            data.push(Number(found.Amount) / Number(found.Units));
+            data.push(Number(found.rate));
           } else {
             data.push(null);
           }
