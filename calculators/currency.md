@@ -28,7 +28,8 @@ seo:
     <ul>
       <li>Оберіть валюту, суму та дату — калькулятор покаже результат і динаміку курсу.</li>
       <li>Підтримуються: USD, EUR, PLN, GBP, CHF, CAD, AUD, CZK, SEK, JPY.</li>
-      <li>Джерело курсу — офіційні відкриті дані. Для банківських та готівкових операцій використовуйте курс свого банку.</li>
+      <li><b>Офіційний курс надається Національним банком України (НБУ).</b></li>
+      <li>Для банківських чи готівкових операцій використовуйте курс свого банку.</li>
     </ul>
     <p><small>Дані оновлюються щодня, графік показує курси за останній місяць.</small></p>
 scripts:
@@ -41,34 +42,34 @@ faq:
   - question: "Чи можна побачити історію курсу?"
     answer: "Так, для основних валют доступний графік зміни курсу за останні 30 днів."
   - question: "Звідки беруться курси?"
-    answer: "Курси беруться з відкритих офіційних джерел. Ми не є банком і не здійснюємо фінансових операцій."
+    answer: "<b>Курси надає офіційно Національний банк України (НБУ).</b> Ми не є банком і не здійснюємо фінансових операцій."
 ---
 
-<form id="currency-form" autocomplete="off">
-  <label>
-    Сума
-    <input type="number" id="currency-amount" min="0" step="any" value="1000" required>
-  </label>
-  <div style="display:flex; gap:1em; align-items:end;">
-    <label>
-      З
-      <select id="currency-from" required></select>
-    </label>
-    <span style="font-size:1.4em; margin-bottom:0.3em;">→</span>
-    <label>
-      В
-      <select id="currency-to" required></select>
-    </label>
-  </div>
-  <label>
-    Дата курсу
-    <input type="date" id="currency-date" max="{{ 'now' | date: '%Y-%m-%d' }}">
-  </label>
-  <button type="submit">Конвертувати</button>
-</form>
-<div id="currency-result" class="result" style="margin-top:1.5em;"></div>
+<form id="currency-form" autocomplete="off" style="max-width:440px;margin:0 auto;">
+  <label for="currency-amount" style="display:block;margin-bottom:0.5em;">Сума</label>
+  <input type="number" id="currency-amount" min="0" step="any" value="1000" required style="width:100%;padding:0.7em 1em;font-size:1.18em;border-radius:9px;border:1.5px solid #e0e0e0;margin-bottom:1.1em;">
 
-<div id="currency-chart-block" style="margin-top:2em; display:none;">
-  <h3 style="margin-bottom:0.7em;">Графік зміни курсу</h3>
+  <div style="display:flex;gap:1em;align-items:center;justify-content:space-between;margin-bottom:1.2em;">
+    <div style="flex:1;">
+      <label for="currency-from" style="display:block;margin-bottom:0.25em;">З</label>
+      <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
+    </div>
+    <span style="font-size:2.1em;line-height:1;color:#157aff;">→</span>
+    <div style="flex:1;">
+      <label for="currency-to" style="display:block;margin-bottom:0.25em;">В</label>
+      <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
+    </div>
+  </div>
+
+  <label for="currency-date" style="display:block;margin-bottom:0.4em;">Дата курсу</label>
+  <input type="date" id="currency-date" max="{{ 'now' | date: '%Y-%m-%d' }}" style="padding:0.45em 0.7em;font-size:1em;border-radius:8px;border:1.5px solid #e0e0e0;margin-bottom:1.2em;width:100%;">
+
+  <button type="submit" style="margin-top:0.6em;width:100%;padding:0.8em;font-size:1.11em;border-radius:10px;background:#157aff;color:#fff;font-weight:600;border:none;box-shadow:0 2px 8px 0 rgba(60,60,60,0.07);transition:background 0.15s;">Конвертувати</button>
+</form>
+
+<div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
+
+<div id="currency-chart-block" style="margin-top:2em; display:none; max-width:480px;margin-left:auto;margin-right:auto;">
+  <h3 style="margin-bottom:0.7em;text-align:center;">Графік зміни курсу</h3>
   <canvas id="currency-chart" width="100%" height="320"></canvas>
 </div>
