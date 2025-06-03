@@ -658,3 +658,64 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
     padding: 0.95em 1em;
   }
 }
+
+/* --- Add near end of file --- */
+
+/* Fullscreen chart card */
+.chart-card {
+  background: #fff;
+  box-shadow: 0 4px 32px 0 rgba(60,60,60,0.08), 0 1.5px 8px 0 rgba(21,122,255,0.06);
+  border-radius: 24px;
+  max-width: 900px;
+  margin: 2em auto 1em auto;
+  padding: 2em 2em 2.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96vw;
+  min-width: 0;
+  transition: box-shadow 0.18s;
+}
+.chart-card h3 {
+  font-size: 1.22em;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+  color: #222;
+}
+.chart-canvas-wrap {
+  width: 100%;
+  min-width: 0;
+  height: 340px;
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: linear-gradient(120deg,#f7faff 70%,#e6f0ff 100%);
+  box-shadow: 0 2px 22px 0 rgba(21,122,255,0.06);
+  padding: 1em 0.3em 1.4em 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#currency-chart {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 160px;
+  max-height: 320px;
+  display: block;
+  background: none;
+}
+@media (max-width: 800px) {
+  .chart-card {
+    max-width: 99vw;
+    padding: 1.1em 0.3em 2em 0.3em;
+    border-radius: 16px;
+  }
+  .chart-canvas-wrap { height: 220px; border-radius: 12px; }
+}
+@media (max-width: 480px) {
+  .chart-card {
+    padding: 0.7em 0em 1.1em 0em;
+    border-radius: 12px;
+  }
+  .chart-canvas-wrap { height: 168px; border-radius: 10px; }
+}
