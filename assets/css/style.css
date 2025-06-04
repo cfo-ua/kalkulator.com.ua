@@ -734,3 +734,25 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
     padding: 0.1em 0.2em 0.7em 0.2em;
   }
 }
+
+.chart-range-btn {
+  background: #edf2fa;
+  border: none;
+  color: #157aff;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 0.45em 1.5em;
+  border-radius: 7px;
+  margin: 0 0.1em 0.3em 0.1em;
+  cursor: pointer;
+  transition: background 0.16s, color 0.14s;
+}
+.chart-range-btn.active,
+.chart-range-btn:focus {
+  background: #157aff;
+  color: #fff;
+  outline: none;
+}
+.chart-range-btn:hover {
+  background: #d6e7ff;
+}
