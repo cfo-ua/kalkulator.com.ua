@@ -12,10 +12,17 @@
   {% include header.html %}
   <main>
     <h1>{{ page.title }}</h1>
-    <div class="calculator-block">
-      {{ content | split: '<!--CHART_SPLIT-->' | first }}
-    </div>
-    {{ content | split: '<!--CHART_SPLIT-->' | last }}
+    {%- assign split_marker = '<!--CHART_SPLIT-->' -%}
+    {%- if content contains split_marker -%}
+      <div class="calculator-block">
+        {{ content | split: split_marker | first }}
+      </div>
+      {{ content | split: split_marker | last }}
+    {%- else -%}
+      <div class="calculator-block">
+        {{ content }}
+      </div>
+    {%- endif -%}
     <section class="seo-content">
       {{ page.seo.content }}
     </section>
