@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>Податок (18% ПДФО + 5% військовий збір): <b>${formatUA(tax)} ₴</b></span><br>
           <br>
           <b>Після сплати податку:</b><br>
-          <span>Проценти (дохід): <b>${formatUA(netInterest)} ₴</b></span>
+          <span>Проценти (прибуток): <b>${formatUA(netInterest)} ₴</b></span>
         </div>
       `;
     });
