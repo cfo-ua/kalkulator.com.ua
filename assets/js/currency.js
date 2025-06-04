@@ -215,14 +215,43 @@ document.addEventListener("DOMContentLoaded", function () {
     return TOP_CURRENCIES.find(c => c.code === code) || { name: code, color: "#444" };
   }
 
-  // Chart rendering, now supports "all time"
+  // Chart rendering, now supports "all time" with downsampling
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
       let labels = [];
+      let data = [];
+      let history;
+      let hasAnyData = false;
+
       // "the whole time" mode: rangeDays = -1
       if (rangeDays === -1) {
         labels = await getAllDates();
+        history = await loadNBURates();
+
+        // Downsampling: max N points for performance
+        const MAX_POINTS = 400;
+        let step = 1;
+        if (labels.length > MAX_POINTS) {
+          step = Math.ceil(labels.length / MAX_POINTS);
+        }
+        let downLabels = [];
+        let downData = [];
+        for (let i = 0; i < labels.length; i += step) {
+          const dateStr = labels[i];
+          const dateUA = dateStr.split("-").reverse().join(".");
+          const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
+          downLabels.push(dateStr);
+          if (rec && rec["Офіційний курс гривні, грн"]) {
+            const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
+            downData.push(rate);
+            hasAnyData = true;
+          } else {
+            downData.push(null);
+          }
+        }
+        labels = downLabels;
+        data = downData;
       } else {
         let endDate = endDateStr ? new Date(endDateStr) : new Date();
         let startDate = new Date(endDate);
@@ -231,22 +260,22 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
           labels.push(d.toISOString().slice(0, 10));
         }
+        history = await loadNBURates();
+        data = [];
+        labels.forEach(dateStr => {
+          // Convert YYYY-MM-DD to DD.MM.YYYY for lookup
+          const dateUA = dateStr.split("-").reverse().join(".");
+          const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
+          if (rec && rec["Офіційний курс гривні, грн"]) {
+            const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
+            data.push(rate);
+            hasAnyData = true;
+          } else {
+            data.push(null);
+          }
+        });
       }
-      const history = await loadNBURates();
-      const data = [];
-      let hasAnyData = false;
-      labels.forEach(dateStr => {
-        // Convert YYYY-MM-DD to DD.MM.YYYY for lookup
-        const dateUA = dateStr.split("-").reverse().join(".");
-        const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
-        if (rec && rec["Офіційний курс гривні, грн"]) {
-          const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
-          data.push(rate);
-          hasAnyData = true;
-        } else {
-          data.push(null);
-        }
-      });
+
       if (!hasAnyData) {
         chartBlock.style.display = "none";
         if(chartRangeQuick) chartRangeQuick.style.display = "none";
