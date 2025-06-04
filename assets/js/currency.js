@@ -12,6 +12,40 @@ const TOP_CURRENCIES = [
 ];
 const UAH = { code: "UAH", name: "Гривня" };
 
+// Load static NBU JSON (array of records)
+let nbuHistory = null;
+async function loadNBURates() {
+  if (nbuHistory) return nbuHistory;
+  const resp = await fetch('/assets/data/nbu-history.json');
+  nbuHistory = await resp.json();
+  return nbuHistory;
+}
+
+// Get all rates for a given date in 'YYYY-MM-DD', fallback up to 7 days back
+async function fetchRatesWithFallback(dateStr) {
+  const history = await loadNBURates();
+  let date = new Date(dateStr);
+  for (let i = 0; i < 7; ++i) {
+    const tryDate = date.toISOString().slice(0, 10).split('-').reverse().join('.');
+    // Find all rates for this date (array)
+    const data = history.filter(r => r["Дата"] === tryDate);
+    if (data && data.length > 0) {
+      // Normalize to match old NBU API: {cc, rate, exchangedate}
+      return {
+        rates: data.map(row => ({
+          cc: row["Код літерний"],
+          rate: row["Офіційний курс гривні, грн"] / (row["Кількість одиниць"] || 1),
+          exchangedate: row["Дата"]
+        })),
+        usedDate: date.toISOString().slice(0, 10),
+        tried: i
+      }
+    }
+    date.setDate(date.getDate() - 1);
+  }
+  return { rates: [], usedDate: dateStr, tried: 7 };
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('currency-form');
   if (!form) return;
@@ -52,27 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     fromSelect.value = "UAH";
     toSelect.value = "USD";
-  }
-
-  // Fetch NBU rates for a specific date, fallback up to 7 days prior
-  async function fetchRatesWithFallback(dateStr) {
-    let date = new Date(dateStr);
-    for (let i = 0; i < 7; ++i) {
-      const tryDateStr = date.toISOString().slice(0, 10);
-      const yyyymmdd = tryDateStr.replace(/-/g, "");
-      let url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json&date=" + yyyymmdd;
-      try {
-        const resp = await fetch(url, {cache: "reload"});
-        if (resp.ok) {
-          const data = await resp.json();
-          if (Array.isArray(data) && data.length > 0) {
-            return { rates: data, usedDate: tryDateStr, tried: i };
-          }
-        }
-      } catch (e) {}
-      date.setDate(date.getDate() - 1); // Go back 1 day
-    }
-    return { rates: [], usedDate: dateStr, tried: 7 };
   }
 
   // Prepare rates object for conversion
@@ -191,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   }
 
-  // Chart rendering with robust missing data handling
+  // Chart rendering with robust missing data handling (uses static JSON)
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
@@ -211,103 +224,98 @@ document.addEventListener("DOMContentLoaded", function () {
         labels.push(dateStr);
         daysCount++;
       }
-      const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
-      try {
-        const ratesArr = await Promise.all(promises);
-        ratesArr.forEach((rArr, idx) => {
-          const found = rArr.find(row => row.cc === curCode);
-          if (found) {
-            data.push(Number(found.rate));
-            lastKnownRate = Number(found.rate);
-            hasAnyData = true;
-          } else {
-            // Push null to show a gap, or lastKnownRate to "hold" value
-            data.push(null);
-          }
-        });
-        // If no data at all, show error and hide chart
-        if (!hasAnyData) {
-          chartBlock.style.display = "none";
-          if(chartRangeQuick) chartRangeQuick.style.display = "none";
-          resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цей період недоступний (дані НБУ відсутні). Спробуйте інший діапазон або дату.</span>`;
-          return;
+      // Load all data at once for performance
+      const history = await loadNBURates();
+      labels.forEach((dateStr, idx) => {
+        const dateUA = dateStr.split("-").reverse().join(".");
+        const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
+        if (rec && rec["Офіційний курс гривні, грн"]) {
+          const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
+          data.push(rate);
+          lastKnownRate = rate;
+          hasAnyData = true;
+        } else {
+          data.push(null);
         }
-        if (chartInstance) chartInstance.destroy();
-        chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
-          type: 'line',
-          data: {
-            labels: labels.map(d => d.split('-').reverse().join('.')),
-            datasets: [{
-              label: '',
-              data: data,
-              borderColor: "#157aff",
-              backgroundColor: "rgba(21,122,255,0.07)",
-              borderWidth: 2,
-              tension: 0.35,
-              pointRadius: 0,
-              pointHoverRadius: 5,
-              fill: true,
-              cubicInterpolationMode: 'monotone'
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                enabled: true,
-                backgroundColor: "#222",
-                titleColor: "#fff",
-                bodyColor: "#fff",
-                callbacks: {
-                  title: (items) => `Дата: ${items[0].label}`,
-                  label: (items) => items.raw ? `Курс: ${items.formattedValue} UAH` : 'Немає даних'
-                }
-              }
-            },
-            layout: {
-              padding: { left: 0, right: 0, top: 8, bottom: 10 }
-            },
-            scales: {
-              x: {
-                grid: { display: false, drawBorder: false },
-                ticks: {
-                  display: true,
-                  autoSkip: true,
-                  maxTicksLimit: Math.min(10, daysCount),
-                  font: { size: 11 },
-                  color: "#5476a3"
-                }
-              },
-              y: {
-                grid: {
-                  color: "#e7ecf3",
-                  borderDash: [4,4],
-                  drawBorder: false,
-                },
-                ticks: {
-                  color: "#6c7a89",
-                  font: { size: 11 },
-                  padding: 4,
-                  precision: 3,
-                  callback: function(value) { return value; }
-                }
-              }
-            },
-            elements: {
-              line: {
-                borderJoinStyle: 'round',
-                borderCapStyle: 'round'
-              }
-            }
-          }
-        });
-      } catch (e) {
+      });
+      // If no data at all, show error and hide chart
+      if (!hasAnyData) {
         chartBlock.style.display = "none";
         if(chartRangeQuick) chartRangeQuick.style.display = "none";
-        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Виникла помилка при завантаженні графіку. Спробуйте інший діапазон або оновіть сторінку.</span>`;
+        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цей період недоступний (дані НБУ відсутні). Спробуйте інший діапазон або дату.</span>`;
+        return;
       }
+      if (chartInstance) chartInstance.destroy();
+      chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
+        type: 'line',
+        data: {
+          labels: labels.map(d => d.split('-').reverse().join('.')),
+          datasets: [{
+            label: '',
+            data: data,
+            borderColor: "#157aff",
+            backgroundColor: "rgba(21,122,255,0.07)",
+            borderWidth: 2,
+            tension: 0.35,
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            fill: true,
+            cubicInterpolationMode: 'monotone'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              enabled: true,
+              backgroundColor: "#222",
+              titleColor: "#fff",
+              bodyColor: "#fff",
+              callbacks: {
+                title: (items) => `Дата: ${items[0].label}`,
+                label: (items) => items.raw ? `Курс: ${items.formattedValue} UAH` : 'Немає даних'
+              }
+            }
+          },
+          layout: {
+            padding: { left: 0, right: 0, top: 8, bottom: 10 }
+          },
+          scales: {
+            x: {
+              grid: { display: false, drawBorder: false },
+              ticks: {
+                display: true,
+                autoSkip: true,
+                maxTicksLimit: Math.min(10, daysCount),
+                font: { size: 11 },
+                color: "#5476a3"
+              }
+            },
+            y: {
+              grid: {
+                color: "#e7ecf3",
+                borderDash: [4,4],
+                drawBorder: false,
+              },
+              ticks: {
+                color: "#6c7a89",
+                font: { size: 11 },
+                padding: 4,
+                precision: 3,
+                callback: function(value) { return value; }
+              }
+            }
+          },
+          elements: {
+            line: {
+              borderJoinStyle: 'round',
+              borderCapStyle: 'round'
+            }
+          }
+        }
+      });
     });
   }
 
