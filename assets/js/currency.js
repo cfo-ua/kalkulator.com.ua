@@ -1,18 +1,17 @@
+// 9 currencies as per legend screenshot (with color for chart/legend)
 const TOP_CURRENCIES = [
-  { code: "USD", name: "Долар США" },
-  { code: "EUR", name: "Євро" },
-  { code: "PLN", name: "Польський злотий" },
-  { code: "GBP", name: "Фунт стерлінгів" },
-  { code: "CHF", name: "Швейцарський франк" },
-  { code: "CAD", name: "Канадський долар" },
-  { code: "AUD", name: "Австралійський долар" },
-  { code: "CZK", name: "Чеська крона" },
-  { code: "SEK", name: "Шведська крона" },
-  { code: "JPY", name: "Японська єна" }
+  { code: "PLN", name: "Злотий", color: "#eb4848" },
+  { code: "EUR", name: "Євро", color: "#23b378" },
+  { code: "USD", name: "Долар США", color: "#3db7cc" },
+  { code: "CNY", name: "Юань Женьміньбі", color: "#353f93" },
+  { code: "TRY", name: "Турецька ліра", color: "#6a4aa0" },
+  { code: "CHF", name: "Швейцарський франк", color: "#237d6b" },
+  { code: "GBP", name: "Фунт стерлінгів", color: "#39b3a9" },
+  { code: "CAD", name: "Канадський долар", color: "#4261a3" },
+  { code: "JPY", name: "Єна", color: "#7162a7" }
 ];
 const UAH = { code: "UAH", name: "Гривня" };
 
-// Load static NBU JSON (array of records)
 let nbuHistory = null;
 async function loadNBURates() {
   if (nbuHistory) return nbuHistory;
@@ -27,10 +26,8 @@ async function fetchRatesWithFallback(dateStr) {
   let date = new Date(dateStr);
   for (let i = 0; i < 7; ++i) {
     const tryDate = date.toISOString().slice(0, 10).split('-').reverse().join('.');
-    // Find all rates for this date (array)
     const data = history.filter(r => r["Дата"] === tryDate);
     if (data && data.length > 0) {
-      // Normalize to match old NBU API: {cc, rate, exchangedate}
       return {
         rates: data.map(row => ({
           cc: row["Код літерний"],
@@ -60,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const chartRangeQuick = document.getElementById('chart-range-quick');
   let chartInstance = null;
   let currentChartRange = 30; // default
+  let allDates = null; // for "the whole time"
 
   // Set today's date as default and max
   if (dateInput) {
@@ -104,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return filtered;
   }
 
-  // Conversion logic
   function convert(amount, from, to, rates) {
     if (!rates[from] || !rates[to]) return null;
     let valueOut;
@@ -119,19 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
     return valueOut;
   }
 
-  // Format number for UA locale
   function formatNum(val, digits=4) {
     return Number(val).toLocaleString('uk-UA', { minimumFractionDigits: 2, maximumFractionDigits: digits });
   }
 
-  // Main conversion handler
   async function handleConvert(e) {
     if (e) e.preventDefault();
     const amount = Number(amountInput.value);
     const from = fromSelect.value;
     const to = toSelect.value;
     const date = dateInput.value;
-    resultBlock.innerHTML = ""; // Always reset error/result on new input
+    resultBlock.innerHTML = "";
     if (!amount || amount <= 0) {
       resultBlock.innerHTML = "<span style='color:#d32f2f;'>Введіть коректну суму.</span>";
       chartBlock.style.display = "none";
@@ -195,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Chart.js loader from CDN
   function ensureChartJs(callback) {
     if (window.Chart) return callback();
     const script = document.createElement('script');
@@ -204,41 +198,55 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   }
 
-  // Chart rendering with robust missing data handling (uses static JSON)
+  // Find all unique dates in the JSON (for "the whole time" chart)
+  async function getAllDates() {
+    if (allDates) return allDates;
+    const history = await loadNBURates();
+    const set = new Set();
+    history.forEach(r => set.add(r["Дата"]));
+    // Sort: dd.mm.yyyy to yyyy-mm-dd and sort
+    const arr = Array.from(set).map(d => d.split('.').reverse().join('-'));
+    arr.sort();
+    allDates = arr;
+    return allDates;
+  }
+
+  function getCurrencyMeta(code) {
+    return TOP_CURRENCIES.find(c => c.code === code) || { name: code, color: "#444" };
+  }
+
+  // Chart rendering, now supports "all time"
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
-      let endDate = endDateStr ? new Date(endDateStr) : new Date();
-      let startDate = new Date(endDate);
-      startDate.setDate(endDate.getDate() - (rangeDays - 1));
-      const today = new Date();
-      if (endDate > today) endDate = today;
-      if (startDate > endDate) startDate = endDate;
-      const labels = [];
+      let labels = [];
+      // "the whole time" mode: rangeDays = -1
+      if (rangeDays === -1) {
+        labels = await getAllDates();
+      } else {
+        let endDate = endDateStr ? new Date(endDateStr) : new Date();
+        let startDate = new Date(endDate);
+        startDate.setDate(endDate.getDate() - (rangeDays - 1));
+        if (startDate > endDate) startDate = endDate;
+        for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+          labels.push(d.toISOString().slice(0, 10));
+        }
+      }
+      const history = await loadNBURates();
       const data = [];
       let hasAnyData = false;
-      let lastKnownRate = null;
-      let daysCount = 0;
-      for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-        const dateStr = d.toISOString().slice(0, 10);
-        labels.push(dateStr);
-        daysCount++;
-      }
-      // Load all data at once for performance
-      const history = await loadNBURates();
-      labels.forEach((dateStr, idx) => {
+      labels.forEach(dateStr => {
+        // Convert YYYY-MM-DD to DD.MM.YYYY for lookup
         const dateUA = dateStr.split("-").reverse().join(".");
         const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
         if (rec && rec["Офіційний курс гривні, грн"]) {
           const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
           data.push(rate);
-          lastKnownRate = rate;
           hasAnyData = true;
         } else {
           data.push(null);
         }
       });
-      // If no data at all, show error and hide chart
       if (!hasAnyData) {
         chartBlock.style.display = "none";
         if(chartRangeQuick) chartRangeQuick.style.display = "none";
@@ -246,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       if (chartInstance) chartInstance.destroy();
+      const meta = getCurrencyMeta(curCode);
       chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
         type: 'line',
         data: {
@@ -253,8 +262,8 @@ document.addEventListener("DOMContentLoaded", function () {
           datasets: [{
             label: '',
             data: data,
-            borderColor: "#157aff",
-            backgroundColor: "rgba(21,122,255,0.07)",
+            borderColor: meta.color,
+            backgroundColor: meta.color + "10",
             borderWidth: 2,
             tension: 0.35,
             pointRadius: 0,
@@ -288,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
               ticks: {
                 display: true,
                 autoSkip: true,
-                maxTicksLimit: Math.min(10, daysCount),
+                maxTicksLimit: Math.min(10, labels.length),
                 font: { size: 11 },
                 color: "#5476a3"
               }
@@ -319,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Quick range buttons UX
+  // Add 'the whole time' button and quick range UX
   function setActiveRangeBtn(days) {
     if(!chartRangeQuick) return;
     currentChartRange = days;
@@ -332,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const btn = e.target.closest('.chart-range-btn');
       if (!btn) return;
       const days = Number(btn.dataset.range);
-      if (days && days !== currentChartRange) {
+      if (days !== currentChartRange) {
         setActiveRangeBtn(days);
         currentChartRange = days;
         resultBlock.innerHTML = ""; // Clear error before render
@@ -345,6 +354,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Initialization
+  populateCurrencies();
+  handleConvert();
+
   // Event listeners
   form.addEventListener('submit', handleConvert);
   fromSelect.addEventListener('change', handleConvert);
@@ -353,8 +366,4 @@ document.addEventListener("DOMContentLoaded", function () {
   amountInput.addEventListener('keyup', function(e) {
     if (e.key === "Enter") handleConvert();
   });
-
-  // Initialization
-  populateCurrencies();
-  handleConvert();
 });
