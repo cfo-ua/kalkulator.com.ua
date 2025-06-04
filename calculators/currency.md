@@ -69,6 +69,16 @@ faq:
 <div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
 
 <!--CHART_SPLIT-->
+
+<!-- Quick range buttons for chart -->
+<div id="chart-range-quick" style="text-align:center;margin:1.3em auto 0.7em auto;max-width:900px;display:none;">
+  <button type="button" data-range="30" class="chart-range-btn active">30 днів</button>
+  <button type="button" data-range="90" class="chart-range-btn">3 місяці</button>
+  <button type="button" data-range="180" class="chart-range-btn">6 місяців</button>
+  <button type="button" data-range="365" class="chart-range-btn">1 рік</button>
+  <button type="button" data-range="1825" class="chart-range-btn">5 років</button>
+</div>
+
 <!-- CHART: outside of calculator-block, fullscreen and mobile friendly -->
 <div id="currency-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
   <h3 style="margin-bottom:0.9em;text-align:center;">Графік зміни курсу</h3>
