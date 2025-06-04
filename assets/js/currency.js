@@ -1,14 +1,14 @@
 // 9 currencies as per legend screenshot (with color for chart/legend)
 const TOP_CURRENCIES = [
-  { code: "PLN", name: "Злотий", color: "#eb4848" },
+  { code: "PLN", name: "Польський злотий", color: "#eb4848" },
   { code: "EUR", name: "Євро", color: "#23b378" },
   { code: "USD", name: "Долар США", color: "#3db7cc" },
-  { code: "CNY", name: "Юань Женьміньбі", color: "#353f93" },
+  { code: "CNY", name: "Китайський юань", color: "#353f93" },
   { code: "TRY", name: "Турецька ліра", color: "#6a4aa0" },
   { code: "CHF", name: "Швейцарський франк", color: "#237d6b" },
   { code: "GBP", name: "Фунт стерлінгів", color: "#39b3a9" },
   { code: "CAD", name: "Канадський долар", color: "#4261a3" },
-  { code: "JPY", name: "Єна", color: "#7162a7" }
+  { code: "JPY", name: "Японська єна", color: "#7162a7" }
 ];
 const UAH = { code: "UAH", name: "Гривня" };
 
