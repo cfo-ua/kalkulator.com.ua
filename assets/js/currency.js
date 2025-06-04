@@ -13,7 +13,6 @@ const TOP_CURRENCIES = [
 const UAH = { code: "UAH", name: "Гривня" };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Defensive: only run if currency-form exists
   const form = document.getElementById('currency-form');
   if (!form) return;
 
@@ -79,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prepare rates object for conversion
   function prepareRates(data, usedDate) {
     const filtered = {};
-    // Hardcode UAH
     filtered["UAH"] = { rate: 1, date: usedDate };
     TOP_CURRENCIES.forEach(cur => {
       const found = data.find(row => row.cc === cur.code);
@@ -120,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const from = fromSelect.value;
     const to = toSelect.value;
     const date = dateInput.value;
+    resultBlock.innerHTML = ""; // Always reset error/result on new input
     if (!amount || amount <= 0) {
       resultBlock.innerHTML = "<span style='color:#d32f2f;'>Введіть коректну суму.</span>";
       chartBlock.style.display = "none";
@@ -167,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </span>
       `;
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
-        // Show quick range controls and reset to default
         if(chartRangeQuick) {
           chartRangeQuick.style.display = "block";
           setActiveRangeBtn(currentChartRange);
@@ -193,33 +191,47 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   }
 
-  // Chart rendering with quick range
+  // Chart rendering with robust missing data handling
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
       let endDate = endDateStr ? new Date(endDateStr) : new Date();
       let startDate = new Date(endDate);
       startDate.setDate(endDate.getDate() - (rangeDays - 1));
-      // Clamp to today if needed
       const today = new Date();
       if (endDate > today) endDate = today;
       if (startDate > endDate) startDate = endDate;
       const labels = [];
       const data = [];
+      let hasAnyData = false;
+      let lastKnownRate = null;
+      let daysCount = 0;
       for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-        labels.push(d.toISOString().slice(0, 10));
+        const dateStr = d.toISOString().slice(0, 10);
+        labels.push(dateStr);
+        daysCount++;
       }
       const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
       try {
         const ratesArr = await Promise.all(promises);
-        ratesArr.forEach(rArr => {
+        ratesArr.forEach((rArr, idx) => {
           const found = rArr.find(row => row.cc === curCode);
           if (found) {
             data.push(Number(found.rate));
+            lastKnownRate = Number(found.rate);
+            hasAnyData = true;
           } else {
+            // Push null to show a gap, or lastKnownRate to "hold" value
             data.push(null);
           }
         });
+        // If no data at all, show error and hide chart
+        if (!hasAnyData) {
+          chartBlock.style.display = "none";
+          if(chartRangeQuick) chartRangeQuick.style.display = "none";
+          resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цей період недоступний (дані НБУ відсутні). Спробуйте інший діапазон або дату.</span>`;
+          return;
+        }
         if (chartInstance) chartInstance.destroy();
         chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
           type: 'line',
@@ -250,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 bodyColor: "#fff",
                 callbacks: {
                   title: (items) => `Дата: ${items[0].label}`,
-                  label: (items) => `Курс: ${items.formattedValue} UAH`
+                  label: (items) => items.raw ? `Курс: ${items.formattedValue} UAH` : 'Немає даних'
                 }
               }
             },
@@ -263,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ticks: {
                   display: true,
                   autoSkip: true,
-                  maxTicksLimit: Math.min(10, labels.length),
+                  maxTicksLimit: Math.min(10, daysCount),
                   font: { size: 11 },
                   color: "#5476a3"
                 }
@@ -294,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (e) {
         chartBlock.style.display = "none";
         if(chartRangeQuick) chartRangeQuick.style.display = "none";
+        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Виникла помилка при завантаженні графіку. Спробуйте інший діапазон або оновіть сторінку.</span>`;
       }
     });
   }
@@ -314,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (days && days !== currentChartRange) {
         setActiveRangeBtn(days);
         currentChartRange = days;
-        // Find current main date and currency
+        resultBlock.innerHTML = ""; // Clear error before render
         const from = fromSelect.value;
         const to = toSelect.value;
         const date = dateInput.value;
