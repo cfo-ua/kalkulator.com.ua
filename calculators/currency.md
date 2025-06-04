@@ -84,17 +84,4 @@ faq:
   <div class="chart-canvas-wrap">
     <canvas id="currency-chart"></canvas>
   </div>
-  <div style="margin-top:1.3em;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;">
-    <ul style="columns:2;list-style:none;padding:0;font-size:1em;">
-      <li style="color:#eb4848;">— Злотий (за 1 одиницю)</li>
-      <li style="color:#237d6b;">— Швейцарський франк (за 1 одиницю)</li>
-      <li style="color:#23b378;">— Євро (за 1 одиницю)</li>
-      <li style="color:#39b3a9;">— Фунт стерлінгів (за 1 одиницю)</li>
-      <li style="color:#3db7cc;">— Долар США (за 1 одиницю)</li>
-      <li style="color:#4261a3;">— Канадський долар (за 1 одиницю)</li>
-      <li style="color:#353f93;">— Юань Женьміньбі (за 1 одиницю)</li>
-      <li style="color:#7162a7;">— Єна (за 1 одиницю)</li>
-      <li style="color:#6a4aa0;">— Турецька ліра (за 1 одиницю)</li>
-    </ul>
-  </div>
 </div>
