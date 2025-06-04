@@ -1,18 +1,19 @@
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
+import os
 
-# 9 tracked currencies
+# --- SETTINGS ---
 CODES = ["USD", "EUR", "PLN", "CNY", "TRY", "CHF", "GBP", "CAD", "JPY"]
 OUTFILE = "assets/data/nbu-history.json"
 
-today = datetime.now().strftime("%Y%m%d")
-url = f"https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json&date={today}"
+# Fetch latest rates from NBU
+url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json"
 resp = requests.get(url)
 resp.raise_for_status()
 rates = resp.json()
 
-# Filter only needed currencies, and normalize
+# Prepare new records from API response, always using 'exchangedate' from API
 new_records = []
 for row in rates:
     if row.get("cc") in CODES:
@@ -26,21 +27,28 @@ for row in rates:
             "Офіційний курс гривні, грн": row["rate"]
         })
 
-# Load full history
-try:
+# Load existing history (if exists)
+if os.path.exists(OUTFILE):
     with open(OUTFILE, "r", encoding="utf-8") as f:
-        history = json.load(f)
-except Exception:
+        try:
+            history = json.load(f)
+        except Exception:
+            history = []
+else:
     history = []
 
-# Remove duplicates: keep only one record per (date, code), with new data taking priority
+# Merge new records, deduplicate by (date, currency), always keep the newest
 combined = {(r["Дата"], r["Код літерний"]): r for r in history}
 for r in new_records:
     combined[(r["Дата"], r["Код літерний"])] = r
 
-# Convert back to list, sort by date then code
+# Convert back to list and sort by date then currency
+def parse_date(d):
+    # DD.MM.YYYY
+    return datetime.strptime(d, "%d.%m.%Y")
 result = list(combined.values())
-result.sort(key=lambda r: (datetime.strptime(r["Дата"], "%d.%m.%Y"), r["Код літерний"]))
+result.sort(key=lambda r: (parse_date(r["Дата"]), r["Код літерний"]))
 
+# Save updated history
 with open(OUTFILE, "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2)
