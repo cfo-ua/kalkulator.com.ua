@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultBlock = document.getElementById('currency-result');
   const chartBlock = document.getElementById('currency-chart-block');
   const chartCanvas = document.getElementById('currency-chart');
+  const chartRangeQuick = document.getElementById('chart-range-quick');
   let chartInstance = null;
+  let currentChartRange = 30; // default
 
   // Set today's date as default and max
   if (dateInput) {
@@ -121,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!amount || amount <= 0) {
       resultBlock.innerHTML = "<span style='color:#d32f2f;'>Введіть коректну суму.</span>";
       chartBlock.style.display = "none";
+      if(chartRangeQuick) chartRangeQuick.style.display = "none";
       return;
     }
     resultBlock.innerHTML = "<span style='color:#888;'>Завантаження курсу...</span>";
@@ -129,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!data || data.length === 0) {
         resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цю дату не був опублікований НБУ. Спробуйте іншу дату (будній день).</span>`;
         chartBlock.style.display = "none";
+        if(chartRangeQuick) chartRangeQuick.style.display = "none";
         return;
       }
       const rates = prepareRates(data, usedDate);
@@ -136,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (converted == null || isNaN(converted)) {
         resultBlock.innerHTML = `<span style='color:#d32f2f;'>Дані по валюті недоступні на цю дату.</span>`;
         chartBlock.style.display = "none";
+        if(chartRangeQuick) chartRangeQuick.style.display = "none";
         return;
       }
       const fromRate = rates[from];
@@ -162,13 +167,20 @@ document.addEventListener("DOMContentLoaded", function () {
         </span>
       `;
       if ((from === "UAH" && to !== "UAH") || (to === "UAH" && from !== "UAH")) {
-        renderChart((from === "UAH") ? to : from, rates[from].date);
+        // Show quick range controls and reset to default
+        if(chartRangeQuick) {
+          chartRangeQuick.style.display = "block";
+          setActiveRangeBtn(currentChartRange);
+        }
+        renderChart((from === "UAH") ? to : from, rates[from].date, currentChartRange);
       } else {
         chartBlock.style.display = "none";
+        if(chartRangeQuick) chartRangeQuick.style.display = "none";
       }
     } catch (err) {
       resultBlock.innerHTML = `<span style='color:#d32f2f;'>${err.message}</span>`;
       chartBlock.style.display = "none";
+      if(chartRangeQuick) chartRangeQuick.style.display = "none";
     }
   }
 
@@ -181,16 +193,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   }
 
-  // Apple-style chart rendering
-  function renderChart(curCode, dateStr) {
+  // Chart rendering with quick range
+  function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
-      const endDate = dateStr ? new Date(dateStr) : new Date();
+      let endDate = endDateStr ? new Date(endDateStr) : new Date();
+      let startDate = new Date(endDate);
+      startDate.setDate(endDate.getDate() - (rangeDays - 1));
+      // Clamp to today if needed
+      const today = new Date();
+      if (endDate > today) endDate = today;
+      if (startDate > endDate) startDate = endDate;
       const labels = [];
       const data = [];
-      for (let i = 29; i >= 0; --i) {
-        const d = new Date(endDate);
-        d.setDate(d.getDate() - i);
+      for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
         labels.push(d.toISOString().slice(0, 10));
       }
       const promises = labels.map(date => fetchRatesWithFallback(date).then(r => r.rates));
@@ -231,7 +247,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 enabled: true,
                 backgroundColor: "#222",
                 titleColor: "#fff",
-                bodyColor: "#fff"
+                bodyColor: "#fff",
+                callbacks: {
+                  title: (items) => `Дата: ${items[0].label}`,
+                  label: (items) => `Курс: ${items.formattedValue} UAH`
+                }
               }
             },
             layout: {
@@ -239,12 +259,13 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             scales: {
               x: {
-                grid: {
-                  display: false,
-                  drawBorder: false
-                },
+                grid: { display: false, drawBorder: false },
                 ticks: {
-                  display: false
+                  display: true,
+                  autoSkip: true,
+                  maxTicksLimit: Math.min(10, labels.length),
+                  font: { size: 11 },
+                  color: "#5476a3"
                 }
               },
               y: {
@@ -258,9 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   font: { size: 11 },
                   padding: 4,
                   precision: 3,
-                  callback: function(value) {
-                    return value;
-                  }
+                  callback: function(value) { return value; }
                 }
               }
             },
@@ -274,6 +293,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       } catch (e) {
         chartBlock.style.display = "none";
+        if(chartRangeQuick) chartRangeQuick.style.display = "none";
+      }
+    });
+  }
+
+  // Quick range buttons UX
+  function setActiveRangeBtn(days) {
+    if(!chartRangeQuick) return;
+    currentChartRange = days;
+    chartRangeQuick.querySelectorAll('.chart-range-btn').forEach(btn => {
+      btn.classList.toggle('active', String(btn.dataset.range) === String(days));
+    });
+  }
+  if(chartRangeQuick) {
+    chartRangeQuick.addEventListener('click', function(e) {
+      const btn = e.target.closest('.chart-range-btn');
+      if (!btn) return;
+      const days = Number(btn.dataset.range);
+      if (days && days !== currentChartRange) {
+        setActiveRangeBtn(days);
+        currentChartRange = days;
+        // Find current main date and currency
+        const from = fromSelect.value;
+        const to = toSelect.value;
+        const date = dateInput.value;
+        const curCode = (from === "UAH") ? to : from;
+        renderChart(curCode, date, days);
       }
     });
   }
