@@ -776,7 +776,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 }
 
 
-/* --- Apple-style Food Calories Calculator Row (Refined Flex version) --- */
+/* --- Apple-style Food Calories Calculator Row (Refined Flex version, 2024-06-05 CTO UX/UI fix) --- */
 .food-row-card {
   background: #fff;
   border-radius: 16px;
@@ -788,49 +788,53 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   align-items: stretch;
   width: 100%;
   min-width: 0;
-  position: relative; /* for autocomplete dropdown absolute positioning */
+  position: relative;
 }
 
 .food-row-grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
   background: none;
   min-width: 0;
-  position: relative; /* for autocomplete dropdown */
+  position: relative;
   gap: 0;
 }
 
-/* Unified inputs, but now "name | number | unit | calories | X" */
+/* Name input: more space, text visible */
 .food-row-grid input[type="text"] {
-  flex: 2 1 0;
-  min-width: 110px;
-  max-width: 320px;
+  flex: 3 1 0;
+  min-width: 130px;
+  max-width: 400px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   border-radius: 0;
   background: #f7f8fa;
-  padding: 0.78em 1em;
-  font-size: 1.09em;
+  color: #181818;
+  padding: 0.84em 1.15em; /* more space for text */
+  font-size: 1.13em;
   border: none;
   margin: 0;
   outline: none;
-  transition: background 0.17s;
+  transition: background 0.17s, color 0.15s;
   appearance: none;
   -webkit-appearance: none;
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 
+/* Amount input: more space, not squished */
 .food-row-grid input[type="number"] {
-  flex: 1.2 1 0;
-  min-width: 54px;
-  max-width: 120px;
+  flex: 1.1 1 0;
+  min-width: 58px;
+  max-width: 130px;
   background: #f7f8fa;
-  padding: 0.78em 0.7em 0.78em 0.7em;
-  font-size: 1.09em;
+  color: #181818;
+  padding: 0.84em 0.8em 0.84em 0.8em;
+  font-size: 1.13em;
   border: none;
   margin: 0;
   outline: none;
@@ -839,74 +843,88 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   font-variant-numeric: tabular-nums;
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
+
 .food-row-grid select {
-  flex: 0 0 56px;
+  flex: 0 0 54px;
   background: #f7f8fa;
-  padding: 0.78em 0.7em 0.78em 0.7em;
-  font-size: 1.09em;
+  color: #181818;
+  padding: 0.84em 0.7em;
+  font-size: 1.13em;
   border: none;
   margin: 0;
   outline: none;
   border-radius: 0;
   border-left: 1px solid #ececec;
   border-right: 1px solid #ececec;
-  min-width: 36px;
+  min-width: 38px;
   max-width: 70px;
   text-align: center;
   appearance: none;
   -webkit-appearance: none;
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 
 .food-row-grid input:focus,
 .food-row-grid select:focus {
   background: #eaf3ff;
+  color: #181818;
 }
 
+/* Calories output */
 .food-row-grid .food-calories {
   color: #157aff;
   font-weight: 700;
-  font-size: 1.13em;
-  min-width: 3.2em;
+  font-size: 1.15em;
+  min-width: 3.1em;
   text-align: right;
   flex: 1 1 0;
   background: #f7f8fa;
   border-radius: 0;
-  padding: 0.75em 1em;
+  padding: 0.84em 1em;
   align-items: center;
   display: flex;
   justify-content: flex-end;
+  font-family: inherit;
 }
 
+/* Remove button: no white gap on highlight, vertically centered */
 .food-row-grid .food-remove {
   border: none;
   background: #f7f8fa;
   color: #c00;
-  font-size: 1.4em;
+  font-size: 1.45em;
   width: 48px;
+  min-width: 48px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.19s, color 0.17s;
+  transition: background 0.18s, color 0.17s;
   outline: none;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   padding: 0;
-  min-width: 48px;
-  height: 100%;
+  line-height: 1;
+  box-sizing: border-box;
 }
 .food-row-grid .food-remove:after {
   content: '×';
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: 400;
   color: #c00;
+  display: block;
+  line-height: 1;
 }
 .food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
   background: #ffeaea;
   color: #a00;
+  /* Remove vertical white gaps on highlight: match row height */
+  height: 100%;
 }
 
 /* --- Autocomplete dropdown always below input --- */
@@ -918,7 +936,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #fff;
   position: absolute;
   left: 0;
-  top: calc(100% + 2px); /* Always right under input */
+  top: calc(100% + 2px);
   width: 100%;
   z-index: 50;
 }
@@ -926,6 +944,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   padding: 0.35em 0.8em;
   cursor: pointer;
   font-size: 1em;
+  color: #222;
+  background: #fff;
 }
 .food-ac-item:hover, .food-ac-item:focus {
   background: #eaf3ff;
@@ -939,13 +959,14 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   .food-row-grid .food-remove {
     border-radius: 10px !important;
   }
-  .food-row-grid input[type="text"] { min-width: 48px; }
-  .food-row-grid input[type="number"] { max-width: 68px; }
+  .food-row-grid input[type="text"] { min-width: 50px; }
+  .food-row-grid input[type="number"] { max-width: 70px; }
   .food-row-grid select { max-width: 54px; }
-  .food-row-grid .food-calories { font-size: 1.07em; min-width: 2em; }
-  .food-row-grid .food-remove { width: 34px; min-width: 34px; font-size: 1.1em; }
+  .food-row-grid .food-calories { font-size: 1.09em; min-width: 2em; }
+  .food-row-grid .food-remove { width: 34px; min-width: 34px; font-size: 1.12em; }
 }
 
+/* Results block unchanged */
 #food-calories-result .result-card {
   background: #fff;
   border-radius: 15px;
