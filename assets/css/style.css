@@ -837,6 +837,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #d6e7ff;
 }
 
+/* ... (all existing styles above remain unchanged) ... */
+
 /* --- Responsive Food Calories Calculator Rows --- */
 .food-row-card {
   background: #fff;
@@ -850,7 +852,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 
 .food-row-grid {
   display: grid;
-  grid-template-columns: 2.2fr 1fr 1fr 2fr 44px;
+  grid-template-columns: 2.8fr 1.2fr 1.2fr 1.2fr 44px;
   gap: 0.5em;
   align-items: center;
   width: 100%;
@@ -878,27 +880,17 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 
 .food-row-grid .food-metrics {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 1em;
+  align-items: center;
+  font-size: 1.12em;
   color: #157aff;
-  gap: 0.10em;
-  min-width: 60px;
-  line-height: 1.2;
-  word-break: break-all;
+  font-weight: 700;
+  justify-content: flex-start;
 }
 
 .food-row-grid .food-calories {
   color: #157aff;
   font-weight: 700;
   font-size: 1.12em;
-  margin-bottom: 0.1em;
-}
-
-.food-row-grid .food-macros {
-  color: #157aff;
-  font-size: 0.96em;
-  letter-spacing: 0.01em;
 }
 
 .food-row-grid .food-remove {
@@ -927,7 +919,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
     padding: 0.7em 0.5em 0.7em 0.5em;
   }
   .food-row-grid {
-    grid-template-columns: 1.8fr 1fr 1fr 1.6fr 44px;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr 44px;
     gap: 0.35em;
   }
 }
@@ -939,33 +931,27 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
     min-width: 0;
   }
   .food-row-grid {
-    grid-template-columns: 2fr 1fr 1fr 44px;
+    grid-template-columns: 2fr 1.2fr 1.2fr 44px;
     grid-template-areas:
       "name amount unit remove"
-      "macros macros macros remove";
+      "calories calories calories remove";
     align-items: stretch;
     gap: 0.18em;
   }
   .food-row-grid input[type="text"]   { grid-area: name; }
   .food-row-grid input[type="number"] { grid-area: amount; }
   .food-row-grid select               { grid-area: unit; }
-  .food-row-grid .food-metrics        { grid-area: macros; }
+  .food-row-grid .food-metrics        { grid-area: calories; }
   .food-row-grid .food-remove         { grid-area: remove; margin-left: 0; margin-top: 0; }
   .food-row-grid .food-metrics {
-    flex-direction: row;
-    gap: 1.2em;
-    font-size: 0.99em;
+    font-size: 1.05em;
     line-height: 1.1;
     align-items: flex-start;
     margin-top: 0.15em;
-  }
-  .food-row-grid .food-calories {
-    font-size: 1.08em;
-    margin-right: 0.55em;
+    justify-content: flex-start;
   }
 }
 
-/* Result output improved card */
 #food-calories-result .result-card {
   background: #fff;
   border-radius: 15px;
@@ -973,7 +959,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   padding: 1.05em 1em 1.15em 1em;
   margin-top: 1.1em;
   margin-bottom: 0.5em;
-  font-size: 1.07em;
+  font-size: 1.13em;
   color: #181818;
 }
 #food-calories-result .result-main {
@@ -982,19 +968,11 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   color: #157aff;
   margin-bottom: 0.45em;
 }
-#food-calories-result .result-macros {
-  margin-bottom: 0.3em;
-  font-size: 1.05em;
-}
-#food-calories-result .result-macros b {
-  color: #157aff;
-  font-weight: 600;
-}
 #food-calories-result .result-100g {
-  font-size: 0.97em;
+  font-size: 0.98em;
   color: #333;
+  margin-top: 0.35em;
 }
-
 /* Style for autocomplete dropdown */
 .food-ac {
   border-radius: 9px;
