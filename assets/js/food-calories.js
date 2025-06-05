@@ -45,7 +45,7 @@ function recalcAll() {
     if (unit === 'ml' && food.density) mult = food.density;
     let relAmount = amount * (unit === 'g' ? 1 : (unit === 'ml' ? mult : (food.weight_per_piece || 1)));
     let cal = food.calories * relAmount / 100;
-    calSpan.textContent = cal.toFixed(2);
+    calSpan.textContent = Math.round(cal); // Show as integer, no decimals or comma
     total.cal += cal;
     total.amount += relAmount;
   });
@@ -53,10 +53,10 @@ function recalcAll() {
   document.getElementById('food-calories-result').innerHTML = `
     <div class="result-card">
       <div class="result-main">
-        Загальна калорійність: <span>${total.cal.toFixed(2)} ккал</span>
+        Загальна калорійність: <span>${Math.round(total.cal)} ккал</span>
       </div>
       <div class="result-100g">
-        Калорійність на 100 г: <b>${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</b>
+        Калорійність на 100 г: <b>${total.amount > 0 ? Math.round(total.cal*100/total.amount) : '—'} ккал</b>
       </div>
     </div>
   `;
