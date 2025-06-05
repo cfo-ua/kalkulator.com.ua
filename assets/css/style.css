@@ -837,37 +837,37 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #d6e7ff;
 }
 
-/* ...existing styles... */
 
 /* --- Responsive Food Calories Calculator Rows --- */
 .food-row-card {
   background: #fff;
   border-radius: 17px;
   box-shadow: 0 1px 8px 0 rgba(60,60,60,0.07);
-  padding: 1.1em 1.2em 1.1em 1.2em;
+  padding: 1em 1em 0.9em 1em;
   margin-bottom: 1em;
   transition: box-shadow 0.17s;
   position: relative;
+  display: block;
 }
 
 .food-row-grid {
   display: grid;
-  grid-template-columns: 2.2fr 1fr 1fr 1.7fr 0.7fr;
-  gap: 0.7em;
+  grid-template-columns: 2fr 1fr 1fr 1.7fr 44px;
+  gap: 0.5em;
   align-items: center;
   width: 100%;
   position: relative;
 }
 
-.food-row-grid input[type="text"], 
-.food-row-grid input[type="number"], 
+.food-row-grid input[type="text"],
+.food-row-grid input[type="number"],
 .food-row-grid select {
   border: none;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 4px 0 rgba(60,60,60,0.07);
-  padding: 0.7em 1em;
-  font-size: 1.08em;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgba(60,60,60,0.08);
+  padding: 0.63em 0.9em;
+  font-size: 1.05em;
   width: 100%;
   min-width: 0;
   transition: box-shadow 0.17s, border 0.15s;
@@ -882,36 +882,42 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 1.05em;
+  font-size: 1em;
   color: #157aff;
-  gap: 0.12em;
+  gap: 0.10em;
   min-width: 60px;
+  line-height: 1.2;
+  word-break: break-all;
 }
 
 .food-row-grid .food-calories {
   color: #157aff;
-  font-weight: 600;
-  font-size: 1.06em;
+  font-weight: 700;
+  font-size: 1.12em;
+  margin-bottom: 0.1em;
 }
 
 .food-row-grid .food-macros {
   color: #157aff;
-  font-size: 0.97em;
+  font-size: 0.96em;
+  letter-spacing: 0.01em;
 }
 
 .food-row-grid .food-remove {
   background: none !important;
   border: none !important;
   color: #c00;
-  font-size: 1.25em;
+  font-size: 1.5em;
   border-radius: 50%;
-  width: 2.2em;
-  height: 2.2em;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.18s;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 .food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
   background: #ffeaea;
@@ -920,35 +926,45 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 
 @media (max-width: 800px) {
   .food-row-card {
-    padding: 0.8em 0.6em 0.8em 0.6em;
+    padding: 0.7em 0.5em 0.7em 0.5em;
   }
   .food-row-grid {
-    grid-template-columns: 2fr 1.1fr 1.1fr 1.8fr 1fr;
-    gap: 0.5em;
+    grid-template-columns: 1.8fr 1fr 1fr 1.6fr 44px;
+    gap: 0.35em;
   }
 }
 
 @media (max-width: 600px) {
   .food-row-card {
-    padding: 0.5em 0.3em 0.6em 0.3em;
-    margin-bottom: 0.7em;
+    padding: 0.34em 0.15em 0.5em 0.15em;
+    margin-bottom: 0.6em;
     min-width: 0;
   }
   .food-row-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 3fr 1fr 1fr 44px;
     grid-template-areas:
-      "name"
-      "amount"
-      "unit"
-      "metrics"
-      "remove";
-    gap: 0.3em;
+      "name amount unit remove"
+      "macros macros macros remove";
+    align-items: stretch;
+    gap: 0.18em;
   }
-  .food-row-grid input[type="text"] { grid-area: name; }
+  .food-row-grid input[type="text"]   { grid-area: name; }
   .food-row-grid input[type="number"] { grid-area: amount; }
-  .food-row-grid select { grid-area: unit; }
-  .food-row-grid .food-metrics { grid-area: metrics; }
-  .food-row-grid .food-remove { grid-area: remove; margin-left: 0; margin-top: 0.2em;}
+  .food-row-grid select               { grid-area: unit; }
+  .food-row-grid .food-metrics        { grid-area: macros; }
+  .food-row-grid .food-remove         { grid-area: remove; margin-left: 0; margin-top: 0; }
+  .food-row-grid .food-metrics {
+    flex-direction: row;
+    gap: 1.2em;
+    font-size: 0.99em;
+    line-height: 1.1;
+    align-items: flex-start;
+    margin-top: 0.15em;
+  }
+  .food-row-grid .food-calories {
+    font-size: 1.08em;
+    margin-right: 0.55em;
+  }
 }
 
 /* Result output improved card */
@@ -956,28 +972,28 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 1px 8px 0 rgba(60,60,60,0.07);
-  padding: 1.15em 1.3em 1.25em 1.3em;
-  margin-top: 1.3em;
-  margin-bottom: 0.6em;
+  padding: 1.05em 1em 1.15em 1em;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
   font-size: 1.07em;
   color: #181818;
 }
 #food-calories-result .result-main {
-  font-size: 1.22em;
+  font-size: 1.19em;
   font-weight: 700;
   color: #157aff;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.45em;
 }
 #food-calories-result .result-macros {
-  margin-bottom: 0.4em;
-  font-size: 1.07em;
+  margin-bottom: 0.3em;
+  font-size: 1.05em;
 }
 #food-calories-result .result-macros b {
   color: #157aff;
   font-weight: 600;
 }
 #food-calories-result .result-100g {
-  font-size: 1em;
+  font-size: 0.97em;
   color: #333;
 }
 
@@ -987,6 +1003,16 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   box-shadow: 0 2px 11px 0 rgba(60,60,60,0.11);
   border: 1px solid #e0e0e0 !important;
   overflow: hidden;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+.food-ac-item {
+  padding: 0.35em 0.8em;
+  cursor: pointer;
+  font-size: 1em;
 }
 .food-ac-item:hover, .food-ac-item:focus {
   background: #eaf3ff;
