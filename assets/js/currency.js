@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return TOP_CURRENCIES.find(c => c.code === code) || { name: code, color: "#444" };
   }
 
-  // Chart rendering, now supports "all time" and 5y range with downsampling
+  // Chart rendering, now supports "all time" and 5y range with downsampling and better tooltip UX
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
@@ -318,6 +318,9 @@ document.addEventListener("DOMContentLoaded", function () {
             legend: { display: false },
             tooltip: {
               enabled: true,
+              mode: 'index',         // <- show tooltip for index on x axis (not just nearest point)
+              intersect: false,      // <- show tooltip even when not directly over the line
+              axis: 'x',             // <- only follow mouse horizontally
               backgroundColor: "#222",
               titleColor: "#fff",
               bodyColor: "#fff",
