@@ -679,8 +679,6 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   }
 }
 
-/* --- Add near end of file --- */
-
 /* Fullscreen chart card */
 .chart-card {
   background: #fff;
@@ -777,9 +775,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #d6e7ff;
 }
 
-/* ... (all existing styles above remain unchanged) ... */
 
-/* --- Responsive Food Calories Calculator Rows --- */
+/* --- Responsive Food Calories Calculator Rows (Apple-style, calories only) --- */
 .food-row-card {
   background: #fff;
   border-radius: 17px;
@@ -818,19 +815,11 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   box-shadow: 0 0 0 2px #157aff44;
 }
 
-.food-row-grid .food-metrics {
-  display: flex;
-  align-items: center;
-  font-size: 1.12em;
-  color: #157aff;
-  font-weight: 700;
-  justify-content: flex-start;
-}
-
 .food-row-grid .food-calories {
   color: #157aff;
   font-weight: 700;
   font-size: 1.12em;
+  text-align: right;
 }
 
 .food-row-grid .food-remove {
@@ -847,7 +836,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   transition: background 0.18s;
   cursor: pointer;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 0;
 }
 .food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
   background: #ffeaea;
@@ -881,15 +870,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   .food-row-grid input[type="text"]   { grid-area: name; }
   .food-row-grid input[type="number"] { grid-area: amount; }
   .food-row-grid select               { grid-area: unit; }
-  .food-row-grid .food-metrics        { grid-area: calories; }
+  .food-row-grid .food-calories       { grid-area: calories; }
   .food-row-grid .food-remove         { grid-area: remove; margin-left: 0; margin-top: 0; }
-  .food-row-grid .food-metrics {
-    font-size: 1.05em;
-    line-height: 1.1;
-    align-items: flex-start;
-    margin-top: 0.15em;
-    justify-content: flex-start;
-  }
 }
 
 #food-calories-result .result-card {
@@ -913,6 +895,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   color: #333;
   margin-top: 0.35em;
 }
+
 /* Style for autocomplete dropdown */
 .food-ac {
   border-radius: 9px;
