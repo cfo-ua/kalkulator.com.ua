@@ -1,0 +1,102 @@
+[
+  {
+    "name_uk": "Яблуко",
+    "name_en": "Apple",
+    "calories": 52,
+    "protein": 0.3,
+    "fat": 0.2,
+    "carb": 14,
+    "density": 1, 
+    "weight_per_piece": 180
+  },
+  {
+    "name_uk": "Куряче філе",
+    "name_en": "Chicken breast",
+    "calories": 113,
+    "protein": 24,
+    "fat": 1.4,
+    "carb": 0,
+    "density": 1,
+    "weight_per_piece": 120
+  },
+  {
+    "name_uk": "Варена картопля",
+    "name_en": "Boiled potato",
+    "calories": 86,
+    "protein": 1.8,
+    "fat": 0.1,
+    "carb": 20,
+    "density": 1,
+    "weight_per_piece": 100
+  },
+  {
+    "name_uk": "Яйце куряче",
+    "name_en": "Egg",
+    "calories": 155,
+    "protein": 13,
+    "fat": 11,
+    "carb": 1.1,
+    "density": 1,
+    "weight_per_piece": 55
+  },
+  {
+    "name_uk": "Огірок",
+    "name_en": "Cucumber",
+    "calories": 15,
+    "protein": 0.7,
+    "fat": 0.1,
+    "carb": 3.6,
+    "density": 1,
+    "weight_per_piece": 100
+  },
+  {
+    "name_uk": "Помідор",
+    "name_en": "Tomato",
+    "calories": 18,
+    "protein": 0.9,
+    "fat": 0.2,
+    "carb": 3.9,
+    "density": 1,
+    "weight_per_piece": 120
+  },
+  {
+    "name_uk": "Оливкова олія",
+    "name_en": "Olive oil",
+    "calories": 884,
+    "protein": 0,
+    "fat": 100,
+    "carb": 0,
+    "density": 0.92,
+    "weight_per_piece": 0
+  },
+  {
+    "name_uk": "Хліб пшеничний",
+    "name_en": "Wheat bread",
+    "calories": 265,
+    "protein": 9,
+    "fat": 3.2,
+    "carb": 49,
+    "density": 1,
+    "weight_per_piece": 30
+  },
+  {
+    "name_uk": "Сир твердий",
+    "name_en": "Hard cheese",
+    "calories": 350,
+    "protein": 25,
+    "fat": 26,
+    "carb": 3.3,
+    "density": 1,
+    "weight_per_piece": 25
+  },
+  {
+    "name_uk": "Гречка варена",
+    "name_en": "Boiled buckwheat",
+    "calories": 92,
+    "protein": 3.4,
+    "fat": 0.8,
+    "carb": 19.9,
+    "density": 1,
+    "weight_per_piece": 0
+  }
+]
