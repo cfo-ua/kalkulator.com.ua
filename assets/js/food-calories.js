@@ -47,7 +47,10 @@ function createFoodRow(idx) {
 
 function getFoodByName(name) {
   name = name.trim().toLowerCase();
-  return FOOD_DB.find(f => f.name_uk.toLowerCase() === name || f.name_en?.toLowerCase() === name);
+  return FOOD_DB.find(f =>
+    (f.name_uk && f.name_uk.toLowerCase() === name) ||
+    (f.name_en && f.name_en.toLowerCase() === name)
+  );
 }
 
 function recalcAll() {
@@ -94,7 +97,10 @@ function addAutocomplete(row) {
       if (ac) ac.innerHTML = '';
       return;
     }
-    const matches = FOOD_DB.filter(f => f.name_uk.toLowerCase().includes(val)).slice(0,8);
+    // Defensive: check for FOOD_DB and name_uk presence
+    const matches = FOOD_DB
+      .filter(f => f.name_uk && f.name_uk.toLowerCase().includes(val))
+      .slice(0,8);
     if (!ac) {
       ac = document.createElement('div');
       ac.className = 'food-ac';
