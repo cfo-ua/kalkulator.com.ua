@@ -837,7 +837,6 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #d6e7ff;
 }
 
-
 /* --- Responsive Food Calories Calculator Rows --- */
 .food-row-card {
   background: #fff;
@@ -847,12 +846,11 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   margin-bottom: 1em;
   transition: box-shadow 0.17s;
   position: relative;
-  display: block;
 }
 
 .food-row-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.7fr 44px;
+  grid-template-columns: 2.2fr 1fr 1fr 2fr 44px;
   gap: 0.5em;
   align-items: center;
   width: 100%;
@@ -941,7 +939,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
     min-width: 0;
   }
   .food-row-grid {
-    grid-template-columns: 3fr 1fr 1fr 44px;
+    grid-template-columns: 2fr 1fr 1fr 44px;
     grid-template-areas:
       "name amount unit remove"
       "macros macros macros remove";
