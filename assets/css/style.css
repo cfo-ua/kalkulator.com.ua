@@ -822,8 +822,9 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   text-align: right;
 }
 
+/* --- UPDATED BUTTON (shows × and Apple-style round) --- */
 .food-row-grid .food-remove {
-  background: none !important;
+  background: #f3f5f9;
   border: none !important;
   color: #c00;
   font-size: 1.5em;
@@ -837,6 +838,14 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   cursor: pointer;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
+}
+.food-row-grid .food-remove:after {
+  content: '×';
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1;
+  color: #c00;
 }
 .food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
   background: #ffeaea;
