@@ -5,7 +5,6 @@ fetch('/assets/data/food-db.json')
   .then(resp => resp.json())
   .then(data => { FOOD_DB = data; });
 
-// Apple-style calculator row: only calories, no macros, no legacy .food-metrics
 function createFoodRow(idx) {
   return `
     <div class="food-row-card">
@@ -69,7 +68,7 @@ function recalcAll() {
     if (unit === 'ml' && food.density) mult = food.density;
     let relAmount = amount * (unit === 'g' ? 1 : (unit === 'ml' ? mult : (food.weight_per_piece || 1)));
     let cal = food.calories * relAmount / 100;
-    calSpan.textContent = Math.round(cal); // Show as integer, no decimals or comma
+    calSpan.textContent = Math.round(cal);
     total.cal += cal;
     total.amount += relAmount;
   });
@@ -87,7 +86,6 @@ function recalcAll() {
 }
 
 function addAutocomplete(row) {
-  // Get the wrapper for the input (for correct dropdown positioning)
   const wrap = row.querySelector('.food-row-input-wrap');
   const input = wrap.querySelector('.food-name');
   input.addEventListener('input', function() {
@@ -97,7 +95,6 @@ function addAutocomplete(row) {
       if (ac) ac.innerHTML = '';
       return;
     }
-    // Defensive: check for FOOD_DB and name_uk presence
     const matches = FOOD_DB
       .filter(f => f.name_uk && f.name_uk.toLowerCase().includes(val))
       .slice(0,8);
