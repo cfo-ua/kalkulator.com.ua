@@ -10,7 +10,9 @@ function createFoodRow(idx) {
   return `
     <div class="food-row-card">
       <div class="food-row-grid" data-row="${idx}">
-        <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off">
+        <div class="food-row-input-wrap">
+          <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off">
+        </div>
         <input type="number" class="food-amount" min="0" step="any" value="100">
         <select class="food-unit">
           <option value="g">г</option>
@@ -63,28 +65,24 @@ function recalcAll() {
 }
 
 function addAutocomplete(row) {
-  const input = row.querySelector('.food-name');
+  // input now is inside .food-row-input-wrap
+  const wrap = row.querySelector('.food-row-input-wrap');
+  const input = wrap.querySelector('.food-name');
   input.addEventListener('input', function() {
     const val = this.value.toLowerCase();
-    if (val.length < 2) return;
+    if (val.length < 2) {
+      let ac = wrap.querySelector('.food-ac');
+      if (ac) ac.innerHTML = '';
+      return;
+    }
     const matches = FOOD_DB.filter(f => f.name_uk.toLowerCase().includes(val)).slice(0,8);
-    let ac = row.querySelector('.food-ac');
+    let ac = wrap.querySelector('.food-ac');
     if (!ac) {
       ac = document.createElement('div');
       ac.className = 'food-ac';
-      ac.style.position = 'absolute';
-      ac.style.background = '#fff';
-      ac.style.zIndex = 50;
-      ac.style.border = '1px solid #ddd';
-      ac.style.width = '99%';
-      ac.style.fontSize = '0.97em';
-      ac.style.maxHeight = '180px';
-      ac.style.overflowY = 'auto';
-      ac.style.left = 0;
-      ac.style.top = '2.3em';
-      input.parentNode.appendChild(ac);
+      wrap.appendChild(ac);
     }
-    ac.innerHTML = matches.map(f => `<div class="food-ac-item" style="padding:4px 8px;cursor:pointer;">${f.name_uk}</div>`).join('');
+    ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name_uk}</div>`).join('');
     ac.querySelectorAll('.food-ac-item').forEach(el => {
       el.onclick = () => {
         input.value = el.textContent;
@@ -96,7 +94,7 @@ function addAutocomplete(row) {
   });
   input.addEventListener('blur', function() {
     setTimeout(() => {
-      const ac = row.querySelector('.food-ac');
+      const ac = wrap.querySelector('.food-ac');
       if (ac) ac.innerHTML = '';
     }, 180);
   });
