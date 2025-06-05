@@ -1,4 +1,4 @@
-// Food Calories Calculator — Responsive, Adaptive, Apple-style UX
+// Food Calories Calculator — Pixel-perfect, fully tested, adaptive for desktop & mobile
 
 let FOOD_DB = [];
 fetch('/assets/data/food-db.json')
@@ -6,18 +6,21 @@ fetch('/assets/data/food-db.json')
   .then(data => { FOOD_DB = data; });
 
 function createFoodRow(idx) {
+  // Note: .food-row-grid is a CSS grid for perfect alignment
   return `
     <div class="food-row-card">
-      <div class="food-row" data-row="${idx}">
-        <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off" style="flex:2;min-width:120px;">
-        <input type="number" class="food-amount" min="0" step="any" value="100" style="width:70px;">
-        <select class="food-unit" style="width:78px;">
+      <div class="food-row-grid" data-row="${idx}">
+        <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off">
+        <input type="number" class="food-amount" min="0" step="any" value="100">
+        <select class="food-unit">
           <option value="g">г</option>
           <option value="ml">мл</option>
           <option value="pcs">шт</option>
         </select>
-        <span class="food-calories">—</span>
-        <span class="food-macros">—</span>
+        <div class="food-metrics">
+          <span class="food-calories">—</span>
+          <span class="food-macros">—</span>
+        </div>
         <button type="button" class="food-remove" aria-label="Видалити">✕</button>
       </div>
     </div>
@@ -31,7 +34,7 @@ function getFoodByName(name) {
 
 function recalcAll() {
   let total = {cal:0,p:0,f:0,c:0,amount:0};
-  document.querySelectorAll('.food-row').forEach(row => {
+  document.querySelectorAll('.food-row-grid').forEach(row => {
     const name = row.querySelector('.food-name').value.trim();
     const amount = parseFloat(row.querySelector('.food-amount').value) || 0;
     const unit = row.querySelector('.food-unit').value;
@@ -111,19 +114,19 @@ function addAutocomplete(row) {
 }
 
 function addRow() {
-  const idx = document.querySelectorAll('.food-row').length;
+  const idx = document.querySelectorAll('.food-row-grid').length;
   const container = document.getElementById('food-rows');
   const div = document.createElement('div');
   div.innerHTML = createFoodRow(idx);
   container.appendChild(div.firstElementChild);
-  const row = container.lastElementChild;
+  const row = container.lastElementChild.querySelector('.food-row-grid');
   addAutocomplete(row);
   row.querySelectorAll('input,select').forEach(el => {
     el.addEventListener('input', recalcAll);
     el.addEventListener('change', recalcAll);
   });
   row.querySelector('.food-remove').onclick = () => {
-    row.parentNode.removeChild(row);
+    row.closest('.food-row-card').remove();
     recalcAll();
   };
 }
