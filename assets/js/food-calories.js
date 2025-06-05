@@ -6,7 +6,6 @@ fetch('/assets/data/food-db.json')
   .then(data => { FOOD_DB = data; });
 
 function createFoodRow(idx) {
-  // Note: .food-row-grid is a CSS grid for perfect alignment
   return `
     <div class="food-row-card">
       <div class="food-row-grid" data-row="${idx}">
