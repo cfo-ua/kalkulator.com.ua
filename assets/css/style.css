@@ -270,11 +270,11 @@ h1 {
 /* Calculator block */
 .calculator-block {
   background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 2em;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(60,60,60,0.09), 0 1.5px 8px 0 rgba(21,122,255,0.06);
+  padding: 2.5em 2.5em 2em 2.5em;
   margin: 2.5rem 0 1rem 0;
-  max-width: 440px;
+  max-width: 680px;
   width: 100%;
   transition: box-shadow var(--transition);
   min-width: 0;
@@ -307,11 +307,11 @@ h1 {
   border: none;
   padding: 0.68em 1.5em;
   font-size: 1.05em;
-  border-radius: 11px;
+  border-radius: 14px;
   cursor: pointer;
   font-weight: 600;
-  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.07);
-  transition: background 0.15s, box-shadow 0.15s, color 0.15s;
+  box-shadow: 0 2px 12px 0 rgba(60,60,60,0.09);
+  transition: background 0.18s, box-shadow 0.17s, color 0.15s;
   margin-top: 0.5em;
   min-width: 120px;
   text-decoration: none !important;
@@ -327,10 +327,89 @@ h1 {
 }
 
 .result {
-  font-size: 1.2em;
+  font-size: 1.18em;
   color: var(--accent);
   margin-top: 1em;
   font-weight: 500;
+  word-break: break-word;
+}
+
+@media (max-width: 800px) {
+  .calculator-block {
+    max-width: 98vw;
+    padding: 1.7em 0.9em;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .calculator-block {
+    padding: 1.2em 0.8em;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 13px;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+}
+
+/* Apple-style food row and inputs for food-calories */
+.food-row input[type="text"], .food-row input[type="number"], .food-row select {
+  border: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(60,60,60,0.07);
+  padding: 0.7em 1em;
+  font-size: 1.08em;
+  transition: box-shadow 0.17s, border 0.15s;
+  margin-right: 0.18em;
+}
+.food-row input:focus, .food-row select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #157aff44;
+}
+.food-row {
+  position: relative;
+  background: #fafdff;
+  border-radius: 13px;
+  padding: 0.5em 0.6em;
+  box-shadow: 0 1px 6px 0 rgba(21,122,255,0.07);
+  margin-bottom: 0.7em;
+  gap: 0.7em;
+  display: flex;
+  align-items: center;
+}
+#food-add-row {
+  background: #157aff;
+  color: #fff;
+  border-radius: 14px;
+  font-size: 1.11em;
+  padding: 0.8em 2em;
+  box-shadow: 0 2px 12px 0 rgba(60,60,60,0.09);
+  border: none;
+  margin: 1.2em 0 0.7em 0;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.17s;
+}
+#food-add-row:hover, #food-add-row:focus {
+  background: #0056d6;
+  box-shadow: 0 4px 18px 0 rgba(21,122,255,0.14);
+}
+.food-remove {
+  background: none !important;
+  border: none !important;
+  color: #c00;
+  font-size: 1.2em;
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+}
+.food-remove:hover, .food-remove:focus {
+  background: #ffeaea;
+  color: #a00;
 }
 
 .seo-content, .faq, .related {
@@ -546,6 +625,7 @@ footer {
     padding: 1.2em 0.8em;
     width: 100%;
     max-width: 420px;
+    border-radius: 13px;
     box-sizing: border-box;
     min-width: 0;
   }
