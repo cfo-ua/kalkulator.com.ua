@@ -164,8 +164,13 @@ document.addEventListener("DOMContentLoaded", function () {
       let usedDateMsg = (tried > 0)
         ? `<br><span style="font-size:0.95em;color:#c55;">Курс знайдено на ${rates[from].date.split('-').reverse().join('.')} (найближча доступна дата)</span>`
         : "";
+
+      // Use colorful Unicode arrows with better sizing and alignment
+      // U+27A1 (➡️), U+2B05 (⬅️), styled larger for result
       resultBlock.innerHTML = `
-        <b>${formatNum(amount,2)} ${from}</b> <span style="color:#c3c3c3;font-size:1.2em;">⟶</span> <b>${formatNum(converted,2)} ${to}</b><br>
+        <b style="color:#157aff;">${formatNum(amount,2)} ${from}</b>
+        <span style="display:inline-block;vertical-align:middle;font-size:1.6em;color:#23b378;margin:0 6px 2px 6px;">➡️</span>
+        <b style="color:#157aff;">${formatNum(converted,2)} ${to}</b><br>
         <span style="font-size:1em; color:#333;">${infoRate}<br>
         Офіційний курс надається <b>НБУ</b> на ${rates[from].date.split('-').reverse().join('.')}
         ${usedDateMsg}
@@ -225,8 +230,13 @@ document.addEventListener("DOMContentLoaded", function () {
       let hasAnyData = false;
 
       // "the whole time" mode: rangeDays = -1
-      if (rangeDays === -1) {
+      // 5y mode: rangeDays = 1825
+      if (rangeDays === -1 || rangeDays === 1825) {
+        // If 5y, limit window to last 1825 days
         labels = await getAllDates();
+        if (rangeDays === 1825 && labels.length > 1825) {
+          labels = labels.slice(-1825);
+        }
         history = await loadNBURates();
 
         // Downsampling: max N points for performance
