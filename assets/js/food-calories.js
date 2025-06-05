@@ -1,10 +1,11 @@
-// Food Calories Calculator — Clean Version: Only Calories, New CTO
+// Food Calories Calculator — Apple-style, Only Calories, Clean Version
 
 let FOOD_DB = [];
 fetch('/assets/data/food-db.json')
   .then(resp => resp.json())
   .then(data => { FOOD_DB = data; });
 
+// Apple-style calculator row: only calories, no macros, no legacy .food-metrics
 function createFoodRow(idx) {
   return `
     <div class="food-row-card">
@@ -16,10 +17,8 @@ function createFoodRow(idx) {
           <option value="ml">мл</option>
           <option value="pcs">шт</option>
         </select>
-        <div class="food-metrics">
-          <span class="food-calories">—</span>
-        </div>
-        <button type="button" class="food-remove" aria-label="Видалити">✕</button>
+        <span class="food-calories">—</span>
+        <button type="button" class="food-remove" aria-label="Видалити"></button>
       </div>
     </div>
   `;
@@ -73,10 +72,16 @@ function addAutocomplete(row) {
     if (!ac) {
       ac = document.createElement('div');
       ac.className = 'food-ac';
-      ac.style.position = 'absolute'; ac.style.background = '#fff'; ac.style.zIndex = 50;
-      ac.style.border = '1px solid #ddd'; ac.style.width = '99%'; ac.style.fontSize = '0.97em';
-      ac.style.maxHeight = '180px'; ac.style.overflowY = 'auto';
-      ac.style.left = 0; ac.style.top = '2.3em';
+      ac.style.position = 'absolute';
+      ac.style.background = '#fff';
+      ac.style.zIndex = 50;
+      ac.style.border = '1px solid #ddd';
+      ac.style.width = '99%';
+      ac.style.fontSize = '0.97em';
+      ac.style.maxHeight = '180px';
+      ac.style.overflowY = 'auto';
+      ac.style.left = 0;
+      ac.style.top = '2.3em';
       input.parentNode.appendChild(ac);
     }
     ac.innerHTML = matches.map(f => `<div class="food-ac-item" style="padding:4px 8px;cursor:pointer;">${f.name_uk}</div>`).join('');
