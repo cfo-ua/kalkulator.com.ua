@@ -1,4 +1,4 @@
-// Food Calories Calculator — Pixel-perfect, fully tested, adaptive for desktop & mobile
+// Food Calories Calculator — Clean Version: Only Calories, New CTO
 
 let FOOD_DB = [];
 fetch('/assets/data/food-db.json')
@@ -18,7 +18,6 @@ function createFoodRow(idx) {
         </select>
         <div class="food-metrics">
           <span class="food-calories">—</span>
-          <span class="food-macros">—</span>
         </div>
         <button type="button" class="food-remove" aria-label="Видалити">✕</button>
       </div>
@@ -32,32 +31,23 @@ function getFoodByName(name) {
 }
 
 function recalcAll() {
-  let total = {cal:0,p:0,f:0,c:0,amount:0};
+  let total = {cal:0, amount:0};
   document.querySelectorAll('.food-row-grid').forEach(row => {
     const name = row.querySelector('.food-name').value.trim();
     const amount = parseFloat(row.querySelector('.food-amount').value) || 0;
     const unit = row.querySelector('.food-unit').value;
     const calSpan = row.querySelector('.food-calories');
-    const macroSpan = row.querySelector('.food-macros');
     let food = getFoodByName(name);
     if (!food) {
       calSpan.textContent = '—';
-      macroSpan.textContent = '—';
       return;
     }
     let mult = 1.0;
     if (unit === 'ml' && food.density) mult = food.density;
     let relAmount = amount * (unit === 'g' ? 1 : (unit === 'ml' ? mult : (food.weight_per_piece || 1)));
     let cal = food.calories * relAmount / 100;
-    let p = food.protein * relAmount / 100;
-    let f = food.fat * relAmount / 100;
-    let c = food.carb * relAmount / 100;
     calSpan.textContent = cal.toFixed(2);
-    macroSpan.innerHTML = `<span style="color:#157aff;">Б:</span>${p.toFixed(2)} <span style="color:#157aff;">Ж:</span>${f.toFixed(2)} <span style="color:#157aff;">В:</span>${c.toFixed(2)}`;
     total.cal += cal;
-    total.p += p;
-    total.f += f;
-    total.c += c;
     total.amount += relAmount;
   });
 
@@ -65,11 +55,6 @@ function recalcAll() {
     <div class="result-card">
       <div class="result-main">
         Загальна калорійність: <span>${total.cal.toFixed(2)} ккал</span>
-      </div>
-      <div class="result-macros">
-        <b>Білки:</b> ${total.p.toFixed(2)} г &nbsp; 
-        <b>Жири:</b> ${total.f.toFixed(2)} г &nbsp; 
-        <b>Вуглеводи:</b> ${total.c.toFixed(2)} г
       </div>
       <div class="result-100g">
         Калорійність на 100 г: <b>${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</b>
