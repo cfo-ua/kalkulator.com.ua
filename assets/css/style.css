@@ -836,3 +836,83 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 .chart-range-btn:hover {
   background: #d6e7ff;
 }
+
+/* --- Responsive Food Calories Calculator Rows --- */
+.food-row-card {
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 1px 8px 0 rgba(60,60,60,0.07);
+  padding: 1.1em 1.2em 1.1em 1.2em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9em;
+  transition: box-shadow 0.17s;
+}
+.food-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6em;
+  width: 100%;
+}
+.food-row .food-macros,
+.food-row .food-calories {
+  text-align: right;
+  min-width: 80px;
+  font-size: 1.04em;
+  color: #157aff;
+}
+
+@media (max-width: 700px) {
+  .food-row-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.8em 0.65em 0.8em 0.65em;
+    gap: 0.7em;
+  }
+  .food-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+    width: 100%;
+  }
+  .food-row .food-macros,
+  .food-row .food-calories {
+    text-align: left;
+    min-width: unset;
+    font-size: 0.99em;
+    margin-top: 0.18em;
+  }
+}
+
+/* Result output improved card */
+#food-calories-result .result-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 1px 8px 0 rgba(60,60,60,0.07);
+  padding: 1.15em 1.3em 1.25em 1.3em;
+  margin-top: 1.3em;
+  margin-bottom: 0.6em;
+  font-size: 1.07em;
+  color: #181818;
+}
+#food-calories-result .result-main {
+  font-size: 1.22em;
+  font-weight: 700;
+  color: #157aff;
+  margin-bottom: 0.6em;
+}
+#food-calories-result .result-macros {
+  margin-bottom: 0.4em;
+  font-size: 1.07em;
+}
+#food-calories-result .result-macros b {
+  color: #157aff;
+  font-weight: 600;
+}
+#food-calories-result .result-100g {
+  font-size: 1em;
+  color: #333;
+}
