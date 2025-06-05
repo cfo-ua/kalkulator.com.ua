@@ -792,12 +792,13 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 
 .food-row-grid {
   display: flex;
-  align-items: stretch;
+  align-items: center; /* FIX: vertical centering */
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
   background: none;
   min-width: 0;
+  position: static; /* ensure autocomplete positions below */
 }
 
 /* Inputs, select, calories: unified look */
@@ -808,8 +809,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   border: none;
   background: #f7f8fa;
   box-shadow: none;
-  font-size: 1.07em;
-  padding: 0.75em 1em;
+  font-size: 1.09em; /* slightly larger for number box */
+  padding: 0.78em 1em;
   outline: none;
   min-width: 0;
   border-radius: 0;
@@ -828,8 +829,18 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   border-bottom-left-radius: 16px;
 }
 
-.food-row-grid input[type="number"] { flex: 1.1 1 0; max-width: 80px; }
-.food-row-grid select { flex: 0.9 1 0; max-width: 70px; }
+.food-row-grid input[type="number"] { 
+  flex: 1.1 1 0; 
+  max-width: 78px; 
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.food-row-grid select { 
+  flex: 0.9 1 0; 
+  max-width: 70px; 
+  min-width: 40px;
+}
 
 .food-row-grid input:focus,
 .food-row-grid select:focus {
@@ -847,6 +858,8 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   justify-content: flex-end;
   border-radius: 0;
   padding: 0.75em 1em;
+  align-items: center;
+  display: flex;
 }
 
 /* Remove button is the last cell, matches pill radius */
@@ -866,7 +879,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   border-bottom-right-radius: 16px;
   padding: 0;
   min-width: 48px;
-  height: auto;
+  height: 100%; /* FIX: vertically fills row */
 }
 .food-row-grid .food-remove:after {
   content: '×';
@@ -923,6 +936,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   background: #fff;
   position: absolute;
   left: 0;
+  top: 100%; /* FIX: dropdown always below input */
   width: 100%;
   z-index: 50;
 }
