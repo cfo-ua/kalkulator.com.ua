@@ -1,4 +1,4 @@
-// Food Calories Calculator — Apple-style, Only Calories, Clean Version
+// Food Calories Calculator — Apple-style, Only Calories, Clean Version (Fixed Autocomplete)
 
 let FOOD_DB = [];
 fetch('/assets/data/food-db.json')
@@ -11,10 +11,29 @@ function createFoodRow(idx) {
     <div class="food-row-card">
       <div class="food-row-grid" data-row="${idx}">
         <div class="food-row-input-wrap">
-          <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off">
+          <input 
+            type="text" 
+            class="food-name" 
+            id="food-name-${idx}" 
+            name="food-name-${idx}" 
+            placeholder="Назва продукту" 
+            autocomplete="off"
+          >
         </div>
-        <input type="number" class="food-amount" min="0" step="any" value="100">
-        <select class="food-unit">
+        <input 
+          type="number" 
+          class="food-amount" 
+          id="food-amount-${idx}" 
+          name="food-amount-${idx}" 
+          min="0" 
+          step="any" 
+          value="100"
+        >
+        <select 
+          class="food-unit" 
+          id="food-unit-${idx}" 
+          name="food-unit-${idx}"
+        >
           <option value="g">г</option>
           <option value="ml">мл</option>
           <option value="pcs">шт</option>
@@ -65,18 +84,17 @@ function recalcAll() {
 }
 
 function addAutocomplete(row) {
-  // input now is inside .food-row-input-wrap
+  // Get the wrapper for the input (for correct dropdown positioning)
   const wrap = row.querySelector('.food-row-input-wrap');
   const input = wrap.querySelector('.food-name');
   input.addEventListener('input', function() {
     const val = this.value.toLowerCase();
+    let ac = wrap.querySelector('.food-ac');
     if (val.length < 2) {
-      let ac = wrap.querySelector('.food-ac');
       if (ac) ac.innerHTML = '';
       return;
     }
     const matches = FOOD_DB.filter(f => f.name_uk.toLowerCase().includes(val)).slice(0,8);
-    let ac = wrap.querySelector('.food-ac');
     if (!ac) {
       ac = document.createElement('div');
       ac.className = 'food-ac';
@@ -88,7 +106,7 @@ function addAutocomplete(row) {
         input.value = el.textContent;
         ac.innerHTML = '';
         recalcAll();
-      }
+      };
     });
     if (matches.length === 0) ac.innerHTML = '';
   });
