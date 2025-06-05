@@ -1,11 +1,10 @@
-// 9 currencies as per legend screenshot (with color for chart/legend)
 const TOP_CURRENCIES = [
   { code: "USD", name: "Долар США", color: "#3db7cc" },
   { code: "EUR", name: "Євро", color: "#23b378" },
   { code: "GBP", name: "Фунт стерлінгів", color: "#39b3a9" },
   { code: "CHF", name: "Швейцарський франк", color: "#237d6b" },
-  { code: "CAD", name: "Канадський долар", color: "#4261a3" },  
-  { code: "PLN", name: "Польський злотий", color: "#eb4848" },  
+  { code: "CAD", name: "Канадський долар", color: "#4261a3" },
+  { code: "PLN", name: "Польський злотий", color: "#eb4848" },
   { code: "TRY", name: "Турецька ліра", color: "#6a4aa0" },
   { code: "CNY", name: "Китайський юань", color: "#353f93" },
   { code: "JPY", name: "Японська єна", color: "#7162a7" }
@@ -116,8 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return valueOut;
   }
 
-  function formatNum(val, digits=4) {
-    return Number(val).toLocaleString('uk-UA', { minimumFractionDigits: 2, maximumFractionDigits: digits });
+  function formatNum(val, digits=2) {
+    // Always round to 2
+    return Number(val).toLocaleString('uk-UA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
   async function handleConvert(e) {
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ? `<br><span style="font-size:0.95em;color:#c55;">Курс знайдено на ${rates[from].date.split('-').reverse().join('.')} (найближча доступна дата)</span>`
         : "";
       resultBlock.innerHTML = `
-        <b>${formatNum(amount,4)} ${from}</b> = <b>${formatNum(converted,4)} ${to}</b><br>
+        <b>${formatNum(amount,2)} ${from}</b> <span style="color:#c3c3c3;font-size:1.2em;">⟶</span> <b>${formatNum(converted,2)} ${to}</b><br>
         <span style="font-size:1em; color:#333;">${infoRate}<br>
         Офіційний курс надається <b>НБУ</b> на ${rates[from].date.split('-').reverse().join('.')}
         ${usedDateMsg}
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return TOP_CURRENCIES.find(c => c.code === code) || { name: code, color: "#444" };
   }
 
-  // Chart rendering, now supports "all time" with downsampling
+  // Chart rendering, now supports "all time" and 5y range with downsampling
   function renderChart(curCode, endDateStr, rangeDays = 30) {
     chartBlock.style.display = "block";
     ensureChartJs(async function () {
