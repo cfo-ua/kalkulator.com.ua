@@ -75,12 +75,12 @@ faq:
   <input type="number" id="currency-amount" min="0" step="any" value="1000" required style="width:100%;padding:0.7em 1em;font-size:1.18em;border-radius:9px;border:1.5px solid #e0e0e0;margin-bottom:1.1em;">
 
   <div style="display:flex;flex-direction:column;gap:0.4em;margin-bottom:1.2em;">
-    <div>
-      <label for="currency-from" style="display:block;margin-bottom:0.25em;">З</label>
+    <div style="position:relative;">
+      <label for="currency-from" style="display:block;margin-bottom:0.25em;">З <span aria-label="стрілка" style="margin-left:2px;color:#c3c3c3;">⟶</span></label>
       <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
-    <div>
-      <label for="currency-to" style="display:block;margin-bottom:0.25em;">В</label>
+    <div style="position:relative;">
+      <label for="currency-to" style="display:block;margin-bottom:0.25em;">В <span aria-label="стрілка" style="margin-left:2px;color:#23b378;">⟵</span></label>
       <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
   </div>
@@ -100,6 +100,7 @@ faq:
   <button type="button" data-range="90" class="chart-range-btn">3 місяці</button>
   <button type="button" data-range="180" class="chart-range-btn">6 місяців</button>
   <button type="button" data-range="365" class="chart-range-btn">1 рік</button>
+  <button type="button" data-range="1825" class="chart-range-btn">5 років</button>
   <button type="button" data-range="-1" class="chart-range-btn">Весь час</button>
 </div>
 
