@@ -1,24 +1,25 @@
-// Minimal MVP for Food Calories Calculator with dynamic rows and local JSON DB
+// Food Calories Calculator — Responsive, Adaptive, Apple-style UX
 
 let FOOD_DB = [];
-// Fetch food DB on demand
 fetch('/assets/data/food-db.json')
   .then(resp => resp.json())
   .then(data => { FOOD_DB = data; });
 
 function createFoodRow(idx) {
   return `
-    <div class="food-row" data-row="${idx}" style="display:flex;gap:0.6em;margin-bottom:0.5em;align-items:center;">
-      <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off" style="flex:2;min-width:120px;">
-      <input type="number" class="food-amount" min="0" step="any" value="100" style="width:70px;">
-      <select class="food-unit" style="width:78px;">
-        <option value="g">г</option>
-        <option value="ml">мл</option>
-        <option value="pcs">шт</option>
-      </select>
-      <span class="food-calories" style="width:70px;color:#157aff;">—</span>
-      <span class="food-macros" style="width:82px;font-size:0.95em;color:#555;">—</span>
-      <button type="button" class="food-remove" aria-label="Видалити" style="font-size:1.2em;background:none;border:none;color:#c00;">✕</button>
+    <div class="food-row-card">
+      <div class="food-row" data-row="${idx}">
+        <input type="text" class="food-name" placeholder="Назва продукту" autocomplete="off" style="flex:2;min-width:120px;">
+        <input type="number" class="food-amount" min="0" step="any" value="100" style="width:70px;">
+        <select class="food-unit" style="width:78px;">
+          <option value="g">г</option>
+          <option value="ml">мл</option>
+          <option value="pcs">шт</option>
+        </select>
+        <span class="food-calories">—</span>
+        <span class="food-macros">—</span>
+        <button type="button" class="food-remove" aria-label="Видалити">✕</button>
+      </div>
     </div>
   `;
 }
@@ -49,8 +50,8 @@ function recalcAll() {
     let p = food.protein * relAmount / 100;
     let f = food.fat * relAmount / 100;
     let c = food.carb * relAmount / 100;
-    calSpan.textContent = cal.toFixed(1);
-    macroSpan.textContent = `Б:${p.toFixed(1)} Ж:${f.toFixed(1)} В:${c.toFixed(1)}`;
+    calSpan.textContent = cal.toFixed(2);
+    macroSpan.innerHTML = `<span style="color:#157aff;">Б:</span>${p.toFixed(2)} <span style="color:#157aff;">Ж:</span>${f.toFixed(2)} <span style="color:#157aff;">В:</span>${c.toFixed(2)}`;
     total.cal += cal;
     total.p += p;
     total.f += f;
@@ -58,17 +59,18 @@ function recalcAll() {
     total.amount += relAmount;
   });
 
-  // Improved result block for structure & Apple-like clarity
   document.getElementById('food-calories-result').innerHTML = `
-    <div style="background:#fff;border-radius:15px;box-shadow:0 1px 8px 0 rgba(60,60,60,0.07);padding:1.1em 1.2em 1.2em 1.2em;margin-top:1.1em;">
-      <div style="font-size:1.16em;font-weight:600;color:#157aff;margin-bottom:0.7em;">
-        Загальна калорійність: <span style="font-size:1.18em;font-weight:700;color:#157aff;">${total.cal.toFixed(2)} ккал</span>
+    <div class="result-card">
+      <div class="result-main">
+        Загальна калорійність: <span>${total.cal.toFixed(2)} ккал</span>
       </div>
-      <div style="margin-bottom:0.5em;">
-        <b>Білки:</b> ${total.p.toFixed(2)} г &nbsp; <b>Жири:</b> ${total.f.toFixed(2)} г &nbsp; <b>Вуглеводи:</b> ${total.c.toFixed(2)} г
+      <div class="result-macros">
+        <b>Білки:</b> ${total.p.toFixed(2)} г &nbsp; 
+        <b>Жири:</b> ${total.f.toFixed(2)} г &nbsp; 
+        <b>Вуглеводи:</b> ${total.c.toFixed(2)} г
       </div>
-      <div style="font-size:1em;color:#333;">
-        <span>Калорійність на 100 г: <b>${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</b></span>
+      <div class="result-100g">
+        Калорійність на 100 г: <b>${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</b>
       </div>
     </div>
   `;
@@ -127,7 +129,6 @@ function addRow() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Initial row
   addRow();
   document.getElementById('food-add-row').onclick = addRow;
 });
