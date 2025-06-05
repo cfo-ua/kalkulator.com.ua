@@ -1,0 +1,66 @@
+---
+layout: calculator
+title: "Калькулятор добової норми калорій"
+categories: [health]
+seo:
+  title: "Калькулятор калорій для схуднення, ваги, підтримки — Розрахунок TDEE, БЖВ | kalkulator.com.ua"
+  description: "Розрахуйте, скільки калорій потрібно для схуднення, набору чи підтримки ваги. Враховує вік, стать, ріст, вагу, рівень активності. Поради, таблиці, добова норма, макроси."
+  keywords: ["калькулятор калорій", "норма калорій", "TDEE", "BMR", "добова потреба в калоріях", "калорії для схуднення", "калорії для набору ваги", "калорії в день", "макроси", "україна"]
+  content: |
+    <h2>Калькулятор добової норми калорій (TDEE/BMR)</h2>
+    <p>Дізнайтесь свою добову потребу в калоріях для схуднення, підтримки чи набору ваги. Калькулятор враховує основний обмін (BMR), рівень активності та цілі.</p>
+    <ul>
+      <li>Вкажіть стать, вік, зріст, вагу та рівень фізичної активності.</li>
+      <li>Обирайте ціль: схуднення, підтримка чи набір м'язів.</li>
+      <li>Додатково: отримаєте рекомендацію по білках, жирах і вуглеводах.</li>
+    </ul>
+scripts:
+  - /assets/js/calorie-needs.js
+faq:
+  - question: "Яка формула використовується?"
+    answer: "Використовується формула Mifflin-St Jeor для BMR, потім множення на коефіцієнт активності для TDEE."
+  - question: "Що таке BMR та TDEE?"
+    answer: "BMR — це базальний метаболізм (мінімум для життя). TDEE — загальні добові витрати калорій з урахуванням активності."
+  - question: "Як визначити рівень активності?"
+    answer: "Сидячий — мінімум руху, легкий — 1-3 тренування на тиждень, середній — 3-5, високий — 6+, дуже високий — щоденні тренування або важка фізична праця."
+  - question: "Який дефіцит вибрати для схуднення?"
+    answer: "Рекомендується дефіцит 10-20% від TDEE або мінус 300-500 ккал на день для безпечного схуднення."
+  - question: "Як розподіляти калорії між білками, жирами і вуглеводами?"
+    answer: "Загальна рекомендація: білки — 1.5-2 г/кг ваги, жири — 0.8-1 г/кг, решта — вуглеводи. Калькулятор підкаже пропорції."
+---
+
+<form id="calorie-needs-form" autocomplete="off" style="max-width:420px;">
+  <label>Стать:
+    <select id="gender" required>
+      <option value="male">Чоловік</option>
+      <option value="female">Жінка</option>
+    </select>
+  </label>
+  <label>Вік:
+    <input type="number" id="age" min="10" max="100" value="30" required>
+  </label>
+  <label>Зріст (см):
+    <input type="number" id="height" min="100" max="250" value="170" required>
+  </label>
+  <label>Вага (кг):
+    <input type="number" id="weight" min="30" max="300" value="70" required>
+  </label>
+  <label>Рівень активності:
+    <select id="activity" required>
+      <option value="1.2">Сидячий (мінімум руху)</option>
+      <option value="1.375">Легкий (1-3 тренування/тиждень)</option>
+      <option value="1.55">Середній (3-5 тренувань/тиждень)</option>
+      <option value="1.725">Високий (6-7 тренувань/тиждень)</option>
+      <option value="1.9">Дуже високий (спорт/фізична праця)</option>
+    </select>
+  </label>
+  <label>Ціль:
+    <select id="goal" required>
+      <option value="maintain">Підтримка ваги</option>
+      <option value="loss">Схуднення</option>
+      <option value="gain">Набір ваги</option>
+    </select>
+  </label>
+  <button type="submit">Розрахувати</button>
+</form>
+<div id="calorie-needs-result" class="result" style="min-height:2.3em;margin-top:1.5em;"></div>
