@@ -76,11 +76,15 @@ faq:
 
   <div style="display:flex;flex-direction:column;gap:0.4em;margin-bottom:1.2em;">
     <div style="position:relative;">
-      <label for="currency-from" style="display:block;margin-bottom:0.25em;">З <span aria-label="стрілка" style="margin-left:2px;color:#c3c3c3;">⟶</span></label>
+      <label for="currency-from" style="display:block;margin-bottom:0.25em;font-size:1.09em;align-items:center;display:flex;gap:0.36em;">
+        З <span aria-label="стрілка" style="font-size:1.35em;color:#3db7cc;line-height:1;vertical-align:middle;">➡️</span>
+      </label>
       <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
     <div style="position:relative;">
-      <label for="currency-to" style="display:block;margin-bottom:0.25em;">В <span aria-label="стрілка" style="margin-left:2px;color:#23b378;">⟵</span></label>
+      <label for="currency-to" style="display:block;margin-bottom:0.25em;font-size:1.09em;align-items:center;display:flex;gap:0.36em;">
+        В <span aria-label="стрілка" style="font-size:1.25em;color:#23b378;line-height:1;vertical-align:middle;">⬅️</span>
+      </label>
       <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
     </div>
   </div>
