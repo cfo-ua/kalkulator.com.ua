@@ -23,11 +23,6 @@ function createFoodRow(idx) {
   `;
 }
 
-function renderFoodRows(rows) {
-  const container = document.getElementById('food-rows');
-  container.innerHTML = rows.map((r, idx) => createFoodRow(idx)).join('');
-}
-
 function getFoodByName(name) {
   name = name.trim().toLowerCase();
   return FOOD_DB.find(f => f.name_uk.toLowerCase() === name || f.name_en?.toLowerCase() === name);
@@ -62,11 +57,20 @@ function recalcAll() {
     total.c += c;
     total.amount += relAmount;
   });
-  // Show result
+
+  // Improved result block for structure & Apple-like clarity
   document.getElementById('food-calories-result').innerHTML = `
-    <b>Сума:</b> <span style="color:#157aff;">${total.cal.toFixed(2)} ккал</span> 
-    (Б: ${total.p.toFixed(2)}, Ж: ${total.f.toFixed(2)}, В: ${total.c.toFixed(2)})<br>
-    <small>На 100г: ${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</small>
+    <div style="background:#fff;border-radius:15px;box-shadow:0 1px 8px 0 rgba(60,60,60,0.07);padding:1.1em 1.2em 1.2em 1.2em;margin-top:1.1em;">
+      <div style="font-size:1.16em;font-weight:600;color:#157aff;margin-bottom:0.7em;">
+        Загальна калорійність: <span style="font-size:1.18em;font-weight:700;color:#157aff;">${total.cal.toFixed(2)} ккал</span>
+      </div>
+      <div style="margin-bottom:0.5em;">
+        <b>Білки:</b> ${total.p.toFixed(2)} г &nbsp; <b>Жири:</b> ${total.f.toFixed(2)} г &nbsp; <b>Вуглеводи:</b> ${total.c.toFixed(2)} г
+      </div>
+      <div style="font-size:1em;color:#333;">
+        <span>Калорійність на 100 г: <b>${total.amount > 0 ? (total.cal*100/total.amount).toFixed(1) : '—'} ккал</b></span>
+      </div>
+    </div>
   `;
 }
 
