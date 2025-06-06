@@ -86,6 +86,7 @@ function recalcAll() {
   `;
 }
 
+// --- FIXED AUTOCOMPLETE: Robust against blur/select race, no premature dropdown close ---
 function addAutocomplete(row) {
   const wrap = row.querySelector('.food-row-input-wrap');
   const input = wrap.querySelector('.food-name');
@@ -109,12 +110,12 @@ function addAutocomplete(row) {
     if (matches.length > 0) {
       ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name_uk}</div>`).join('');
       ac.querySelectorAll('.food-ac-item').forEach(el => {
-        el.onclick = () => {
+        el.onmousedown = (e) => { // onmousedown = fires before blur
+          e.preventDefault();
           lastAcClick = true;
           input.value = el.textContent;
           ac.innerHTML = '';
           recalcAll();
-          input.blur(); // optional: remove focus after selection
         };
       });
     } else {
@@ -129,7 +130,7 @@ function addAutocomplete(row) {
         if (ac) ac.innerHTML = '';
       }
       lastAcClick = false;
-    }, 180);
+    }, 150);
   });
 }
 
