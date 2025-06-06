@@ -1,4 +1,4 @@
-// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06, direct "carb" support, responsive macros row CSS moved to style.css)
+// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06, direct "carb" support, responsive macros row CSS moved to style.css, "name" field support)
 
 // Attach FOOD_DB to window for global/debug/autocomplete access
 window.FOOD_DB = [];
@@ -48,8 +48,7 @@ function createFoodRow(idx) {
 function getFoodByName(name) {
   name = name.trim().toLowerCase();
   return window.FOOD_DB.find(f =>
-    (f.name_uk && f.name_uk.toLowerCase() === name) ||
-    (f.name_en && f.name_en.toLowerCase() === name)
+    (f.name && f.name.toLowerCase() === name)
   );
 }
 
@@ -118,10 +117,10 @@ function addAutocomplete(row) {
       return;
     }
     const matches = window.FOOD_DB
-      .filter(f => f.name_uk && f.name_uk.toLowerCase().includes(val))
+      .filter(f => f.name && f.name.toLowerCase().includes(val))
       .slice(0,8);
     if (matches.length > 0) {
-      ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name_uk}</div>`).join('');
+      ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name}</div>`).join('');
       ac.querySelectorAll('.food-ac-item').forEach(el => {
         // Use onmousedown (fires before blur) for robust UX
         el.onmousedown = (e) => {
