@@ -71,28 +71,28 @@ faq:
 
 <!-- Calculator UI: vertical selects, compact layout -->
 <form id="currency-form" autocomplete="off" style="max-width:440px;margin:0 auto;">
-  <label for="currency-amount" style="display:block;margin-bottom:0.5em;">Сума</label>
-  <input type="number" id="currency-amount" min="0" step="any" value="1000" required style="width:100%;padding:0.7em 1em;font-size:1.18em;border-radius:9px;border:1.5px solid #e0e0e0;margin-bottom:1.1em;">
+  <label for="currency-amount">Сума</label>
+  <input type="number" id="currency-amount" min="0" step="any" value="1000" required>
 
   <div style="display:flex;flex-direction:column;gap:0.4em;margin-bottom:1.2em;">
     <div style="position:relative;">
-      <label for="currency-from" style="display:block;margin-bottom:0.25em;font-size:1.09em;align-items:center;display:flex;gap:0.36em;">
+      <label for="currency-from" style="display:flex;align-items:center;gap:0.36em;">
         З <span aria-label="стрілка" style="font-size:1.35em;color:#3db7cc;line-height:1;vertical-align:middle;">➡️</span>
       </label>
-      <select id="currency-from" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
+      <select id="currency-from" required class="apple-select"></select>
     </div>
     <div style="position:relative;">
-      <label for="currency-to" style="display:block;margin-bottom:0.25em;font-size:1.09em;align-items:center;display:flex;gap:0.36em;">
+      <label for="currency-to" style="display:flex;align-items:center;gap:0.36em;">
         В <span aria-label="стрілка" style="font-size:1.25em;color:#23b378;line-height:1;vertical-align:middle;">⬅️</span>
       </label>
-      <select id="currency-to" required style="width:100%;padding:0.6em 0.8em;border-radius:8px;font-size:1em;border:1.5px solid #e0e0e0;"></select>
+      <select id="currency-to" required class="apple-select"></select>
     </div>
   </div>
 
-  <label for="currency-date" style="display:block;margin-bottom:0.4em;">Дата курсу</label>
-  <input type="date" id="currency-date" style="padding:0.45em 0.7em;font-size:1em;border-radius:8px;border:1.5px solid #e0e0e0;margin-bottom:1.2em;width:100%;">
+  <label for="currency-date">Дата курсу</label>
+  <input type="date" id="currency-date">
 
-  <button type="submit" style="margin-top:0.6em;width:100%;padding:0.8em;font-size:1.11em;border-radius:10px;background:#157aff;color:#fff;font-weight:600;border:none;box-shadow:0 2px 8px 0 rgba(60,60,60,0.07);">Конвертувати</button>
+  <button type="submit">Конвертувати</button>
 </form>
 <div id="currency-result" class="result" style="margin-top:1.4em;min-height:2.2em;"></div>
 
