@@ -1082,3 +1082,60 @@ form select::-ms-expand {
     border-radius: 11px;
   }
 }
+
+/* Apple-style date input */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #f7f8fa;
+  color: #1d1d1f;
+  border: 1.5px solid #e3e6ec;
+  border-radius: 14px;
+  padding: 0.78em 1.2em 0.78em 1.1em;
+  font-size: 1.12em;
+  font-family: inherit;
+  box-shadow: 0 2px 10px 0 rgba(60,60,60,0.08);
+  font-weight: 500;
+  outline: none;
+  transition: border 0.16s, box-shadow 0.16s, background 0.14s;
+  min-width: 0;
+  max-width: 100%;
+  cursor: pointer;
+  /* Optional: consistent with Apple select arrow */
+}
+
+input[type="date"]:focus {
+  border-color: #157aff;
+  box-shadow: 0 2px 16px 0 rgba(21,122,255,0.11);
+  background-color: #eaf3ff;
+}
+
+input[type="date"]:hover {
+  border-color: #b7c7e6;
+  background-color: #f3f7fc;
+}
+
+/* Remove calendar icon in some browsers (optional) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.4); /* Apple-like muted icon */
+  opacity: 0.85;
+  cursor: pointer;
+}
+input[type="date"]::-ms-expand {
+  display: none;
+}
+
+/* For Firefox: Remove border/shadow on icon */
+input[type="date"]::-moz-focus-inner {
+  border: 0;
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  input[type="date"] {
+    font-size: 1em;
+    padding: 0.7em 0.9em 0.7em 0.9em;
+    border-radius: 11px;
+  }
+}
