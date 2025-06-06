@@ -1,4 +1,4 @@
-// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06 CTO/UX update with macros totals)
+// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06 CTO/UX update with macros totals and responsive macros row)
 
 // Attach FOOD_DB to window for global/debug/autocomplete access
 window.FOOD_DB = [];
@@ -80,13 +80,32 @@ function recalcAll() {
     total.amount += relAmount;
   });
 
-  // Visual total macros row (proteins, fats, carbs)
+  // Responsive macros row: row on desktop, column on mobile
   const macrosRow = `
-    <div class="result-macros-row" style="display:flex;gap:2em;justify-content:flex-start;margin-bottom:0.4em;">
-      <div style="color:#1b7e1b;"><b>Білки:</b> ${total.protein ? total.protein.toFixed(1) : '—'} г</div>
-      <div style="color:#b88d00;"><b>Жири:</b> ${total.fat ? total.fat.toFixed(1) : '—'} г</div>
-      <div style="color:#0063c6;"><b>Вуглеводи:</b> ${total.carbs ? total.carbs.toFixed(1) : '—'} г</div>
+    <div class="result-macros-row" style="
+      display: flex;
+      gap: 2em;
+      justify-content: flex-start;
+      margin-bottom: 0.4em;
+      flex-wrap: wrap;
+    ">
+      <div class="macro-item" style="color:#1b7e1b;min-width:120px;"><b>Білки:</b> ${total.protein ? total.protein.toFixed(1) : '—'} г</div>
+      <div class="macro-item" style="color:#b88d00;min-width:120px;"><b>Жири:</b> ${total.fat ? total.fat.toFixed(1) : '—'} г</div>
+      <div class="macro-item" style="color:#991c1c;min-width:120px;"><b>Вуглеводи:</b> ${total.carbs ? total.carbs.toFixed(1) : '—'} г</div>
     </div>
+    <style>
+      @media (max-width: 600px) {
+        .result-macros-row {
+          flex-direction: column !important;
+          gap: 0.3em !important;
+        }
+        .result-macros-row .macro-item {
+          min-width: 0 !important;
+          margin-bottom: 0.3em;
+          font-size: 1.07em;
+        }
+      }
+    </style>
   `;
 
   document.getElementById('food-calories-result').innerHTML = `
