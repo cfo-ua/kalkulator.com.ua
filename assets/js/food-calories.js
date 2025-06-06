@@ -1,9 +1,10 @@
-// Food Calories Calculator — Apple-style, Only Calories, Clean Version (Fixed Autocomplete)
+// Food Calories Calculator — Apple-style, Only Calories, Clean Version (Fixed Autocomplete, Global FOOD_DB Fix)
 
-let FOOD_DB = [];
+// Attach FOOD_DB to window for global/debug/autocomplete access
+window.FOOD_DB = [];
 fetch('/assets/data/food-db.json')
   .then(resp => resp.json())
-  .then(data => { FOOD_DB = data; });
+  .then(data => { window.FOOD_DB = data; });
 
 function createFoodRow(idx) {
   return `
@@ -46,7 +47,7 @@ function createFoodRow(idx) {
 
 function getFoodByName(name) {
   name = name.trim().toLowerCase();
-  return FOOD_DB.find(f =>
+  return window.FOOD_DB.find(f =>
     (f.name_uk && f.name_uk.toLowerCase() === name) ||
     (f.name_en && f.name_en.toLowerCase() === name)
   );
@@ -95,7 +96,7 @@ function addAutocomplete(row) {
       if (ac) ac.innerHTML = '';
       return;
     }
-    const matches = FOOD_DB
+    const matches = window.FOOD_DB
       .filter(f => f.name_uk && f.name_uk.toLowerCase().includes(val))
       .slice(0,8);
     if (!ac) {
@@ -139,7 +140,26 @@ function addRow() {
   };
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Wait until DB is loaded before allowing row add
+function initFoodCalculator() {
   addRow();
   document.getElementById('food-add-row').onclick = addRow;
-});
+}
+
+if (window.FOOD_DB && window.FOOD_DB.length > 0) {
+  // If DB is already present for any reason (edge case)
+  document.addEventListener('DOMContentLoaded', initFoodCalculator);
+} else {
+  // Wait for DB to load before initializing UI
+  document.addEventListener('DOMContentLoaded', function() {
+    // Poll until DB is loaded (quick and reliable for static sites)
+    function waitForDB() {
+      if (window.FOOD_DB && window.FOOD_DB.length > 0) {
+        initFoodCalculator();
+      } else {
+        setTimeout(waitForDB, 50);
+      }
+    }
+    waitForDB();
+  });
+}
