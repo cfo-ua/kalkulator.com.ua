@@ -853,16 +853,17 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   font-weight: 500;
 }
 
+/* --- INLINE SELECT OVERRIDE (g/unit) --- */
 .food-row-grid select {
   flex: 0 0 54px;
-  background: #f7f8fa;
+  background: #f7f8fa !important;
   color: #181818;
-  padding: 0.84em 0.7em;
+  padding: 0.84em 0.7em !important;
   font-size: 1.13em;
-  border: none;
+  border: none !important;
   margin: 0;
   outline: none;
-  border-radius: 0;
+  border-radius: 0 !important;
   border-left: 1px solid #ececec;
   border-right: 1px solid #ececec;
   min-width: 38px;
@@ -870,14 +871,23 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   text-align: center;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   display: flex;
   align-items: center;
   font-weight: 500;
+  box-shadow: none !important;
+  background-image: none !important; /* Remove Apple-style arrow */
+  cursor: pointer;
+}
+
+/* For accessibility/focus */
+.food-row-grid select:focus {
+  background: #eaf3ff !important;
+  color: #181818;
 }
 
 .food-row-input-wrap input:focus,
-.food-row-grid input:focus,
-.food-row-grid select:focus {
+.food-row-grid input:focus {
   background: #eaf3ff;
   color: #181818;
 }
