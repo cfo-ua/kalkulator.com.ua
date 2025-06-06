@@ -796,7 +796,7 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   align-items: stretch;
   width: 100%;
   border-radius: 16px;
-  overflow: hidden;
+  /* overflow: hidden; <-- REMOVE THIS LINE to allow autocomplete dropdown to overflow */
   background: none;
   min-width: 0;
   position: relative;
