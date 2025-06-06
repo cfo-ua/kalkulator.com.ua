@@ -999,3 +999,22 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   color: #333;
   margin-top: 0.35em;
 }
+
+.result-macros-row {
+  display: flex;
+  gap: 1em; /* adjust as needed */
+  justify-content: flex-start;
+  margin-bottom: 0.4em;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .result-macros-row {
+    flex-direction: column !important;
+    gap: 0.3em !important;
+  }
+  .result-macros-row .macro-item {
+    min-width: 0 !important;
+    margin-bottom: 0.3em;
+    font-size: 1.07em;
+  }
+}
