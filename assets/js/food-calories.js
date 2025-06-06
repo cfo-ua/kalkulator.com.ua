@@ -110,7 +110,8 @@ function addAutocomplete(row) {
     if (matches.length > 0) {
       ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name_uk}</div>`).join('');
       ac.querySelectorAll('.food-ac-item').forEach(el => {
-        el.onmousedown = (e) => { // onmousedown = fires before blur
+        // Use onmousedown (fires before blur) for robust UX
+        el.onmousedown = (e) => {
           e.preventDefault();
           lastAcClick = true;
           input.value = el.textContent;
