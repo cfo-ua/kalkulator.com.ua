@@ -1,4 +1,4 @@
-// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Clean Version (2025-06-06 CTO/UX update with macros totals)
+// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06 CTO/UX update with macros totals)
 
 // Attach FOOD_DB to window for global/debug/autocomplete access
 window.FOOD_DB = [];
@@ -54,7 +54,7 @@ function getFoodByName(name) {
 }
 
 function recalcAll() {
-  let total = {cal:0, protein:0, fat:0, amount:0};
+  let total = {cal:0, protein:0, fat:0, carbs:0, amount:0};
   document.querySelectorAll('.food-row-grid').forEach(row => {
     const name = row.querySelector('.food-name').value.trim();
     const amount = parseFloat(row.querySelector('.food-amount').value) || 0;
@@ -68,21 +68,24 @@ function recalcAll() {
     let mult = 1.0;
     if (unit === 'ml' && food.density) mult = food.density;
     let relAmount = amount * (unit === 'g' ? 1 : (unit === 'ml' ? mult : (food.weight_per_piece || 1)));
-    let cal = food.calories * relAmount / 100;
+    let cal = (food.calories || 0) * relAmount / 100;
     let protein = (food.protein || 0) * relAmount / 100;
     let fat = (food.fat || 0) * relAmount / 100;
+    let carbs = (food.carbs || food.carbohydrates || 0) * relAmount / 100;
     calSpan.textContent = Math.round(cal);
     total.cal += cal;
     total.protein += protein;
     total.fat += fat;
+    total.carbs += carbs;
     total.amount += relAmount;
   });
 
-  // Visual total protein/fats row
+  // Visual total macros row (proteins, fats, carbs)
   const macrosRow = `
     <div class="result-macros-row" style="display:flex;gap:2em;justify-content:flex-start;margin-bottom:0.4em;">
       <div style="color:#1b7e1b;"><b>Білки:</b> ${total.protein ? total.protein.toFixed(1) : '—'} г</div>
       <div style="color:#b88d00;"><b>Жири:</b> ${total.fat ? total.fat.toFixed(1) : '—'} г</div>
+      <div style="color:#0063c6;"><b>Вуглеводи:</b> ${total.carbs ? total.carbs.toFixed(1) : '—'} г</div>
     </div>
   `;
 
