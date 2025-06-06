@@ -1,4 +1,4 @@
-// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06, direct "carb" support, responsive macros row)
+// Food Calories Calculator — Apple-style, Calories, Proteins, Fats, Carbs, Clean Version (2025-06-06, direct "carb" support, responsive macros row CSS moved to style.css)
 
 // Attach FOOD_DB to window for global/debug/autocomplete access
 window.FOOD_DB = [];
@@ -80,32 +80,13 @@ function recalcAll() {
     total.amount += relAmount;
   });
 
-  // Responsive macros row: row on desktop, column on mobile
+  // Macros row: CSS for gap/margin now in style.css, only color and min-width inline
   const macrosRow = `
-    <div class="result-macros-row" style="
-      display: flex;
-      gap: 2em;
-      justify-content: flex-start;
-      margin-bottom: 0.4em;
-      flex-wrap: wrap;
-    ">
+    <div class="result-macros-row">
       <div class="macro-item" style="color:#1b7e1b;min-width:120px;"><b>Білки:</b> ${total.protein ? total.protein.toFixed(1) : '—'} г</div>
       <div class="macro-item" style="color:#b88d00;min-width:120px;"><b>Жири:</b> ${total.fat ? total.fat.toFixed(1) : '—'} г</div>
       <div class="macro-item" style="color:#991c1c;min-width:120px;"><b>Вуглеводи:</b> ${total.carb ? total.carb.toFixed(1) : '—'} г</div>
     </div>
-    <style>
-      @media (max-width: 600px) {
-        .result-macros-row {
-          flex-direction: column !important;
-          gap: 0.3em !important;
-        }
-        .result-macros-row .macro-item {
-          min-width: 0 !important;
-          margin-bottom: 0.3em;
-          font-size: 1.07em;
-        }
-      }
-    </style>
   `;
 
   document.getElementById('food-calories-result').innerHTML = `
