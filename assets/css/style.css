@@ -328,8 +328,7 @@ h1 {
 /* Focus only gets an outline, not a background color change */
 .calculator-block button:focus,
 .calculator-block .btn:focus {
-  outline: 2px solid var(--accent-hover);
-  outline-offset: 2px;
+  outline: none;
 }
 .result {
   font-size: 1.18em;
