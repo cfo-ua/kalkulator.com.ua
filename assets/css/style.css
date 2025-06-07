@@ -325,6 +325,14 @@ h1 {
   color: #fff;
 }
 
+.calculator-block button:active,
+.calculator-block .btn:active {
+  background: #004bbd; /* even darker than --accent-hover */
+  box-shadow: 0 1px 4px 0 rgba(60,60,60,0.09) inset;
+  /* Optionally: move the button down a bit for a "pressed" effect */
+  transform: translateY(1px);
+}
+
 /* Focus only gets an outline, not a background color change */
 .calculator-block button:focus,
 .calculator-block .btn:focus {
