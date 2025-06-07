@@ -317,15 +317,20 @@ h1 {
   text-decoration: none !important;
   max-width: 100%;
 }
+
+/* Only hover gets the dark background */
 .calculator-block button:hover,
-.calculator-block .btn:hover,
-.calculator-block button:focus,
-.calculator-block .btn:focus {
+.calculator-block .btn:hover {
   background: var(--accent-hover);
   color: #fff;
-  outline: none;
 }
 
+/* Focus only gets an outline, not a background color change */
+.calculator-block button:focus,
+.calculator-block .btn:focus {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+}
 .result {
   font-size: 1.18em;
   color: var(--accent);
