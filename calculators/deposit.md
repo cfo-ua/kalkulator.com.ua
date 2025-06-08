@@ -67,7 +67,7 @@ faq:
     <input type="number" id="deposit-months" required min="1" max="36" value="12">
   </label>
   <label>
-    Сума вкладу (₴)
+    Сума вкладу
     <input type="number" id="deposit-amount" required min="0" step="100" value="1000">
   </label>
   <div>
