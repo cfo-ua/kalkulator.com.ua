@@ -66,7 +66,7 @@ faq:
 
 <form id="loan-form">
   <label>
-    Сума кредиту (₴)
+    Сума кредиту
     <input type="number" id="amount" required min="0" step="100" value="10000">
   </label>
   <label>
