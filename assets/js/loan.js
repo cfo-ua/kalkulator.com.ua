@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const paymentFormatted = payment.toLocaleString('uk-UA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
       const totalFormatted = total.toLocaleString('uk-UA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
       result.innerHTML = `
-        <b>Щомісячний платіж:</b> ${paymentFormatted} ₴<br>
-        <b>Загальна сума виплат:</b> ${totalFormatted} ₴
+        <b>Щомісячний платіж:</b> ${paymentFormatted}<br>
+        <b>Загальна сума виплат:</b> ${totalFormatted}
       `;
     });
   }
