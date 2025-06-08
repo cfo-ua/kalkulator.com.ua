@@ -113,18 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       result.innerHTML = `
-        <div style="text-align:left; font-size:1.08em; color:#157aff; font-weight:600;">
-          <span style="font-size:1.08em; font-weight:700; color:#157aff; display:block; margin-bottom:0.7em;">Розрахунок:</span>
-          <span>Сума вкладу: <b>${formatUA(principal)} ₴</b></span><br>
-          <span>Сума поповнень: <b>${formatUA(totalReplenish)} ₴</b></span><br>
-          <span>Ефективна ставка: <b>${effectiveRate}</b></span><br>
-          <span>Проценти (дохід): <b>${formatUA(totalInterest)} ₴</b></span><br>
-          <span>Податок (18% ПДФО + 5% військовий збір): <b>${formatUA(tax)} ₴</b></span><br>
-          <br>
-          <b>Після сплати податку:</b><br>
-          <span>Проценти (прибуток): <b>${formatUA(netInterest)} ₴</b></span>
-        </div>
-      `;
+  <div style="text-align:left; font-size:1.08em; color:#157aff; font-weight:600;">
+    <span style="font-size:1.08em; font-weight:700; color:#157aff; display:block; margin-bottom:0.7em;">Розрахунок:</span>
+    <span>Сума вкладу: <b>${formatUA(principal)}</b></span><br>
+    <span>Сума поповнень: <b>${formatUA(totalReplenish)}</b></span><br>
+    <span>Ефективна ставка: <b>${effectiveRate}</b></span><br>
+    <span>Проценти (дохід): <b>${formatUA(totalInterest)}</b></span><br>
+    <span>Податок (18% ПДФО + 5% військовий збір): <b>${formatUA(tax)}</b></span><br>
+    <br>
+    <b>Після сплати податку:</b><br>
+    <span>Проценти (прибуток): <b>${formatUA(netInterest)}</b></span>
+  </div>
+`;
     });
   }
 });
