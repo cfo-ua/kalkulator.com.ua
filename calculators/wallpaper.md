@@ -13,7 +13,7 @@ seo:
     - калькулятор
   content: |
     <h2>Калькулятор шпалер</h2>
-    <p>Вкажіть периметр кімнати, висоту стін, розмір рулону — калькулятор знайде кількість рулонів.</p>
+    <p>Вкажіть площу стін та розмір рулону — калькулятор знайде кількість рулонів.</p>
 scripts:
   - /assets/js/wallpaper.js
 faq:
@@ -23,12 +23,8 @@ faq:
 
 <form id="wallpaper-form" autocomplete="off">
   <label>
-    Периметр кімнати (м):
-    <input type="number" id="wallpaper-perimeter" min="0" step="any" required>
-  </label>
-  <label>
-    Висота стін (м):
-    <input type="number" id="wallpaper-height" min="0" step="any" required>
+    Площа стін (м²):
+    <input type="number" id="wallpaper-wall-area" min="0" step="any" required>
   </label>
   <label>
     Довжина рулону (м):
