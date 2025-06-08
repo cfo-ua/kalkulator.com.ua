@@ -109,8 +109,6 @@
   {"name":"Шампанське","calories":76,"protein":0.3,"fat":0,"carb":2,"density":0.98,"weight_per_piece":0},
   {"name":"Чай зелений (без цукру)","calories":1,"protein":0,"fat":0,"carb":0.3,"density":1,"weight_per_piece":0},
   {"name":"Какао (напій)","calories":77,"protein":3.3,"fat":1.5,"carb":14,"density":1.03,"weight_per_piece":0},
-
-  // Нові продукти та напої:
   {"name":"Айран","calories":29,"protein":1.8,"fat":1,"carb":3,"density":1.02,"weight_per_piece":0},
   {"name":"Ряжанка 4%","calories":67,"protein":2.8,"fat":4,"carb":5,"density":1.04,"weight_per_piece":0},
   {"name":"Йогурт натуральний 2.5%","calories":51,"protein":3,"fat":2.5,"carb":4.5,"density":1.04,"weight_per_piece":0},
@@ -160,8 +158,6 @@
   {"name":"Березовий сік","calories":16,"protein":0,"fat":0,"carb":4,"density":1,"weight_per_piece":0},
   {"name":"Кисіль вишневий","calories":55,"protein":0.2,"fat":0,"carb":12,"density":1.03,"weight_per_piece":0},
   {"name":"Морозиво «Пломбір»","calories":220,"protein":3.5,"fat":14,"carb":21,"density":1,"weight_per_piece":70},
-
-  // Ще більше продуктів, популярних в Україні:
   {"name":"Пшоняна каша на молоці","calories":106,"protein":3.2,"fat":3.2,"carb":16,"density":1,"weight_per_piece":0},
   {"name":"Гречані млинці","calories":190,"protein":6,"fat":6,"carb":27,"density":1,"weight_per_piece":50},
   {"name":"Вареники з вишнею","calories":175,"protein":3,"fat":3,"carb":33,"density":1,"weight_per_piece":20},
