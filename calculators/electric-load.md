@@ -33,11 +33,11 @@ faq:
   flex: 1 1 0;
 }
 .remove-appliance {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
-  font-size: 1.2em;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 1.1em;
   color: #fff;
   background: #157aff;
   border: none;
@@ -47,8 +47,7 @@ faq:
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   padding: 0;
   line-height: 1;
 }
