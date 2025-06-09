@@ -1173,3 +1173,33 @@ input[type="date"]::-moz-focus-inner {
   outline: none;
   background: #eaf3ff;
 }
+
+.electric-load-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.remove-appliance {
+  width: 26px;
+  min-width: 26px;
+  height: 34px;
+  min-height: 34px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 7px;
+  background: #157aff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  align-self: center;
+}
+.remove-appliance:hover {
+  background: #005bd1;
+}
