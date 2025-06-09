@@ -13,7 +13,7 @@ seo:
     - калькулятор
   content: |
     <h2>Калькулятор електричної потужності</h2>
-    <p>Додайте всі електроприлади — калькулятор визначить загальну необхідну потужність (кВт).</p>
+    <p>Вкажіть назву і потужність кожного приладу. Натисніть «Додати прилад» для ще одного рядка. Кнопка «–» видаляє відповідний рядок. Вкажіть коефіцієнт одночасності та натисніть «Розрахувати».</p>
 scripts:
   - /assets/js/electric-load.js
 faq:
@@ -26,7 +26,6 @@ faq:
     <div class="electric-load-row">
       <input type="text" class="electric-appliance" placeholder="Назва приладу" />
       <input type="number" class="electric-power" min="0" step="any" placeholder="Потужність, Вт" />
-      <button type="button" class="remove-appliance" title="Видалити">–</button>
     </div>
   </div>
   <button type="button" id="add-appliance">Додати прилад</button>
