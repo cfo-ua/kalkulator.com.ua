@@ -14,15 +14,53 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     row.querySelector('.remove-appliance').onclick = function () {
       row.remove();
+      // If no rows left, always leave one empty row
+      if (list.querySelectorAll('.electric-load-row').length === 0) {
+        list.appendChild(createBaseRow());
+      }
     };
     return row;
   }
 
+  function createBaseRow() {
+    // Same as createRow but without remove button (cannot remove last row)
+    const row = document.createElement('div');
+    row.className = 'electric-load-row';
+    row.innerHTML = `
+      <input type="text" class="electric-appliance" placeholder="Назва приладу" />
+      <input type="number" class="electric-power" min="0" step="any" placeholder="Потужність, Вт" />
+    `;
+    return row;
+  }
+
+  // Simplify structure: initial form has one row, only extra rows have remove button
+  function updateRemoveButtons() {
+    const rows = list.querySelectorAll('.electric-load-row');
+    rows.forEach((row, idx) => {
+      const btn = row.querySelector('.remove-appliance');
+      if (btn) {
+        btn.style.display = rows.length > 1 ? "" : "none";
+      }
+    });
+  }
+
   if (addBtn) {
     addBtn.onclick = function () {
-      list.appendChild(createRow());
+      const row = createRow();
+      list.appendChild(row);
+      updateRemoveButtons();
     };
   }
+
+  // Initialize: ensure only one base row at start, no remove button
+  (function initRows() {
+    // Remove any remove button from the first row
+    const firstRow = list.querySelector('.electric-load-row');
+    if (firstRow) {
+      const btn = firstRow.querySelector('.remove-appliance');
+      if (btn) btn.remove();
+    }
+  })();
 
   if (form) {
     form.addEventListener('submit', function (e) {
