@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const row = document.createElement('div');
     row.className = 'electric-load-row';
     row.innerHTML = `
+      <button type="button" class="remove-appliance" title="Видалити">–</button>
       <input type="text" class="electric-appliance" placeholder="Назва приладу" />
       <input type="number" class="electric-power" min="0" step="any" placeholder="Потужність, Вт" />
-      <button type="button" class="remove-appliance" title="Видалити">–</button>
     `;
     row.querySelector('.remove-appliance').onclick = function () {
       row.remove();
-      // If no rows left, always leave one empty row
+      // Якщо не залишилося жодного рядка, додати порожній
       if (list.querySelectorAll('.electric-load-row').length === 0) {
         list.appendChild(createBaseRow());
       }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createBaseRow() {
-    // Same as createRow but without remove button (cannot remove last row)
+    // Перший рядок без кнопки видалення
     const row = document.createElement('div');
     row.className = 'electric-load-row';
     row.innerHTML = `
@@ -33,28 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return row;
   }
 
-  // Simplify structure: initial form has one row, only extra rows have remove button
-  function updateRemoveButtons() {
-    const rows = list.querySelectorAll('.electric-load-row');
-    rows.forEach((row, idx) => {
-      const btn = row.querySelector('.remove-appliance');
-      if (btn) {
-        btn.style.display = rows.length > 1 ? "" : "none";
-      }
-    });
-  }
-
   if (addBtn) {
     addBtn.onclick = function () {
-      const row = createRow();
-      list.appendChild(row);
-      updateRemoveButtons();
+      list.appendChild(createRow());
     };
   }
 
-  // Initialize: ensure only one base row at start, no remove button
+  // На старті: якщо є лише одна строка, видалити remove-кнопку
   (function initRows() {
-    // Remove any remove button from the first row
     const firstRow = list.querySelector('.electric-load-row');
     if (firstRow) {
       const btn = firstRow.querySelector('.remove-appliance');
