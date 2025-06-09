@@ -1205,3 +1205,30 @@ input[type="date"]::-moz-focus-inner {
 .remove-appliance:hover {
   background: #005bd1;
 }
+
+
+.calculator-block .electric-load-row .remove-appliance {
+  width: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  max-height: 34px !important;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 7px;
+  background: #157aff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  align-self: center;
+}
+
+.calculator-block .electric-load-row .remove-appliance:hover {
+  background: #005bd1;
+}
