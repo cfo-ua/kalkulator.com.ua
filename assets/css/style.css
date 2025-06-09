@@ -1174,6 +1174,37 @@ input[type="date"]::-moz-focus-inner {
   background: #eaf3ff;
 }
 
+
+/* ———————————————————————————————— */
+/* OVERRIDE for food-row inputs: removes extra padding/margin/shadow */
+.food-row-input-wrap input[type="text"] {
+  /* cancel generic bottom margin */
+  margin: 0;
+
+  /* match your other cell vertical padding exactly */
+  padding: 0.84em 1.15em;
+
+  /* fill the wrapper’s full height */
+  height: 100%;
+  box-sizing: border-box;
+
+  /* revert border & background to the food-row style */
+  background: #f7f8fa;
+  border: none;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+
+  /* remove the box-shadow so it doesn’t enlarge the row */
+  box-shadow: none;
+}
+
+.food-row-input-wrap input[type="text"]:focus {
+  background: #eaf3ff;
+  /* you can re-add a thin focus border if you like:
+     border: 1px solid var(--accent, #157aff); */
+}
+
+
 .electric-load-row {
   display: flex;
   align-items: center;
