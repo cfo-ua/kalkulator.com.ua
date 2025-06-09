@@ -1152,46 +1152,28 @@ input[type="date"]::-moz-focus-inner {
   }
 }
 
-/* Apple-style calculator text input — Debug Version */
+/* Apple-style calculator text input — Final Clean Version */
 .calculator-block input[type="text"] {
   width: 100%;
-
-  /* ↓ Temporarily reduce padding to test input height */
-  padding: 0.3em 0.6em;
-
-  /* ↓ Reduce font-size to lessen height */
-  font-size: 1em;
-
+  padding: 0.4em 0.7em;             /* Slightly reduced for better compactness */
+  font-size: 1em;                   /* Slightly smaller to reduce input height */
   border-radius: 10px;
   border: 1.5px solid var(--border, #e5e5e5);
-
-  /* ↓ Comment out or reduce margin to see if it’s affecting layout */
-  margin-bottom: 0.5em;
-
+  margin-bottom: 1em;              /* Adjusted for spacing between rows */
   background: #fff;
   transition: border var(--transition, 0.16s);
   font-family: inherit;
   color: var(--main-color, #181818);
-
-  /* ↓ Remove or test box-shadow */
-  box-shadow: none; /* was: 0 2px 10px 0 rgba(60,60,60,0.05); */
-
+  box-shadow: 0 2px 10px 0 rgba(60,60,60,0.05);
   font-weight: 500;
-
-  /* ↓ Ensure padding and border don’t increase box size */
   box-sizing: border-box;
-
-  /* ↓ Debug helper to visualize the element bounds */
-  outline: 1px dashed red;
 }
 
-/* Focus state */
 .calculator-block input[type="text"]:focus {
   border: 1.5px solid var(--accent, #157aff);
-  outline: 1px dashed blue; /* debug visual */
+  outline: none;
   background: #eaf3ff;
 }
-
 
 .electric-load-row {
   display: flex;
