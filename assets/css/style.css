@@ -816,24 +816,33 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 
 /* --- Autocomplete wrapper for proper positioning --- */
 .food-row-input-wrap {
-  background: #f7f8fa;
-  padding: 0.84em 0;                 /* same vertical padding as number/select/calories */
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  box-sizing: border-box;
+  position: relative;
+  flex: 3 1 0;
+  min-width: 130px;
+  max-width: 400px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Name input: more space, text visible */
 .food-row-input-wrap input[type="text"] {
-  background: transparent;          /* let the wrapper’s grey show through */
-  padding: 0 1.15em;                /* horizontal padding only */
-  height: 100%;                     /* match wrapper’s height exactly */
+  width: 100%;
+  background: #f7f8fa;
+  color: #181818;
+  padding: 0.84em 1.15em;
   font-size: 1.13em;
   border: none;
+  margin: 0;
   outline: none;
-  box-sizing: border-box;
+  border-radius: 0;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  font-weight: 500;
+  transition: background 0.17s, color 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
 }
 
 /* Amount input: more space, not squished */
