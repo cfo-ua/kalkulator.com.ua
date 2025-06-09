@@ -13,7 +13,7 @@ seo:
     - калькулятор
   content: |
     <h2>Калькулятор цегли</h2>
-    <p>Введіть площу стіни, тип цегли та товщину шва — калькулятор визначить кількість цегли.</p>
+    <p>Введіть площу стіни, розміри цегли та товщину шва — калькулятор визначить кількість цегли.</p>
 scripts:
   - /assets/js/bricks.js
 faq:
@@ -27,12 +27,12 @@ faq:
     <input type="number" id="bricks-area" min="0" step="any" required>
   </label>
   <label>
-    Тип цегли:
-    <select id="bricks-type">
-      <option value="250x120x65">Одинарна (250×120×65 мм)</option>
-      <option value="250x120x88">Потовщена (250×120×88 мм)</option>
-      <option value="250x120x140">Подвійна (250×120×140 мм)</option>
-    </select>
+    Довжина цегли (мм):
+    <input type="number" id="bricks-length" min="1" step="any" placeholder="250" required>
+  </label>
+  <label>
+    Висота цегли (мм):
+    <input type="number" id="bricks-height" min="1" step="any" placeholder="65" required>
   </label>
   <label>
     Товщина шва (мм):
