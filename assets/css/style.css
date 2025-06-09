@@ -1184,8 +1184,10 @@ input[type="date"]::-moz-focus-inner {
 .remove-appliance {
   width: 26px;
   min-width: 26px;
+  max-width: 26px;
   height: 34px;
   min-height: 34px;
+  max-height: 34px;
   font-size: 1.1em;
   display: flex;
   align-items: center;
