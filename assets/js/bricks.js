@@ -5,18 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const area = parseFloat(document.getElementById('bricks-area').value);
-      const type = document.getElementById('bricks-type').value;
+      const length = parseFloat(document.getElementById('bricks-length').value);
+      const height = parseFloat(document.getElementById('bricks-height').value);
       const joint = parseFloat(document.getElementById('bricks-joint').value) || 0;
-      if (area <= 0) {
-        result.textContent = "Введіть площу стіни.";
+      if (area <= 0 || length <= 0 || height <= 0) {
+        result.textContent = "Введіть площу стіни та розміри цегли.";
         return;
       }
-      // Dimensions in mm
-      let brickDim = { "250x120x65": [250, 65], "250x120x88": [250, 88], "250x120x140": [250, 140]};
-      let [length, height] = brickDim[type];
       // Include mortar joint
-      let brickArea = ((length + joint) / 1000) * ((height + joint) / 1000);
-      let bricks = area / brickArea;
+      const brickArea = ((length + joint) / 1000) * ((height + joint) / 1000);
+      const bricks = area / brickArea;
       result.innerHTML = `<b>Потрібно цегли:</b> ${Math.ceil(bricks)} шт.`;
     });
   }
