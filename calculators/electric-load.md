@@ -13,13 +13,45 @@ seo:
     - калькулятор
   content: |
     <h2>Калькулятор електричної потужності</h2>
-    <p>Вкажіть назву і потужність кожного приладу. Натисніть «Додати прилад» для ще одного рядка. Кнопка «–» видаляє відповідний рядок. Вкажіть коефіцієнт одночасності та натисніть «Розрахувати».</p>
+    <p>Вкажіть назву і потужність кожного приладу. Натисніть «Додати прилад» для ще одного рядка. Кнопка «–» видаляє відповідний рядок.</p>
+    <p><strong>Коефіцієнт одночасності</strong> (0.7–1) — це частка приладів, які можуть працювати одночасно. Для квартири зазвичай беруть 0.7–0.8, для офісу чи виробництва — ближче до 1. Якщо плануєте вмикати всі прилади разом — ставте 1.</p>
 scripts:
   - /assets/js/electric-load.js
 faq:
   - question: Як визначити потрібну потужність для дому?
     answer: "Підсумуйте потужність усіх пристроїв, врахуйте коефіцієнт одночасності (0.7–0.8)."
 ---
+
+<style>
+.electric-load-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.electric-load-row input[type="text"], .electric-load-row input[type="number"] {
+  flex: 1 1 0;
+}
+.remove-appliance {
+  margin-right: 12px;
+  margin-left: 0;
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 1.4em;
+  color: #fff;
+  background: #157aff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remove-appliance:hover {
+  background: #005bd1;
+}
+</style>
 
 <form id="electric-load-form" autocomplete="off">
   <div id="electric-load-list">
