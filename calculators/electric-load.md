@@ -33,20 +33,24 @@ faq:
   flex: 1 1 0;
 }
 .remove-appliance {
-  margin-right: 12px;
-  margin-left: 0;
-  min-width: 40px;
-  min-height: 40px;
-  font-size: 1.4em;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  font-size: 1.2em;
   color: #fff;
   background: #157aff;
   border: none;
-  border-radius: 8px;
+  border-radius: 7px;
   cursor: pointer;
   transition: background 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+  line-height: 1;
 }
 .remove-appliance:hover {
   background: #005bd1;
