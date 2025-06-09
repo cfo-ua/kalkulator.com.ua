@@ -22,40 +22,6 @@ faq:
     answer: "Підсумуйте потужність усіх пристроїв, врахуйте коефіцієнт одночасності (0.7–0.8)."
 ---
 
-<style>
-.electric-load-row {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 14px;
-}
-.electric-load-row input[type="text"], .electric-load-row input[type="number"] {
-  flex: 1 1 0;
-}
-.remove-appliance {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  min-height: 32px;
-  font-size: 1.1em;
-  color: #fff;
-  background: #157aff;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background 0.15s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-.remove-appliance:hover {
-  background: #005bd1;
-}
-</style>
-
 <form id="electric-load-form" autocomplete="off">
   <div id="electric-load-list">
     <div class="electric-load-row">
