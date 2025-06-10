@@ -31,19 +31,19 @@ faq:
 <form id="dilution-form" autocomplete="off">
   <label>
     Початкова концентрація (C₁, моль/л):
-    <input type="number" id="dil-c1" step="any" placeholder="Введіть C₁">
+    <input type="number" id="dil-c1" step="any">
   </label>
   <label>
     Початковий обʼєм (V₁, л):
-    <input type="number" id="dil-v1" step="any" placeholder="Введіть V₁">
+    <input type="number" id="dil-v1" step="any">
   </label>
   <label>
     Кінцева концентрація (C₂, моль/л):
-    <input type="number" id="dil-c2" step="any" placeholder="Введіть C₂">
+    <input type="number" id="dil-c2" step="any">
   </label>
   <label>
     Кінцевий обʼєм (V₂, л):
-    <input type="number" id="dil-v2" step="any" placeholder="Введіть V₂">
+    <input type="number" id="dil-v2" step="any">
   </label>
   <button type="submit">Обчислити</button>
 </form>
