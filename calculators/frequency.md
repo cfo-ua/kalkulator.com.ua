@@ -30,11 +30,11 @@ faq:
 <form id="frequency-form" autocomplete="off">
   <label>
     Період (T, с):
-    <input type="number" id="freq-t" min="0" step="any" placeholder="Введіть період в секундах">
+    <input type="number" id="freq-t" min="0" step="any">
   </label>
   <label>
     Частота (f, Гц):
-    <input type="number" id="freq-f" min="0" step="any" placeholder="Введіть частоту в герцах">
+    <input type="number" id="freq-f" min="0" step="any">
   </label>
   <button type="submit">Обчислити</button>
 </form>
