@@ -11,23 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const height = parseFloat(document.getElementById('bricks-height').value);
       const width = parseFloat(document.getElementById('bricks-width').value);
       const joint = parseFloat(document.getElementById('bricks-joint').value) || 0;
+      const layerMultiplier = parseFloat(document.getElementById('bricks-layer').value); // 1, 2, 3, 4
 
-      if (area <= 0 || length <= 0 || height <= 0 || width <= 0) {
-        result.textContent = "Введіть всі розміри цегли та площу стіни.";
+      if (area <= 0 || length <= 0 || height <= 0 || width <= 0 || layerMultiplier <= 0) {
+        result.textContent = "Введіть всі розміри цегли, площу стіни та тип кладки.";
         return;
       }
 
-      // Площа кладки: задана користувачем (м²)
-      // Обʼєм однієї цегли з урахуванням швів
-      const brickLength = (length + joint) / 1000; // у метрах
-      const brickHeight = (height + joint) / 1000;
-      const brickWidth = (width + joint) / 1000;
+      const brickLength = (length + joint) / 1000; // м
+      const brickHeight = (height + joint) / 1000; // м
+      const brickWidth = (width + joint) / 1000;   // м
 
-      const brickFaceArea = brickLength * brickHeight; // м² (передня площа цегли)
       const brickVolume = brickLength * brickHeight * brickWidth; // м³
 
-      // Об'єм кладки: площа × ширина стіни
-      const wallVolume = area * brickWidth;
+      const wallThickness = brickWidth * layerMultiplier; // м
+      const wallVolume = area * wallThickness; // м² × м = м³
 
       const bricks = wallVolume / brickVolume;
 
