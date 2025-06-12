@@ -1,11 +1,11 @@
 ---
 layout: calculator
-title: "Калькулятор ПДВ (VAT)"
+title: "Калькулятор ПДВ"
 categories: [business]
 seo:
   title: "Калькулятор ПДВ — Розрахувати ціну з/без податку | kalkulator.com.ua"
   description: "Обчисліть ціну з ПДВ, без ПДВ або сам ПДВ. Просто введіть будь-які два значення — ставка, ціна з ПДВ, ціна без ПДВ — і калькулятор визначить третє."
-  keywords: ["калькулятор ПДВ", "розрахунок ПДВ", "ціна з ПДВ", "ціна без ПДВ", "пдв в україні", "податок на додану вартість", "VAT calculator"]
+  keywords: ["калькулятор ПДВ", "розрахунок ПДВ", "ціна з ПДВ", "ціна без ПДВ", "пдв в україні", "податок на додану вартість"]
   content: |
     <h2>Калькулятор ПДВ</h2>
     <p>Введіть будь-які <strong>два значення</strong> — калькулятор автоматично визначить третє. Ви можете розрахувати:</p>
@@ -33,7 +33,7 @@ faq:
     <input type="number" id="price-gross" min="0" step="0.01" placeholder="напр. 1200">
   </label>
   <label>Ставка ПДВ (%):
-    <input type="number" id="vat-rate" min="0" step="0.1" placeholder="напр. 20">
+    <input type="number" id="vat-rate" min="0" step="0.1" placeholder="напр. 20" value="20">
   </label>
   <button type="submit">Розрахувати</button>
 </form>
