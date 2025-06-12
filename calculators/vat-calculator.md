@@ -25,7 +25,7 @@ faq:
     answer: "Ціна з ПДВ = Ціна без ПДВ × (1 + ставка / 100)"
 ---
 
-<form id="vat-form" autocomplete="off" style="max-width:420px;">
+<form id="vat-form" autocomplete="off">
   <label>Ціна без ПДВ:
     <input type="number" id="price-net" min="0" step="0.01" placeholder="напр. 1000">
   </label>
@@ -38,4 +38,4 @@ faq:
   <button type="submit">Розрахувати</button>
 </form>
 
-<div id="vat-result" class="result" style="min-height:2.3em;margin-top:1.5em;"></div>
+<div id="vat-result" class="result"></div>
