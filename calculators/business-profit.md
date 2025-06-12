@@ -26,7 +26,7 @@ faq:
 
 <form id="business-profit-form" autocomplete="off">
   <label>
-    Бажаний місячний прибуток (грн):
+    Бажаний місячний прибуток:
     <input type="number" id="target-profit" min="0" step="any" required>
   </label>
   <label>
