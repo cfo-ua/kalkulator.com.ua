@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         markup: !isNaN(markupInput),
       };
 
-      // Calculate missing value(s) based on what's known
       if (known.cost && known.price) {
         const profit = price - cost;
         const margin = profit / price * 100;
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <ul>
             <li><strong>Маржа:</strong> ${margin.toFixed(2)}%</li>
             <li><strong>Націнка:</strong> ${markup.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${(profit).toFixed(2)}</li>
+            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
           </ul>
         `;
       } else if (known.cost && known.markup) {
@@ -64,6 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
           <ul>
             <li><strong>Собівартість:</strong> ${cost.toFixed(2)}</li>
             <li><strong>Націнка:</strong> ${markup.toFixed(2)}%</li>
+            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+          </ul>
+        `;
+      } else if (known.price && known.markup) {
+        const cost = price / (1 + markupInput / 100);
+        const profit = price - cost;
+        const margin = profit / price * 100;
+
+        result.innerHTML = `
+          <ul>
+            <li><strong>Собівартість:</strong> ${cost.toFixed(2)}</li>
+            <li><strong>Маржа:</strong> ${margin.toFixed(2)}%</li>
             <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
           </ul>
         `;
