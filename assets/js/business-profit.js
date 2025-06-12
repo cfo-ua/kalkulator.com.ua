@@ -1,47 +1,54 @@
-// assets/js/business-profit.js
-
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("business-profit-form");
-  const result = document.getElementById("business-profit-result");
+  const form = document.getElementById('business-profit-form');
+  const result = document.getElementById('business-profit-result');
+
+  function formatNumber(value) {
+    if (value >= 1_000_000) {
+      return `${Math.round(value / 1_000_000)} млн`;
+    } else if (value >= 1_000) {
+      return `${Math.round(value / 1_000)} тис.`;
+    } else {
+      return value.toLocaleString('uk-UA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+  }
 
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const targetProfit = parseFloat(document.getElementById("target-profit").value);
-      const margin = parseFloat(document.getElementById("business-margin").value);
+      const targetMonthlyProfit = parseFloat(document.getElementById('target-profit').value);
+      const marginPercent = parseFloat(document.getElementById('business-margin').value);
 
-      if (targetProfit <= 0 || margin <= 0 || margin >= 100) {
-        result.textContent = "Будь ласка, введіть коректні значення: прибуток > 0, маржа в межах 0–100%.";
+      if (targetMonthlyProfit <= 0 || marginPercent <= 0 || marginPercent >= 100) {
+        result.textContent = "Введіть коректні значення прибутку та маржі.";
         return;
       }
 
-      // Calculate required revenue
-      const monthlyRevenue = targetProfit / (margin / 100);
+      const margin = marginPercent / 100;
 
-      // Profit is same as input, revenue derived
-      const annualRevenue = monthlyRevenue * 12;
-      const weeklyRevenue = monthlyRevenue / 4.345; // average weeks in month
-      const dailyRevenue = monthlyRevenue / 30.437; // average days in month
+      const monthlyRevenue = targetMonthlyProfit / margin;
+      const yearlyRevenue = monthlyRevenue * 12;
+      const weeklyRevenue = yearlyRevenue / 52;
+      const dailyRevenue = yearlyRevenue / 365;
 
-      const annualProfit = targetProfit * 12;
-      const weeklyProfit = targetProfit / 4.345;
-      const dailyProfit = targetProfit / 30.437;
+      const yearlyProfit = targetMonthlyProfit * 12;
+      const weeklyProfit = yearlyProfit / 52;
+      const dailyProfit = yearlyProfit / 365;
 
       result.innerHTML = `
         <h3>Необхідні обсяги продажів:</h3>
         <ul>
-          <li><b>Місячний виторг:</b> ${monthlyRevenue.toFixed(2)} грн</li>
-          <li><b>Річний виторг:</b> ${annualRevenue.toFixed(2)} грн</li>
-          <li><b>Тижневий виторг:</b> ${weeklyRevenue.toFixed(2)} грн</li>
-          <li><b>Денний виторг:</b> ${dailyRevenue.toFixed(2)} грн</li>
+          <li><strong>Місячний виторг:</strong> ${formatNumber(monthlyRevenue)}</li>
+          <li><strong>Річний виторг:</strong> ${formatNumber(yearlyRevenue)}</li>
+          <li><strong>Тижневий виторг:</strong> ${formatNumber(weeklyRevenue)}</li>
+          <li><strong>Денний виторг:</strong> ${formatNumber(dailyRevenue)}</li>
         </ul>
         <h3>Відповідний прибуток:</h3>
         <ul>
-          <li><b>Місячний прибуток:</b> ${targetProfit.toFixed(2)} грн</li>
-          <li><b>Річний прибуток:</b> ${annualProfit.toFixed(2)} грн</li>
-          <li><b>Тижневий прибуток:</b> ${weeklyProfit.toFixed(2)} грн</li>
-          <li><b>Денний прибуток:</b> ${dailyProfit.toFixed(2)} грн</li>
+          <li><strong>Місячний прибуток:</strong> ${formatNumber(targetMonthlyProfit)}</li>
+          <li><strong>Річний прибуток:</strong> ${formatNumber(yearlyProfit)}</li>
+          <li><strong>Тижневий прибуток:</strong> ${formatNumber(weeklyProfit)}</li>
+          <li><strong>Денний прибуток:</strong> ${formatNumber(dailyProfit)}</li>
         </ul>
       `;
     });
