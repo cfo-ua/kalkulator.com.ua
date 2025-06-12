@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><strong>Жири:</strong> ${fat} г <span style="color:#888;">(${kcal(fat * 9)})</span></li>
         <li><strong>Вуглеводи:</strong> ${carb} г <span style="color:#888;">(${kcal(carb * 4)})</span></li>
       </ul>
-      <small style="color:#555;">Білки — <b>1.8 г/кг</b>, жири — <b>0.9 г/кг</b>, вуглеводи — решта калорій</small>
     `;
   });
 });
