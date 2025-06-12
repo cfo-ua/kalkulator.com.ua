@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("markup-margin-form");
   const result = document.getElementById("markup-margin-result");
 
+  function formatNumber(value) {
+    return Math.round(value).toLocaleString("uk-UA");
+  }
+
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -25,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         result.innerHTML = `
           <ul>
-            <li><strong>Маржа:</strong> ${margin.toFixed(2)}%</li>
-            <li><strong>Націнка:</strong> ${markup.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+            <li><strong>Маржа:</strong> ${Math.round(margin)}%</li>
+            <li><strong>Націнка:</strong> ${Math.round(markup)}%</li>
+            <li><strong>Прибуток:</strong> ${formatNumber(profit)}</li>
           </ul>
         `;
       } else if (known.cost && known.markup) {
@@ -37,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         result.innerHTML = `
           <ul>
-            <li><strong>Ціна продажу:</strong> ${price.toFixed(2)}</li>
-            <li><strong>Маржа:</strong> ${margin.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+            <li><strong>Ціна продажу:</strong> ${formatNumber(price)}</li>
+            <li><strong>Маржа:</strong> ${Math.round(margin)}%</li>
+            <li><strong>Прибуток:</strong> ${formatNumber(profit)}</li>
           </ul>
         `;
       } else if (known.cost && known.margin) {
@@ -49,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         result.innerHTML = `
           <ul>
-            <li><strong>Ціна продажу:</strong> ${price.toFixed(2)}</li>
-            <li><strong>Націнка:</strong> ${markup.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+            <li><strong>Ціна продажу:</strong> ${formatNumber(price)}</li>
+            <li><strong>Націнка:</strong> ${Math.round(markup)}%</li>
+            <li><strong>Прибуток:</strong> ${formatNumber(profit)}</li>
           </ul>
         `;
       } else if (known.price && known.margin) {
@@ -61,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         result.innerHTML = `
           <ul>
-            <li><strong>Собівартість:</strong> ${cost.toFixed(2)}</li>
-            <li><strong>Націнка:</strong> ${markup.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+            <li><strong>Собівартість:</strong> ${formatNumber(cost)}</li>
+            <li><strong>Націнка:</strong> ${Math.round(markup)}%</li>
+            <li><strong>Прибуток:</strong> ${formatNumber(profit)}</li>
           </ul>
         `;
       } else if (known.price && known.markup) {
@@ -73,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         result.innerHTML = `
           <ul>
-            <li><strong>Собівартість:</strong> ${cost.toFixed(2)}</li>
-            <li><strong>Маржа:</strong> ${margin.toFixed(2)}%</li>
-            <li><strong>Прибуток:</strong> ${profit.toFixed(2)}</li>
+            <li><strong>Собівартість:</strong> ${formatNumber(cost)}</li>
+            <li><strong>Маржа:</strong> ${Math.round(margin)}%</li>
+            <li><strong>Прибуток:</strong> ${formatNumber(profit)}</li>
           </ul>
         `;
       } else {
