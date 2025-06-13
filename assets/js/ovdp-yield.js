@@ -15,22 +15,28 @@ document.addEventListener("DOMContentLoaded", function () {
       isNaN(price) || isNaN(nextCoupon) ||
       !nextDate || !finalDate || nextDate <= today || finalDate <= today
     ) {
-      result.innerHTML = "Будь ласка, перевірте введені дані";
+      result.innerHTML = "Будь ласка, перевірте введені дані.";
       return;
     }
 
-    // Генерація усіх купонів кожні 6 місяців до/включно з датою погашення
+    // Генерація купонів кожні 6 місяців, включно з датою погашення
     const coupons = [];
     const couponInterval = 6; // місяців
     const currentCouponDate = new Date(nextDate);
 
-    while (currentCouponDate <= finalDate) {
+    while (currentCouponDate < finalDate) {
       coupons.push({
         date: new Date(currentCouponDate),
         amount: nextCoupon,
       });
       currentCouponDate.setMonth(currentCouponDate.getMonth() + couponInterval);
     }
+
+    // Додаємо останній купон в дату погашення
+    coupons.push({
+      date: new Date(finalDate),
+      amount: nextCoupon,
+    });
 
     const totalCoupons = coupons.length;
     const totalCouponValue = totalCoupons * nextCoupon;
