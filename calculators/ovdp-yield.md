@@ -15,7 +15,7 @@ faq:
     answer: "Ціна купівлі, купонні виплати, дата погашення та поточна дата."
 ---
 
-<form id="ovdp-form" autocomplete="off" style="max-width:420px;">
+<form id="ovdp-form" autocomplete="off">
   <label>Поточна ціна ОВДП (грн):
     <input type="number" id="price" min="0" required>
   </label>
@@ -34,4 +34,4 @@ faq:
   <button type="submit">Розрахувати</button>
 </form>
 
-<div id="ovdp-result" class="result" style="min-height:2.3em;margin-top:1.5em;"></div>
+<div id="ovdp-result" class="result"></div>
