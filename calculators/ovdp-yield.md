@@ -19,14 +19,14 @@ faq:
     answer: "Інвестуючи в ОВДП, ви не лише отримуєте дохід, але й підтримуєте економіку та Збройні Сили України."
 ---
 
-<form id="ovdp-form" autocomplete="off" style="max-width:420px;">
-  <label>Поточна ціна ОВДП (грн):
+<form id="ovdp-form" autocomplete="off"">
+  <label>Поточна ціна 1 облігації ОВДП (грн):
     <input type="number" id="price" min="0" step="0.01" required>
   </label>
   <label>Дата наступної виплати:
     <input type="date" id="nextDate" required>
   </label>
-  <label>Сума наступного купону (грн):
+  <label>Сума щопіврічного купону (грн):
     <input type="number" id="nextCoupon" min="0" step="0.01" required>
   </label>
   <label>Дата погашення:
