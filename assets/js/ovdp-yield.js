@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       currentCouponDate.setMonth(currentCouponDate.getMonth() + couponInterval);
     }
 
-    // Додаємо останній купон в дату погашення
+    // Додаємо останній купон у дату погашення
     coupons.push({
       date: new Date(finalDate),
       amount: nextCoupon,
@@ -44,8 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalIncome = totalCouponValue + finalPayout - price;
     const roi = totalIncome / price;
 
+    // Дні до дати погашення
     const days = (finalDate - today) / (1000 * 60 * 60 * 24);
-    const annualizedYield = Math.pow(1 + roi, 365 / days) - 1;
+
+    // Проста річна дохідність (без реінвестування)
+    const annualizedYieldSimple = roi / (days / 365);
 
     const formatMoney = (x) =>
       x.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -56,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <b>Кількість купонів:</b> ${totalCoupons}<br>
       <b>Загальний прибуток:</b> ${formatMoney(totalIncome)} грн<br>
       <b>Загальна дохідність:</b> ${formatPercent(roi)}<br>
-      <b>Річна дохідність:</b> ${formatPercent(annualizedYield)}
+      <b>Річна дохідність:</b> ${formatPercent(annualizedYieldSimple)}
     `;
   });
 });
