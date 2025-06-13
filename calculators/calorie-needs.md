@@ -3,7 +3,7 @@ layout: calculator
 title: "Калькулятор добової норми калорій"
 categories: [health]
 seo:
-  title: "Калькулятор калорій для схуднення, ваги, підтримки — Розрахунок TDEE, БЖВ | kalkulator.com.ua"
+  title: "Розрахунок калорій для схуднення, набору та підтримки ваги"
   description: "Розрахуйте, скільки калорій потрібно для схуднення, набору чи підтримки ваги. Враховує вік, стать, ріст, вагу, рівень активності. Поради, таблиці, добова норма, макроси."
   keywords: ["калькулятор калорій", "норма калорій", "TDEE", "BMR", "добова потреба в калоріях", "калорії для схуднення", "калорії для набору ваги", "калорії в день", "макроси", "україна"]
   content: |
@@ -29,7 +29,7 @@ faq:
     answer: "Загальна рекомендація: білки — 1.5-2 г/кг ваги, жири — 0.8-1 г/кг, решта — вуглеводи. Калькулятор підкаже пропорції."
 ---
 
-<form id="calorie-needs-form" autocomplete="off" style="max-width:420px;">
+<form id="calorie-needs-form" autocomplete="off">
   <label>Стать:
     <select id="gender" required>
       <option value="male">Чоловік</option>
@@ -63,4 +63,4 @@ faq:
   </label>
   <button type="submit">Розрахувати</button>
 </form>
-<div id="calorie-needs-result" class="result" style="min-height:2.3em;margin-top:1.5em;"></div>
+<div id="calorie-needs-result" class="result"></div>
