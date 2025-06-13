@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       isNaN(price) || isNaN(nextCoupon) ||
       !nextDate || !finalDate || nextDate <= today || finalDate <= today
     ) {
-      result.innerHTML = "Будь ласка, перевірте введені дані.";
+      result.innerHTML = "Будь ласка, перевірте введені дані";
       return;
     }
 
