@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const finalAmount = parseFloat(form.finalAmount.value);
     const today = new Date();
 
-    if (!price || !nextDate || !finalDate || !nextCoupon || !finalAmount || nextDate <= today || finalDate <= today) {
+    if (
+      isNaN(price) || isNaN(nextCoupon) || isNaN(finalAmount) ||
+      !nextDate || !finalDate || nextDate <= today || finalDate <= today
+    ) {
       result.innerHTML = "Будь ласка, перевірте введені дані.";
       return;
     }
@@ -25,11 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const days = (finalDate - today) / (1000 * 60 * 60 * 24);
     const annualizedYield = Math.pow(1 + roi, 365 / days) - 1;
 
+    const formatMoney = (x) =>
+      x.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     const formatPercent = (x) =>
       (x * 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " %";
 
     result.innerHTML = `
-      <b>Загальний прибуток:</b> ${income.toFixed(2)} грн<br>
+      <b>Загальний прибуток:</b> ${formatMoney(income)} грн<br>
       <b>Загальна дохідність:</b> ${formatPercent(roi)}<br>
       <b>Річна дохідність:</b> ${formatPercent(annualizedYield)}
     `;
