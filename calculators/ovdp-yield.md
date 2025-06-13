@@ -13,23 +13,27 @@ faq:
     answer: "ОВДП — облігації внутрішньої державної позики, які випускає уряд України для залучення коштів."
   - question: "Які параметри враховуються в розрахунку?"
     answer: "Ціна купівлі, купонні виплати, дата погашення та поточна дата."
+  - question: "Чи оподатковується прибуток з ОВДП?"
+    answer: "Ні, прибуток з ОВДП не оподатковується для фізичних осіб. Це вигідна інвестиція з гарантованим доходом від держави."
+  - question: "Чому варто інвестувати в ОВДП?"
+    answer: "Інвестуючи в ОВДП, ви не лише отримуєте дохід, але й підтримуєте економіку та Збройні Сили України."
 ---
 
 <form id="ovdp-form" autocomplete="off">
   <label>Поточна ціна ОВДП (грн):
-    <input type="number" id="price" min="0" required>
+    <input type="number" id="price" min="0" step="0.01" required>
   </label>
   <label>Дата наступної виплати:
     <input type="date" id="nextDate" required>
   </label>
   <label>Сума наступного купону (грн):
-    <input type="number" id="nextCoupon" min="0" required>
+    <input type="number" id="nextCoupon" min="0" step="0.01" required>
   </label>
   <label>Дата погашення:
     <input type="date" id="finalDate" required>
   </label>
-  <label>Сума фінальної виплати (грн):
-    <input type="number" id="finalAmount" min="0" required>
+  <label>Сума фінальної виплати (тіло + купон):
+    <input type="number" id="finalAmount" min="0" step="0.01" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>
