@@ -30,8 +30,8 @@ faq:
     answer: "Ви можете скопіювати склад страви та результати, а в майбутньому — зберігати свої рецепти у профілі."
 ---
 
-<form id="food-calories-form" autocomplete="off" style="margin-bottom:2em;">
+<form id="food-calories-form" autocomplete="off">
   <div id="food-rows"></div>
-  <button type="button" id="food-add-row" style="margin-top:1em;">Додати продукт</button>
+  <button type="button" id="food-add-row">Додати продукт</button>
 </form>
-<div id="food-calories-result" class="result" style="min-height:2.3em;"></div>
+<div id="food-calories-result" class="result"></div>
