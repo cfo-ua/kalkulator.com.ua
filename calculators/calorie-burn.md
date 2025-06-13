@@ -3,7 +3,7 @@ layout: calculator
 title: "Калькулятор витрати калорій на активність"
 categories: [health]
 seo:
-  title: "Калькулятор витрати калорій — Скільки калорій спалюється при різних видах спорту | kalkulator.com.ua"
+  title: "Калькулятор витрати калорій при спорті та активностях"
   description: "Дізнайтесь, скільки калорій ви витрачаєте на бігу, ходьбі, плаванні, велоспорті та інших активностях. Враховує вагу, тривалість, вид спорту."
   keywords: ["витрата калорій", "калорії при спорті", "калорії при ходьбі", "калорії при бігу", "калорії при плаванні", "мед", "калорії на годину", "скільки калорій спалюється"]
   content: |
@@ -25,7 +25,7 @@ faq:
     answer: "Введіть вагу, тривалість і виберіть активність — результат з’явиться автоматично."
 ---
 
-<form id="calorie-burn-form" autocomplete="off" style="max-width:420px;">
+<form id="calorie-burn-form" autocomplete="off">
   <label>Вага (кг):
     <input type="number" id="burn-weight" min="30" max="300" value="70" required>
   </label>
@@ -37,4 +37,4 @@ faq:
   </label>
   <button type="submit">Розрахувати</button>
 </form>
-<div id="calorie-burn-result" class="result" style="min-height:2.3em;margin-top:1.5em;"></div>
+<div id="calorie-burn-result" class="result"></div>
