@@ -9,16 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextDate = new Date(form.nextDate.value);
     const nextCoupon = parseFloat(form.nextCoupon.value);
     const finalDate = new Date(form.finalDate.value);
-    const finalAmount = parseFloat(form.finalAmount.value);
     const today = new Date();
 
     if (
-      isNaN(price) || isNaN(nextCoupon) || isNaN(finalAmount) ||
+      isNaN(price) || isNaN(nextCoupon) ||
       !nextDate || !finalDate || nextDate <= today || finalDate <= today
     ) {
       result.innerHTML = "Будь ласка, перевірте введені дані.";
       return;
     }
+
+    const finalAmount = 1000 + nextCoupon;
 
     // Total income
     const income = nextCoupon + finalAmount - price;
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (x * 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " %";
 
     result.innerHTML = `
+      <p><b>Розрахунок для 1 ОВДП з номіналом 1000 грн</b></p>
       <b>Загальний прибуток:</b> ${formatMoney(income)} грн<br>
       <b>Загальна дохідність:</b> ${formatPercent(roi)}<br>
       <b>Річна дохідність:</b> ${formatPercent(annualizedYield)}
