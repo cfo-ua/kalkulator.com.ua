@@ -1,13 +1,12 @@
-<script>
 document.getElementById("compound-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const initial = parseFloat(document.getElementById("initial").value);
-  const rate = parseFloat(document.getElementById("rate").value) / 100;
-  const years = parseFloat(document.getElementById("years").value);
-  const frequency = parseInt(document.getElementById("compound-frequency").value);
-  const contribution = parseFloat(document.getElementById("contribution").value);
-  const contributionFrequency = parseInt(document.getElementById("contribution-frequency").value);
+  const initial = parseFloat(document.getElementById("initial").value) || 0;
+  const rate = (parseFloat(document.getElementById("rate").value) || 0) / 100;
+  const years = parseFloat(document.getElementById("years").value) || 0;
+  const frequency = parseInt(document.getElementById("compound-frequency").value) || 1;
+  const contribution = parseFloat(document.getElementById("contribution").value) || 0;
+  const contributionFrequency = parseInt(document.getElementById("contribution-frequency").value) || 1;
 
   const periods = years * frequency;
   const ratePerPeriod = rate / frequency;
@@ -19,50 +18,53 @@ document.getElementById("compound-form").addEventListener("submit", function (e)
   for (let i = 0; i <= periods; i++) {
     if (i !== 0) {
       balance *= (1 + ratePerPeriod);
-      if (contribution > 0 && i % (frequency / contributionFrequency) === 0) {
-        balance += contribution;
+      if (contribution > 0 && contributionFrequency > 0) {
+        // Add contribution at correct intervals
+        if (i % (frequency / contributionFrequency) === 0) {
+          balance += contribution;
+        }
       }
     }
 
+    // Record data points at full years or at end
     if (i % frequency === 0 || i === periods) {
-      data.push(balance.toFixed(2));
+      data.push(parseFloat(balance.toFixed(2)));
       labels.push((i / frequency).toFixed(0));
     }
   }
 
-  const finalAmount = balance.toFixed(2);
   const totalContributions = contribution * (periods / (frequency / contributionFrequency));
   const profit = (balance - initial - totalContributions).toFixed(2);
+  const finalAmount = balance.toFixed(2);
 
   document.getElementById("compound-result").innerHTML = `
-    <p><strong>Підсумкова сума:</strong> ${finalAmount} грн</p>
-    <p><strong>Чистий прибуток:</strong> ${profit} грн</p>
-    <p><strong>Загальні внески:</strong> ${totalContributions.toFixed(2)} грн</p>
+    <p><strong>Підсумкова сума:</strong> ${finalAmount}</p>
+    <p><strong>Чистий прибуток:</strong> ${profit}</p>
   `;
 
   document.getElementById("compound-chart-block").style.display = "block";
-  renderCompoundChart(labels, data);
+  renderChart(labels, data);
 });
 
-let compoundChart;
-function renderCompoundChart(labels, data) {
+let chart;
+function renderChart(labels, data) {
   const ctx = document.getElementById("compound-chart").getContext("2d");
 
-  if (compoundChart) {
-    compoundChart.destroy();
+  if (chart) {
+    chart.destroy();
   }
 
-  compoundChart = new Chart(ctx, {
+  chart = new Chart(ctx, {
     type: "line",
     data: {
       labels: labels,
       datasets: [{
-        label: "Сума на рахунку",
+        label: "Капітал",
         data: data,
-        borderColor: "#007bff",
-        backgroundColor: "rgba(0, 123, 255, 0.2)",
+        borderColor: "#4CAF50",
+        backgroundColor: "rgba(76, 175, 80, 0.2)",
         fill: true,
-        tension: 0.2
+        tension: 0.1
       }]
     },
     options: {
@@ -72,27 +74,15 @@ function renderCompoundChart(labels, data) {
         tooltip: {
           callbacks: {
             label: function (context) {
-              return context.parsed.y + " грн";
+              return context.parsed.y.toFixed(2);
             }
           }
         }
       },
       scales: {
-        x: {
-          title: {
-            display: true,
-            text: "Роки"
-          }
-        },
-        y: {
-          title: {
-            display: true,
-            text: "Капітал, грн"
-          },
-          beginAtZero: true
-        }
+        x: { title: { display: true, text: 'Роки' } },
+        y: { title: { display: true, text: 'Капітал' } }
       }
     }
   });
 }
-</script>
