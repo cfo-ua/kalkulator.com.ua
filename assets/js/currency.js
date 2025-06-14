@@ -220,155 +220,157 @@ document.addEventListener("DOMContentLoaded", function () {
     return TOP_CURRENCIES.find(c => c.code === code) || { name: code, color: "#444" };
   }
 
-  // Chart rendering, now supports "all time" and 5y range with downsampling and better tooltip UX
-  function renderChart(curCode, endDateStr, rangeDays = 30) {
-    chartBlock.style.display = "block";
-    ensureChartJs(async function () {
-      let labels = [];
-      let data = [];
-      let history;
-      let hasAnyData = false;
+ function renderChart(curCode, endDateStr, rangeDays = 30) {
+  chartBlock.style.display = "block";
+  ensureChartJs(async function () {
+    let labels = [];
+    let data = [];
+    let history;
+    let hasAnyData = false;
+    let lastKnownRate = null;
 
-      // "the whole time" mode: rangeDays = -1
-      // 5y mode: rangeDays = 1825
-      if (rangeDays === -1 || rangeDays === 1825) {
-        // If 5y, limit window to last 1825 days
-        labels = await getAllDates();
-        if (rangeDays === 1825 && labels.length > 1825) {
-          labels = labels.slice(-1825);
-        }
-        history = await loadNBURates();
+    if (rangeDays === -1 || rangeDays === 1825) {
+      labels = await getAllDates();
+      if (rangeDays === 1825 && labels.length > 1825) {
+        labels = labels.slice(-1825);
+      }
+      history = await loadNBURates();
 
-        // Downsampling: max N points for performance
-        const MAX_POINTS = 400;
-        let step = 1;
-        if (labels.length > MAX_POINTS) {
-          step = Math.ceil(labels.length / MAX_POINTS);
+      const MAX_POINTS = 400;
+      let step = 1;
+      if (labels.length > MAX_POINTS) {
+        step = Math.ceil(labels.length / MAX_POINTS);
+      }
+      let downLabels = [];
+      let downData = [];
+
+      for (let i = 0; i < labels.length; i += step) {
+        const dateStr = labels[i];
+        const dateUA = dateStr.split("-").reverse().join(".");
+        const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
+        downLabels.push(dateStr);
+        if (rec && rec["Офіційний курс гривні, грн"]) {
+          const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
+          lastKnownRate = rate;
+          downData.push(rate);
+          hasAnyData = true;
+        } else {
+          downData.push(lastKnownRate !== null ? lastKnownRate : null);
         }
-        let downLabels = [];
-        let downData = [];
-        for (let i = 0; i < labels.length; i += step) {
-          const dateStr = labels[i];
-          const dateUA = dateStr.split("-").reverse().join(".");
-          const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
-          downLabels.push(dateStr);
-          if (rec && rec["Офіційний курс гривні, грн"]) {
-            const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
-            downData.push(rate);
-            hasAnyData = true;
-          } else {
-            downData.push(null);
-          }
-        }
-        labels = downLabels;
-        data = downData;
-      } else {
-        let endDate = endDateStr ? new Date(endDateStr) : new Date();
-        let startDate = new Date(endDate);
-        startDate.setDate(endDate.getDate() - (rangeDays - 1));
-        if (startDate > endDate) startDate = endDate;
-        for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-          labels.push(d.toISOString().slice(0, 10));
-        }
-        history = await loadNBURates();
-        data = [];
-        labels.forEach(dateStr => {
-          // Convert YYYY-MM-DD to DD.MM.YYYY for lookup
-          const dateUA = dateStr.split("-").reverse().join(".");
-          const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
-          if (rec && rec["Офіційний курс гривні, грн"]) {
-            const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
-            data.push(rate);
-            hasAnyData = true;
-          } else {
-            data.push(null);
-          }
-        });
+      }
+      labels = downLabels;
+      data = downData;
+    } else {
+      let endDate = endDateStr ? new Date(endDateStr) : new Date();
+      let startDate = new Date(endDate);
+      startDate.setDate(endDate.getDate() - (rangeDays - 1));
+      if (startDate > endDate) startDate = endDate;
+      for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
+        labels.push(d.toISOString().slice(0, 10));
       }
 
-      if (!hasAnyData) {
-        chartBlock.style.display = "none";
-        if(chartRangeQuick) chartRangeQuick.style.display = "none";
-        resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цей період недоступний (дані НБУ відсутні). Спробуйте інший діапазон або дату.</span>`;
-        return;
-      }
-      if (chartInstance) chartInstance.destroy();
-      const meta = getCurrencyMeta(curCode);
-      chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
-        type: 'line',
-        data: {
-          labels: labels.map(d => d.split('-').reverse().join('.')),
-          datasets: [{
-            label: '',
-            data: data,
-            borderColor: meta.color,
-            backgroundColor: meta.color + "10",
-            borderWidth: 2,
-            tension: 0.35,
-            pointRadius: 0,
-            pointHoverRadius: 5,
-            fill: true,
-            cubicInterpolationMode: 'monotone'
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              enabled: true,
-              mode: 'index',         // <- show tooltip for index on x axis (not just nearest point)
-              intersect: false,      // <- show tooltip even when not directly over the line
-              axis: 'x',             // <- only follow mouse horizontally
-              backgroundColor: "#222",
-              titleColor: "#fff",
-              bodyColor: "#fff",
-              callbacks: {
-                title: (items) => `Дата: ${items[0].label}`,
-                label: (items) => items.raw ? `Курс: ${items.formattedValue} UAH` : 'Немає даних'
-              }
-            }
-          },
-          layout: {
-            padding: { left: 0, right: 0, top: 8, bottom: 10 }
-          },
-          scales: {
-            x: {
-              grid: { display: false, drawBorder: false },
-              ticks: {
-                display: true,
-                autoSkip: true,
-                maxTicksLimit: Math.min(10, labels.length),
-                font: { size: 11 },
-                color: "#5476a3"
-              }
-            },
-            y: {
-              grid: {
-                color: "#e7ecf3",
-                borderDash: [4,4],
-                drawBorder: false,
-              },
-              ticks: {
-                color: "#6c7a89",
-                font: { size: 11 },
-                padding: 4,
-                precision: 3,
-                callback: function(value) { return value; }
-              }
-            }
-          },
-          elements: {
-            line: {
-              borderJoinStyle: 'round',
-              borderCapStyle: 'round'
-            }
-          }
+      history = await loadNBURates();
+      data = [];
+
+      labels.forEach(dateStr => {
+        const dateUA = dateStr.split("-").reverse().join(".");
+        const rec = history.find(r => r["Дата"] === dateUA && r["Код літерний"] === curCode);
+        if (rec && rec["Офіційний курс гривні, грн"]) {
+          const rate = rec["Офіційний курс гривні, грн"] / (rec["Кількість одиниць"] || 1);
+          lastKnownRate = rate;
+          data.push(rate);
+          hasAnyData = true;
+        } else {
+          data.push(lastKnownRate !== null ? lastKnownRate : null);
         }
       });
+    }
+
+    if (!hasAnyData) {
+      chartBlock.style.display = "none";
+      if (chartRangeQuick) chartRangeQuick.style.display = "none";
+      resultBlock.innerHTML = `<span style='color:#d32f2f;'>Курс на цей період недоступний (дані НБУ відсутні). Спробуйте інший діапазон або дату.</span>`;
+      return;
+    }
+
+    if (chartInstance) chartInstance.destroy();
+    const meta = getCurrencyMeta(curCode);
+    chartInstance = new window.Chart(chartCanvas.getContext("2d"), {
+      type: 'line',
+      data: {
+        labels: labels.map(d => d.split('-').reverse().join('.')),
+        datasets: [{
+          label: '',
+          data: data,
+          borderColor: meta.color,
+          backgroundColor: meta.color + "10",
+          borderWidth: 2,
+          tension: 0.35,
+          pointRadius: 0,
+          pointHoverRadius: 5,
+          fill: true,
+          cubicInterpolationMode: 'monotone'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            enabled: true,
+            mode: 'index',
+            intersect: false,
+            axis: 'x',
+            backgroundColor: "#222",
+            titleColor: "#fff",
+            bodyColor: "#fff",
+            callbacks: {
+              title: (items) => `Дата: ${items[0].label}`,
+              label: (items) => items.raw ? `Курс: ${items.formattedValue} UAH` : 'Немає даних'
+            }
+          }
+        },
+        layout: {
+          padding: { left: 0, right: 0, top: 8, bottom: 10 }
+        },
+        scales: {
+          x: {
+            grid: { display: false, drawBorder: false },
+            ticks: {
+              display: true,
+              autoSkip: true,
+              maxTicksLimit: Math.min(10, labels.length),
+              font: { size: 11 },
+              color: "#5476a3"
+            }
+          },
+          y: {
+            grid: {
+              color: "#e7ecf3",
+              borderDash: [4, 4],
+              drawBorder: false,
+            },
+            ticks: {
+              color: "#6c7a89",
+              font: { size: 11 },
+              padding: 4,
+              precision: 3,
+              callback: function (value) { return value; }
+            }
+          }
+        },
+        elements: {
+          line: {
+            borderJoinStyle: 'round',
+            borderCapStyle: 'round'
+          }
+        }
+      }
     });
-  }
+  });
+}
+
 
   // Add 'the whole time' button and quick range UX
   function setActiveRangeBtn(days) {
