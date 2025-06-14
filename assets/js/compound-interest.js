@@ -1,3 +1,4 @@
+<script>
 document.getElementById("compound-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -18,7 +19,7 @@ document.getElementById("compound-form").addEventListener("submit", function (e)
   for (let i = 0; i <= periods; i++) {
     if (i !== 0) {
       balance *= (1 + ratePerPeriod);
-      if (i % (frequency / contributionFrequency) === 0) {
+      if (contribution > 0 && i % (frequency / contributionFrequency) === 0) {
         balance += contribution;
       }
     }
@@ -29,40 +30,39 @@ document.getElementById("compound-form").addEventListener("submit", function (e)
     }
   }
 
-  // Підсумкові розрахунки
   const finalAmount = balance.toFixed(2);
   const totalContributions = contribution * (periods / (frequency / contributionFrequency));
   const profit = (balance - initial - totalContributions).toFixed(2);
 
   document.getElementById("compound-result").innerHTML = `
-    <p><strong>Підсумкова сума:</strong> ${finalAmount}</p>
-    <p><strong>Чистий прибуток:</strong> ${profit}</p>
+    <p><strong>Підсумкова сума:</strong> ${finalAmount} грн</p>
+    <p><strong>Чистий прибуток:</strong> ${profit} грн</p>
+    <p><strong>Загальні внески:</strong> ${totalContributions.toFixed(2)} грн</p>
   `;
 
-  // Відображення графіка
   document.getElementById("compound-chart-block").style.display = "block";
-  renderChart(labels, data);
+  renderCompoundChart(labels, data);
 });
 
-let chart;
-function renderChart(labels, data) {
+let compoundChart;
+function renderCompoundChart(labels, data) {
   const ctx = document.getElementById("compound-chart").getContext("2d");
 
-  if (chart) {
-    chart.destroy();
+  if (compoundChart) {
+    compoundChart.destroy();
   }
 
-  chart = new Chart(ctx, {
+  compoundChart = new Chart(ctx, {
     type: "line",
     data: {
       labels: labels,
       datasets: [{
-        label: "Капітал",
+        label: "Сума на рахунку",
         data: data,
-        borderColor: "#4CAF50",
-        backgroundColor: "rgba(76, 175, 80, 0.2)",
+        borderColor: "#007bff",
+        backgroundColor: "rgba(0, 123, 255, 0.2)",
         fill: true,
-        tension: 0.1
+        tension: 0.2
       }]
     },
     options: {
@@ -72,15 +72,27 @@ function renderChart(labels, data) {
         tooltip: {
           callbacks: {
             label: function (context) {
-              return context.parsed.y + '';
+              return context.parsed.y + " грн";
             }
           }
         }
       },
       scales: {
-        x: { title: { display: true, text: 'Роки' } },
-        y: { title: { display: true, text: 'Капітал' } }
+        x: {
+          title: {
+            display: true,
+            text: "Роки"
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Капітал, грн"
+          },
+          beginAtZero: true
+        }
       }
     }
   });
 }
+</script>
