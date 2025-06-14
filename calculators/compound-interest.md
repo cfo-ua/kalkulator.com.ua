@@ -72,8 +72,8 @@ faq:
 <div id="compound-result"></div>
 
 <!-- CHART -->
-<div id="compound-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
-  <h3 style="margin-bottom:0.9em;text-align:center;">Графік зростання капіталу</h3>
+<div id="compound-chart-block" class="chart-card" style="display:none;">
+  <h3>Графік зростання капіталу</h3>
   <div class="chart-canvas-wrap">
     <canvas id="compound-chart"></canvas>
   </div>
