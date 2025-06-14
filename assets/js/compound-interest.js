@@ -43,7 +43,7 @@ document.getElementById("compound-form").addEventListener("submit", function (e)
   `;
 
   document.getElementById("compound-chart-block").style.display = "block";
-  renderChart(labels, data);
+  ensureChartJs(() => renderChart(labels, data));
 });
 
 let chart;
@@ -85,4 +85,13 @@ function renderChart(labels, data) {
       }
     }
   });
+}
+
+// Chart.js loader (copied from assets/js/currency.js style)
+function ensureChartJs(callback) {
+  if (window.Chart) return callback();
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/chart.js";
+  script.onload = callback;
+  document.body.appendChild(script);
 }
