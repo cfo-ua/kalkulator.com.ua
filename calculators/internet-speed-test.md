@@ -24,8 +24,9 @@ faq:
   - question: Чому результати можуть відрізнятися?
     answer: "Швидкість може залежати від навантаження мережі, пристрою, часу доби та інших факторів."
 ---
-<div class="calculator-block" style="max-width: 400px;">
-      <button id="start-test" style="padding: 0.5em 1em; font-size: 1em; cursor: pointer;">Почати тест швидкості</button>
-      <p>Швидкість завантаження: <span id="download-speed">-</span></p>
-      <p>Оцінка якості з’єднання: <strong><span id="speed-category">-</span></strong></p>
-    </div>
+<div class="calculator-block">
+  <button id="start-test">Почати тест швидкості</button>
+  <p>Швидкість завантаження: <span id="download-speed">-</span></p>
+  <p>Оцінка якості з’єднання: <strong><span id="speed-category">-</span></strong></p>
+</div>
+
