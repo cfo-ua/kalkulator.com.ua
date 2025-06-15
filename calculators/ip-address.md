@@ -43,8 +43,8 @@ faq:
 
 
 <div class="calculator-block">
-  <label>
+  <label style="display:block;font-size:1.2em;font-weight:bold;margin-bottom:0.5em;">
     Ваша IP адреса:
   </label>
-      <div class="result" id="ip-address-wrapper" style="margin-top:2em;"></div>
-    </div>
+  <div class="result" id="ip-address-wrapper" style="margin-top:2em;"></div>
+</div>
