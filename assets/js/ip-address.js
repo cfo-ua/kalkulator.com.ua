@@ -4,17 +4,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const res = await fetch("https://ipapi.co/json/");
-    if (!res.ok) throw new Error("Не вдалося отримати геодані IP");
+    if (!res.ok) throw new Error("Не вдалося отримати IP-інформацію");
     const d = await res.json();
 
     wrapper.innerHTML = `
-      <ul style="list-style:none; padding:0; line-height:1.5;">
+      <ul style="list-style:none; padding:0; line-height:1.6;">
         <li><b>IP-адреса:</b> ${d.ip}</li>
         <li><b>Країна:</b> ${d.country_name} (${d.country_code})</li>
         <li><b>Регіон:</b> ${d.region}</li>
         <li><b>Місто:</b> ${d.city}</li>
-        ${d.org ? `<li><b>Провайдер / Організація:</b> ${d.org}</li>` : ""}
-        ${d.connection && d.connection.type ? `<li><b>Тип підключення:</b> ${d.connection.type}</li>` : ""}
+        ${d.org ? `<li><b>Провайдер:</b> ${d.org}</li>` : ""}
+        ${d.asn ? `<li><b>ASN:</b> ${d.asn}</li>` : ""}
+        ${d.version ? `<li><b>Версія IP:</b> IPv${d.version}</li>` : ""}
+        ${d.network ? `<li><b>Мережа:</b> ${d.network}</li>` : ""}
       </ul>
     `;
   } catch (err) {
