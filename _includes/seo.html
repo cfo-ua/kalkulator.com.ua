@@ -1,17 +1,26 @@
 <title>{% if page.seo.title %}{{ page.seo.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{% if page.seo.description %}{{ page.seo.description | escape }}{% else %}{{ site.description | escape }}{% endif %}">
 <meta name="keywords" content="{% if page.seo.keywords %}{{ page.seo.keywords | join: ', ' | escape }}{% endif %}">
+
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo.svg' | relative_url }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="{{ page.url | absolute_url | replace: 'index.html','' }}">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 {% if page.seo.title %}<meta property="og:title" content="{{ page.seo.title | escape }}">{% endif %}
 {% if page.seo.description %}<meta property="og:description" content="{{ page.seo.description | escape }}">{% endif %}
 {% if page.url %}<meta property="og:url" content="{{ page.url | absolute_url | replace: 'index.html','' }}">{% endif %}
 {% if site.title %}<meta property="og:site_name" content="{{ site.title | escape }}">{% endif %}
+<meta property="og:image" content="{{ '/assets/img/logo.svg' | absolute_url }}">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 {% if page.seo.title %}<meta name="twitter:title" content="{{ page.seo.title | escape }}">{% endif %}
 {% if page.seo.description %}<meta name="twitter:description" content="{{ page.seo.description | escape }}">{% endif %}
+<meta name="twitter:image" content="{{ '/assets/img/logo.svg' | absolute_url }}">
+
+<!-- Structured Data -->
 {% if page.seo.structured_data %}
 <script type="application/ld+json">
 {{ page.seo.structured_data | strip_newlines }}
