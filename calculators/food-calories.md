@@ -48,6 +48,5 @@ faq:
 <form id="food-calories-form" autocomplete="off">
   <div id="food-rows"></div>
   <button type="button" id="food-add-row">Додати продукт</button>
-  <button type="submit">Розрахувати</button>
 </form>
 <div id="food-calories-result" class="result"></div>
