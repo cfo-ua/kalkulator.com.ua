@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Яка у мене IP адреса — Перевірити свою IP адресу онлайн"
-categories: [technical]
+categories: [other]
 seo:
   title: "Яка у мене IP адреса — Перевірити свою IP адресу онлайн"
   description: "Дізнайтесь свою IP-адресу, країну, місто, провайдера і тип з'єднання. Простий онлайн сервіс для визначення IP на комп’ютері або телефоні."
@@ -43,5 +43,8 @@ faq:
 
 
 <div class="calculator-block">
+  <label>
+    Ваша IP адреса:
+  </label>
       <div class="result" id="ip-address-wrapper" style="margin-top:2em;"></div>
     </div>
