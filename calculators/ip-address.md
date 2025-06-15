@@ -40,11 +40,9 @@ faq:
   - question: Чи можна визначити MAC-адресу?
     answer: "Ні. Браузери не дозволяють доступ до MAC-адреси через політику конфіденційності та безпеки."
 ---
-
-
 <div class="calculator-block">
-  <label style="display:block;font-size:1.2em;font-weight:bold;margin-bottom:0.5em;">
+  <h3 style="font-size:1.2em; font-weight:bold; margin-bottom:0.5em;">
     Ваша IP адреса:
-  </label>
+  </h3>
   <div class="result" id="ip-address-wrapper" style="margin-top:2em;"></div>
 </div>
