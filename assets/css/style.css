@@ -765,10 +765,17 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   }
 }
 
+/* ============================= */
+/* Chart Quick Range Button UI  */
+/* ============================= */
+
 .chart-range-btn {
+  appearance: none;
+  -webkit-appearance: none;
+
   background: #edf2fa;
   border: none;
-  color: #157aff;
+  color: var(--accent); /* #157aff */
   font-weight: 500;
   font-size: 1em;
   padding: 0.45em 1.5em;
@@ -777,15 +784,28 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   cursor: pointer;
   transition: background 0.16s, color 0.14s;
 }
-.chart-range-btn.active,
-.chart-range-btn:focus {
-  background: #157aff;
+
+/* Active and focus state */
+button.chart-range-btn.active,
+button.chart-range-btn:focus {
+  background: var(--accent); /* #157aff */
   color: #fff;
   outline: none;
 }
-.chart-range-btn:hover {
-  background: #d6e7ff;
+
+/* Hover state */
+button.chart-range-btn:hover {
+  background: var(--accent-hover); /* #0056d6 */
+  color: #fff;
 }
+
+/* Pressed state */
+button.chart-range-btn:active {
+  background: #004bbd; /* darker for tactile feedback */
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(60, 60, 60, 0.09) inset;
+}
+
 
 
 /* --- Apple-style Food Calories Calculator Row (Refined Flex version, 2024-06-05 CTO UX/UI fix, improved for inline autocomplete) --- */
