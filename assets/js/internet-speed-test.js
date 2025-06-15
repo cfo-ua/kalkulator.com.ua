@@ -11,9 +11,9 @@
 
   async function testDownload() {
     try {
-      const url = '/tools/testfile-10mb.bin';
+      const url = '/tools/testfile-10mb.bin?cache_bust=' + Date.now();
       const start = performance.now();
-      const response = await fetch(url, {cache: 'no-cache'});
+      const response = await fetch(url, {cache: 'no-store'});
       const reader = response.body.getReader();
       let bytesReceived = 0;
       while(true) {
