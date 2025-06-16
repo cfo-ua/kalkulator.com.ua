@@ -1,85 +1,97 @@
-document.getElementById("rent-buy-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("rent-buy-form");
+  if (!form) return;
 
-  const apartmentCost = parseFloat(document.getElementById("propertyCost").value);
-  const monthlyRent = parseFloat(document.getElementById("monthlyRent").value);
-  const annualReturn = parseFloat(document.getElementById("investmentRate").value) / 100;
-  const years = 10;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const rentCosts = [];
-  const investmentValues = [];
-  const labels = [];
+    const apartmentCost = parseFloat(document.getElementById("propertyCost").value);
+    const monthlyRent = parseFloat(document.getElementById("monthlyRent").value);
+    const annualReturn = parseFloat(document.getElementById("investmentRate").value) / 100;
+    const years = 10;
 
-  let investment = apartmentCost;
-  let rentTotal = 0;
+    const rentCosts = [];
+    const investmentValues = [];
+    const labels = [];
 
-  for (let year = 1; year <= years; year++) {
-    rentTotal += monthlyRent * 12;
-    investment *= (1 + annualReturn);
+    let investment = apartmentCost;
+    let rentTotal = 0;
 
-    labels.push(`${year}-й рік`);
-    rentCosts.push(rentTotal);
-    investmentValues.push(investment);
-  }
+    for (let year = 1; year <= years; year++) {
+      rentTotal += monthlyRent * 12;
+      investment *= (1 + annualReturn);
 
-  const resultBlock = document.getElementById("rent-buy-result");
-  resultBlock.innerHTML = `
-    <h3>Результат:</h3>
-    <p>Через ${years} років ви заплатите за оренду <b>${rentTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
-    <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн під ${annualReturn * 100}% річних, ви б отримали <b>${investment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
-    <p><b>${investment > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
-  `;
+      labels.push(`${year}-й рік`);
+      rentCosts.push(rentTotal);
+      investmentValues.push(investment);
+    }
 
-  const chartBlock = document.getElementById("rent-buy-chart-block");
-  chartBlock.style.display = "block";
+    // Вивід результатів
+    const resultBlock = document.getElementById("rent-buy-result");
+    resultBlock.innerHTML = `
+      <h3>Результат:</h3>
+      <p>Через ${years} років ви заплатите за оренду <b>${rentTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
+      <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн під ${annualReturn * 100}% річних, ви б отримали <b>${investment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
+      <p><b>${investment > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
+    `;
 
-  const ctx = document.getElementById("rent-buy-chart").getContext("2d");
-  if (window.rentBuyChart) window.rentBuyChart.destroy();
+    // Побудова графіка
+    const chartBlock = document.getElementById("rent-buy-chart-block");
+    chartBlock.style.display = "block";
 
-  window.rentBuyChart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [
-        {
-          label: "Вартість оренди (накопичена)",
-          data: rentCosts,
-          backgroundColor: "rgba(255,99,132,0.2)",
-          borderColor: "rgba(255,99,132,1)",
-          borderWidth: 2,
-          fill: false,
-        },
-        {
-          label: "Інвестиція (накопичена)",
-          data: investmentValues,
-          backgroundColor: "rgba(54, 162, 235, 0.2)",
-          borderColor: "rgba(54, 162, 235, 1)",
-          borderWidth: 2,
-          fill: false,
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        tooltip: {
-          callbacks: {
-            label: function (context) {
-              return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA") + " грн";
+    if (typeof Chart === "undefined") {
+      resultBlock.innerHTML += `<p style="color:red;">Помилка: Chart.js не підключено.</p>`;
+      return;
+    }
+
+    const ctx = document.getElementById("rent-buy-chart").getContext("2d");
+    if (window.rentBuyChart) window.rentBuyChart.destroy();
+
+    window.rentBuyChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "Вартість оренди (накопичена)",
+            data: rentCosts,
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            borderWidth: 2,
+            fill: false,
+          },
+          {
+            label: "Інвестиція (накопичена)",
+            data: investmentValues,
+            backgroundColor: "rgba(54, 162, 235, 0.2)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 2,
+            fill: false,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA") + " грн";
+              }
             }
           }
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: {
-            callback: function (value) {
-              return value.toLocaleString("uk-UA") + " грн";
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function (value) {
+                return value.toLocaleString("uk-UA") + " грн";
+              }
             }
           }
         }
       }
-    }
+    });
   });
 });
