@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     resultBlock.innerHTML = `
       <h3>Результат:</h3>
-      <p>Через ${years} років ви заплатите за оренду <b>${rentTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
-      <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн під ${annualReturn * 100}% річних, ваш чистий прибуток (дивіденди) склав би <b>${totalProfit.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
+      <p>Через ${years} років ви заплатите за оренду <b>${rentTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</b>.</p>
+      <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} під ${annualReturn * 100}% річних, ваш чистий прибуток (дивіденди) склав би <b>${totalProfit.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</b>.</p>
       <p><b>${totalProfit > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
     `;
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA") + " грн";
+                  return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA");
                 }
               }
             }
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
               beginAtZero: true,
               ticks: {
                 callback: function (value) {
-                  return value.toLocaleString("uk-UA") + " грн";
+                  return value.toLocaleString("uk-UA");
                 }
               }
             }
