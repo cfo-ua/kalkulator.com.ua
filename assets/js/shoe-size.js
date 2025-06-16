@@ -1,36 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('shoe-size-form');
-  const inputs = {
-    mondo: document.getElementById('mondo'),
-    EU: document.getElementById('sizeEU'),
-    UK: document.getElementById('sizeUK'),
-    USM: document.getElementById('sizeUS_M'),
-    USF: document.getElementById('sizeUS_F')
-  };
+  const inputType = document.getElementById('inputType');
+  const inputField = document.getElementById('inputField');
   const resultDiv = document.getElementById('shoe-size-result');
+
+  let currentInput;
+
+  inputType.addEventListener('change', () => {
+    resultDiv.innerHTML = '';
+    inputField.innerHTML = '';
+
+    if (!inputType.value) return;
+
+    currentInput = document.createElement('input');
+    currentInput.type = 'number';
+    currentInput.id = 'value';
+    currentInput.placeholder = 'Наприклад, 260';
+    currentInput.required = true;
+
+    const label = document.createElement('label');
+    label.for = 'value';
+
+    switch (inputType.value) {
+      case 'mondo':
+        label.textContent = 'Довжина стопи (мм)';
+        break;
+      case 'EU':
+        label.textContent = 'Розмір EU';
+        currentInput.step = '0.5';
+        break;
+      case 'UK':
+        label.textContent = 'Розмір UK';
+        currentInput.step = '0.5';
+        break;
+      case 'USM':
+        label.textContent = 'Розмір US (чоловічий)';
+        currentInput.step = '0.5';
+        break;
+      case 'USF':
+        label.textContent = 'Розмір US (жіночий)';
+        currentInput.step = '0.5';
+        break;
+    }
+
+    inputField.appendChild(label);
+    inputField.appendChild(currentInput);
+  });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    resultDiv.textContent = '';
-
-    const v = {};
-    for (let key in inputs) {
-      const val = parseFloat(inputs[key].value);
-      if (!isNaN(val) && val > 0) v[key] = val;
-    }
-    const filled = Object.keys(v).length;
-    if (filled < 1) {
-      resultDiv.textContent = 'Введіть довжину Мондопойнт або будь‑який розмір (EU/UK/US).';
+    const val = parseFloat(currentInput.value);
+    if (isNaN(val) || val <= 0) {
+      resultDiv.textContent = 'Будь ласка, введіть коректне значення.';
       return;
     }
 
-    let mondo = v.mondo;
-    if (!mondo) {
-      // derive from EU, UK or US
-      if (v.EU) mondo = (v.EU * 2/3 + 2) * 10;
-      else if (v.UKM) mondo = ((v.UK + 22) / 3) * 25.4;
-      else if (v.USM) mondo = ((v.USM + 22) / 3) * 25.4;
-      else if (v.USF) mondo = ((v.USF + 21) / 3) * 25.4;
+    let mondo;
+    switch (inputType.value) {
+      case 'mondo':
+        mondo = val;
+        break;
+      case 'EU':
+        mondo = (val * 2/3 + 2) * 10;
+        break;
+      case 'UK':
+        mondo = ((val + 22) / 3) * 25.4;
+        break;
+      case 'USM':
+        mondo = ((val + 22) / 3) * 25.4;
+        break;
+      case 'USF':
+        mondo = ((val + 21) / 3) * 25.4;
+        break;
     }
 
     const EU = mondo / 10 * 2/3 - 2;
@@ -40,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resultDiv.innerHTML = `
       <strong>Результати:</strong><br>
-      Mondopoint (мм): ${mondo.toFixed(0)}<br>
-      EU: ${EU.toFixed(1)}<br>
+      Довжина стопи (Mondopoint): ${mondo.toFixed(0)} мм<br>
+      Розмір EU: ${EU.toFixed(1)}<br>
       UK: ${UK.toFixed(1)}<br>
       US (чоловічий): ${USM.toFixed(1)}<br>
       US (жіночий): ${USF.toFixed(1)}
