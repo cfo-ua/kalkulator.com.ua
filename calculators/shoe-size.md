@@ -3,41 +3,51 @@ layout: calculator
 title: "Калькулятор розміру взуття"
 categories: [clothing]
 seo:
-  title: "Калькулятор розміру взуття — EU, UK, US, Mondopoint"
-  description: "Конвертер розміру взуття для чоловіків і жінок: EU, UK, US, Mondopoint. Порівняйте міжнародні розміри та знайдіть відповідність для своєї ноги."
+  title: "Калькулятор розміру взуття — конвертер EU, UK, US, Mondopoint"
+  description: "Легко дізнайтеся свій розмір взуття: введіть довжину стопи (мм) або обраний розмір EU/UK/US, і калькулятор покаже відповідність у всіх системах."
   keywords:
     - калькулятор розміру взуття
     - розмір взуття EU UK US
-    - конвертер взуття
-    - як дізнатися розмір ноги
-    - довжина стопи в міліметрах
-    - mondopoint розмір
-    - таблиця розмірів взуття
+    - конвертер розміру взуття
+    - mondopoint калькулятор
+    - довжина стопи в мм
     - розмір взуття чоловічий жіночий
+    - shoe size calculator
+    - розмір взуття онлайн
   content: |
     <h2>Калькулятор розміру взуття</h2>
-    <p>Цей онлайн калькулятор допоможе вам конвертувати розмір взуття між системами: <strong>EU</strong>, <strong>UK</strong>, <strong>US (чоловічий/жіночий)</strong> та <strong>Mondopoint</strong> (довжина стопи в мм).</p>   
+    <p>Виберіть, яке значення ви знаєте (довжина стопи в мм або розмір у міжнародній системі), введіть його — і калькулятор покаже вам розмір у EU, UK та US.</p>
 scripts:
   - /assets/js/shoe-size.js
 faq:
-  - question: "Як користуватись калькулятором розміру взуття?"
-    answer: "Оберіть, яку одиницю ви знаєте (наприклад, EU розмір або довжину стопи в мм), введіть значення — і калькулятор автоматично покаже відповідні значення в інших системах."
+  - question: "Як правильно виміряти довжину стопи?"
+    answer: "Поставте п'яту вплотну до стіни, помітте найвіддаленішу точку стопи на папері і виміряйте в мм — це Mondopoint."
   - question: "Що таке Mondopoint?"
-    answer: "Mondopoint — це міжнародна система вимірювання розміру взуття, що базується на довжині стопи в міліметрах. Наприклад, довжина стопи 270 мм відповідає EU розміру близько 41."
-  - question: "Чи підходить цей калькулятор для дитячого взуття?"
-    answer: "Наразі калькулятор орієнтований на доросле взуття. Підтримка дитячих розмірів може бути додана пізніше."
+    answer: "Це система визначення розміру взуття за довжиною стопи (у мм) за стандартом ISO‑19407."
+  - question: "Чим відрізняються чоловічі і жіночі US розміри?"
+    answer: "US‑розміри мають окремі шкали для чоловічих та жіночих — калькулятор враховує обидві."
+  - question: "Чи врахована ширина стопи?"
+    answer: "Ні — тільки довжина. Якщо стопа широка, рекомендуємо обрати розмір +0.5."
 ---
- <form id="shoe-size-form">
-      <label for="unit">Що ви знаєте?</label>
-      <select id="unit" required>
-        <option value="eu">Розмір EU</option>
-        <option value="mondopoint">Довжина стопи (мм)</option>
-        <option value="uk">Розмір UK</option>
-        <option value="us_m">Розмір US (чоловічий)</option>
-        <option value="us_w">Розмір US (жіночий)</option>
-      </select>
-      <label for="value">Введіть значення</label>
-      <input type="number" id="value" step="any" required>
-      <button type="submit">Розрахувати</button>
-    </form>
-    <div id="shoe-size-result" class="result"></div>
+
+<form id="shoe-size-form">
+  <label>
+    Яке значення ви знаєте?
+    <select id="unit">
+      <option value="mondopoint">Довжина стопи (мм)</option>
+      <option value="eu">Розмір EU</option>
+      <option value="uk">Розмір UK</option>
+      <option value="us_m">US (чоловіки)</option>
+      <option value="us_w">US (жінки)</option>
+    </select>
+  </label>
+
+  <label>
+    Введіть значення:
+    <input type="number" id="value" step="any" required>
+  </label>
+
+  <button type="submit">Розрахувати</button>
+</form>
+
+<div id="shoe-size-result" class="result"></div>
