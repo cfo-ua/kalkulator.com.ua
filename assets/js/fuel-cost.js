@@ -9,26 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const resultDiv = document.getElementById('fuel-cost-result');
 
-  // Clear results if user changes any input — so results do not appear outdated
+  // Attach input event to auto-update result
   Object.values(inputs).forEach(input => {
     input.addEventListener('input', () => {
-      resultDiv.textContent = '';
+      calculateAndShow();
     });
   });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    calculateAndShow();
+  });
+
+  function calculateAndShow() {
     resultDiv.textContent = '';
 
-    // Parse input values or NaN if empty
     const vals = {};
     for (const key in inputs) {
-      vals[key] = parseFloat(inputs[key].value.replace(',', '.'));
+      const raw = inputs[key].value.replace(',', '.');
+      vals[key] = parseFloat(raw);
     }
 
-    // Count how many inputs are filled and > 0
     const filledKeys = Object.keys(vals).filter(k => !isNaN(vals[k]) && vals[k] > 0);
-
     if (filledKeys.length < 3) {
       resultDiv.textContent = 'Будь ласка, заповніть будь-які три параметри для розрахунку інших.';
       return;
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let { consumption, range, price, liters, totalCost } = vals;
 
-    // Calculate missing values once
+    // Calculate missing values
     if ((isNaN(liters) || liters === 0) && !isNaN(consumption) && !isNaN(range)) {
       liters = (consumption / 100) * range;
     }
@@ -61,13 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
       liters = totalCost / price;
     }
 
-    // Final validation: all values must be > 0 and numbers
+    // Final validation
     if ([consumption, range, price, liters, totalCost].some(v => isNaN(v) || v <= 0)) {
       resultDiv.textContent = 'Введені дані неконсистентні або недостатні для повного розрахунку.';
       return;
     }
 
-    // Show results
+    // Show result
     resultDiv.innerHTML = `
       <strong>Результати розрахунку:</strong><br>
       Витрата пального: ${consumption.toFixed(2)} л/100 км<br>
@@ -76,5 +78,5 @@ document.addEventListener('DOMContentLoaded', () => {
       Витрачено пального: ${liters.toFixed(2)} л<br>
       Загальна вартість: ${totalCost.toFixed(2)}
     `;
-  });
+  }
 });
