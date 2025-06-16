@@ -1,74 +1,91 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('fuel-cost-form');
-  const consumptionInput = document.getElementById('consumption');
-  const rangeInput = document.getElementById('range');
-  const priceInput = document.getElementById('pricePerLiter');
-  const totalCostInput = document.getElementById('totalCost');
+  const inputs = {
+    consumption: document.getElementById('consumption'),
+    range: document.getElementById('range'),
+    price: document.getElementById('pricePerLiter'),
+    liters: document.getElementById('liters'),
+    totalCost: document.getElementById('totalCost'),
+  };
   const resultDiv = document.getElementById('fuel-cost-result');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     resultDiv.textContent = '';
 
-    // Parse inputs as floats, or NaN if empty
-    const consumption = parseFloat(consumptionInput.value.replace(',', '.'));
-    const range = parseFloat(rangeInput.value.replace(',', '.'));
-    const price = parseFloat(priceInput.value.replace(',', '.'));
-    const totalCost = parseFloat(totalCostInput.value.replace(',', '.'));
+    // Parse input values or NaN if empty
+    const vals = {};
+    for (const key in inputs) {
+      vals[key] = parseFloat(inputs[key].value.replace(',', '.'));
+    }
 
-    // Count how many fields are filled (not NaN and > 0)
-    const filled = [
-      !isNaN(consumption) && consumption > 0,
-      !isNaN(range) && range > 0,
-      !isNaN(price) && price > 0,
-      !isNaN(totalCost) && totalCost > 0,
-    ];
-    const filledCount = filled.filter(Boolean).length;
+    // Count how many inputs are filled and > 0
+    const filledKeys = Object.keys(vals).filter(k => !isNaN(vals[k]) && vals[k] > 0);
 
-    if (filledCount !== 3) {
-      resultDiv.textContent = 'Будь ласка, введіть будь-які три значення для розрахунку четвертого.';
+    if (filledKeys.length < 3) {
+      resultDiv.textContent = 'Будь ласка, заповніть будь-які три параметри для розрахунку інших.';
       return;
     }
 
-    let calcConsumption = consumption;
-    let calcRange = range;
-    let calcPrice = price;
-    let calcTotalCost = totalCost;
+    // Calculation formulas
+    // Known formulas:
+    // liters = (consumption / 100) * range
+    // totalCost = liters * price
 
-    // Calculate the missing value based on which one is empty or zero
-    if (!(filled[0])) {
-      // Calculate consumption: (totalCost / price) * 100 / range
-      if (price && range && totalCost) {
-        calcConsumption = (totalCost / price) * 100 / range;
-        consumptionInput.value = calcConsumption.toFixed(2);
-      }
-    } else if (!(filled[1])) {
-      // Calculate range: (totalCost / price) * 100 / consumption
-      if (price && consumption && totalCost) {
-        calcRange = (totalCost / price) * 100 / consumption;
-        rangeInput.value = calcRange.toFixed(2);
-      }
-    } else if (!(filled[2])) {
-      // Calculate price: totalCost / ((consumption / 100) * range)
-      if (consumption && range && totalCost) {
-        calcPrice = totalCost / ((consumption / 100) * range);
-        priceInput.value = calcPrice.toFixed(2);
-      }
-    } else if (!(filled[3])) {
-      // Calculate totalCost: (consumption / 100) * range * price
-      if (consumption && range && price) {
-        calcTotalCost = (consumption / 100) * range * price;
-        totalCostInput.value = calcTotalCost.toFixed(2);
-      }
+    let { consumption, range, price, liters, totalCost } = vals;
+
+    // Try to solve for missing parameters stepwise:
+
+    // If liters missing and consumption & range known:
+    if ((isNaN(liters) || liters === 0) && !isNaN(consumption) && !isNaN(range)) {
+      liters = (consumption / 100) * range;
+      inputs.liters.value = liters.toFixed(2);
     }
 
-    // Display the calculated result summary
+    // If consumption missing and liters & range known:
+    if ((isNaN(consumption) || consumption === 0) && !isNaN(liters) && !isNaN(range) && range !== 0) {
+      consumption = (liters / range) * 100;
+      inputs.consumption.value = consumption.toFixed(2);
+    }
+
+    // If range missing and liters & consumption known:
+    if ((isNaN(range) || range === 0) && !isNaN(liters) && !isNaN(consumption) && consumption !== 0) {
+      range = (liters * 100) / consumption;
+      inputs.range.value = range.toFixed(2);
+    }
+
+    // If totalCost missing and liters & price known:
+    if ((isNaN(totalCost) || totalCost === 0) && !isNaN(liters) && !isNaN(price)) {
+      totalCost = liters * price;
+      inputs.totalCost.value = totalCost.toFixed(2);
+    }
+
+    // If price missing and totalCost & liters known:
+    if ((isNaN(price) || price === 0) && !isNaN(totalCost) && !isNaN(liters) && liters !== 0) {
+      price = totalCost / liters;
+      inputs.price.value = price.toFixed(2);
+    }
+
+    // If liters missing and totalCost & price known:
+    if ((isNaN(liters) || liters === 0) && !isNaN(totalCost) && !isNaN(price) && price !== 0) {
+      liters = totalCost / price;
+      inputs.liters.value = liters.toFixed(2);
+    }
+
+    // Final check to ensure all filled
+    if ([consumption, range, price, liters, totalCost].some(v => isNaN(v) || v <= 0)) {
+      resultDiv.textContent = 'Введені дані неконсистентні або недостатні для повного розрахунку.';
+      return;
+    }
+
+    // Show results
     resultDiv.innerHTML = `
       <strong>Результати розрахунку:</strong><br>
-      Витрата пального: ${calcConsumption.toFixed(2)} л/100 км<br>
-      Пробіг: ${calcRange.toFixed(2)} км<br>
-      Ціна за 1 літр: ${calcPrice.toFixed(2)}<br>
-      Загальна вартість: ${calcTotalCost.toFixed(2)}
+      Витрата пального: ${consumption.toFixed(2)} л/100 км<br>
+      Пробіг: ${range.toFixed(2)} км<br>
+      Ціна за 1 літр: ${price.toFixed(2)}<br>
+      Витрачено пального: ${liters.toFixed(2)} л<br>
+      Загальна вартість: ${totalCost.toFixed(2)}
     `;
   });
 });
