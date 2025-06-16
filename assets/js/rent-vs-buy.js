@@ -35,63 +35,70 @@ document.addEventListener("DOMContentLoaded", function () {
       <p><b>${investment > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
     `;
 
-    // Побудова графіка
+    // Показ блоку з графіком
     const chartBlock = document.getElementById("rent-buy-chart-block");
     chartBlock.style.display = "block";
 
-    if (typeof Chart === "undefined") {
-      resultBlock.innerHTML += `<p style="color:red;">Помилка: Chart.js не підключено.</p>`;
-      return;
-    }
+    // Динамічно підвантажуємо Chart.js, якщо він не завантажений
+    ensureChartJs(() => {
+      const ctx = document.getElementById("rent-buy-chart").getContext("2d");
+      if (window.rentBuyChart) window.rentBuyChart.destroy();
 
-    const ctx = document.getElementById("rent-buy-chart").getContext("2d");
-    if (window.rentBuyChart) window.rentBuyChart.destroy();
-
-    window.rentBuyChart = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: "Вартість оренди (накопичена)",
-            data: rentCosts,
-            backgroundColor: "rgba(255,99,132,0.2)",
-            borderColor: "rgba(255,99,132,1)",
-            borderWidth: 2,
-            fill: false,
-          },
-          {
-            label: "Інвестиція (накопичена)",
-            data: investmentValues,
-            backgroundColor: "rgba(54, 162, 235, 0.2)",
-            borderColor: "rgba(54, 162, 235, 1)",
-            borderWidth: 2,
-            fill: false,
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: function (context) {
-                return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA") + " грн";
+      window.rentBuyChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "Вартість оренди (накопичена)",
+              data: rentCosts,
+              backgroundColor: "rgba(255,99,132,0.2)",
+              borderColor: "rgba(255,99,132,1)",
+              borderWidth: 2,
+              fill: false,
+            },
+            {
+              label: "Інвестиція (накопичена)",
+              data: investmentValues,
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 2,
+              fill: false,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return context.dataset.label + ": " + context.parsed.y.toLocaleString("uk-UA") + " грн";
+                }
               }
             }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function (value) {
-                return value.toLocaleString("uk-UA") + " грн";
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback: function (value) {
+                  return value.toLocaleString("uk-UA") + " грн";
+                }
               }
             }
           }
         }
-      }
+      });
     });
   });
 });
+
+// Функція для динамічного підвантаження Chart.js
+function ensureChartJs(callback) {
+  if (window.Chart) return callback();
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/chart.js";
+  script.onload = callback;
+  document.body.appendChild(script);
+}
