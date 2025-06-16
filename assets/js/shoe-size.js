@@ -6,45 +6,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    resultDiv.textContent = '';
 
-    const selectedUnit = unitSelect.value;
+    const unit = unitSelect.value;
     const val = parseFloat(valueInput.value.replace(',', '.'));
-
     if (isNaN(val) || val <= 0) {
       resultDiv.textContent = 'Будь ласка, введіть коректне значення.';
       return;
     }
 
-    let mondopoint, eu, uk, us_m, us_w;
+    let mondo, eu, uk, us_m, us_w;
 
-    if (selectedUnit === 'eu') {
+    if (unit === 'mondopoint') {
+      mondo = val;
+    } else if (unit === 'eu') {
       eu = val;
-      mondopoint = eu * 6.67 - 10;
-    } else if (selectedUnit === 'mondopoint') {
-      mondopoint = val;
-    } else if (selectedUnit === 'uk') {
-      mondopoint = 25.5 + 8.467 * val;
-    } else if (selectedUnit === 'us_m') {
-      mondopoint = 24 + 8.467 * val;
-    } else if (selectedUnit === 'us_w') {
-      mondopoint = 22.5 + 8.467 * val;
+      mondo = eu * 6.67 - 10;
+    } else if (unit === 'uk') {
+      mondo = 25.5 + 8.467 * val;
+    } else if (unit === 'us_m') {
+      mondo = 24 + 8.467 * val;
+    } else if (unit === 'us_w') {
+      mondo = 22.5 + 8.467 * val;
     }
 
-    if (selectedUnit !== 'eu') {
-      eu = (mondopoint + 10) / 6.67;
+    if (unit !== 'eu' && typeof mondo === 'number') {
+      eu = (mondo + 10) / 6.67;
     }
 
-    uk = (mondopoint - 25.5) / 8.467;
-    us_m = (mondopoint - 24) / 8.467;
-    us_w = (mondopoint - 22.5) / 8.467;
+    uk = (mondo - 25.5) / 8.467;
+    us_m = (mondo - 24) / 8.467;
+    us_w = (mondo - 22.5) / 8.467;
 
     resultDiv.innerHTML = `
       <strong>Результати:</strong><br>
-      Довжина стопи (Mondopoint): ${mondopoint.toFixed(0)} мм<br>
-      Розмір EU: ${selectedUnit === 'eu' ? val : eu.toFixed(1)}<br>
+      Mondopoint (мм): ${mondo.toFixed(0)}<br>
+      EU: ${eu.toFixed(1)}<br>
       UK: ${uk.toFixed(1)}<br>
-      US (чоловічий): ${us_m.toFixed(1)}<br>
-      US (жіночий): ${us_w.toFixed(1)}
+      US (чоловіки): ${us_m.toFixed(1)}<br>
+      US (жінки): ${us_w.toFixed(1)}
     `;
   });
 });
