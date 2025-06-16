@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('fuel-cost-form');
+  const resultDiv = document.getElementById('fuel-cost-result');
+
   const inputs = {
     consumption: document.getElementById('consumption'),   // л/100 км
     range: document.getElementById('range'),               // км
@@ -7,105 +9,111 @@ document.addEventListener('DOMContentLoaded', () => {
     liters: document.getElementById('liters'),             // л
     totalCost: document.getElementById('totalCost'),       // грн
   };
-  const resultDiv = document.getElementById('fuel-cost-result');
 
-  const parseVal = el => {
-    const val = parseFloat(el.value.replace(',', '.'));
-    return isNaN(val) || val <= 0 ? null : val;
+  const parse = (el) => {
+    const v = parseFloat(el.value.replace(',', '.'));
+    return isNaN(v) || v <= 0 ? null : v;
   };
 
-  const updateVal = (el, val) => {
-    if (val !== null && isFinite(val)) {
-      el.value = val.toFixed(2).replace('.', ',');
-    }
+  const format = (num) => num.toFixed(2).replace('.', ',');
+
+  const updateField = (el, val) => {
+    if (val !== null && isFinite(val)) el.value = format(val);
+    else el.value = '';
   };
 
   const getValues = () => {
-    return Object.fromEntries(
-      Object.entries(inputs).map(([k, el]) => [k, parseVal(el)])
-    );
+    const vals = {};
+    for (const k in inputs) {
+      vals[k] = parse(inputs[k]);
+    }
+    return vals;
   };
 
-  const isEnoughData = (vals) => {
-    const filledCount = Object.values(vals).filter(v => v !== null).length;
-
-    // Special cases: allow just 2 for simple outputs
-    const hasLiters = vals.consumption && vals.range;
-    const hasCost   = vals.liters && vals.price;
-
-    return filledCount >= 3 || hasLiters || hasCost;
+  const setValues = (vals) => {
+    for (const k in vals) {
+      updateField(inputs[k], vals[k]);
+    }
   };
 
-  const clearOutput = () => {
-    resultDiv.textContent = '';
-  };
+  const clearOutput = () => resultDiv.textContent = '';
 
-  const calculate = () => {
-    const vals = getValues();
-    clearOutput();
-
-    if (!isEnoughData(vals)) {
-      resultDiv.textContent = 'Будь ласка, заповніть щонайменше 3 параметри (або 2 для розрахунку літрів чи вартості).';
-      return;
-    }
-
-    let { consumption, range, price, liters, totalCost } = vals;
-
-    // Calculate what can be derived
-    if (!liters && consumption && range) {
-      liters = (consumption / 100) * range;
-    }
-
-    if (!consumption && liters && range) {
-      consumption = (liters / range) * 100;
-    }
-
-    if (!range && liters && consumption) {
-      range = (liters * 100) / consumption;
-    }
-
-    if (!totalCost && liters && price) {
-      totalCost = liters * price;
-    }
-
-    if (!price && totalCost && liters) {
-      price = totalCost / liters;
-    }
-
-    if (!liters && totalCost && price) {
-      liters = totalCost / price;
-    }
-
-    const final = { consumption, range, price, liters, totalCost };
-
-    // Only show results if all values are valid
-    if (Object.values(final).some(v => v === null || !isFinite(v))) {
-      resultDiv.textContent = 'Недостатньо або некоректні дані для повного розрахунку.';
-      return;
-    }
-
-    // Update inputs
-    Object.entries(final).forEach(([k, v]) => updateVal(inputs[k], v));
-
-    // Show result
+  const showResults = (vals) => {
     resultDiv.innerHTML = `
       <strong>Результати розрахунку:</strong><br>
-      Витрата пального: ${final.consumption.toFixed(2)} л/100 км<br>
-      Пробіг: ${final.range.toFixed(2)} км<br>
-      Ціна за 1 літр: ${final.price.toFixed(2)}<br>
-      Витрачено пального: ${final.liters.toFixed(2)} л<br>
-      Загальна вартість: ${final.totalCost.toFixed(2)}
+      Витрата пального: ${vals.consumption ? format(vals.consumption) + ' л/100 км' : '—'}<br>
+      Пробіг: ${vals.range ? format(vals.range) + ' км' : '—'}<br>
+      Ціна за 1 літр: ${vals.price ? format(vals.price) : '—'}<br>
+      Витрачено пального: ${vals.liters ? format(vals.liters) + ' л' : '—'}<br>
+      Загальна вартість: ${vals.totalCost ? format(vals.totalCost) : '—'}
     `;
   };
 
-  // Clear output when any field is changed
-  Object.values(inputs).forEach(input => {
-    input.addEventListener('input', clearOutput);
-  });
-
-  // Main form submit logic
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    calculate();
+    clearOutput();
+
+    let { consumption, range, price, liters, totalCost } = getValues();
+    const initial = { consumption, range, price, liters, totalCost };
+
+    let changed = false;
+
+    // Priority 1: Calculate liters
+    if (!liters && consumption && range) {
+      liters = (consumption / 100) * range;
+      changed = true;
+    }
+
+    // Priority 2: Calculate consumption
+    if (!consumption && liters && range) {
+      consumption = (liters / range) * 100;
+      changed = true;
+    }
+
+    // Priority 3: Calculate range
+    if (!range && liters && consumption) {
+      range = (liters * 100) / consumption;
+      changed = true;
+    }
+
+    // Priority 4: Calculate totalCost
+    if (!totalCost && liters && price) {
+      totalCost = liters * price;
+      changed = true;
+    }
+
+    // Priority 5: Calculate price
+    if (!price && totalCost && liters) {
+      price = totalCost / liters;
+      changed = true;
+    }
+
+    // Priority 6: Calculate liters (again, but from cost)
+    if (!liters && totalCost && price) {
+      liters = totalCost / price;
+      changed = true;
+    }
+
+    const result = { consumption, range, price, liters, totalCost };
+
+    // Clear inconsistent fields
+    for (const key in result) {
+      if (result[key] === null || !isFinite(result[key])) result[key] = null;
+    }
+
+    const hasOutput = Object.values(result).some(v => v !== null);
+
+    if (!hasOutput) {
+      resultDiv.textContent = 'Недостатньо або некоректні дані для розрахунку.';
+      return;
+    }
+
+    setValues(result);
+    showResults(result);
+  });
+
+  // Clear result if user changes any input
+  Object.values(inputs).forEach(el => {
+    el.addEventListener('input', clearOutput);
   });
 });
