@@ -49,10 +49,11 @@ faq:
   <label for="pricePerLiter">Ціна за 1 літр пального</label>
   <input type="number" id="pricePerLiter" step="any" min="0" placeholder="Наприклад, 30">
 
+  <label for="liters">Витрачено пального (літрів)</label>
+  <input type="number" id="liters" step="any" min="0" placeholder="Наприклад, 12.75">
+
   <label for="totalCost">Загальна вартість пального</label>
-  <input type="number" id="totalCost" step="any" min="0" placeholder="Наприклад, 400">
+  <input type="number" id="totalCost" step="any" min="0" placeholder="Наприклад, 382.5">
 
   <button type="submit">Розрахувати</button>
 </form>
-
-<div id="fuel-cost-result" class="result"></div>
