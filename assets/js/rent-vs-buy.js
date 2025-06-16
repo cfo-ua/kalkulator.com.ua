@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const years = 10;
 
     const rentCosts = [];
+    const investmentProfits = [];
     const investmentValues = [];
     const labels = [];
 
@@ -24,22 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
       labels.push(`${year}-й рік`);
       rentCosts.push(rentTotal);
       investmentValues.push(investment);
+      investmentProfits.push(investment - apartmentCost);  // прибуток (дивіденди)
     }
 
     // Вивід результатів
     const resultBlock = document.getElementById("rent-buy-result");
+    const totalProfit = investment - apartmentCost;
+
     resultBlock.innerHTML = `
       <h3>Результат:</h3>
       <p>Через ${years} років ви заплатите за оренду <b>${rentTotal.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
-      <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн під ${annualReturn * 100}% річних, ви б отримали <b>${investment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
-      <p><b>${investment > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
+      <p>Якщо б ви інвестували ${apartmentCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн під ${annualReturn * 100}% річних, ваш чистий прибуток (дивіденди) склав би <b>${totalProfit.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</b>.</p>
+      <p><b>${totalProfit > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
     `;
 
     // Показ блоку з графіком
     const chartBlock = document.getElementById("rent-buy-chart-block");
     chartBlock.style.display = "block";
 
-    // Динамічно підвантажуємо Chart.js, якщо він не завантажений
+    // Підвантажуємо Chart.js, якщо потрібно
     ensureChartJs(() => {
       const ctx = document.getElementById("rent-buy-chart").getContext("2d");
       if (window.rentBuyChart) window.rentBuyChart.destroy();
@@ -58,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
               fill: false,
             },
             {
-              label: "Інвестиція (накопичена)",
-              data: investmentValues,
+              label: "Чистий прибуток від інвестиції",
+              data: investmentProfits,
               backgroundColor: "rgba(54, 162, 235, 0.2)",
               borderColor: "rgba(54, 162, 235, 1)",
               borderWidth: 2,
