@@ -35,7 +35,7 @@ faq:
 ---
 
 <form id="break-even-form">
-  <label for="fixedCosts">Постійні витрати (на місяць або рік)</label>
+  <label for="fixedCosts">Постійні місячні витрати</label>
   <input type="number" id="fixedCosts" value="50000" min="0" step="any" required>
 
   <label for="variableCost">Змінні витрати на одиницю</label>
