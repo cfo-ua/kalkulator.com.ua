@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
           scales: {
             y: {
               beginAtZero: true,
-              title: { display: true, text: "Гривень (або інша валюта)" },
+              title: { display: true, text: "Прибуток / Збиток, грн." },
               ticks: {
                 callback: function (value) {
                   return value.toLocaleString("uk-UA");
