@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const resultDiv = document.getElementById('fuel-cost-result');
 
+  // Clear results if user changes any input — so results do not appear outdated
+  Object.values(inputs).forEach(input => {
+    input.addEventListener('input', () => {
+      resultDiv.textContent = '';
+    });
+  });
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     resultDiv.textContent = '';
@@ -29,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let { consumption, range, price, liters, totalCost } = vals;
 
-    // Calculate missing values once, no updating inputs:
-
+    // Calculate missing values once
     if ((isNaN(liters) || liters === 0) && !isNaN(consumption) && !isNaN(range)) {
       liters = (consumption / 100) * range;
     }
@@ -61,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Show results (not updating input fields)
+    // Show results
     resultDiv.innerHTML = `
       <strong>Результати розрахунку:</strong><br>
       Витрата пального: ${consumption.toFixed(2)} л/100 км<br>
