@@ -15,15 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const breakevenUnits = Math.ceil(fixed / contribution);
     const monthlyProfit = (contribution * monthlyUnits) - fixed;
 
+    const formatNumber = num => Math.round(num).toLocaleString("uk-UA");
+
     const result = document.getElementById("unit-economics-result");
     result.innerHTML = `
-      <p><strong>Маржинальний прибуток:</strong> ${contribution.toFixed(2)} грн</p>
+      <p><strong>Маржинальний прибуток:</strong> ${formatNumber(contribution)}</p>
       <p><strong>Маржинальність:</strong> ${marginPercent.toFixed(1)}%</p>
-      <p><strong>Точка беззбитковості:</strong> ${breakevenUnits} одиниць</p>
-      <p><strong>Очікуваний місячний прибуток:</strong> ${monthlyProfit.toFixed(0)} грн</p>
+      <p><strong>Точка беззбитковості:</strong> ${formatNumber(breakevenUnits)} одиниць</p>
+      <p><strong>Очікуваний місячний прибуток:</strong> ${formatNumber(monthlyProfit)}</p>
     `;
 
-    // Побудова графіка
     const chartBlock = document.getElementById("unit-economics-chart-block");
     chartBlock.style.display = "block";
 
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip: {
               callbacks: {
                 label: function (context) {
-                  return context.parsed.y.toLocaleString("uk-UA") + " грн";
+                  return context.parsed.y.toLocaleString("uk-UA");
                 }
               }
             }
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
               beginAtZero: true,
               ticks: {
                 callback: function (value) {
-                  return value.toLocaleString("uk-UA") + " грн";
+                  return value.toLocaleString("uk-UA");
                 }
               }
             }
@@ -81,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Динамічне підвантаження Chart.js
 function ensureChartJs(callback) {
   if (window.Chart) return callback();
   const script = document.createElement("script");
