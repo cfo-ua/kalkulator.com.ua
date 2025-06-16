@@ -1,9 +1,9 @@
 document.getElementById("rent-buy-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const apartmentCost = parseFloat(document.getElementById("apartment-cost").value);
-  const monthlyRent = parseFloat(document.getElementById("monthly-rent").value);
-  const annualReturn = parseFloat(document.getElementById("annual-return").value) / 100;
+  const apartmentCost = parseFloat(document.getElementById("propertyCost").value);
+  const monthlyRent = parseFloat(document.getElementById("monthlyRent").value);
+  const annualReturn = parseFloat(document.getElementById("investmentRate").value) / 100;
   const years = 10;
 
   const rentCosts = [];
@@ -22,7 +22,6 @@ document.getElementById("rent-buy-form").addEventListener("submit", function (e)
     investmentValues.push(investment);
   }
 
-  // Вивід текстових результатів
   const resultBlock = document.getElementById("rent-buy-result");
   resultBlock.innerHTML = `
     <h3>Результат:</h3>
@@ -31,12 +30,11 @@ document.getElementById("rent-buy-form").addEventListener("submit", function (e)
     <p><b>${investment > rentTotal ? "Інвестувати вигідніше." : "Орендувати вигідніше."}</b></p>
   `;
 
-  // Побудова графіка
   const chartBlock = document.getElementById("rent-buy-chart-block");
   chartBlock.style.display = "block";
 
   const ctx = document.getElementById("rent-buy-chart").getContext("2d");
-  if (window.rentBuyChart) window.rentBuyChart.destroy(); // очищення попереднього графіка
+  if (window.rentBuyChart) window.rentBuyChart.destroy();
 
   window.rentBuyChart = new Chart(ctx, {
     type: "line",
