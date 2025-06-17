@@ -1,46 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('salary-converter-form');
-  const resultDiv = document.getElementById('salary-converter-result');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("salary-period-form");
+  const resultDiv = document.getElementById("salary-period-result");
 
-  const multipliers = {
+  if (!form || !resultDiv) return;
+
+  const periods = {
     year: 1,
-    month: 1 / 12,
-    week: 1 / 52,
-    day: 1 / 365
+    month: 12,
+    week: 52,
+    day: 260, // робочих днів на рік
+    hour: 2080 // робочих годин на рік (40*52)
   };
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const amount = parseFloat(document.getElementById('amount').value);
-    const period = document.getElementById('period').value;
+    const amount = parseFloat(document.getElementById("amount").value);
+    const selectedPeriod = document.getElementById("period").value;
 
-    if (isNaN(amount) || amount <= 0) {
-      resultDiv.innerHTML = '<p>Будь ласка, введіть коректну суму.</p>';
+    if (isNaN(amount) || amount <= 0 || !periods[selectedPeriod]) {
+      resultDiv.innerHTML = "<p>Будь ласка, введіть коректну суму та період.</p>";
       return;
     }
 
-    // Normalize to yearly
-    let annual = 0;
-    switch (period) {
-      case 'year': annual = amount; break;
-      case 'month': annual = amount * 12; break;
-      case 'week': annual = amount * 52; break;
-      case 'day': annual = amount * 365; break;
+    const yearly = amount * (selectedPeriod === "year" ? 1 : periods[selectedPeriod]);
+    const results = {
+      рік: yearly,
+      місяць: yearly / periods["month"],
+      тиждень: yearly / periods["week"],
+      день: yearly / periods["day"],
+      година: yearly / periods["hour"]
+    };
+
+    const format = (num) => num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+    let html = "<h3>Результати:</h3><ul>";
+    for (const [label, value] of Object.entries(results)) {
+      html += `<li><strong>за ${label}:</strong> ${format(value)} грн</li>`;
     }
+    html += "</ul>";
 
-    const monthly = annual / 12;
-    const weekly = annual / 52;
-    const daily = annual / 365;
-
-    resultDiv.innerHTML = `
-      <p><strong>Еквівалентна зарплата:</strong></p>
-      <ul>
-        <li>На рік: <strong>${annual.toFixed(2)} грн</strong></li>
-        <li>На місяць: <strong>${monthly.toFixed(2)} грн</strong></li>
-        <li>На тиждень: <strong>${weekly.toFixed(2)} грн</strong></li>
-        <li>На день: <strong>${daily.toFixed(2)} грн</strong></li>
-      </ul>
-    `;
+    resultDiv.innerHTML = html;
   });
 });
