@@ -1,49 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('salary-period-form');
-  const amountInput = document.getElementById('amount');
-  const periodSelect = document.getElementById('period');
-  const resultDiv = document.getElementById('salary-period-result');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("salary-period-form");
+  const resultDiv = document.getElementById("salary-period-result");
 
-  const conversionRates = {
+  const periods = {
     year: 1,
     month: 12,
     week: 52,
-    day: 365,
-    hour: 2080 // 40 hours/week * 52 weeks
+    day: 260, // приблизна кількість робочих днів
+    hour: 2080 // 40 год × 52 тижні
   };
 
-  function formatNumber(num) {
-    return num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  }
-
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const amount = parseFloat(amountInput.value.replace(',', '.'));
-    const fromPeriod = periodSelect.value;
+    const amount = parseFloat(document.getElementById("amount").value);
+    const selectedPeriod = document.getElementById("period").value;
 
-    if (isNaN(amount) || amount <= 0) {
-      resultDiv.textContent = 'Будь ласка, введіть коректну суму.';
+    if (isNaN(amount) || amount <= 0 || !periods[selectedPeriod]) {
+      resultDiv.innerHTML = "<p>Будь ласка, введіть коректну суму та період.</p>";
       return;
     }
 
-    const annual = amount * (conversionRates.year / conversionRates[fromPeriod]);
-
+    const yearly = amount * (selectedPeriod === "year" ? 1 : periods[selectedPeriod]);
     const results = {
-      рік: formatNumber(annual),
-      місяць: formatNumber(annual / conversionRates.month),
-      тиждень: formatNumber(annual / conversionRates.week),
-      день: formatNumber(annual / conversionRates.day),
-      година: formatNumber(annual / conversionRates.hour),
+      рік: yearly,
+      місяць: yearly / periods["month"],
+      тиждень: yearly / periods["week"],
+      день: yearly / periods["day"],
+      година: yearly / periods["hour"]
     };
 
-    resultDiv.innerHTML = `
-      <strong>Еквіваленти для ${formatNumber(amount)} грн / ${fromPeriod}:</strong><br>
-      Рік: ${results['рік']} грн<br>
-      Місяць: ${results['місяць']} грн<br>
-      Тиждень: ${results['тиждень']} грн<br>
-      День: ${results['день']} грн<br>
-      Година: ${results['година']} грн
-    `;
+    let html = "<h3>Результати:</h3><ul>";
+    for (const [label, value] of Object.entries(results)) {
+      html += `<li><strong>за ${label}:</strong> ${value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</li>`;
+    }
+    html += "</ul>";
+
+    resultDiv.innerHTML = html;
   });
 });
