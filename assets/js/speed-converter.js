@@ -1,34 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("speed-input");
-  const from = document.getElementById("speed-from");
-  const to = document.getElementById("speed-to");
-  const result = document.getElementById("speed-result");
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('salary-converter-form');
+  const resultDiv = document.getElementById('salary-converter-result');
 
-  const toMps = {
-    kmh: 0.277778,
-    ms: 1,
-    mph: 0.44704,
-    knot: 0.514444,
-    fts: 0.3048,
-  };
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  function convertSpeed() {
-    const value = parseFloat(input.value);
-    if (isNaN(value)) {
-      result.textContent = "Введіть коректне число.";
+    const amount = parseFloat(document.getElementById('amount').value);
+    const period = document.getElementById('period').value;
+
+    if (isNaN(amount) || amount <= 0) {
+      resultDiv.innerHTML = '<p>Будь ласка, введіть коректну суму.</p>';
       return;
     }
 
-    const fromUnit = from.value;
-    const toUnit = to.value;
+    // Normalize everything to yearly income
+    let annual = 0;
+    switch (period) {
+      case 'year': annual = amount; break;
+      case 'month': annual = amount * 12; break;
+      case 'week': annual = amount * 52; break;
+      case 'day': annual = amount * 365; break;
+      case 'hour': annual = amount * 2080; break; // 40h/week * 52 weeks
+    }
 
-    const inMps = value * toMps[fromUnit];
-    const finalValue = inMps / toMps[toUnit];
+    const monthly = annual / 12;
+    const weekly = annual / 52;
+    const daily = annual / 365;
+    const hourly = annual / 2080;
 
-    result.textContent = `${value} ${from.options[from.selectedIndex].text} = ${finalValue.toFixed(4)} ${to.options[to.selectedIndex].text}`;
-  }
+    const format = (n) => n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 
-  input.addEventListener("input", convertSpeed);
-  from.addEventListener("change", convertSpeed);
-  to.addEventListener("change", convertSpeed);
+    resultDiv.innerHTML = `
+      <p><strong>Еквівалентна зарплата:</strong></p>
+      <ul>
+        <li>Рік: <strong>${format(annual)} грн</strong></li>
+        <li>Місяць: <strong>${format(monthly)} грн</strong></li>
+        <li>Тиждень: <strong>${format(weekly)} грн</strong></li>
+        <li>День: <strong>${format(daily)} грн</strong></li>
+        <li>Година: <strong>${format(hourly)} грн</strong></li>
+      </ul>
+    `;
+  });
 });
