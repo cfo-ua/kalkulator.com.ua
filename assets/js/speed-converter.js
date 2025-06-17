@@ -1,41 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("salary-period-form");
-  const resultDiv = document.getElementById("salary-period-result");
+  const input = document.getElementById("speed-input");
+  const from = document.getElementById("speed-from");
+  const to = document.getElementById("speed-to");
+  const result = document.getElementById("speed-result");
 
-  const periods = {
-    year: 1,
-    month: 12,
-    week: 52,
-    day: 260, // приблизна кількість робочих днів
-    hour: 2080 // 40 год × 52 тижні
+  const toMps = {
+    kmh: 0.277778,
+    ms: 1,
+    mph: 0.44704,
+    knot: 0.514444,
+    fts: 0.3048,
   };
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const amount = parseFloat(document.getElementById("amount").value);
-    const selectedPeriod = document.getElementById("period").value;
-
-    if (isNaN(amount) || amount <= 0 || !periods[selectedPeriod]) {
-      resultDiv.innerHTML = "<p>Будь ласка, введіть коректну суму та період.</p>";
+  function convertSpeed() {
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+      result.textContent = "Введіть коректне число.";
       return;
     }
 
-    const yearly = amount * (selectedPeriod === "year" ? 1 : periods[selectedPeriod]);
-    const results = {
-      рік: yearly,
-      місяць: yearly / periods["month"],
-      тиждень: yearly / periods["week"],
-      день: yearly / periods["day"],
-      година: yearly / periods["hour"]
-    };
+    const fromUnit = from.value;
+    const toUnit = to.value;
 
-    let html = "<h3>Результати:</h3><ul>";
-    for (const [label, value] of Object.entries(results)) {
-      html += `<li><strong>за ${label}:</strong> ${value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} грн</li>`;
-    }
-    html += "</ul>";
+    const inMps = value * toMps[fromUnit];
+    const finalValue = inMps / toMps[toUnit];
 
-    resultDiv.innerHTML = html;
-  });
+    result.textContent = `${value} ${from.options[from.selectedIndex].text} = ${finalValue.toFixed(4)} ${to.options[to.selectedIndex].text}`;
+  }
+
+  input.addEventListener("input", convertSpeed);
+  from.addEventListener("change", convertSpeed);
+  to.addEventListener("change", convertSpeed);
 });
