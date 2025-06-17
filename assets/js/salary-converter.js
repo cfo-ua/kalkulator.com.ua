@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let html = "<h3>Результати:</h3><ul>";
     for (const [label, value] of Object.entries(results)) {
-      html += `<li><strong>за ${label}:</strong> ${format(value)} грн</li>`;
+      html += `<li><strong>за ${label}:</strong> ${format(value)}</li>`;
     }
     html += "</ul>";
 
