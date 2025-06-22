@@ -48,6 +48,7 @@
     };
   }
 
+  // Змінюємо підказку під полем доходу
   periodSelect.addEventListener('change', () => {
     incomeHint.textContent =
       periodSelect.value === 'monthly'
@@ -67,13 +68,15 @@
       return;
     }
 
-    const adjustedIncome =
+    // Для групи 3/3-vat завжди хочемо мати доходи "місячні", бо розрахунок на місяць
+    const monthlyIncome =
       (group === '3' || group === '3-vat') && period === 'quarterly'
         ? income / 3
         : income;
 
-    const { singleTax, esv, military, total } = calculateTaxes(group, adjustedIncome);
+    const { singleTax, esv, military, total } = calculateTaxes(group, monthlyIncome);
 
+    // Показуємо підсумки за обраний період
     const multiplier = period === 'quarterly' ? 3 : 1;
     const periodLabel = period === 'monthly' ? 'за місяць' : 'за квартал';
 
