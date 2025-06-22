@@ -2,8 +2,11 @@
   const form = document.getElementById('fop-form');
   const resultDiv = document.getElementById('fop-result');
 
-  const MIN_SALARY = 8000; // грн
-  const LIVING_WAGE = 2920; // грн
+  const MIN_SALARY = 8000;
+  const LIVING_WAGE = 2920;
+
+  const incomeHint = document.getElementById('income-hint');
+  const periodSelect = document.getElementById('period');
 
   function formatCurrency(value) {
     return value.toFixed(2) + ' грн';
@@ -45,19 +48,41 @@
     };
   }
 
+  periodSelect.addEventListener('change', () => {
+    incomeHint.textContent =
+      periodSelect.value === 'monthly'
+        ? 'Вкажіть дохід за місяць'
+        : 'Вкажіть дохід за квартал';
+  });
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const group = document.getElementById('group').value;
     const income = parseFloat(document.getElementById('income').value);
+    const period = periodSelect.value;
 
-    const { singleTax, esv, military, total } = calculateTaxes(group, income);
+    if (isNaN(income) || income < 0) {
+      resultDiv.innerHTML = '<p style="color:red;">Будь ласка, введіть коректний дохід.</p>';
+      return;
+    }
+
+    const adjustedIncome =
+      (group === '3' || group === '3-vat') && period === 'quarterly'
+        ? income / 3
+        : income;
+
+    const { singleTax, esv, military, total } = calculateTaxes(group, adjustedIncome);
+
+    const multiplier = period === 'quarterly' ? 3 : 1;
+    const periodLabel = period === 'monthly' ? 'за місяць' : 'за квартал';
 
     resultDiv.innerHTML = `
-      <p><strong>Єдиний податок:</strong> ${formatCurrency(singleTax)}</p>
-      <p><strong>ЄСВ:</strong> ${formatCurrency(esv)}</p>
-      <p><strong>Військовий збір:</strong> ${formatCurrency(military)}</p>
+      <p><strong>Єдиний податок ${periodLabel}:</strong> ${formatCurrency(singleTax * multiplier)}</p>
+      <p><strong>ЄСВ ${periodLabel}:</strong> ${formatCurrency(esv * multiplier)}</p>
+      <p><strong>Військовий збір ${periodLabel}:</strong> ${formatCurrency(military * multiplier)}</p>
       <hr>
-      <p><strong>Загалом:</strong> ${formatCurrency(total)}</p>
+      <p><strong>Загалом ${periodLabel}:</strong> ${formatCurrency(total * multiplier)}</p>
     `;
   });
 })();
