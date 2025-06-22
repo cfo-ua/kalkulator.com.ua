@@ -56,7 +56,6 @@ faq:
 
   <label for="income">Дохід (грн):</label>
   <input type="number" id="income" min="0" required>
-  <small id="income-hint" style="display:block; margin-bottom:1em; color:#666;">Вкажіть дохід за місяць</small>
 
   <label for="period">Період розрахунку:</label>
   <select id="period">
