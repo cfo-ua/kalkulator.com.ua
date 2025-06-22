@@ -12,10 +12,10 @@
     }
 
     /**
-     * Обчислює податки залежно від групи та періоду.
-     * @param {string} group — '1', '2', '3' або '3-vat'
-     * @param {number} income — введений користувачем дохід (місячний або квартальний)
-     * @param {string} period — 'monthly' або 'quarterly'
+     * Обчислює податки за обраний період.
+     * - income: введений користувачем дохід (місячний, якщо period==='monthly'; 
+     *   квартальний, якщо period==='quarterly')
+     * - period: 'monthly' | 'quarterly'
      */
     function calculateTaxes(group, income, period) {
       let singleTax = 0;
@@ -23,51 +23,53 @@
       let military = 0;
 
       if (period === 'monthly') {
-        // Розрахунок за місяць
+        // ─────────── МІСЯЧНІ РОЗРАХУНКИ ───────────
         switch (group) {
           case '1':
             singleTax = 0.1 * LIVING_WAGE;
-            esv = 0.22 * MIN_SALARY;
-            military = 0.1 * MIN_SALARY;
+            esv       = 0.22 * MIN_SALARY;
+            military  = 0.1 * MIN_SALARY;
             break;
           case '2':
             singleTax = 0.2 * MIN_SALARY;
-            esv = 0.22 * MIN_SALARY;
-            military = 0.1 * MIN_SALARY;
+            esv       = 0.22 * MIN_SALARY;
+            military  = 0.1 * MIN_SALARY;
             break;
           case '3':
             singleTax = 0.05 * income;
-            esv = 0.22 * MIN_SALARY;
-            military = 0.01 * income;
+            esv       = 0.22 * MIN_SALARY;
+            military  = 0.01 * income;
             break;
           case '3-vat':
             singleTax = 0.03 * income;
-            esv = 0.22 * MIN_SALARY;
-            military = 0.01 * income;
+            esv       = 0.22 * MIN_SALARY;
+            military  = 0.01 * income;
             break;
         }
+
       } else {
-        // Розрахунок за квартал
+        // ─────────── КВАРТАЛЬНІ РОЗРАХУНКИ ───────────
         switch (group) {
           case '1':
-            singleTax = 0.1 * LIVING_WAGE * 3;
-            esv = 0.22 * MIN_SALARY * 3;
-            military = 0.1 * MIN_SALARY * 3;
+            singleTax = 0.1  * LIVING_WAGE * 3;
+            esv       = 0.22 * MIN_SALARY  * 3;
+            military  = 0.1  * MIN_SALARY  * 3;
             break;
           case '2':
-            singleTax = 0.2 * MIN_SALARY * 3;
-            esv = 0.22 * MIN_SALARY * 3;
-            military = 0.1 * MIN_SALARY * 3;
+            singleTax = 0.2  * MIN_SALARY  * 3;
+            esv       = 0.22 * MIN_SALARY  * 3;
+            military  = 0.1  * MIN_SALARY  * 3;
             break;
           case '3':
+            // income тут — вже квартальний
             singleTax = 0.05 * income;
-            esv = 0.22 * MIN_SALARY * 3;
-            military = 0.01 * income;
+            esv       = 0.22 * MIN_SALARY * 3;
+            military  = 0.01 * income;
             break;
           case '3-vat':
             singleTax = 0.03 * income;
-            esv = 0.22 * MIN_SALARY * 3;
-            military = 0.01 * income;
+            esv       = 0.22 * MIN_SALARY * 3;
+            military  = 0.01 * income;
             break;
         }
       }
@@ -83,9 +85,9 @@
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      const group = document.getElementById('group').value;
+      const group  = document.getElementById('group').value;
       const income = parseFloat(document.getElementById('income').value);
-      const period = periodSelect.value; // 'monthly' або 'quarterly'
+      const period = periodSelect.value; // 'monthly' | 'quarterly'
 
       if (isNaN(income) || income < 0) {
         resultDiv.innerHTML = '<p style="color:red;">Будь ласка, введіть коректний дохід.</p>';
@@ -93,14 +95,14 @@
       }
 
       const { singleTax, esv, military, total } = calculateTaxes(group, income, period);
-      const periodLabel = period === 'monthly' ? 'за місяць' : 'за квартал';
+      const label = period === 'monthly' ? 'за місяць' : 'за квартал';
 
       resultDiv.innerHTML = `
-        <p><strong>Єдиний податок ${periodLabel}:</strong> ${formatCurrency(singleTax)}</p>
-        <p><strong>ЄСВ ${periodLabel}:</strong> ${formatCurrency(esv)}</p>
-        <p><strong>Військовий збір ${periodLabel}:</strong> ${formatCurrency(military)}</p>
+        <p><strong>Єдиний податок ${label}:</strong> ${formatCurrency(singleTax)}</p>
+        <p><strong>ЄСВ ${label}:</strong> ${formatCurrency(esv)}</p>
+        <p><strong>Військовий збір ${label}:</strong> ${formatCurrency(military)}</p>
         <hr>
-        <p><strong>Загалом ${periodLabel}:</strong> ${formatCurrency(total)}</p>
+        <p><strong>Загалом ${label}:</strong> ${formatCurrency(total)}</p>
       `;
     });
   });
