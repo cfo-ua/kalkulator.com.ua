@@ -2,7 +2,6 @@
   const form = document.getElementById('fop-form');
   const resultDiv = document.getElementById('fop-result');
   const periodSelect = document.getElementById('period');
-  const incomeHint = document.getElementById('income-hint');
 
   const MIN_SALARY = 8000;    // для обчислення ЄСВ і військового збору
   const LIVING_WAGE = 2920;   // для обчислення ЄП 1-ї групи
@@ -43,11 +42,13 @@
         break;
     }
 
-    return { singleTax, esv, military, total: singleTax + esv + military };
+    return {
+      singleTax,
+      esv,
+      military,
+      total: singleTax + esv + military
+    };
   }
-
-  // Підказка залишаємо статичною, бо дохід завжди місячний
-  incomeHint.textContent = 'Вкажіть дохід за місяць';
 
   form.addEventListener('submit', e => {
     e.preventDefault();
@@ -63,7 +64,8 @@
 
     // Беремо місячні податки
     const { singleTax, esv, military, total } = calculateMonthlyTaxes(group, income);
-    // Для кварталу просто множимо на 3
+
+    // Для кварталу множимо на 3
     const multiplier = period === 'quarterly' ? 3 : 1;
     const periodLabel = period === 'monthly' ? 'за місяць' : 'за квартал';
 
