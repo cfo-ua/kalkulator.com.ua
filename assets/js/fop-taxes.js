@@ -12,19 +12,14 @@
   }
 
   /**
-   * Вираховує податки для обраної групи і періоду.
-   * - income: введений користувачем (місяць або квартал, залежить від period)
-   * - period: 'monthly' | 'quarterly'
+   * Обчислює податки за місяць для обраної групи.
+   * income — завжди місячний дохід.
    */
-  function calculateTaxes(group, income, period) {
-    // Перетворюємо квартальний дохід в місячний тільки для групи 3
-    let incomePerMonth = income;
-    if ((group === '3' || group === '3-vat') && period === 'quarterly') {
-      incomePerMonth = income / 3;
-    }
+  function calculateMonthlyTaxes(group, income) {
+    let singleTax = 0;
+    let esv = 0;
+    let military = 0;
 
-    // Обчислюємо податки за місяць
-    let singleTax, esv, military;
     switch (group) {
       case '1':
         singleTax = 0.1 * LIVING_WAGE;
@@ -37,61 +32,47 @@
         military = 0.1 * MIN_SALARY;
         break;
       case '3':
-        singleTax = 0.05 * incomePerMonth;
+        singleTax = 0.05 * income;
         esv = 0.22 * MIN_SALARY;
-        military = 0.01 * incomePerMonth;
+        military = 0.01 * income;
         break;
       case '3-vat':
-        singleTax = 0.03 * incomePerMonth;
+        singleTax = 0.03 * income;
         esv = 0.22 * MIN_SALARY;
-        military = 0.01 * incomePerMonth;
+        military = 0.01 * income;
         break;
-      default:
-        singleTax = esv = military = 0;
     }
 
-    // Якщо квартал — множимо місячні суми на 3
-    const multiplier = period === 'quarterly' ? 3 : 1;
-    singleTax *= multiplier;
-    esv *= multiplier;
-    military *= multiplier;
-
-    return {
-      singleTax,
-      esv,
-      military,
-      total: singleTax + esv + military
-    };
+    return { singleTax, esv, military, total: singleTax + esv + military };
   }
 
-  // Динамічна підказка під полем доходу
-  periodSelect.addEventListener('change', () => {
-    incomeHint.textContent = periodSelect.value === 'monthly'
-      ? 'Вкажіть дохід за місяць'
-      : 'Вкажіть дохід за квартал';
-  });
+  // Підказка залишаємо статичною, бо дохід завжди місячний
+  incomeHint.textContent = 'Вкажіть дохід за місяць';
 
   form.addEventListener('submit', e => {
     e.preventDefault();
 
     const group = document.getElementById('group').value;
-    const incomeInput = parseFloat(document.getElementById('income').value);
+    const income = parseFloat(document.getElementById('income').value);
     const period = periodSelect.value;
 
-    if (isNaN(incomeInput) || incomeInput < 0) {
+    if (isNaN(income) || income < 0) {
       resultDiv.innerHTML = '<p style="color:red;">Будь ласка, введіть коректний дохід.</p>';
       return;
     }
 
-    const { singleTax, esv, military, total } = calculateTaxes(group, incomeInput, period);
+    // Беремо місячні податки
+    const { singleTax, esv, military, total } = calculateMonthlyTaxes(group, income);
+    // Для кварталу просто множимо на 3
+    const multiplier = period === 'quarterly' ? 3 : 1;
     const periodLabel = period === 'monthly' ? 'за місяць' : 'за квартал';
 
     resultDiv.innerHTML = `
-      <p><strong>Єдиний податок ${periodLabel}:</strong> ${formatCurrency(singleTax)}</p>
-      <p><strong>ЄСВ ${periodLabel}:</strong> ${formatCurrency(esv)}</p>
-      <p><strong>Військовий збір ${periodLabel}:</strong> ${formatCurrency(military)}</p>
+      <p><strong>Єдиний податок ${periodLabel}:</strong> ${formatCurrency(singleTax * multiplier)}</p>
+      <p><strong>ЄСВ ${periodLabel}:</strong> ${formatCurrency(esv * multiplier)}</p>
+      <p><strong>Військовий збір ${periodLabel}:</strong> ${formatCurrency(military * multiplier)}</p>
       <hr>
-      <p><strong>Загалом ${periodLabel}:</strong> ${formatCurrency(total)}</p>
+      <p><strong>Загалом ${periodLabel}:</strong> ${formatCurrency(total * multiplier)}</p>
     `;
   });
 })();
