@@ -316,6 +316,12 @@ h1 {
   min-width: 120px;
   text-decoration: none !important;
   max-width: 100%;
+
+  /* Additions for centering and moving to new row */
+  display: block;           /* Make the button start on a new row */
+  margin-left: auto;        /* Center horizontally */
+  margin-right: auto;       /* Center horizontally */
+  width: fit-content;       /* Button width fits its content */
 }
 
 /* Only hover gets the dark background */
