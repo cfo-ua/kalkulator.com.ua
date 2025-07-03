@@ -312,7 +312,7 @@ h1 {
   font-weight: 600;
   box-shadow: 0 2px 12px 0 rgba(60,60,60,0.09);
   transition: background 0.18s, box-shadow 0.17s, color 0.15s;
-  margin-top: 0.5em;
+  margin-top: 1em;
   min-width: 120px;
   text-decoration: none !important;
   max-width: 100%;
