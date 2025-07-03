@@ -32,7 +32,6 @@ header {
   transition: color var(--transition);
   min-width: 0;
 }
-
 /* Logo image/svg sizing */
 .logo img, .logo svg {
   height: 40px !important;
@@ -70,7 +69,6 @@ header {
   margin-left: auto;
   min-width: 0;
 }
-
 .nav-links a {
   color: var(--main-color);
   text-decoration: none;
