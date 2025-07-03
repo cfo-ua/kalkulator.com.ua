@@ -1,0 +1,91 @@
+/* =================== Button Styles (Main, Secondary, Icon, Utility) ==================== */
+
+/* Primary action button for calculator */
+.calculator-block .main-action,
+.calculator-block .btn-main {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.68em 1.5em;
+  font-size: 1.05em;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 12px 0 rgba(60,60,60,0.09);
+  transition: background 0.18s, box-shadow 0.17s, color 0.15s;
+  margin-top: 1.2em;
+  min-width: 120px;
+  text-decoration: none !important;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+/* Main button states */
+.calculator-block .main-action:hover,
+.calculator-block .btn-main:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+.calculator-block .main-action:active,
+.calculator-block .btn-main:active {
+  background: #004bbd;
+  box-shadow: 0 1px 4px 0 rgba(60,60,60,0.09) inset;
+  transform: translateY(1px);
+}
+.calculator-block .main-action:focus,
+.calculator-block .btn-main:focus {
+  outline: none;
+}
+
+/* Secondary (if needed) */
+.btn-secondary {
+  background: #ececec;
+  color: var(--main-color);
+  border: 1px solid var(--border);
+  padding: 0.65em 1.4em;
+  border-radius: var(--button-radius);
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.17s, color 0.15s, border 0.12s;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: #eaf3ff;
+  color: var(--accent);
+}
+
+/* Icon or Remove buttons (remove, close, "-" etc.) */
+button.remove-trip,
+button.food-remove,
+.calculator-block .icon-btn {
+  background: transparent;
+  color: #d00;
+  border: none;
+  padding: 0;
+  font-size: 1.3em;
+  width: auto;
+  min-width: 0;
+  box-shadow: none;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+button.remove-trip:hover,
+button.food-remove:hover,
+.calculator-block .icon-btn:hover,
+button.remove-trip:focus,
+button.food-remove:focus,
+.calculator-block .icon-btn:focus {
+  background: #ffeaea;
+  color: #a00;
+  outline: none;
+}
