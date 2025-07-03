@@ -947,8 +947,9 @@ button.chart-range-btn:active {
   font-family: inherit;
 }
 
-/* Remove button: no white gap on highlight, vertically centered */
-.food-row-grid .food-remove {
+/* Remove button: no white gap on highlight, vertically centered, SPECIFICITY FIXED */
+.calculator-block .food-row-grid .food-remove,
+.calculator-block .remove-trip {
   border: none;
   background: #f7f8fa;
   color: #c00;
@@ -967,8 +968,11 @@ button.chart-range-btn:active {
   padding: 0;
   line-height: 1;
   box-sizing: border-box;
+  box-shadow: none;
 }
-.food-row-grid .food-remove:after {
+
+.calculator-block .food-row-grid .food-remove:after,
+.calculator-block .remove-trip:after {
   content: '×';
   font-size: 1.15em;
   font-weight: 400;
@@ -976,7 +980,11 @@ button.chart-range-btn:active {
   display: block;
   line-height: 1;
 }
-.food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
+
+.calculator-block .food-row-grid .food-remove:hover,
+.calculator-block .food-row-grid .food-remove:focus,
+.calculator-block .remove-trip:hover,
+.calculator-block .remove-trip:focus {
   background: #ffeaea;
   color: #a00;
   height: 100%;
@@ -1021,7 +1029,12 @@ button.chart-range-btn:active {
   .food-row-grid input[type="number"] { max-width: 70px; }
   .food-row-grid select { max-width: 54px; }
   .food-row-grid .food-calories { font-size: 1.09em; min-width: 2em; }
-  .food-row-grid .food-remove { width: 34px; min-width: 34px; font-size: 1.12em; }
+  .calculator-block .food-row-grid .food-remove,
+  .calculator-block .remove-trip {
+    width: 34px;
+    min-width: 34px;
+    font-size: 1.12em;
+  }
 }
 
 /* Results block unchanged */
