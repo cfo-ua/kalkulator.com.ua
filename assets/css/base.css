@@ -1,6 +1,5 @@
 /* ================= Base, Variables, Reset, Typography =================== */
 
-/* Box-sizing and scroll fix */
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body { max-width: 100vw; overflow-x: hidden; }
@@ -16,7 +15,6 @@ html, body { max-width: 100vw; overflow-x: hidden; }
   --shadow: 0 4px 24px 0 rgba(60, 60, 60, 0.04);
   --nav-height: 64px;
   --transition: 0.16s cubic-bezier(.37,.01,.69,1.53);
-  /* Spacing & font vars for utilities */
   --space-xs: 0.25em;
   --space-s: 0.5em;
   --space-m: 1em;
@@ -26,7 +24,6 @@ html, body { max-width: 100vw; overflow-x: hidden; }
   --card-radius: 24px;
 }
 
-/* Base html/body typography */
 html {
   font-size: 18px;
   background: var(--bg);
