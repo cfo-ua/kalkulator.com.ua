@@ -354,27 +354,34 @@ h1 {
 
 /* Specific style for remove-trip button */
 .calculator-block .remove-trip {
-  background: none;
-  color: #c00;
-  border: none;
-  font-size: 1.8em;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  padding: 0;
-  box-shadow: none;
-  margin: 0.6em auto 0.2em auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s, color 0.17s;
+  /* Visuals */
+  background: none !important;
+  color: #c00 !important;
+  border: none !important;
+  font-size: 1.5em !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+
+  /* Override layout of main button */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 0 0 10px !important; /* No vertical spacing, slight left margin for spacing if needed */
+  min-width: 0 !important;
+  max-width: none !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  /* Remove centering and new row behavior */
 }
 
 .calculator-block .remove-trip:hover,
 .calculator-block .remove-trip:focus {
-  background: #ffeaea;
-  color: #a00;
-  outline: none;
+  background: #ffeaea !important;
+  color: #a00 !important;
+  outline: none !important;
 }
 
 @media (max-width: 800px) {
