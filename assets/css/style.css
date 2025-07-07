@@ -352,33 +352,34 @@ h1 {
   word-break: break-word;
 }
 
-/* Specific style for remove-trip button */
-.calculator-block .remove-trip {
-  /* Visuals */
-  background: none !important;
-  color: #c00 !important;
-  border: none !important;
-  font-size: 1.5em !important;
-  border-radius: 50% !important;
-  width: 32px !important;
-  height: 32px !important;
-  padding: 0 !important;
-  box-shadow: none !important;
+.trip-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
 
-  /* Override layout of main button */
+.trip-row .remove-trip {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 0 0 10px !important; /* No vertical spacing, slight left margin for spacing if needed */
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 1.4em !important;
+  background: none !important;
+  color: #c00 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  margin: 0 0 0 8px !important;
   min-width: 0 !important;
   max-width: none !important;
   vertical-align: middle !important;
-  position: relative !important;
-  /* Remove centering and new row behavior */
+  transition: background 0.18s, color 0.17s;
 }
 
-.calculator-block .remove-trip:hover,
-.calculator-block .remove-trip:focus {
+.trip-row .remove-trip:hover,
+.trip-row .remove-trip:focus {
   background: #ffeaea !important;
   color: #a00 !important;
   outline: none !important;
