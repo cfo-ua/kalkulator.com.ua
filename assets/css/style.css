@@ -352,6 +352,31 @@ h1 {
   word-break: break-word;
 }
 
+/* Specific style for remove-trip button */
+.calculator-block .remove-trip {
+  background: none;
+  color: #c00;
+  border: none;
+  font-size: 1.8em;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  box-shadow: none;
+  margin: 0.6em auto 0.2em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.17s;
+}
+
+.calculator-block .remove-trip:hover,
+.calculator-block .remove-trip:focus {
+  background: #ffeaea;
+  color: #a00;
+  outline: none;
+}
+
 @media (max-width: 800px) {
   .calculator-block {
     max-width: 98vw;
