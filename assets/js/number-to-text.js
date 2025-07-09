@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ocument.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("numbertotext-form");
   const result = document.getElementById("numbertotext-result");
 
