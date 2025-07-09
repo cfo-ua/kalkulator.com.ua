@@ -135,32 +135,51 @@ document.addEventListener("DOMContentLoaded", function () {
     return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
-  // Copy to clipboard functionality, improved for inline look
-  function createCopyButton(textToCopy) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.title = "Скопіювати";
-    btn.className = "copy-btn";
-    btn.style.cssText =
-      "display:inline-flex;align-items:center;justify-content:center;background:transparent;border:none;padding:0 0 0 8px;cursor:pointer";
-    btn.innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/><path d="M7 7h10v10H7z" fill="none"/></svg>';
-    btn.onclick = function () {
-      navigator.clipboard.writeText(textToCopy).then(
-        function () {
-          btn.innerHTML =
-            '<svg width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#28c86f"/><path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-          setTimeout(() => {
-            btn.innerHTML =
-              '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/><path d="M7 7h10v10H7z" fill="none"/></svg>';
-          }, 1200);
-        },
-        function () {
-          btn.innerHTML = "!";
-        }
-      );
+  // Inline icon copy button (span, not button)
+  function createCopyIcon(textToCopy) {
+    const span = document.createElement("span");
+    span.title = "Скопіювати";
+    span.className = "copy-btn-icon";
+    span.setAttribute("tabindex", "0");
+    span.setAttribute("role", "button");
+    span.setAttribute("aria-label", "Скопіювати результат");
+    span.innerHTML =
+      '<svg width="18" height="18" fill="none" stroke="#277cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="2 2 20 20"><rect x="9" y="9" width="8" height="8" rx="2" fill="#e7f1ff"/><rect x="5" y="5" width="8" height="8" rx="2" stroke="#277cff" fill="none"/></svg>';
+
+    span.style.verticalAlign = "middle";
+    span.style.marginLeft = "0.4em";
+    span.style.cursor = "pointer";
+    span.style.userSelect = "none";
+    span.style.transition = "opacity .2s";
+
+    function showCheck() {
+      span.innerHTML =
+        '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#28c86f"/><path d="M5 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      setTimeout(() => {
+        span.innerHTML =
+          '<svg width="18" height="18" fill="none" stroke="#277cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="2 2 20 20"><rect x="9" y="9" width="8" height="8" rx="2" fill="#e7f1ff"/><rect x="5" y="5" width="8" height="8" rx="2" stroke="#277cff" fill="none"/></svg>';
+      }, 1200);
+    }
+
+    // Mouse/keyboard interaction
+    span.onclick = function () {
+      navigator.clipboard.writeText(textToCopy).then(showCheck, () => {});
     };
-    return btn;
+    span.onkeydown = function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        span.onclick();
+      }
+    };
+    // Visual feedback on focus
+    span.onfocus = function () {
+      span.style.opacity = "0.7";
+    };
+    span.onblur = function () {
+      span.style.opacity = "1";
+    };
+
+    return span;
   }
 
   if (form) {
@@ -171,10 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const txt = numberToUkrText(input);
         result.innerHTML =
           `<span class="numbertotext-text" style="font-weight:600;font-size:1.6rem;color:#277cff;display:inline;">${txt}</span>`;
-        // Add copy button right after text, inline
+        // Add copy icon right after text, inline
         const textElem = result.querySelector(".numbertotext-text");
-        const btn = createCopyButton(txt);
-        textElem.after(btn);
+        const icon = createCopyIcon(txt);
+        textElem.after(icon);
       } catch (error) {
         result.innerHTML = `<span style="color: red">Помилка: невірне число або синтаксис.</span>`;
       }
