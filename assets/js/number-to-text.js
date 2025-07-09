@@ -126,12 +126,38 @@ document.addEventListener("DOMContentLoaded", function () {
     let kopNum = parseInt(kop, 10);
     let kopWords = kop + " " + getForm(kop, ["копійка", "копійки", "копійок"]);
     let grnWords = getForm(grn, ["гривня", "гривні", "гривень"]);
-    return (
+    let text =
       (words.join(" ").replace(/\s+/g, " ").trim() || "нуль") +
       " " +
       grnWords +
-      (kopNum ? " " + kopWords : "")
-    );
+      (kopNum ? " " + kopWords : "");
+    // Capitalize first letter
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+
+  // Copy to clipboard functionality
+  function createCopyButton(textToCopy) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.title = "Скопіювати";
+    btn.className = "copy-btn";
+    btn.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/></svg>';
+    btn.onclick = function () {
+      navigator.clipboard.writeText(textToCopy).then(
+        function () {
+          btn.innerHTML = "✓";
+          setTimeout(() => {
+            btn.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/></svg>';
+          }, 1200);
+        },
+        function () {
+          btn.innerHTML = "!";
+        }
+      );
+    };
+    return btn;
   }
 
   if (form) {
@@ -140,7 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const input = document.getElementById("input-numbertotext").value.trim();
       try {
         const txt = numberToUkrText(input);
-        result.innerHTML = `<b>У тексті:</b> ${txt}`;
+        result.innerHTML =
+          `<span class="numbertotext-text" style="font-weight:600;font-size:1.6rem;color:#277cff">${txt}</span>`;
+        // Add copy button
+        const textElem = result.querySelector(".numbertotext-text");
+        const btn = createCopyButton(txt);
+        btn.style.marginLeft = "0.5em";
+        textElem.after(btn);
       } catch (error) {
         result.innerHTML = `<span style="color: red">Помилка: невірне число або синтаксис.</span>`;
       }
