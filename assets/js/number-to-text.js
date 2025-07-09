@@ -135,21 +135,24 @@ document.addEventListener("DOMContentLoaded", function () {
     return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
-  // Copy to clipboard functionality
+  // Copy to clipboard functionality, improved for inline look
   function createCopyButton(textToCopy) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.title = "Скопіювати";
     btn.className = "copy-btn";
+    btn.style.cssText =
+      "display:inline-flex;align-items:center;justify-content:center;background:transparent;border:none;padding:0 0 0 8px;cursor:pointer";
     btn.innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/></svg>';
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/><path d="M7 7h10v10H7z" fill="none"/></svg>';
     btn.onclick = function () {
       navigator.clipboard.writeText(textToCopy).then(
         function () {
-          btn.innerHTML = "✓";
+          btn.innerHTML =
+            '<svg width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#28c86f"/><path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
           setTimeout(() => {
             btn.innerHTML =
-              '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/></svg>';
+              '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="vertical-align:middle" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="#377dff"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="#377dff" stroke-width="2"/><path d="M7 7h10v10H7z" fill="none"/></svg>';
           }, 1200);
         },
         function () {
@@ -167,11 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         const txt = numberToUkrText(input);
         result.innerHTML =
-          `<span class="numbertotext-text" style="font-weight:600;font-size:1.6rem;color:#277cff">${txt}</span>`;
-        // Add copy button
+          `<span class="numbertotext-text" style="font-weight:600;font-size:1.6rem;color:#277cff;display:inline;">${txt}</span>`;
+        // Add copy button right after text, inline
         const textElem = result.querySelector(".numbertotext-text");
         const btn = createCopyButton(txt);
-        btn.style.marginLeft = "0.5em";
         textElem.after(btn);
       } catch (error) {
         result.innerHTML = `<span style="color: red">Помилка: невірне число або синтаксис.</span>`;
