@@ -25,7 +25,7 @@ seo:
     <ul>
       <li><strong>Грудей</strong> (у сантиметрах)</li>
       <li><strong>Талії</strong></li>
-      <li><strong>Стігів</strong></li>
+      <li><strong>Стегон</strong></li>
     </ul>
     <p>І отримуєте рекомендовані розміри одягу в різних системах:</p>
     <ul>
