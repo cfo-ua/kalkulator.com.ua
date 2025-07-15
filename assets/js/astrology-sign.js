@@ -57,6 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    result.innerHTML = `<b>Ваш знак зодіаку:</b> ${sign}`;
+    result.innerHTML = `<b>Знак зодіаку:</b> ${sign}`;
   });
 });
