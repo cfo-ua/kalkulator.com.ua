@@ -25,7 +25,7 @@ seo:
 
 <h1>Онлайн калькулятори українською 🇺🇦</h1>
 <p class="intro">Понад 100 онлайн калькуляторів для щоденних розрахунків. Всі інструменти українською мовою, зручно і без зайвих складнощів.</p>
-<p>Оберіть категорію та знайдіть потрібний калькулятор:</p>
+<h3>Оберіть категорію та знайдіть потрібний калькулятор:</h3>
 
 <div class="categories" id="categories">
   <a class="category-card" href="/categories/school/">
@@ -70,32 +70,43 @@ seo:
   </a>
 </div>
 
-<section class="why-calculators max-w-3xl mx-auto px-4 py-10 space-y-6 text-lg leading-relaxed">
-  <h2 class="text-3xl font-semibold text-center">Навіщо потрібні онлайн калькулятори?</h2>
+<h2>Для чого потрібні онлайн калькулятори?</h2>
 
-  <p class="text-center text-gray-700">
-    Онлайн-калькулятори на <a href="/" class="underline text-blue-600 font-medium">Kalkulator.com.ua</a> допомагають швидко вирішувати щоденні завдання — без формул і Excel.
-  </p>
+<p>Онлайн калькулятори на <a href="/">kalkulator.com.ua</a> створені для того, щоб допомогти вам швидко вирішувати практичні завдання з життя, роботи, навчання чи фінансів — без складних формул чи спеціальних знань.</p>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800">
-    <ul class="space-y-2 list-disc list-inside">
-      <li><a href="/calculators/fop-taxes.html" class="text-blue-700 underline">Розрахунок податків ФОП (3 група)</a></li>
-      <li><a href="/calculators/complex-interest.html" class="text-blue-700 underline">Складні відсотки та депозит</a></li>
-      <li><a href="/calculators/calories.html" class="text-blue-700 underline">Підрахунок калорій і калорійність страв</a></li>
-      <li><a href="/calculators/ip-address.html" class="text-blue-700 underline">Дізнатись свою IP-адресу</a></li>
-      <li><a href="/calculators/paint-wallpaper.html" class="text-blue-700 underline">Розрахунок шпалер і фарби</a></li>
-    </ul>
+<p>Ось деякі з найпопулярніших калькуляторів, які щодня допомагають тисячам користувачів:</p>
 
-    <ul class="space-y-2 list-disc list-inside">
-      <li><a href="/calculators/derivative.html" class="text-blue-700 underline">Калькулятор похідної</a></li>
-      <li><a href="/calculators/vat.html" class="text-blue-700 underline">Розрахунок ПДВ</a></li>
-      <li><a href="/calculators/unit-economics.html" class="text-blue-700 underline">Маржа і точка беззбитковості</a></li>
-      <li><a href="/calculators/currency.html" class="text-blue-700 underline">Конвертер валют: долар ↔ гривня</a></li>
-      <li><a href="/calculators/compound-calculator.html" class="text-blue-700 underline">Процентний калькулятор</a></li>
-    </ul>
-  </div>
+<ul>
+  <li>
+    <a href="/calculators/fop-taxes.html">Калькулятор податків ФОП</a> — допомагає підприємцям 1–3 груп розрахувати ЄСВ, єдиний податок і щомісячне фінансове навантаження.
+  </li>
+  <li>
+    <a href="/calculators/complex-interest.html">Калькулятор складних відсотків</a> — обчислює, як зростають ваші заощадження на депозиті завдяки реінвестуванню.
+  </li>
+  <li>
+    <a href="/calculators/calories.html">Калькулятор калорій</a> — підраховує добову норму калорій та витрати енергії під час спорту або щоденної активності.
+  </li>
+  <li>
+    <a href="/calculators/ip-address.html">Яка у мене IP-адреса?</a> — миттєво визначає вашу зовнішню IP-адресу та дає додаткову інформацію про підключення.
+  </li>
+  <li>
+    <a href="/calculators/paint-wallpaper.html">Калькулятор шпалер і фарби</a> — дозволяє точно розрахувати, скільки матеріалів потрібно для ремонту.
+  </li>
+  <li>
+    <a href="/calculators/derivative.html">Калькулятор похідної функції</a> — швидко знаходить похідну математичної функції онлайн.
+  </li>
+  <li>
+    <a href="/calculators/vat.html">Калькулятор ПДВ</a> — обчислює суму податку на додану вартість або ціну з/без ПДВ.
+  </li>
+  <li>
+    <a href="/calculators/unit-economics.html">Калькулятор юніт-економіки</a> — допомагає бізнесу зрозуміти прибутковість продажу товару чи послуги.
+  </li>
+  <li>
+    <a href="/calculators/currency.html">Конвертер валют</a> — зручно переводить гривню в долари, євро та інші валюти за актуальним курсом.
+  </li>
+  <li>
+    <a href="/calculators/salary-taxes.html">Калькулятор зарплати в Україні</a> — визначає «чисту» зарплату на руки, податки працівника та роботодавця.
+  </li>
+</ul>
 
-  <p class="text-center text-sm text-gray-500 mt-4">
-    Всі калькулятори — українською мовою, безкоштовні, працюють на мобільних пристроях. Актуальні для фінансів, будівництва, здоров’я, школи та бізнесу.
-  </p>
-</section>
+<p>Усі калькулятори доступні українською мовою, оптимізовані для мобільних пристроїв і не потребують реєстрації. Просто відкрийте — і отримайте необхідний вам розрахунок!</p>
