@@ -24,7 +24,7 @@ seo:
 ---
 
 <h1>Онлайн калькулятори українською 🇺🇦</h1>
-<p class="intro">Понад 100 онлайн калькуляторів для щоденних розрахунків. Всі інструменти українською мовою, зручно і без зайвих складнощів. <b>Оберіть категорію</b> та знайдіть потрібний калькулятор:</p>
+<p class="intro">Понад 100 онлайн калькуляторів для щоденних розрахунків. Всі інструменти українською мовою, зручно і без зайвих складнощів. <b>Оберіть категорію</b> та знайдіть потрібний вам калькулятор:</p>
 
 <div class="categories" id="categories">
   <a class="category-card" href="/categories/school/">
@@ -72,50 +72,51 @@ seo:
 <section class="seo-content">
   <h2>Для чого потрібні онлайн калькулятори?</h2>
 
-  <p>
+  <p style="margin-bottom: 1.5rem;">
     Онлайн калькулятори на
     <a href="/" style="color:#0071e3; text-decoration: underline;">kalkulator.com.ua</a>
     створені для того, щоб допомогти вам швидко вирішувати практичні завдання з життя, роботи, навчання чи фінансів — без складних формул чи спеціальних знань.
   </p>
 
-  <p>Ось деякі з найпопулярніших калькуляторів, які щодня допомагають тисячам користувачів:</p>
+  <p style="margin-bottom: 2rem;">
+    Ось деякі з найпопулярніших калькуляторів, які щодня допомагають тисячам користувачів:
+  </p>
 
-  <ul>
-    <li>
+  <ul style="margin-bottom: 2rem; padding-left: 1.2rem;">
+    <li style="margin-bottom: 1.5rem;">
       <a href="/calculators/fop-taxes.html" style="font-weight:600; color:#0a4d8c;">Калькулятор податків ФОП</a> — допомагає підприємцям 1–3 груп розрахувати ЄСВ, єдиний податок і щомісячне фінансове навантаження.
     </li>
-    <li>
-      <a href="/calculators/complex-interest.html" style="font-weight:600; color:#0a4d8c;">Калькулятор складних відсотків</a> — обчислює, як зростають ваші заощадження на депозиті завдяки реінвестуванню.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/food-calories.html" style="font-weight:600; color:#0a4d8c;">Калькулятор калорій у продуктах</a> — дізнайтеся, скільки калорій у ваших щоденних стравах та перекусах.
     </li>
-    <li>
-      <a href="/calculators/calories.html" style="font-weight:600; color:#0a4d8c;">Калькулятор калорій</a> — підраховує добову норму калорій та витрати енергії під час спорту або щоденної активності.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/dilution.html" style="font-weight:600; color:#0a4d8c;">Калькулятор розведення</a> — розраховує пропорції для змішування рідин з різною концентрацією (спирт, фарби тощо).
     </li>
-    <li>
-      <a href="/calculators/ip-address.html" style="font-weight:600; color:#0a4d8c;">Яка у мене IP-адреса?</a> — миттєво визначає вашу зовнішню IP-адресу та дає додаткову інформацію про підключення.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/derivative.html" style="font-weight:600; color:#0a4d8c;">Калькулятор похідної</a> — миттєво обчислює похідну математичної функції онлайн.
     </li>
-    <li>
-      <a href="/calculators/paint-wallpaper.html" style="font-weight:600; color:#0a4d8c;">Калькулятор шпалер і фарби</a> — дозволяє точно розрахувати, скільки матеріалів потрібно для ремонту.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/calorie-needs.html" style="font-weight:600; color:#0a4d8c;">Калькулятор добової потреби в калоріях</a> — визначає вашу базову норму калорій з урахуванням активності, ваги та цілей.
     </li>
-    <li>
-      <a href="/calculators/derivative.html" style="font-weight:600; color:#0a4d8c;">Калькулятор похідної функції</a> — швидко знаходить похідну математичної функції онлайн.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/compound-interest.html" style="font-weight:600; color:#0a4d8c;">Калькулятор складних відсотків</a> — показує, як накопичуються відсотки на депозиті завдяки реінвестуванню.
     </li>
-    <li>
-      <a href="/calculators/vat.html" style="font-weight:600; color:#0a4d8c;">Калькулятор ПДВ</a> — обчислює суму податку на додану вартість або ціну з/без ПДВ.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/vat-calculator.html" style="font-weight:600; color:#0a4d8c;">Калькулятор ПДВ</a> — обчислює суму податку або ціну товару з/без ПДВ.
     </li>
-    <li>
-      <a href="/calculators/unit-economics.html" style="font-weight:600; color:#0a4d8c;">Калькулятор юніт-економіки</a> — допомагає бізнесу зрозуміти прибутковість продажу товару чи послуги.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/calorie-burn.html" style="font-weight:600; color:#0a4d8c;">Калькулятор витрати калорій</a> — рахує, скільки калорій ви спалюєте під час спорту та щоденної активності.
     </li>
-    <li>
-      <a href="/calculators/currency.html" style="font-weight:600; color:#0a4d8c;">Конвертер валют</a> — зручно переводить гривню в долари, євро та інші валюти за актуальним курсом.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/mean.html" style="font-weight:600; color:#0a4d8c;">Калькулятор середнього значення</a> — швидко обчислює середнє арифметичне з ваших чисел.
     </li>
-    <li>
-      <a href="/calculators/salary-taxes.html" style="font-weight:600; color:#0a4d8c;">Калькулятор зарплати в Україні</a> — визначає «чисту» зарплату на руки, податки працівника та роботодавця.
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/age.html" style="font-weight:600; color:#0a4d8c;">Калькулятор віку</a> — визначає точний вік у роках, місяцях і днях на вказану дату.
     </li>
   </ul>
 
-  <p>
-    Усі калькулятори доступні українською мовою, оптимізовані для мобільних пристроїв і не потребують реєстрації.
-    Просто відкрийте — і отримайте необхідний вам розрахунок!
+  <p style="margin-bottom: 2rem;">
+    Усі калькулятори працюють українською мовою, оптимізовані для мобільних пристроїв та не потребують реєстрації.
+    Просто відкрийте потрібний — і отримаєте результат без зайвих дій.
   </p>
 </section>
-
