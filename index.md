@@ -70,21 +70,32 @@ seo:
   </a>
 </div>
 
-<hr>
-<h2>Для чого потрібні онлайн калькулятори?</h2>
-<p>Онлайн калькулятори на <strong>Kalkulator.com.ua</strong> створені для того, щоб швидко вирішувати щоденні завдання — без складних формул чи Excel.</p>
+<section class="why-calculators max-w-3xl mx-auto px-4 py-10 space-y-6 text-lg leading-relaxed">
+  <h2 class="text-3xl font-semibold text-center">Навіщо потрібні онлайн калькулятори?</h2>
 
-<ul>
-  <li>Розрахувати податки, чисту зарплату або ЄСВ — <a href="/calculators/salary-taxes.html">калькулятор податків</a></li>
-  <li>Планувати прибуток бізнесу, визначати маржу або точку беззбитковості — <a href="/calculators/break-even.html">калькулятор бізнесу</a></li>
-  <li>Обрати оптимальний депозит або дізнатись дохідність ОВДП — <a href="/calculators/deposit.html">фінансові калькулятори</a></li>
-  <li>Підрахувати калорії, ІМТ чи витрату енергії — <a href="/calculators/calorie-needs.html">здоров’я та фітнес</a></li>
-  <li>Конвертувати валюту, довжину, вагу, температуру — <a href="/calculators/conversion.html">універсальні конвертери</a></li>
-  <li>Визначити розмір одягу чи взуття — <a href="/calculators/clothing-size.html">розмірні таблиці</a></li>
-  <li>Розрахувати матеріали для ремонту: шпалери, плитку, штукатурку — <a href="/categories/construction/">будівельні калькулятори</a></li>
-  <li>Виконати математичні обчислення: похідні, квадратні рівняння, тригонометрія — <a href="/categories/school/">шкільні калькулятори</a></li>
-  <li>З’ясувати вік, знак зодіаку чи різницю між датами — <a href="/categories/time-date/">дата і час</a></li>
-  <li>Дізнатися свою IP-адресу чи перевірити швидкість інтернету — <a href="/categories/other/">технічні інструменти</a></li>
-</ul>
+  <p class="text-center text-gray-700">
+    Онлайн-калькулятори на <a href="/" class="underline text-blue-600 font-medium">Kalkulator.com.ua</a> допомагають швидко вирішувати щоденні завдання — без формул і Excel.
+  </p>
 
-<p>Всі калькулятори українською мовою, безплатні, адаптовані під мобільні пристрої та щоденні потреби українців — у фінансах, побуті, навчанні й бізнесі.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800">
+    <ul class="space-y-2 list-disc list-inside">
+      <li><a href="/calculators/fop-taxes.html" class="text-blue-700 underline">Розрахунок податків ФОП (3 група)</a></li>
+      <li><a href="/calculators/complex-interest.html" class="text-blue-700 underline">Складні відсотки та депозит</a></li>
+      <li><a href="/calculators/calories.html" class="text-blue-700 underline">Підрахунок калорій і калорійність страв</a></li>
+      <li><a href="/calculators/ip-address.html" class="text-blue-700 underline">Дізнатись свою IP-адресу</a></li>
+      <li><a href="/calculators/paint-wallpaper.html" class="text-blue-700 underline">Розрахунок шпалер і фарби</a></li>
+    </ul>
+
+    <ul class="space-y-2 list-disc list-inside">
+      <li><a href="/calculators/derivative.html" class="text-blue-700 underline">Калькулятор похідної</a></li>
+      <li><a href="/calculators/vat.html" class="text-blue-700 underline">Розрахунок ПДВ</a></li>
+      <li><a href="/calculators/unit-economics.html" class="text-blue-700 underline">Маржа і точка беззбитковості</a></li>
+      <li><a href="/calculators/currency.html" class="text-blue-700 underline">Конвертер валют: долар ↔ гривня</a></li>
+      <li><a href="/calculators/compound-calculator.html" class="text-blue-700 underline">Процентний калькулятор</a></li>
+    </ul>
+  </div>
+
+  <p class="text-center text-sm text-gray-500 mt-4">
+    Всі калькулятори — українською мовою, безкоштовні, працюють на мобільних пристроях. Актуальні для фінансів, будівництва, здоров’я, школи та бізнесу.
+  </p>
+</section>
