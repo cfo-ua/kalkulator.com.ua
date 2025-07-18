@@ -49,7 +49,17 @@
     {%- assign related_calcs = "" | split: "" -%}
     {%- for calc in related_by_cat -%}
       {%- if calc.url != page.url -%}
-        {%- assign related_calcs = related_calcs | push: calc -%}
+        {%- if lang == 'en' -%}
+          {%- if calc.url contains '/en/' -%}
+            {%- assign related_calcs = related_calcs | push: calc -%}
+          {%- endif -%}
+        {%- else -%}
+          {%- unless calc.url contains '/en/' -%}
+            {%- if calc.url contains '/calculators/' -%}
+              {%- assign related_calcs = related_calcs | push: calc -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
     {%- assign related_calcs = related_calcs | slice: 0, 5 -%}
