@@ -37,6 +37,7 @@ faq:
       <label for="number1">Number:</label>
       <input type="number" id="number1" step="0.01" placeholder="Enter number">
     </div>
+    <button type="button" id="calc-percent-of">Calculate</button>
     <div class="result" id="result1"></div>
   </div>
 
@@ -50,6 +51,7 @@ faq:
       <label for="whole">Whole (Y):</label>
       <input type="number" id="whole" step="0.01" placeholder="Enter whole">
     </div>
+    <button type="button" id="calc-what-percent">Calculate</button>
     <div class="result" id="result2"></div>
   </div>
 
@@ -63,6 +65,7 @@ faq:
       <label for="newValue">New Value:</label>
       <input type="number" id="newValue" step="0.01" placeholder="Enter new value">
     </div>
+    <button type="button" id="calc-percent-change">Calculate</button>
     <div class="result" id="result3"></div>
   </div>
 </form>
