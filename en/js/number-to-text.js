@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("numbertotext-form");
   const input = document.getElementById("input-numbertotext");
   const result = document.getElementById("numbertotext-result");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    convertNumberToText();
-  });
-
-  // Also convert on input change for better UX
+  // Convert on input change for real-time UX
   input.addEventListener("input", function () {
     if (this.value.trim()) {
       convertNumberToText();
+    } else {
+      result.innerHTML = '';
     }
   });
 
