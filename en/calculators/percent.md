@@ -26,6 +26,18 @@ faq:
     answer: "Discount amount = Original Price × (Discount Percentage ÷ 100). Final price = Original Price - Discount Amount."
 ---
 
+<style>
+.calc-section {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+}
+.calc-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+</style>
+
 <form id="percent-calculator" autocomplete="off">
   <div class="calc-section">
     <h3>What is X% of Y?</h3>
@@ -37,7 +49,6 @@ faq:
       <label for="number1">Number:</label>
       <input type="number" id="number1" step="0.01" placeholder="Enter number">
     </div>
-    <button type="button" id="calc-percent-of">Calculate</button>
     <div class="result" id="result1"></div>
   </div>
 
@@ -51,7 +62,6 @@ faq:
       <label for="whole">Whole (Y):</label>
       <input type="number" id="whole" step="0.01" placeholder="Enter whole">
     </div>
-    <button type="button" id="calc-what-percent">Calculate</button>
     <div class="result" id="result2"></div>
   </div>
 
@@ -65,7 +75,6 @@ faq:
       <label for="newValue">New Value:</label>
       <input type="number" id="newValue" step="0.01" placeholder="Enter new value">
     </div>
-    <button type="button" id="calc-percent-change">Calculate</button>
     <div class="result" id="result3"></div>
   </div>
 </form>
