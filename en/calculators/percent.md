@@ -16,7 +16,7 @@ seo:
     <h2>Percentage Calculator</h2>
     <p>Online percentage calculator helps you calculate percentages, percentage changes, discounts, tips and other percentage-based calculations. Enter your values and get instant results.</p>
 scripts:
-  - /assets/js/percent.js
+  - /en/js/percent.js
 faq:
   - question: How to calculate percentage of a number?
     answer: "To calculate percentage of a number, multiply the number by the percentage and divide by 100. For example, 20% of 150 = (150 × 20) ÷ 100 = 30."

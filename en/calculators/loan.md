@@ -16,7 +16,7 @@ seo:
     <h2>Loan Calculator</h2>
     <p>Calculate your loan payments with our easy-to-use loan calculator. Enter your loan amount, interest rate, and loan term to see your monthly payment and total interest cost.</p>
 scripts:
-  - /assets/js/loan.js
+  - /en/js/loan.js
 faq:
   - question: How is monthly payment calculated?
     answer: "Monthly payment is calculated using the formula: M = P * [r(1+r)^n] / [(1+r)^n - 1], where P is principal, r is monthly interest rate, and n is number of payments."
