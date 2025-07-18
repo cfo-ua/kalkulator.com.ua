@@ -27,7 +27,19 @@
       {% endif %}
     </span>
     <div class="category-calcs">
-      {%- assign calcs = site.pages | where_exp: "item", "item.categories contains page.category_id" -%}
+      {%- assign all_calcs = site.pages | where_exp: "item", "item.categories contains page.category_id" -%}
+      {%- assign calcs = '' | split: '' -%}
+      {%- for calc in all_calcs -%}
+        {%- if lang == 'en' -%}
+          {%- if calc.url contains '/en/' -%}
+            {%- assign calcs = calcs | push: calc -%}
+          {%- endif -%}
+        {%- else -%}
+          {%- unless calc.url contains '/en/' -%}
+            {%- assign calcs = calcs | push: calc -%}
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
       {% if calcs.size > 0 %}
         {% for calc in calcs %}
           <a class="calc-link-card" href="{{ calc.url }}">
