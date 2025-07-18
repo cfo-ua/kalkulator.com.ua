@@ -1,5 +1,9 @@
+{% assign lang = 'uk' %}
+{% if page.url contains '/en/' %}
+  {% assign lang = 'en' %}
+{% endif %}
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="{{ lang }}">
 <head>
   {% include seo.html %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -15,7 +19,11 @@
       {% if page.seo and page.seo.intro %}
         {{ page.seo.intro }}
       {% else %}
-        Обирайте потрібний калькулятор: швидко, зручно, онлайн.
+        {% if lang == 'en' %}
+          Choose the calculator you need: fast, convenient, online.
+        {% else %}
+          Обирайте потрібний калькулятор: швидко, зручно, онлайн.
+        {% endif %}
       {% endif %}
     </span>
     <div class="category-calcs">
@@ -29,8 +37,13 @@
         {% endfor %}
       {% else %}
         <div class="page-404">
-          <p>Немає калькуляторів у цій категорії.</p>
-          <a href="/" class="btn-home">На головну</a>
+          {% if lang == 'en' %}
+            <p>No calculators in this category.</p>
+            <a href="/en/" class="btn-home">Home</a>
+          {% else %}
+            <p>Немає калькуляторів у цій категорії.</p>
+            <a href="/" class="btn-home">На головну</a>
+          {% endif %}
         </div>
       {% endif %}
     </div>
