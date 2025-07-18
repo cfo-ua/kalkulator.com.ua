@@ -10,8 +10,8 @@ collections:
 markdown: kramdown
 
 # Enable Jekyll plugins on GitHub Pages (autogenerates sitemap.xml and robots.txt)
-# plugins:
-#   - jekyll-sitemap
+plugins:
+  - jekyll-sitemap
 
 # Set timezone for proper date handling
 timezone: Europe/Kiev
