@@ -23,7 +23,7 @@ seo:
     - IP address checker
 ---
 
-<h1>Online Calculators 🇺🇸</h1>
+<h1>Online Calculators</h1>
 <p class="intro">Over 100 online calculators for daily calculations. All tools are simple and convenient. <b>Choose a category</b> and find the calculator you need:</p>
 
 <div class="categories" id="categories">
