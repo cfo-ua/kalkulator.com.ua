@@ -71,9 +71,8 @@ faq:
     answer: "This converter outputs in English. Different language versions may be available in other sections of the site."
 ---
 
-<form id="numbertotext-form" autocomplete="off">
+<div id="numbertotext-form">
   <label for="input-numbertotext">Enter a number:</label>
   <input type="text" id="input-numbertotext" placeholder="e.g., 1234.56" required>
-  <button type="submit">Convert to Text</button>
-</form>
+</div>
 <div id="numbertotext-result" class="result"></div>
