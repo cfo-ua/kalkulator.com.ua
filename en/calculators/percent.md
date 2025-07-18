@@ -26,6 +26,18 @@ faq:
     answer: "Discount amount = Original Price × (Discount Percentage ÷ 100). Final price = Original Price - Discount Amount."
 ---
 
+<style>
+.calc-section {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+}
+.calc-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+</style>
+
 <form id="percent-calculator" autocomplete="off">
   <div class="calc-section">
     <h3>What is X% of Y?</h3>

@@ -12,3 +12,10 @@ seo:
   <p>На жаль, такої сторінки не існує.</p>
   <a href="/" class="btn-home">На головну</a>
 </main>
+
+<script>
+// Redirect to English 404 page if URL contains /en/
+if (window.location.pathname.includes('/en/')) {
+  window.location.replace('/en/404.html');
+}
+</script>
