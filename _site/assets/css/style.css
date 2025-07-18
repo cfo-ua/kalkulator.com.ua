@@ -131,6 +131,30 @@ header {
   outline: none;
 }
 
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.lang-switcher a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+  background: var(--card-bg);
+}
+
+.lang-switcher a:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 @media (max-width: 700px) {
   .nav-links {
     display: none;
@@ -155,6 +179,11 @@ header {
   }
   .menu-btn {
     display: block;
+  }
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 1rem;
+    justify-content: center;
   }
 }
 

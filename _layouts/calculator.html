@@ -1,5 +1,9 @@
+{% assign lang = 'uk' %}
+{% if page.url contains '/en/' %}
+  {% assign lang = 'en' %}
+{% endif %}
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="{{ lang }}">
 <head>
   {% include seo.html %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -30,7 +34,7 @@
     </section>
     {% if page.faq %}
     <section class="faq">
-      <h2>Поширені питання</h2>
+      <h2>{% if lang == 'en' %}Frequently Asked Questions{% else %}Поширені питання{% endif %}</h2>
       {% for q in page.faq %}
       <details>
         <summary>{{ q.question }}</summary>
@@ -51,7 +55,7 @@
     {%- assign related_calcs = related_calcs | slice: 0, 5 -%}
     {% if related_calcs.size > 0 %}
     <section class="related">
-      <h2>Схожі калькулятори</h2>
+      <h2>{% if lang == 'en' %}Similar Calculators{% else %}Схожі калькулятори{% endif %}</h2>
       <ul>
         {% for calc in related_calcs %}
         <li><a href="{{ calc.url }}">{{ calc.title }}</a></li>

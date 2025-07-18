@@ -1,0 +1,16 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Temporary files
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/
+
+# Local environment files
+.env
+.env.local
