@@ -29,15 +29,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const weight = +form['burn-weight'].value;
+    const weightInput = +form['burn-weight'].value;
+    const weightUnit = form['burn-weight-unit'].value;
     const min = +form['burn-min'].value;
     const met = +form['burn-activity'].value;
-    if (weight < 30 || min <= 0 || met <= 0) {
+    
+    // Convert weight to kg if necessary
+    const weight = weightUnit === 'lbs' ? weightInput * 0.453592 : weightInput;
+    
+    // Validation
+    const maxWeight = weightUnit === 'lbs' ? 700 : 300;
+    if (weightInput < 30 || weightInput > maxWeight || min <= 0 || met <= 0) {
       result.textContent = "Введіть коректні дані.";
       return;
     }
     const hours = min / 60;
     const calories = met * weight * hours;
-    result.innerHTML = `<b>Витрачено:</b> <span style="color:#157aff;">${calories.toFixed(0)} ккал</span>`;
+    
+    const weightDisplay = weightUnit === 'lbs' ? `${weightInput} фунтів (${weight.toFixed(1)} кг)` : `${weightInput} кг`;
+    result.innerHTML = `
+      <p><strong>Вага:</strong> ${weightDisplay}</p>
+      <p><strong>Витрачено:</strong> <span style="color:#157aff;">${calories.toFixed(0)} ккал</span></p>
+    `;
   });
 });

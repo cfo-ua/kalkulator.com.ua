@@ -45,8 +45,14 @@ faq:
 ---
 
 <form id="calorie-burn-form" autocomplete="off">
-  <label>Вага (кг):
-    <input type="number" id="burn-weight" min="30" max="300" value="70" required>
+  <label>Вага:
+    <div style="display: flex; gap: 10px;">
+      <input type="number" id="burn-weight" min="30" max="700" step="0.1" placeholder="напр., 70" required style="flex: 1;">
+      <select id="burn-weight-unit" required style="width: 80px;">
+        <option value="kg">кг</option>
+        <option value="lbs">фунти</option>
+      </select>
+    </div>
   </label>
   <label>Тривалість (хвилин):
     <input type="number" id="burn-min" min="1" max="600" value="60" required>
