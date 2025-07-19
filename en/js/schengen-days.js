@@ -9,48 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     checkDateInput.value = new Date().toISOString().split('T')[0];
   }
 
-  const createTripRow = () => {
-    const row = document.createElement("div");
-    row.className = "trip-row";
-    row.style.cssText = `
-      display: flex; 
-      gap: 10px; 
-      margin-bottom: 10px; 
-      align-items: center; 
-      padding: 10px; 
-      background: #f8f9fa; 
-      border-radius: 6px;
-    `;
-    
-    row.innerHTML = `
-      <label style="flex: 1;">
-        Entry Date:
-        <input type="date" class="date-in" style="width: 100%; margin-top: 5px;">
-      </label>
-      <label style="flex: 1;">
-        Exit Date:
-        <input type="date" class="date-out" style="width: 100%; margin-top: 5px;">
-      </label>
-      <button type="button" class="remove-trip" style="background: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; height: fit-content;">✕</button>
-    `;
-    
-    const removeButton = row.querySelector(".remove-trip");
-    removeButton.onclick = () => {
-      row.remove();
-      calculateSchengenStatus();
-    };
-    
-    // Add change listeners to the inputs
-    row.querySelector(".date-in").addEventListener("change", calculateSchengenStatus);
-    row.querySelector(".date-out").addEventListener("change", calculateSchengenStatus);
-    
-    tripsContainer.appendChild(row);
-    return row;
-  };
-
-  addTripButton.onclick = () => createTripRow();
-  createTripRow(); // initialize with one row
-
   const parseDate = str => new Date(str + "T00:00:00");
 
   const getTripDays = () => {
@@ -198,7 +156,47 @@ document.addEventListener("DOMContentLoaded", function () {
     resultBlock.innerHTML = resultHTML;
   };
 
+  const createTripRow = () => {
+    const row = document.createElement("div");
+    row.className = "trip-row";
+    row.style.cssText = `
+      display: flex; 
+      gap: 10px; 
+      margin-bottom: 10px; 
+      align-items: center; 
+      padding: 10px; 
+      background: #f8f9fa; 
+      border-radius: 6px;
+    `;
+    
+    row.innerHTML = `
+      <label style="flex: 1;">
+        Entry Date:
+        <input type="date" class="date-in" style="width: 100%; margin-top: 5px;">
+      </label>
+      <label style="flex: 1;">
+        Exit Date:
+        <input type="date" class="date-out" style="width: 100%; margin-top: 5px;">
+      </label>
+      <button type="button" class="remove-trip" style="background: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; height: fit-content;">✕</button>
+    `;
+    
+    const removeButton = row.querySelector(".remove-trip");
+    removeButton.onclick = () => {
+      row.remove();
+      calculateSchengenStatus();
+    };
+    
+    // Add change listeners to the inputs
+    row.querySelector(".date-in").addEventListener("change", calculateSchengenStatus);
+    row.querySelector(".date-out").addEventListener("change", calculateSchengenStatus);
+    
+    tripsContainer.appendChild(row);
+    return row;
+  };
+
   // Add event listeners
+  addTripButton.onclick = () => createTripRow();
   checkDateInput.addEventListener("change", calculateSchengenStatus);
 
   // Style the add button
@@ -211,6 +209,9 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor: pointer; 
     margin: 10px 0;
   `;
+
+  // Initialize with one row
+  createTripRow();
 
   // Initial calculation
   calculateSchengenStatus();
