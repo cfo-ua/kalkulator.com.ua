@@ -179,7 +179,13 @@ scripts:
   <div class="form-row">
     <label>
       Body Weight:
-      <input type="number" id="burn-weight" name="burn-weight" min="30" max="300" step="0.1" placeholder="e.g., 70 kg or 154 lbs" required>
+      <div style="display: flex; gap: 10px;">
+        <input type="number" id="burn-weight" name="burn-weight" min="30" max="700" step="0.1" placeholder="e.g., 70" required style="flex: 1;">
+        <select id="burn-weight-unit" name="burn-weight-unit" required style="width: 80px;">
+          <option value="kg">kg</option>
+          <option value="lbs">lbs</option>
+        </select>
+      </div>
     </label>
   </div>
   

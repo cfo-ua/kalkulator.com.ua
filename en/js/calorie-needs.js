@@ -8,13 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const gender = form.gender.value;
     const age = +form.age.value;
     const height = +form.height.value;
-    const weight = +form.weight.value;
+    const weightInput = +form.weight.value;
+    const weightUnit = form['weight-unit'].value;
     const activity = +form.activity.value;
     const goal = form.goal.value;
 
+    // Convert weight to kg if necessary
+    const weight = weightUnit === 'lbs' ? weightInput * 0.453592 : weightInput;
+
     // Validation
-    if (!gender || age <= 0 || height <= 0 || weight <= 0 || !activity) {
+    const maxWeight = weightUnit === 'lbs' ? 700 : 300;
+    if (!gender || age <= 0 || height <= 0 || weightInput <= 0 || !activity) {
       result.innerHTML = '<p style="color:red;">Please fill in all fields with valid values.</p>';
+      return;
+    }
+    if (weightInput < 30 || weightInput > maxWeight) {
+      result.innerHTML = `<p style="color:red;">Please enter a valid weight (30-${maxWeight} ${weightUnit}).</p>`;
       return;
     }
 
@@ -67,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h3 style="color:#157aff;margin-top:0;">Your Daily Calorie Needs</h3>
         
         <div style="background:white;padding:15px;border-radius:6px;margin:15px 0;">
+          <p><strong>Weight:</strong> ${weightInput} ${weightUnit} ${weightUnit === 'lbs' ? `(${weight.toFixed(1)} kg)` : ''}</p>
           <p><strong>BMR (Basal Metabolic Rate):</strong> <span style="color:#157aff;">${kcal(bmr)}</span></p>
           <p><strong>TDEE (Total Daily Energy Expenditure):</strong> <span style="color:#157aff;">${kcal(tdee)}</span></p>
           <p><strong>Target Calories (${goalDesc}):</strong> <span style="color:#28a745;font-size:1.2em;font-weight:bold;">${kcal(calories)}</span></p>`;
