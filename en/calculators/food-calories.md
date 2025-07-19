@@ -203,4 +203,19 @@ seo:
     </ul>
 
     <p><strong>Note:</strong> Nutritional values are based on USDA food composition data and popular brand information. Actual values may vary slightly depending on preparation methods, brand variations, and natural variations in fresh foods. Use this calculator as a guide for meal planning and dietary awareness.</p>
+scripts:
+  - /en/js/food-calories.js
 ---
+
+<div class="calculator-section">
+  <div id="food-rows">
+    <!-- Food rows will be added dynamically by JavaScript -->
+  </div>
+  
+  <div class="calculator-controls">
+    <button type="button" id="add-food-btn" class="secondary-btn">+ Add Another Ingredient</button>
+    <button type="button" id="calculate-food-btn" class="primary-btn">Calculate Nutrition</button>
+  </div>
+</div>
+
+<div id="food-result" class="result"></div>

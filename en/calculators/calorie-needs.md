@@ -83,4 +83,70 @@ seo:
     </ul>
 
     <p><strong>Note:</strong> This calculator provides estimates based on scientific formulas. Individual metabolism can vary. Consult healthcare professionals for personalized medical advice, especially if you have health conditions or are considering significant dietary changes.</p>
+scripts:
+  - /en/js/calorie-needs.js
 ---
+
+<form id="calorie-needs-form" autocomplete="off">
+  <div class="form-row">
+    <label>
+      Gender:
+      <select name="gender" required>
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Age:
+      <input type="number" name="age" min="15" max="100" placeholder="e.g., 30" required>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Height (cm):
+      <input type="number" name="height" min="120" max="250" placeholder="e.g., 175" required>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Weight (kg):
+      <input type="number" name="weight" min="30" max="300" step="0.1" placeholder="e.g., 70" required>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Activity Level:
+      <select name="activity" required>
+        <option value="">Select activity level</option>
+        <option value="1.2">Sedentary (desk job, no exercise)</option>
+        <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+        <option value="1.55">Moderately active (exercise 3-5 days/week)</option>
+        <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+        <option value="1.9">Extremely active (physical job + exercise)</option>
+      </select>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Goal:
+      <select name="goal" required>
+        <option value="">Select your goal</option>
+        <option value="loss">Weight Loss (create calorie deficit)</option>
+        <option value="maintain">Maintain Weight</option>
+        <option value="gain">Muscle Gain (create calorie surplus)</option>
+      </select>
+    </label>
+  </div>
+  
+  <button type="submit">Calculate Daily Calorie Needs</button>
+</form>
+
+<div id="calorie-needs-result" class="result"></div>

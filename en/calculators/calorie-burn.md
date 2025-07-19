@@ -171,4 +171,36 @@ seo:
     </ul>
 
     <p><strong>Note:</strong> Calorie burn estimates are based on average MET values and may vary between individuals. Factors like fitness level, body composition, and exercise efficiency can affect actual calorie expenditure. Use these estimates as a general guide and adjust based on your personal results and goals.</p>
+scripts:
+  - /en/js/calorie-burn.js
 ---
+
+<form id="calorie-burn-form" autocomplete="off">
+  <div class="form-row">
+    <label>
+      Body Weight:
+      <input type="number" id="burn-weight" name="burn-weight" min="30" max="300" step="0.1" placeholder="e.g., 70 kg or 154 lbs" required>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Activity:
+      <select id="burn-activity" name="burn-activity" required>
+        <option value="">Select an activity</option>
+        <!-- Options will be populated by JavaScript -->
+      </select>
+    </label>
+  </div>
+  
+  <div class="form-row">
+    <label>
+      Duration (minutes):
+      <input type="number" id="burn-min" name="burn-min" min="1" max="1440" placeholder="e.g., 30" required>
+    </label>
+  </div>
+  
+  <button type="submit">Calculate Calories Burned</button>
+</form>
+
+<div id="calorie-burn-result" class="result"></div>

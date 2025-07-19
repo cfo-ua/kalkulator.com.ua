@@ -216,4 +216,18 @@ seo:
     </ul>
 
     <p><strong>Note:</strong> Weight estimates are based on USDA standard references and industry averages. Actual weights can vary significantly based on variety, growing conditions, seasonality, and individual size variations. Use these estimates as a general guide for planning purposes, and weigh items when precise measurements are needed for nutrition tracking or recipe development.</p>
+scripts:
+  - /en/js/food-weight-by-quantity.js
 ---
+
+<div class="calculator-section">
+  <div id="weight-rows">
+    <!-- Weight calculation rows will be added dynamically by JavaScript -->
+  </div>
+  
+  <div class="calculator-controls">
+    <button type="button" id="weight-add-row" class="secondary-btn">+ Add Another Food</button>
+  </div>
+</div>
+
+<div id="food-weight-result" class="result"></div>
