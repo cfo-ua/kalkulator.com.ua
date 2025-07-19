@@ -1,7 +1,17 @@
+// Food Weight by Quantity Calculator — English Version with US/UK Food Database
+// Enhanced UX with better autocomplete, validation, and comprehensive weight calculations
+
 window.FOOD_DB = [];
-fetch('/assets/data/food-db.json')
+fetch('/assets/data/food-db-en.json')
   .then(resp => resp.json())
-  .then(data => { window.FOOD_DB = data; });
+  .then(data => { 
+    window.FOOD_DB = data;
+    initializeAutocomplete();
+  })
+  .catch(err => {
+    console.error('Failed to load food database:', err);
+    window.FOOD_DB = [];
+  });
 
 function createWeightRow(idx) {
   return `
@@ -13,134 +23,318 @@ function createWeightRow(idx) {
             class="food-name" 
             id="weight-name-${idx}" 
             name="weight-name-${idx}" 
-            placeholder="Назва продукту" 
+            placeholder="Enter food name (e.g., apple, banana)" 
             autocomplete="off"
           >
+          <div class="autocomplete-suggestions" id="weight-suggestions-${idx}"></div>
         </div>
         <input 
           type="number" 
           class="food-qty" 
           id="weight-qty-${idx}" 
           name="weight-qty-${idx}" 
-          min="0" 
+          min="1" 
           step="1" 
           value="1"
+          placeholder="Quantity"
         >
-        <span class="food-weight">—</span>
-        <button type="button" class="food-remove" aria-label="Видалити"></button>
+        <span class="food-weight" id="weight-result-${idx}">—</span>
+        <button type="button" class="remove-food-btn" onclick="removeWeightRow(${idx})" title="Remove this item">
+          ✕
+        </button>
       </div>
     </div>
   `;
+}
+
+let weightRowCount = 0;
+
+function addWeightRow() {
+  weightRowCount++;
+  const container = document.getElementById('weight-rows');
+  if (!container) return;
+  
+  const newRow = document.createElement('div');
+  newRow.innerHTML = createWeightRow(weightRowCount);
+  container.appendChild(newRow.firstElementChild);
+  
+  // Initialize autocomplete and event listeners for the new row
+  initializeRowWeightAutocomplete(weightRowCount);
+  addRowEventListeners(weightRowCount);
+}
+
+function removeWeightRow(idx) {
+  const row = document.querySelector(`[data-row="${idx}"]`);
+  if (row) {
+    row.closest('.food-row-card').remove();
+    recalculateAllWeights();
+  }
+}
+
+function addRowEventListeners(rowIdx) {
+  const nameInput = document.getElementById(`weight-name-${rowIdx}`);
+  const qtyInput = document.getElementById(`weight-qty-${rowIdx}`);
+  
+  if (nameInput) {
+    nameInput.addEventListener('input', () => recalculateRowWeight(rowIdx));
+    nameInput.addEventListener('change', () => recalculateRowWeight(rowIdx));
+  }
+  
+  if (qtyInput) {
+    qtyInput.addEventListener('input', () => recalculateRowWeight(rowIdx));
+    qtyInput.addEventListener('change', () => recalculateRowWeight(rowIdx));
+  }
+}
+
+function initializeAutocomplete() {
+  // Initialize autocomplete for existing rows
+  document.querySelectorAll('.food-name').forEach((input, index) => {
+    const rowIdx = input.id.split('-')[2];
+    if (rowIdx) {
+      initializeRowWeightAutocomplete(parseInt(rowIdx));
+    }
+  });
+}
+
+function initializeRowWeightAutocomplete(rowIdx) {
+  const input = document.getElementById(`weight-name-${rowIdx}`);
+  const suggestionsDiv = document.getElementById(`weight-suggestions-${rowIdx}`);
+  
+  if (!input || !suggestionsDiv) return;
+
+  input.addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase().trim();
+    
+    if (query.length < 2) {
+      suggestionsDiv.style.display = 'none';
+      return;
+    }
+
+    // Filter foods that have weight_per_piece data
+    const matches = window.FOOD_DB.filter(food => 
+      food.name.toLowerCase().includes(query) && 
+      food.weight_per_piece && 
+      food.weight_per_piece > 0
+    ).slice(0, 8);
+
+    if (matches.length === 0) {
+      suggestionsDiv.style.display = 'none';
+      return;
+    }
+
+    const suggestionsHTML = matches.map(food => `
+      <div class="suggestion-item" onclick="selectWeightFood(${rowIdx}, '${food.name.replace(/'/g, "\\'")}')">
+        <strong>${food.name}</strong>
+        <span class="suggestion-nutrition">~${food.weight_per_piece}g each</span>
+      </div>
+    `).join('');
+
+    suggestionsDiv.innerHTML = suggestionsHTML;
+    suggestionsDiv.style.display = 'block';
+  });
+
+  // Hide suggestions when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!input.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+      suggestionsDiv.style.display = 'none';
+    }
+  });
+}
+
+function selectWeightFood(rowIdx, foodName) {
+  const input = document.getElementById(`weight-name-${rowIdx}`);
+  const suggestionsDiv = document.getElementById(`weight-suggestions-${rowIdx}`);
+  
+  if (input) {
+    input.value = foodName;
+    input.dataset.selectedFood = foodName;
+  }
+  
+  if (suggestionsDiv) {
+    suggestionsDiv.style.display = 'none';
+  }
+  
+  recalculateRowWeight(rowIdx);
 }
 
 function getFoodByName(name) {
+  if (!name || !window.FOOD_DB) return null;
+  
   name = name.trim().toLowerCase();
   return window.FOOD_DB.find(f =>
-    (f.name && f.name.toLowerCase() === name)
+    f.name && f.name.toLowerCase() === name && f.weight_per_piece
   );
 }
 
-function recalcAllWeights() {
-  let totalWeight = 0;
-  document.querySelectorAll('.food-row-grid').forEach(row => {
-    const name = row.querySelector('.food-name').value.trim();
-    const qty = parseInt(row.querySelector('.food-qty').value) || 0;
-    const weightSpan = row.querySelector('.food-weight');
-    let food = getFoodByName(name);
-    if (!food || !food.weight_per_piece) {
-      weightSpan.textContent = '—';
-      return;
-    }
-    const weight = food.weight_per_piece * qty;
-    weightSpan.textContent = `${weight} г`;
-    totalWeight += weight;
-  });
+function recalculateRowWeight(rowIdx) {
+  const nameInput = document.getElementById(`weight-name-${rowIdx}`);
+  const qtyInput = document.getElementById(`weight-qty-${rowIdx}`);
+  const weightSpan = document.getElementById(`weight-result-${rowIdx}`);
+  
+  if (!nameInput || !qtyInput || !weightSpan) return;
+  
+  const name = nameInput.value.trim();
+  const qty = parseInt(qtyInput.value) || 0;
+  
+  if (!name || qty <= 0) {
+    weightSpan.textContent = '—';
+    weightSpan.style.color = '#666';
+    recalculateAllWeights();
+    return;
+  }
+  
+  const food = getFoodByName(name);
+  if (!food || !food.weight_per_piece) {
+    weightSpan.textContent = 'Not found';
+    weightSpan.style.color = '#dc3545';
+    recalculateAllWeights();
+    return;
+  }
+  
+  const totalWeight = food.weight_per_piece * qty;
+  const weightOz = (totalWeight / 28.35).toFixed(1);
+  const weightLbs = (totalWeight / 453.6).toFixed(2);
+  
+  weightSpan.innerHTML = `<strong>${totalWeight}g</strong><br><small>(${weightOz} oz, ${weightLbs} lbs)</small>`;
+  weightSpan.style.color = '#28a745';
+  
+  recalculateAllWeights();
+}
 
-  document.getElementById('food-weight-result').innerHTML = `
-    <div class="result-card">
-      <div class="result-main">
-        Загальна вага: <span>${totalWeight} г</span>
+function recalculateAllWeights() {
+  let totalWeight = 0;
+  let validItems = 0;
+  const itemsBreakdown = [];
+  
+  document.querySelectorAll('.food-row-grid').forEach(row => {
+    const nameInput = row.querySelector('.food-name');
+    const qtyInput = row.querySelector('.food-qty');
+    
+    if (!nameInput || !qtyInput) return;
+    
+    const name = nameInput.value.trim();
+    const qty = parseInt(qtyInput.value) || 0;
+    
+    if (!name || qty <= 0) return;
+    
+    const food = getFoodByName(name);
+    if (!food || !food.weight_per_piece) return;
+    
+    const itemWeight = food.weight_per_piece * qty;
+    totalWeight += itemWeight;
+    validItems++;
+    
+    itemsBreakdown.push({
+      name: food.name,
+      quantity: qty,
+      unitWeight: food.weight_per_piece,
+      totalWeight: itemWeight
+    });
+  });
+  
+  const resultDiv = document.getElementById('food-weight-result');
+  if (!resultDiv) return;
+  
+  if (validItems === 0) {
+    resultDiv.innerHTML = '<p style="color:#666;">Add some food items to calculate total weight.</p>';
+    return;
+  }
+  
+  const totalOz = (totalWeight / 28.35).toFixed(1);
+  const totalLbs = (totalWeight / 453.6).toFixed(2);
+  
+  const breakdownHTML = itemsBreakdown.map(item => `
+    <tr>
+      <td><strong>${item.name}</strong></td>
+      <td style="text-align:center;">${item.quantity}</td>
+      <td style="text-align:center;">${item.unitWeight}g</td>
+      <td style="text-align:center;"><strong>${item.totalWeight}g</strong></td>
+      <td style="text-align:center;">${(item.totalWeight / 28.35).toFixed(1)} oz</td>
+    </tr>
+  `).join('');
+  
+  resultDiv.innerHTML = `
+    <div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;">
+      <h3 style="color:#157aff;margin-top:0;">Weight Calculation Results</h3>
+      
+      <div style="background:#e8f5e8;padding:20px;border-radius:6px;text-align:center;margin:15px 0;">
+        <h4 style="margin:0;color:#2e7d32;">Total Weight</h4>
+        <div style="font-size:2.5em;font-weight:bold;color:#1b5e20;margin:10px 0;">
+          ${totalWeight.toLocaleString()}g
+        </div>
+        <div style="font-size:1.2em;color:#388e3c;">
+          ${totalOz} ounces • ${totalLbs} pounds
+        </div>
+        <div style="color:#666;margin-top:10px;">
+          ${validItems} item${validItems > 1 ? 's' : ''} calculated
+        </div>
+      </div>
+
+      <div style="background:white;padding:20px;border-radius:6px;">
+        <h4 style="margin-top:0;">Item Breakdown</h4>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.9em;">
+            <thead>
+              <tr style="background:#f5f5f5;">
+                <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;">Food Item</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Quantity</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Weight Each</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Total (g)</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Total (oz)</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${breakdownHTML}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="background:#e3f2fd;padding:15px;border-radius:6px;margin-top:15px;">
+        <h4 style="margin-top:0;color:#1565c0;">Useful Conversions</h4>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;color:#1976d2;">
+          <div><strong>Grams to Ounces:</strong> Divide by 28.35</div>
+          <div><strong>Grams to Pounds:</strong> Divide by 453.6</div>
+          <div><strong>1 Pound:</strong> 453.6 grams</div>
+          <div><strong>1 Ounce:</strong> 28.35 grams</div>
+        </div>
+      </div>
+
+      <div style="background:#fff3cd;padding:15px;border-radius:6px;margin-top:15px;">
+        <h4 style="margin-top:0;color:#856404;">Important Notes</h4>
+        <ul style="margin:5px 0;color:#856404;font-size:0.9em;">
+          <li>Weights are based on average sizes and may vary significantly</li>
+          <li>Use these estimates for planning and general reference</li>
+          <li>For precise nutrition tracking, weigh items individually</li>
+          <li>Seasonal variations can affect actual weights</li>
+          <li>Consider ripeness and variety differences</li>
+        </ul>
       </div>
     </div>
   `;
 }
 
-function addAutocomplete(row) {
-  const wrap = row.querySelector('.food-row-input-wrap');
-  const input = wrap.querySelector('.food-name');
-  let lastClick = false;
-
-  input.addEventListener('input', function() {
-    const val = this.value.toLowerCase();
-    let ac = wrap.querySelector('.food-ac');
-    if (!ac) {
-      ac = document.createElement('div');
-      ac.className = 'food-ac';
-      wrap.appendChild(ac);
-    }
-    if (val.length < 2) {
-      ac.innerHTML = '';
-      return;
-    }
-    const matches = window.FOOD_DB
-      .filter(f => f.name && f.name.toLowerCase().includes(val) && f.weight_per_piece)
-      .slice(0, 8);
-    if (matches.length > 0) {
-      ac.innerHTML = matches.map(f => `<div class="food-ac-item">${f.name}</div>`).join('');
-      ac.querySelectorAll('.food-ac-item').forEach(el => {
-        el.onmousedown = (e) => {
-          e.preventDefault();
-          lastClick = true;
-          input.value = el.textContent;
-          ac.innerHTML = '';
-          recalcAllWeights();
-        };
-      });
-    } else {
-      ac.innerHTML = '';
-    }
-  });
-
-  input.addEventListener('blur', function() {
-    setTimeout(() => {
-      if (!lastClick) {
-        const ac = wrap.querySelector('.food-ac');
-        if (ac) ac.innerHTML = '';
-      }
-      lastClick = false;
-    }, 150);
-  });
-}
-
-function addWeightRow() {
-  const idx = document.querySelectorAll('.food-row-grid').length;
-  const container = document.getElementById('weight-rows');
-  const div = document.createElement('div');
-  div.innerHTML = createWeightRow(idx);
-  container.appendChild(div.firstElementChild);
-  const row = container.lastElementChild.querySelector('.food-row-grid');
-  addAutocomplete(row);
-  row.querySelectorAll('input').forEach(el => {
-    el.addEventListener('input', recalcAllWeights);
-    el.addEventListener('change', recalcAllWeights);
-  });
-  row.querySelector('.food-remove').onclick = () => {
-    row.closest('.food-row-card').remove();
-    recalcAllWeights();
-  };
-}
-
 function initWeightCalculator() {
-  addWeightRow();
-  document.getElementById('weight-add-row').onclick = addWeightRow;
+  // Add initial row if container is empty
+  const container = document.getElementById('weight-rows');
+  if (container && container.children.length === 0) {
+    addWeightRow();
+  }
+  
+  // Add event listener for add button
+  const addBtn = document.getElementById('weight-add-row');
+  if (addBtn) {
+    addBtn.addEventListener('click', addWeightRow);
+  }
 }
 
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   function waitForDB() {
     if (window.FOOD_DB && window.FOOD_DB.length > 0) {
       initWeightCalculator();
     } else {
-      setTimeout(waitForDB, 50);
+      setTimeout(waitForDB, 100);
     }
   }
   waitForDB();
