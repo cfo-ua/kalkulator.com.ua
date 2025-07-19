@@ -15,18 +15,54 @@
       <div class="lang-switcher">
         {% if lang == 'en' %}
           {% assign uk_url = page.url | replace: '/en/', '/' %}
+          {% assign target_page_exists = false %}
           {% if page.url contains '/calculators/' %}
             {% assign calc_name = page.url | remove: '/en/calculators/' | remove: '/' %}
             {% assign uk_url = '/calculators/' | append: calc_name | append: '.html' %}
+            {% comment %} Check if Ukrainian calculator exists {% endcomment %}
+            {% for p in site.pages %}
+              {% if p.url == uk_url %}
+                {% assign target_page_exists = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% comment %} Check if Ukrainian page exists {% endcomment %}
+            {% for p in site.pages %}
+              {% if p.url == uk_url %}
+                {% assign target_page_exists = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
-          <a href="{{ uk_url }}" title="Українська">🇺🇦 UA</a>
+          {% if target_page_exists %}
+            <a href="{{ uk_url }}" title="Українська">🇺🇦 UA</a>
+          {% endif %}
         {% else %}
           {% assign en_url = '/en' | append: page.url %}
+          {% assign target_page_exists = false %}
           {% if page.url contains '/calculators/' and page.url contains '.html' %}
             {% assign calc_name = page.url | remove: '/calculators/' | remove: '.html' %}
             {% assign en_url = '/en/calculators/' | append: calc_name | append: '/' %}
+            {% comment %} Check if English calculator exists by URL {% endcomment %}
+            {% for p in site.pages %}
+              {% if p.url == en_url %}
+                {% assign target_page_exists = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% comment %} Check if English page exists {% endcomment %}
+            {% for p in site.pages %}
+              {% if p.url == en_url %}
+                {% assign target_page_exists = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
-          <a href="{{ en_url }}" title="English">🇺🇸 EN</a>
+          {% if target_page_exists %}
+            <a href="{{ en_url }}" title="English">🇺🇸 EN</a>
+          {% endif %}
         {% endif %}
       </div>
     </div>
