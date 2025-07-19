@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let mondo, eu, uk, us_m, us_w;
 
     // Convert input to Mondopoint (foot length in mm)
+    // Note: Using exact formulas from original Ukrainian version
     if (unit === 'mondopoint') {
       mondo = val;
     } else if (unit === 'eu') {
