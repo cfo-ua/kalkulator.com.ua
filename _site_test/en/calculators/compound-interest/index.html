@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Compound Interest Calculator — Investment Growth, Compound Returns, Wealth Building</title>
+<meta name="description" content="Calculate compound interest returns on investments, deposits, and savings. See how your money grows with regular contributions, compounding frequency, and time. Free online tool for financial planning.">
+<meta name="keywords" content="compound interest calculator, investment compound interest, compound returns calculator, compound interest formula, investment growth calculator, wealth building calculator, compound interest investment, money growth calculator, financial planning calculator, retirement savings calculator, long term investment calculator, compound interest examples, how compound interest works, investment compounding calculator, compound annual growth rate">
+
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://kalkulator.com.ua/en/calculators/compound-interest/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compound Interest Calculator — Investment Growth, Compound Returns, Wealth Building">
+<meta property="og:description" content="Calculate compound interest returns on investments, deposits, and savings. See how your money grows with regular contributions, compounding frequency, and time. Free online tool for financial planning.">
+<meta property="og:url" content="https://kalkulator.com.ua/en/calculators/compound-interest/">
+<meta property="og:site_name" content="kalkulator.com.ua">
+<meta property="og:image" content="https://kalkulator.com.ua/assets/img/logo.svg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Interest Calculator — Investment Growth, Compound Returns, Wealth Building">
+<meta name="twitter:description" content="Calculate compound interest returns on investments, deposits, and savings. See how your money grows with regular contributions, compounding frequency, and time. Free online tool for financial planning.">
+<meta name="twitter:image" content="https://kalkulator.com.ua/assets/img/logo.svg">
+
+<!-- Structured Data -->
+
+
+  <link rel="stylesheet" href="/assets/css/style.css"><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKXJVGWX6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PKXJVGWX6X');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7612530865647476"
+     crossorigin="anonymous"></script>
+
+  <!-- Ahrefs Web Analytics -->
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="zAplT4bKzyqU2npnd5md5A" async></script>
+
+</head>
+<body>
+  
+
+<header>
+  <nav class="nav">
+    <a href="/en/" class="logo" aria-label="Home">
+      <img src="/assets/img/logo.svg" alt="логотип" height="32" style="margin-right:10px;">
+      kalkulator.com.ua
+    </a>
+    <button class="menu-btn" aria-label="Menu" tabindex="0">&#9776;</button>
+    <div class="nav-links">
+      <a href="/en/">Home</a>
+      <a href="/en/#categories">Categories</a>
+      <div class="lang-switcher">
+        
+          
+          
+          
+            
+            
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                
+          
+          
+            <a href="/calculators/compound-interest.html" title="Українська">🇺🇦 UA</a>
+          
+        
+      </div>
+    </div>
+  </nav>
+</header>
+  <main>
+    <h1>Compound Interest Calculator</h1><div class="calculator-block">
+        <form id="compound-form">
+  <label>Initial Amount</label>
+  <input type="number" id="initial" value="10000" min="0" step="any" required="" />
+
+  <label>Annual Interest Rate (%)</label>
+  <input type="number" id="rate" value="12" min="0" step="any" required="" />
+
+  <label>Time Period (years)</label>
+  <input type="number" id="years" value="5" min="0" step="any" required="" />
+
+  <label>Compounding Frequency</label>
+  <select id="compound-frequency">
+    <option value="1">Annually</option>
+    <option value="2">Semi-annually</option>
+    <option value="4">Quarterly</option>
+    <option value="12" selected="">Monthly</option>
+  </select>
+
+  <label>Regular Contribution</label>
+  <input type="number" id="contribution" value="0" min="0" step="any" />
+
+  <label>Contribution Frequency</label>
+  <select id="contribution-frequency">
+    <option value="1">Annually</option>
+    <option value="2">Semi-annually</option>
+    <option value="4">Quarterly</option>
+    <option value="12" selected="">Monthly</option>
+  </select>
+
+  <button type="submit">Calculate</button>
+</form>
+
+<div id="compound-result"></div>
+
+
+      </div>
+      
+
+<div id="compound-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
+  <h3 style="margin-bottom:0.9em; text-align:center;">Capital Growth Chart</h3>
+  <div class="chart-canvas-wrap">
+    <canvas id="compound-chart"></canvas>
+  </div>
+</div>
+<section class="seo-content">
+      <h2>Compound Interest Calculator Online</h2>
+<p>This calculator helps you understand the power of <strong>compound interest</strong> and calculate financial results with regular contributions, compounding frequency, and investment timeline. See how your money can grow exponentially over time.</p>
+
+<h3>What the calculator includes:</h3>
+<ul>
+  <li>Initial investment amount</li>
+  <li>Annual interest rate</li>
+  <li>Time period (in years)</li>
+  <li>Compounding frequency: monthly, quarterly, annually, etc.</li>
+  <li>Regular contributions: amount and frequency</li>
+</ul>
+
+<h3>Compound Interest Formula:</h3>
+<p><code>A = P × (1 + r/n)ⁿᵗ</code></p>
+<ul>
+  <li><strong>P</strong> — principal amount (initial investment)</li>
+  <li><strong>r</strong> — annual interest rate (as decimal)</li>
+  <li><strong>n</strong> — number of times interest compounds per year</li>
+  <li><strong>t</strong> — number of years</li>
+  <li><strong>A</strong> — final amount</li>
+</ul>
+
+<p>The calculator also accounts for <strong>regular contributions</strong>, which significantly increase the final amount through the compounding effect.</p>
+
+<h3>Where is this used?</h3>
+<ul>
+  <li><strong>Bank deposits and savings accounts</strong></li>
+  <li><strong>Investment in stocks, bonds, mutual funds</strong></li>
+  <li><strong>Retirement planning and pension savings</strong></li>
+  <li><strong>Financial planning and wealth building</strong></li>
+  <li><strong>Education savings plans</strong></li>
+</ul>
+
+<p>Results are displayed in both table and chart format so you can see <strong>how your capital grows over time</strong>. This visually demonstrates the advantages of long-term investing and the power of compound growth.</p>
+
+    </section>
+    
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <details>
+        <summary>What is compound interest?</summary>
+        <div>Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. It allows capital to grow exponentially over time, creating a 'snowball effect'.</div>
+      </details>
+      
+      <details>
+        <summary>What is the compound interest formula?</summary>
+        <div>A = P × (1 + r/n)ⁿᵗ, where P is the principal, r is the annual rate, n is the compounding frequency per year, and t is the time in years.</div>
+      </details>
+      
+      <details>
+        <summary>What is interest compounding?</summary>
+        <div>Compounding is the process of adding earned interest to the principal sum, so that the new total participates in the next interest calculation. More frequent compounding = higher returns.</div>
+      </details>
+      
+      <details>
+        <summary>Why consider regular contributions?</summary>
+        <div>Regular contributions significantly increase the final amount, especially with long-term investing and compounding. Even small monthly additions can result in substantial wealth over time.</div>
+      </details>
+      
+      <details>
+        <summary>How does compound interest differ from simple interest?</summary>
+        <div>Simple interest is calculated only on the principal amount, while compound interest is calculated on the growing total. This creates an 'interest on interest' effect that accelerates growth.</div>
+      </details>
+      
+      <details>
+        <summary>Can I see the results as a chart?</summary>
+        <div>Yes, the calculator generates a growth chart based on your parameters. This allows you to visually assess the effectiveness of your investment strategy over time.</div>
+      </details>
+      
+    </section>
+    
+    <section class="related">
+      <h2>Similar Calculators</h2>
+      <ul>
+        
+        <li><a href="/en/calculators/deposit/">Deposit Calculator</a></li>
+        
+        <li><a href="/en/calculators/loan/">Loan Calculator</a></li>
+        
+        <li><a href="/en/calculators/number-to-text/">Number to Text Converter</a></li>
+        
+        <li><a href="/en/calculators/rent-vs-buy/">Rent vs Buy Calculator</a></li>
+        
+        <li><a href="/en/calculators/savings-goal/">Savings Goal Calculator</a></li>
+        
+      </ul>
+    </section>
+    </main>
+  <footer>
+  <div class="footer-content">
+    &copy; <span id="year"></span> kalkulator.com.ua
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/en/js/compound-interest.js"></script>
+</body>
+</html>
