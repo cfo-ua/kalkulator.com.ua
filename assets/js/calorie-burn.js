@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const result = document.getElementById('calorie-burn-result');
   if (!form) return;
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // Function to calculate and display results
+  function calculateCalories() {
     const weightInput = +form['burn-weight'].value;
     const weightUnit = form['burn-weight-unit'].value;
     const min = +form['burn-min'].value;
@@ -51,5 +51,17 @@ document.addEventListener('DOMContentLoaded', function () {
       <p><strong>Вага:</strong> ${weightDisplay}</p>
       <p><strong>Витрачено:</strong> <span style="color:#157aff;">${calories.toFixed(0)} ккал</span></p>
     `;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    calculateCalories();
+  });
+
+  // Auto-recalculate when weight unit changes (if form has been calculated before)
+  form['burn-weight-unit'].addEventListener('change', function() {
+    if (result.innerHTML.trim() !== '') {
+      calculateCalories();
+    }
   });
 });

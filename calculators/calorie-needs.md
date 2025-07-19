@@ -106,7 +106,7 @@ faq:
   <label>Вага:
     <div style="display: flex; gap: 10px;">
       <input type="number" id="weight" min="30" max="700" step="0.1" placeholder="напр., 70" required style="flex: 1;">
-      <select id="weight-unit" required style="width: 80px;">
+      <select id="weight-unit" required style="min-width: 100px;">
         <option value="kg">кг</option>
         <option value="lbs">фунти</option>
       </select>
