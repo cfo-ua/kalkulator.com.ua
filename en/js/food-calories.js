@@ -42,6 +42,7 @@ function createFoodRow(idx) {
         <select class="food-unit" id="food-unit-${idx}" name="food-unit-${idx}">
           <option value="grams">grams</option>
           <option value="ounces">ounces</option>
+          <option value="pounds">pounds</option>
           <option value="pieces">pieces</option>
           <option value="cups">cups</option>
           <option value="ml">ml</option>
@@ -150,6 +151,8 @@ function convertToGrams(amount, unit, foodData) {
       return amount;
     case 'ounces':
       return amount * 28.35; // 1 oz = 28.35g
+    case 'pounds':
+      return amount * 453.6; // 1 lb = 453.6g
     case 'pieces':
       return amount * (foodData.weight_per_piece || 100); // Default 100g if no piece weight
     case 'cups':

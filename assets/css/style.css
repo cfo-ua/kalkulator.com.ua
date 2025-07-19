@@ -876,219 +876,336 @@ button.chart-range-btn:active {
 
 
 
-/* --- Apple-style Food Calories Calculator Row (Refined Flex version, 2024-06-05 CTO UX/UI fix, improved for inline autocomplete) --- */
+/* --- Modern Food Calculator Row Design (2024 Improved) --- */
 .food-row-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(60,60,60,0.09);
-  padding: 0;
-  margin-bottom: 1em;
-  transition: box-shadow 0.18s;
-  display: flex;
-  align-items: center;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
   width: 100%;
   min-width: 0;
   position: relative;
+}
+
+.food-row-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-color: #e0e0e0;
 }
 
 .food-row-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 16px;
   align-items: center;
   width: 100%;
-  border-radius: 16px;
-  background: none;
   min-width: 0;
   position: relative;
-  gap: 0;
 }
 
-/* --- Autocomplete wrapper for proper positioning --- */
+/* --- Modern Input Styling --- */
 .food-row-input-wrap {
   position: relative;
-  flex: 3 1 0;
-  min-width: 130px;
-  max-width: 400px;
+  min-width: 200px;
   display: flex;
   align-items: stretch;
 }
 
-/* Name input: more space, text visible */
+/* Modern text input styling */
 .food-row-input-wrap input[type="text"] {
   width: 100%;
-  background: #f7f8fa;
+  background: #fff;
   color: #181818;
-  padding: 0.84em 1.15em;
-  font-size: 1.13em;
-  border: none;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
   margin: 0;
   outline: none;
-  border-radius: 0;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
   font-weight: 500;
-  transition: background 0.17s, color 0.15s;
-  appearance: none;
-  -webkit-appearance: none;
-  display: flex;
-  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-/* Amount input: more space, not squished */
+.food-row-input-wrap input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 122, 255, 0.1);
+  background: #fff;
+}
+
+.food-row-input-wrap input[type="text"]:hover {
+  border-color: #d0d0d0;
+}
+
+/* Modern number input styling */
 .food-row-grid input[type="number"] {
-  flex: 1.1 1 0;
-  min-width: 58px;
-  max-width: 130px;
-  background: #f7f8fa;
+  min-width: 80px;
+  max-width: 120px;
+  background: #fff;
   color: #181818;
-  padding: 0.84em 0.8em 0.84em 0.8em;
-  font-size: 1.13em;
-  border: none;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
   margin: 0;
   outline: none;
-  border-radius: 0;
-  text-align: right;
+  text-align: center;
   font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.food-row-grid input[type="number"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 122, 255, 0.1);
+}
+
+.food-row-grid input[type="number"]:hover {
+  border-color: #d0d0d0;
+}
   display: flex;
   align-items: center;
   font-weight: 500;
 }
 
-/* --- INLINE SELECT OVERRIDE (g/unit) --- */
+/* Modern select dropdown styling */
 .food-row-grid select {
-  flex: 0 0 54px;
-  background: #f7f8fa !important;
+  min-width: 90px;
+  max-width: 120px;
+  background: #fff;
   color: #181818;
-  padding: 0.84em 0.7em !important;
-  font-size: 1.13em;
-  border: none !important;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
   margin: 0;
   outline: none;
-  border-radius: 0 !important;
-  border-left: 1px solid #ececec;
-  border-right: 1px solid #ececec;
-  min-width: 38px;
-  max-width: 70px;
   text-align: center;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  display: flex;
-  align-items: center;
   font-weight: 500;
-  box-shadow: none !important;
-  background-image: none !important; /* Remove Apple-style arrow */
   cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
 }
 
-/* For accessibility/focus */
 .food-row-grid select:focus {
-  background: #eaf3ff !important;
-  color: #181818;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 122, 255, 0.1);
 }
 
-.food-row-input-wrap input:focus,
-.food-row-grid input:focus {
-  background: #eaf3ff;
-  color: #181818;
+.food-row-grid select:hover {
+  border-color: #d0d0d0;
 }
 
-/* Calories output */
-.food-row-grid .food-calories {
-  color: #157aff;
-  font-weight: 700;
-  font-size: 1.15em;
-  min-width: 3.1em;
-  text-align: right;
-  flex: 1 1 0;
-  background: #f7f8fa;
-  border-radius: 0;
-  padding: 0.84em 1em;
-  align-items: center;
+/* Weight/Calories output styling */
+.food-row-grid .food-calories,
+.food-row-grid .food-weight {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 120px;
+  text-align: center;
+  background: #f8fff9;
+  border: 2px solid #e8f5e9;
+  border-radius: 12px;
+  padding: 14px 16px;
   display: flex;
-  justify-content: flex-end;
-  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.3;
 }
 
-/* Remove button: no white gap on highlight, vertically centered */
-.food-row-grid .food-remove {
+/* Modern remove button styling */
+.remove-food-btn {
   border: none;
-  background: #f7f8fa;
-  color: #c00;
-  font-size: 1.45em;
-  width: 48px;
-  min-width: 48px;
-  height: auto;
+  background: #fee;
+  color: #dc3545;
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.18s, color 0.17s;
+  transition: all 0.2s ease;
   outline: none;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-radius: 10px;
   padding: 0;
   line-height: 1;
-  box-sizing: border-box;
-  /* FIX: override unwanted margin from generic button rules */
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.food-row-grid .food-remove:after {
-  content: '×';
-  font-size: 1.15em;
-  font-weight: 400;
-  color: #c00;
-  display: block;
-  line-height: 1;
-}
-.food-row-grid .food-remove:hover, .food-row-grid .food-remove:focus {
-  background: #ffeaea;
-  color: #a00;
-  height: 100%;
+  font-weight: 600;
 }
 
-/* --- Autocomplete dropdown always below input, attached to .food-row-input-wrap --- */
-.food-row-input-wrap .food-ac {
-  border-radius: 9px;
-  box-shadow: 0 2px 11px 0 rgba(60,60,60,0.11);
-  border: 1px solid #e0e0e0 !important;
+.remove-food-btn:hover,
+.remove-food-btn:focus {
+  background: #dc3545;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Modern Calculator Control Buttons */
+.calculator-controls {
+  margin: 24px 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.secondary-btn,
+.primary-btn {
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.secondary-btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 2px solid #e9ecef;
+}
+
+.secondary-btn:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: white;
+  border: 2px solid var(--accent);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, var(--accent-hover) 0%, #004bbd 100%);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(21, 122, 255, 0.25);
+}
+
+.secondary-btn:active,
+.primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Modern autocomplete dropdown styling */
+.autocomplete-suggestions {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border: 1px solid #e8e8e8;
   overflow: hidden;
   background: #fff;
   position: absolute;
   left: 0;
-  top: calc(100% + 2px);
+  top: calc(100% + 8px);
   width: 100%;
-  z-index: 50;
-  color: #222;
-  font-size: 1em;
-}
-.food-ac-item {
-  padding: 0.35em 0.8em;
-  cursor: pointer;
-  font-size: 1em;
-  color: #222;
-  background: #fff;
-}
-.food-ac-item:hover, .food-ac-item:focus {
-  background: #eaf3ff;
-  color: #157aff;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .food-row-card,
-  .food-row-grid input[type="text"],
-  .food-row-grid .food-remove,
-  .food-row-input-wrap input[type="text"] {
-    border-radius: 10px !important;
+.suggestion-item {
+  padding: 16px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background: #f8f9ff;
+  color: var(--accent);
+}
+
+.suggestion-nutrition {
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .food-row-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
-  .food-row-input-wrap { min-width: 50px; }
-  .food-row-grid input[type="number"] { max-width: 70px; }
-  .food-row-grid select { max-width: 54px; }
-  .food-row-grid .food-calories { font-size: 1.09em; min-width: 2em; }
-  .food-row-grid .food-remove { width: 34px; min-width: 34px; font-size: 1.12em; }
+  
+  .food-row-input-wrap,
+  .food-row-grid input[type="number"],
+  .food-row-grid select,
+  .food-row-grid .food-calories,
+  .food-row-grid .food-weight {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .remove-food-btn {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-row-card {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .food-row-grid {
+    gap: 10px;
+  }
+  
+  .food-row-input-wrap input[type="text"],
+  .food-row-grid input[type="number"],
+  .food-row-grid select {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .calculator-controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .secondary-btn,
+  .primary-btn {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 
 /* Results block unchanged */

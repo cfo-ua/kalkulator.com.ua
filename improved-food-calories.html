@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Food Calories Calculator</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>Food Calories Calculator</h1>
+        
+        <div class="calculator-section">
+            <div id="food-rows">
+                <!-- Food row 1 -->
+                <div class="food-row-card">
+                    <div class="food-row-grid" data-row="1">
+                        <div class="food-row-input-wrap">
+                            <input type="text" class="food-name" id="food-name-1" placeholder="Enter food name (e.g., chicken breast, apple)" autocomplete="off">
+                            <div class="autocomplete-suggestions" id="suggestions-1" style="display:none;">
+                                <div class="suggestion-item">
+                                    <strong>Chicken Breast</strong>
+                                    <span class="suggestion-nutrition">165 cal/100g</span>
+                                </div>
+                                <div class="suggestion-item">
+                                    <strong>Apple</strong>
+                                    <span class="suggestion-nutrition">52 cal/100g</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="number" class="food-amount" id="food-amount-1" min="0" step="any" value="100" placeholder="Amount">
+                        <select class="food-unit" id="food-unit-1">
+                            <option value="grams">grams</option>
+                            <option value="ounces">ounces</option>
+                            <option value="pounds">pounds</option>
+                            <option value="pieces">pieces</option>
+                            <option value="cups">cups</option>
+                            <option value="ml">ml</option>
+                        </select>
+                        <button type="button" class="remove-food-btn" title="Remove this ingredient">✕</button>
+                    </div>
+                </div>
+                
+                <!-- Food row 2 -->
+                <div class="food-row-card">
+                    <div class="food-row-grid" data-row="2">
+                        <div class="food-row-input-wrap">
+                            <input type="text" class="food-name" id="food-name-2" placeholder="Enter food name (e.g., chicken breast, apple)" autocomplete="off" value="Banana">
+                        </div>
+                        <input type="number" class="food-amount" id="food-amount-2" min="0" step="any" value="1" placeholder="Amount">
+                        <select class="food-unit" id="food-unit-2">
+                            <option value="grams">grams</option>
+                            <option value="ounces">ounces</option>
+                            <option value="pounds">pounds</option>
+                            <option value="pieces" selected>pieces</option>
+                            <option value="cups">cups</option>
+                            <option value="ml">ml</option>
+                        </select>
+                        <button type="button" class="remove-food-btn" title="Remove this ingredient">✕</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator-controls">
+                <button type="button" id="add-food-btn" class="secondary-btn">+ Add Another Ingredient</button>
+                <button type="button" id="calculate-food-btn" class="primary-btn">Calculate Nutrition</button>
+            </div>
+        </div>
+        
+        <div id="food-result" class="result">
+            <!-- Sample result for testing -->
+            <div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;">
+                <h3 style="color:#157aff;margin-top:0;">Nutrition Summary</h3>
+                
+                <div style="background:white;padding:20px;border-radius:6px;margin:15px 0;">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;">
+                        <div style="background:#e3f2fd;padding:15px;border-radius:6px;">
+                            <div style="font-size:2em;font-weight:bold;color:#1976d2;">245</div>
+                            <div style="color:#1976d2;font-weight:bold;">Total Calories</div>
+                            <div style="color:#666;font-size:0.9em;">122.5 cal/100g</div>
+                        </div>
+                        <div style="background:#e8f5e8;padding:15px;border-radius:6px;">
+                            <div style="font-size:1.5em;font-weight:bold;color:#2e7d32;">200g</div>
+                            <div style="color:#2e7d32;font-weight:bold;">Total Weight</div>
+                            <div style="color:#666;font-size:0.9em;">2 ingredients</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background:white;padding:20px;border-radius:6px;margin:15px 0;">
+                    <h4 style="margin-top:0;">Macronutrient Breakdown</h4>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;">
+                        <div style="text-align:center;padding:15px;background:#fff3e0;border-radius:6px;">
+                            <div style="font-weight:bold;color:#f57c00;font-size:1.1em;">Protein</div>
+                            <div style="font-size:1.3em;margin:5px 0;">3.2g</div>
+                            <div style="color:#666;">13 cal (5.3%)</div>
+                        </div>
+                        <div style="text-align:center;padding:15px;background:#fce4ec;border-radius:6px;">
+                            <div style="font-weight:bold;color:#c2185b;font-size:1.1em;">Fat</div>
+                            <div style="font-size:1.3em;margin:5px 0;">0.6g</div>
+                            <div style="color:#666;">5 cal (2.0%)</div>
+                        </div>
+                        <div style="text-align:center;padding:15px;background:#e1f5fe;border-radius:6px;">
+                            <div style="font-weight:bold;color:#0277bd;font-size:1.1em;">Carbs</div>
+                            <div style="font-size:1.3em;margin:5px 0;">56.8g</div>
+                            <div style="color:#666;">227 cal (92.7%)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background:#e8f5e8;padding:15px;border-radius:6px;margin-top:15px;">
+                    <h4 style="margin-top:0;color:#2e7d32;">💡 Imperial Units Now Supported!</h4>
+                    <p style="margin:5px 0;color:#2e7d32;font-size:0.95em;">
+                        <strong>New Feature:</strong> You can now enter amounts in pounds and ounces alongside the traditional metric units. 
+                        Perfect for users in the US, UK, and other countries that commonly use imperial measurements for cooking and nutrition tracking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
