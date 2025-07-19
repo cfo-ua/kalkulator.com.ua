@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const result = document.getElementById('calorie-needs-result');
   if (!form) return;
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // Function to calculate and display results
+  function calculateCalories() {
     const gender = form.gender.value;
     const age = +form.age.value;
     const height = +form.height.value;
@@ -64,5 +64,17 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><strong>Вуглеводи:</strong> ${carb} г <span style="color:#888;">(${kcal(carb * 4)})</span></li>
       </ul>
     `;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    calculateCalories();
+  });
+
+  // Auto-recalculate when weight unit changes (if form has been calculated before)
+  form['weight-unit'].addEventListener('change', function() {
+    if (result.innerHTML.trim() !== '') {
+      calculateCalories();
+    }
   });
 });
