@@ -148,13 +148,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const weight = +form['burn-weight'].value;
+    const weightInput = +form['burn-weight'].value;
+    const weightUnit = form['burn-weight-unit'].value;
     const min = +form['burn-min'].value;
     const met = +form['burn-activity'].value;
     
+    // Convert weight to kg if necessary
+    const weight = weightUnit === 'lbs' ? weightInput * 0.453592 : weightInput;
+    
     // Validation
-    if (weight < 30 || weight > 300) {
-      result.innerHTML = '<p style="color:red;">Please enter a valid weight (30-300 lbs or kg).</p>';
+    const maxWeight = weightUnit === 'lbs' ? 700 : 300;
+    if (weightInput < 30 || weightInput > maxWeight) {
+      result.innerHTML = `<p style="color:red;">Please enter a valid weight (30-${maxWeight} ${weightUnit}).</p>`;
       return;
     }
     if (min <= 0 || min > 1440) {
@@ -184,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div style="background:white;padding:15px;border-radius:6px;margin:15px 0;">
           <p><strong>Activity:</strong> ${activityName}</p>
           <p><strong>Duration:</strong> ${min} minutes (${hours.toFixed(1)} hours)</p>
-          <p><strong>Body Weight:</strong> ${weight} ${weight < 150 ? 'kg' : 'lbs'}</p>
+          <p><strong>Body Weight:</strong> ${weightInput} ${weightUnit} ${weightUnit === 'lbs' ? `(${weight.toFixed(1)} kg)` : ''}</p>
           <p><strong>MET Value:</strong> ${met}</p>
         </div>
 

@@ -103,8 +103,14 @@ faq:
   <label>Зріст (см):
     <input type="number" id="height" min="100" max="250" value="170" required>
   </label>
-  <label>Вага (кг):
-    <input type="number" id="weight" min="30" max="300" value="70" required>
+  <label>Вага:
+    <div style="display: flex; gap: 10px;">
+      <input type="number" id="weight" min="30" max="700" step="0.1" placeholder="напр., 70" required style="flex: 1;">
+      <select id="weight-unit" required style="width: 80px;">
+        <option value="kg">кг</option>
+        <option value="lbs">фунти</option>
+      </select>
+    </div>
   </label>
   <label>Рівень активності:
     <select id="activity" required>

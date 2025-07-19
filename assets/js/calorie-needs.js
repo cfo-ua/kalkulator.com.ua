@@ -8,9 +8,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const gender = form.gender.value;
     const age = +form.age.value;
     const height = +form.height.value;
-    const weight = +form.weight.value;
+    const weightInput = +form.weight.value;
+    const weightUnit = form['weight-unit'].value;
     const activity = +form.activity.value;
     const goal = form.goal.value;
+
+    // Convert weight to kg if necessary
+    const weight = weightUnit === 'lbs' ? weightInput * 0.453592 : weightInput;
+
+    // Validation
+    const maxWeight = weightUnit === 'lbs' ? 700 : 300;
+    if (!gender || age <= 0 || height <= 0 || weightInput <= 0 || !activity) {
+      result.innerHTML = '<p style="color:red;">Будь ласка, заповніть всі поля коректними значеннями.</p>';
+      return;
+    }
+    if (weightInput < 30 || weightInput > maxWeight) {
+      result.innerHTML = `<p style="color:red;">Будь ласка, введіть коректну вагу (30-${maxWeight} ${weightUnit === 'lbs' ? 'фунтів' : 'кг'}).</p>`;
+      return;
+    }
 
     // BMR formula: Mifflin-St Jeor
     const bmr = gender === "male"
@@ -39,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Format helper
     const kcal = n => `${Math.round(n).toLocaleString("uk-UA")} ккал`;
 
+    const weightDisplay = weightUnit === 'lbs' ? `${weightInput} фунтів (${weight.toFixed(1)} кг)` : `${weightInput} кг`;
     result.innerHTML = `
+      <p><strong>Вага:</strong> ${weightDisplay}</p>
       <p><strong>Рекомендовано калорій (${goalDesc}):</strong> <span style="color:#157aff;">${kcal(calories)}</span></p>
       <ul style="list-style:none;padding-left:0;">
         <li><strong>Білки:</strong> ${protein} г <span style="color:#888;">(${kcal(protein * 4)})</span></li>
