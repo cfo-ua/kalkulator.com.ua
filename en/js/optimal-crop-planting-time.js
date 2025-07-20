@@ -34,13 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       
+      // Additional validation for location format
+      if (location !== 'custom' && !location.includes(',')) {
+        result.textContent = "Invalid location format selected.";
+        return;
+      }
+      
       // Parse crop information
       const [cropName, daysToMaturity, temperatureType, weeksFromFrost] = cropInfo.split(',');
       const maturityDays = parseInt(daysToMaturity);
       const frostOffset = parseInt(weeksFromFrost);
       
       // Get frost dates
-      let lastSpringFrost, firstFallFrost, zone;
+      let lastSpringFrost, firstFallFrost, zone = 'custom'; // Initialize with default value
       
       if (location === 'custom') {
         lastSpringFrost = new Date(document.getElementById('custom-spring-frost').value);
