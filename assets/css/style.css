@@ -195,7 +195,7 @@ header {
   margin: 2.5rem clamp(1rem, 5vw, 4rem);
   width: 100%;
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 1600px;
   min-width: 0;
 }
 
@@ -239,7 +239,7 @@ header {
 
 main {
   flex: 1 1 auto;
-  max-width: clamp(900px, 90vw, 1400px);
+  max-width: clamp(900px, 90vw, 1600px);
   margin: 0 auto;
   padding: 2.7rem clamp(1rem, 5vw, 3rem) 2rem;
   display: flex;
@@ -302,7 +302,7 @@ h1 {
   box-shadow: 0 4px 32px 0 rgba(60,60,60,0.09), 0 1.5px 8px 0 rgba(21,122,255,0.06);
   padding: 2.5em;
   margin: 2.5rem 0 1rem 0;
-  max-width: clamp(680px, 85vw, 1200px);
+  max-width: clamp(680px, 85vw, 1400px);
   width: 100%;
   transition: box-shadow var(--transition);
   min-width: 0;
@@ -428,7 +428,7 @@ h1 {
 /* Enhanced responsive breakpoints for better wide screen support */
 @media (min-width: 1400px) {
   .calculator-block {
-    max-width: clamp(900px, 70vw, 1400px);
+    max-width: clamp(900px, 75vw, 1600px);
     padding: 3em;
   }
   .categories {
@@ -437,11 +437,11 @@ h1 {
     margin: 3rem clamp(2rem, 8vw, 6rem);
   }
   main {
-    max-width: clamp(1200px, 85vw, 1600px);
+    max-width: clamp(1200px, 90vw, 1800px);
     padding: 3rem clamp(2rem, 5vw, 4rem) 2.5rem;
   }
   .seo-content, .faq, .related {
-    max-width: clamp(800px, 70vw, 1200px);
+    max-width: clamp(800px, 75vw, 1400px);
   }
 }
 
@@ -474,7 +474,7 @@ h1 {
 .seo-content, .faq, .related {
   margin: 2.5rem 0;
   width: 100%;
-  max-width: clamp(700px, 85vw, 1000px);
+  max-width: clamp(700px, 85vw, 1200px);
   min-width: 0;
 }
 .seo-content pre {
