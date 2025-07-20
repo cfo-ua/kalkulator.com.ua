@@ -216,7 +216,7 @@ faq:
   <h3>Loan Requirements</h3>
 
   <label for="loanAmount">Desired Loan Amount</label>
-  <input type="number" id="loanAmount" value="100000" min="1000" step="5000" placeholder="How much funding do you need">
+  <input type="number" id="loanAmount" value="100000" min="1000" step="1" placeholder="How much funding do you need">
 
   <label for="loanPurpose">Loan Purpose</label>
   <select id="loanPurpose">
