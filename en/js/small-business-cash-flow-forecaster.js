@@ -1,3 +1,13 @@
+// Format currency function
+const formatCurrency = (num) => {
+  return num.toLocaleString('en-US', { 
+    style: 'currency', 
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0 
+  });
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("cash-flow-form");
   if (!form) return;
@@ -41,16 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Analyze cash flow results
     const analysis = analyzeCashFlow(cashFlowProjection);
-
-    // Format currency function
-    const formatCurrency = (num) => {
-      return num.toLocaleString('en-US', { 
-        style: 'currency', 
-        currency: 'USD',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0 
-      });
-    };
 
     // Generate comprehensive results
     const resultHTML = `
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div>
             <h5 style="margin: 0 0 0.5rem 0;">Negative Cash Flow Months:</h5>
             <ul style="margin: 0; padding-left: 1.2rem;">
-              ${analysis.negativeMonths.map(month => `<li>${month.month}: ${formatCurrency(month.cashFlow)}</li>`).join('')}
+              ${analysis.negativeMonths.map(month => `<li>${month.month}: ${formatCurrency(month.netCashFlow)}</li>`).join('')}
             </ul>
           </div>
           <div>
