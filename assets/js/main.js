@@ -23,3 +23,23 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 });
+
+// Global error handler to suppress DataCloneError from external scripts
+window.addEventListener('error', function(event) {
+  // Suppress DataCloneError from external analytics/ad scripts
+  if (event.error && event.error.name === 'DataCloneError' && 
+      event.error.message && event.error.message.includes('postMessage')) {
+    console.warn('Suppressed DataCloneError from external script:', event.error.message);
+    event.preventDefault();
+    return false;
+  }
+});
+
+// Also handle unhandled promise rejections that might contain DataCloneError
+window.addEventListener('unhandledrejection', function(event) {
+  if (event.reason && event.reason.name === 'DataCloneError' && 
+      event.reason.message && event.reason.message.includes('postMessage')) {
+    console.warn('Suppressed DataCloneError promise rejection from external script:', event.reason.message);
+    event.preventDefault();
+  }
+});
