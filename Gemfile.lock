@@ -157,8 +157,8 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  jekyll
-  jekyll-sitemap
+  jekyll (~> 4.4)
+  jekyll-sitemap (~> 1.4)
 
 BUNDLED WITH
    2.7.0
