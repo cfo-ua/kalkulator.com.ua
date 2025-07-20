@@ -49,7 +49,7 @@ seo:
     <p>Якщо ваша мета — <b>схуднення</b>, важливо створити дефіцит калорій. Для цього використовуйте калькулятор щодня, щоб слідкувати за спожитими калоріями. Якщо ви хочете <b>набрати м’язову масу</b>, слід створити невеликий надлишок калорій, але з правильним балансом білків, жирів і вуглеводів.</p>
     <p>Також ви можете скористатись нашим <a href="https://kalkulator.com.ua/calculators/calorie-needs.html">калькулятором денної норми калорій</a>, щоб дізнатись, скільки саме калорій вам потрібно на добу.</p>
 scripts:
-  - /assets/js/food-calories.js
+  - /assets/js/food-calories-ua.js
 faq:
   - question: "Як працює калькулятор калорій?"
     answer: "Ви вводите назву продукту, обираєте з підказки, вказуєте вагу та одиницю виміру. Калькулятор знаходить інформацію у базі та рахує калорії, білки, жири і вуглеводи — для кожного продукту і сумарно."
@@ -67,8 +67,15 @@ faq:
     answer: "Наразі ні, але незабаром планується можливість збереження рецептів у профілі користувача або експорту до PDF."
 ---
 
-<form id="food-calories-form" autocomplete="off">
-  <div id="food-rows"></div>
-  <button type="button" id="food-add-row">Додати продукт</button>
-</form>
+<div class="calculator-section">
+  <div id="food-rows">
+    <!-- Food rows will be added dynamically by JavaScript -->
+  </div>
+  
+  <div class="calculator-controls">
+    <button type="button" id="food-add-row" class="secondary-btn">+ Додати продукт</button>
+    <button type="button" id="food-calculate-btn" class="primary-btn">Розрахувати калорійність</button>
+  </div>
+</div>
+
 <div id="food-calories-result" class="result"></div>
