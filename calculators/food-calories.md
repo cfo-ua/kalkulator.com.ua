@@ -67,8 +67,15 @@ faq:
     answer: "Наразі ні, але незабаром планується можливість збереження рецептів у профілі користувача або експорту до PDF."
 ---
 
-<form id="food-calories-form" autocomplete="off">
-  <div id="food-rows"></div>
-  <button type="button" id="food-add-row">Додати продукт</button>
-</form>
+<div class="calculator-section">
+  <div id="food-rows">
+    <!-- Food rows will be added dynamically by JavaScript -->
+  </div>
+  
+  <div class="calculator-controls">
+    <button type="button" id="food-add-row" class="secondary-btn">+ Додати продукт</button>
+    <button type="button" id="food-calculate-btn" class="primary-btn">Розрахувати калорійність</button>
+  </div>
+</div>
+
 <div id="food-calories-result" class="result"></div>
