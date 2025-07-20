@@ -400,7 +400,7 @@ h1 {
   color: white !important;
   border: none !important;
   border-radius: 6px !important;
-  margin: 0 0 0 8px !important;
+  margin: 12px 0 0 8px !important;
   min-width: 24px !important;
   max-width: 24px !important;
   flex-shrink: 0 !important;
@@ -1040,32 +1040,43 @@ button.chart-range-btn:active {
   line-height: 1.3;
 }
 
-/* Modern remove button styling */
+/* Red X button styling - matching Schengen calculator */
 .remove-food-btn {
-  border: none;
-  background: #fee;
-  color: #dc3545;
-  font-size: 18px;
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  outline: none;
-  border-radius: 10px;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: #ff3b30 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  margin: 0 0 0 8px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(255, 59, 48, 0.3) !important;
+  outline: none !important;
 }
 
-.remove-food-btn:hover,
+.remove-food-btn:hover {
+  background: #d70015 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(215, 0, 21, 0.4) !important;
+}
+
 .remove-food-btn:focus {
-  background: #dc3545;
-  color: white;
-  transform: scale(1.05);
+  background: #d70015 !important;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.3) !important;
+}
+
+.remove-food-btn:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 1px 2px rgba(255, 59, 48, 0.3) !important;
 }
 
 /* Modern Calculator Control Buttons */
