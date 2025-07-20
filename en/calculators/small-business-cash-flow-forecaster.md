@@ -220,7 +220,7 @@ faq:
   <input type="number" id="fixedExpenses" value="35000" min="0" step="2500" placeholder="Rent, salaries, insurance, utilities">
 
   <label for="variableExpenses">Variable Expenses (%)</label>
-  <input type="number" id="variableExpenses" value="15" min="0" max="80" step="2" placeholder="Marketing, supplies as % of revenue">
+  <input type="number" id="variableExpenses" value="15" min="0" max="80" step="0.1" placeholder="Marketing, supplies as % of revenue">
 
   <label for="debtPayments">Monthly Debt Payments</label>
   <input type="number" id="debtPayments" value="8000" min="0" step="500" placeholder="Loan payments, credit cards">
