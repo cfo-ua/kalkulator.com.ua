@@ -171,7 +171,7 @@ faq:
   <h3>Business Information</h3>
   
   <label for="businessAge">Time in Business (years)</label>
-  <input type="number" id="businessAge" value="3" min="0" max="50" step="0.5" placeholder="How long has your business been operating">
+  <input type="number" id="businessAge" value="3" min="0" max="150" step="0.5" placeholder="How long has your business been operating">
 
   <label for="annualRevenue">Annual Revenue</label>
   <input type="number" id="annualRevenue" value="500000" min="0" step="10000" placeholder="Gross annual business revenue">
