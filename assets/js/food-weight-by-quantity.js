@@ -2,7 +2,7 @@
 // Enhanced UX with better autocomplete, validation, and comprehensive weight calculations
 
 window.FOOD_DB = [];
-fetch('/assets/data/food-db-en.json')
+fetch('/assets/data/food-db.json')
   .then(resp => resp.json())
   .then(data => { 
     window.FOOD_DB = data;
@@ -23,7 +23,7 @@ function createWeightRow(idx) {
             class="food-name" 
             id="weight-name-${idx}" 
             name="weight-name-${idx}" 
-            placeholder="Enter food name (e.g., apple, banana)" 
+            placeholder="Введіть назву продукту (напр., яблуко, банан)" 
             autocomplete="off"
           >
           <div class="autocomplete-suggestions" id="weight-suggestions-${idx}"></div>
@@ -36,10 +36,10 @@ function createWeightRow(idx) {
           min="1" 
           step="1" 
           value="1"
-          placeholder="Quantity"
+          placeholder="Кількість"
         >
         <span class="food-weight" id="weight-result-${idx}">—</span>
-        <button type="button" class="remove-food-btn" onclick="removeWeightRow(${idx})" title="Remove this item">
+        <button type="button" class="remove-food-btn" onclick="removeWeightRow(${idx})" title="Видалити цей продукт">
           ✕
         </button>
       </div>
@@ -185,7 +185,7 @@ function recalculateRowWeight(rowIdx) {
   
   const food = getFoodByName(name);
   if (!food || !food.weight_per_piece) {
-    weightSpan.textContent = 'Not found';
+    weightSpan.textContent = 'Не знайдено';
     weightSpan.style.color = '#dc3545';
     recalculateAllWeights();
     return;
@@ -236,7 +236,7 @@ function recalculateAllWeights() {
   if (!resultDiv) return;
   
   if (validItems === 0) {
-    resultDiv.innerHTML = '<p style="color:#666;">Add some food items to calculate total weight.</p>';
+    resultDiv.innerHTML = '<p style="color:#666;">Додайте продукти для розрахунку загальної ваги.</p>';
     return;
   }
   
@@ -255,32 +255,32 @@ function recalculateAllWeights() {
   
   resultDiv.innerHTML = `
     <div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;">
-      <h3 style="color:#157aff;margin-top:0;">Weight Calculation Results</h3>
+      <h3 style="color:#157aff;margin-top:0;">Результати розрахунку ваги</h3>
       
       <div style="background:#e8f5e8;padding:20px;border-radius:6px;text-align:center;margin:15px 0;">
-        <h4 style="margin:0;color:#2e7d32;">Total Weight</h4>
+        <h4 style="margin:0;color:#2e7d32;">Загальна вага</h4>
         <div style="font-size:2.5em;font-weight:bold;color:#1b5e20;margin:10px 0;">
           ${totalWeight.toLocaleString()}g
         </div>
         <div style="font-size:1.2em;color:#388e3c;">
-          ${totalOz} ounces • ${totalLbs} pounds
+          ${totalOz} унцій • ${totalLbs} фунтів
         </div>
         <div style="color:#666;margin-top:10px;">
-          ${validItems} item${validItems > 1 ? 's' : ''} calculated
+          ${validItems} продукт${validItems > 1 ? (validItems < 5 ? 'и' : 'ів') : ''} розраховано
         </div>
       </div>
 
       <div style="background:white;padding:20px;border-radius:6px;">
-        <h4 style="margin-top:0;">Item Breakdown</h4>
+        <h4 style="margin-top:0;">Деталі по продуктах</h4>
         <div style="overflow-x:auto;">
           <table style="width:100%;border-collapse:collapse;font-size:0.9em;">
             <thead>
               <tr style="background:#f5f5f5;">
-                <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;">Food Item</th>
-                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Quantity</th>
-                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Weight Each</th>
-                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Total (g)</th>
-                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Total (oz)</th>
+                <th style="padding:12px;text-align:left;border-bottom:2px solid #ddd;">Продукт</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Кількість</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Вага за штуку</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Загалом (г)</th>
+                <th style="padding:12px;text-align:center;border-bottom:2px solid #ddd;">Загалом (унц)</th>
               </tr>
             </thead>
             <tbody>
@@ -291,23 +291,23 @@ function recalculateAllWeights() {
       </div>
 
       <div style="background:#e3f2fd;padding:15px;border-radius:6px;margin-top:15px;">
-        <h4 style="margin-top:0;color:#1565c0;">Useful Conversions</h4>
+        <h4 style="margin-top:0;color:#1565c0;">Корисні конверсії</h4>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;color:#1976d2;">
-          <div><strong>Grams to Ounces:</strong> Divide by 28.35</div>
-          <div><strong>Grams to Pounds:</strong> Divide by 453.6</div>
-          <div><strong>1 Pound:</strong> 453.6 grams</div>
-          <div><strong>1 Ounce:</strong> 28.35 grams</div>
+          <div><strong>Грами в унції:</strong> Поділити на 28.35</div>
+          <div><strong>Грами в фунти:</strong> Поділити на 453.6</div>
+          <div><strong>1 фунт:</strong> 453.6 грамів</div>
+          <div><strong>1 унція:</strong> 28.35 грамів</div>
         </div>
       </div>
 
       <div style="background:#fff3cd;padding:15px;border-radius:6px;margin-top:15px;">
-        <h4 style="margin-top:0;color:#856404;">Important Notes</h4>
+        <h4 style="margin-top:0;color:#856404;">Важливі примітки</h4>
         <ul style="margin:5px 0;color:#856404;font-size:0.9em;">
-          <li>Weights are based on average sizes and may vary significantly</li>
-          <li>Use these estimates for planning and general reference</li>
-          <li>For precise nutrition tracking, weigh items individually</li>
-          <li>Seasonal variations can affect actual weights</li>
-          <li>Consider ripeness and variety differences</li>
+          <li>Вага базується на середніх розмірах і може значно варіюватись</li>
+          <li>Використовуйте ці оцінки для планування та загальної довідки</li>
+          <li>Для точного відстеження харчування зважуйте продукти окремо</li>
+          <li>Сезонні коливання можуть впливати на фактичну вагу</li>
+          <li>Враховуйте відмінності в стиглості та сортах</li>
         </ul>
       </div>
     </div>
