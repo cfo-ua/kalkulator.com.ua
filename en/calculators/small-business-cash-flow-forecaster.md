@@ -174,7 +174,7 @@ faq:
   <h3>Revenue Patterns</h3>
 
   <label for="seasonalVariation">Seasonal Revenue Variation (%)</label>
-  <input type="number" id="seasonalVariation" value="25" min="0" max="100" step="5" placeholder="Percentage variation from average">
+  <input type="number" id="seasonalVariation" value="25" min="0" max="500" step="5" placeholder="Percentage variation from average">
 
   <label for="peakMonth">Peak Revenue Month</label>
   <select id="peakMonth">
@@ -209,18 +209,18 @@ faq:
   </select>
 
   <label for="averageCollectionDays">Average Collection Period (days)</label>
-  <input type="number" id="averageCollectionDays" value="35" min="0" max="120" step="5" placeholder="Days to collect from customers">
+  <input type="number" id="averageCollectionDays" value="35" min="0" max="365" step="5" placeholder="Days to collect from customers">
 
   <h3>Monthly Operating Expenses</h3>
 
   <label for="costOfGoodsSold">Cost of Goods Sold (%)</label>
-  <input type="number" id="costOfGoodsSold" value="40" min="0" max="90" step="5" placeholder="COGS as percentage of revenue">
+  <input type="number" id="costOfGoodsSold" value="40" min="0" max="99" step="5" placeholder="COGS as percentage of revenue">
 
   <label for="fixedExpenses">Fixed Operating Expenses</label>
   <input type="number" id="fixedExpenses" value="35000" min="0" step="2500" placeholder="Rent, salaries, insurance, utilities">
 
   <label for="variableExpenses">Variable Expenses (%)</label>
-  <input type="number" id="variableExpenses" value="15" min="0" max="50" step="2" placeholder="Marketing, supplies as % of revenue">
+  <input type="number" id="variableExpenses" value="15" min="0" max="80" step="2" placeholder="Marketing, supplies as % of revenue">
 
   <label for="debtPayments">Monthly Debt Payments</label>
   <input type="number" id="debtPayments" value="8000" min="0" step="500" placeholder="Loan payments, credit cards">
