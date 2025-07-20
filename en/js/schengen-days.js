@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Exit Date:
         <input type="date" class="date-out" style="width: 100%; margin-top: 5px;">
       </label>
-      <button type="button" class="remove-trip" style="background: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; height: fit-content;">✕</button>
+      <button type="button" class="remove-trip">✕</button>
     `;
     
     const removeButton = row.querySelector(".remove-trip");
