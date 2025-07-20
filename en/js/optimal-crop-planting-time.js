@@ -40,14 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const frostOffset = parseInt(weeksFromFrost);
       
       // Get frost dates
-      let lastSpringFrost, firstFallFrost;
+      let lastSpringFrost, firstFallFrost, zone;
       
       if (location === 'custom') {
         lastSpringFrost = new Date(document.getElementById('custom-spring-frost').value);
         firstFallFrost = new Date(document.getElementById('custom-fall-frost').value);
+        zone = 'custom';
       } else {
         // Use zone-based frost dates (approximate)
-        const zone = location.split(',')[0];
+        zone = location.split(',')[0];
         const frostDates = getZoneFrostDates(zone);
         lastSpringFrost = frostDates.spring;
         firstFallFrost = frostDates.fall;
