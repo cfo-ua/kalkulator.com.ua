@@ -1502,3 +1502,21 @@ input[type="date"]::-moz-focus-inner {
 .calculator-block .electric-load-row .remove-appliance:hover {
   background: #005bd1 !important;
 }
+
+/* Responsive fix for astrology compatibility calculator */
+/* On tablets and mobile, stack Person 1 and Person 2 forms vertically */
+@media (max-width: 768px) {
+  /* Target the grid container in astrology compatibility calculator */
+  .calculator-block div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* For smaller mobile screens, reduce gap further */
+  .calculator-block div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+}
