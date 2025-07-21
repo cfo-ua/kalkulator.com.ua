@@ -6,10 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const heightFt = form['height-ft'];
   const heightIn = form['height-in'];
   const heightCm = form['height-cm'];
+  
+  // Weight unit validation
+  const currentWeightInput = form['current-weight'];
+  const weightUnitSelect = form['weight-unit'];
 
   heightFt.addEventListener('input', updateCmFromFtIn);
   heightIn.addEventListener('input', updateCmFromFtIn);
   heightCm.addEventListener('input', updateFtInFromCm);
+  
+  // Update weight input constraints based on selected unit
+  weightUnitSelect.addEventListener('change', updateWeightConstraints);
+  
+  // Initialize weight constraints
+  updateWeightConstraints();
 
   function updateCmFromFtIn() {
     const ft = parseInt(heightFt.value) || 0;
@@ -29,6 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
       const inches = Math.round(totalInches % 12);
       heightFt.value = ft;
       heightIn.value = inches;
+    }
+  }
+  
+  function updateWeightConstraints() {
+    const unit = weightUnitSelect.value;
+    if (unit === 'kg') {
+      currentWeightInput.min = '30';
+      currentWeightInput.max = '227';
+      currentWeightInput.placeholder = '67';
+    } else {
+      currentWeightInput.min = '70';
+      currentWeightInput.max = '500';
+      currentWeightInput.placeholder = '150';
     }
   }
 
@@ -64,6 +87,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (totalInches < 48 || totalInches > 84) {
       result.innerHTML = '<p style="color:red;">Please enter a realistic height (4\'0" to 7\'0").</p>';
       return;
+    }
+
+    // Validate current weight if provided
+    if (currentWeightInput > 0) {
+      if (weightUnit === 'kg') {
+        if (currentWeightInput < 30 || currentWeightInput > 227) {
+          result.innerHTML = '<p style="color:red;">Please enter a realistic weight (30-227 kg).</p>';
+          return;
+        }
+      } else {
+        if (currentWeightInput < 70 || currentWeightInput > 500) {
+          result.innerHTML = '<p style="color:red;">Please enter a realistic weight (70-500 lbs).</p>';
+          return;
+        }
+      }
     }
 
     // Convert current weight to pounds if needed
