@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let acceptanceScore = 50; // Base 50%
       let strengthFactors = [];
       let weaknessFactors = [];
-      let recommendations = [];
+      let recommendationMessages = [];
       
       // GPA Impact (30% weight for most programs)
       const gpaScores = {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         strengthFactors.push(`📈 Excellent GPA (${gpa.replace('-', ' - ')}) - major strength`);
       } else if (gpaImpact <= -15) {
         weaknessFactors.push(`📉 Low GPA (${gpa.replace('-', ' - ')}) - significant challenge`);
-        recommendations.push('Consider explaining GPA in personal statement if there are extenuating circumstances');
+        recommendationMessages.push('Consider explaining GPA in personal statement if there are extenuating circumstances');
       }
       
       // Standardized Test Scores
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         strengthFactors.push(`🔬 Excellent research experience - ${researchExperience} level`);
       } else if (researchImpact <= -10 && programType.includes('phd')) {
         weaknessFactors.push('🔬 Limited research experience for PhD program');
-        recommendations.push('Gain research experience through volunteering in labs or independent projects');
+        recommendationMessages.push('Gain research experience through volunteering in labs or independent projects');
       }
       
       // Publications (Very important for PhD, good for others)
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         strengthFactors.push(`💼 Strong work experience for MBA application`);
       } else if (programType === 'mba' && workImpact < 10) {
         weaknessFactors.push('💼 Limited work experience for MBA program');
-        recommendations.push('Consider gaining more professional experience before applying to top MBA programs');
+        recommendationMessages.push('Consider gaining more professional experience before applying to top MBA programs');
       }
       
       // Undergraduate School Prestige
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
         strengthFactors.push('🎯 Excellent program fit - strong research/career alignment');
       } else if (programFit === 'poor') {
         weaknessFactors.push('🎯 Poor program fit - unclear alignment with goals');
-        recommendations.push('Research programs more thoroughly to find better alignment');
+        recommendationMessages.push('Research programs more thoroughly to find better alignment');
       }
       
       // Bonus factors
@@ -306,6 +306,9 @@ document.addEventListener("DOMContentLoaded", function () {
         acceptanceScore, gpa, researchExperience, publications, 
         workExperience, sopQuality, recommendations, programType
       );
+      
+      // Combine with specific recommendation messages
+      const allImprovements = [...improvements, ...recommendationMessages];
       
       // Determine overall assessment
       let assessmentLevel = '';
@@ -412,12 +415,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       // Add improvement recommendations
-      if (improvements.length > 0) {
+      if (allImprovements.length > 0) {
         resultHTML += `
           <div style="margin-top: 1.5rem;">
             <h4>🚀 Recommendations to Improve Chances</h4>
             <ul>`;
-        improvements.forEach(improvement => {
+        allImprovements.forEach(improvement => {
           resultHTML += `<li>${improvement}</li>`;
         });
         resultHTML += `</ul></div>`;
