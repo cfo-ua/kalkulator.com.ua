@@ -274,30 +274,41 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="value-comparison">
-          <div class="value-grid">
-            <div class="value-item original">
-              <span class="label">Original Purchase Price:</span>
-              <span class="value">$${purchasePrice.toLocaleString()}</span>
+          <div class="insight-cards">
+            <div class="insight-card info">
+              <h6>💸 Purchase Price</h6>
+              <p class="big-number">$${purchasePrice.toLocaleString()}</p>
+              <p class="insight-detail">original cost</p>
             </div>
-            <div class="value-item current highlight">
-              <span class="label">Current Estimated Value:</span>
-              <span class="value">$${currentValue.toLocaleString()}</span>
+            
+            <div class="insight-card success">
+              <h6>💰 Current Value</h6>
+              <p class="big-number">$${currentValue.toLocaleString()}</p>
+              <p class="insight-detail">estimated worth</p>
             </div>
-            <div class="value-item retention">
-              <span class="label">Value Retention:</span>
-              <span class="value">${retentionPercentage.toFixed(1)}%</span>
+            
+            <div class="insight-card ${retentionPercentage >= 70 ? 'success' : retentionPercentage >= 50 ? 'warning' : 'info'}">
+              <h6>📊 Value Retention</h6>
+              <p class="big-number">${retentionPercentage.toFixed(1)}%</p>
+              <p class="insight-detail">value preserved</p>
             </div>
-            <div class="value-item depreciation">
-              <span class="label">Total Depreciation:</span>
-              <span class="value">$${totalDepreciationToDate.toLocaleString()}</span>
+            
+            <div class="insight-card warning">
+              <h6>📉 Total Loss</h6>
+              <p class="big-number">$${totalDepreciationToDate.toLocaleString()}</p>
+              <p class="insight-detail">depreciation to date</p>
             </div>
-            <div class="value-item annual">
-              <span class="label">Annual Depreciation:</span>
-              <span class="value">$${currentAnnualDepreciation.toLocaleString()}</span>
+            
+            <div class="insight-card info">
+              <h6>📅 Annual Loss</h6>
+              <p class="big-number">$${currentAnnualDepreciation.toLocaleString()}</p>
+              <p class="insight-detail">per year average</p>
             </div>
-            <div class="value-item percentage">
-              <span class="label">Depreciation Rate:</span>
-              <span class="value">${currentDepreciationPercentage.toFixed(1)}%</span>
+            
+            <div class="insight-card info">
+              <h6>📈 Depreciation Rate</h6>
+              <p class="big-number">${currentDepreciationPercentage.toFixed(1)}%</p>
+              <p class="insight-detail">current rate</p>
             </div>
           </div>
         </div>

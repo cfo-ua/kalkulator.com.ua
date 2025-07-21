@@ -756,56 +756,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (value < min) return '⬇️ Under';
     return '⬆️ Over';
   }
-            </div>
-            <div class="allocation-item">
-              <span class="category">Photography & Videography:</span>
-              <span class="range">10-15%</span>
-              <span class="your-percentage">(Your: ${((budgetBreakdown.photography.total / totalWeddingCost) * 100).toFixed(1)}%)</span>
-            </div>
-            <div class="allocation-item">
-              <span class="category">Flowers & Decorations:</span>
-              <span class="range">8-10%</span>
-              <span class="your-percentage">(Your: ${((budgetBreakdown.flowers.total / totalWeddingCost) * 100).toFixed(1)}%)</span>
-            </div>
-            <div class="allocation-item">
-              <span class="category">Music & Entertainment:</span>
-              <span class="range">8-10%</span>
-              <span class="your-percentage">(Your: ${((budgetBreakdown.music.total / totalWeddingCost) * 100).toFixed(1)}%)</span>
-            </div>
-            <div class="allocation-item">
-              <span class="category">Attire & Beauty:</span>
-              <span class="range">8-10%</span>
-              <span class="your-percentage">(Your: ${((budgetBreakdown.attireBeauty.total / totalWeddingCost) * 100).toFixed(1)}%)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="next-steps">
-          <h4>🎯 Next Steps</h4>
-          <ul>
-            <li>Set your final budget and stick to it</li>
-            <li>Start with booking your venue (affects many other decisions)</li>
-            <li>Get quotes from multiple vendors in each category</li>
-            <li>Create a detailed timeline working backward from your date</li>
-            <li>Consider hiring a day-of coordinator even with DIY planning</li>
-            <li>Set up a separate wedding savings account</li>
-            <li>Track all expenses and vendor payments</li>
-          </ul>
-        </div>
-
-        <div class="important-notes">
-          <h4>📝 Important Notes</h4>
-          <ul>
-            <li><strong>Estimates Only:</strong> Actual costs vary by specific vendors and local markets</li>
-            <li><strong>Regional Variations:</strong> Costs can vary 50-100% between different areas</li>
-            <li><strong>Seasonal Pricing:</strong> Peak season can add 20-50% to vendor costs</li>
-            <li><strong>Vendor Availability:</strong> Popular vendors book up 12+ months in advance</li>
-            <li><strong>Contract Details:</strong> Always read contracts carefully for cancellation policies</li>
-          </ul>
-        </div>
-      </div>
-    `;
-  }
 
   function getWeddingCategory(cost) {
     if (cost < 15000) return "Budget Wedding";

@@ -385,6 +385,34 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
 
+        <div class="move-insights">
+          <div class="insight-cards">
+            <div class="insight-card success">
+              <h6>💰 Total Cost</h6>
+              <p class="big-number">$${totalMovingCost.toLocaleString()}</p>
+              <p class="insight-detail">estimated moving cost</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>📦 Moving Services</h6>
+              <p class="big-number">$${movingServicesTotal.toLocaleString()}</p>
+              <p class="insight-detail">professional movers</p>
+            </div>
+            
+            <div class="insight-card ${travelCosts.total <= totalMovingCost * 0.2 ? 'success' : 'warning'}">
+              <h6>🚗 Travel Costs</h6>
+              <p class="big-number">$${travelCosts.total.toLocaleString()}</p>
+              <p class="insight-detail">lodging & transport</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>💼 Cost per Pound</h6>
+              <p class="big-number">$${(movingServicesTotal / sizeMetrics.weight).toFixed(2)}</p>
+              <p class="insight-detail">moving efficiency</p>
+            </div>
+          </div>
+        </div>
+
         <div class="cost-breakdown">
           <h4>💰 Cost Breakdown</h4>
           <div class="breakdown-grid">

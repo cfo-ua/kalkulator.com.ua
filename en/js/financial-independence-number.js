@@ -140,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
       monthlySavings,
       scenarios,
       timeline,
-      realReturn: realReturn * 100
+      realReturn: realReturn * 100,
+      expectedReturn: expectedReturn * 100
     });
   }
 

@@ -303,22 +303,30 @@ document.addEventListener("DOMContentLoaded", function () {
         
         <div class="fund-status ${adequacy.class}">
           <h4>${adequacy.description}</h4>
-          <div class="status-grid">
-            <div class="status-item">
-              <span class="label">Current Coverage:</span>
-              <span class="value">${adequacy.monthsCovered.toFixed(1)} months</span>
+          
+          <div class="insight-cards">
+            <div class="insight-card ${adequacy.monthsCovered >= adjustedMonths ? 'success' : adequacy.monthsCovered >= adjustedMonths * 0.7 ? 'warning' : 'info'}">
+              <h6>📅 Current Coverage</h6>
+              <p class="big-number">${adequacy.monthsCovered.toFixed(1)}</p>
+              <p class="insight-detail">months of expenses covered</p>
             </div>
-            <div class="status-item">
-              <span class="label">Recommended Coverage:</span>
-              <span class="value">${adjustedMonths.toFixed(1)} months</span>
+            
+            <div class="insight-card info">
+              <h6>🎯 Target Coverage</h6>
+              <p class="big-number">${adjustedMonths.toFixed(1)}</p>
+              <p class="insight-detail">recommended months</p>
             </div>
-            <div class="status-item">
-              <span class="label">Current Fund:</span>
-              <span class="value">$${currentEmergencyFund.toLocaleString()}</span>
+            
+            <div class="insight-card ${currentEmergencyFund >= targetEmergencyFund ? 'success' : 'warning'}">
+              <h6>💰 Current Fund</h6>
+              <p class="big-number">$${currentEmergencyFund.toLocaleString()}</p>
+              <p class="insight-detail">your emergency savings</p>
             </div>
-            <div class="status-item highlight">
-              <span class="label">Target Fund:</span>
-              <span class="value">$${targetEmergencyFund.toLocaleString()}</span>
+            
+            <div class="insight-card success">
+              <h6>🛡️ Target Fund</h6>
+              <p class="big-number">$${targetEmergencyFund.toLocaleString()}</p>
+              <p class="insight-detail">full protection goal</p>
             </div>
           </div>
         </div>
@@ -326,22 +334,29 @@ document.addEventListener("DOMContentLoaded", function () {
         ${gap > 0 ? `
           <div class="savings-plan">
             <h4>📈 Savings Plan to Target</h4>
-            <div class="plan-grid">
-              <div class="plan-item">
-                <span class="label">Amount Needed:</span>
-                <span class="value">$${gap.toLocaleString()}</span>
+            <div class="insight-cards">
+              <div class="insight-card warning">
+                <h6>💸 Amount Needed</h6>
+                <p class="big-number">$${gap.toLocaleString()}</p>
+                <p class="insight-detail">to reach your goal</p>
               </div>
-              <div class="plan-item">
-                <span class="label">Monthly Savings:</span>
-                <span class="value">$${savingsRate.toLocaleString()}</span>
+              
+              <div class="insight-card info">
+                <h6>📊 Monthly Savings</h6>
+                <p class="big-number">$${savingsRate.toLocaleString()}</p>
+                <p class="insight-detail">recommended amount</p>
               </div>
-              <div class="plan-item">
-                <span class="label">Time to Target:</span>
-                <span class="value">${monthsToTarget} months (${(monthsToTarget / 12).toFixed(1)} years)</span>
+              
+              <div class="insight-card success">
+                <h6>⏰ Time to Target</h6>
+                <p class="big-number">${monthsToTarget}</p>
+                <p class="insight-detail">months (${(monthsToTarget / 12).toFixed(1)} years)</p>
               </div>
-              <div class="plan-item">
-                <span class="label">Savings as % of Income:</span>
-                <span class="value">${((savingsRate / monthlyIncome) * 100).toFixed(1)}%</span>
+              
+              <div class="insight-card info">
+                <h6>📈 Savings Rate</h6>
+                <p class="big-number">${((savingsRate / monthlyIncome) * 100).toFixed(1)}%</p>
+                <p class="insight-detail">of monthly income</p>
               </div>
             </div>
           </div>
