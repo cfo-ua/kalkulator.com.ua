@@ -226,7 +226,7 @@ faq:
     <label>
       Current Weight (optional):
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="current-weight" min="70" max="500" step="0.1" placeholder="150" style="flex: 1;">
+        <input type="number" name="current-weight" min="30" max="500" step="0.1" placeholder="150" style="flex: 1;">
         <select name="weight-unit" style="width: 80px;">
           <option value="lbs">lbs</option>
           <option value="kg">kg</option>
