@@ -98,7 +98,7 @@ faq:
   <button type="button" id="add-trip">Add Trip</button>
   <div style="margin-top: 1em">
     <label for="check-date">Check date (today or future):</label>
-    <input type="date" id="check-date" value="{{ 'now' | date: '%Y-%m-%d' }}">
+    <input type="date" id="check-date">
   </div>
 </form>
 
