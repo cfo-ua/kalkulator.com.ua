@@ -154,7 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Apply skill level impacts
     const skillMultiplier = skillImpact[skillLevel];
     const adjustedWasteBuffer = wasteBuffer * skillMultiplier.wasteMultiplier;
-    const adjustedDuration = projectDuration * skillMultiplier.timeMultiplier;
+    const rawAdjustedDuration = projectDuration * skillMultiplier.timeMultiplier;
+    const adjustedDuration = Math.round(rawAdjustedDuration * 10) / 10;
 
     // Calculate material costs with waste buffer
     const materialWithWaste = baseMaterialCost * (1 + adjustedWasteBuffer);
@@ -266,10 +267,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateProjectDetails(projectType, area, quality, duration) {
     const project = projectCosts[projectType];
+    const formattedDuration = duration % 1 === 0 ? Math.round(duration) : duration;
     
     return {
       description: project.description,
-      estimatedTime: `${duration} days`,
+      estimatedTime: `${formattedDuration} days`,
       difficulty: getDifficultyLevel(projectType),
       keyMaterials: getKeyMaterials(projectType, quality),
       tips: getProjectTips(projectType)
@@ -388,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="insight-card info">
           <h6>⏱️ Project Duration</h6>
-          <div class="big-number">${data.adjustedDuration}</div>
+          <div class="big-number">${data.adjustedDuration % 1 === 0 ? Math.round(data.adjustedDuration) : data.adjustedDuration}</div>
           <p class="insight-detail">days estimated</p>
         </div>
       </div>
