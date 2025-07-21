@@ -23,10 +23,12 @@
               {% assign category_title = p.title %}
               {% assign category_url = p.url %}
               {% break %}
-            {% elsif lang == 'uk' and p.url contains '/categories/' and p.url contains category_id and p.url != '/en/' %}
-              {% assign category_title = p.title %}
-              {% assign category_url = p.url %}
-              {% break %}
+            {% elsif lang == 'uk' and p.url contains '/categories/' and p.url contains category_id %}
+              {% unless p.url contains '/en/' %}
+                {% assign category_title = p.title %}
+                {% assign category_url = p.url %}
+                {% break %}
+              {% endunless %}
             {% endif %}
           {% endif %}
         {% endfor %}
