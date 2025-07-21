@@ -125,7 +125,7 @@ faq:
     <input type="number" id="food-expenses" min="0" step="25" value="250" required>
     
     <label for="clothing">Clothing & Shoes ($):</label>
-    <input type="number" id="clothing" min="0" step="10" value="75" required>
+    <input type="number" id="clothing" min="0" step="1" value="75" required>
     
     <label for="healthcare">Healthcare (insurance, co-pays, etc.) ($):</label>
     <input type="number" id="healthcare" min="0" step="25" value="150" required>

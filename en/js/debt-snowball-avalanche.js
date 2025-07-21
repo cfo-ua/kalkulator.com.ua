@@ -354,41 +354,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="strategy-comparison">
           <h4>📊 Strategy Comparison</h4>
-          <div class="comparison-table">
-            <div class="comparison-header">
-              <div class="metric">Metric</div>
-              <div class="snowball">Debt Snowball</div>
-              <div class="avalanche">Debt Avalanche</div>
-              <div class="difference">Difference</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="metric">Payoff Time</div>
-              <div class="snowball">${snowball.years} years (${snowball.months} months)</div>
-              <div class="avalanche">${avalanche.years} years (${avalanche.months} months)</div>
-              <div class="difference ${timeSavings > 0 ? 'avalanche-better' : timeSavings < 0 ? 'snowball-better' : 'equal'}">
-                ${timeSavings > 0 ? `${timeSavings} months faster` : 
-                  timeSavings < 0 ? `${Math.abs(timeSavings)} months slower` : 'Same time'}
+          <div class="comparison-visual">
+            <div class="comparison-cards">
+              <div class="method-card snowball">
+                <div class="method-header">
+                  <h5>🎯 Debt Snowball</h5>
+                  <p class="method-subtitle">Smallest Balance First</p>
+                </div>
+                <div class="method-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Payoff Time</span>
+                    <span class="stat-value">${snowball.years} years</span>
+                    <span class="stat-detail">(${snowball.months} months)</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Total Interest</span>
+                    <span class="stat-value">$${snowball.totalInterest.toLocaleString()}</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Total Cost</span>
+                    <span class="stat-value">$${(totalDebt + snowball.totalInterest).toLocaleString()}</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">First Payoff</span>
+                    <span class="stat-value">Month ${snowball.payoffOrder[0]?.month || 'N/A'}</span>
+                  </div>
+                </div>
+                <div class="method-benefits">
+                  <h6>✅ Benefits:</h6>
+                  <ul>
+                    <li>Quick psychological wins</li>
+                    <li>Builds momentum</li>
+                    <li>Easier to stick with</li>
+                    <li>Simplifies decisions</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="method-card avalanche">
+                <div class="method-header">
+                  <h5>⚡ Debt Avalanche</h5>
+                  <p class="method-subtitle">Highest Interest First</p>
+                </div>
+                <div class="method-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Payoff Time</span>
+                    <span class="stat-value">${avalanche.years} years</span>
+                    <span class="stat-detail">(${avalanche.months} months)</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Total Interest</span>
+                    <span class="stat-value">$${avalanche.totalInterest.toLocaleString()}</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Total Cost</span>
+                    <span class="stat-value">$${(totalDebt + avalanche.totalInterest).toLocaleString()}</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">First Payoff</span>
+                    <span class="stat-value">Month ${avalanche.payoffOrder[0]?.month || 'N/A'}</span>
+                  </div>
+                </div>
+                <div class="method-benefits">
+                  <h6>✅ Benefits:</h6>
+                  <ul>
+                    <li>Mathematically optimal</li>
+                    <li>Saves most money</li>
+                    <li>Minimizes interest</li>
+                    <li>Most efficient</li>
+                  </ul>
+                </div>
               </div>
             </div>
             
-            <div class="comparison-row">
-              <div class="metric">Total Interest Paid</div>
-              <div class="snowball">$${snowball.totalInterest.toLocaleString()}</div>
-              <div class="avalanche">$${avalanche.totalInterest.toLocaleString()}</div>
-              <div class="difference ${interestSavings > 0 ? 'avalanche-better' : interestSavings < 0 ? 'snowball-better' : 'equal'}">
-                ${interestSavings > 0 ? `$${interestSavings.toLocaleString()} savings` : 
-                  interestSavings < 0 ? `$${Math.abs(interestSavings).toLocaleString()} more` : 'Same cost'}
-              </div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="metric">Total Cost</div>
-              <div class="snowball">$${(totalDebt + snowball.totalInterest).toLocaleString()}</div>
-              <div class="avalanche">$${(totalDebt + avalanche.totalInterest).toLocaleString()}</div>
-              <div class="difference ${interestSavings > 0 ? 'avalanche-better' : interestSavings < 0 ? 'snowball-better' : 'equal'}">
-                ${interestSavings > 0 ? `$${interestSavings.toLocaleString()} total savings` : 
-                  interestSavings < 0 ? `$${Math.abs(interestSavings).toLocaleString()} more total` : 'Same total cost'}
+            <div class="comparison-summary">
+              <div class="summary-card ${interestSavings > 0 ? 'avalanche-wins' : interestSavings < 0 ? 'snowball-wins' : 'tie'}">
+                <h6>💰 Financial Impact</h6>
+                <div class="impact-details">
+                  ${interestSavings > 0 ? `
+                    <p class="winner">Avalanche saves <strong>$${interestSavings.toLocaleString()}</strong> in interest</p>
+                    <p class="time-difference">${timeSavings > 0 ? `and completes ${timeSavings} months faster` : 
+                      timeSavings < 0 ? `but takes ${Math.abs(timeSavings)} months longer` : 'with same timeline'}</p>
+                  ` : interestSavings < 0 ? `
+                    <p class="winner">Snowball saves <strong>$${Math.abs(interestSavings).toLocaleString()}</strong> in interest</p>
+                    <p class="time-difference">${timeSavings < 0 ? `and completes ${Math.abs(timeSavings)} months faster` : 
+                      timeSavings > 0 ? `but takes ${timeSavings} months longer` : 'with same timeline'}</p>
+                  ` : `
+                    <p class="tie">Both methods cost the same</p>
+                    <p class="time-difference">${timeSavings === 0 ? 'and take the same time' : 
+                      timeSavings > 0 ? `Avalanche is ${timeSavings} months faster` : 
+                      `Snowball is ${Math.abs(timeSavings)} months faster`}</p>
+                  `}
+                </div>
               </div>
             </div>
           </div>
