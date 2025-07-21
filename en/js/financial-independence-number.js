@@ -355,21 +355,83 @@ document.addEventListener("DOMContentLoaded", function () {
         ${timeline ? `
           <div class="fire-timeline">
             <h4>📅 10-Year Projection</h4>
-            <div class="timeline-table">
-              <div class="timeline-header">
-                <span>Year</span>
-                <span>Age</span>
-                <span>Portfolio Value</span>
-                <span>FIRE Progress</span>
-              </div>
-              ${timeline.slice(0, 11).map(item => `
-                <div class="timeline-row ${item.progressToFIRE >= 100 ? 'fire-achieved' : ''}">
-                  <span>${item.year}</span>
-                  <span>${item.age}</span>
-                  <span>$${item.balance.toLocaleString()}</span>
-                  <span>${item.progressToFIRE.toFixed(1)}%${item.progressToFIRE >= 100 ? ' 🔥' : ''}</span>
+            <div class="timeline-visual">
+              <div class="timeline-chart">
+                <div class="chart-header">
+                  <h5>Portfolio Growth Visualization</h5>
+                  <p>Track your journey to financial independence</p>
                 </div>
-              `).join('')}
+                <div class="timeline-progress">
+                  <div class="progress-track">
+                    <div class="progress-indicator" style="width: ${Math.min(100, (currentSavings / fireNumber) * 100)}%"></div>
+                  </div>
+                  <div class="progress-labels">
+                    <span>Current: ${((currentSavings / fireNumber) * 100).toFixed(1)}%</span>
+                    <span>Target: $${fireNumber.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-table">
+                <div class="timeline-header">
+                  <span>📅 Year</span>
+                  <span>🎂 Age</span>
+                  <span>💰 Portfolio</span>
+                  <span>📊 Progress</span>
+                  <span>🔥 Status</span>
+                </div>
+                ${timeline.slice(0, 11).map((item, index) => {
+                  const isCurrentYear = index === 0;
+                  const isFireYear = item.progressToFIRE >= 100 && timeline[index - 1]?.progressToFIRE < 100;
+                  const progressWidth = Math.min(100, item.progressToFIRE);
+                  
+                  return `
+                    <div class="timeline-row ${item.progressToFIRE >= 100 ? 'fire-achieved' : ''} ${isCurrentYear ? 'current-year' : ''} ${isFireYear ? 'fire-year' : ''}">
+                      <span class="year-cell">${item.year}</span>
+                      <span class="age-cell">${item.age}</span>
+                      <span class="portfolio-cell">$${item.balance.toLocaleString()}</span>
+                      <span class="progress-cell">
+                        <div class="mini-progress">
+                          <div class="mini-progress-bar" style="width: ${progressWidth}%"></div>
+                          <span class="progress-text">${item.progressToFIRE.toFixed(1)}%</span>
+                        </div>
+                      </span>
+                      <span class="status-cell">
+                        ${item.progressToFIRE >= 100 ? '🔥 FIRE!' : 
+                          item.progressToFIRE >= 75 ? '🎯 Close' : 
+                          item.progressToFIRE >= 50 ? '📈 Halfway' : 
+                          item.progressToFIRE >= 25 ? '🌱 Growing' : '🚀 Building'}
+                      </span>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+              
+              <div class="timeline-insights">
+                <div class="insight-cards">
+                  <div class="insight-card ${timeToFIRE <= 10 ? 'success' : timeToFIRE <= 20 ? 'warning' : 'info'}">
+                    <h6>⏰ Time to FIRE</h6>
+                    <p class="big-number">${timeToFIRE === Infinity ? '∞' : timeToFIRE.toFixed(1)} years</p>
+                    <p class="insight-detail">
+                      ${timeToFIRE <= 10 ? 'You\'re on the fast track! 🚀' : 
+                        timeToFIRE <= 20 ? 'Good progress towards independence 👍' : 
+                        'Consider increasing savings rate 💪'}
+                    </p>
+                  </div>
+                  
+                  <div class="insight-card info">
+                    <h6>💵 Total Growth</h6>
+                    <p class="big-number">+$${((timeline[10]?.balance || 0) - currentSavings).toLocaleString()}</p>
+                    <p class="insight-detail">Expected growth over 10 years</p>
+                  </div>
+                  
+                  <div class="insight-card success">
+                    <h6>📈 Annual Growth</h6>
+                    <p class="big-number">${expectedReturn.toFixed(1)}%</p>
+                    <p class="insight-detail">Expected annual return</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ` : ''}

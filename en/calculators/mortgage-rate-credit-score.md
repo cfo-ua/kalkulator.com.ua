@@ -144,7 +144,7 @@ faq:
   <div class="form-section">
     <h3>Additional Costs</h3>
     <label for="property-tax">Annual Property Tax ($):</label>
-    <input type="number" id="property-tax" min="0" step="500" value="4200" required>
+    <input type="number" id="property-tax" min="0" step="1" value="4200" required>
     
     <label for="home-insurance">Annual Home Insurance ($):</label>
     <input type="number" id="home-insurance" min="0" step="100" value="1200" required>
