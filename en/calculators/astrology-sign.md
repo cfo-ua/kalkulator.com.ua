@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Astrology Sign Calculator by Birth Date"
-categories: [time-date, other]
+categories: [other]
 permalink: /en/calculators/astrology-sign/
 seo:
   title: "Astrology Sign Calculator — Find Your Zodiac Sign by Birth Date Online"

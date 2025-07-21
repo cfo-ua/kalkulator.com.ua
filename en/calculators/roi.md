@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "ROI Calculator — Return on Investment"
-categories: [financial, business]
+categories: [financial]
 permalink: /en/calculators/roi/
 seo:
   title: "ROI Calculator — Calculate Return on Investment Percentage Online"

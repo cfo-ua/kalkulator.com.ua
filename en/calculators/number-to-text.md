@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Number to Text Converter"
-categories: [financial, business]
+categories: [financial]
 permalink: /en/calculators/number-to-text/
 seo:
   title: "Number to Text Converter — Convert Numbers to Words, Number to Written Form"
