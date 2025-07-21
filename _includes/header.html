@@ -18,20 +18,20 @@
         {% assign category_url = '' %}
         {% comment %} Find the category page to get its title {% endcomment %}
         {% for p in site.pages %}
-          {% if p.category_id == category_id %}
-            {% if lang == 'en' and p.url contains '/en/' %}
+          {% if p.category_id == category_id and p.layout == 'category' %}
+            {% if lang == 'en' and p.url contains '/en/categories/' %}
               {% assign category_title = p.title %}
               {% assign category_url = p.url %}
               {% break %}
-            {% elsif lang == 'uk' and p.url contains '/categories/' and p.url contains category_id %}
+            {% elsif lang == 'uk' and p.url contains '/categories/' and p.url contains category_id and p.url != '/en/' %}
               {% assign category_title = p.title %}
               {% assign category_url = p.url %}
               {% break %}
             {% endif %}
           {% endif %}
         {% endfor %}
-        {% if category_url != '' %}
-          <a href="{{ category_url }}">{% if lang == 'en' %}← {{ category_title }}{% else %}← {{ category_title }}{% endif %}</a>
+        {% if category_url != '' and category_title != '' %}
+          <a href="{{ category_url }}">← {{ category_title }}</a>
         {% else %}
           <a href="{% if lang == 'en' %}/en/#categories{% else %}/#categories{% endif %}">{% if lang == 'en' %}← Categories{% else %}← Категорії{% endif %}</a>
         {% endif %}
