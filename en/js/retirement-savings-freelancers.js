@@ -192,32 +192,47 @@ document.addEventListener("DOMContentLoaded", function () {
             'You may need to adjust your savings strategy to meet your retirement goals.'}</p>
         </div>
 
-        <div class="result-grid">
-          <div class="result-item highlight">
-            <span class="label">Projected Retirement Fund:</span>
-            <span class="value">$${totalRetirementFund.toLocaleString()}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Required Fund (inflation-adjusted):</span>
-            <span class="value">$${inflationAdjustedFund.toLocaleString()}</span>
-          </div>
-          <div class="result-item ${shortfall > 0 ? 'shortage' : 'surplus'}">
-            <span class="label">${shortfall > 0 ? 'Shortfall:' : 'Surplus:'}</span>
-            <span class="value">$${Math.abs(shortfall).toLocaleString()}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Years to Retirement:</span>
-            <span class="value">${yearsToRetirement} years</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Income Replacement Ratio:</span>
-            <span class="value">${replacementRatio}%</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Target Annual Savings:</span>
-            <span class="value">$${targetAnnualContribution.toLocaleString()}</span>
+        <div class="retirement-metrics">
+          <div class="insight-cards">
+            <div class="insight-card ${isOnTrack ? 'success' : 'warning'}">
+              <h6>💰 Projected Fund</h6>
+              <p class="big-number">$${totalRetirementFund.toLocaleString()}</p>
+              <p class="insight-detail">at retirement</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>🎯 Required Fund</h6>
+              <p class="big-number">$${inflationAdjustedFund.toLocaleString()}</p>
+              <p class="insight-detail">inflation-adjusted</p>
+            </div>
+            
+            <div class="insight-card ${shortfall > 0 ? 'warning' : 'success'}">
+              <h6>${shortfall > 0 ? '⚠️ Shortfall' : '🎉 Surplus'}</h6>
+              <p class="big-number">$${Math.abs(shortfall).toLocaleString()}</p>
+              <p class="insight-detail">${shortfall > 0 ? 'needs attention' : 'above target'}</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>⏰ Time Left</h6>
+              <p class="big-number">${yearsToRetirement}</p>
+              <p class="insight-detail">years to retirement</p>
+            </div>
+            
+            <div class="insight-card ${replacementRatio >= 70 ? 'success' : replacementRatio >= 50 ? 'warning' : 'info'}">
+              <h6>📊 Replacement</h6>
+              <p class="big-number">${replacementRatio}%</p>
+              <p class="insight-detail">of current income</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>💸 Annual Savings</h6>
+              <p class="big-number">$${targetAnnualContribution.toLocaleString()}</p>
+              <p class="insight-detail">target contribution</p>
+            </div>
           </div>
         </div>
+
+        <div class="result-grid">
 
         ${shortfall > 0 ? `
           <div class="shortfall-solution">

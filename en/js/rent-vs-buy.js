@@ -98,6 +98,34 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
 
+        <div class="financial-insights">
+          <div class="insight-cards">
+            <div class="insight-card ${betterOption === 'investment' ? 'success' : 'warning'}">
+              <h6>🏆 Winner</h6>
+              <p class="big-number">${betterOption === 'investment' ? 'Invest' : 'Buy'}</p>
+              <p class="insight-detail">${betterOption === 'investment' ? 'rent & invest wins' : 'buying wins'}</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>💰 Advantage</h6>
+              <p class="big-number">$${Math.abs(difference).toLocaleString()}</p>
+              <p class="insight-detail">over ${years} years</p>
+            </div>
+            
+            <div class="insight-card ${rentToValueRatio <= 5 ? 'success' : rentToValueRatio <= 8 ? 'warning' : 'info'}">
+              <h6>📊 Rent-to-Value</h6>
+              <p class="big-number">${rentToValueRatio}%</p>
+              <p class="insight-detail">annual rent ratio</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>📈 Investment Rate</h6>
+              <p class="big-number">${annualInvestmentRate}%</p>
+              <p class="insight-detail">assumed return</p>
+            </div>
+          </div>
+        </div>
+
         <div class="result-grid">
           <div class="result-item">
             <span class="label">Property Price:</span>

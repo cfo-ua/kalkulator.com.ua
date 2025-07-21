@@ -148,32 +148,47 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
 
-        <div class="result-grid">
-          <div class="result-item highlight">
-            <span class="label">Total Trip Cost:</span>
-            <span class="value">$${grandTotal.toFixed(2)}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Cost Per Person:</span>
-            <span class="value">$${totalPerPerson.toFixed(2)}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Daily Budget (all travelers):</span>
-            <span class="value">$${dailyTotal.toFixed(2)}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Trip Duration:</span>
-            <span class="value">${duration} day${duration > 1 ? 's' : ''}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Number of Travelers:</span>
-            <span class="value">${travelers}</span>
-          </div>
-          <div class="result-item">
-            <span class="label">Emergency Buffer:</span>
-            <span class="value">$${emergencyAmount.toFixed(2)}</span>
+        <div class="budget-insights">
+          <div class="insight-cards">
+            <div class="insight-card success">
+              <h6>💰 Total Cost</h6>
+              <p class="big-number">$${grandTotal.toFixed(0)}</p>
+              <p class="insight-detail">complete trip budget</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>👤 Per Person</h6>
+              <p class="big-number">$${totalPerPerson.toFixed(0)}</p>
+              <p class="insight-detail">individual cost</p>
+            </div>
+            
+            <div class="insight-card ${dailyPerPerson <= 50 ? 'success' : dailyPerPerson <= 100 ? 'warning' : 'info'}">
+              <h6>📅 Daily Budget</h6>
+              <p class="big-number">$${dailyPerPerson.toFixed(0)}</p>
+              <p class="insight-detail">per person per day</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>⏰ Duration</h6>
+              <p class="big-number">${duration}</p>
+              <p class="insight-detail">day${duration > 1 ? 's' : ''} total</p>
+            </div>
+            
+            <div class="insight-card info">
+              <h6>👥 Travelers</h6>
+              <p class="big-number">${travelers}</p>
+              <p class="insight-detail">people going</p>
+            </div>
+            
+            <div class="insight-card warning">
+              <h6>🚨 Emergency Fund</h6>
+              <p class="big-number">$${emergencyAmount.toFixed(0)}</p>
+              <p class="insight-detail">safety buffer</p>
+            </div>
           </div>
         </div>
+
+        <div class="result-grid">
 
         <div class="cost-breakdown">
           <h4>📊 Cost Breakdown</h4>
