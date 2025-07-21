@@ -335,30 +335,41 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="key-numbers">
-          <div class="numbers-grid">
-            <div class="number-item highlight">
-              <span class="label">Required Retirement Fund:</span>
-              <span class="value">$${requiredRetirementFund.toLocaleString()}</span>
+          <div class="insight-cards">
+            <div class="insight-card success">
+              <h6>🎯 Required Fund</h6>
+              <p class="big-number">$${requiredRetirementFund.toLocaleString()}</p>
+              <p class="insight-detail">total retirement goal</p>
             </div>
-            <div class="number-item">
-              <span class="label">Current Savings (projected):</span>
-              <span class="value">$${currentSavingsAtRetirement.toLocaleString()}</span>
+            
+            <div class="insight-card info">
+              <h6>📊 Projected Savings</h6>
+              <p class="big-number">$${currentSavingsAtRetirement.toLocaleString()}</p>
+              <p class="insight-detail">at retirement age</p>
             </div>
-            <div class="number-item ${shortfall > 0 ? 'shortage' : 'surplus'}">
-              <span class="label">${shortfall > 0 ? 'Shortfall:' : 'Surplus:'}</span>
-              <span class="value">$${Math.abs(shortfall).toLocaleString()}</span>
+            
+            <div class="insight-card ${shortfall > 0 ? 'warning' : 'success'}">
+              <h6>${shortfall > 0 ? '⚠️ Shortfall' : '🎉 Surplus'}</h6>
+              <p class="big-number">$${Math.abs(shortfall).toLocaleString()}</p>
+              <p class="insight-detail">${shortfall > 0 ? 'additional needed' : 'above target'}</p>
             </div>
-            <div class="number-item">
-              <span class="label">Monthly Savings Needed:</span>
-              <span class="value">$${requiredMonthlySavings.toLocaleString()}</span>
+            
+            <div class="insight-card info">
+              <h6>💰 Monthly Target</h6>
+              <p class="big-number">$${requiredMonthlySavings.toLocaleString()}</p>
+              <p class="insight-detail">savings needed</p>
             </div>
-            <div class="number-item">
-              <span class="label">Required Savings Rate:</span>
-              <span class="value">${requiredSavingsRate.toFixed(1)}%</span>
+            
+            <div class="insight-card ${requiredSavingsRate <= 15 ? 'success' : requiredSavingsRate <= 25 ? 'warning' : 'info'}">
+              <h6>📈 Savings Rate</h6>
+              <p class="big-number">${requiredSavingsRate.toFixed(1)}%</p>
+              <p class="insight-detail">of income needed</p>
             </div>
-            <div class="number-item">
-              <span class="label">Withdrawal Rate:</span>
-              <span class="value">${(withdrawalRate * 100).toFixed(1)}%</span>
+            
+            <div class="insight-card info">
+              <h6>📉 Withdrawal Rate</h6>
+              <p class="big-number">${(withdrawalRate * 100).toFixed(1)}%</p>
+              <p class="insight-detail">sustainable rate</p>
             </div>
           </div>
         </div>

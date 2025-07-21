@@ -199,30 +199,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="key-metrics">
           <h4>📊 Key Investment Metrics</h4>
-          <div class="metrics-grid">
-            <div class="metric-item ${monthlyCashFlow > 0 ? 'positive' : 'negative'}">
-              <span class="metric-label">Monthly Cash Flow:</span>
-              <span class="metric-value">$${monthlyCashFlow.toFixed(2)}</span>
+          <div class="insight-cards">
+            <div class="insight-card ${monthlyCashFlow > 0 ? 'success' : 'warning'}">
+              <h6>💰 Monthly Cash Flow</h6>
+              <p class="big-number">${monthlyCashFlow >= 0 ? '+' : ''}$${monthlyCashFlow.toFixed(0)}</p>
+              <p class="insight-detail">${monthlyCashFlow > 0 ? 'positive cash flow' : 'negative cash flow'}</p>
             </div>
-            <div class="metric-item ${capRate >= 6 ? 'good' : 'poor'}">
-              <span class="metric-label">Cap Rate:</span>
-              <span class="metric-value">${capRate.toFixed(2)}%</span>
+            
+            <div class="insight-card ${capRate >= 6 ? 'success' : 'warning'}">
+              <h6>📈 Cap Rate</h6>
+              <p class="big-number">${capRate.toFixed(2)}%</p>
+              <p class="insight-detail">${capRate >= 6 ? 'strong return' : 'below target'}</p>
             </div>
-            <div class="metric-item ${cashOnCashReturn >= 8 ? 'good' : 'poor'}">
-              <span class="metric-label">Cash-on-Cash Return:</span>
-              <span class="metric-value">${cashOnCashReturn.toFixed(2)}%</span>
+            
+            <div class="insight-card ${cashOnCashReturn >= 8 ? 'success' : 'info'}">
+              <h6>💵 Cash-on-Cash</h6>
+              <p class="big-number">${cashOnCashReturn.toFixed(1)}%</p>
+              <p class="insight-detail">annual cash return</p>
             </div>
-            <div class="metric-item">
-              <span class="metric-label">Gross Rent Multiplier:</span>
-              <span class="metric-value">${grossRentMultiplier.toFixed(1)}</span>
+            
+            <div class="insight-card info">
+              <h6>🔢 Rent Multiplier</h6>
+              <p class="big-number">${grossRentMultiplier.toFixed(1)}</p>
+              <p class="insight-detail">price to rent ratio</p>
             </div>
-            <div class="metric-item ${onePercentRule >= 1 ? 'excellent' : onePercentRule >= 0.8 ? 'good' : 'poor'}">
-              <span class="metric-label">1% Rule:</span>
-              <span class="metric-value">${onePercentRule.toFixed(2)}%</span>
+            
+            <div class="insight-card ${onePercentRule >= 1 ? 'success' : onePercentRule >= 0.8 ? 'warning' : 'info'}">
+              <h6>📊 1% Rule</h6>
+              <p class="big-number">${onePercentRule.toFixed(2)}%</p>
+              <p class="insight-detail">${onePercentRule >= 1 ? 'excellent' : onePercentRule >= 0.8 ? 'good' : 'below target'}</p>
             </div>
-            <div class="metric-item">
-              <span class="metric-label">Total ROI (${holdPeriod} years):</span>
-              <span class="metric-value">${totalROI.toFixed(1)}%</span>
+            
+            <div class="insight-card ${totalROI >= 50 ? 'success' : 'info'}">
+              <h6>🎯 Total ROI</h6>
+              <p class="big-number">${totalROI.toFixed(1)}%</p>
+              <p class="insight-detail">${holdPeriod} year projection</p>
             </div>
           </div>
         </div>
