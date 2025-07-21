@@ -4,7 +4,7 @@ title: "Average Calculator"
 categories: [school]
 permalink: /en/calculators/mean/
 seo:
-  title: "Average Calculator Online — Calculate Mean of Numbers"
+  title: "Average Calculator Online  -  Calculate Mean of Numbers"
   description: "Calculate the arithmetic mean of a set of numbers online: enter numbers separated by commas, and the calculator will show the average. Perfect for school, statistics, and finance."
   keywords:
     - average calculator
@@ -50,7 +50,7 @@ faq:
   - question: Can I use this calculator for grades?
     answer: "Yes, simply enter all your scores for a subject or semester, and the calculator will show your average grade."
   - question: What happens if I enter incorrect data?
-    answer: "Make sure all numbers are separated by commas, without letters. For example: <code>2, 4.5, -1</code> — correct. <code>2; 4; text</code> — incorrect."
+    answer: "Make sure all numbers are separated by commas, without letters. For example: <code>2, 4.5, -1</code>  -  correct. <code>2; 4; text</code>  -  incorrect."
 ---
 <form id="mean-form" autocomplete="off">
   <label>

@@ -4,7 +4,7 @@ title: "Mental Health Self-Assessment Calculator"
 categories: [health]
 permalink: /en/calculators/mental-health-self-assessment/
 seo:
-  title: "Mental Health Self-Assessment Calculator — Comprehensive Mental Wellness Evaluation Tool"
+  title: "Mental Health Self-Assessment Calculator  -  Comprehensive Mental Wellness Evaluation Tool"
   description: "Evaluate your mental health with this comprehensive self-assessment calculator. Get insights into depression, anxiety, stress levels, and overall psychological wellbeing with personalized recommendations for mental health improvement."
   keywords:
     - mental health self assessment calculator

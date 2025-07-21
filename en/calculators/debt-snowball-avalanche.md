@@ -4,7 +4,7 @@ title: "Debt Snowball vs. Avalanche Calculator"
 categories: [financial]
 permalink: /en/calculators/debt-snowball-avalanche/
 seo:
-  title: "Debt Snowball vs Avalanche Calculator — Debt Payoff Strategy Comparison, Debt Elimination"
+  title: "Debt Snowball vs Avalanche Calculator  -  Debt Payoff Strategy Comparison, Debt Elimination"
   description: "Compare debt snowball vs avalanche methods. Calculate interest savings, payoff time, and motivation factors. Choose the best debt elimination strategy for your situation."
   keywords:
     - debt snowball calculator

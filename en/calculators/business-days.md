@@ -4,7 +4,7 @@ title: "Business Days Calculator"
 categories: [time-date]
 permalink: /en/calculators/business-days/
 seo:
-  title: "Business Days Calculator — Count Working Days and Weekends Between Dates"
+  title: "Business Days Calculator  -  Count Working Days and Weekends Between Dates"
   description: "Calculate business days, weekends, and total days between any two dates. Perfect for project planning, vacation scheduling, payroll calculations, and deadline management."
   keywords:
     - business days calculator
@@ -33,9 +33,9 @@ seo:
 
     <h3>What the Calculator Counts:</h3>
     <ul>
-      <li><strong>Business days</strong> — Monday through Friday</li>
-      <li><strong>Weekend days</strong> — Saturday and Sunday</li>
-      <li><strong>Total calendar days</strong> — complete count including both dates</li>
+      <li><strong>Business days</strong>  -  Monday through Friday</li>
+      <li><strong>Weekend days</strong>  -  Saturday and Sunday</li>
+      <li><strong>Total calendar days</strong>  -  complete count including both dates</li>
     </ul>
 
     <p><strong>Note:</strong> Official holidays are not currently factored into the calculation.</p>
@@ -71,7 +71,7 @@ seo:
       <li><strong>Date range flexibility:</strong> Works with any date range, past or future</li>
     </ul>
 
-    <p>Plan your time effectively with our comprehensive business days calculator — essential for professional planning and scheduling.</p>
+    <p>Plan your time effectively with our comprehensive business days calculator  -  essential for professional planning and scheduling.</p>
 scripts:
   - /en/js/business-days.js
 faq:
@@ -88,7 +88,7 @@ faq:
   - question: How accurate is this for international business?
     answer: "The calculator uses the standard Monday-Friday business week common in most countries. However, holiday dates vary by country and are not included."
   - question: Can I calculate multiple months at once?
-    answer: "Yes, you can enter any date range — days, weeks, months, or even years. The calculator will count all business days in that entire period."
+    answer: "Yes, you can enter any date range  -  days, weeks, months, or even years. The calculator will count all business days in that entire period."
   - question: Is this useful for academic calendar planning?
     answer: "Yes, educators and students use this tool to calculate school days, training periods, semester lengths, and academic project timelines."
 ---

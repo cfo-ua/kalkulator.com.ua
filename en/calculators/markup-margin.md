@@ -4,7 +4,7 @@ title: "Markup and Margin Calculator"
 categories: [business]
 permalink: /en/calculators/markup-margin/
 seo:
-  title: "Markup vs Margin Calculator — Profit Calculation Tool for Business Pricing"
+  title: "Markup vs Margin Calculator  -  Profit Calculation Tool for Business Pricing"
   description: "Calculate markup, margin, profit, cost, or selling price by entering any two parameters. Essential business tool for pricing strategies, retail management, and profitability analysis."
   keywords:
     - markup calculator
@@ -29,12 +29,12 @@ seo:
     - pricing optimization tool
   content: |
     <h2>Markup and Margin Calculator</h2>
-    <p>This comprehensive business calculator helps you quickly calculate key financial metrics — <strong>markup</strong>, <strong>margin</strong>, <strong>profit</strong>, <strong>cost</strong>, and <strong>selling price</strong>. Simply enter any <strong>2 out of 4 parameters</strong>, and the calculator instantly computes the rest.</p>
+    <p>This comprehensive business calculator helps you quickly calculate key financial metrics  -  <strong>markup</strong>, <strong>margin</strong>, <strong>profit</strong>, <strong>cost</strong>, and <strong>selling price</strong>. Simply enter any <strong>2 out of 4 parameters</strong>, and the calculator instantly computes the rest.</p>
 
     <h3>Understanding Markup vs Margin</h3>
     <ul>
-      <li><strong>Margin</strong> — profit as a percentage of selling price</li>
-      <li><strong>Markup</strong> — profit as a percentage of cost price</li>
+      <li><strong>Margin</strong>  -  profit as a percentage of selling price</li>
+      <li><strong>Markup</strong>  -  profit as a percentage of cost price</li>
     </ul>
 
     <p>While often confused, the formulas are different:</p>
@@ -64,13 +64,13 @@ seo:
 
     <h3>Perfect for Business Professionals:</h3>
     <ul>
-      <li><strong>Retailers and e-commerce</strong> — product pricing strategies</li>
-      <li><strong>Wholesale distributors</strong> — margin optimization</li>
-      <li><strong>Sales managers</strong> — pricing guidelines and profitability analysis</li>
-      <li><strong>Financial analysts</strong> — cost and profit modeling</li>
-      <li><strong>Entrepreneurs</strong> — business plan financial projections</li>
-      <li><strong>Accountants</strong> — financial reporting and analysis</li>
-      <li><strong>Business consultants</strong> — pricing strategy recommendations</li>
+      <li><strong>Retailers and e-commerce</strong>  -  product pricing strategies</li>
+      <li><strong>Wholesale distributors</strong>  -  margin optimization</li>
+      <li><strong>Sales managers</strong>  -  pricing guidelines and profitability analysis</li>
+      <li><strong>Financial analysts</strong>  -  cost and profit modeling</li>
+      <li><strong>Entrepreneurs</strong>  -  business plan financial projections</li>
+      <li><strong>Accountants</strong>  -  financial reporting and analysis</li>
+      <li><strong>Business consultants</strong>  -  pricing strategy recommendations</li>
     </ul>
 
     <h3>Real-World Examples:</h3>
@@ -114,7 +114,7 @@ seo:
       <li><strong>Consulting services:</strong> 15-25% net margin</li>
     </ul>
 
-    <p>Essential tool for strategic pricing decisions — perfect for entrepreneurs, sales teams, and financial professionals seeking optimal profitability.</p>
+    <p>Essential tool for strategic pricing decisions  -  perfect for entrepreneurs, sales teams, and financial professionals seeking optimal profitability.</p>
 scripts:
   - /en/js/markup-margin.js
 faq:
@@ -128,7 +128,7 @@ faq:
     answer: "Enter any two parameters (e.g., price and cost), and the calculator will automatically compute the other values."
   - question: "Can I convert between markup and margin?"
     answer: "Yes! The calculator shows both values when you enter cost and price, making it easy to see the relationship between markup and margin."
-  - question: "Which is better to use — markup or margin?"
+  - question: "Which is better to use  -  markup or margin?"
     answer: "Both are useful. Margin shows profit as % of revenue (useful for financial analysis), while markup shows profit as % of cost (useful for pricing decisions)."
   - question: "How do I set competitive pricing?"
     answer: "Research competitor prices, determine your costs, then use this calculator to find what margin/markup you'll achieve, or set target margins to find optimal pricing."

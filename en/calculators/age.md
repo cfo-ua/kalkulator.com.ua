@@ -4,7 +4,7 @@ title: "Age Calculator Online"
 categories: [time-date]
 permalink: /en/calculators/age/
 seo:
-  title: "Age Calculator — Calculate Exact Age from Date of Birth Online"
+  title: "Age Calculator  -  Calculate Exact Age from Date of Birth Online"
   description: "Calculate your exact age in years, months, and days instantly. Perfect for school enrollment, pension applications, medical forms, insurance documents, and official paperwork."
   keywords:
     - age calculator
@@ -62,7 +62,7 @@ seo:
       <li><strong>No registration required:</strong> Use instantly without creating accounts</li>
     </ul>
 
-    <p>The calculator automatically handles leap years, month variations, and day differences. All calculations are performed locally in your browser — no personal data is transmitted or stored.</p>
+    <p>The calculator automatically handles leap years, month variations, and day differences. All calculations are performed locally in your browser  -  no personal data is transmitted or stored.</p>
 scripts:
   - /en/js/age.js
 faq:
@@ -71,7 +71,7 @@ faq:
   - question: What date format should I use?
     answer: "Format: YYYY-MM-DD (for example, 2005-03-25). You can also select the date using the calendar picker."
   - question: Can I calculate a child's or baby's age?
-    answer: "Absolutely! The calculator is perfect for determining the age of infants and children — results show the exact number of months and days, which is crucial for pediatric care."
+    answer: "Absolutely! The calculator is perfect for determining the age of infants and children  -  results show the exact number of months and days, which is crucial for pediatric care."
   - question: Can I use this calculator to check pension age eligibility?
     answer: "Yes, many people use this tool to verify when they reach retirement age or to calculate years of service for pension applications."
   - question: Can I check my age on a specific date in the past or future?

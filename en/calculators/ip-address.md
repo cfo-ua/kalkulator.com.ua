@@ -1,10 +1,10 @@
 ---
 layout: calculator
-title: "What Is My IP Address — Check Your IP Address Online"
+title: "What Is My IP Address  -  Check Your IP Address Online"
 categories: [other]
 permalink: /en/calculators/ip-address/
 seo:
-  title: "What Is My IP Address — Check Your IP Address Online"
+  title: "What Is My IP Address  -  Check Your IP Address Online"
   description: "Find your IP address, country, city, ISP, and connection type. Simple online service to check IP on computer or mobile device with geolocation information."
   keywords:
     - what is my ip address
@@ -34,10 +34,10 @@ seo:
     <h3>What You'll See:</h3>
     <ul>
       <li><strong>IP Address:</strong> Your unique identifier on the internet</li>
-      <li><strong>Country, Region, City:</strong> Determined by IP geolocation — may be approximate</li>
+      <li><strong>Country, Region, City:</strong> Determined by IP geolocation  -  may be approximate</li>
       <li><strong>ISP (Internet Service Provider):</strong> The company providing your internet access</li>
-      <li><strong>ASN:</strong> Autonomous System Number — network block identifier belonging to your ISP</li>
-      <li><strong>IP Version:</strong> IPv4 or IPv6 — the type of address used for your connection</li>
+      <li><strong>ASN:</strong> Autonomous System Number  -  network block identifier belonging to your ISP</li>
+      <li><strong>IP Version:</strong> IPv4 or IPv6  -  the type of address used for your connection</li>
       <li><strong>Network:</strong> IP address range your IP belongs to (CIDR notation)</li>
     </ul>
     
@@ -81,7 +81,7 @@ faq:
   - question: What is an IP address?
     answer: "An IP address is a unique identifier for a device on the internet. It can be dynamic or static, public or private."
   - question: How do I find my computer's IP address?
-    answer: "Simply open this page — you'll see your IP and approximate location automatically."
+    answer: "Simply open this page  -  you'll see your IP and approximate location automatically."
   - question: What is IP geolocation?
     answer: "It's determining your approximate location (country, city) using your IP address."
   - question: Why might my IP change?

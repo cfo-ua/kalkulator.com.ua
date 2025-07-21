@@ -4,7 +4,7 @@ title: "Small Business Loan Eligibility Calculator"
 categories: [business]
 permalink: /en/calculators/small-business-loan-eligibility/
 seo:
-  title: "Small Business Loan Eligibility Calculator — Check Qualification Online"
+  title: "Small Business Loan Eligibility Calculator  -  Check Qualification Online"
   description: "Free small business loan eligibility calculator. Check loan qualification, estimate approval chances, and compare loan options based on credit score, revenue, and business profile. Get personalized funding recommendations."
   keywords:
     - small business loan calculator
@@ -98,22 +98,22 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Multi-loan assessment</strong> — evaluate 10+ loan types simultaneously</li>
-      <li><strong>Qualification scoring</strong> — probability-based approval estimates</li>
-      <li><strong>Personalized recommendations</strong> — best-fit loan products</li>
-      <li><strong>Improvement suggestions</strong> — areas to strengthen before applying</li>
-      <li><strong>Documentation checklist</strong> — required paperwork by loan type</li>
+      <li><strong>Multi-loan assessment</strong>  -  evaluate 10+ loan types simultaneously</li>
+      <li><strong>Qualification scoring</strong>  -  probability-based approval estimates</li>
+      <li><strong>Personalized recommendations</strong>  -  best-fit loan products</li>
+      <li><strong>Improvement suggestions</strong>  -  areas to strengthen before applying</li>
+      <li><strong>Documentation checklist</strong>  -  required paperwork by loan type</li>
     </ul>
 
     <h3>Perfect for Business Owners:</h3>
     <ul>
-      <li><strong>Startup entrepreneurs</strong> — new businesses seeking initial funding</li>
-      <li><strong>Growing companies</strong> — expansion and working capital needs</li>
-      <li><strong>Established businesses</strong> — equipment purchases and refinancing</li>
-      <li><strong>Service providers</strong> — professional service businesses</li>
-      <li><strong>Retail operations</strong> — inventory and seasonal financing</li>
-      <li><strong>Manufacturing firms</strong> — equipment and facility financing</li>
-      <li><strong>Franchise owners</strong> — franchise fee and startup costs</li>
+      <li><strong>Startup entrepreneurs</strong>  -  new businesses seeking initial funding</li>
+      <li><strong>Growing companies</strong>  -  expansion and working capital needs</li>
+      <li><strong>Established businesses</strong>  -  equipment purchases and refinancing</li>
+      <li><strong>Service providers</strong>  -  professional service businesses</li>
+      <li><strong>Retail operations</strong>  -  inventory and seasonal financing</li>
+      <li><strong>Manufacturing firms</strong>  -  equipment and facility financing</li>
+      <li><strong>Franchise owners</strong>  -  franchise fee and startup costs</li>
     </ul>
 
     <h3>Funding Use Cases:</h3>
@@ -145,7 +145,7 @@ seo:
       <li><strong>Equipment loans:</strong> 650+ credit, equipment as collateral</li>
     </ul>
 
-    <p>Make informed funding decisions and increase your loan approval chances with our comprehensive eligibility assessment tool — essential for successful business financing.</p>
+    <p>Make informed funding decisions and increase your loan approval chances with our comprehensive eligibility assessment tool  -  essential for successful business financing.</p>
 scripts:
   - /en/js/small-business-loan-eligibility.js
 faq:

@@ -18,7 +18,7 @@ seo:
     - physics tools
   content: |
     <h2>Energy Conservation Calculator</h2>
-    <p>Enter object mass (in kg), height (in meters) and velocity (in m/s) — the calculator will compute potential, kinetic and total mechanical energy.</p>
+    <p>Enter object mass (in kg), height (in meters) and velocity (in m/s)  -  the calculator will compute potential, kinetic and total mechanical energy.</p>
     
     <h3>Types of mechanical energy:</h3>
     <ul>
@@ -54,7 +54,7 @@ faq:
   - question: What is kinetic energy?
     answer: "Energy of motion. Formula: KE = ½mv²."
   - question: What value is used for g?
-    answer: "This calculator uses g = 9.81 m/s² — standard gravitational acceleration on Earth's surface."
+    answer: "This calculator uses g = 9.81 m/s²  -  standard gravitational acceleration on Earth's surface."
   - question: When is mechanical energy conserved?
     answer: "When no non-conservative forces (like friction or air resistance) act on the system."
 ---

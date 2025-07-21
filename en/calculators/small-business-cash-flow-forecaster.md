@@ -4,7 +4,7 @@ title: "Small Business Cash Flow Forecaster"
 categories: [business]
 permalink: /en/calculators/small-business-cash-flow-forecaster/
 seo:
-  title: "Small Business Cash Flow Forecaster — 12-Month Cash Flow Projection Tool"
+  title: "Small Business Cash Flow Forecaster  -  12-Month Cash Flow Projection Tool"
   description: "Free small business cash flow forecaster. Create 12-month cash flow projections, identify cash gaps, and plan working capital needs. Optimize cash flow management with seasonal analysis."
   keywords:
     - small business cash flow calculator
@@ -75,33 +75,33 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>12-month projections</strong> — detailed monthly cash flow analysis</li>
-      <li><strong>Seasonal modeling</strong> — account for business cycles and trends</li>
-      <li><strong>Scenario planning</strong> — best case, worst case, and likely scenarios</li>
-      <li><strong>Cash gap identification</strong> — highlight months with negative cash flow</li>
-      <li><strong>Working capital analysis</strong> — optimize inventory and receivables</li>
-      <li><strong>Financing recommendations</strong> — identify funding needs and timing</li>
+      <li><strong>12-month projections</strong>  -  detailed monthly cash flow analysis</li>
+      <li><strong>Seasonal modeling</strong>  -  account for business cycles and trends</li>
+      <li><strong>Scenario planning</strong>  -  best case, worst case, and likely scenarios</li>
+      <li><strong>Cash gap identification</strong>  -  highlight months with negative cash flow</li>
+      <li><strong>Working capital analysis</strong>  -  optimize inventory and receivables</li>
+      <li><strong>Financing recommendations</strong>  -  identify funding needs and timing</li>
     </ul>
 
     <h3>Perfect for Business Types:</h3>
     <ul>
-      <li><strong>Retail businesses</strong> — manage seasonal inventory and sales cycles</li>
-      <li><strong>Service companies</strong> — project client payment timing and capacity</li>
-      <li><strong>Manufacturing firms</strong> — plan production cycles and supplier payments</li>
-      <li><strong>Restaurants</strong> — handle seasonal variations and food costs</li>
-      <li><strong>Construction companies</strong> — manage project-based cash flows</li>
-      <li><strong>Professional services</strong> — plan for capacity and billing cycles</li>
-      <li><strong>E-commerce businesses</strong> — optimize inventory and payment processing</li>
+      <li><strong>Retail businesses</strong>  -  manage seasonal inventory and sales cycles</li>
+      <li><strong>Service companies</strong>  -  project client payment timing and capacity</li>
+      <li><strong>Manufacturing firms</strong>  -  plan production cycles and supplier payments</li>
+      <li><strong>Restaurants</strong>  -  handle seasonal variations and food costs</li>
+      <li><strong>Construction companies</strong>  -  manage project-based cash flows</li>
+      <li><strong>Professional services</strong>  -  plan for capacity and billing cycles</li>
+      <li><strong>E-commerce businesses</strong>  -  optimize inventory and payment processing</li>
     </ul>
 
     <h3>Strategic Applications:</h3>
     <ul>
-      <li><strong>Bank loan applications</strong> — demonstrate cash flow capacity</li>
-      <li><strong>Investor presentations</strong> — show financial planning discipline</li>
-      <li><strong>Budget planning</strong> — allocate resources based on cash availability</li>
-      <li><strong>Supplier negotiations</strong> — optimize payment terms and timing</li>
-      <li><strong>Growth planning</strong> — ensure adequate cash for expansion</li>
-      <li><strong>Crisis management</strong> — identify and address cash flow problems early</li>
+      <li><strong>Bank loan applications</strong>  -  demonstrate cash flow capacity</li>
+      <li><strong>Investor presentations</strong>  -  show financial planning discipline</li>
+      <li><strong>Budget planning</strong>  -  allocate resources based on cash availability</li>
+      <li><strong>Supplier negotiations</strong>  -  optimize payment terms and timing</li>
+      <li><strong>Growth planning</strong>  -  ensure adequate cash for expansion</li>
+      <li><strong>Crisis management</strong>  -  identify and address cash flow problems early</li>
     </ul>
 
     <h3>Cash Flow Optimization Strategies:</h3>
@@ -140,7 +140,7 @@ seo:
       <li><strong>Delayed supplier payments</strong> and credit limit utilization</li>
     </ul>
 
-    <p>Master your cash flow management and ensure business financial stability with our comprehensive forecasting tool — essential for sustainable growth and operational success.</p>
+    <p>Master your cash flow management and ensure business financial stability with our comprehensive forecasting tool  -  essential for sustainable growth and operational success.</p>
 scripts:
   - /en/js/small-business-cash-flow-forecaster.js
 faq:

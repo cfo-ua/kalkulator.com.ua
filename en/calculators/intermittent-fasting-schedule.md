@@ -4,7 +4,7 @@ title: "Intermittent Fasting Schedule Calculator"
 categories: [health]
 permalink: /en/calculators/intermittent-fasting-schedule/
 seo:
-  title: "Intermittent Fasting Schedule Calculator — Personalized IF Plan Generator for Optimal Health Benefits"
+  title: "Intermittent Fasting Schedule Calculator  -  Personalized IF Plan Generator for Optimal Health Benefits"
   description: "Create your personalized intermittent fasting schedule with this comprehensive calculator. Choose from 16:8, 18:6, OMAD, 5:2 and other IF methods based on your lifestyle, goals, and preferences for sustainable weight loss and health benefits."
   keywords:
     - intermittent fasting schedule calculator

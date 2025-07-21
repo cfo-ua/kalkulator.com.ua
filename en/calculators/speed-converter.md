@@ -4,7 +4,7 @@ title: "Speed Converter Online"
 categories: [conversion]
 permalink: /en/calculators/speed-converter/
 seo:
-  title: "Speed Converter — km/h, m/s, mph, knots | Online Calculator"
+  title: "Speed Converter  -  km/h, m/s, mph, knots | Online Calculator"
   description: "Online calculator for speed conversion: kilometers per hour, meters per second, miles, knots, ft/s. Convenient for transport, aviation, sports and education."
   keywords:
     - speed converter

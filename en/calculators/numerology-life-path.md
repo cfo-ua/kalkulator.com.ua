@@ -4,7 +4,7 @@ title: "Numerology Life Path Number Calculator"
 categories: [other]
 permalink: /en/calculators/numerology-life-path/
 seo:
-  title: "Numerology Life Path Number Calculator — Find Your Life Path Number Free"
+  title: "Numerology Life Path Number Calculator  -  Find Your Life Path Number Free"
   description: "Calculate your numerology life path number with our free online calculator. Discover your life purpose, personality traits, and destiny based on your birth date. Complete guide to life path numbers 1-9, 11, 22, 33."
   keywords:
     - numerology life path calculator

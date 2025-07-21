@@ -4,7 +4,7 @@ title: "Social Media Ad Spend Optimizer"
 categories: [business]
 permalink: /en/calculators/social-media-ad-spend-optimizer/
 seo:
-  title: "Social Media Ad Spend Optimizer — Maximize ROI Across Platforms"
+  title: "Social Media Ad Spend Optimizer  -  Maximize ROI Across Platforms"
   description: "Free social media advertising spend optimizer. Calculate optimal budget allocation, ROAS, and CAC across Facebook, Google, Instagram, and more. Maximize marketing ROI with data-driven ad spend distribution."
   keywords:
     - social media ad spend calculator
@@ -76,23 +76,23 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Multi-platform analysis</strong> — compare performance across all channels</li>
-      <li><strong>Budget optimization</strong> — recommend optimal spend allocation</li>
-      <li><strong>ROI maximization</strong> — identify highest-performing platforms</li>
-      <li><strong>Audience overlap analysis</strong> — avoid redundant targeting</li>
-      <li><strong>Seasonal adjustments</strong> — account for demand fluctuations</li>
-      <li><strong>Scaling recommendations</strong> — growth strategies for successful campaigns</li>
+      <li><strong>Multi-platform analysis</strong>  -  compare performance across all channels</li>
+      <li><strong>Budget optimization</strong>  -  recommend optimal spend allocation</li>
+      <li><strong>ROI maximization</strong>  -  identify highest-performing platforms</li>
+      <li><strong>Audience overlap analysis</strong>  -  avoid redundant targeting</li>
+      <li><strong>Seasonal adjustments</strong>  -  account for demand fluctuations</li>
+      <li><strong>Scaling recommendations</strong>  -  growth strategies for successful campaigns</li>
     </ul>
 
     <h3>Perfect for Business Types:</h3>
     <ul>
-      <li><strong>E-commerce retailers</strong> — product promotion and sales optimization</li>
-      <li><strong>SaaS companies</strong> — lead generation and trial conversions</li>
-      <li><strong>Local businesses</strong> — location-based targeting and foot traffic</li>
-      <li><strong>B2B services</strong> — professional targeting and lead qualification</li>
-      <li><strong>Content creators</strong> — audience building and monetization</li>
-      <li><strong>App developers</strong> — user acquisition and engagement campaigns</li>
-      <li><strong>Professional services</strong> — thought leadership and client acquisition</li>
+      <li><strong>E-commerce retailers</strong>  -  product promotion and sales optimization</li>
+      <li><strong>SaaS companies</strong>  -  lead generation and trial conversions</li>
+      <li><strong>Local businesses</strong>  -  location-based targeting and foot traffic</li>
+      <li><strong>B2B services</strong>  -  professional targeting and lead qualification</li>
+      <li><strong>Content creators</strong>  -  audience building and monetization</li>
+      <li><strong>App developers</strong>  -  user acquisition and engagement campaigns</li>
+      <li><strong>Professional services</strong>  -  thought leadership and client acquisition</li>
     </ul>
 
     <h3>Campaign Objectives Optimization:</h3>
@@ -153,7 +153,7 @@ seo:
       <li><strong>Budget overspend:</strong> poor bid management, uncontrolled scaling</li>
     </ul>
 
-    <p>Transform your social media advertising performance and achieve maximum ROI with our comprehensive ad spend optimization tool — essential for efficient digital marketing and sustainable growth.</p>
+    <p>Transform your social media advertising performance and achieve maximum ROI with our comprehensive ad spend optimization tool  -  essential for efficient digital marketing and sustainable growth.</p>
 scripts:
   - /en/js/social-media-ad-spend-optimizer.js
 faq:

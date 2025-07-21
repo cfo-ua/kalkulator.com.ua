@@ -1,11 +1,11 @@
 ---
 layout: calculator
-title: "Internet Speed Test — Online Download Speed Checker"
+title: "Internet Speed Test  -  Online Download Speed Checker"
 categories: [other]
 permalink: /en/calculators/internet-speed-test/
 seo:
-  title: "Internet Speed Test Online — Check Download Speed in Mbps"
-  description: "Online internet speed test — check your download speed and get connection quality assessment. Fast and accurate measurement in Mbps directly in your browser."
+  title: "Internet Speed Test Online  -  Check Download Speed in Mbps"
+  description: "Online internet speed test  -  check your download speed and get connection quality assessment. Fast and accurate measurement in Mbps directly in your browser."
   keywords:
     - internet speed test
     - speed test online

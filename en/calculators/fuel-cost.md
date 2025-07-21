@@ -4,7 +4,7 @@ title: "Fuel Cost Calculator"
 categories: [other]
 permalink: /en/calculators/fuel-cost/
 seo:
-  title: "Fuel Cost Calculator — Trip Cost, Mileage, Consumption, Price Calculator"
+  title: "Fuel Cost Calculator  -  Trip Cost, Mileage, Consumption, Price Calculator"
   description: "Dynamic fuel calculator: enter any two or three values (consumption, mileage, liters, price, or total cost) and get accurate calculations for the rest. Simple and flexible tool for drivers and businesses."
   keywords:
     - fuel cost calculator
@@ -31,7 +31,7 @@ seo:
     <h2>Fuel Cost Calculator</h2>
     <p>This online calculator allows you to calculate trip cost, fuel consumption, amount of fuel needed, or mileage. Enter two or three known values, and the calculator will automatically determine the others.</p>
     <ul>
-      <li>🔁 Dynamic calculations: enter 2 or 3 values — get the rest</li>
+      <li>🔁 Dynamic calculations: enter 2 or 3 values  -  get the rest</li>
       <li>📊 Supports all common scenarios: from expenses to budget planning</li>
       <li>✅ Simple to use and adaptive tool</li>
     </ul>
@@ -57,9 +57,9 @@ seo:
 
     <h3>Example Scenarios</h3>
     <ul>
-      <li><em>"I'm driving 500 km, my car uses 8L/100km, fuel costs $1.50/L — what's the total cost?"</em></li>
-      <li><em>"I have $50 for fuel at $1.40/L — how many liters can I buy?"</em></li>
-      <li><em>"I used 45 liters for a 600 km trip — what's my fuel consumption?"</em></li>
+      <li><em>"I'm driving 500 km, my car uses 8L/100km, fuel costs $1.50/L  -  what's the total cost?"</em></li>
+      <li><em>"I have $50 for fuel at $1.40/L  -  how many liters can I buy?"</em></li>
+      <li><em>"I used 45 liters for a 600 km trip  -  what's my fuel consumption?"</em></li>
     </ul>
 
     <p>Perfect for personal use, business travel, logistics companies, taxi drivers, and anyone planning fuel expenses.</p>
@@ -69,15 +69,15 @@ faq:
   - question: "How does this calculator work?"
     answer: "You can enter any three values (for example, consumption, mileage, and price), or just two if you only want to know the amount of fuel or cost. The calculator automatically determines what can be calculated and provides the answer."
   - question: "Do I have to enter exactly three parameters?"
-    answer: "No. If you only want to know how many liters of fuel you'll get for a specific amount — just enter two values: the amount and price per liter."
+    answer: "No. If you only want to know how many liters of fuel you'll get for a specific amount  -  just enter two values: the amount and price per liter."
   - question: "What happens if the data conflicts with each other?"
     answer: "If the entered values don't allow for correct calculation, the calculator will notify you and clear incorrect fields to avoid confusion."
   - question: "Can I use this calculator for business analysis?"
     answer: "Yes. It's especially useful for logistics companies, fleet operators, taxi drivers, and anyone planning fuel expenses for business purposes."
   - question: "Are decimal values supported?"
-    answer: "Yes, you can enter values with decimal points — the calculator will automatically recognize them."
-  - question: "Are other expenses considered — like taxes?"
-    answer: "No. The calculator is based solely on basic parameters — without considering taxes, service fees, or other additional costs."
+    answer: "Yes, you can enter values with decimal points  -  the calculator will automatically recognize them."
+  - question: "Are other expenses considered  -  like taxes?"
+    answer: "No. The calculator is based solely on basic parameters  -  without considering taxes, service fees, or other additional costs."
   - question: "What fuel consumption is considered good?"
     answer: "Typical passenger cars consume 6-12 L/100km. Compact cars: 5-8 L/100km, SUVs: 8-15 L/100km, trucks: 15-40 L/100km depending on load and conditions."
   - question: "Can I calculate costs for electric vehicles?"

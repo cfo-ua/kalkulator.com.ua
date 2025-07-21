@@ -4,7 +4,7 @@ title: "Derivative Calculator"
 categories: [school]
 permalink: /en/calculators/derivative/
 seo:
-  title: "Derivative Calculator Online — Find Derivative of Expression"
+  title: "Derivative Calculator Online  -  Find Derivative of Expression"
   description: "Calculate the derivative of any function online: polynomials, trigonometric, logarithmic, exponential expressions. Supports sin, log, powers, fractions, abs."
   keywords:
     - derivative calculator
@@ -25,8 +25,8 @@ seo:
     - trigonometry
     - school calculator
   content: |
-    <h2>Find Derivative Online — Fast, Free and Accurate</h2>
-    <p>This <strong>online derivative calculator</strong> allows you to easily and quickly find the derivative of any expression. Simply enter the function — the calculator will instantly find its derivative and display the result in a convenient format.</p>
+    <h2>Find Derivative Online  -  Fast, Free and Accurate</h2>
+    <p>This <strong>online derivative calculator</strong> allows you to easily and quickly find the derivative of any expression. Simply enter the function  -  the calculator will instantly find its derivative and display the result in a convenient format.</p>
     
     <h3>What is a derivative?</h3>
     <p>A derivative shows how fast a function's value changes. In school mathematics, it's the foundation for analyzing graphs, finding maxima/minima, velocity in physics, tangent slopes, etc.</p>
@@ -34,7 +34,7 @@ seo:
     <h3>Who will find this online derivative calculator useful?</h3>
     <ul>
       <li>Students for checking algebra, calculus and exam problems.</li>
-      <li>Teachers — for creating examples and checking answers.</li>
+      <li>Teachers  -  for creating examples and checking answers.</li>
       <li>Anyone who wants to <strong>find function derivative online</strong> quickly and error-free.</li>
     </ul>
     
@@ -53,7 +53,7 @@ seo:
     <p>For example, for expression <code>f(x) = x^2 + 3*x + 2</code> the calculator will show derivative: <code>2*x + 3</code>.</p>
     <p>Try also: <code>sin(x^2)</code>, <code>ln(x + 1)</code>, <code>e^(x^2)</code>.</p>
     
-    <p>No need to install programs — just enter the formula and get the result. This is convenient if you're looking for:</p>
+    <p>No need to install programs  -  just enter the formula and get the result. This is convenient if you're looking for:</p>
     <ul>
       <li><strong>"find function derivative online"</strong></li>
       <li><strong>"derivative calculator"</strong></li>
@@ -71,12 +71,12 @@ faq:
     answer: |
       You can use:
       <ul>
-        <li><code>^</code> — exponentiation: x^2</li>
+        <li><code>^</code>  -  exponentiation: x^2</li>
         <li><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code></li>
-        <li><code>ln(x)</code> — natural logarithm (automatically converts to log(x))</li>
+        <li><code>ln(x)</code>  -  natural logarithm (automatically converts to log(x))</li>
         <li><code>e^x</code> or <code>exp(x)</code></li>
-        <li><code>abs(x)</code> — absolute value</li>
-        <li><code>sqrt(x)</code> — square root</li>
+        <li><code>abs(x)</code>  -  absolute value</li>
+        <li><code>sqrt(x)</code>  -  square root</li>
         <li>Fractions: <code>x / (x + 1)</code></li>
       </ul>
   - question: "How is the derivative of |x| handled?"

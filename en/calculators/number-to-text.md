@@ -4,7 +4,7 @@ title: "Number to Text Converter"
 categories: [financial]
 permalink: /en/calculators/number-to-text/
 seo:
-  title: "Number to Text Converter — Convert Numbers to Words, Number to Written Form"
+  title: "Number to Text Converter  -  Convert Numbers to Words, Number to Written Form"
   description: "Convert numbers to text (written form) online. Transform digits into words for documents, checks, contracts, and forms. Free number to text conversion tool."
   keywords:
     - number to text converter
@@ -24,7 +24,7 @@ seo:
     - number word converter
   content: |
     <h2>Number to Text Converter Online</h2>
-    <p>Enter any number (e.g., <code>1234.56</code>), and the converter will transform it into written text form — perfect for documents, contracts, checks, legal forms, and official paperwork.</p>
+    <p>Enter any number (e.g., <code>1234.56</code>), and the converter will transform it into written text form  -  perfect for documents, contracts, checks, legal forms, and official paperwork.</p>
     
     <p>The tool supports whole numbers and decimals up to trillions. Decimal places are written as individual digits (e.g., <i>one thousand two hundred thirty-four point five six</i>).</p>
     
@@ -39,11 +39,11 @@ seo:
 
     <h3>Perfect for:</h3>
     <ul>
-      <li><strong>Legal documents</strong> — contracts, agreements, court papers</li>
-      <li><strong>Financial documents</strong> — checks, invoices, receipts</li>
-      <li><strong>Official forms</strong> — applications, declarations, reports</li>
-      <li><strong>Academic writing</strong> — research papers, theses, publications</li>
-      <li><strong>Business correspondence</strong> — formal letters, proposals</li>
+      <li><strong>Legal documents</strong>  -  contracts, agreements, court papers</li>
+      <li><strong>Financial documents</strong>  -  checks, invoices, receipts</li>
+      <li><strong>Official forms</strong>  -  applications, declarations, reports</li>
+      <li><strong>Academic writing</strong>  -  research papers, theses, publications</li>
+      <li><strong>Business correspondence</strong>  -  formal letters, proposals</li>
     </ul>
 
     <h3>Features:</h3>

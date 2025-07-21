@@ -4,7 +4,7 @@ title: "Solution Dilution Calculator"
 categories: [school]
 permalink: /en/calculators/dilution/
 seo:
-  title: "Solution Dilution Calculator Online — C₁V₁ = C₂V₂ Formula for Chemistry and Biology"
+  title: "Solution Dilution Calculator Online  -  C₁V₁ = C₂V₂ Formula for Chemistry and Biology"
   description: "Online calculator for calculating concentration or volume of solution during dilution. Use C₁V₁ = C₂V₂ formula for chemistry, biology, medicine and laboratory practice."
   keywords:
     - solution dilution calculator
@@ -19,7 +19,7 @@ seo:
     - solution concentration
   content: |
     <h2>Solution Dilution Calculator</h2>
-    <p>Enter any three parameters out of four (C₁, V₁, C₂, V₂) — the calculator will find the fourth.</p>
+    <p>Enter any three parameters out of four (C₁, V₁, C₂, V₂)  -  the calculator will find the fourth.</p>
     
     <h3>Dilution Formula:</h3>
     <p><strong>C₁V₁ = C₂V₂</strong></p>
@@ -55,7 +55,7 @@ scripts:
   - /en/js/dilution.js
 faq:
   - question: What is the dilution formula?
-    answer: "C₁V₁ = C₂V₂ — this basic formula for dilution calculations means the amount of substance before and after dilution remains unchanged."
+    answer: "C₁V₁ = C₂V₂  -  this basic formula for dilution calculations means the amount of substance before and after dilution remains unchanged."
   - question: How to properly use this calculator?
     answer: "Enter three of the four values: initial concentration (C₁), initial volume (V₁), final concentration (C₂), or final volume (V₂). The calculator will compute the fourth value."
   - question: What units should I use?
@@ -65,7 +65,7 @@ faq:
   - question: What if I enter wrong units?
     answer: "Wrong units can lead to incorrect results. For example, if volume is in mL instead of L, the result will be 1000 times larger or smaller."
   - question: Can this calculator be used for alcohol or medicine dilution?
-    answer: "Yes, the formula applies to any solutions where the amount of active substance doesn't change — including ethanol, iodine, medications, etc."
+    answer: "Yes, the formula applies to any solutions where the amount of active substance doesn't change  -  including ethanol, iodine, medications, etc."
 ---
 
 <form id="dilution-form" autocomplete="off">

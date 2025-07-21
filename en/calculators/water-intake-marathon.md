@@ -4,7 +4,7 @@ title: "Water Intake Calculator for Marathon Runners"
 categories: [health]
 permalink: /en/calculators/water-intake-marathon/
 seo:
-  title: "Water Intake Calculator for Marathon Runners — Hydration Calculator for Endurance Athletes"
+  title: "Water Intake Calculator for Marathon Runners  -  Hydration Calculator for Endurance Athletes"
   description: "Calculate optimal water intake for marathon running based on sweat rate, weather conditions, and race duration. Prevent dehydration and hyponatremia with scientifically-backed hydration recommendations for endurance athletes."
   keywords:
     - water intake calculator marathon

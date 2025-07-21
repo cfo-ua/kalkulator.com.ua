@@ -4,7 +4,7 @@ title: "Date Difference Calculator"
 categories: [time-date]
 permalink: /en/calculators/date-difference/
 seo:
-  title: "Date Difference Calculator — Calculate Days, Months, Years Between Dates"
+  title: "Date Difference Calculator  -  Calculate Days, Months, Years Between Dates"
   description: "Calculate the exact difference between two dates in days, months, and years. Perfect for age calculation, event planning, project timelines, and date countdown."
   keywords:
     - date difference calculator
@@ -29,7 +29,7 @@ seo:
     - precise date calculation
   content: |
     <h2>Date Difference Calculator</h2>
-    <p>This convenient online tool allows you to <strong>calculate the exact difference between two dates</strong> — in days, months, and years. Get precise results for any date range instantly.</p>
+    <p>This convenient online tool allows you to <strong>calculate the exact difference between two dates</strong>  -  in days, months, and years. Get precise results for any date range instantly.</p>
 
     <h3>What You'll Discover:</h3>
     <ul>
@@ -72,7 +72,7 @@ seo:
       <li>"Calculate exact age for official documents"</li>
     </ul>
 
-    <p>Plan precisely with our comprehensive date difference calculator — your essential tool for time management and life planning.</p>
+    <p>Plan precisely with our comprehensive date difference calculator  -  your essential tool for time management and life planning.</p>
 scripts:
   - /en/js/date-difference.js
 faq:

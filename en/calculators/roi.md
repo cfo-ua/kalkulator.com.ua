@@ -1,10 +1,10 @@
 ---
 layout: calculator
-title: "ROI Calculator — Return on Investment"
+title: "ROI Calculator  -  Return on Investment"
 categories: [financial]
 permalink: /en/calculators/roi/
 seo:
-  title: "ROI Calculator — Calculate Return on Investment Percentage Online"
+  title: "ROI Calculator  -  Calculate Return on Investment Percentage Online"
   description: "Free ROI calculator to measure investment profitability. Enter investment amount and total return to instantly calculate ROI percentage. Perfect for business decisions, marketing campaigns, and investment analysis."
   keywords:
     - ROI calculator
@@ -37,31 +37,31 @@ seo:
     
     <h3>Understanding ROI Results:</h3>
     <ul>
-      <li><strong>Positive ROI</strong> — investment generated profit</li>
-      <li><strong>Negative ROI</strong> — investment resulted in loss</li>
-      <li><strong>0% ROI</strong> — broke even, no profit or loss</li>
-      <li><strong>Higher ROI percentage</strong> — more profitable investment</li>
+      <li><strong>Positive ROI</strong>  -  investment generated profit</li>
+      <li><strong>Negative ROI</strong>  -  investment resulted in loss</li>
+      <li><strong>0% ROI</strong>  -  broke even, no profit or loss</li>
+      <li><strong>Higher ROI percentage</strong>  -  more profitable investment</li>
     </ul>
 
     <h3>Perfect for Analyzing:</h3>
     <ul>
-      <li><strong>Business investments</strong> — equipment, technology, expansion</li>
-      <li><strong>Marketing campaigns</strong> — advertising spend vs. revenue generated</li>
-      <li><strong>Real estate investments</strong> — property purchase vs. returns</li>
-      <li><strong>Stock market investments</strong> — stock performance evaluation</li>
-      <li><strong>Educational investments</strong> — training costs vs. career benefits</li>
-      <li><strong>Technology upgrades</strong> — software/hardware ROI assessment</li>
-      <li><strong>Project investments</strong> — new product launches, initiatives</li>
+      <li><strong>Business investments</strong>  -  equipment, technology, expansion</li>
+      <li><strong>Marketing campaigns</strong>  -  advertising spend vs. revenue generated</li>
+      <li><strong>Real estate investments</strong>  -  property purchase vs. returns</li>
+      <li><strong>Stock market investments</strong>  -  stock performance evaluation</li>
+      <li><strong>Educational investments</strong>  -  training costs vs. career benefits</li>
+      <li><strong>Technology upgrades</strong>  -  software/hardware ROI assessment</li>
+      <li><strong>Project investments</strong>  -  new product launches, initiatives</li>
     </ul>
 
     <h3>Strategic Applications:</h3>
     <ul>
-      <li><strong>Investment comparison</strong> — evaluate multiple opportunities</li>
-      <li><strong>Budget allocation</strong> — prioritize high-ROI projects</li>
-      <li><strong>Performance tracking</strong> — monitor investment success</li>
-      <li><strong>Risk assessment</strong> — understand potential returns</li>
-      <li><strong>Financial planning</strong> — make informed investment decisions</li>
-      <li><strong>Business optimization</strong> — focus on profitable activities</li>
+      <li><strong>Investment comparison</strong>  -  evaluate multiple opportunities</li>
+      <li><strong>Budget allocation</strong>  -  prioritize high-ROI projects</li>
+      <li><strong>Performance tracking</strong>  -  monitor investment success</li>
+      <li><strong>Risk assessment</strong>  -  understand potential returns</li>
+      <li><strong>Financial planning</strong>  -  make informed investment decisions</li>
+      <li><strong>Business optimization</strong>  -  focus on profitable activities</li>
     </ul>
 
     <h3>ROI Benchmarks by Industry:</h3>
@@ -75,15 +75,15 @@ seo:
 
     <h3>Benefits of ROI Analysis:</h3>
     <ul>
-      <li><strong>Data-driven decisions</strong> — objective investment evaluation</li>
-      <li><strong>Resource optimization</strong> — allocate budget to best opportunities</li>
-      <li><strong>Performance measurement</strong> — track investment success</li>
-      <li><strong>Risk management</strong> — understand potential downside</li>
-      <li><strong>Stakeholder communication</strong> — justify investment decisions</li>
-      <li><strong>Competitive advantage</strong> — optimize business operations</li>
+      <li><strong>Data-driven decisions</strong>  -  objective investment evaluation</li>
+      <li><strong>Resource optimization</strong>  -  allocate budget to best opportunities</li>
+      <li><strong>Performance measurement</strong>  -  track investment success</li>
+      <li><strong>Risk management</strong>  -  understand potential downside</li>
+      <li><strong>Stakeholder communication</strong>  -  justify investment decisions</li>
+      <li><strong>Competitive advantage</strong>  -  optimize business operations</li>
     </ul>
 
-    <p>This tool helps make informed investment decisions across any industry — essential for maximizing returns and minimizing risk in business and personal finance.</p>
+    <p>This tool helps make informed investment decisions across any industry  -  essential for maximizing returns and minimizing risk in business and personal finance.</p>
 scripts:
   - /en/js/roi.js
 faq:
@@ -102,7 +102,7 @@ faq:
   - question: "Should I only consider ROI when making investment decisions?"
     answer: "No. While ROI is important, also consider risk level, time horizon, cash flow requirements, and strategic alignment with your goals."
   - question: "How often should I calculate ROI?"
-    answer: "Calculate ROI regularly to track performance — monthly for marketing campaigns, quarterly for business projects, and annually for long-term investments."
+    answer: "Calculate ROI regularly to track performance  -  monthly for marketing campaigns, quarterly for business projects, and annually for long-term investments."
 ---
 
 <form id="roi-form">

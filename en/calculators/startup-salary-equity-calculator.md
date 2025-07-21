@@ -4,7 +4,7 @@ title: "Employee Salary Calculator for Startups with Equity Options"
 categories: [business]
 permalink: /en/calculators/startup-salary-equity-calculator/
 seo:
-  title: "Startup Salary & Equity Calculator — Employee Compensation Planning Tool"
+  title: "Startup Salary & Equity Calculator  -  Employee Compensation Planning Tool"
   description: "Free startup employee salary and equity calculator. Calculate competitive compensation packages including base salary, equity options, and total compensation value for startup hiring and retention."
   keywords:
     - startup salary calculator
@@ -72,32 +72,32 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Total compensation analysis</strong> — cash + equity value assessment</li>
-      <li><strong>Multiple exit scenarios</strong> — conservative, moderate, optimistic valuations</li>
-      <li><strong>Vesting schedule modeling</strong> — 4-year vesting with 1-year cliff standard</li>
-      <li><strong>Market benchmarking</strong> — compare to industry compensation ranges</li>
-      <li><strong>ROI for employees</strong> — calculate potential returns on equity</li>
+      <li><strong>Total compensation analysis</strong>  -  cash + equity value assessment</li>
+      <li><strong>Multiple exit scenarios</strong>  -  conservative, moderate, optimistic valuations</li>
+      <li><strong>Vesting schedule modeling</strong>  -  4-year vesting with 1-year cliff standard</li>
+      <li><strong>Market benchmarking</strong>  -  compare to industry compensation ranges</li>
+      <li><strong>ROI for employees</strong>  -  calculate potential returns on equity</li>
     </ul>
 
     <h3>Perfect for Startup Roles:</h3>
     <ul>
-      <li><strong>Software engineers</strong> — developers, architects, tech leads</li>
-      <li><strong>Product managers</strong> — product strategy and development</li>
-      <li><strong>Sales professionals</strong> — business development, account management</li>
-      <li><strong>Marketing specialists</strong> — growth, content, digital marketing</li>
-      <li><strong>Operations staff</strong> — HR, finance, administrative roles</li>
-      <li><strong>Executive positions</strong> — C-level and senior management</li>
-      <li><strong>Data professionals</strong> — analysts, scientists, engineers</li>
+      <li><strong>Software engineers</strong>  -  developers, architects, tech leads</li>
+      <li><strong>Product managers</strong>  -  product strategy and development</li>
+      <li><strong>Sales professionals</strong>  -  business development, account management</li>
+      <li><strong>Marketing specialists</strong>  -  growth, content, digital marketing</li>
+      <li><strong>Operations staff</strong>  -  HR, finance, administrative roles</li>
+      <li><strong>Executive positions</strong>  -  C-level and senior management</li>
+      <li><strong>Data professionals</strong>  -  analysts, scientists, engineers</li>
     </ul>
 
     <h3>Strategic Applications:</h3>
     <ul>
-      <li><strong>Hiring negotiations</strong> — design attractive offer packages</li>
-      <li><strong>Retention planning</strong> — adjust compensation for key employees</li>
-      <li><strong>Budget forecasting</strong> — project total employment costs</li>
-      <li><strong>Equity pool planning</strong> — manage dilution across funding rounds</li>
-      <li><strong>Performance reviews</strong> — structure merit increases and promotions</li>
-      <li><strong>Board reporting</strong> — demonstrate responsible compensation practices</li>
+      <li><strong>Hiring negotiations</strong>  -  design attractive offer packages</li>
+      <li><strong>Retention planning</strong>  -  adjust compensation for key employees</li>
+      <li><strong>Budget forecasting</strong>  -  project total employment costs</li>
+      <li><strong>Equity pool planning</strong>  -  manage dilution across funding rounds</li>
+      <li><strong>Performance reviews</strong>  -  structure merit increases and promotions</li>
+      <li><strong>Board reporting</strong>  -  demonstrate responsible compensation practices</li>
     </ul>
 
     <h3>Compensation Best Practices:</h3>

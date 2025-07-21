@@ -4,7 +4,7 @@ title: "Shoe Size Converter"
 categories: [other]
 permalink: /en/calculators/shoe-size/
 seo:
-  title: "Shoe Size Converter — EU, UK, US, Mondopoint Size Calculator by Foot Length"
+  title: "Shoe Size Converter  -  EU, UK, US, Mondopoint Size Calculator by Foot Length"
   description: "Convert shoe sizes between EU, UK, US, and Mondopoint systems. Find your perfect shoe size by foot length measurement or convert between international sizing standards. Essential tool for online shoe shopping."
   keywords:
     - shoe size converter

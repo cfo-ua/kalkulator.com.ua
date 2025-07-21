@@ -4,7 +4,7 @@ title: "Area Converter Online"
 categories: [conversion]
 permalink: /en/calculators/area-converter/
 seo:
-  title: "Area Converter — Square Meters, Hectares, Acres, Square Feet | Online Calculator"
+  title: "Area Converter  -  Square Meters, Hectares, Acres, Square Feet | Online Calculator"
   description: "Convert between area units: square meters, hectares, acres, square feet, square inches, ares. Perfect for real estate, construction, gardening, and land measurement."
   keywords:
     - area converter

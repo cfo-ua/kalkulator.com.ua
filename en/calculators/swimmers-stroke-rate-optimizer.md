@@ -4,7 +4,7 @@ title: "Swimmer's Stroke Rate Optimizer"
 categories: [health]
 permalink: /en/calculators/swimmers-stroke-rate-optimizer/
 seo:
-  title: "Swimmer's Stroke Rate Optimizer — Swimming Performance Calculator for Optimal Stroke Rate & Efficiency"
+  title: "Swimmer's Stroke Rate Optimizer  -  Swimming Performance Calculator for Optimal Stroke Rate & Efficiency"
   description: "Optimize your swimming performance with this stroke rate calculator. Find your ideal strokes per minute (SPM) for different distances, analyze stroke efficiency, and get personalized training recommendations for faster swimming times."
   keywords:
     - swimmers stroke rate calculator

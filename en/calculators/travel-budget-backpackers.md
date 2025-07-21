@@ -4,7 +4,7 @@ title: "Travel Budget Calculator for Backpackers"
 categories: [financial]
 permalink: /en/calculators/travel-budget-backpackers/
 seo:
-  title: "Travel Budget Calculator for Backpackers — Plan Your Backpacking Trip Cost, Budget Travel Planning"
+  title: "Travel Budget Calculator for Backpackers  -  Plan Your Backpacking Trip Cost, Budget Travel Planning"
   description: "Calculate your backpacking travel budget including accommodation, food, transport, activities. Plan budget-friendly trips with hostel costs, local food prices, and backpacker expenses."
   keywords:
     - travel budget calculator

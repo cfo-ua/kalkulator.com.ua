@@ -4,7 +4,7 @@ title: "Customer Lifetime Value Calculator for SaaS Businesses"
 categories: [business]
 permalink: /en/calculators/saas-customer-lifetime-value/
 seo:
-  title: "SaaS CLV Calculator — Customer Lifetime Value for Subscription Businesses"
+  title: "SaaS CLV Calculator  -  Customer Lifetime Value for Subscription Businesses"
   description: "Free SaaS customer lifetime value (CLV) calculator. Calculate CLV, customer acquisition cost (CAC), and LTV:CAC ratio for subscription businesses. Optimize pricing and retention strategies with comprehensive SaaS metrics."
   keywords:
     - saas clv calculator
@@ -73,32 +73,32 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Multiple CLV models</strong> — traditional, cohort-based, and predictive</li>
-      <li><strong>Churn rate analysis</strong> — monthly and annual churn calculations</li>
-      <li><strong>Scenario modeling</strong> — test retention and pricing optimizations</li>
-      <li><strong>Benchmark comparisons</strong> — compare against SaaS industry standards</li>
-      <li><strong>Growth projections</strong> — model expansion revenue and upsells</li>
+      <li><strong>Multiple CLV models</strong>  -  traditional, cohort-based, and predictive</li>
+      <li><strong>Churn rate analysis</strong>  -  monthly and annual churn calculations</li>
+      <li><strong>Scenario modeling</strong>  -  test retention and pricing optimizations</li>
+      <li><strong>Benchmark comparisons</strong>  -  compare against SaaS industry standards</li>
+      <li><strong>Growth projections</strong>  -  model expansion revenue and upsells</li>
     </ul>
 
     <h3>Ideal for SaaS Business Models:</h3>
     <ul>
-      <li><strong>B2B SaaS platforms</strong> — enterprise and SMB software solutions</li>
-      <li><strong>Subscription apps</strong> — mobile and web applications</li>
-      <li><strong>Platform services</strong> — API and infrastructure providers</li>
-      <li><strong>Digital tools</strong> — productivity and collaboration software</li>
-      <li><strong>Content platforms</strong> — media and educational subscriptions</li>
-      <li><strong>E-commerce SaaS</strong> — retail and marketplace solutions</li>
-      <li><strong>Vertical SaaS</strong> — industry-specific software solutions</li>
+      <li><strong>B2B SaaS platforms</strong>  -  enterprise and SMB software solutions</li>
+      <li><strong>Subscription apps</strong>  -  mobile and web applications</li>
+      <li><strong>Platform services</strong>  -  API and infrastructure providers</li>
+      <li><strong>Digital tools</strong>  -  productivity and collaboration software</li>
+      <li><strong>Content platforms</strong>  -  media and educational subscriptions</li>
+      <li><strong>E-commerce SaaS</strong>  -  retail and marketplace solutions</li>
+      <li><strong>Vertical SaaS</strong>  -  industry-specific software solutions</li>
     </ul>
 
     <h3>Strategic Applications:</h3>
     <ul>
-      <li><strong>Marketing budget allocation</strong> — set maximum CAC by channel</li>
-      <li><strong>Pricing strategy optimization</strong> — find revenue-maximizing price points</li>
-      <li><strong>Customer success investment</strong> — justify retention program costs</li>
-      <li><strong>Investor presentations</strong> — demonstrate unit economics health</li>
-      <li><strong>Product roadmap prioritization</strong> — focus on features that increase CLV</li>
-      <li><strong>Sales team compensation</strong> — align incentives with long-term value</li>
+      <li><strong>Marketing budget allocation</strong>  -  set maximum CAC by channel</li>
+      <li><strong>Pricing strategy optimization</strong>  -  find revenue-maximizing price points</li>
+      <li><strong>Customer success investment</strong>  -  justify retention program costs</li>
+      <li><strong>Investor presentations</strong>  -  demonstrate unit economics health</li>
+      <li><strong>Product roadmap prioritization</strong>  -  focus on features that increase CLV</li>
+      <li><strong>Sales team compensation</strong>  -  align incentives with long-term value</li>
     </ul>
 
     <h3>CLV Optimization Strategies:</h3>
@@ -119,7 +119,7 @@ seo:
       <li><strong>Customer Lifespan:</strong> 2-5 years average depending on market segment</li>
     </ul>
 
-    <p>Optimize your SaaS business performance and make data-driven decisions with our comprehensive CLV analysis tool — essential for sustainable growth and profitability.</p>
+    <p>Optimize your SaaS business performance and make data-driven decisions with our comprehensive CLV analysis tool  -  essential for sustainable growth and profitability.</p>
 scripts:
   - /en/js/saas-customer-lifetime-value.js
 faq:
@@ -138,7 +138,7 @@ faq:
   - question: "How does customer acquisition cost affect profitability?"
     answer: "CAC directly impacts payback period and ROI. Lower CAC or higher CLV improves unit economics. Monitor blended CAC across all channels and organic vs. paid acquisition costs."
   - question: "What's the difference between customer lifespan and retention rate?"
-    answer: "Customer lifespan is average time before churn (1 ÷ churn rate). Retention rate is percentage staying active each period. Both are inverse relationships — higher retention means longer lifespan."
+    answer: "Customer lifespan is average time before churn (1 ÷ churn rate). Retention rate is percentage staying active each period. Both are inverse relationships  -  higher retention means longer lifespan."
 ---
 
 <form id="saas-clv-form">

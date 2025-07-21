@@ -4,7 +4,7 @@ title: "Stress Level Assessment Calculator"
 categories: [health]
 permalink: /en/calculators/stress-level-assessment/
 seo:
-  title: "Stress Level Assessment Calculator — Comprehensive Stress Evaluation & Management Tool"
+  title: "Stress Level Assessment Calculator  -  Comprehensive Stress Evaluation & Management Tool"
   description: "Assess your stress levels with this comprehensive stress evaluation calculator. Measure workplace stress, life stress, and physical symptoms with personalized stress management recommendations and coping strategies."
   keywords:
     - stress level assessment calculator

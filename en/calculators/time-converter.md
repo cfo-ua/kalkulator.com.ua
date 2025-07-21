@@ -4,7 +4,7 @@ title: "Time Converter Online"
 categories: [conversion]
 permalink: /en/calculators/time-converter/
 seo:
-  title: "Time Converter — Hours, Minutes, Seconds, Days, Milliseconds | Online Calculator"
+  title: "Time Converter  -  Hours, Minutes, Seconds, Days, Milliseconds | Online Calculator"
   description: "Convert time units between hours, minutes, seconds, days, and milliseconds. Perfect for programming, project management, sports timing, and scientific calculations."
   keywords:
     - time converter

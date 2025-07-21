@@ -47,7 +47,7 @@ faq:
   - question: How to find sphere volume?
     answer: "Volume of sphere: V = (4/3)πr³, where r is the radius."
   - question: What units should I use for radius?
-    answer: "Enter radius in meters, centimeters, or any unit — results will be in corresponding square and cubic units."
+    answer: "Enter radius in meters, centimeters, or any unit  -  results will be in corresponding square and cubic units."
   - question: What's the relationship between diameter and radius?
     answer: "Diameter is twice the radius: d = 2r. So if you have diameter, divide by 2 to get radius."
 ---

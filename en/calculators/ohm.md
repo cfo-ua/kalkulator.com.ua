@@ -19,7 +19,7 @@ seo:
     - circuit analysis
   content: |
     <h2>Ohm's Law Calculator</h2>
-    <p>Enter any two of the three parameters (U, I, R) — the third will be calculated automatically.</p>
+    <p>Enter any two of the three parameters (U, I, R)  -  the third will be calculated automatically.</p>
     
     <h3>What is Ohm's Law?</h3>
     <p>Ohm's Law states that the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance.</p>

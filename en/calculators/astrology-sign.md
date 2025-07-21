@@ -4,7 +4,7 @@ title: "Astrology Sign Calculator by Birth Date"
 categories: [other]
 permalink: /en/calculators/astrology-sign/
 seo:
-  title: "Astrology Sign Calculator — Find Your Zodiac Sign by Birth Date Online"
+  title: "Astrology Sign Calculator  -  Find Your Zodiac Sign by Birth Date Online"
   description: "Discover your zodiac sign instantly with our astrology calculator. Enter your birth date to find your astrological sign, personality traits, and zodiac compatibility. Free and accurate horoscope tool."
   keywords:
     - astrology sign calculator

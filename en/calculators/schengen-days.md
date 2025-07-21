@@ -4,7 +4,7 @@ title: "Schengen Days Calculator"
 categories: [other]
 permalink: /en/calculators/schengen-days/
 seo:
-  title: "Schengen Days Calculator — Online 90/180 Rule Checker | Travel Calculator"
+  title: "Schengen Days Calculator  -  Online 90/180 Rule Checker | Travel Calculator"
   description: "Calculate how many days you've spent or can spend in the Schengen Area according to the 90/180 rule. Add trips and check your status for visa-free travel compliance."
   keywords:
     - schengen days calculator
@@ -46,7 +46,7 @@ seo:
     <ul>
       <li><strong>90 days maximum:</strong> You can stay up to 90 days total</li>
       <li><strong>180-day period:</strong> The limit applies to any rolling 180-day window</li>
-      <li><strong>No reset:</strong> The period doesn't reset on calendar dates — it's always rolling</li>
+      <li><strong>No reset:</strong> The period doesn't reset on calendar dates  -  it's always rolling</li>
       <li><strong>All countries count:</strong> Time in any Schengen country counts toward the limit</li>
     </ul>
 
@@ -77,7 +77,7 @@ scripts:
 faq:
   - question: "What is the 90/180 rule for the Schengen Area?"
     answer: "This is a restriction that allows you to stay in the Schengen Area for no more than 90 days within any 180-day period, without needing a visa for short-term trips."
-  - question: "Are all days counted — including entry and exit days?"
+  - question: "Are all days counted  -  including entry and exit days?"
     answer: "Yes, both entry and exit days are counted as full days of stay."
   - question: "How are trips that cross the 180-day window handled?"
     answer: "The calculator analyzes each day, checking how many stay days occurred in the last 180 days from the specified date. Any days outside this window are not counted."

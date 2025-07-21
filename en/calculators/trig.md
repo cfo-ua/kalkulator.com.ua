@@ -19,7 +19,7 @@ seo:
     - degrees calculator
   content: |
     <h2>Trigonometric Functions Calculator</h2>
-    <p>Enter an angle in degrees (0–360°) to find the values of sin, cos, tan, and cot.</p>
+    <p>Enter an angle in degrees (0 - 360°) to find the values of sin, cos, tan, and cot.</p>
     
     <h3>What are trigonometric functions?</h3>
     <p>Trigonometric functions relate the angles of a triangle to the lengths of its sides. They are fundamental in mathematics, physics, and engineering.</p>
@@ -44,7 +44,7 @@ scripts:
   - /en/js/trig.js
 faq:
   - question: What unit system should I use for angles?
-    answer: "Enter angles in degrees (0–360°)."
+    answer: "Enter angles in degrees (0 - 360°)."
   - question: What is cot?
     answer: "cot(x) = 1 / tan(x), which is the cotangent function."
   - question: What are the main trigonometric identities?

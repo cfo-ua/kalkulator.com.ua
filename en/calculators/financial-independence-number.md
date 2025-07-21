@@ -4,7 +4,7 @@ title: "Financial Independence Number Calculator"
 categories: [financial]
 permalink: /en/calculators/financial-independence-number/
 seo:
-  title: "FIRE Number Calculator — Financial Independence Retirement Early, FI Target Amount"
+  title: "FIRE Number Calculator  -  Financial Independence Retirement Early, FI Target Amount"
   description: "Calculate your FIRE number for financial independence. Determine how much to save for early retirement using 4% rule, expenses, and lifestyle goals."
   keywords:
     - FIRE calculator
