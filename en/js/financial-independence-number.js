@@ -241,7 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
       monthlySavings,
       scenarios,
       timeline,
-      realReturn
+      realReturn,
+      expectedReturn
     } = data;
 
     const progress = (currentSavings / fireNumber) * 100;
