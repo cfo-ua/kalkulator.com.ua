@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Critical safety warnings
     if (!veterinaryPrescribed) {
       warnings.push({
-        level: 'danger',
+        level: 'warning',
         message: '🚨 IMPORTANT: This medication should only be given under veterinary supervision.'
       });
     }
