@@ -2,7 +2,16 @@ title: "kalkulator.com.ua"
 description: "Онлайн калькулятори для України"
 baseurl: "" # Required for GitHub Pages
 url: "https://kalkulator.com.ua"
-exclude: ["README.md"]
+exclude: 
+  - README.md
+  - vendor/
+  - .bundle/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
 collections:
   calculators:
     output: true
