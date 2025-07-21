@@ -4,7 +4,7 @@ title: "Tarot Card Reading Interpretation Score Calculator"
 categories: [other]
 permalink: /en/calculators/tarot-card-reading/
 seo:
-  title: "Tarot Card Reading Interpretation Score Calculator — Free Online Tarot Calculator"
+  title: "Tarot Card Reading Interpretation Score Calculator  -  Free Online Tarot Calculator"
   description: "Calculate your tarot card reading interpretation score with our free online calculator. Get detailed meanings for your tarot spread, card positions, and personalized insights. Perfect for beginners and experienced readers."
   keywords:
     - tarot card reading calculator

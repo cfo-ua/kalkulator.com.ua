@@ -4,7 +4,7 @@ title: "pH Calculator"
 categories: [school]
 permalink: /en/calculators/ph/
 seo:
-  title: "pH Calculator — Calculate Acidity or Alkalinity of Solution Online"
+  title: "pH Calculator  -  Calculate Acidity or Alkalinity of Solution Online"
   description: "Determine pH or pOH of a solution from H⁺ or OH⁻ ion concentration. Online calculator for chemistry students and teachers. Identify acidic, basic, or neutral solutions."
   keywords:
     - pH calculator
@@ -39,7 +39,7 @@ seo:
       <li>Chemical analysis of water, solutions, acids, and bases acidity</li>
       <li>Laboratory calculations in school, college, university</li>
       <li>Working with biological or medical samples</li>
-      <li>Agriculture and hydroponics — checking soil or water pH</li>
+      <li>Agriculture and hydroponics  -  checking soil or water pH</li>
     </ul>
 
     <h3>Examples:</h3>

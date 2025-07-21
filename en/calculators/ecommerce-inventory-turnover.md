@@ -4,7 +4,7 @@ title: "E-commerce Inventory Turnover Calculator"
 categories: [business]
 permalink: /en/calculators/ecommerce-inventory-turnover/
 seo:
-  title: "E-commerce Inventory Turnover Calculator — Optimize Stock Management"
+  title: "E-commerce Inventory Turnover Calculator  -  Optimize Stock Management"
   description: "Free e-commerce inventory turnover calculator. Calculate inventory turnover ratio, days in inventory, and optimize stock levels. Improve cash flow and reduce holding costs with data-driven inventory management."
   keywords:
     - ecommerce inventory calculator
@@ -73,23 +73,23 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Multi-category analysis</strong> — compare turnover across product lines</li>
-      <li><strong>Seasonal adjustments</strong> — account for demand fluctuations</li>
-      <li><strong>Benchmark comparisons</strong> — industry standard performance metrics</li>
-      <li><strong>Optimization scenarios</strong> — model inventory level improvements</li>
-      <li><strong>ABC analysis integration</strong> — classify inventory by importance</li>
-      <li><strong>Cash flow projections</strong> — working capital optimization</li>
+      <li><strong>Multi-category analysis</strong>  -  compare turnover across product lines</li>
+      <li><strong>Seasonal adjustments</strong>  -  account for demand fluctuations</li>
+      <li><strong>Benchmark comparisons</strong>  -  industry standard performance metrics</li>
+      <li><strong>Optimization scenarios</strong>  -  model inventory level improvements</li>
+      <li><strong>ABC analysis integration</strong>  -  classify inventory by importance</li>
+      <li><strong>Cash flow projections</strong>  -  working capital optimization</li>
     </ul>
 
     <h3>Perfect for E-commerce Businesses:</h3>
     <ul>
-      <li><strong>Online retailers</strong> — fashion, electronics, home goods</li>
-      <li><strong>Dropshipping businesses</strong> — virtual inventory management</li>
-      <li><strong>Multi-channel sellers</strong> — Amazon, eBay, Shopify stores</li>
-      <li><strong>Private label brands</strong> — manufactured product inventory</li>
-      <li><strong>Wholesale distributors</strong> — B2B inventory optimization</li>
-      <li><strong>Subscription box services</strong> — recurring inventory planning</li>
-      <li><strong>Seasonal retailers</strong> — holiday and event-based selling</li>
+      <li><strong>Online retailers</strong>  -  fashion, electronics, home goods</li>
+      <li><strong>Dropshipping businesses</strong>  -  virtual inventory management</li>
+      <li><strong>Multi-channel sellers</strong>  -  Amazon, eBay, Shopify stores</li>
+      <li><strong>Private label brands</strong>  -  manufactured product inventory</li>
+      <li><strong>Wholesale distributors</strong>  -  B2B inventory optimization</li>
+      <li><strong>Subscription box services</strong>  -  recurring inventory planning</li>
+      <li><strong>Seasonal retailers</strong>  -  holiday and event-based selling</li>
     </ul>
 
     <h3>Product Category Applications:</h3>
@@ -141,7 +141,7 @@ seo:
       <li><strong>Continuous improvement:</strong> test and refine inventory strategies</li>
     </ul>
 
-    <p>Transform your e-commerce inventory management and boost profitability with our comprehensive turnover analysis tool — essential for efficient stock management and cash flow optimization.</p>
+    <p>Transform your e-commerce inventory management and boost profitability with our comprehensive turnover analysis tool  -  essential for efficient stock management and cash flow optimization.</p>
 scripts:
   - /en/js/ecommerce-inventory-turnover.js
 faq:

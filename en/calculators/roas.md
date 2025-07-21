@@ -1,10 +1,10 @@
 ---
 layout: calculator
-title: "ROAS Calculator — Return on Advertising Spend"
+title: "ROAS Calculator  -  Return on Advertising Spend"
 categories: [business]
 permalink: /en/calculators/roas/
 seo:
-  title: "ROAS Calculator — Measure Return on Advertising Spend Online"
+  title: "ROAS Calculator  -  Measure Return on Advertising Spend Online"
   description: "Free ROAS calculator to measure advertising campaign effectiveness. Calculate return on ad spend instantly to optimize marketing budgets, compare channels, and improve campaign ROI performance."
   keywords:
     - ROAS calculator
@@ -37,10 +37,10 @@ seo:
     
     <h3>Understanding ROAS Results:</h3>
     <ul>
-      <li><strong>ROAS > 1</strong> — Campaign is profitable (revenue exceeds ad spend)</li>
-      <li><strong>ROAS = 1</strong> — Break-even point (revenue equals ad spend)</li>
-      <li><strong>ROAS < 1</strong> — Campaign is losing money (ad spend exceeds revenue)</li>
-      <li><strong>Higher ROAS</strong> — More efficient advertising performance</li>
+      <li><strong>ROAS > 1</strong>  -  Campaign is profitable (revenue exceeds ad spend)</li>
+      <li><strong>ROAS = 1</strong>  -  Break-even point (revenue equals ad spend)</li>
+      <li><strong>ROAS < 1</strong>  -  Campaign is losing money (ad spend exceeds revenue)</li>
+      <li><strong>Higher ROAS</strong>  -  More efficient advertising performance</li>
     </ul>
 
     <h3>ROAS vs ROI: Key Differences</h3>
@@ -53,23 +53,23 @@ seo:
 
     <h3>Perfect for Marketing Professionals:</h3>
     <ul>
-      <li><strong>Digital marketers</strong> — optimize PPC, social, and display campaigns</li>
-      <li><strong>E-commerce managers</strong> — evaluate product advertising performance</li>
-      <li><strong>Marketing agencies</strong> — demonstrate client campaign value</li>
-      <li><strong>Business owners</strong> — assess marketing channel effectiveness</li>
-      <li><strong>Performance marketers</strong> — scale profitable campaigns</li>
-      <li><strong>Marketing analysts</strong> — benchmark campaign performance</li>
+      <li><strong>Digital marketers</strong>  -  optimize PPC, social, and display campaigns</li>
+      <li><strong>E-commerce managers</strong>  -  evaluate product advertising performance</li>
+      <li><strong>Marketing agencies</strong>  -  demonstrate client campaign value</li>
+      <li><strong>Business owners</strong>  -  assess marketing channel effectiveness</li>
+      <li><strong>Performance marketers</strong>  -  scale profitable campaigns</li>
+      <li><strong>Marketing analysts</strong>  -  benchmark campaign performance</li>
     </ul>
 
     <h3>Advertising Channel Applications:</h3>
     <ul>
-      <li><strong>Google Ads (PPC)</strong> — search and display campaign optimization</li>
-      <li><strong>Facebook/Meta Ads</strong> — social media advertising performance</li>
-      <li><strong>Amazon PPC</strong> — product advertising campaign evaluation</li>
-      <li><strong>Instagram Ads</strong> — influencer and sponsored content ROI</li>
-      <li><strong>LinkedIn Ads</strong> — B2B marketing campaign assessment</li>
-      <li><strong>YouTube Ads</strong> — video advertising effectiveness</li>
-      <li><strong>Email marketing</strong> — campaign spend vs. revenue analysis</li>
+      <li><strong>Google Ads (PPC)</strong>  -  search and display campaign optimization</li>
+      <li><strong>Facebook/Meta Ads</strong>  -  social media advertising performance</li>
+      <li><strong>Amazon PPC</strong>  -  product advertising campaign evaluation</li>
+      <li><strong>Instagram Ads</strong>  -  influencer and sponsored content ROI</li>
+      <li><strong>LinkedIn Ads</strong>  -  B2B marketing campaign assessment</li>
+      <li><strong>YouTube Ads</strong>  -  video advertising effectiveness</li>
+      <li><strong>Email marketing</strong>  -  campaign spend vs. revenue analysis</li>
     </ul>
 
     <h3>Industry ROAS Benchmarks:</h3>
@@ -84,23 +84,23 @@ seo:
 
     <h3>Optimization Strategies Based on ROAS:</h3>
     <ul>
-      <li><strong>ROAS > 5:1</strong> — Scale campaign, increase budget allocation</li>
-      <li><strong>ROAS 3-5:1</strong> — Optimize targeting, creative, or landing pages</li>
-      <li><strong>ROAS 2-3:1</strong> — Review campaign strategy, test improvements</li>
-      <li><strong>ROAS < 2:1</strong> — Pause campaign, major restructuring needed</li>
+      <li><strong>ROAS > 5:1</strong>  -  Scale campaign, increase budget allocation</li>
+      <li><strong>ROAS 3-5:1</strong>  -  Optimize targeting, creative, or landing pages</li>
+      <li><strong>ROAS 2-3:1</strong>  -  Review campaign strategy, test improvements</li>
+      <li><strong>ROAS < 2:1</strong>  -  Pause campaign, major restructuring needed</li>
     </ul>
 
     <h3>Factors Affecting ROAS:</h3>
     <ul>
-      <li><strong>Target audience quality</strong> — precise targeting improves conversion</li>
-      <li><strong>Ad creative performance</strong> — compelling ads drive higher engagement</li>
-      <li><strong>Landing page optimization</strong> — better UX increases conversions</li>
-      <li><strong>Product/service pricing</strong> — affects revenue per conversion</li>
-      <li><strong>Competition levels</strong> — impacts ad costs and performance</li>
-      <li><strong>Seasonality</strong> — timing affects both demand and costs</li>
+      <li><strong>Target audience quality</strong>  -  precise targeting improves conversion</li>
+      <li><strong>Ad creative performance</strong>  -  compelling ads drive higher engagement</li>
+      <li><strong>Landing page optimization</strong>  -  better UX increases conversions</li>
+      <li><strong>Product/service pricing</strong>  -  affects revenue per conversion</li>
+      <li><strong>Competition levels</strong>  -  impacts ad costs and performance</li>
+      <li><strong>Seasonality</strong>  -  timing affects both demand and costs</li>
     </ul>
 
-    <p>Essential tool for data-driven marketing decisions — optimize your advertising spend and maximize campaign profitability across all digital channels.</p>
+    <p>Essential tool for data-driven marketing decisions  -  optimize your advertising spend and maximize campaign profitability across all digital channels.</p>
 scripts:
   - /en/js/roas.js
 faq:

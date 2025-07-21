@@ -17,7 +17,7 @@ seo:
     - hertz calculator
   content: |
     <h2>Period and Frequency Calculator</h2>
-    <p>Enter either period (T, seconds) or frequency (f, hertz) — the calculator will automatically compute the other value.</p>
+    <p>Enter either period (T, seconds) or frequency (f, hertz)  -  the calculator will automatically compute the other value.</p>
     
     <h3>Relationship between period and frequency:</h3>
     <p>Period and frequency are inversely related:</p>

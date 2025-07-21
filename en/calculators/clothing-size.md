@@ -4,7 +4,7 @@ title: "Clothing Size Calculator"
 categories: [other]
 permalink: /en/calculators/clothing-size/
 seo:
-  title: "Clothing Size Calculator — Find Your Perfect Size (US, EU, UK, International)"
+  title: "Clothing Size Calculator  -  Find Your Perfect Size (US, EU, UK, International)"
   description: "Find your perfect clothing size with our comprehensive size calculator. Convert between US, EU, UK, and International sizes for men and women. Enter your measurements to get accurate size recommendations for online shopping."
   keywords:
     - clothing size calculator

@@ -4,7 +4,7 @@ title: "Mental Health Resilience Score Calculator"
 categories: [health]
 permalink: /en/calculators/mental-health-resilience-score/
 seo:
-  title: "Mental Health Resilience Score Calculator — Psychological Resilience Assessment & Coping Strength Evaluation"
+  title: "Mental Health Resilience Score Calculator  -  Psychological Resilience Assessment & Coping Strength Evaluation"
   description: "Assess your mental health resilience with this comprehensive resilience score calculator. Evaluate psychological resilience, coping skills, emotional strength, and stress adaptation abilities with personalized resilience-building recommendations."
   keywords:
     - mental health resilience calculator

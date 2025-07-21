@@ -4,7 +4,7 @@ title: "Deposit Calculator"
 categories: [financial]
 permalink: /en/calculators/deposit/
 seo:
-  title: "Deposit Calculator — Bank Deposit Interest, Savings Account Returns, CD Calculator"
+  title: "Deposit Calculator  -  Bank Deposit Interest, Savings Account Returns, CD Calculator"
   description: "Calculate bank deposit interest, certificate of deposit returns, and savings account growth. Compare deposit rates, monthly additions, and interest payout options. Free financial planning tool."
   keywords:
     - deposit calculator
@@ -28,26 +28,26 @@ seo:
     
     <h3>Calculation Features</h3>
     <ul>
-      <li><b>Deposit Amount</b> — starting deposit amount.</li>
-      <li><b>Monthly Additions</b> — amount you add monthly (optional).</li>
-      <li><b>Term</b> — deposit duration in months.</li>
-      <li><b>Interest Rate</b> — annual percentage rate (APR).</li>
-      <li><b>Interest Payout</b> — choose between monthly withdrawals or capitalization for compound growth.</li>
-      <li><b>Tax Considerations</b> — factor in applicable taxes on interest earnings.</li>
+      <li><b>Deposit Amount</b>  -  starting deposit amount.</li>
+      <li><b>Monthly Additions</b>  -  amount you add monthly (optional).</li>
+      <li><b>Term</b>  -  deposit duration in months.</li>
+      <li><b>Interest Rate</b>  -  annual percentage rate (APR).</li>
+      <li><b>Interest Payout</b>  -  choose between monthly withdrawals or capitalization for compound growth.</li>
+      <li><b>Tax Considerations</b>  -  factor in applicable taxes on interest earnings.</li>
     </ul>
 
     <h3>Deposit Types Supported</h3>
     <ul>
-      <li><strong>Fixed Term Deposits</strong> — locked-in rates for specific periods</li>
-      <li><strong>Savings Accounts</strong> — flexible deposits with variable rates</li>
-      <li><strong>Certificates of Deposit (CDs)</strong> — higher rates for longer commitments</li>
-      <li><strong>Money Market Accounts</strong> — higher yields with some restrictions</li>
+      <li><strong>Fixed Term Deposits</strong>  -  locked-in rates for specific periods</li>
+      <li><strong>Savings Accounts</strong>  -  flexible deposits with variable rates</li>
+      <li><strong>Certificates of Deposit (CDs)</strong>  -  higher rates for longer commitments</li>
+      <li><strong>Money Market Accounts</strong>  -  higher yields with some restrictions</li>
     </ul>
 
     <h3>Interest Payment Options</h3>
     <ul>
-      <li><strong>Capitalization (Compounding)</strong> — Interest is added to principal, earning compound returns</li>
-      <li><strong>Monthly Payouts</strong> — Interest is paid out monthly for regular income</li>
+      <li><strong>Capitalization (Compounding)</strong>  -  Interest is added to principal, earning compound returns</li>
+      <li><strong>Monthly Payouts</strong>  -  Interest is paid out monthly for regular income</li>
     </ul>
 
     <p>The calculator shows total returns, interest earned, and helps you compare different deposit options to maximize your savings growth.</p>

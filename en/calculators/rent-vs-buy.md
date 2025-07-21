@@ -4,7 +4,7 @@ title: "Rent vs Buy Calculator"
 categories: [financial]
 permalink: /en/calculators/rent-vs-buy/
 seo:
-  title: "Rent vs Buy Calculator — Should I Rent or Buy Property, Real Estate Investment Analysis"
+  title: "Rent vs Buy Calculator  -  Should I Rent or Buy Property, Real Estate Investment Analysis"
   description: "Compare renting vs buying property costs over time. Analyze rental expenses against investment returns from property purchase funds. Make informed real estate decisions with our financial calculator."
   keywords:
     - rent vs buy calculator
@@ -36,26 +36,26 @@ seo:
 
     <h3>What this Calculator Considers:</h3>
     <ul>
-      <li><strong>Property Cost</strong> — Total purchase price of the property</li>
-      <li><strong>Monthly Rent</strong> — Current rental payment for equivalent property</li>
-      <li><strong>Investment Return Rate</strong> — Annual percentage return on alternative investments</li>
-      <li><strong>Time Horizon</strong> — 10-year analysis period for comparison</li>
+      <li><strong>Property Cost</strong>  -  Total purchase price of the property</li>
+      <li><strong>Monthly Rent</strong>  -  Current rental payment for equivalent property</li>
+      <li><strong>Investment Return Rate</strong>  -  Annual percentage return on alternative investments</li>
+      <li><strong>Time Horizon</strong>  -  10-year analysis period for comparison</li>
     </ul>
 
     <h3>Key Benefits:</h3>
     <ul>
-      <li><strong>Clear Financial Comparison</strong> — See exact numbers side by side</li>
-      <li><strong>Investment Opportunity Cost</strong> — Understand what you give up by buying vs renting</li>
-      <li><strong>Visual Analysis</strong> — Interactive chart showing costs over time</li>
-      <li><strong>Decision Support</strong> — Data-driven insights for major financial decisions</li>
+      <li><strong>Clear Financial Comparison</strong>  -  See exact numbers side by side</li>
+      <li><strong>Investment Opportunity Cost</strong>  -  Understand what you give up by buying vs renting</li>
+      <li><strong>Visual Analysis</strong>  -  Interactive chart showing costs over time</li>
+      <li><strong>Decision Support</strong>  -  Data-driven insights for major financial decisions</li>
     </ul>
 
     <h3>Real Estate Considerations:</h3>
     <ul>
-      <li><strong>Market Conditions</strong> — Property values and rental rates vary by location</li>
-      <li><strong>Liquidity Needs</strong> — Renting provides more flexibility to move</li>
-      <li><strong>Maintenance Responsibilities</strong> — Owners handle repairs; renters don't</li>
-      <li><strong>Tax Implications</strong> — Ownership may provide tax benefits</li>
+      <li><strong>Market Conditions</strong>  -  Property values and rental rates vary by location</li>
+      <li><strong>Liquidity Needs</strong>  -  Renting provides more flexibility to move</li>
+      <li><strong>Maintenance Responsibilities</strong>  -  Owners handle repairs; renters don't</li>
+      <li><strong>Tax Implications</strong>  -  Ownership may provide tax benefits</li>
     </ul>
 
     <p>This simplified analysis helps you understand the core financial trade-off between renting and buying, providing a foundation for your real estate decisions.</p>
@@ -98,7 +98,7 @@ faq:
 <!--CHART_SPLIT-->
 
 <div id="rent-buy-chart-block" class="chart-card" style="margin:2.3em auto 0 auto; display:none;">
-  <h3 style="margin-bottom:0.9em; text-align:center;">Rent vs Investment — 10-Year Comparison</h3>
+  <h3 style="margin-bottom:0.9em; text-align:center;">Rent vs Investment  -  10-Year Comparison</h3>
   <div class="chart-canvas-wrap">
     <canvas id="rent-buy-chart"></canvas>
   </div>

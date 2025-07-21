@@ -4,7 +4,7 @@ title: "Astrology Birth Chart Compatibility Calculator"
 categories: [other]
 permalink: /en/calculators/astrology-compatibility/
 seo:
-  title: "Astrology Birth Chart Compatibility Calculator — Free Love & Relationship Compatibility"
+  title: "Astrology Birth Chart Compatibility Calculator  -  Free Love & Relationship Compatibility"
   description: "Calculate astrology compatibility between two people with our free birth chart compatibility calculator. Discover relationship strengths, challenges, and cosmic connection based on zodiac signs and birth data."
   keywords:
     - astrology compatibility calculator

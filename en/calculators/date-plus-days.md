@@ -4,7 +4,7 @@ title: "Date Plus Days Calculator"
 categories: [time-date]
 permalink: /en/calculators/date-plus-days/
 seo:
-  title: "Date Plus Days Calculator — Add or Subtract Days from Any Date"
+  title: "Date Plus Days Calculator  -  Add or Subtract Days from Any Date"
   description: "Calculate what date it will be after adding or subtracting days from any starting date. Perfect for deadline planning, event scheduling, anniversary tracking, and project management."
   keywords:
     - date plus days calculator
@@ -73,7 +73,7 @@ seo:
 
     <p><strong>How to use:</strong> Enter your starting date and the number of days to add (positive number) or subtract (negative number). The calculator will show you the exact resulting date.</p>
 
-    <p>Perfect for precise planning and scheduling — your essential tool for date arithmetic and timeline management.</p>
+    <p>Perfect for precise planning and scheduling  -  your essential tool for date arithmetic and timeline management.</p>
 scripts:
   - /en/js/date-plus-days.js
 faq:

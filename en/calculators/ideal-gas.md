@@ -4,7 +4,7 @@ title: "Ideal Gas Law Calculator (PV=nRT)"
 categories: [school]
 permalink: /en/calculators/ideal-gas/
 seo:
-  title: "Ideal Gas Law Calculator – PV=nRT Formula | School Calculators"
+  title: "Ideal Gas Law Calculator  -  PV=nRT Formula | School Calculators"
   description: "Calculate pressure, volume, amount of substance, or temperature using PV=nRT formula. Convenient online calculator for chemistry and physics."
   keywords:
     - ideal gas law
@@ -18,7 +18,7 @@ seo:
     - thermodynamics
   content: |
     <h2>Ideal Gas Law Calculator (PV = nRT)</h2>
-    <p>Enter any three of the four parameters (pressure, volume, amount of substance, temperature) — the calculator will automatically find the fourth. Gas constant R = 0.0821 L·atm/(mol·K).</p>
+    <p>Enter any three of the four parameters (pressure, volume, amount of substance, temperature)  -  the calculator will automatically find the fourth. Gas constant R = 0.0821 L·atm/(mol·K).</p>
     
     <h3>Ideal Gas Law Formula:</h3>
     <p><strong>PV = nRT</strong></p>
@@ -53,7 +53,7 @@ scripts:
   - /en/js/ideal-gas.js
 faq:
   - question: What is the universal gas constant?
-    answer: "This calculator uses R = 0.0821 L·atm/(mol·K) — the standard value for calculations in the specified units."
+    answer: "This calculator uses R = 0.0821 L·atm/(mol·K)  -  the standard value for calculations in the specified units."
   - question: What units should I use?
     answer: "Pressure in atmospheres (atm), volume in liters (L), amount in moles (mol), temperature in Kelvin (K)."
   - question: What is an ideal gas?

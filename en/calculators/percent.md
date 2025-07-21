@@ -4,7 +4,7 @@ title: "Percentage Calculator"
 categories: [school]
 permalink: /en/calculators/percent/
 seo:
-  title: "Percentage Calculator — Calculate Percentages, Discounts, Tips"
+  title: "Percentage Calculator  -  Calculate Percentages, Discounts, Tips"
   description: "Calculate percentages, percentage changes, discounts, tips and more. Simple and fast percentage calculator with examples."
   keywords:
     - percentage calculator

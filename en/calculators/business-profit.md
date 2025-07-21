@@ -4,7 +4,7 @@ title: "Business Profit Calculator"
 categories: [business]
 permalink: /en/calculators/business-profit/
 seo:
-  title: "Business Profit Calculator — Revenue Requirements for Target Profit Online"
+  title: "Business Profit Calculator  -  Revenue Requirements for Target Profit Online"
   description: "Calculate required sales revenue to achieve your target profit. Enter desired monthly profit and business margin to determine daily, weekly, monthly and annual revenue targets for your business."
   keywords:
     - business profit calculator
@@ -34,8 +34,8 @@ seo:
     <h3>How the Calculator Works:</h3>
     <p>Simply input:</p>
     <ul>
-      <li><strong>Target monthly profit</strong> — your desired monthly earnings</li>
-      <li><strong>Business margin percentage</strong> — profit you earn from each dollar of sales</li>
+      <li><strong>Target monthly profit</strong>  -  your desired monthly earnings</li>
+      <li><strong>Business margin percentage</strong>  -  profit you earn from each dollar of sales</li>
     </ul>
     <p>Get comprehensive results:</p>
     <ul>
@@ -56,12 +56,12 @@ seo:
 
     <h3>Strategic Business Applications:</h3>
     <ul>
-      <li><strong>Revenue planning</strong> — set realistic sales targets</li>
-      <li><strong>Budget allocation</strong> — determine marketing spend limits</li>
-      <li><strong>Pricing strategy</strong> — optimize product/service pricing</li>
-      <li><strong>Performance tracking</strong> — monitor progress toward goals</li>
-      <li><strong>Investment decisions</strong> — evaluate business opportunities</li>
-      <li><strong>Growth planning</strong> — scale operations effectively</li>
+      <li><strong>Revenue planning</strong>  -  set realistic sales targets</li>
+      <li><strong>Budget allocation</strong>  -  determine marketing spend limits</li>
+      <li><strong>Pricing strategy</strong>  -  optimize product/service pricing</li>
+      <li><strong>Performance tracking</strong>  -  monitor progress toward goals</li>
+      <li><strong>Investment decisions</strong>  -  evaluate business opportunities</li>
+      <li><strong>Growth planning</strong>  -  scale operations effectively</li>
     </ul>
 
     <h3>Why Target Revenue Matters:</h3>
@@ -84,7 +84,7 @@ seo:
       <li><strong>Margin optimization</strong> directly impacts profitability</li>
     </ul>
 
-    <p>Use this tool to transform profit goals into actionable revenue targets — essential for strategic business planning and sustainable growth.</p>
+    <p>Use this tool to transform profit goals into actionable revenue targets  -  essential for strategic business planning and sustainable growth.</p>
 scripts:
   - /en/js/business-profit.js
 faq:
@@ -97,7 +97,7 @@ faq:
   - question: "How do I determine my business margin?"
     answer: "Take your net profit and divide by total revenue, then multiply by 100%. For example: $20,000 profit ÷ $100,000 revenue = 20% margin."
   - question: "Can I use this calculator for service businesses?"
-    answer: "Yes. You can use this calculator for any business model — whether selling products or providing services."
+    answer: "Yes. You can use this calculator for any business model  -  whether selling products or providing services."
   - question: "What's the difference between margin and markup?"
     answer: "Margin is profit as a percentage of selling price. Markup is profit as a percentage of cost. This calculator uses margin (profit/revenue ratio)."
   - question: "How accurate are the revenue projections?"

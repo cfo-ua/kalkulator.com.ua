@@ -4,7 +4,7 @@ title: "Best Mortgage Rate Calculator based on Credit Score"
 categories: [financial]
 permalink: /en/calculators/mortgage-rate-credit-score/
 seo:
-  title: "Mortgage Rate Calculator by Credit Score — Home Loan Interest Rate Estimator, Credit Impact"
+  title: "Mortgage Rate Calculator by Credit Score  -  Home Loan Interest Rate Estimator, Credit Impact"
   description: "Calculate mortgage rates based on your credit score. See how credit affects interest rates, monthly payments, and total loan costs. Improve credit for better rates."
   keywords:
     - mortgage rate calculator credit score

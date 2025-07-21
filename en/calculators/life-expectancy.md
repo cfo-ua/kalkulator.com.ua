@@ -4,7 +4,7 @@ title: "Life Expectancy Calculator"
 categories: [health]
 permalink: /en/calculators/life-expectancy/
 seo:
-  title: "Life Expectancy Calculator — Longevity Prediction Based on Lifestyle, Diet, Exercise & Health Factors"
+  title: "Life Expectancy Calculator  -  Longevity Prediction Based on Lifestyle, Diet, Exercise & Health Factors"
   description: "Calculate your estimated life expectancy with this comprehensive longevity calculator. Based on lifestyle factors, diet, exercise, genetics, location, and health habits to predict your potential lifespan and healthy aging."
   keywords:
     - life expectancy calculator

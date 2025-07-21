@@ -4,7 +4,7 @@ title: "Compound Interest Calculator"
 categories: [financial]
 permalink: /en/calculators/compound-interest/
 seo:
-  title: "Compound Interest Calculator — Investment Growth, Compound Returns, Wealth Building"
+  title: "Compound Interest Calculator  -  Investment Growth, Compound Returns, Wealth Building"
   description: "Calculate compound interest returns on investments, deposits, and savings. See how your money grows with regular contributions, compounding frequency, and time. Free online tool for financial planning."
   keywords:
     - compound interest calculator
@@ -38,11 +38,11 @@ seo:
     <h3>Compound Interest Formula:</h3>
     <p><code>A = P × (1 + r/n)ⁿᵗ</code></p>
     <ul>
-      <li><strong>P</strong> — principal amount (initial investment)</li>
-      <li><strong>r</strong> — annual interest rate (as decimal)</li>
-      <li><strong>n</strong> — number of times interest compounds per year</li>
-      <li><strong>t</strong> — number of years</li>
-      <li><strong>A</strong> — final amount</li>
+      <li><strong>P</strong>  -  principal amount (initial investment)</li>
+      <li><strong>r</strong>  -  annual interest rate (as decimal)</li>
+      <li><strong>n</strong>  -  number of times interest compounds per year</li>
+      <li><strong>t</strong>  -  number of years</li>
+      <li><strong>A</strong>  -  final amount</li>
     </ul>
 
     <p>The calculator also accounts for <strong>regular contributions</strong>, which significantly increase the final amount through the compounding effect.</p>

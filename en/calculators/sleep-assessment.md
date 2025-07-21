@@ -4,7 +4,7 @@ title: "Sleep Quality Assessment Calculator"
 categories: [health]
 permalink: /en/calculators/sleep-assessment/
 seo:
-  title: "Sleep Quality Assessment Calculator — Sleep Health Evaluation Tool Based on Duration, Age & Lifestyle"
+  title: "Sleep Quality Assessment Calculator  -  Sleep Health Evaluation Tool Based on Duration, Age & Lifestyle"
   description: "Evaluate your sleep quality with this comprehensive sleep assessment calculator. Get personalized sleep recommendations based on sleep duration, age, gender, lifestyle factors, and sleep habits for optimal health."
   keywords:
     - sleep quality assessment calculator

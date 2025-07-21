@@ -4,7 +4,7 @@ title: "Moving Cost Calculator for Cross-Country Moves"
 categories: [financial]
 permalink: /en/calculators/moving-cost-cross-country/
 seo:
-  title: "Cross-Country Moving Cost Calculator — Long Distance Moving Budget, Relocation Expenses"
+  title: "Cross-Country Moving Cost Calculator  -  Long Distance Moving Budget, Relocation Expenses"
   description: "Calculate cross-country moving costs including truck rental, professional movers, packing supplies, travel expenses. Plan your long-distance relocation budget."
   keywords:
     - cross country moving cost calculator

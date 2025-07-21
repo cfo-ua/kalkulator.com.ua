@@ -4,7 +4,7 @@ title: "Athlete Hydration Needs Calculator"
 categories: [health]
 permalink: /en/calculators/athlete-hydration-needs/
 seo:
-  title: "Athlete Hydration Needs Calculator — Sports Hydration Plan for Peak Performance & Recovery"
+  title: "Athlete Hydration Needs Calculator  -  Sports Hydration Plan for Peak Performance & Recovery"
   description: "Calculate optimal hydration needs for athletes across all sports. Get personalized fluid intake recommendations, electrolyte guidelines, and hydration strategies for training, competition, and recovery based on sport type, duration, and environmental conditions."
   keywords:
     - athlete hydration calculator

@@ -24,9 +24,9 @@ seo:
     <h3>Formula:</h3>
     <p><strong>F = m × g</strong></p>
     <ul>
-      <li><b>F</b> — gravitational force (N)</li>
-      <li><b>m</b> — mass of object (kg)</li>
-      <li><b>g</b> — gravitational acceleration ≈ 9.81 m/s²</li>
+      <li><b>F</b>  -  gravitational force (N)</li>
+      <li><b>m</b>  -  mass of object (kg)</li>
+      <li><b>g</b>  -  gravitational acceleration ≈ 9.81 m/s²</li>
     </ul>
     
     <h3>What is gravitational force?</h3>

@@ -4,7 +4,7 @@ title: "Tech Startup Burn Rate Calculator"
 categories: [business]
 permalink: /en/calculators/tech-startup-burn-rate/
 seo:
-  title: "Startup Burn Rate Calculator — Track Cash Runway & Monthly Burn Rate"
+  title: "Startup Burn Rate Calculator  -  Track Cash Runway & Monthly Burn Rate"
   description: "Free tech startup burn rate calculator. Calculate monthly burn rate, cash runway, and funding timeline. Monitor startup cash flow and plan fundraising with comprehensive burn rate analysis."
   keywords:
     - startup burn rate calculator
@@ -82,22 +82,22 @@ seo:
 
     <h3>Calculator Features:</h3>
     <ul>
-      <li><strong>Multi-scenario modeling</strong> — current vs. optimized burn rates</li>
-      <li><strong>Runway projections</strong> — cash depletion timeline analysis</li>
-      <li><strong>Growth factor modeling</strong> — account for hiring and scaling plans</li>
-      <li><strong>Fundraising planning</strong> — optimal timing and amount calculations</li>
-      <li><strong>Sensitivity analysis</strong> — impact of cost reduction measures</li>
+      <li><strong>Multi-scenario modeling</strong>  -  current vs. optimized burn rates</li>
+      <li><strong>Runway projections</strong>  -  cash depletion timeline analysis</li>
+      <li><strong>Growth factor modeling</strong>  -  account for hiring and scaling plans</li>
+      <li><strong>Fundraising planning</strong>  -  optimal timing and amount calculations</li>
+      <li><strong>Sensitivity analysis</strong>  -  impact of cost reduction measures</li>
     </ul>
 
     <h3>Perfect for Tech Startups:</h3>
     <ul>
-      <li><strong>Early-stage startups</strong> — seed and Series A companies</li>
-      <li><strong>SaaS businesses</strong> — subscription software companies</li>
-      <li><strong>Mobile app startups</strong> — iOS and Android applications</li>
-      <li><strong>E-commerce platforms</strong> — online retail and marketplace businesses</li>
-      <li><strong>Fintech companies</strong> — financial technology solutions</li>
-      <li><strong>Marketplace platforms</strong> — two-sided marketplace businesses</li>
-      <li><strong>AI/ML startups</strong> — artificial intelligence and data companies</li>
+      <li><strong>Early-stage startups</strong>  -  seed and Series A companies</li>
+      <li><strong>SaaS businesses</strong>  -  subscription software companies</li>
+      <li><strong>Mobile app startups</strong>  -  iOS and Android applications</li>
+      <li><strong>E-commerce platforms</strong>  -  online retail and marketplace businesses</li>
+      <li><strong>Fintech companies</strong>  -  financial technology solutions</li>
+      <li><strong>Marketplace platforms</strong>  -  two-sided marketplace businesses</li>
+      <li><strong>AI/ML startups</strong>  -  artificial intelligence and data companies</li>
     </ul>
 
     <h3>Strategic Applications:</h3>
@@ -139,7 +139,7 @@ seo:
       <li><strong>Regular reviews:</strong> monthly financial reviews with leadership team</li>
     </ul>
 
-    <p>Master your startup's financial health and extend your runway with our comprehensive burn rate analysis tool — essential for sustainable growth and successful fundraising.</p>
+    <p>Master your startup's financial health and extend your runway with our comprehensive burn rate analysis tool  -  essential for sustainable growth and successful fundraising.</p>
 scripts:
   - /en/js/tech-startup-burn-rate.js
 faq:

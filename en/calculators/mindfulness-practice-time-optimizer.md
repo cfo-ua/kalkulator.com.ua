@@ -4,7 +4,7 @@ title: "Mindfulness Practice Time Optimizer"
 categories: [health]
 permalink: /en/calculators/mindfulness-practice-time-optimizer/
 seo:
-  title: "Mindfulness Practice Time Optimizer — Personalized Meditation Schedule & Mindfulness Plan Calculator"
+  title: "Mindfulness Practice Time Optimizer  -  Personalized Meditation Schedule & Mindfulness Plan Calculator"
   description: "Optimize your mindfulness practice with this personalized meditation schedule calculator. Get customized mindfulness routines, meditation duration recommendations, and practice plans based on your lifestyle, goals, and experience level."
   keywords:
     - mindfulness practice time optimizer
@@ -58,7 +58,7 @@ seo:
     - meditation routine generator
     - mindfulness optimization calculator
   content: |
-    <h2>Mindfulness Practice Time Optimizer — Personalized Meditation Schedule & Mindfulness Plan Calculator</h2>
+    <h2>Mindfulness Practice Time Optimizer  -  Personalized Meditation Schedule & Mindfulness Plan Calculator</h2>
     <p>
       This comprehensive <strong>mindfulness practice time optimizer</strong> creates a personalized meditation and mindfulness schedule based on your lifestyle, experience level, goals, and available time. Get customized practice recommendations, session durations, and progressive mindfulness routines designed to fit seamlessly into your daily life.
     </p>

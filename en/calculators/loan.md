@@ -4,7 +4,7 @@ title: "Loan Calculator"
 categories: [financial]
 permalink: /en/calculators/loan/
 seo:
-  title: "Loan Calculator — Monthly Payments, Interest, Total Cost"
+  title: "Loan Calculator  -  Monthly Payments, Interest, Total Cost"
   description: "Calculate loan payments, total interest, and loan terms. Compare different loan options and find the best deal for your needs."
   keywords:
     - loan calculator
