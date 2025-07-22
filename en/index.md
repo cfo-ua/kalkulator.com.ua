@@ -54,6 +54,22 @@ seo:
     <span>⏰</span>
     <div>Time & Date<br><small>Calendar, age, time difference</small></div>
   </a>
+  <a class="category-card" href="/en/categories/environment/">
+    <span>🌱</span>
+    <div>Environment<br><small>Carbon footprint, sustainability, eco tools</small></div>
+  </a>
+  <a class="category-card" href="/en/categories/technology/">
+    <span>💻</span>
+    <div>Technology<br><small>Network, programming, computing tools</small></div>
+  </a>
+  <a class="category-card" href="/en/categories/entertainment/">
+    <span>🎬</span>
+    <div>Entertainment<br><small>Gaming, movies, events, fun tools</small></div>
+  </a>
+  <a class="category-card" href="/en/categories/travel/">
+    <span>✈️</span>
+    <div>Travel<br><small>Distance, currency, trip planning</small></div>
+  </a>
   <a class="category-card" href="/en/categories/other/">
     <span>✨</span>
     <div>Other<br><small>IP address, internet speed, etc.</small></div>
@@ -85,6 +101,10 @@ seo:
     <li style="margin-bottom: 0.8rem;"><strong>Construction:</strong> material calculators, area calculations, volume calculations</li>
     <li style="margin-bottom: 0.8rem;"><strong>Conversion:</strong> unit converters, currency converter, temperature converter</li>
     <li style="margin-bottom: 0.8rem;"><strong>Time & Date:</strong> age calculator, date difference, business days</li>
+    <li style="margin-bottom: 0.8rem;"><strong>Environment:</strong> carbon footprint calculator, energy savings, sustainability metrics</li>
+    <li style="margin-bottom: 0.8rem;"><strong>Technology:</strong> network calculators, bandwidth tools, programming utilities</li>
+    <li style="margin-bottom: 0.8rem;"><strong>Entertainment:</strong> gaming calculators, party planning, event tools</li>
+    <li style="margin-bottom: 0.8rem;"><strong>Travel:</strong> distance calculators, travel budget, currency conversion</li>
     <li style="margin-bottom: 0.8rem;"><strong>Other:</strong> internet speed test, IP address checker, and more useful tools</li>
   </ul>
 
