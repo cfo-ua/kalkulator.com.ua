@@ -1,0 +1,2229 @@
+{
+  "meta": {
+    "analysis_date": "2024-12",
+    "total_en_calculators": 187,
+    "total_ua_calculators": 69,
+    "missing_translations": 122,
+    "translation_coverage": "36.9%"
+  },
+  "priorities": {
+    "High": [
+      {
+        "filename": "3d-printing-material-cost-calculator",
+        "title": "3D Printing Material Cost Calculator | Filament & Resin Cost Estimator",
+        "ukrainian_suggestion": "3D Printing Матеріал Вартість Калькулятор | Filament & Resin Вартість Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free 3D printing cost calculator to estimate material costs, printing time, electricity usage, and total production costs for filament and resin 3D printing projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "anxiety-management-plan",
+        "title": "Anxiety Management Plan Generator",
+        "ukrainian_suggestion": "Калькулятор anxiety management plan generator",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Generate a personalized anxiety management plan with tailored coping strategies, breathing exercises, and therapeutic techniques. Get customized anxiety relief methods based on your specific symptoms ...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "athlete-hydration-needs",
+        "title": "Athlete Hydration Needs Calculator",
+        "ukrainian_suggestion": "Athlete Hydration Needs Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate optimal hydration needs for athletes across all sports. Get personalized fluid intake recommendations, electrolyte guidelines, and hydration strategies for training, competition, and recover...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "beekeeping-honey-production",
+        "title": "Beekeeping Honey Production Calculator",
+        "ukrainian_suggestion": "Beekeeping Honey Production Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate expected honey production from your beehives. Estimate yields, plan harvest schedules, and analyze beekeeping profitability.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "board-foot",
+        "title": "Board Foot Calculator",
+        "ukrainian_suggestion": "Board Foot Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate board feet of lumber needed for woodworking projects. Professional lumber calculator estimates volume, costs, and material requirements for construction and carpentry.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "carbon-offset-business",
+        "title": "Carbon Offset Calculator for Businesses",
+        "ukrainian_suggestion": "Carbon Offset Калькулятор For Businesses",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free carbon offset calculator for businesses. Calculate corporate carbon footprint, analyze emissions sources, and plan sustainable offset strategies for net-zero goals.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "career-path-salary-estimator",
+        "title": "Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More",
+        "ukrainian_suggestion": "Career Path Salary Калькулятор Data Scientists, Doctors, Engineers & More",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Estimate salary potential for top careers including data scientists, doctors, software engineers, nurses, and more. Get personalized salary projections based on experience, location, and education lev...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "compliance-checklist",
+        "title": "GDPR, SOX, ESG Compliance Checklist Calculator",
+        "ukrainian_suggestion": "Gdpr, Sox, Esg Compliance Checklist Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Comprehensive compliance assessment tool for GDPR data protection, SOX financial controls, ESG sustainability, and other major business frameworks. Get compliance scores and actionable improvement pla...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "compost-bin-size",
+        "title": "Compost Bin Size Calculator",
+        "ukrainian_suggestion": "Compost Bin Size Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate the right compost bin size for your household. Determine optimal composting capacity based on waste generation and garden needs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "cost-raising-child",
+        "title": "Cost of Raising a Child Calculator",
+        "ukrainian_suggestion": "Вартість Of Raising A Child Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate the total cost of raising a child from birth to 18. Includes childcare, education, healthcare, food, clothing, and activities. Plan your family budget with realistic child-rearing expenses.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "course-enrollment-forecast",
+        "title": "Online Course Enrollment Forecast Calculator",
+        "ukrainian_suggestion": "Online Course Enrollment Forecast Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free online course enrollment forecast calculator. Predict student growth, revenue potential, and market success for educational courses and training programs.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "cybersecurity-awareness-quiz",
+        "title": "Cybersecurity Awareness Quiz - Test Your Security Knowledge",
+        "ukrainian_suggestion": "Калькулятор cybersecurity awareness quiz test your security knowledge",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Test your cybersecurity knowledge with our comprehensive quiz! Learn about phishing, passwords, malware, and online safety. Improve your digital security awareness instantly.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "cybersecurity-compliance-assessment",
+        "title": "Cybersecurity Compliance Readiness Assessment - Business Security Checklist",
+        "ukrainian_suggestion": "Калькулятор cybersecurity compliance readiness assessment бізнес security checklist",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Evaluate your business cybersecurity compliance readiness with our comprehensive checklist. Assess data protection, network security, employee training, and regulatory compliance.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "debt-snowball-avalanche",
+        "title": "Debt Snowball vs. Avalanche Calculator",
+        "ukrainian_suggestion": "Калькулятор стратегії погашення боргів",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Compare debt snowball vs avalanche methods. Calculate interest savings, payoff time, and motivation factors. Choose the best debt elimination strategy for your situation.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "deck-board",
+        "title": "Deck Board Calculator",
+        "ukrainian_suggestion": "Deck Board Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate deck boards, joists, posts, and hardware needed for deck construction. Professional deck calculator for composite, pressure-treated lumber, and cedar decking projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "depression-symptom-tracker",
+        "title": "Depression Symptom Tracker",
+        "ukrainian_suggestion": "Калькулятор depression symptom tracker",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Track depression symptoms with this comprehensive depression assessment tool. Monitor mood patterns, severity levels, and symptoms over time with personalized depression management strategies and prof...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "diy-project-cost-estimator",
+        "title": "DIY Project Material Cost Estimator",
+        "ukrainian_suggestion": "Diy Project Матеріал Вартість Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free DIY project cost calculator. Estimate materials, tools, and total costs for home improvement projects. Plan budgets for flooring, painting, decking, and more.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "drywall",
+        "title": "Drywall Calculator",
+        "ukrainian_suggestion": "Калькулятор гіпсокартону",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate drywall sheets, joint compound, tape, and screws needed for walls and ceilings. Professional drywall calculator for construction and renovation projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "eco-friendly-product-impact-calculator",
+        "title": "Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment",
+        "ukrainian_suggestion": "Eco Friendly Product Impact Калькулятор | Environmental Footprint Assessment",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free eco-friendly product impact calculator to assess environmental benefits, carbon footprint reduction, and sustainability metrics of green products and lifestyle choices.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ecommerce-inventory-turnover",
+        "title": "E-commerce Inventory Turnover Calculator",
+        "ukrainian_suggestion": "E Commerce Inventory Turnover Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free e-commerce inventory turnover calculator. Calculate inventory turnover ratio, days in inventory, and optimize stock levels. Improve cash flow and reduce holding costs with data-driven inventory m...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "emergency-fund-size",
+        "title": "Emergency Fund Size Calculator",
+        "ukrainian_suggestion": "Калькулятор резервного фонду",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate ideal emergency fund size based on expenses, income stability, and personal situation. Determine how many months of expenses to save for financial security.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "employee-burnout-assessment",
+        "title": "Employee Burnout Risk Assessment - Workplace Wellness Calculator",
+        "ukrainian_suggestion": "Employee Burnout Risk Assessment Workplace Wellness Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your risk of workplace burnout with our comprehensive calculator. Evaluate stress levels, work-life balance, and mental health indicators for better workplace wellness.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "energy-bill-estimator-solar",
+        "title": "Energy Bill Estimator for Solar Panels",
+        "ukrainian_suggestion": "Energy Bill Калькулятор For Solar Panels",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free solar panel energy bill calculator. Calculate monthly electricity savings, installation payback period, and 25-year ROI with customizable solar system parameters.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "environmental-transportation",
+        "title": "Environmental Impact of Transportation Calculator",
+        "ukrainian_suggestion": "Environmental Impact Of Transportation Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate the environmental impact of your transportation choices. Compare carbon emissions, fuel consumption, and costs across different travel modes.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "fence-material",
+        "title": "Fence Material Calculator",
+        "ukrainian_suggestion": "Калькулятор матеріалів для паркану",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate fence materials needed for wood, vinyl, chain link, and metal fencing. Professional fence calculator estimates posts, panels, rails, and hardware costs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "fertilizer",
+        "title": "Fertilizer Calculator",
+        "ukrainian_suggestion": "Fertilizer Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate fertilizer needed for lawns, gardens, and landscapes. Professional fertilizer calculator determines application rates, NPK requirements, and coverage areas.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "financial-independence-number",
+        "title": "Financial Independence Number Calculator",
+        "ukrainian_suggestion": "Калькулятор фінансової незалежності",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate your FIRE number for financial independence. Determine how much to save for early retirement using 4% rule, expenses, and lifestyle goals.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "fitness-age",
+        "title": "Fitness Age Calculator",
+        "ukrainian_suggestion": "Фітнес Age Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your fitness age based on VO2 max, resting heart rate, physical activity, and health indicators. Discover if you're biologically younger or older than your chronological age with this compre...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "freelancer-hourly-rate",
+        "title": "Freelancer Hourly Rate Calculator",
+        "ukrainian_suggestion": "Калькулятор погодинної ставки фрілансера",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free freelancer hourly rate calculator with comprehensive analysis. Determine optimal pricing based on expenses, profit goals, and market positioning for sustainable freelancing business.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "gardening-plant-spacing",
+        "title": "Gardening Plant Spacing Calculator",
+        "ukrainian_suggestion": "Gardening Plant Spacing Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate optimal plant spacing for your garden. Professional plant spacing calculator determines distances, layout patterns, and plant quantities for maximum yield.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gardening-water-usage",
+        "title": "Gardening Water Usage Calculator",
+        "ukrainian_suggestion": "Gardening Water Usage Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate water needs for your garden. Determine irrigation requirements, water costs, and conservation strategies for efficient garden watering.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gravel",
+        "title": "Gravel Calculator",
+        "ukrainian_suggestion": "Gravel Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate gravel needed for driveways, paths, and landscaping. Professional gravel calculator estimates cubic yards, tons, and costs for pea gravel, crushed stone, and more.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gym-vs-home-gym-cost",
+        "title": "Gym Membership Cost vs. Home Gym Calculator",
+        "ukrainian_suggestion": "Gym Membership Вартість Vs. Дім Gym Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free gym vs home gym cost calculator. Compare membership fees, equipment costs, and long-term savings to make the best fitness investment decision.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "herb-garden-yield",
+        "title": "Herb Garden Yield Estimator",
+        "ukrainian_suggestion": "Herb Garden Yield Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate expected yields from your herb garden. Estimate herb production, plan harvest schedules, and determine garden size for your needs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "home-energy-audit",
+        "title": "Home Energy Audit Calculator",
+        "ukrainian_suggestion": "Дім Energy Audit Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free home energy audit calculator. Analyze energy usage, identify efficiency improvements, calculate potential savings, and plan home energy upgrades.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-portion-size-weight-loss",
+        "title": "Ideal Portion Size Calculator for Weight Loss",
+        "ukrainian_suggestion": "Ideal Portion Size Калькулятор For Вага Loss",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate ideal portion sizes for weight loss with this comprehensive portion control calculator. Get personalized food portions based on your weight loss goals, metabolic needs, and dietary preferenc...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-retirement-savings-lifestyle",
+        "title": "Ideal Retirement Savings Calculator based on Lifestyle",
+        "ukrainian_suggestion": "Ideal Пенсія Заощадження Калькулятор Based On Lifestyle",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate ideal retirement savings based on your desired lifestyle. Plan for luxury, comfortable, or modest retirement with personalized savings targets and withdrawal strategies.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-weight-calculator",
+        "title": "Ideal Weight Calculator - Calculate Your Perfect Body Weight",
+        "ukrainian_suggestion": "Калькулятор ідеальної ваги",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your ideal body weight using proven medical formulas including BMI, Devine, Hamwi, and Robinson methods. Get healthy weight ranges for your height, age, and body frame.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "income-tax-calculator",
+        "title": "Income Tax Calculator - Federal & State Tax Estimator",
+        "ukrainian_suggestion": "Income Tax Калькулятор Federal & State Tax Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate your income taxes with our comprehensive tax calculator. Estimate federal and state taxes, deductions, and refunds. Updated for current tax brackets and rules.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "insulation",
+        "title": "Insulation Calculator",
+        "ukrainian_suggestion": "Insulation Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate insulation needed for walls, attics, and floors. Professional insulation calculator estimates R-value requirements, material quantities, and energy savings.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "intermittent-fasting-schedule",
+        "title": "Intermittent Fasting Schedule Calculator",
+        "ukrainian_suggestion": "Intermittent Fasting Schedule Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Create your personalized intermittent fasting schedule with this comprehensive calculator. Choose from 16:8, 18:6, OMAD, 5:2 and other IF methods based on your lifestyle, goals, and preferences for su...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "iot-device-power-consumption-estimator",
+        "title": "IoT Device Power Consumption Estimator | Smart Device Energy Calculator",
+        "ukrainian_suggestion": "Iot Device Power Consumption Калькулятор | Smart Device Energy Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free IoT device power consumption calculator to estimate energy usage, battery life, and electricity costs for smart home devices, sensors, and connected systems.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "life-expectancy",
+        "title": "Life Expectancy Calculator",
+        "ukrainian_suggestion": "Life Expectancy Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your estimated life expectancy with this comprehensive longevity calculator. Based on lifestyle factors, diet, exercise, genetics, location, and health habits to predict your potential lifes...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "lottery-probability-calculator",
+        "title": "Lottery Probability Calculator - Calculate Your Odds of Winning Any Lottery",
+        "ukrainian_suggestion": "Lottery Probability Калькулятор Calculate Your Odds Of Winning Any Lottery",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate exact probability and odds for any lottery game. Compare Powerball, Mega Millions, scratch-offs, and custom lotteries. See realistic expectations and better investment alternatives.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mental-health-resilience-score",
+        "title": "Mental Health Resilience Score Calculator",
+        "ukrainian_suggestion": "Mental Здоров'Я Resilience Score Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your mental health resilience with this comprehensive resilience score calculator. Evaluate psychological resilience, coping skills, emotional strength, and stress adaptation abilities with per...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mental-health-self-assessment",
+        "title": "Mental Health Self-Assessment Calculator",
+        "ukrainian_suggestion": "Mental Здоров'Я Self Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Evaluate your mental health with this comprehensive self-assessment calculator. Get insights into depression, anxiety, stress levels, and overall psychological wellbeing with personalized recommendati...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-affordability-calculator",
+        "title": "Mortgage Affordability Calculator - How Much House Can I Afford?",
+        "ukrainian_suggestion": "Калькулятор доступності іпотеки",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate how much house you can afford based on income, debt, and down payment. Get pre-approval estimates and monthly payment limits with our mortgage affordability calculator.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-calculator",
+        "title": "Mortgage Calculator - Monthly Payment & Amortization Schedule",
+        "ukrainian_suggestion": "Іпотечний калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate monthly mortgage payments, total interest, and view amortization schedules. Compare loan terms, down payments, and PMI with our comprehensive mortgage calculator.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-rate-credit-score",
+        "title": "Best Mortgage Rate Calculator based on Credit Score",
+        "ukrainian_suggestion": "Best Іпотека Rate Калькулятор Based On Credit Score",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate mortgage rates based on your credit score. See how credit affects interest rates, monthly payments, and total loan costs. Improve credit for better rates.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mulch",
+        "title": "Mulch Calculator",
+        "ukrainian_suggestion": "Mulch Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate mulch needed for landscaping projects. Professional mulch calculator estimates cubic yards, bags, and costs for garden beds, flower beds, and landscape areas.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "paint-coverage",
+        "title": "Paint Coverage Calculator",
+        "ukrainian_suggestion": "Калькулятор фарби",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate paint coverage for walls, rooms, and surfaces. Professional paint calculator estimates gallons needed, costs, and coverage for interior and exterior painting projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "passive-income-estimator",
+        "title": "Passive Income Stream Estimator",
+        "ukrainian_suggestion": "Passive Income Stream Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free passive income calculator to estimate earnings from multiple streams. Plan your path to financial independence with rental, dividend, business, and investment income projections.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "paver",
+        "title": "Paver Calculator",
+        "ukrainian_suggestion": "Paver Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate pavers needed for patios, driveways, and walkways. Professional paver calculator estimates materials, sand, gravel, and costs for paving projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "pet-calorie-calculator",
+        "title": "Pet Calorie Calculator | Calculate Daily Calories for Dogs & Cats",
+        "ukrainian_suggestion": "Pet Calorie Калькулятор | Calculate Daily Calories For Dogs & Cats",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free pet calorie calculator to determine daily calorie requirements for dogs, cats, and other pets. Calculate based on weight, age, activity level, and health status for optimal pet nutrition.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "pet-medication-dosage-calculator",
+        "title": "Pet Medication Dosage Calculator | Safe Dosing for Dogs & Cats",
+        "ukrainian_suggestion": "Pet Medication Dosage Калькулятор | Safe Dosing For Dogs & Cats",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free pet medication dosage calculator for safe drug dosing in dogs, cats, and other pets. Calculate proper dosages based on weight for common veterinary medications and supplements.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "podcast-growth-predictor",
+        "title": "Podcast Listener Growth Predictor",
+        "ukrainian_suggestion": "Калькулятор podcast listener growth predictor",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free podcast growth calculator. Predict listener growth based on publishing frequency, marketing efforts, and engagement metrics. Plan your podcasting success strategy.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "pregnancy-due-date-calculator",
+        "title": "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception",
+        "ukrainian_suggestion": "Калькулятор дати пологів",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your baby's due date from last menstrual period (LMP) or conception date. Get pregnancy timeline, current week, trimester info, and important milestone dates.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "project-pricing-calculator",
+        "title": "Freelancer Project Pricing Calculator",
+        "ukrainian_suggestion": "Freelancer Project Pricing Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free freelancer project pricing calculator. Estimate project costs based on historical data, complexity, timeline, and requirements. Smart pricing for consultants and freelancers.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "raised-bed-soil",
+        "title": "Raised Bed Soil Calculator",
+        "ukrainian_suggestion": "Raised Bed Soil Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate soil needed for raised garden beds. Professional soil calculator estimates cubic yards, bags, and costs for vegetable gardens and flower beds.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "random-person-selector",
+        "title": "Random Person Selector - Pick Random People for Games & Challenges",
+        "ukrainian_suggestion": "Калькулятор random person selector pick random people for games & challenges",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Select random people instantly! Perfect for team building, classroom activities, game nights, and fair selection processes. Add names and get random picks with no bias.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "real-estate-investment-return",
+        "title": "Investment Return Calculator for Real Estate",
+        "ukrainian_suggestion": "Інвестиція Return Калькулятор For Real Estate",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate real estate investment returns including ROI, cash flow, cap rate, cash-on-cash return. Analyze rental properties, flips, and commercial real estate investments.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "rebar",
+        "title": "Rebar Calculator",
+        "ukrainian_suggestion": "Rebar Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate rebar needed for concrete slabs, footings, and walls. Professional reinforcement calculator estimates quantity, spacing, and costs for construction projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "retaining-wall",
+        "title": "Retaining Wall Calculator",
+        "ukrainian_suggestion": "Retaining Wall Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate materials needed for retaining walls. Professional calculator estimates blocks, gravel, drainage, and costs for landscape retaining wall construction.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "roof-pitch",
+        "title": "Roof Pitch Calculator",
+        "ukrainian_suggestion": "Калькулятор кута даху",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate roof pitch, slope, and angle from rise and run measurements. Professional roof calculator estimates materials needed for roofing projects and determines proper pitch.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "saas-customer-lifetime-value",
+        "title": "Customer Lifetime Value Calculator for SaaS Businesses",
+        "ukrainian_suggestion": "Customer Lifetime Value Калькулятор For Saas Businesses",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free SaaS customer lifetime value (CLV) calculator. Calculate CLV, customer acquisition cost (CAC), and LTV:CAC ratio for subscription businesses. Optimize pricing and retention strategies with compre...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "sleep-assessment",
+        "title": "Sleep Quality Assessment Calculator",
+        "ukrainian_suggestion": "Sleep Quality Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Evaluate your sleep quality with this comprehensive sleep assessment calculator. Get personalized sleep recommendations based on sleep duration, age, gender, lifestyle factors, and sleep habits for op...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "small-business-cash-flow-forecaster",
+        "title": "Small Business Cash Flow Forecaster",
+        "ukrainian_suggestion": "Калькулятор small бізнес cash flow forecaster",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free small business cash flow forecaster. Create 12-month cash flow projections, identify cash gaps, and plan working capital needs. Optimize cash flow management with seasonal analysis.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "small-business-health-check",
+        "title": "Small Business Health Check Calculator",
+        "ukrainian_suggestion": "Small Бізнес Здоров'Я Check Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Comprehensive small business health assessment tool. Evaluate your business across key areas including finances, operations, marketing, and growth potential. Get actionable insights and improvement re...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "small-business-loan-eligibility",
+        "title": "Small Business Loan Eligibility Calculator",
+        "ukrainian_suggestion": "Small Бізнес Кредит Eligibility Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free small business loan eligibility calculator. Check loan qualification, estimate approval chances, and compare loan options based on credit score, revenue, and business profile. Get personalized fu...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "smart-home-savings",
+        "title": "Smart Home Device Cost vs. Savings Calculator",
+        "ukrainian_suggestion": "Smart Дім Device Вартість Vs. Заощадження Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate smart home device return on investment. Compare upfront costs vs long-term energy savings, convenience benefits, and payback periods for smart devices.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "social-media-ad-spend-optimizer",
+        "title": "Social Media Ad Spend Optimizer",
+        "ukrainian_suggestion": "Калькулятор social media ad spend optimizer",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free social media advertising spend optimizer. Calculate optimal budget allocation, ROAS, and CAC across Facebook, Google, Instagram, and more. Maximize marketing ROI with data-driven ad spend distrib...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "solar-panel-efficiency",
+        "title": "Solar Panel Efficiency Calculator",
+        "ukrainian_suggestion": "Solar Panel Efficiency Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free solar panel efficiency calculator. Analyze panel performance, energy output, efficiency ratings, and optimal positioning for maximum solar energy generation.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "stair-stringer",
+        "title": "Stair Stringer Calculator",
+        "ukrainian_suggestion": "Stair Stringer Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate stair stringer dimensions, cuts, and layout for deck stairs and interior staircases. Professional stair framing calculator for builders and DIY projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "stairs",
+        "title": "Stairs Calculator",
+        "ukrainian_suggestion": "Калькулятор сходів",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate stairs step height, tread depth, and total steps for safe, comfortable staircase construction. Professional stair calculator for builders and DIY projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "startup-cost-calculator",
+        "title": "Startup Cost Calculator for Tech Startups",
+        "ukrainian_suggestion": "Калькулятор витрат на стартап",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free startup cost calculator for tech entrepreneurs. Calculate initial investment, ongoing expenses, and funding requirements. Plan your tech startup budget with comprehensive cost analysis and cash f...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "startup-salary-equity-calculator",
+        "title": "Employee Salary Calculator for Startups with Equity Options",
+        "ukrainian_suggestion": "Employee Salary Калькулятор For Startups With Equity Options",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free startup employee salary and equity calculator. Calculate competitive compensation packages including base salary, equity options, and total compensation value for startup hiring and retention.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "startup-valuation",
+        "title": "Startup Valuation Calculator",
+        "ukrainian_suggestion": "Стартап Valuation Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate startup valuation using multiple proven methods including revenue multiples, cost approach, and market comparables. Get comprehensive valuation analysis for investment planning and fundraisi...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "stock-fair-value",
+        "title": "Stock Fair Value Calculator - Graham Intelligent Investor Method",
+        "ukrainian_suggestion": "Stock Fair Value Калькулятор Graham Intelligent Investor Method",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate stock intrinsic value using Benjamin Graham's proven methodology from The Intelligent Investor. Evaluate P/E ratios, growth rates, and financial strength for informed investment decisions.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "stress-level-assessment",
+        "title": "Stress Level Assessment Calculator",
+        "ukrainian_suggestion": "Stress Level Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your stress levels with this comprehensive stress evaluation calculator. Measure workplace stress, life stress, and physical symptoms with personalized stress management recommendations and cop...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "tech-startup-burn-rate",
+        "title": "Tech Startup Burn Rate Calculator",
+        "ukrainian_suggestion": "Tech Стартап Burn Rate Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free tech startup burn rate calculator. Calculate monthly burn rate, cash runway, and funding timeline. Monitor startup cash flow and plan fundraising with comprehensive burn rate analysis.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "text-analyzer",
+        "title": "Text Analyzer - Count Letters, Words, Sentences Online",
+        "ukrainian_suggestion": "Калькулятор text analyzer count letters, words, sentences online",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Analyze your text instantly! Count exact letters, total characters, words, sentences, and paragraphs. Perfect for essays, social media posts, SEO content, and writing projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "vegan-protein-intake",
+        "title": "Vegan Protein Intake Calculator",
+        "ukrainian_suggestion": "Vegan Protein Intake Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your daily vegan protein needs based on weight, activity level, and goals. Get personalized recommendations for plant-based protein sources, meal planning, and optimal amino acid profiles fo...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "water-intake-marathon",
+        "title": "Water Intake Calculator for Marathon Runners",
+        "ukrainian_suggestion": "Water Intake Калькулятор For Marathon Runners",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate optimal water intake for marathon running based on sweat rate, weather conditions, and race duration. Prevent dehydration and hyponatremia with scientifically-backed hydration recommendation...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "youtube-monetization-estimator",
+        "title": "YouTube Channel Monetization Estimator",
+        "ukrainian_suggestion": "Youtube Channel Monetization Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free YouTube monetization calculator. Estimate earnings from ad revenue, sponsorships, memberships based on views, subscribers, and engagement metrics.",
+        "estimated_search_volume": "High"
+      }
+    ],
+    "Medium": [
+      {
+        "filename": "application-development-cost-estimator",
+        "title": "Application Development Cost Estimator | Software Development Price Calculator",
+        "ukrainian_suggestion": "Application Development Вартість Калькулятор | Software Development Price Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free application development cost calculator to estimate software development costs, project timelines, and resource requirements for mobile apps, web apps, and enterprise software.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "bad-habit-cost-calculator",
+        "title": "Bad Habit Cost Calculator - Calculate the True Cost of Smoking, Drinking & More",
+        "ukrainian_suggestion": "Bad Habit Вартість Калькулятор Calculate The True Вартість Of Smoking, Drinking & More",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate the true financial cost of bad habits like smoking, drinking, fast food, and more. See daily, weekly, monthly, and yearly expenses plus 10-year projections to motivate positive change.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "blockchain-transaction-fee-calculator",
+        "title": "Blockchain Transaction Fee Calculator | Crypto Gas Fee Estimator",
+        "ukrainian_suggestion": "Blockchain Transaction Fee Калькулятор | Crypto Gas Fee Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free blockchain transaction fee calculator to estimate gas fees, network costs, and optimal transaction timing for Bitcoin, Ethereum, and other cryptocurrency networks.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "crypto-price-prediction",
+        "title": "Cryptocurrency Price Prediction Calculator - Technical Analysis",
+        "ukrainian_suggestion": "Cryptocurrency Price Prediction Калькулятор Technical Analysis",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Predict cryptocurrency prices using technical analysis indicators including RSI, MACD, moving averages, and support/resistance levels. Educational tool for crypto trading analysis.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "electric-vehicle-range",
+        "title": "Electric Vehicle Range Calculator",
+        "ukrainian_suggestion": "Electric Vehicle Range Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free electric vehicle range calculator. Estimate EV driving distance, battery consumption, charging needs, and trip planning for electric cars.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "furniture-assembly-time",
+        "title": "Furniture Assembly Time Estimator",
+        "ukrainian_suggestion": "Furniture Assembly Time Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate furniture assembly time and cost estimates. Plan DIY furniture projects with accurate time predictions and professional assembly cost comparisons.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "furniture-fit-studio",
+        "title": "Furniture Fit Calculator for Studio Apartments",
+        "ukrainian_suggestion": "Furniture Fit Калькулятор For Studio Apartments",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free furniture fit calculator for studio apartments. Plan optimal furniture placement, calculate space utilization, and visualize room layouts for maximum functionality.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "mindfulness-practice-time-optimizer",
+        "title": "Mindfulness Practice Time Optimizer",
+        "ukrainian_suggestion": "Калькулятор mindfulness practice time optimizer",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your mindfulness practice with this personalized meditation schedule calculator. Get customized mindfulness routines, meditation duration recommendations, and practice plans based on your lif...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "optimal-crop-planting-time",
+        "title": "Optimal Crop Planting Time Calculator",
+        "ukrainian_suggestion": "Optimal Crop Planting Time Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate optimal planting times for crops based on frost dates and climate zones. Professional planting calendar calculator for maximum harvest success.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "packing-list-hiking",
+        "title": "Packing List Generator for Hiking Trips",
+        "ukrainian_suggestion": "Калькулятор packing list generator for hiking trips",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free hiking packing list generator. Create personalized gear lists based on trip duration, weather, difficulty, and hiking style. Never forget essential equipment again.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "password-strength-checker",
+        "title": "Password Strength Checker - Security Policy Validator & Generator",
+        "ukrainian_suggestion": "Калькулятор password strength checker security policy validator & generator",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Check password strength against multiple security policies and get improvement suggestions. Generate secure passwords with customizable options for maximum protection.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "pet-name-compatibility-calculator",
+        "title": "Pet Name Compatibility Calculator | Find the Perfect Name for Your Pet",
+        "ukrainian_suggestion": "Pet Name Compatibility Калькулятор | Find The Perfect Name For Your Pet",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free pet name compatibility calculator to find the perfect name for your dog, cat, or other pets. Match names to personality traits, appearance, and behavior for the ideal pet name.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "quantum-computing-resource-estimator",
+        "title": "Quantum Computing Resource Estimator | Quantum Algorithm Analysis Tool",
+        "ukrainian_suggestion": "Quantum Computing Resource Калькулятор | Quantum Algorithm Analysis Tool",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free quantum computing resource estimator to analyze quantum algorithms, estimate qubit requirements, gate counts, and circuit depth for quantum computing applications and research.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "study-time-optimizer",
+        "title": "Study Time Optimizer for MCAT, LSAT, GRE, GMAT & Medical Exams",
+        "ukrainian_suggestion": "Калькулятор study time optimizer for mcat, lsat, gre, gmat & medical exams",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your study schedule for MCAT, LSAT, GRE, GMAT, USMLE and other professional exams. Get personalized study plans, time allocation, and preparation strategies based on your goals and schedule.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "swimmers-stroke-rate-optimizer",
+        "title": "Swimmer's Stroke Rate Optimizer",
+        "ukrainian_suggestion": "Калькулятор swimmer's stroke rate optimizer",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your swimming performance with this stroke rate calculator. Find your ideal strokes per minute (SPM) for different distances, analyze stroke efficiency, and get personalized training recommen...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "travel-budget-backpackers",
+        "title": "Travel Budget Calculator for Backpackers",
+        "ukrainian_suggestion": "Калькулятор бюджету для подорожей",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Calculate your backpacking travel budget including accommodation, food, transport, activities. Plan budget-friendly trips with hostel costs, local food prices, and backpacker expenses.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "travel-insurance-estimator",
+        "title": "Travel Insurance Premium Estimator",
+        "ukrainian_suggestion": "Подорож Insurance Premium Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free travel insurance premium calculator. Estimate costs based on destination, trip duration, age, coverage level and activities. Compare options for optimal protection.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "used-car-resale-value",
+        "title": "Used Car Resale Value Estimator",
+        "ukrainian_suggestion": "Used Car Resale Value Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate your car's future resale value and depreciation. Estimate vehicle worth based on make, model, age, mileage, and condition for better financial planning.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "wedding-cost-estimator",
+        "title": "Wedding Cost Estimator based on Wedding Type and Guests",
+        "ukrainian_suggestion": "Калькулятор вартості весілля",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate wedding costs based on guest count, venue type, and style. Plan your wedding budget with detailed cost breakdowns for ceremonies and receptions.",
+        "estimated_search_volume": "Low"
+      }
+    ],
+    "Low": [
+      {
+        "filename": "401k-calculator",
+        "title": "401k Calculator - Retirement Savings Estimator",
+        "ukrainian_suggestion": "401K Калькулятор Пенсія Заощадження Калькулятор",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate your 401k retirement savings growth with employer matching, contribution limits, and investment returns. Plan your retirement with our comprehensive 401k calculator.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "aquaponics-system-design",
+        "title": "Aquaponics System Design Calculator",
+        "ukrainian_suggestion": "Aquaponics System Design Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "astrology-compatibility",
+        "title": "Astrology Birth Chart Compatibility Calculator",
+        "ukrainian_suggestion": "Astrology Birth Chart Compatibility Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate astrology compatibility between two people with our free birth chart compatibility calculator. Discover relationship strengths, challenges, and cosmic connection based on zodiac signs and bi...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "college-cost-calculator-out-of-state",
+        "title": "College Cost Calculator for Out-of-State Students",
+        "ukrainian_suggestion": "College Вартість Калькулятор For Out Of State Students",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Free college cost calculator for out-of-state and international students. Estimate tuition, housing, books, and living expenses. Compare costs across different universities and plan your education bud...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "dream-interpretation-score-calculator",
+        "title": "Dream Interpretation Score Calculator & Meaning Analysis",
+        "ukrainian_suggestion": "Dream Interpretation Score Калькулятор & Meaning Analysis",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Free dream interpretation calculator to analyze your dreams and get personalized meaning scores. Discover psychological insights, symbolism, and emotional significance of your dreams with our AI-power...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "feng-shui-home-layout-optimizer",
+        "title": "Feng Shui Home Layout Optimizer | Feng Shui Calculator & Analysis",
+        "ukrainian_suggestion": "Feng Shui Дім Layout Optimizer | Feng Shui Калькулятор & Analysis",
+        "category": "Construction & Home",
+        "priority": "Low",
+        "description": "Free Feng Shui calculator and home layout optimizer to analyze your living space energy, get personalized recommendations, and improve harmony using authentic Feng Shui principles.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "graduate-school-acceptance-rate-predictor",
+        "title": "Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs",
+        "ukrainian_suggestion": "Калькулятор graduate school acceptance rate predictor phd, masters, mba programs",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Predict your acceptance chances for graduate school programs including PhD, Masters, and MBA. Get personalized admission probability based on GPA, test scores, research experience, and more.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "international-student-visa-checklist-generator",
+        "title": "International Student Visa Application Checklist Generator",
+        "ukrainian_suggestion": "Калькулятор international student visa application checklist generator",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Generate personalized student visa application checklists for US, Canada, UK, Australia and more. Get complete document lists, timeline guidance, and application tips for international students.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "moon-phase-calculator-wedding",
+        "title": "Moon Phase Calculator for Wedding Planning & Special Events",
+        "ukrainian_suggestion": "Moon Phase Калькулятор For Весілля Planning & Special Events",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Plan your wedding or special event with our moon phase calculator. Discover the perfect lunar phase for your ceremony, reception, and romantic occasions. Check full moon, new moon dates for 2024-2025.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "moving-cost-cross-country",
+        "title": "Moving Cost Calculator for Cross-Country Moves",
+        "ukrainian_suggestion": "Moving Вартість Калькулятор For Cross Country Moves",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Calculate cross-country moving costs including truck rental, professional movers, packing supplies, travel expenses. Plan your long-distance relocation budget.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "numerology-life-path",
+        "title": "Numerology Life Path Number Calculator",
+        "ukrainian_suggestion": "Numerology Life Path Number Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your numerology life path number with our free online calculator. Discover your life purpose, personality traits, and destiny based on your birth date. Complete guide to life path numbers 1-...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "onlyfans-earnings-calculator",
+        "title": "OnlyFans Earnings Calculator - Calculate Potential Income & Revenue",
+        "ukrainian_suggestion": "Onlyfans Earnings Калькулятор Calculate Potential Income & Revenue",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate potential OnlyFans earnings from subscriptions, tips, PPV messages, and custom content. See realistic income projections, platform fees, and tax considerations for content creators.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "retirement-savings-freelancers",
+        "title": "Retirement Savings Calculator for Freelancers",
+        "ukrainian_suggestion": "Пенсійні заощадження для фрілансерів",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate retirement savings for freelancers and self-employed workers. Plan for retirement with irregular income, SEP-IRA, Solo 401k, and variable earnings.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "scholarship-eligibility-calculator",
+        "title": "Scholarship Eligibility Calculator for International Students",
+        "ukrainian_suggestion": "Scholarship Eligibility Калькулятор For International Students",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Free scholarship eligibility calculator for international students. Check your chances for merit-based, need-based, and country-specific scholarships. Get personalized recommendations and application ...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "social-media-earnings",
+        "title": "Social Media Earnings Calculator (TikTok, Instagram)",
+        "ukrainian_suggestion": "Social Media Earnings Калькулятор (Tiktok, Instagram)",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate earnings from TikTok, Instagram, and other social platforms. Estimate revenue from brand partnerships, creator funds, and monetization features.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "superstition-luck-calculator",
+        "title": "Superstition Luck Calculator - Daily Fortune & Lucky Signs",
+        "ukrainian_suggestion": "Superstition Luck Калькулятор Daily Fortune & Lucky Signs",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your daily luck score based on superstitions, omens, and lucky signs. Discover your fortune level with our fun superstition calculator covering black cats, broken mirrors, lucky numbers and ...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "tarot-card-reading",
+        "title": "Tarot Card Reading Interpretation Score Calculator",
+        "ukrainian_suggestion": "Tarot Card Reading Interpretation Score Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your tarot card reading interpretation score with our free online calculator. Get detailed meanings for your tarot spread, card positions, and personalized insights. Perfect for beginners an...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "timezone-converter-nomads",
+        "title": "Time Zone Converter for Digital Nomads",
+        "ukrainian_suggestion": "Калькулятор time zone converter for digital nomads",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Free time zone converter for digital nomads. Schedule international meetings, track multiple time zones, and manage remote work across global locations.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "visa-eligibility-calculator",
+        "title": "Visa Eligibility Calculator - US, Canada, UK, Australia",
+        "ukrainian_suggestion": "Visa Eligibility Калькулятор Us, Canada, Uk, Australia",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Free online visa eligibility calculator for US, Canada, UK, Australia and other countries. Check tourist, work, study visa requirements based on your profile. Get instant assessment and preparation ti...",
+        "estimated_search_volume": "Low"
+      }
+    ]
+  },
+  "categories": {
+    "Construction & Home": [
+      {
+        "filename": "3d-printing-material-cost-calculator",
+        "title": "3D Printing Material Cost Calculator | Filament & Resin Cost Estimator",
+        "ukrainian_suggestion": "3D Printing Матеріал Вартість Калькулятор | Filament & Resin Вартість Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free 3D printing cost calculator to estimate material costs, printing time, electricity usage, and total production costs for filament and resin 3D printing projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "board-foot",
+        "title": "Board Foot Calculator",
+        "ukrainian_suggestion": "Board Foot Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate board feet of lumber needed for woodworking projects. Professional lumber calculator estimates volume, costs, and material requirements for construction and carpentry.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "compost-bin-size",
+        "title": "Compost Bin Size Calculator",
+        "ukrainian_suggestion": "Compost Bin Size Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate the right compost bin size for your household. Determine optimal composting capacity based on waste generation and garden needs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "deck-board",
+        "title": "Deck Board Calculator",
+        "ukrainian_suggestion": "Deck Board Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate deck boards, joists, posts, and hardware needed for deck construction. Professional deck calculator for composite, pressure-treated lumber, and cedar decking projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "diy-project-cost-estimator",
+        "title": "DIY Project Material Cost Estimator",
+        "ukrainian_suggestion": "Diy Project Матеріал Вартість Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free DIY project cost calculator. Estimate materials, tools, and total costs for home improvement projects. Plan budgets for flooring, painting, decking, and more.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "drywall",
+        "title": "Drywall Calculator",
+        "ukrainian_suggestion": "Калькулятор гіпсокартону",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate drywall sheets, joint compound, tape, and screws needed for walls and ceilings. Professional drywall calculator for construction and renovation projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "fence-material",
+        "title": "Fence Material Calculator",
+        "ukrainian_suggestion": "Калькулятор матеріалів для паркану",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate fence materials needed for wood, vinyl, chain link, and metal fencing. Professional fence calculator estimates posts, panels, rails, and hardware costs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "feng-shui-home-layout-optimizer",
+        "title": "Feng Shui Home Layout Optimizer | Feng Shui Calculator & Analysis",
+        "ukrainian_suggestion": "Feng Shui Дім Layout Optimizer | Feng Shui Калькулятор & Analysis",
+        "category": "Construction & Home",
+        "priority": "Low",
+        "description": "Free Feng Shui calculator and home layout optimizer to analyze your living space energy, get personalized recommendations, and improve harmony using authentic Feng Shui principles.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "fertilizer",
+        "title": "Fertilizer Calculator",
+        "ukrainian_suggestion": "Fertilizer Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate fertilizer needed for lawns, gardens, and landscapes. Professional fertilizer calculator determines application rates, NPK requirements, and coverage areas.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gardening-plant-spacing",
+        "title": "Gardening Plant Spacing Calculator",
+        "ukrainian_suggestion": "Gardening Plant Spacing Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate optimal plant spacing for your garden. Professional plant spacing calculator determines distances, layout patterns, and plant quantities for maximum yield.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gardening-water-usage",
+        "title": "Gardening Water Usage Calculator",
+        "ukrainian_suggestion": "Gardening Water Usage Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate water needs for your garden. Determine irrigation requirements, water costs, and conservation strategies for efficient garden watering.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "gravel",
+        "title": "Gravel Calculator",
+        "ukrainian_suggestion": "Gravel Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate gravel needed for driveways, paths, and landscaping. Professional gravel calculator estimates cubic yards, tons, and costs for pea gravel, crushed stone, and more.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "herb-garden-yield",
+        "title": "Herb Garden Yield Estimator",
+        "ukrainian_suggestion": "Herb Garden Yield Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate expected yields from your herb garden. Estimate herb production, plan harvest schedules, and determine garden size for your needs.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "iot-device-power-consumption-estimator",
+        "title": "IoT Device Power Consumption Estimator | Smart Device Energy Calculator",
+        "ukrainian_suggestion": "Iot Device Power Consumption Калькулятор | Smart Device Energy Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free IoT device power consumption calculator to estimate energy usage, battery life, and electricity costs for smart home devices, sensors, and connected systems.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "mulch",
+        "title": "Mulch Calculator",
+        "ukrainian_suggestion": "Mulch Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate mulch needed for landscaping projects. Professional mulch calculator estimates cubic yards, bags, and costs for garden beds, flower beds, and landscape areas.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "paint-coverage",
+        "title": "Paint Coverage Calculator",
+        "ukrainian_suggestion": "Калькулятор фарби",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate paint coverage for walls, rooms, and surfaces. Professional paint calculator estimates gallons needed, costs, and coverage for interior and exterior painting projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "paver",
+        "title": "Paver Calculator",
+        "ukrainian_suggestion": "Paver Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate pavers needed for patios, driveways, and walkways. Professional paver calculator estimates materials, sand, gravel, and costs for paving projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "raised-bed-soil",
+        "title": "Raised Bed Soil Calculator",
+        "ukrainian_suggestion": "Raised Bed Soil Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate soil needed for raised garden beds. Professional soil calculator estimates cubic yards, bags, and costs for vegetable gardens and flower beds.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "random-person-selector",
+        "title": "Random Person Selector - Pick Random People for Games & Challenges",
+        "ukrainian_suggestion": "Калькулятор random person selector pick random people for games & challenges",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Select random people instantly! Perfect for team building, classroom activities, game nights, and fair selection processes. Add names and get random picks with no bias.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "rebar",
+        "title": "Rebar Calculator",
+        "ukrainian_suggestion": "Rebar Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate rebar needed for concrete slabs, footings, and walls. Professional reinforcement calculator estimates quantity, spacing, and costs for construction projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "retaining-wall",
+        "title": "Retaining Wall Calculator",
+        "ukrainian_suggestion": "Retaining Wall Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate materials needed for retaining walls. Professional calculator estimates blocks, gravel, drainage, and costs for landscape retaining wall construction.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "roof-pitch",
+        "title": "Roof Pitch Calculator",
+        "ukrainian_suggestion": "Калькулятор кута даху",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate roof pitch, slope, and angle from rise and run measurements. Professional roof calculator estimates materials needed for roofing projects and determines proper pitch.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "solar-panel-efficiency",
+        "title": "Solar Panel Efficiency Calculator",
+        "ukrainian_suggestion": "Solar Panel Efficiency Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Free solar panel efficiency calculator. Analyze panel performance, energy output, efficiency ratings, and optimal positioning for maximum solar energy generation.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "stair-stringer",
+        "title": "Stair Stringer Calculator",
+        "ukrainian_suggestion": "Stair Stringer Калькулятор",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate stair stringer dimensions, cuts, and layout for deck stairs and interior staircases. Professional stair framing calculator for builders and DIY projects.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "stairs",
+        "title": "Stairs Calculator",
+        "ukrainian_suggestion": "Калькулятор сходів",
+        "category": "Construction & Home",
+        "priority": "High",
+        "description": "Calculate stairs step height, tread depth, and total steps for safe, comfortable staircase construction. Professional stair calculator for builders and DIY projects.",
+        "estimated_search_volume": "Medium"
+      }
+    ],
+    "Financial": [
+      {
+        "filename": "401k-calculator",
+        "title": "401k Calculator - Retirement Savings Estimator",
+        "ukrainian_suggestion": "401K Калькулятор Пенсія Заощадження Калькулятор",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate your 401k retirement savings growth with employer matching, contribution limits, and investment returns. Plan your retirement with our comprehensive 401k calculator.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "beekeeping-honey-production",
+        "title": "Beekeeping Honey Production Calculator",
+        "ukrainian_suggestion": "Beekeeping Honey Production Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate expected honey production from your beehives. Estimate yields, plan harvest schedules, and analyze beekeeping profitability.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "career-path-salary-estimator",
+        "title": "Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More",
+        "ukrainian_suggestion": "Career Path Salary Калькулятор Data Scientists, Doctors, Engineers & More",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Estimate salary potential for top careers including data scientists, doctors, software engineers, nurses, and more. Get personalized salary projections based on experience, location, and education lev...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "course-enrollment-forecast",
+        "title": "Online Course Enrollment Forecast Calculator",
+        "ukrainian_suggestion": "Online Course Enrollment Forecast Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free online course enrollment forecast calculator. Predict student growth, revenue potential, and market success for educational courses and training programs.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "debt-snowball-avalanche",
+        "title": "Debt Snowball vs. Avalanche Calculator",
+        "ukrainian_suggestion": "Калькулятор стратегії погашення боргів",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Compare debt snowball vs avalanche methods. Calculate interest savings, payoff time, and motivation factors. Choose the best debt elimination strategy for your situation.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "emergency-fund-size",
+        "title": "Emergency Fund Size Calculator",
+        "ukrainian_suggestion": "Калькулятор резервного фонду",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate ideal emergency fund size based on expenses, income stability, and personal situation. Determine how many months of expenses to save for financial security.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "energy-bill-estimator-solar",
+        "title": "Energy Bill Estimator for Solar Panels",
+        "ukrainian_suggestion": "Energy Bill Калькулятор For Solar Panels",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free solar panel energy bill calculator. Calculate monthly electricity savings, installation payback period, and 25-year ROI with customizable solar system parameters.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "financial-independence-number",
+        "title": "Financial Independence Number Calculator",
+        "ukrainian_suggestion": "Калькулятор фінансової незалежності",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate your FIRE number for financial independence. Determine how much to save for early retirement using 4% rule, expenses, and lifestyle goals.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "freelancer-hourly-rate",
+        "title": "Freelancer Hourly Rate Calculator",
+        "ukrainian_suggestion": "Калькулятор погодинної ставки фрілансера",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free freelancer hourly rate calculator with comprehensive analysis. Determine optimal pricing based on expenses, profit goals, and market positioning for sustainable freelancing business.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "gym-vs-home-gym-cost",
+        "title": "Gym Membership Cost vs. Home Gym Calculator",
+        "ukrainian_suggestion": "Gym Membership Вартість Vs. Дім Gym Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free gym vs home gym cost calculator. Compare membership fees, equipment costs, and long-term savings to make the best fitness investment decision.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "home-energy-audit",
+        "title": "Home Energy Audit Calculator",
+        "ukrainian_suggestion": "Дім Energy Audit Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free home energy audit calculator. Analyze energy usage, identify efficiency improvements, calculate potential savings, and plan home energy upgrades.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-retirement-savings-lifestyle",
+        "title": "Ideal Retirement Savings Calculator based on Lifestyle",
+        "ukrainian_suggestion": "Ideal Пенсія Заощадження Калькулятор Based On Lifestyle",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate ideal retirement savings based on your desired lifestyle. Plan for luxury, comfortable, or modest retirement with personalized savings targets and withdrawal strategies.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "income-tax-calculator",
+        "title": "Income Tax Calculator - Federal & State Tax Estimator",
+        "ukrainian_suggestion": "Income Tax Калькулятор Federal & State Tax Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate your income taxes with our comprehensive tax calculator. Estimate federal and state taxes, deductions, and refunds. Updated for current tax brackets and rules.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "insulation",
+        "title": "Insulation Calculator",
+        "ukrainian_suggestion": "Insulation Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate insulation needed for walls, attics, and floors. Professional insulation calculator estimates R-value requirements, material quantities, and energy savings.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "lottery-probability-calculator",
+        "title": "Lottery Probability Calculator - Calculate Your Odds of Winning Any Lottery",
+        "ukrainian_suggestion": "Lottery Probability Калькулятор Calculate Your Odds Of Winning Any Lottery",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate exact probability and odds for any lottery game. Compare Powerball, Mega Millions, scratch-offs, and custom lotteries. See realistic expectations and better investment alternatives.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-affordability-calculator",
+        "title": "Mortgage Affordability Calculator - How Much House Can I Afford?",
+        "ukrainian_suggestion": "Калькулятор доступності іпотеки",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate how much house you can afford based on income, debt, and down payment. Get pre-approval estimates and monthly payment limits with our mortgage affordability calculator.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-calculator",
+        "title": "Mortgage Calculator - Monthly Payment & Amortization Schedule",
+        "ukrainian_suggestion": "Іпотечний калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate monthly mortgage payments, total interest, and view amortization schedules. Compare loan terms, down payments, and PMI with our comprehensive mortgage calculator.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mortgage-rate-credit-score",
+        "title": "Best Mortgage Rate Calculator based on Credit Score",
+        "ukrainian_suggestion": "Best Іпотека Rate Калькулятор Based On Credit Score",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate mortgage rates based on your credit score. See how credit affects interest rates, monthly payments, and total loan costs. Improve credit for better rates.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "onlyfans-earnings-calculator",
+        "title": "OnlyFans Earnings Calculator - Calculate Potential Income & Revenue",
+        "ukrainian_suggestion": "Onlyfans Earnings Калькулятор Calculate Potential Income & Revenue",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate potential OnlyFans earnings from subscriptions, tips, PPV messages, and custom content. See realistic income projections, platform fees, and tax considerations for content creators.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "passive-income-estimator",
+        "title": "Passive Income Stream Estimator",
+        "ukrainian_suggestion": "Passive Income Stream Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free passive income calculator to estimate earnings from multiple streams. Plan your path to financial independence with rental, dividend, business, and investment income projections.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "real-estate-investment-return",
+        "title": "Investment Return Calculator for Real Estate",
+        "ukrainian_suggestion": "Інвестиція Return Калькулятор For Real Estate",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate real estate investment returns including ROI, cash flow, cap rate, cash-on-cash return. Analyze rental properties, flips, and commercial real estate investments.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "retirement-savings-freelancers",
+        "title": "Retirement Savings Calculator for Freelancers",
+        "ukrainian_suggestion": "Пенсійні заощадження для фрілансерів",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate retirement savings for freelancers and self-employed workers. Plan for retirement with irregular income, SEP-IRA, Solo 401k, and variable earnings.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "small-business-health-check",
+        "title": "Small Business Health Check Calculator",
+        "ukrainian_suggestion": "Small Бізнес Здоров'Я Check Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Comprehensive small business health assessment tool. Evaluate your business across key areas including finances, operations, marketing, and growth potential. Get actionable insights and improvement re...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "small-business-loan-eligibility",
+        "title": "Small Business Loan Eligibility Calculator",
+        "ukrainian_suggestion": "Small Бізнес Кредит Eligibility Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free small business loan eligibility calculator. Check loan qualification, estimate approval chances, and compare loan options based on credit score, revenue, and business profile. Get personalized fu...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "smart-home-savings",
+        "title": "Smart Home Device Cost vs. Savings Calculator",
+        "ukrainian_suggestion": "Smart Дім Device Вартість Vs. Заощадження Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate smart home device return on investment. Compare upfront costs vs long-term energy savings, convenience benefits, and payback periods for smart devices.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "social-media-ad-spend-optimizer",
+        "title": "Social Media Ad Spend Optimizer",
+        "ukrainian_suggestion": "Калькулятор social media ad spend optimizer",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free social media advertising spend optimizer. Calculate optimal budget allocation, ROAS, and CAC across Facebook, Google, Instagram, and more. Maximize marketing ROI with data-driven ad spend distrib...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "social-media-earnings",
+        "title": "Social Media Earnings Calculator (TikTok, Instagram)",
+        "ukrainian_suggestion": "Social Media Earnings Калькулятор (Tiktok, Instagram)",
+        "category": "Financial",
+        "priority": "Low",
+        "description": "Calculate earnings from TikTok, Instagram, and other social platforms. Estimate revenue from brand partnerships, creator funds, and monetization features.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "startup-cost-calculator",
+        "title": "Startup Cost Calculator for Tech Startups",
+        "ukrainian_suggestion": "Калькулятор витрат на стартап",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free startup cost calculator for tech entrepreneurs. Calculate initial investment, ongoing expenses, and funding requirements. Plan your tech startup budget with comprehensive cost analysis and cash f...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "startup-salary-equity-calculator",
+        "title": "Employee Salary Calculator for Startups with Equity Options",
+        "ukrainian_suggestion": "Employee Salary Калькулятор For Startups With Equity Options",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free startup employee salary and equity calculator. Calculate competitive compensation packages including base salary, equity options, and total compensation value for startup hiring and retention.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "startup-valuation",
+        "title": "Startup Valuation Calculator",
+        "ukrainian_suggestion": "Стартап Valuation Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate startup valuation using multiple proven methods including revenue multiples, cost approach, and market comparables. Get comprehensive valuation analysis for investment planning and fundraisi...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "stock-fair-value",
+        "title": "Stock Fair Value Calculator - Graham Intelligent Investor Method",
+        "ukrainian_suggestion": "Stock Fair Value Калькулятор Graham Intelligent Investor Method",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Calculate stock intrinsic value using Benjamin Graham's proven methodology from The Intelligent Investor. Evaluate P/E ratios, growth rates, and financial strength for informed investment decisions.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "youtube-monetization-estimator",
+        "title": "YouTube Channel Monetization Estimator",
+        "ukrainian_suggestion": "Youtube Channel Monetization Калькулятор",
+        "category": "Financial",
+        "priority": "High",
+        "description": "Free YouTube monetization calculator. Estimate earnings from ad revenue, sponsorships, memberships based on views, subscribers, and engagement metrics.",
+        "estimated_search_volume": "High"
+      }
+    ],
+    "Health & Lifestyle": [
+      {
+        "filename": "anxiety-management-plan",
+        "title": "Anxiety Management Plan Generator",
+        "ukrainian_suggestion": "Калькулятор anxiety management plan generator",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Generate a personalized anxiety management plan with tailored coping strategies, breathing exercises, and therapeutic techniques. Get customized anxiety relief methods based on your specific symptoms ...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "athlete-hydration-needs",
+        "title": "Athlete Hydration Needs Calculator",
+        "ukrainian_suggestion": "Athlete Hydration Needs Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate optimal hydration needs for athletes across all sports. Get personalized fluid intake recommendations, electrolyte guidelines, and hydration strategies for training, competition, and recover...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "cost-raising-child",
+        "title": "Cost of Raising a Child Calculator",
+        "ukrainian_suggestion": "Вартість Of Raising A Child Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate the total cost of raising a child from birth to 18. Includes childcare, education, healthcare, food, clothing, and activities. Plan your family budget with realistic child-rearing expenses.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "depression-symptom-tracker",
+        "title": "Depression Symptom Tracker",
+        "ukrainian_suggestion": "Калькулятор depression symptom tracker",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Track depression symptoms with this comprehensive depression assessment tool. Monitor mood patterns, severity levels, and symptoms over time with personalized depression management strategies and prof...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "eco-friendly-product-impact-calculator",
+        "title": "Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment",
+        "ukrainian_suggestion": "Eco Friendly Product Impact Калькулятор | Environmental Footprint Assessment",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free eco-friendly product impact calculator to assess environmental benefits, carbon footprint reduction, and sustainability metrics of green products and lifestyle choices.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "employee-burnout-assessment",
+        "title": "Employee Burnout Risk Assessment - Workplace Wellness Calculator",
+        "ukrainian_suggestion": "Employee Burnout Risk Assessment Workplace Wellness Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your risk of workplace burnout with our comprehensive calculator. Evaluate stress levels, work-life balance, and mental health indicators for better workplace wellness.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "environmental-transportation",
+        "title": "Environmental Impact of Transportation Calculator",
+        "ukrainian_suggestion": "Environmental Impact Of Transportation Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate the environmental impact of your transportation choices. Compare carbon emissions, fuel consumption, and costs across different travel modes.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "fitness-age",
+        "title": "Fitness Age Calculator",
+        "ukrainian_suggestion": "Фітнес Age Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your fitness age based on VO2 max, resting heart rate, physical activity, and health indicators. Discover if you're biologically younger or older than your chronological age with this compre...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-portion-size-weight-loss",
+        "title": "Ideal Portion Size Calculator for Weight Loss",
+        "ukrainian_suggestion": "Ideal Portion Size Калькулятор For Вага Loss",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate ideal portion sizes for weight loss with this comprehensive portion control calculator. Get personalized food portions based on your weight loss goals, metabolic needs, and dietary preferenc...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "ideal-weight-calculator",
+        "title": "Ideal Weight Calculator - Calculate Your Perfect Body Weight",
+        "ukrainian_suggestion": "Калькулятор ідеальної ваги",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your ideal body weight using proven medical formulas including BMI, Devine, Hamwi, and Robinson methods. Get healthy weight ranges for your height, age, and body frame.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "intermittent-fasting-schedule",
+        "title": "Intermittent Fasting Schedule Calculator",
+        "ukrainian_suggestion": "Intermittent Fasting Schedule Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Create your personalized intermittent fasting schedule with this comprehensive calculator. Choose from 16:8, 18:6, OMAD, 5:2 and other IF methods based on your lifestyle, goals, and preferences for su...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "life-expectancy",
+        "title": "Life Expectancy Calculator",
+        "ukrainian_suggestion": "Life Expectancy Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your estimated life expectancy with this comprehensive longevity calculator. Based on lifestyle factors, diet, exercise, genetics, location, and health habits to predict your potential lifes...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mental-health-resilience-score",
+        "title": "Mental Health Resilience Score Calculator",
+        "ukrainian_suggestion": "Mental Здоров'Я Resilience Score Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your mental health resilience with this comprehensive resilience score calculator. Evaluate psychological resilience, coping skills, emotional strength, and stress adaptation abilities with per...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "mental-health-self-assessment",
+        "title": "Mental Health Self-Assessment Calculator",
+        "ukrainian_suggestion": "Mental Здоров'Я Self Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Evaluate your mental health with this comprehensive self-assessment calculator. Get insights into depression, anxiety, stress levels, and overall psychological wellbeing with personalized recommendati...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "pet-calorie-calculator",
+        "title": "Pet Calorie Calculator | Calculate Daily Calories for Dogs & Cats",
+        "ukrainian_suggestion": "Pet Calorie Калькулятор | Calculate Daily Calories For Dogs & Cats",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free pet calorie calculator to determine daily calorie requirements for dogs, cats, and other pets. Calculate based on weight, age, activity level, and health status for optimal pet nutrition.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "pet-medication-dosage-calculator",
+        "title": "Pet Medication Dosage Calculator | Safe Dosing for Dogs & Cats",
+        "ukrainian_suggestion": "Pet Medication Dosage Калькулятор | Safe Dosing For Dogs & Cats",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Free pet medication dosage calculator for safe drug dosing in dogs, cats, and other pets. Calculate proper dosages based on weight for common veterinary medications and supplements.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "pregnancy-due-date-calculator",
+        "title": "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception",
+        "ukrainian_suggestion": "Калькулятор дати пологів",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your baby's due date from last menstrual period (LMP) or conception date. Get pregnancy timeline, current week, trimester info, and important milestone dates.",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "sleep-assessment",
+        "title": "Sleep Quality Assessment Calculator",
+        "ukrainian_suggestion": "Sleep Quality Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Evaluate your sleep quality with this comprehensive sleep assessment calculator. Get personalized sleep recommendations based on sleep duration, age, gender, lifestyle factors, and sleep habits for op...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "stress-level-assessment",
+        "title": "Stress Level Assessment Calculator",
+        "ukrainian_suggestion": "Stress Level Assessment Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Assess your stress levels with this comprehensive stress evaluation calculator. Measure workplace stress, life stress, and physical symptoms with personalized stress management recommendations and cop...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "vegan-protein-intake",
+        "title": "Vegan Protein Intake Calculator",
+        "ukrainian_suggestion": "Vegan Protein Intake Калькулятор",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate your daily vegan protein needs based on weight, activity level, and goals. Get personalized recommendations for plant-based protein sources, meal planning, and optimal amino acid profiles fo...",
+        "estimated_search_volume": "High"
+      },
+      {
+        "filename": "water-intake-marathon",
+        "title": "Water Intake Calculator for Marathon Runners",
+        "ukrainian_suggestion": "Water Intake Калькулятор For Marathon Runners",
+        "category": "Health & Lifestyle",
+        "priority": "High",
+        "description": "Calculate optimal water intake for marathon running based on sweat rate, weather conditions, and race duration. Prevent dehydration and hyponatremia with scientifically-backed hydration recommendation...",
+        "estimated_search_volume": "High"
+      }
+    ],
+    "Technology & Modern": [
+      {
+        "filename": "application-development-cost-estimator",
+        "title": "Application Development Cost Estimator | Software Development Price Calculator",
+        "ukrainian_suggestion": "Application Development Вартість Калькулятор | Software Development Price Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free application development cost calculator to estimate software development costs, project timelines, and resource requirements for mobile apps, web apps, and enterprise software.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "blockchain-transaction-fee-calculator",
+        "title": "Blockchain Transaction Fee Calculator | Crypto Gas Fee Estimator",
+        "ukrainian_suggestion": "Blockchain Transaction Fee Калькулятор | Crypto Gas Fee Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free blockchain transaction fee calculator to estimate gas fees, network costs, and optimal transaction timing for Bitcoin, Ethereum, and other cryptocurrency networks.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "crypto-price-prediction",
+        "title": "Cryptocurrency Price Prediction Calculator - Technical Analysis",
+        "ukrainian_suggestion": "Cryptocurrency Price Prediction Калькулятор Technical Analysis",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Predict cryptocurrency prices using technical analysis indicators including RSI, MACD, moving averages, and support/resistance levels. Educational tool for crypto trading analysis.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "international-student-visa-checklist-generator",
+        "title": "International Student Visa Application Checklist Generator",
+        "ukrainian_suggestion": "Калькулятор international student visa application checklist generator",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Generate personalized student visa application checklists for US, Canada, UK, Australia and more. Get complete document lists, timeline guidance, and application tips for international students.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "moving-cost-cross-country",
+        "title": "Moving Cost Calculator for Cross-Country Moves",
+        "ukrainian_suggestion": "Moving Вартість Калькулятор For Cross Country Moves",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Calculate cross-country moving costs including truck rental, professional movers, packing supplies, travel expenses. Plan your long-distance relocation budget.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "password-strength-checker",
+        "title": "Password Strength Checker - Security Policy Validator & Generator",
+        "ukrainian_suggestion": "Калькулятор password strength checker security policy validator & generator",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Check password strength against multiple security policies and get improvement suggestions. Generate secure passwords with customizable options for maximum protection.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "pet-name-compatibility-calculator",
+        "title": "Pet Name Compatibility Calculator | Find the Perfect Name for Your Pet",
+        "ukrainian_suggestion": "Pet Name Compatibility Калькулятор | Find The Perfect Name For Your Pet",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free pet name compatibility calculator to find the perfect name for your dog, cat, or other pets. Match names to personality traits, appearance, and behavior for the ideal pet name.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "quantum-computing-resource-estimator",
+        "title": "Quantum Computing Resource Estimator | Quantum Algorithm Analysis Tool",
+        "ukrainian_suggestion": "Quantum Computing Resource Калькулятор | Quantum Algorithm Analysis Tool",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free quantum computing resource estimator to analyze quantum algorithms, estimate qubit requirements, gate counts, and circuit depth for quantum computing applications and research.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "scholarship-eligibility-calculator",
+        "title": "Scholarship Eligibility Calculator for International Students",
+        "ukrainian_suggestion": "Scholarship Eligibility Калькулятор For International Students",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Free scholarship eligibility calculator for international students. Check your chances for merit-based, need-based, and country-specific scholarships. Get personalized recommendations and application ...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "timezone-converter-nomads",
+        "title": "Time Zone Converter for Digital Nomads",
+        "ukrainian_suggestion": "Калькулятор time zone converter for digital nomads",
+        "category": "Technology & Modern",
+        "priority": "Low",
+        "description": "Free time zone converter for digital nomads. Schedule international meetings, track multiple time zones, and manage remote work across global locations.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "travel-budget-backpackers",
+        "title": "Travel Budget Calculator for Backpackers",
+        "ukrainian_suggestion": "Калькулятор бюджету для подорожей",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Calculate your backpacking travel budget including accommodation, food, transport, activities. Plan budget-friendly trips with hostel costs, local food prices, and backpacker expenses.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "travel-insurance-estimator",
+        "title": "Travel Insurance Premium Estimator",
+        "ukrainian_suggestion": "Подорож Insurance Premium Калькулятор",
+        "category": "Technology & Modern",
+        "priority": "Medium",
+        "description": "Free travel insurance premium calculator. Estimate costs based on destination, trip duration, age, coverage level and activities. Compare options for optimal protection.",
+        "estimated_search_volume": "Low"
+      }
+    ],
+    "Niche & Entertainment": [
+      {
+        "filename": "aquaponics-system-design",
+        "title": "Aquaponics System Design Calculator",
+        "ukrainian_suggestion": "Aquaponics System Design Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "astrology-compatibility",
+        "title": "Astrology Birth Chart Compatibility Calculator",
+        "ukrainian_suggestion": "Astrology Birth Chart Compatibility Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate astrology compatibility between two people with our free birth chart compatibility calculator. Discover relationship strengths, challenges, and cosmic connection based on zodiac signs and bi...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "dream-interpretation-score-calculator",
+        "title": "Dream Interpretation Score Calculator & Meaning Analysis",
+        "ukrainian_suggestion": "Dream Interpretation Score Калькулятор & Meaning Analysis",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Free dream interpretation calculator to analyze your dreams and get personalized meaning scores. Discover psychological insights, symbolism, and emotional significance of your dreams with our AI-power...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "moon-phase-calculator-wedding",
+        "title": "Moon Phase Calculator for Wedding Planning & Special Events",
+        "ukrainian_suggestion": "Moon Phase Калькулятор For Весілля Planning & Special Events",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Plan your wedding or special event with our moon phase calculator. Discover the perfect lunar phase for your ceremony, reception, and romantic occasions. Check full moon, new moon dates for 2024-2025.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "numerology-life-path",
+        "title": "Numerology Life Path Number Calculator",
+        "ukrainian_suggestion": "Numerology Life Path Number Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your numerology life path number with our free online calculator. Discover your life purpose, personality traits, and destiny based on your birth date. Complete guide to life path numbers 1-...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "superstition-luck-calculator",
+        "title": "Superstition Luck Calculator - Daily Fortune & Lucky Signs",
+        "ukrainian_suggestion": "Superstition Luck Калькулятор Daily Fortune & Lucky Signs",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your daily luck score based on superstitions, omens, and lucky signs. Discover your fortune level with our fun superstition calculator covering black cats, broken mirrors, lucky numbers and ...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "tarot-card-reading",
+        "title": "Tarot Card Reading Interpretation Score Calculator",
+        "ukrainian_suggestion": "Tarot Card Reading Interpretation Score Калькулятор",
+        "category": "Niche & Entertainment",
+        "priority": "Low",
+        "description": "Calculate your tarot card reading interpretation score with our free online calculator. Get detailed meanings for your tarot spread, card positions, and personalized insights. Perfect for beginners an...",
+        "estimated_search_volume": "Low"
+      }
+    ],
+    "General/Academic": [
+      {
+        "filename": "bad-habit-cost-calculator",
+        "title": "Bad Habit Cost Calculator - Calculate the True Cost of Smoking, Drinking & More",
+        "ukrainian_suggestion": "Bad Habit Вартість Калькулятор Calculate The True Вартість Of Smoking, Drinking & More",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate the true financial cost of bad habits like smoking, drinking, fast food, and more. See daily, weekly, monthly, and yearly expenses plus 10-year projections to motivate positive change.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "college-cost-calculator-out-of-state",
+        "title": "College Cost Calculator for Out-of-State Students",
+        "ukrainian_suggestion": "College Вартість Калькулятор For Out Of State Students",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Free college cost calculator for out-of-state and international students. Estimate tuition, housing, books, and living expenses. Compare costs across different universities and plan your education bud...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "electric-vehicle-range",
+        "title": "Electric Vehicle Range Calculator",
+        "ukrainian_suggestion": "Electric Vehicle Range Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free electric vehicle range calculator. Estimate EV driving distance, battery consumption, charging needs, and trip planning for electric cars.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "furniture-assembly-time",
+        "title": "Furniture Assembly Time Estimator",
+        "ukrainian_suggestion": "Furniture Assembly Time Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate furniture assembly time and cost estimates. Plan DIY furniture projects with accurate time predictions and professional assembly cost comparisons.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "furniture-fit-studio",
+        "title": "Furniture Fit Calculator for Studio Apartments",
+        "ukrainian_suggestion": "Furniture Fit Калькулятор For Studio Apartments",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free furniture fit calculator for studio apartments. Plan optimal furniture placement, calculate space utilization, and visualize room layouts for maximum functionality.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "graduate-school-acceptance-rate-predictor",
+        "title": "Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs",
+        "ukrainian_suggestion": "Калькулятор graduate school acceptance rate predictor phd, masters, mba programs",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Predict your acceptance chances for graduate school programs including PhD, Masters, and MBA. Get personalized admission probability based on GPA, test scores, research experience, and more.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "mindfulness-practice-time-optimizer",
+        "title": "Mindfulness Practice Time Optimizer",
+        "ukrainian_suggestion": "Калькулятор mindfulness practice time optimizer",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your mindfulness practice with this personalized meditation schedule calculator. Get customized mindfulness routines, meditation duration recommendations, and practice plans based on your lif...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "optimal-crop-planting-time",
+        "title": "Optimal Crop Planting Time Calculator",
+        "ukrainian_suggestion": "Optimal Crop Planting Time Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate optimal planting times for crops based on frost dates and climate zones. Professional planting calendar calculator for maximum harvest success.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "packing-list-hiking",
+        "title": "Packing List Generator for Hiking Trips",
+        "ukrainian_suggestion": "Калькулятор packing list generator for hiking trips",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Free hiking packing list generator. Create personalized gear lists based on trip duration, weather, difficulty, and hiking style. Never forget essential equipment again.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "study-time-optimizer",
+        "title": "Study Time Optimizer for MCAT, LSAT, GRE, GMAT & Medical Exams",
+        "ukrainian_suggestion": "Калькулятор study time optimizer for mcat, lsat, gre, gmat & medical exams",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your study schedule for MCAT, LSAT, GRE, GMAT, USMLE and other professional exams. Get personalized study plans, time allocation, and preparation strategies based on your goals and schedule.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "swimmers-stroke-rate-optimizer",
+        "title": "Swimmer's Stroke Rate Optimizer",
+        "ukrainian_suggestion": "Калькулятор swimmer's stroke rate optimizer",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Optimize your swimming performance with this stroke rate calculator. Find your ideal strokes per minute (SPM) for different distances, analyze stroke efficiency, and get personalized training recommen...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "used-car-resale-value",
+        "title": "Used Car Resale Value Estimator",
+        "ukrainian_suggestion": "Used Car Resale Value Калькулятор",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate your car's future resale value and depreciation. Estimate vehicle worth based on make, model, age, mileage, and condition for better financial planning.",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "visa-eligibility-calculator",
+        "title": "Visa Eligibility Calculator - US, Canada, UK, Australia",
+        "ukrainian_suggestion": "Visa Eligibility Калькулятор Us, Canada, Uk, Australia",
+        "category": "General/Academic",
+        "priority": "Low",
+        "description": "Free online visa eligibility calculator for US, Canada, UK, Australia and other countries. Check tourist, work, study visa requirements based on your profile. Get instant assessment and preparation ti...",
+        "estimated_search_volume": "Low"
+      },
+      {
+        "filename": "wedding-cost-estimator",
+        "title": "Wedding Cost Estimator based on Wedding Type and Guests",
+        "ukrainian_suggestion": "Калькулятор вартості весілля",
+        "category": "General/Academic",
+        "priority": "Medium",
+        "description": "Calculate wedding costs based on guest count, venue type, and style. Plan your wedding budget with detailed cost breakdowns for ceremonies and receptions.",
+        "estimated_search_volume": "Low"
+      }
+    ],
+    "Business & Professional": [
+      {
+        "filename": "carbon-offset-business",
+        "title": "Carbon Offset Calculator for Businesses",
+        "ukrainian_suggestion": "Carbon Offset Калькулятор For Businesses",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free carbon offset calculator for businesses. Calculate corporate carbon footprint, analyze emissions sources, and plan sustainable offset strategies for net-zero goals.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "compliance-checklist",
+        "title": "GDPR, SOX, ESG Compliance Checklist Calculator",
+        "ukrainian_suggestion": "Gdpr, Sox, Esg Compliance Checklist Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Comprehensive compliance assessment tool for GDPR data protection, SOX financial controls, ESG sustainability, and other major business frameworks. Get compliance scores and actionable improvement pla...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "cybersecurity-awareness-quiz",
+        "title": "Cybersecurity Awareness Quiz - Test Your Security Knowledge",
+        "ukrainian_suggestion": "Калькулятор cybersecurity awareness quiz test your security knowledge",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Test your cybersecurity knowledge with our comprehensive quiz! Learn about phishing, passwords, malware, and online safety. Improve your digital security awareness instantly.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "cybersecurity-compliance-assessment",
+        "title": "Cybersecurity Compliance Readiness Assessment - Business Security Checklist",
+        "ukrainian_suggestion": "Калькулятор cybersecurity compliance readiness assessment бізнес security checklist",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Evaluate your business cybersecurity compliance readiness with our comprehensive checklist. Assess data protection, network security, employee training, and regulatory compliance.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "ecommerce-inventory-turnover",
+        "title": "E-commerce Inventory Turnover Calculator",
+        "ukrainian_suggestion": "E Commerce Inventory Turnover Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free e-commerce inventory turnover calculator. Calculate inventory turnover ratio, days in inventory, and optimize stock levels. Improve cash flow and reduce holding costs with data-driven inventory m...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "podcast-growth-predictor",
+        "title": "Podcast Listener Growth Predictor",
+        "ukrainian_suggestion": "Калькулятор podcast listener growth predictor",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free podcast growth calculator. Predict listener growth based on publishing frequency, marketing efforts, and engagement metrics. Plan your podcasting success strategy.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "project-pricing-calculator",
+        "title": "Freelancer Project Pricing Calculator",
+        "ukrainian_suggestion": "Freelancer Project Pricing Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free freelancer project pricing calculator. Estimate project costs based on historical data, complexity, timeline, and requirements. Smart pricing for consultants and freelancers.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "saas-customer-lifetime-value",
+        "title": "Customer Lifetime Value Calculator for SaaS Businesses",
+        "ukrainian_suggestion": "Customer Lifetime Value Калькулятор For Saas Businesses",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free SaaS customer lifetime value (CLV) calculator. Calculate CLV, customer acquisition cost (CAC), and LTV:CAC ratio for subscription businesses. Optimize pricing and retention strategies with compre...",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "small-business-cash-flow-forecaster",
+        "title": "Small Business Cash Flow Forecaster",
+        "ukrainian_suggestion": "Калькулятор small бізнес cash flow forecaster",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free small business cash flow forecaster. Create 12-month cash flow projections, identify cash gaps, and plan working capital needs. Optimize cash flow management with seasonal analysis.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "tech-startup-burn-rate",
+        "title": "Tech Startup Burn Rate Calculator",
+        "ukrainian_suggestion": "Tech Стартап Burn Rate Калькулятор",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Free tech startup burn rate calculator. Calculate monthly burn rate, cash runway, and funding timeline. Monitor startup cash flow and plan fundraising with comprehensive burn rate analysis.",
+        "estimated_search_volume": "Medium"
+      },
+      {
+        "filename": "text-analyzer",
+        "title": "Text Analyzer - Count Letters, Words, Sentences Online",
+        "ukrainian_suggestion": "Калькулятор text analyzer count letters, words, sentences online",
+        "category": "Business & Professional",
+        "priority": "High",
+        "description": "Analyze your text instantly! Count exact letters, total characters, words, sentences, and paragraphs. Perfect for essays, social media posts, SEO content, and writing projects.",
+        "estimated_search_volume": "Medium"
+      }
+    ]
+  }
+}
