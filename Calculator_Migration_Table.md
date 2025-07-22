@@ -1,53 +1,109 @@
-# Calculator Migration Table
+# Calculator Migration Table - Revised Plan
 
-This table shows the current and proposed categories for all 186 English calculators.
+This table shows the proposed category changes for calculators currently in the "other" category. **No existing category assignments will be changed.**
 
 ## Summary
 - Total calculators: 186
-- Calculators needing category change: 95
-- Calculators staying in same category: 91
+- Calculators staying in current categories: 113 (91 in existing categories + 22 remaining in other)
+- Calculators moving FROM "other" TO new categories: 50
+- Calculators remaining in "other": 23
 
-## Current vs Proposed Distribution
+## Category Distribution Changes
 
 | Category | Current Count | Proposed Count | Change |
 |----------|---------------|----------------|--------|
-| business | 14 | 11 | -3 |
-| construction | 29 | 25 | -4 |
-| conversion | 7 | 17 | +10 |
-| education | 0 | 6 | +6 |
-| entertainment | 0 | 8 | +8 |
-| environmental | 0 | 18 | +18 |
-| financial | 24 | 39 | +15 |
-| health | 18 | 22 | +4 |
-| other | 73 | 0 | -73 |
-| pets | 0 | 2 | +2 |
-| school | 15 | 14 | -1 |
-| technology | 0 | 10 | +10 |
-| time-date | 6 | 7 | +1 |
-| travel | 0 | 7 | +7 |
+| construction | 29 | 29 | 0 |
+| financial | 24 | 24 | 0 |
+| health | 18 | 18 | 0 |
+| school | 15 | 15 | 0 |
+| business | 14 | 14 | 0 |
+| conversion | 7 | 7 | 0 |
+| time-date | 6 | 6 | 0 |
+| **other** | **73** | **23** | **-50** |
+| environment | 0 | 12 | +12 |
+| technology | 0 | 11 | +11 |
+| entertainment | 0 | 10 | +10 |
+| travel | 0 | 9 | +9 |
+| education | 0 | 8 | +8 |
 
-## Detailed Migration Table
+## Migration Details - Only "Other" Category Changes
 
-| Filename | Title | Current Category | Proposed Category | Change Needed |
-|----------|-------|------------------|-------------------|---------------|
-| business-profit.md | Business Profit Calculator | business | business | ❌ No |
-| saas-customer-lifetime-value.md | Customer Lifetime Value Calculator for SaaS Busine... | business | business | ❌ No |
-| startup-cost-calculator.md | Startup Cost Calculator for Tech Startups | business | business | ❌ No |
-| tech-startup-burn-rate.md | Tech Startup Burn Rate Calculator | business | business | ❌ No |
-| unit-economics.md | Unit Economics Calculator | business | business | ❌ No |
-| break-even.md | Break-Even Analysis Calculator | business | financial | ✅ Yes |
-| ecommerce-inventory-turnover.md | E-commerce Inventory Turnover Calculator | business | financial | ✅ Yes |
-| startup-salary-equity-calculator.md | Employee Salary Calculator for Startups with Equit... | business | financial | ✅ Yes |
-| markup-margin.md | Markup and Margin Calculator | business | financial | ✅ Yes |
-| roas.md | ROAS Calculator  -  Return on Advertising Spend | business | financial | ✅ Yes |
-| small-business-cash-flow-forecaster.md | Small Business Cash Flow Forecaster | business | financial | ✅ Yes |
-| small-business-loan-eligibility.md | Small Business Loan Eligibility Calculator | business | financial | ✅ Yes |
-| vat-calculator.md | VAT Calculator | business | financial | ✅ Yes |
-| social-media-ad-spend-optimizer.md | Social Media Ad Spend Optimizer | business | technology | ✅ Yes |
-| ac-power.md | Air Conditioner Power Calculator | construction | construction | ❌ No |
-| baseboard.md | Baseboard Calculator | construction | construction | ❌ No |
-| board-foot.md | Board Foot Calculator | construction | construction | ❌ No |
-| bricks.md | Brick Calculator | construction | construction | ❌ No |
+### Moving FROM "other" TO "environment" (12 calculators)
+| Filename | Title | Current | Proposed | Reason |
+|----------|-------|---------|----------|--------|
+| aquaponics-system-design.md | Aquaponics System Design Calculator | other | environment | Sustainable food production |
+| beekeeping-honey-production.md | Beekeeping Honey Production Calculator | other | environment | Sustainable agriculture |
+| carbon-offset-business.md | Carbon Offset Calculator for Businesses | other | environment | Environmental sustainability |
+| compost-bin-size.md | Compost Bin Size Calculator | other | environment | Waste reduction |
+| eco-friendly-product-impact-calculator.md | Eco-Friendly Product Impact Calculator | other | environment | Environmental impact |
+| electric-vehicle-range.md | Electric Vehicle Range Calculator | other | environment | Clean transportation |
+| energy-bill-estimator-solar.md | Energy Bill Estimator Solar | other | environment | Renewable energy |
+| energy.md | Energy Calculator | other | environment | Energy efficiency |
+| environmental-transportation.md | Environmental Transportation Calculator | other | environment | Eco-friendly transport |
+| fertilizer.md | Fertilizer Calculator | other | environment | Sustainable gardening |
+| gardening-plant-spacing.md | Gardening Plant Spacing Calculator | other | environment | Garden planning |
+| gardening-water-usage.md | Gardening Water Usage Calculator | other | environment | Water conservation |
+
+### Moving FROM "other" TO "technology" (11 calculators)
+| Filename | Title | Current | Proposed | Reason |
+|----------|-------|---------|----------|--------|
+| 3d-printing-material-cost-calculator.md | 3D Printing Material Cost Calculator | other | technology | Manufacturing technology |
+| application-development-cost-estimator.md | Application Development Cost Estimator | other | technology | Software development |
+| blockchain-transaction-fee-calculator.md | Blockchain Transaction Fee Calculator | other | technology | Cryptocurrency/blockchain |
+| cybersecurity-awareness-quiz.md | Cybersecurity Awareness Quiz | other | technology | Digital security |
+| cybersecurity-compliance-assessment.md | Cybersecurity Compliance Assessment | other | technology | Security compliance |
+| internet-speed-test.md | Internet Speed Test | other | technology | Network technology |
+| iot-device-power-consumption-estimator.md | IoT Device Power Consumption Estimator | other | technology | Internet of Things |
+| ip-address.md | IP Address Calculator | other | technology | Network administration |
+| password-strength-checker.md | Password Strength Checker | other | technology | Digital security |
+| podcast-growth-predictor.md | Podcast Growth Predictor | other | technology | Digital media |
+| quantum-computing-resource-estimator.md | Quantum Computing Resource Estimator | other | technology | Advanced computing |
+
+### Moving FROM "other" TO "entertainment" (10 calculators)
+| Filename | Title | Current | Proposed | Reason |
+|----------|-------|---------|----------|--------|
+| astrology-compatibility.md | Astrology Birth Chart Compatibility Calculator | other | entertainment | Astrology/fun |
+| astrology-sign.md | Astrology Sign Calculator by Birth Date | other | entertainment | Astrology/fun |
+| dream-interpretation-score-calculator.md | Dream Interpretation Score Calculator | other | entertainment | Entertainment/fun |
+| feng-shui-home-layout-optimizer.md | Feng Shui Home Layout Optimizer | other | entertainment | Lifestyle/fun |
+| lottery-probability-calculator.md | Lottery Probability Calculator | other | entertainment | Games/probability |
+| moon-phase-calculator-wedding.md | Moon Phase Calculator Wedding | other | entertainment | Astrology/events |
+| numerology-life-path.md | Numerology Life Path Calculator | other | entertainment | Numerology/fun |
+| random-person-selector.md | Random Person Selector | other | entertainment | Games/tools |
+| superstition-luck-calculator.md | Superstition Luck Calculator | other | entertainment | Fun/superstition |
+| tarot-card-reading.md | Tarot Card Reading Calculator | other | entertainment | Mystical/fun |
+
+### Moving FROM "other" TO "travel" (9 calculators)
+| Filename | Title | Current | Proposed | Reason |
+|----------|-------|---------|----------|--------|
+| international-student-visa-checklist-generator.md | International Student Visa Checklist Generator | other | travel | Visa/relocation |
+| moving-cost-cross-country.md | Moving Cost Cross Country Calculator | other | travel | Relocation planning |
+| schengen-days.md | Schengen Days Calculator | other | travel | European travel |
+| shoe-size.md | Shoe Size Converter | other | travel | International sizing |
+| timezone-converter-nomads.md | Timezone Converter for Nomads | other | travel | Travel planning |
+| travel-budget-backpackers.md | Travel Budget for Backpackers | other | travel | Budget planning |
+| travel-insurance-estimator.md | Travel Insurance Estimator | other | travel | Travel protection |
+| visa-eligibility-calculator.md | Visa Eligibility Calculator | other | travel | Visa planning |
+| clothing-size.md | Clothing Size Converter | other | travel | International sizing |
+
+### Moving FROM "other" TO "education" (8 calculators)
+| Filename | Title | Current | Proposed | Reason |
+|----------|-------|---------|----------|--------|
+| college-cost-calculator-out-of-state.md | College Cost Calculator Out of State | other | education | College planning |
+| course-enrollment-forecast.md | Course Enrollment Forecast | other | education | Academic planning |
+| graduate-school-acceptance-rate-predictor.md | Graduate School Acceptance Rate Predictor | other | education | Academic planning |
+| scholarship-eligibility-calculator.md | Scholarship Eligibility Calculator | other | education | Financial aid |
+| study-time-optimizer.md | Study Time Optimizer | other | education | Learning optimization |
+| career-path-salary-estimator.md | Career Path Salary Estimator | other | education | Career planning |
+| employee-burnout-assessment.md | Employee Burnout Assessment | other | education | Professional development |
+| compliance-checklist.md | Compliance Checklist Generator | other | education | Professional training |
+
+### Remaining in "other" (23 calculators)
+These calculators don't fit well into any specialized category or are unique tools:
+- Pet-related calculators (2)
+- Specialized hobby calculators
+- Unique personal tools
+- Miscellaneous utilities
 | deck-board.md | Deck Board Calculator | construction | construction | ❌ No |
 | drywall.md | Drywall Calculator | construction | construction | ❌ No |
 | fence-material.md | Fence Material Calculator | construction | construction | ❌ No |

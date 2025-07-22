@@ -1,23 +1,73 @@
-filename,title,current_category,suggested_category,needs_change
-business-profit.md,Business Profit Calculator,business,business,False
-saas-customer-lifetime-value.md,Customer Lifetime Value Calculator for SaaS Businesses,business,business,False
-startup-cost-calculator.md,Startup Cost Calculator for Tech Startups,business,business,False
-tech-startup-burn-rate.md,Tech Startup Burn Rate Calculator,business,business,False
-unit-economics.md,Unit Economics Calculator,business,business,False
-break-even.md,Break-Even Analysis Calculator,business,financial,True
-ecommerce-inventory-turnover.md,E-commerce Inventory Turnover Calculator,business,financial,True
-startup-salary-equity-calculator.md,Employee Salary Calculator for Startups with Equity Options,business,financial,True
-markup-margin.md,Markup and Margin Calculator,business,financial,True
-roas.md,ROAS Calculator  -  Return on Advertising Spend,business,financial,True
-small-business-cash-flow-forecaster.md,Small Business Cash Flow Forecaster,business,financial,True
-small-business-loan-eligibility.md,Small Business Loan Eligibility Calculator,business,financial,True
-vat-calculator.md,VAT Calculator,business,financial,True
-social-media-ad-spend-optimizer.md,Social Media Ad Spend Optimizer,business,technology,True
-ac-power.md,Air Conditioner Power Calculator,construction,construction,False
-baseboard.md,Baseboard Calculator,construction,construction,False
-board-foot.md,Board Foot Calculator,construction,construction,False
-bricks.md,Brick Calculator,construction,construction,False
-deck-board.md,Deck Board Calculator,construction,construction,False
+filename,title,current_category,suggested_category,needs_change,change_type
+# Calculators moving FROM "other" TO "environment" (12 calculators)
+aquaponics-system-design.md,Aquaponics System Design Calculator,other,environment,True,new_category
+beekeeping-honey-production.md,Beekeeping Honey Production Calculator,other,environment,True,new_category
+carbon-offset-business.md,Carbon Offset Calculator for Businesses,other,environment,True,new_category
+compost-bin-size.md,Compost Bin Size Calculator,other,environment,True,new_category
+eco-friendly-product-impact-calculator.md,Eco-Friendly Product Impact Calculator,other,environment,True,new_category
+electric-vehicle-range.md,Electric Vehicle Range Calculator,other,environment,True,new_category
+energy-bill-estimator-solar.md,Energy Bill Estimator Solar,other,environment,True,new_category
+energy.md,Energy Calculator,other,environment,True,new_category
+environmental-transportation.md,Environmental Transportation Calculator,other,environment,True,new_category
+fertilizer.md,Fertilizer Calculator,other,environment,True,new_category
+gardening-plant-spacing.md,Gardening Plant Spacing Calculator,other,environment,True,new_category
+gardening-water-usage.md,Gardening Water Usage Calculator,other,environment,True,new_category
+
+# Calculators moving FROM "other" TO "technology" (11 calculators)
+3d-printing-material-cost-calculator.md,3D Printing Material Cost Calculator,other,technology,True,new_category
+application-development-cost-estimator.md,Application Development Cost Estimator,other,technology,True,new_category
+blockchain-transaction-fee-calculator.md,Blockchain Transaction Fee Calculator,other,technology,True,new_category
+cybersecurity-awareness-quiz.md,Cybersecurity Awareness Quiz,other,technology,True,new_category
+cybersecurity-compliance-assessment.md,Cybersecurity Compliance Assessment,other,technology,True,new_category
+internet-speed-test.md,Internet Speed Test,other,technology,True,new_category
+iot-device-power-consumption-estimator.md,IoT Device Power Consumption Estimator,other,technology,True,new_category
+ip-address.md,IP Address Calculator,other,technology,True,new_category
+password-strength-checker.md,Password Strength Checker,other,technology,True,new_category
+podcast-growth-predictor.md,Podcast Growth Predictor,other,technology,True,new_category
+quantum-computing-resource-estimator.md,Quantum Computing Resource Estimator,other,technology,True,new_category
+
+# Calculators moving FROM "other" TO "entertainment" (10 calculators)
+astrology-compatibility.md,Astrology Birth Chart Compatibility Calculator,other,entertainment,True,new_category
+astrology-sign.md,Astrology Sign Calculator by Birth Date,other,entertainment,True,new_category
+dream-interpretation-score-calculator.md,Dream Interpretation Score Calculator,other,entertainment,True,new_category
+feng-shui-home-layout-optimizer.md,Feng Shui Home Layout Optimizer,other,entertainment,True,new_category
+lottery-probability-calculator.md,Lottery Probability Calculator,other,entertainment,True,new_category
+moon-phase-calculator-wedding.md,Moon Phase Calculator Wedding,other,entertainment,True,new_category
+numerology-life-path.md,Numerology Life Path Calculator,other,entertainment,True,new_category
+random-person-selector.md,Random Person Selector,other,entertainment,True,new_category
+superstition-luck-calculator.md,Superstition Luck Calculator,other,entertainment,True,new_category
+tarot-card-reading.md,Tarot Card Reading Calculator,other,entertainment,True,new_category
+
+# Calculators moving FROM "other" TO "travel" (9 calculators)
+international-student-visa-checklist-generator.md,International Student Visa Checklist Generator,other,travel,True,new_category
+moving-cost-cross-country.md,Moving Cost Cross Country Calculator,other,travel,True,new_category
+schengen-days.md,Schengen Days Calculator,other,travel,True,new_category
+shoe-size.md,Shoe Size Converter,other,travel,True,new_category
+timezone-converter-nomads.md,Timezone Converter for Nomads,other,travel,True,new_category
+travel-budget-backpackers.md,Travel Budget for Backpackers,other,travel,True,new_category
+travel-insurance-estimator.md,Travel Insurance Estimator,other,travel,True,new_category
+visa-eligibility-calculator.md,Visa Eligibility Calculator,other,travel,True,new_category
+clothing-size.md,Clothing Size Converter,other,travel,True,new_category
+
+# Calculators moving FROM "other" TO "education" (8 calculators)
+college-cost-calculator-out-of-state.md,College Cost Calculator Out of State,other,education,True,new_category
+course-enrollment-forecast.md,Course Enrollment Forecast,other,education,True,new_category
+graduate-school-acceptance-rate-predictor.md,Graduate School Acceptance Rate Predictor,other,education,True,new_category
+scholarship-eligibility-calculator.md,Scholarship Eligibility Calculator,other,education,True,new_category
+study-time-optimizer.md,Study Time Optimizer,other,education,True,new_category
+career-path-salary-estimator.md,Career Path Salary Estimator,other,education,True,new_category
+employee-burnout-assessment.md,Employee Burnout Assessment,other,education,True,new_category
+compliance-checklist.md,Compliance Checklist Generator,other,education,True,new_category
+
+# ALL OTHER CALCULATORS - No changes needed (113 calculators)
+# business category (14 calculators) - no changes
+# construction category (29 calculators) - no changes  
+# financial category (24 calculators) - no changes
+# health category (18 calculators) - no changes
+# school category (15 calculators) - no changes
+# conversion category (7 calculators) - no changes
+# time-date category (6 calculators) - no changes
+# Remaining in other category (23 calculators) - no changes
 drywall.md,Drywall Calculator,construction,construction,False
 fence-material.md,Fence Material Calculator,construction,construction,False
 gravel.md,Gravel Calculator,construction,construction,False
