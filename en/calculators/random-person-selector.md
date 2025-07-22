@@ -173,6 +173,7 @@ faq:
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
+  align-items: center;
 }
 
 .input-group input {
