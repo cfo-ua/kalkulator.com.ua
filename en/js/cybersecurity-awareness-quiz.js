@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Elements
   const quizIntro = document.getElementById("quiz-intro");
-  const quizQuestions = document.getElementById("quiz-questions");
+  const quizQuestionsSection = document.getElementById("quiz-questions");
   const quizResults = document.getElementById("quiz-results");
   const answerReview = document.getElementById("answer-review");
   const startQuizBtn = document.getElementById("start-quiz");
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Show specific section
   function showSection(section) {
-    [quizIntro, quizQuestions, quizResults, answerReview].forEach(s => {
+    [quizIntro, quizQuestionsSection, quizResults, answerReview].forEach(s => {
       s.style.display = 'none';
     });
     section.style.display = 'block';
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Start quiz
   function startQuiz() {
-    showSection(quizQuestions);
+    showSection(quizQuestionsSection);
     displayQuestion();
   }
 
