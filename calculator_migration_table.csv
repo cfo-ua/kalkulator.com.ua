@@ -1,0 +1,187 @@
+filename,title,current_category,suggested_category,needs_change
+business-profit.md,Business Profit Calculator,business,business,False
+saas-customer-lifetime-value.md,Customer Lifetime Value Calculator for SaaS Businesses,business,business,False
+startup-cost-calculator.md,Startup Cost Calculator for Tech Startups,business,business,False
+tech-startup-burn-rate.md,Tech Startup Burn Rate Calculator,business,business,False
+unit-economics.md,Unit Economics Calculator,business,business,False
+break-even.md,Break-Even Analysis Calculator,business,financial,True
+ecommerce-inventory-turnover.md,E-commerce Inventory Turnover Calculator,business,financial,True
+startup-salary-equity-calculator.md,Employee Salary Calculator for Startups with Equity Options,business,financial,True
+markup-margin.md,Markup and Margin Calculator,business,financial,True
+roas.md,ROAS Calculator  -  Return on Advertising Spend,business,financial,True
+small-business-cash-flow-forecaster.md,Small Business Cash Flow Forecaster,business,financial,True
+small-business-loan-eligibility.md,Small Business Loan Eligibility Calculator,business,financial,True
+vat-calculator.md,VAT Calculator,business,financial,True
+social-media-ad-spend-optimizer.md,Social Media Ad Spend Optimizer,business,technology,True
+ac-power.md,Air Conditioner Power Calculator,construction,construction,False
+baseboard.md,Baseboard Calculator,construction,construction,False
+board-foot.md,Board Foot Calculator,construction,construction,False
+bricks.md,Brick Calculator,construction,construction,False
+deck-board.md,Deck Board Calculator,construction,construction,False
+drywall.md,Drywall Calculator,construction,construction,False
+fence-material.md,Fence Material Calculator,construction,construction,False
+gravel.md,Gravel Calculator,construction,construction,False
+insulation.md,Insulation Calculator,construction,construction,False
+laminate.md,Laminate Flooring Calculator,construction,construction,False
+mulch.md,Mulch Calculator,construction,construction,False
+paint-coverage.md,Paint Coverage Calculator,construction,construction,False
+paver.md,Paver Calculator,construction,construction,False
+plaster.md,Plaster Calculator,construction,construction,False
+rebar.md,Rebar Calculator,construction,construction,False
+renovation-cost.md,Renovation Cost Calculator,construction,construction,False
+retaining-wall.md,Retaining Wall Calculator,construction,construction,False
+roof-pitch.md,Roof Pitch Calculator,construction,construction,False
+room-area.md,Room Area Calculator,construction,construction,False
+stair-stringer.md,Stair Stringer Calculator,construction,construction,False
+stairs.md,Stairs Calculator,construction,construction,False
+tile.md,Tile Calculator,construction,construction,False
+wall-area.md,Wall Area Calculator,construction,construction,False
+wallpaper.md,Wallpaper Calculator,construction,construction,False
+boiler-power.md,Boiler Power Calculator,construction,conversion,True
+concrete.md,Concrete Volume Calculator,construction,conversion,True
+fertilizer.md,Fertilizer Calculator,construction,environmental,True
+raised-bed-soil.md,Raised Bed Soil Calculator,construction,environmental,True
+electric-load.md,Electrical Load Calculator,construction,school,True
+area-converter.md,Area Converter Online,conversion,conversion,False
+length-converter.md,Length Converter Online,conversion,conversion,False
+speed-converter.md,Speed Converter Online,conversion,conversion,False
+temperature-converter.md,Temperature Converter Online,conversion,conversion,False
+time-converter.md,Time Converter Online,conversion,conversion,False
+volume-converter.md,Volume Converter Online,conversion,conversion,False
+weight-converter.md,Weight Converter Online,conversion,conversion,False
+number-to-text.md,Number to Text Converter,financial,conversion,True
+401k-calculator.md,401k Calculator - Retirement Savings Estimator,financial,financial,False
+mortgage-rate-credit-score.md,Best Mortgage Rate Calculator based on Credit Score,financial,financial,False
+compound-interest.md,Compound Interest Calculator,financial,financial,False
+cost-raising-child.md,Cost of Raising a Child Calculator,financial,financial,False
+debt-snowball-avalanche.md,Debt Snowball vs. Avalanche Calculator,financial,financial,False
+deposit.md,Deposit Calculator,financial,financial,False
+emergency-fund-size.md,Emergency Fund Size Calculator,financial,financial,False
+financial-independence-number.md,Financial Independence Number Calculator,financial,financial,False
+ideal-retirement-savings-lifestyle.md,Ideal Retirement Savings Calculator based on Lifestyle,financial,financial,False
+income-tax-calculator.md,Income Tax Calculator - Federal & State Tax Estimator,financial,financial,False
+real-estate-investment-return.md,Investment Return Calculator for Real Estate,financial,financial,False
+loan.md,Loan Calculator,financial,financial,False
+mortgage-affordability-calculator.md,Mortgage Affordability Calculator - How Much House Can I Afford?,financial,financial,False
+mortgage-calculator.md,Mortgage Calculator - Monthly Payment & Amortization Schedule,financial,financial,False
+roi.md,ROI Calculator  -  Return on Investment,financial,financial,False
+rent-vs-buy.md,Rent vs Buy Calculator,financial,financial,False
+retirement-savings-freelancers.md,Retirement Savings Calculator for Freelancers,financial,financial,False
+salary-converter.md,Salary Period Converter,financial,financial,False
+savings-goal.md,Savings Goal Calculator,financial,financial,False
+used-car-resale-value.md,Used Car Resale Value Estimator,financial,financial,False
+wedding-cost-estimator.md,Wedding Cost Estimator based on Wedding Type and Guests,financial,financial,False
+moving-cost-cross-country.md,Moving Cost Calculator for Cross-Country Moves,financial,travel,True
+travel-budget-backpackers.md,Travel Budget Calculator for Backpackers,financial,travel,True
+swimmers-stroke-rate-optimizer.md,Swimmer,health,conversion,True
+anxiety-management-plan.md,Anxiety Management Plan Generator,health,health,False
+athlete-hydration-needs.md,Athlete Hydration Needs Calculator,health,health,False
+calorie-burn.md,Calories Burned Calculator,health,health,False
+calorie-needs.md,Daily Calorie Needs Calculator,health,health,False
+depression-symptom-tracker.md,Depression Symptom Tracker,health,health,False
+fitness-age.md,Fitness Age Calculator,health,health,False
+food-calories.md,Food Calories Calculator,health,health,False
+food-weight-by-quantity.md,Food Weight Calculator by Quantity,health,health,False
+ideal-portion-size-weight-loss.md,Ideal Portion Size Calculator for Weight Loss,health,health,False
+intermittent-fasting-schedule.md,Intermittent Fasting Schedule Calculator,health,health,False
+life-expectancy.md,Life Expectancy Calculator,health,health,False
+mental-health-assessment.md,Mental Health Assessment Calculator - Comprehensive Wellbeing & Resilience Evaluation,health,health,False
+mindfulness-practice-time-optimizer.md,Mindfulness Practice Time Optimizer,health,health,False
+sleep-assessment.md,Sleep Quality Assessment Calculator,health,health,False
+stress-level-assessment.md,Stress Level Assessment Calculator,health,health,False
+vegan-protein-intake.md,Vegan Protein Intake Calculator,health,health,False
+water-intake-marathon.md,Water Intake Calculator for Marathon Runners,health,health,False
+cybersecurity-compliance-assessment.md,Cybersecurity Compliance Readiness Assessment - Business Security Checklist,other,business,True
+freelancer-hourly-rate.md,Freelancer Hourly Rate Calculator,other,business,True
+project-pricing-calculator.md,Freelancer Project Pricing Calculator,other,business,True
+compliance-checklist.md,"GDPR, SOX, ESG Compliance Checklist Calculator",other,business,True
+small-business-health-check.md,Small Business Health Check Calculator,other,business,True
+startup-valuation.md,Startup Valuation Calculator,other,business,True
+diy-project-cost-estimator.md,DIY Project Material Cost Estimator,other,construction,True
+furniture-assembly-time.md,Furniture Assembly Time Estimator,other,conversion,True
+furniture-fit-studio.md,Furniture Fit Calculator for Studio Apartments,other,conversion,True
+internet-speed-test.md,Internet Speed Test  -  Online Download Speed Checker,other,conversion,True
+podcast-growth-predictor.md,Podcast Listener Growth Predictor,other,conversion,True
+shoe-size.md,Shoe Size Converter,other,conversion,True
+text-analyzer.md,"Text Analyzer - Count Letters, Words, Sentences Online",other,conversion,True
+college-cost-calculator-out-of-state.md,College Cost Calculator for Out-of-State Students,other,education,True
+graduate-school-acceptance-rate-predictor.md,"Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs",other,education,True
+international-student-visa-checklist-generator.md,International Student Visa Application Checklist Generator,other,education,True
+course-enrollment-forecast.md,Online Course Enrollment Forecast Calculator,other,education,True
+scholarship-eligibility-calculator.md,Scholarship Eligibility Calculator for International Students,other,education,True
+study-time-optimizer.md,"Study Time Optimizer for MCAT, LSAT, GRE, GMAT & Medical Exams",other,education,True
+astrology-compatibility.md,Astrology Birth Chart Compatibility Calculator,other,entertainment,True
+astrology-sign.md,Astrology Sign Calculator by Birth Date,other,entertainment,True
+dream-interpretation-score-calculator.md,Dream Interpretation Score Calculator & Meaning Analysis,other,entertainment,True
+feng-shui-home-layout-optimizer.md,Feng Shui Home Layout Optimizer | Feng Shui Calculator & Analysis,other,entertainment,True
+numerology-life-path.md,Numerology Life Path Number Calculator,other,entertainment,True
+random-person-selector.md,Random Person Selector - Pick Random People for Games & Challenges,other,entertainment,True
+superstition-luck-calculator.md,Superstition Luck Calculator - Daily Fortune & Lucky Signs,other,entertainment,True
+tarot-card-reading.md,Tarot Card Reading Interpretation Score Calculator,other,entertainment,True
+3d-printing-material-cost-calculator.md,3D Printing Material Cost Calculator | Filament & Resin Cost Estimator,other,environmental,True
+aquaponics-system-design.md,Aquaponics System Design Calculator,other,environmental,True
+carbon-offset-business.md,Carbon Offset Calculator for Businesses,other,environmental,True
+compost-bin-size.md,Compost Bin Size Calculator,other,environmental,True
+eco-friendly-product-impact-calculator.md,Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment,other,environmental,True
+electric-vehicle-range.md,Electric Vehicle Range Calculator,other,environmental,True
+energy-bill-estimator-solar.md,Energy Bill Estimator for Solar Panels,other,environmental,True
+environmental-transportation.md,Environmental Impact of Transportation Calculator,other,environmental,True
+gardening-plant-spacing.md,Gardening Plant Spacing Calculator,other,environmental,True
+gardening-water-usage.md,Gardening Water Usage Calculator,other,environmental,True
+herb-garden-yield.md,Herb Garden Yield Estimator,other,environmental,True
+home-energy-audit.md,Home Energy Audit Calculator,other,environmental,True
+iot-device-power-consumption-estimator.md,IoT Device Power Consumption Estimator | Smart Device Energy Calculator,other,environmental,True
+optimal-crop-planting-time.md,Optimal Crop Planting Time Calculator,other,environmental,True
+solar-panel-efficiency.md,Solar Panel Efficiency Calculator,other,environmental,True
+bad-habit-cost-calculator.md,"Bad Habit Cost Calculator - Calculate the True Cost of Smoking, Drinking & More",other,financial,True
+beekeeping-honey-production.md,Beekeeping Honey Production Calculator,other,financial,True
+career-path-salary-estimator.md,"Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More",other,financial,True
+fuel-cost.md,Fuel Cost Calculator,other,financial,True
+gym-vs-home-gym-cost.md,Gym Membership Cost vs. Home Gym Calculator,other,financial,True
+lottery-probability-calculator.md,Lottery Probability Calculator - Calculate Your Odds of Winning Any Lottery,other,financial,True
+onlyfans-earnings-calculator.md,OnlyFans Earnings Calculator - Calculate Potential Income & Revenue,other,financial,True
+passive-income-estimator.md,Passive Income Stream Estimator,other,financial,True
+smart-home-savings.md,Smart Home Device Cost vs. Savings Calculator,other,financial,True
+stock-fair-value.md,Stock Fair Value Calculator - Graham Intelligent Investor Method,other,financial,True
+employee-burnout-assessment.md,Employee Burnout Risk Assessment - Workplace Wellness Calculator,other,health,True
+ideal-weight-calculator.md,Ideal Weight Calculator - Calculate Your Perfect Body Weight,other,health,True
+packing-list-hiking.md,Packing List Generator for Hiking Trips,other,health,True
+pet-calorie-calculator.md,Pet Calorie Calculator | Calculate Daily Calories for Dogs & Cats,other,health,True
+pet-medication-dosage-calculator.md,Pet Medication Dosage Calculator | Safe Dosing for Dogs & Cats,other,pets,True
+pet-name-compatibility-calculator.md,Pet Name Compatibility Calculator | Find the Perfect Name for Your Pet,other,pets,True
+moon-phase-calculator-wedding.md,Moon Phase Calculator for Wedding Planning & Special Events,other,school,True
+application-development-cost-estimator.md,Application Development Cost Estimator | Software Development Price Calculator,other,technology,True
+blockchain-transaction-fee-calculator.md,Blockchain Transaction Fee Calculator | Crypto Gas Fee Estimator,other,technology,True
+crypto-price-prediction.md,Cryptocurrency Price Prediction Calculator - Technical Analysis,other,technology,True
+cybersecurity-awareness-quiz.md,Cybersecurity Awareness Quiz - Test Your Security Knowledge,other,technology,True
+password-strength-checker.md,Password Strength Checker - Security Policy Validator & Generator,other,technology,True
+quantum-computing-resource-estimator.md,Quantum Computing Resource Estimator | Quantum Algorithm Analysis Tool,other,technology,True
+social-media-earnings.md,"Social Media Earnings Calculator (TikTok, Instagram)",other,technology,True
+ip-address.md,What Is My IP Address  -  Check Your IP Address Online,other,technology,True
+youtube-monetization-estimator.md,YouTube Channel Monetization Estimator,other,technology,True
+pregnancy-due-date-calculator.md,Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception,other,time-date,True
+clothing-size.md,Clothing Size Calculator,other,travel,True
+schengen-days.md,Schengen Days Calculator,other,travel,True
+travel-insurance-estimator.md,Travel Insurance Premium Estimator,other,travel,True
+visa-eligibility-calculator.md,"Visa Eligibility Calculator - US, Canada, UK, Australia",other,travel,True
+energy.md,Energy Conservation Calculator,school,environmental,True
+weight.md,Gravitational Force Calculator,school,health,True
+mean.md,Average Calculator,school,school,False
+derivative.md,Derivative Calculator,school,school,False
+ideal-gas.md,Ideal Gas Law Calculator (PV=nRT),school,school,False
+molar-mass.md,Molar Mass Calculator,school,school,False
+ohm.md,Ohm,school,school,False
+frequency.md,Period and Frequency Calculator,school,school,False
+quadratic.md,Quadratic Equation Calculator,school,school,False
+rectangle.md,Rectangle Area and Perimeter Calculator,school,school,False
+dilution.md,Solution Dilution Calculator,school,school,False
+sphere.md,Sphere Surface Area and Volume Calculator,school,school,False
+trig.md,Trigonometric Functions Calculator,school,school,False
+ph.md,pH Calculator,school,school,False
+percent.md,Percentage Calculator,school,time-date,True
+age.md,Age Calculator Online,time-date,time-date,False
+business-days.md,Business Days Calculator,time-date,time-date,False
+conception-date.md,Conception Date Calculator,time-date,time-date,False
+date-difference.md,Date Difference Calculator,time-date,time-date,False
+date-plus-days.md,Date Plus Days Calculator,time-date,time-date,False
+timezone-converter-nomads.md,Time Zone Converter for Digital Nomads,time-date,travel,True
