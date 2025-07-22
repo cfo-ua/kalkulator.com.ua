@@ -11,7 +11,7 @@ document.getElementById("401k-form").addEventListener("submit", function (e) {
   const annualRaise = parseFloat(document.getElementById("annualRaise").value) || 0;
   const investmentReturn = parseFloat(document.getElementById("investmentReturn").value) || 0;
   const inflationRate = parseFloat(document.getElementById("inflationRate").value) || 0;
-  const contributionLimit = parseFloat(document.getElementById("contributionLimit").value) || 22500;
+  const contributionLimit = parseFloat(document.getElementById("contributionLimit").value) || 23500;
   const catchUpAge = parseInt(document.getElementById("catchUpAge").value) || 50;
   const catchUpAmount = parseFloat(document.getElementById("catchUpAmount").value) || 7500;
 
