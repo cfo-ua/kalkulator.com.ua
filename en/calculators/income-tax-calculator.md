@@ -1,14 +1,14 @@
 ---
 layout: calculator
-title: "Income Tax Calculator 2023 - Federal & State Tax Estimator"
+title: "Income Tax Calculator - Federal & State Tax Estimator"
 categories: [financial]
 permalink: /en/calculators/income-tax-calculator/
 seo:
-  title: "Income Tax Calculator 2023 - Federal & State Tax Calculator | Free Tool"
-  description: "Calculate your 2023 income taxes with our comprehensive tax calculator. Estimate federal and state taxes, deductions, and refunds. Updated for latest tax brackets and rules."
+  title: "Income Tax Calculator - Federal & State Tax Calculator | Free Tool"
+  description: "Calculate your income taxes with our comprehensive tax calculator. Estimate federal and state taxes, deductions, and refunds. Updated for current tax brackets and rules."
   keywords:
     - income tax calculator
-    - tax calculator 2023
+    - tax calculator
     - federal tax calculator
     - state tax calculator
     - tax refund calculator
@@ -33,32 +33,32 @@ seo:
     - self employment tax calculator
     - capital gains tax calculator
   content: |
-    <h2>Income Tax Calculator 2023 - Estimate Your Federal & State Taxes</h2>
-    <p>Calculate your <strong>2023 income taxes</strong> with this comprehensive tax calculator. Get accurate estimates for federal and state taxes, including deductions, credits, and potential refunds based on the latest tax brackets and rules.</p>
+    <h2>Income Tax Calculator - Estimate Your Federal & State Taxes</h2>
+    <p>Calculate your <strong>income taxes</strong> with this comprehensive tax calculator. Get accurate estimates for federal and state taxes, including deductions, credits, and potential refunds based on the current tax brackets and rules.</p>
 
-    <h3>2023 Federal Tax Brackets (Single Filers):</h3>
+    <h3>Current Federal Tax Brackets (Single Filers):</h3>
     <ul>
-      <li><strong>10%:</strong> $0 - $11,000</li>
-      <li><strong>12%:</strong> $11,001 - $44,725</li>
-      <li><strong>22%:</strong> $44,726 - $95,375</li>
-      <li><strong>24%:</strong> $95,376 - $182,050</li>
-      <li><strong>32%:</strong> $182,051 - $231,250</li>
-      <li><strong>35%:</strong> $231,251 - $578,125</li>
-      <li><strong>37%:</strong> $578,126+</li>
+      <li><strong>10%:</strong> $0 - $11,600</li>
+      <li><strong>12%:</strong> $11,601 - $47,150</li>
+      <li><strong>22%:</strong> $47,151 - $100,525</li>
+      <li><strong>24%:</strong> $100,526 - $191,950</li>
+      <li><strong>32%:</strong> $191,951 - $243,725</li>
+      <li><strong>35%:</strong> $243,726 - $609,350</li>
+      <li><strong>37%:</strong> $609,351+</li>
     </ul>
 
-    <h3>2023 Standard Deductions:</h3>
+    <h3>Current Standard Deductions:</h3>
     <ul>
-      <li><strong>Single:</strong> $13,850</li>
-      <li><strong>Married Filing Jointly:</strong> $27,700</li>
-      <li><strong>Married Filing Separately:</strong> $13,850</li>
-      <li><strong>Head of Household:</strong> $20,800</li>
-      <li><strong>Additional for 65+:</strong> $1,850 (single), $1,500 (married)</li>
+      <li><strong>Single:</strong> $14,600</li>
+      <li><strong>Married Filing Jointly:</strong> $29,200</li>
+      <li><strong>Married Filing Separately:</strong> $14,600</li>
+      <li><strong>Head of Household:</strong> $21,900</li>
+      <li><strong>Additional for 65+:</strong> $1,950 (single), $1,550 (married)</li>
     </ul>
 
     <h3>What's Included in This Calculator:</h3>
     <ul>
-      <li><strong>Federal Income Tax:</strong> Based on 2023 tax brackets</li>
+      <li><strong>Federal Income Tax:</strong> Based on current tax brackets</li>
       <li><strong>State Income Tax:</strong> Estimates for all 50 states</li>
       <li><strong>FICA Taxes:</strong> Social Security (6.2%) and Medicare (1.45%)</li>
       <li><strong>Additional Medicare Tax:</strong> 0.9% on income over $200K/$250K</li>
@@ -76,7 +76,7 @@ seo:
       <li><strong>Business Expenses:</strong> For self-employed individuals</li>
     </ul>
 
-    <h3>Major Tax Credits for 2023:</h3>
+    <h3>Major Tax Credits for Current Year:</h3>
     <ul>
       <li><strong>Child Tax Credit:</strong> Up to $2,000 per qualifying child</li>
       <li><strong>Earned Income Credit:</strong> Up to $7,430 for families with children</li>
@@ -96,7 +96,7 @@ seo:
     <h3>Self-Employment Tax:</h3>
     <ul>
       <li><strong>SE Tax Rate:</strong> 15.3% (12.4% Social Security + 2.9% Medicare)</li>
-      <li><strong>Social Security Cap:</strong> $160,200 for 2023</li>
+      <li><strong>Social Security Cap:</strong> $168,600 for current year</li>
       <li><strong>Medicare:</strong> No cap, additional 0.9% over $200K/$250K</li>
       <li><strong>Deduction:</strong> Can deduct half of SE tax paid</li>
     </ul>
@@ -120,10 +120,10 @@ seo:
 
     <h3>Important Tax Deadlines:</h3>
     <ul>
-      <li><strong>Tax Day 2024:</strong> April 15, 2024 (for 2023 tax year)</li>
-      <li><strong>Extension Deadline:</strong> October 15, 2024</li>
+      <li><strong>Tax Day:</strong> April 15 (for previous tax year)</li>
+      <li><strong>Extension Deadline:</strong> October 15</li>
       <li><strong>Quarterly Payments:</strong> Jan 15, Apr 15, Jun 15, Sep 15</li>
-      <li><strong>IRA Contributions:</strong> April 15, 2024 for 2023 tax year</li>
+      <li><strong>IRA Contributions:</strong> April 15 for previous tax year</li>
     </ul>
 
     <h3>Who Should Use This Calculator:</h3>
@@ -135,12 +135,12 @@ seo:
       <li><strong>Tax Planners:</strong> Compare different tax scenarios</li>
     </ul>
 
-    <p><strong>Disclaimer:</strong> This calculator provides estimates based on 2023 tax laws and should not be considered professional tax advice. Consult a qualified tax professional for personalized guidance and complex tax situations.</p>
+    <p><strong>Disclaimer:</strong> This calculator provides estimates based on current tax laws and should not be considered professional tax advice. Consult a qualified tax professional for personalized guidance and complex tax situations.</p>
 scripts:
   - /en/js/income-tax-calculator.js
 faq:
   - question: "How accurate is this tax calculator?"
-    answer: "The calculator uses official 2023 tax brackets and rates, providing estimates within 95% accuracy for most situations. Complex situations like multiple income sources, business deductions, or unusual circumstances may require professional tax software or advice."
+    answer: "The calculator uses official current tax brackets and rates, providing estimates within 95% accuracy for most situations. Complex situations like multiple income sources, business deductions, or unusual circumstances may require professional tax software or advice."
   - question: "Should I itemize or take the standard deduction?"
     answer: "Take whichever is higher. The calculator compares both options automatically. You typically itemize if you have high state taxes, mortgage interest, or charitable donations exceeding the standard deduction."
   - question: "How much should I withhold from my paycheck?"

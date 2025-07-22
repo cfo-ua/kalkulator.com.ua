@@ -161,24 +161,24 @@ function getStandardDeduction(filingStatus, age, spouseAge) {
   let base;
   switch (filingStatus) {
     case "single":
-      base = 13850;
-      if (age >= 65) base += 1850;
+      base = 14600;
+      if (age >= 65) base += 1950;
       break;
     case "marriedJoint":
-      base = 27700;
-      if (age >= 65) base += 1500;
-      if (spouseAge >= 65) base += 1500;
+      base = 29200;
+      if (age >= 65) base += 1550;
+      if (spouseAge >= 65) base += 1550;
       break;
     case "marriedSeparate":
-      base = 13850;
-      if (age >= 65) base += 1500;
+      base = 14600;
+      if (age >= 65) base += 1550;
       break;
     case "headOfHousehold":
-      base = 20800;
-      if (age >= 65) base += 1850;
+      base = 21900;
+      if (age >= 65) base += 1950;
       break;
     default:
-      base = 13850;
+      base = 14600;
   }
   return base;
 }
@@ -186,39 +186,39 @@ function getStandardDeduction(filingStatus, age, spouseAge) {
 function calculateFederalTax(taxableIncome, filingStatus) {
   const brackets = {
     single: [
-      [11000, 0.10],
-      [44725, 0.12],
-      [95375, 0.22],
-      [182050, 0.24],
-      [231250, 0.32],
-      [578125, 0.35],
+      [11600, 0.10],
+      [47150, 0.12],
+      [100525, 0.22],
+      [191950, 0.24],
+      [243725, 0.32],
+      [609350, 0.35],
       [Infinity, 0.37]
     ],
     marriedJoint: [
-      [22000, 0.10],
-      [89450, 0.12],
-      [190750, 0.22],
-      [364200, 0.24],
-      [462500, 0.32],
-      [693750, 0.35],
+      [23200, 0.10],
+      [94300, 0.12],
+      [201050, 0.22],
+      [383900, 0.24],
+      [487450, 0.32],
+      [731200, 0.35],
       [Infinity, 0.37]
     ],
     marriedSeparate: [
-      [11000, 0.10],
-      [44725, 0.12],
-      [95375, 0.22],
-      [182050, 0.24],
-      [231250, 0.32],
-      [346875, 0.35],
+      [11600, 0.10],
+      [47150, 0.12],
+      [100525, 0.22],
+      [191950, 0.24],
+      [243725, 0.32],
+      [365600, 0.35],
       [Infinity, 0.37]
     ],
     headOfHousehold: [
-      [15700, 0.10],
-      [59850, 0.12],
-      [95350, 0.22],
-      [182050, 0.24],
-      [231250, 0.32],
-      [578100, 0.35],
+      [16550, 0.10],
+      [63100, 0.12],
+      [100500, 0.22],
+      [191950, 0.24],
+      [243725, 0.32],
+      [609350, 0.35],
       [Infinity, 0.37]
     ]
   };
@@ -242,10 +242,10 @@ function calculateFederalTax(taxableIncome, filingStatus) {
 
 function getMarginalTaxRate(taxableIncome, filingStatus) {
   const brackets = {
-    single: [[11000, 10], [44725, 12], [95375, 22], [182050, 24], [231250, 32], [578125, 35], [Infinity, 37]],
-    marriedJoint: [[22000, 10], [89450, 12], [190750, 22], [364200, 24], [462500, 32], [693750, 35], [Infinity, 37]],
-    marriedSeparate: [[11000, 10], [44725, 12], [95375, 22], [182050, 24], [231250, 32], [346875, 35], [Infinity, 37]],
-    headOfHousehold: [[15700, 10], [59850, 12], [95350, 22], [182050, 24], [231250, 32], [578100, 35], [Infinity, 37]]
+    single: [[11600, 10], [47150, 12], [100525, 22], [191950, 24], [243725, 32], [609350, 35], [Infinity, 37]],
+    marriedJoint: [[23200, 10], [94300, 12], [201050, 22], [383900, 24], [487450, 32], [731200, 35], [Infinity, 37]],
+    marriedSeparate: [[11600, 10], [47150, 12], [100525, 22], [191950, 24], [243725, 32], [365600, 35], [Infinity, 37]],
+    headOfHousehold: [[16550, 10], [63100, 12], [100500, 22], [191950, 24], [243725, 32], [609350, 35], [Infinity, 37]]
   };
 
   const bracketSet = brackets[filingStatus] || brackets.single;
@@ -284,7 +284,7 @@ function calculateFICATaxes(wageIncome, seIncome, filingStatus) {
   const ssMedicare = {
     ssRate: 0.062,
     medicareRate: 0.0145,
-    ssWageBase: 160200,
+    ssWageBase: 168600,
     additionalMedicareThreshold: filingStatus === "marriedJoint" ? 250000 : 200000
   };
 
