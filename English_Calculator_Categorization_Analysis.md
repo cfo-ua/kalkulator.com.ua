@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This analysis examines all 186 English calculators in the kalkulator.com.ua repository to propose an improved categorization system. The current system has 8 categories with 73 calculators (39.2%) categorized as "other". The revised approach maintains existing category assignments while creating new specialized categories exclusively from the "other" category, ensuring each category contains 6-15 calculators.
+This analysis examines all 186 English calculators in the kalkulator.com.ua repository to propose an improved categorization system. The current system has 8 categories with 73 calculators (39.2%) categorized as "other". The revised approach maintains existing category assignments while creating new specialized categories exclusively from the "other" category, ensuring each category contains 6-23 calculators for optimal organization across exactly 12 total categories.
 
 ## Current State Analysis
 
@@ -32,16 +32,15 @@ This analysis examines all 186 English calculators in the kalkulator.com.ua repo
 |----------|-------|------------|-------------|
 | construction | 29 | 15.6% | Building materials, measurements, renovation costs (unchanged) |
 | financial | 24 | 12.9% | Loans, mortgages, investments, retirement planning (unchanged) |
+| school | 23 | 12.4% | Academic formulas, equations, educational tools, college planning (combined) |
+| other | 23 | 12.4% | Miscellaneous calculators that don't fit specialized categories |
 | health | 18 | 9.7% | Fitness, nutrition, medical calculations (unchanged) |
-| school | 15 | 8.1% | Academic formulas, equations, educational tools (unchanged) |
 | business | 14 | 7.5% | Business analytics, profit calculations, startup tools (unchanged) |
 | environment | 12 | 6.5% | Energy, gardening, carbon footprint, sustainability tools (from other) |
 | technology | 11 | 5.9% | Software, cybersecurity, digital tools, blockchain (from other) |
 | entertainment | 10 | 5.4% | Astrology, games, fun calculators, superstition (from other) |
 | travel | 9 | 4.8% | Travel planning, visa tools, relocation calculators (from other) |
-| education | 8 | 4.3% | College planning, student tools, academic assessments (from other) |
 | conversion | 7 | 3.8% | Unit conversions between measurements (unchanged) |
-| other | 23 | 12.4% | Miscellaneous calculators that don't fit specialized categories |
 | time-date | 6 | 3.2% | Date calculations, age calculators, time zones (unchanged) |
 | **Total** | **186** | **100%** | |
 

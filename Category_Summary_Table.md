@@ -9,15 +9,14 @@ Analysis of 186 English calculators in the kalkulator.com.ua repository with rec
 |----------------------|---------------------|----------------|--------------------------|-------------------|
 | **construction** | 29 | 15.6% | Building materials, measurements, renovation costs | ❌ No changes |
 | **financial** | 24 | 12.9% | Loans, mortgages, investments, retirement planning | ❌ No changes |
+| **school** | 23 | 12.4% | Academic formulas, equations, educational tools, college planning | ✅ Combined with education |
 | **other** | 23 | 12.4% | Miscellaneous calculators that don't fit elsewhere | ✅ Reduced from 73 |
 | **health** | 18 | 9.7% | Fitness, nutrition, medical calculations | ❌ No changes |
-| **school** | 15 | 8.1% | Academic formulas, equations, educational tools | ❌ No changes |
 | **business** | 14 | 7.5% | Business analytics, profit calculations, startup tools | ❌ No changes |
 | **environment** | 12 | 6.5% | Energy efficiency, gardening, carbon footprint tools | ✅ New from other |
 | **technology** | 11 | 5.9% | Software, cybersecurity, digital tools, blockchain | ✅ New from other |
 | **entertainment** | 10 | 5.4% | Astrology, games, fun calculators, personality tools | ✅ New from other |
 | **travel** | 9 | 4.8% | Travel planning, visa tools, relocation calculators | ✅ New from other |
-| **education** | 8 | 4.3% | College planning, student tools, academic assessments | ✅ New from other |
 | **conversion** | 7 | 3.8% | Converting between measurement units | ❌ No changes |
 | **time-date** | 6 | 3.2% | Date calculations, age calculators, time zones | ❌ No changes |
 
@@ -34,12 +33,11 @@ Analysis of 186 English calculators in the kalkulator.com.ua repository with rec
 - **Impact**: 50 calculators moved to specialized categories for better discovery
 - **Maintained threshold**: "Other" still meets minimum 6-calculator requirement
 
-### 3. New Specialized Categories (5 new categories)
+### 3. New Specialized Categories (4 new categories)
 - **environment**: 12 calculators (sustainability and eco-friendly tools)
 - **technology**: 11 calculators (digital and tech-related tools)
 - **entertainment**: 10 calculators (fun and lifestyle calculators)
 - **travel**: 9 calculators (travel and relocation planning)
-- **education**: 8 calculators (academic and learning tools)
 
 ### 4. Optimal Category Sizes
 - **All categories**: 6-29 calculators (within recommended range)
@@ -49,7 +47,7 @@ Analysis of 186 English calculators in the kalkulator.com.ua repository with rec
 
 ## Implementation Summary
 
-### Total Categories: 8 → 13 (+62.5%)
+### Total Categories: 8 → 12 (+50%)
 ### Calculator Distribution Changes:
 
 | **Current Category** | **Count** | **After Migration** | **Change** |
@@ -58,7 +56,7 @@ Analysis of 186 English calculators in the kalkulator.com.ua repository with rec
 | construction | 29 | 29 (0) | ❌ No change |
 | financial | 24 | 24 (0) | ❌ No change |
 | health | 18 | 18 (0) | ❌ No change |
-| school | 15 | 15 (0) | ❌ No change |
+| school | 15 | 23 (+8) | ✅ Combined with education |
 | business | 14 | 14 (0) | ❌ No change |
 | conversion | 7 | 7 (0) | ❌ No change |
 | time-date | 6 | 6 (0) | ❌ No change |
@@ -68,7 +66,6 @@ Analysis of 186 English calculators in the kalkulator.com.ua repository with rec
 - technology (11 calculators)
 - entertainment (10 calculators)
 - travel (9 calculators)
-- education (8 calculators)
 
 ## Expected Benefits
 

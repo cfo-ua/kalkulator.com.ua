@@ -49,22 +49,22 @@ travel-insurance-estimator.md,Travel Insurance Estimator,other,travel,True,new_c
 visa-eligibility-calculator.md,Visa Eligibility Calculator,other,travel,True,new_category
 clothing-size.md,Clothing Size Converter,other,travel,True,new_category
 
-# Calculators moving FROM "other" TO "education" (8 calculators)
-college-cost-calculator-out-of-state.md,College Cost Calculator Out of State,other,education,True,new_category
-course-enrollment-forecast.md,Course Enrollment Forecast,other,education,True,new_category
-graduate-school-acceptance-rate-predictor.md,Graduate School Acceptance Rate Predictor,other,education,True,new_category
-scholarship-eligibility-calculator.md,Scholarship Eligibility Calculator,other,education,True,new_category
-study-time-optimizer.md,Study Time Optimizer,other,education,True,new_category
-career-path-salary-estimator.md,Career Path Salary Estimator,other,education,True,new_category
-employee-burnout-assessment.md,Employee Burnout Assessment,other,education,True,new_category
-compliance-checklist.md,Compliance Checklist Generator,other,education,True,new_category
+# Calculators moving FROM "other" TO "school" (8 calculators)
+college-cost-calculator-out-of-state.md,College Cost Calculator Out of State,other,school,True,existing_category
+course-enrollment-forecast.md,Course Enrollment Forecast,other,school,True,existing_category
+graduate-school-acceptance-rate-predictor.md,Graduate School Acceptance Rate Predictor,other,school,True,existing_category
+scholarship-eligibility-calculator.md,Scholarship Eligibility Calculator,other,school,True,existing_category
+study-time-optimizer.md,Study Time Optimizer,other,school,True,existing_category
+career-path-salary-estimator.md,Career Path Salary Estimator,other,school,True,existing_category
+employee-burnout-assessment.md,Employee Burnout Assessment,other,school,True,existing_category
+compliance-checklist.md,Compliance Checklist Generator,other,school,True,existing_category
 
-# ALL OTHER CALCULATORS - No changes needed (113 calculators)
+# ALL OTHER CALCULATORS - No changes needed (105 calculators)
 # business category (14 calculators) - no changes
 # construction category (29 calculators) - no changes  
 # financial category (24 calculators) - no changes
 # health category (18 calculators) - no changes
-# school category (15 calculators) - no changes
+# school category (23 calculators) - 8 added from education
 # conversion category (7 calculators) - no changes
 # time-date category (6 calculators) - no changes
 # Remaining in other category (23 calculators) - no changes

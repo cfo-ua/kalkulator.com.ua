@@ -5,7 +5,8 @@ This table shows the proposed category changes for calculators currently in the 
 ## Summary
 - Total calculators: 186
 - Calculators staying in current categories: 113 (91 in existing categories + 22 remaining in other)
-- Calculators moving FROM "other" TO new categories: 50
+- Calculators moving FROM "other" TO new categories: 42
+- Calculators moving FROM "other" TO existing "school" category: 8
 - Calculators remaining in "other": 23
 
 ## Category Distribution Changes
@@ -14,8 +15,8 @@ This table shows the proposed category changes for calculators currently in the 
 |----------|---------------|----------------|--------|
 | construction | 29 | 29 | 0 |
 | financial | 24 | 24 | 0 |
+| school | 15 | 23 | +8 |
 | health | 18 | 18 | 0 |
-| school | 15 | 15 | 0 |
 | business | 14 | 14 | 0 |
 | conversion | 7 | 7 | 0 |
 | time-date | 6 | 6 | 0 |
@@ -24,7 +25,6 @@ This table shows the proposed category changes for calculators currently in the 
 | technology | 0 | 11 | +11 |
 | entertainment | 0 | 10 | +10 |
 | travel | 0 | 9 | +9 |
-| education | 0 | 8 | +8 |
 
 ## Migration Details - Only "Other" Category Changes
 
@@ -86,17 +86,17 @@ This table shows the proposed category changes for calculators currently in the 
 | visa-eligibility-calculator.md | Visa Eligibility Calculator | other | travel | Visa planning |
 | clothing-size.md | Clothing Size Converter | other | travel | International sizing |
 
-### Moving FROM "other" TO "education" (8 calculators)
+### Moving FROM "other" TO "school" (8 calculators)
 | Filename | Title | Current | Proposed | Reason |
 |----------|-------|---------|----------|--------|
-| college-cost-calculator-out-of-state.md | College Cost Calculator Out of State | other | education | College planning |
-| course-enrollment-forecast.md | Course Enrollment Forecast | other | education | Academic planning |
-| graduate-school-acceptance-rate-predictor.md | Graduate School Acceptance Rate Predictor | other | education | Academic planning |
-| scholarship-eligibility-calculator.md | Scholarship Eligibility Calculator | other | education | Financial aid |
-| study-time-optimizer.md | Study Time Optimizer | other | education | Learning optimization |
-| career-path-salary-estimator.md | Career Path Salary Estimator | other | education | Career planning |
-| employee-burnout-assessment.md | Employee Burnout Assessment | other | education | Professional development |
-| compliance-checklist.md | Compliance Checklist Generator | other | education | Professional training |
+| college-cost-calculator-out-of-state.md | College Cost Calculator Out of State | other | school | Educational planning |
+| course-enrollment-forecast.md | Course Enrollment Forecast | other | school | Academic planning |
+| graduate-school-acceptance-rate-predictor.md | Graduate School Acceptance Rate Predictor | other | school | Academic planning |
+| scholarship-eligibility-calculator.md | Scholarship Eligibility Calculator | other | school | Educational financial aid |
+| study-time-optimizer.md | Study Time Optimizer | other | school | Learning optimization |
+| career-path-salary-estimator.md | Career Path Salary Estimator | other | school | Career planning |
+| employee-burnout-assessment.md | Employee Burnout Assessment | other | school | Professional development |
+| compliance-checklist.md | Compliance Checklist Generator | other | school | Professional training |
 
 ### Remaining in "other" (23 calculators)
 These calculators don't fit well into any specialized category or are unique tools:
