@@ -4,8 +4,8 @@ title: "Food Calories Calculator"
 categories: [health]
 permalink: /en/calculators/food-calories/
 seo:
-  title: "Food Calories Calculator  -  Recipe & Meal Calorie Counter with Nutrition Facts"
-  description: "Calculate calories, protein, fat, and carbs in your meals and recipes. Add multiple ingredients with custom weights. Perfect for meal planning, weight loss, and nutrition tracking. Comprehensive food database included."
+  title: "Recipe Calorie Calculator - Meal & Ingredient Nutrition Counter Online"
+  description: "Calculate calories, protein, fat, and carbs in recipes and meals. Add multiple ingredients with custom weights for accurate nutrition facts. Perfect for meal planning, cooking, and tracking food intake."
   keywords:
     - food calories calculator
     - meal calorie calculator
