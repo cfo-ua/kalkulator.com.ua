@@ -31,6 +31,10 @@ seo:
     <h2>401k Calculator - Plan Your Retirement Savings</h2>
     <p>Calculate your <strong>401k retirement savings</strong> growth with this comprehensive calculator. Factor in your contributions, employer matching, investment returns, and contribution limits to plan your retirement income effectively.</p>
 
+    <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0;">
+      <p style="margin: 0; font-weight: 500; color: #856404;"><strong>⚠️ Disclaimer:</strong> This calculator is for informational and educational purposes only. Results are estimates based on the information you provide and should not be considered as investment advice. Consult with a qualified financial advisor before making investment decisions.</p>
+    </div>
+
     <h3>What is a 401k Plan?</h3>
     <p>A 401k is an employer-sponsored retirement savings plan that allows employees to save and invest for retirement with tax advantages. Contributions are typically made with pre-tax dollars, reducing your current taxable income.</p>
 
@@ -40,15 +44,15 @@ seo:
       <li><strong>Employer Matching:</strong> Many employers match a portion of your contributions</li>
       <li><strong>Tax Advantages:</strong> Contributions reduce current taxable income</li>
       <li><strong>Investment Growth:</strong> Funds grow tax-deferred until withdrawal</li>
-      <li><strong>Contribution Limits:</strong> Annual limits set by the IRS ($22,500 for 2023)</li>
+      <li><strong>Contribution Limits:</strong> Annual limits set by the IRS ($23,500 current limit)</li>
       <li><strong>Catch-up Contributions:</strong> Additional contributions for those 50+ ($7,500 extra)</li>
     </ul>
 
-    <h3>2023 Contribution Limits:</h3>
+    <h3>Current Contribution Limits:</h3>
     <ul>
-      <li><strong>Under 50:</strong> $22,500 maximum annual contribution</li>
-      <li><strong>50 and over:</strong> $30,000 maximum (includes $7,500 catch-up)</li>
-      <li><strong>Total limit:</strong> $66,000 (including employer contributions)</li>
+      <li><strong>Under 50:</strong> $23,500 maximum annual contribution</li>
+      <li><strong>50 and over:</strong> $31,000 maximum (includes $7,500 catch-up)</li>
+      <li><strong>Total limit:</strong> $70,000 (including employer contributions)</li>
       <li><strong>Highly compensated:</strong> Additional restrictions may apply</li>
     </ul>
 
@@ -154,7 +158,7 @@ faq:
       <input type="number" id="inflationRate" value="2.5" min="0" max="10" step="0.1" required>
       
       <label for="contributionLimit">Annual Contribution Limit ($)</label>
-      <input type="number" id="contributionLimit" value="22500" min="0" step="500" required>
+      <input type="number" id="contributionLimit" value="23500" min="0" step="500" required>
       
       <label for="catchUpAge">Catch-up Contributions Start at Age</label>
       <input type="number" id="catchUpAge" value="50" min="45" max="65" step="1" required>
