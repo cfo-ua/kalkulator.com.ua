@@ -193,6 +193,12 @@ faq:
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s ease;
+  /* Override global calculator-block button styles */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  width: auto !important;
 }
 
 .input-group button:hover {
@@ -218,6 +224,17 @@ faq:
   padding: 0.5rem;
   border: 2px solid var(--border);
   border-radius: 6px;
+}
+
+.controls button {
+  /* Override global calculator-block button styles for inline buttons */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  width: auto !important;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
 .participants-grid {
@@ -269,6 +286,12 @@ faq:
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  /* Override global calculator-block button styles */
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 24px !important;
+  font-weight: normal !important;
+  box-shadow: none !important;
 }
 
 .action-buttons {
@@ -282,8 +305,11 @@ faq:
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   transition: all 0.3s ease;
+  /* Keep global calculator-block button styles for main action buttons but allow inline */
+  display: inline-block;
+  width: auto;
 }
 
 #select-random {
