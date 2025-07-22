@@ -19,3 +19,6 @@ node_modules/
 # Bundler
 vendor/
 .bundle/
+
+# Temporary analysis files
+/tmp/

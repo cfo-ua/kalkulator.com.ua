@@ -4,8 +4,8 @@ title: "Calories Burned Calculator"
 categories: [health]
 permalink: /en/calculators/calorie-burn/
 seo:
-  title: "Calories Burned Calculator  -  Exercise & Activity Calorie Counter Online"
-  description: "Calculate calories burned during exercise and daily activities. Accurate estimates for running, walking, swimming, cycling, strength training, and 100+ activities. Based on MET values and your body weight."
+  title: "Exercise Calories Burned Calculator - Workout & Activity Calorie Counter"
+  description: "Calculate calories burned during exercise and physical activities. Get accurate estimates for running, cycling, swimming, gym workouts, and 100+ activities based on your weight, duration, and exercise intensity."
   keywords:
     - calories burned calculator
     - exercise calorie calculator
