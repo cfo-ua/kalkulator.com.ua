@@ -1,6 +1,6 @@
 ---
 categories:
-- school
+- business
 faq:
 - answer: This assessment is based on validated psychological research and workplace
     wellness frameworks. While not a clinical diagnosis, it provides valuable insights
