@@ -149,7 +149,7 @@ faq:
       </select>
       
       <label for="investmentAmount">Investment Amount ($)</label>
-      <input type="number" id="investmentAmount" value="1000" min="1" step="10" required>
+      <input type="number" id="investmentAmount" value="1000" min="1" step="0.01" required>
       
       <label for="purchasePrice">Purchase Price per XRP ($)</label>
       <input type="number" id="purchasePrice" value="0.50" min="0" step="0.00001" required>
@@ -165,7 +165,7 @@ faq:
     <div>
       <h4>📊 DCA Settings (if applicable)</h4>
       <label for="dcaAmount">Regular Investment Amount ($)</label>
-      <input type="number" id="dcaAmount" value="100" min="1" step="5" placeholder="Weekly/monthly investment">
+      <input type="number" id="dcaAmount" value="100" min="1" step="0.01" placeholder="Weekly/monthly investment">
       
       <label for="dcaFrequency">Investment Frequency</label>
       <select id="dcaFrequency">
@@ -214,7 +214,7 @@ faq:
     <div>
       <h4>⚖️ Portfolio & Tax Settings</h4>
       <label for="portfolioValue">Total Portfolio Value ($)</label>
-      <input type="number" id="portfolioValue" value="10000" min="0" step="100" placeholder="Your total investment portfolio">
+      <input type="number" id="portfolioValue" value="10000" min="0" step="0.01" placeholder="Your total investment portfolio">
       
       <label for="cryptoAllocation">Desired Crypto Allocation (%)</label>
       <input type="number" id="cryptoAllocation" value="10" min="0" max="100" step="1">
