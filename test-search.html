@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Test Search Function"
+---
+
+<h1>Test Search Function</h1>
+
+<div class="calculator-search">
+  <input type="text" id="calculatorSearch" placeholder="Type to search..." autocomplete="off">
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+<div id="debug-info">
+  <h2>Debug Information</h2>
+  <button onclick="showDebugInfo()">Show Search Data Info</button>
+  <pre id="debug-output"></pre>
+</div>
+
+<script>
+function showDebugInfo() {
+  const output = document.getElementById('debug-output');
+  const data = window.calculatorSearchData;
+  
+  if (!data) {
+    output.textContent = 'ERROR: calculatorSearchData not found!';
+    return;
+  }
+  
+  const ukCount = data.uk ? data.uk.length : 0;
+  const enCount = data.en ? data.en.length : 0;
+  
+  let debugText = `Ukrainian calculators: ${ukCount}\n`;
+  debugText += `English calculators: ${enCount}\n\n`;
+  
+  if (data.uk && data.uk.length > 0) {
+    debugText += 'First 3 Ukrainian calculators:\n';
+    data.uk.slice(0, 3).forEach((calc, i) => {
+      debugText += `${i+1}. ${calc.title} (${calc.filename})\n`;
+    });
+  }
+  
+  if (data.en && data.en.length > 0) {
+    debugText += '\nFirst 3 English calculators:\n';
+    data.en.slice(0, 3).forEach((calc, i) => {
+      debugText += `${i+1}. ${calc.title} (${calc.filename})\n`;
+    });
+  }
+  
+  // Check for specific missing calculators
+  debugText += '\nChecking for previously missing calculators:\n';
+  const missingCalcs = ['amortization-calculator', 'auto-payment-calculator', 'heat-index-calculator', 'roth-ira-calculator', 'student-loan-calculator', 'xrp-calculator'];
+  missingCalcs.forEach(calc => {
+    const found = data.en && data.en.find(c => c.filename === calc);
+    debugText += `${calc}: ${found ? 'FOUND ✓' : 'MISSING ✗'}\n`;
+  });
+  
+  // Check for newly added test calculators
+  debugText += '\nChecking for newly added test calculators:\n';
+  const testCalcs = [
+    { filename: 'test-new-calculator', lang: 'uk', title: 'Test New Calculator' },
+    { filename: 'test-english-calculator', lang: 'en', title: 'Test English Calculator' }
+  ];
+  testCalcs.forEach(calc => {
+    const found = data[calc.lang] && data[calc.lang].find(c => c.filename === calc.filename);
+    debugText += `${calc.filename} (${calc.lang}): ${found ? 'FOUND ✓' : 'MISSING ✗'}\n`;
+  });
+  
+  output.textContent = debugText;
+}
+</script>
