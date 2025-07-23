@@ -23,7 +23,12 @@ seo:
 ---
 
 <h1>Online Calculators</h1>
-<p class="intro">Over 100 online calculators for daily calculations. All tools are simple and convenient. <b>Choose a category</b> and find the calculator you need:</p>
+<p class="intro">Over 100 online calculators for daily calculations. All tools are simple and convenient. <b>Find a calculator</b> by name or <b>choose a category</b>:</p>
+
+<div class="calculator-search">
+  <input type="text" id="calculatorSearch" placeholder="Start typing calculator name..." autocomplete="off">
+  <div id="searchResults" class="search-results"></div>
+</div>
 
 <div class="categories" id="categories">
   <a class="category-card" href="/en/categories/school/">
