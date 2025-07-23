@@ -1,105 +1,120 @@
 ---
-layout: calculator
-title: "Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More"
-categories: [other]
-permalink: /en/calculators/career-path-salary-estimator/
-seo:
-  title: "Career Salary Calculator | Data Scientist, Doctor, Engineer Salary Estimator"
-  description: "Estimate salary potential for top careers including data scientists, doctors, software engineers, nurses, and more. Get personalized salary projections based on experience, location, and education level."
-  keywords:
-    - career salary calculator
-    - data scientist salary
-    - doctor salary estimator
-    - software engineer salary
-    - nurse salary calculator
-    - career path salary
-    - profession salary estimator
-    - job salary calculator
-    - career earnings potential
-    - salary by experience level
-    - tech salary calculator
-    - medical career salary
-    - engineering salary
-    - finance career salary
-    - salary progression calculator
-  content: |
-    <h2>Career Path Salary Estimator</h2>
-    <p>Planning your career path? Our salary estimator provides realistic compensation projections for the most in-demand professions including technology, healthcare, engineering, finance, and other high-growth fields.</p>
-
-    <h3>💼 Top High-Demand Careers We Cover</h3>
-    <ul>
-      <li><strong>💻 Technology:</strong> Data Scientists, Software Engineers, AI/ML Engineers, Cybersecurity Specialists</li>
-      <li><strong>🩺 Healthcare:</strong> Doctors (various specialties), Nurses, Physician Assistants, Pharmacists</li>
-      <li><strong>⚙️ Engineering:</strong> Software, Electrical, Mechanical, Civil, Chemical Engineers</li>
-      <li><strong>💰 Finance:</strong> Investment Bankers, Financial Analysts, Actuaries, Accountants</li>
-      <li><strong>⚖️ Legal:</strong> Lawyers, Paralegals, Legal Consultants</li>
-      <li><strong>🎓 Education:</strong> Teachers, Professors, Education Administrators</li>
-      <li><strong>💊 Pharmaceutical:</strong> Research Scientists, Clinical Researchers, Regulatory Affairs</li>
-      <li><strong>🏗️ Construction:</strong> Project Managers, Architects, Civil Engineers</li>
-    </ul>
-
-    <h3>📈 Salary Factors We Consider</h3>
-    <p>Our estimator analyzes multiple factors affecting compensation:</p>
-    <ul>
-      <li><strong>🎓 Education Level:</strong> High school, Bachelor's, Master's, PhD, Professional degrees</li>
-      <li><strong>⏰ Experience:</strong> Entry-level to 20+ years of experience</li>
-      <li><strong>📍 Location:</strong> Cost of living and market demand by city/region</li>
-      <li><strong>🏢 Company Size:</strong> Startup, mid-size, large corporation, government</li>
-      <li><strong>🏭 Industry:</strong> Tech, healthcare, finance, consulting, etc.</li>
-      <li><strong>📜 Certifications:</strong> Professional certifications and licenses</li>
-      <li><strong>💼 Role Level:</strong> Individual contributor vs. management track</li>
-      <li><strong>🎯 Specialization:</strong> Niche skills and specialized expertise</li>
-    </ul>
-
-    <h3>🎯 Career Growth Projections</h3>
-    <p>Get insights into salary progression over time:</p>
-    <ul>
-      <li><strong>📊 5-Year Outlook:</strong> Expected salary growth over next 5 years</li>
-      <li><strong>🏃 Career Acceleration:</strong> Factors that can boost earning potential</li>
-      <li><strong>📈 Peak Earnings:</strong> Maximum salary potential in your field</li>
-      <li><strong>🔄 Career Transitions:</strong> How changing fields affects compensation</li>
-      <li><strong>💰 Total Compensation:</strong> Salary plus benefits, stock options, bonuses</li>
-    </ul>
-
-    <h3>🌟 High-Growth Career Insights</h3>
-    <p>Special focus on fastest-growing, highest-paying careers:</p>
-    <ul>
-      <li><strong>🤖 AI/Machine Learning:</strong> $90K-$300K+ based on experience and location</li>
-      <li><strong>🔒 Cybersecurity:</strong> $75K-$250K+ with high job security</li>
-      <li><strong>📊 Data Science:</strong> $80K-$280K+ with strong demand across industries</li>
-      <li><strong>🧬 Biotechnology:</strong> $70K-$200K+ in growing pharmaceutical industry</li>
-      <li><strong>☁️ Cloud Computing:</strong> $80K-$220K+ as companies migrate to cloud</li>
-      <li><strong>🏥 Healthcare Specialists:</strong> $150K-$500K+ for medical specialists</li>
-    </ul>
-
-    <h3>📊 Salary Ranges by Experience Level</h3>
-    <ul>
-      <li><strong>👶 Entry Level (0-2 years):</strong> $40K-$120K depending on field</li>
-      <li><strong>🧑‍💼 Mid-Level (3-7 years):</strong> $60K-$180K with proven skills</li>
-      <li><strong>👨‍💼 Senior Level (8-15 years):</strong> $90K-$300K+ with leadership skills</li>
-      <li><strong>🏆 Executive Level (15+ years):</strong> $150K-$500K+ including equity</li>
-    </ul>
-
-    <p><strong>Note:</strong> Salary estimates are based on current market data and industry reports. Actual compensation varies by specific company, performance, negotiations, and market conditions. Use these as starting points for career planning and salary negotiations.</p>
-scripts:
-  - /en/js/career-path-salary-estimator.js
+categories:
+- school
 faq:
-  - question: How accurate are these salary estimates?
-    answer: "Our estimates are based on current market data from salary surveys, job postings, and industry reports. They're generally accurate within 10-20% for most markets, but actual salaries can vary significantly based on specific companies, individual performance, and negotiation skills."
-  - question: Which careers have the highest salary growth potential?
-    answer: "Technology fields (AI/ML, cybersecurity, data science), specialized medicine, and finance typically offer the highest growth potential. However, consider job satisfaction, work-life balance, and personal interests alongside salary potential."
-  - question: How much does location affect salary?
-    answer: "Location can impact salary by 30-50% or more. San Francisco, New York, and Seattle typically offer highest tech salaries, but also highest cost of living. Consider net income after living expenses, not just gross salary."
-  - question: Is it worth getting advanced degrees for higher salaries?
-    answer: "Depends on the field. Tech often values skills over degrees, while medicine, law, and academia require advanced degrees. Consider opportunity cost, student debt, and time investment. Some fields offer better ROI for experience than additional education."
-  - question: How do I negotiate salary based on these estimates?
-    answer: "Use these estimates as baseline research. Also research specific company compensation, your unique value proposition, market demand for your skills, and total compensation (not just base salary). Always negotiate professionally with data to support your request."
-  - question: What careers are most recession-proof?
-    answer: "Healthcare, essential services, cybersecurity, and government positions tend to be more stable. However, developing adaptable skills, continuous learning, and building emergency funds are better strategies than relying solely on 'recession-proof' careers."
-  - question: Should I choose career based only on salary potential?
-    answer: "No! Consider work-life balance, job satisfaction, growth opportunities, company culture, and alignment with your values. Higher salaries often come with higher stress, longer hours, or specific lifestyle trade-offs."
-  - question: How often should I reassess my career path and salary?
-    answer: "Review annually or when considering job changes. Technology and market demands change rapidly. Stay informed about industry trends, new skills in demand, and evolving compensation standards in your field."
+- answer: Our estimates are based on current market data from salary surveys, job
+    postings, and industry reports. They're generally accurate within 10-20% for most
+    markets, but actual salaries can vary significantly based on specific companies,
+    individual performance, and negotiation skills.
+  question: How accurate are these salary estimates?
+- answer: Technology fields (AI/ML, cybersecurity, data science), specialized medicine,
+    and finance typically offer the highest growth potential. However, consider job
+    satisfaction, work-life balance, and personal interests alongside salary potential.
+  question: Which careers have the highest salary growth potential?
+- answer: Location can impact salary by 30-50% or more. San Francisco, New York, and
+    Seattle typically offer highest tech salaries, but also highest cost of living.
+    Consider net income after living expenses, not just gross salary.
+  question: How much does location affect salary?
+- answer: Depends on the field. Tech often values skills over degrees, while medicine,
+    law, and academia require advanced degrees. Consider opportunity cost, student
+    debt, and time investment. Some fields offer better ROI for experience than additional
+    education.
+  question: Is it worth getting advanced degrees for higher salaries?
+- answer: Use these estimates as baseline research. Also research specific company
+    compensation, your unique value proposition, market demand for your skills, and
+    total compensation (not just base salary). Always negotiate professionally with
+    data to support your request.
+  question: How do I negotiate salary based on these estimates?
+- answer: Healthcare, essential services, cybersecurity, and government positions
+    tend to be more stable. However, developing adaptable skills, continuous learning,
+    and building emergency funds are better strategies than relying solely on 'recession-proof'
+    careers.
+  question: What careers are most recession-proof?
+- answer: No! Consider work-life balance, job satisfaction, growth opportunities,
+    company culture, and alignment with your values. Higher salaries often come with
+    higher stress, longer hours, or specific lifestyle trade-offs.
+  question: Should I choose career based only on salary potential?
+- answer: Review annually or when considering job changes. Technology and market demands
+    change rapidly. Stay informed about industry trends, new skills in demand, and
+    evolving compensation standards in your field.
+  question: How often should I reassess my career path and salary?
+layout: calculator
+permalink: /en/calculators/career-path-salary-estimator/
+scripts:
+- /en/js/career-path-salary-estimator.js
+seo:
+  content: "<h2>Career Path Salary Estimator</h2>\n<p>Planning your career path? Our\
+    \ salary estimator provides realistic compensation projections for the most in-demand\
+    \ professions including technology, healthcare, engineering, finance, and other\
+    \ high-growth fields.</p>\n\n<h3>\U0001F4BC Top High-Demand Careers We Cover</h3>\n\
+    <ul>\n  <li><strong>\U0001F4BB Technology:</strong> Data Scientists, Software\
+    \ Engineers, AI/ML Engineers, Cybersecurity Specialists</li>\n  <li><strong>\U0001FA7A\
+    \ Healthcare:</strong> Doctors (various specialties), Nurses, Physician Assistants,\
+    \ Pharmacists</li>\n  <li><strong>⚙️ Engineering:</strong> Software, Electrical,\
+    \ Mechanical, Civil, Chemical Engineers</li>\n  <li><strong>\U0001F4B0 Finance:</strong>\
+    \ Investment Bankers, Financial Analysts, Actuaries, Accountants</li>\n  <li><strong>⚖️\
+    \ Legal:</strong> Lawyers, Paralegals, Legal Consultants</li>\n  <li><strong>\U0001F393\
+    \ Education:</strong> Teachers, Professors, Education Administrators</li>\n  <li><strong>\U0001F48A\
+    \ Pharmaceutical:</strong> Research Scientists, Clinical Researchers, Regulatory\
+    \ Affairs</li>\n  <li><strong>\U0001F3D7️ Construction:</strong> Project Managers,\
+    \ Architects, Civil Engineers</li>\n</ul>\n\n<h3>\U0001F4C8 Salary Factors We\
+    \ Consider</h3>\n<p>Our estimator analyzes multiple factors affecting compensation:</p>\n\
+    <ul>\n  <li><strong>\U0001F393 Education Level:</strong> High school, Bachelor's,\
+    \ Master's, PhD, Professional degrees</li>\n  <li><strong>⏰ Experience:</strong>\
+    \ Entry-level to 20+ years of experience</li>\n  <li><strong>\U0001F4CD Location:</strong>\
+    \ Cost of living and market demand by city/region</li>\n  <li><strong>\U0001F3E2\
+    \ Company Size:</strong> Startup, mid-size, large corporation, government</li>\n\
+    \  <li><strong>\U0001F3ED Industry:</strong> Tech, healthcare, finance, consulting,\
+    \ etc.</li>\n  <li><strong>\U0001F4DC Certifications:</strong> Professional certifications\
+    \ and licenses</li>\n  <li><strong>\U0001F4BC Role Level:</strong> Individual\
+    \ contributor vs. management track</li>\n  <li><strong>\U0001F3AF Specialization:</strong>\
+    \ Niche skills and specialized expertise</li>\n</ul>\n\n<h3>\U0001F3AF Career\
+    \ Growth Projections</h3>\n<p>Get insights into salary progression over time:</p>\n\
+    <ul>\n  <li><strong>\U0001F4CA 5-Year Outlook:</strong> Expected salary growth\
+    \ over next 5 years</li>\n  <li><strong>\U0001F3C3 Career Acceleration:</strong>\
+    \ Factors that can boost earning potential</li>\n  <li><strong>\U0001F4C8 Peak\
+    \ Earnings:</strong> Maximum salary potential in your field</li>\n  <li><strong>\U0001F504\
+    \ Career Transitions:</strong> How changing fields affects compensation</li>\n\
+    \  <li><strong>\U0001F4B0 Total Compensation:</strong> Salary plus benefits, stock\
+    \ options, bonuses</li>\n</ul>\n\n<h3>\U0001F31F High-Growth Career Insights</h3>\n\
+    <p>Special focus on fastest-growing, highest-paying careers:</p>\n<ul>\n  <li><strong>\U0001F916\
+    \ AI/Machine Learning:</strong> $90K-$300K+ based on experience and location</li>\n\
+    \  <li><strong>\U0001F512 Cybersecurity:</strong> $75K-$250K+ with high job security</li>\n\
+    \  <li><strong>\U0001F4CA Data Science:</strong> $80K-$280K+ with strong demand\
+    \ across industries</li>\n  <li><strong>\U0001F9EC Biotechnology:</strong> $70K-$200K+\
+    \ in growing pharmaceutical industry</li>\n  <li><strong>☁️ Cloud Computing:</strong>\
+    \ $80K-$220K+ as companies migrate to cloud</li>\n  <li><strong>\U0001F3E5 Healthcare\
+    \ Specialists:</strong> $150K-$500K+ for medical specialists</li>\n</ul>\n\n<h3>\U0001F4CA\
+    \ Salary Ranges by Experience Level</h3>\n<ul>\n  <li><strong>\U0001F476 Entry\
+    \ Level (0-2 years):</strong> $40K-$120K depending on field</li>\n  <li><strong>\U0001F9D1\
+    ‍\U0001F4BC Mid-Level (3-7 years):</strong> $60K-$180K with proven skills</li>\n\
+    \  <li><strong>\U0001F468‍\U0001F4BC Senior Level (8-15 years):</strong> $90K-$300K+\
+    \ with leadership skills</li>\n  <li><strong>\U0001F3C6 Executive Level (15+ years):</strong>\
+    \ $150K-$500K+ including equity</li>\n</ul>\n\n<p><strong>Note:</strong> Salary\
+    \ estimates are based on current market data and industry reports. Actual compensation\
+    \ varies by specific company, performance, negotiations, and market conditions.\
+    \ Use these as starting points for career planning and salary negotiations.</p>\n"
+  description: Estimate salary potential for top careers including data scientists,
+    doctors, software engineers, nurses, and more. Get personalized salary projections
+    based on experience, location, and education level.
+  keywords:
+  - career salary calculator
+  - data scientist salary
+  - doctor salary estimator
+  - software engineer salary
+  - nurse salary calculator
+  - career path salary
+  - profession salary estimator
+  - job salary calculator
+  - career earnings potential
+  - salary by experience level
+  - tech salary calculator
+  - medical career salary
+  - engineering salary
+  - finance career salary
+  - salary progression calculator
+  title: Career Salary Calculator | Data Scientist, Doctor, Engineer Salary Estimator
+title: Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More
 ---
 <form id="career-salary-form" autocomplete="off">
   <div class="form-section">

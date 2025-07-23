@@ -1,106 +1,100 @@
 ---
-layout: calculator
-title: "Environmental Impact of Transportation Calculator"
-categories: [other]
-seo:
-  title: "Transportation Carbon Footprint Calculator | Environmental Impact Calculator"
-  description: "Calculate the environmental impact of your transportation choices. Compare carbon emissions, fuel consumption, and costs across different travel modes."
-  keywords:
-    - carbon footprint calculator
-    - transportation emissions calculator
-    - environmental impact calculator
-    - travel carbon calculator
-    - fuel consumption calculator
-    - co2 emissions calculator
-    - green transportation calculator
-    - commute calculator
-    - vehicle emissions calculator
-    - public transport calculator
-    - walking vs driving calculator
-    - bicycle vs car calculator
-    - eco friendly travel
-    - sustainable transportation
-    - environmental travel calculator
-    - trip emissions calculator
-    - transport comparison calculator
-    - carbon offset calculator
-    - green commuting calculator
-    - climate impact calculator
-  content: |
-    <h2>Environmental Impact of Transportation Calculator</h2>
-    <p>Calculate the <strong>environmental impact</strong> of your transportation choices with our comprehensive calculator. Compare carbon emissions, fuel consumption, costs, and health benefits across different travel modes.</p>
-
-    <h3>Why Transportation Choices Matter:</h3>
-    <ul>
-      <li><strong>Climate impact:</strong> transportation accounts for 14% of global greenhouse gas emissions</li>
-      <li><strong>Air quality:</strong> vehicles produce pollutants affecting local air quality</li>
-      <li><strong>Resource consumption:</strong> fossil fuel use and manufacturing impacts</li>
-      <li><strong>Urban planning:</strong> transportation choices shape city development</li>
-      <li><strong>Personal health:</strong> active transportation improves physical fitness</li>
-      <li><strong>Economic impact:</strong> vehicle costs vs. alternative transportation</li>
-    </ul>
-
-    <h3>Transportation Modes Compared:</h3>
-    <ul>
-      <li><strong>Walking:</strong> zero emissions, excellent health benefits</li>
-      <li><strong>Cycling:</strong> near-zero emissions, good exercise, fast for short trips</li>
-      <li><strong>Public transit:</strong> low per-person emissions, cost-effective</li>
-      <li><strong>Electric vehicles:</strong> zero local emissions, depends on electricity source</li>
-      <li><strong>Hybrid vehicles:</strong> reduced emissions compared to conventional cars</li>
-      <li><strong>Conventional cars:</strong> highest personal vehicle emissions</li>
-    </ul>
-
-    <h3>Emission Factors by Mode:</h3>
-    <ul>
-      <li><strong>Gasoline car:</strong> ~404g CO₂ per mile</li>
-      <li><strong>Hybrid car:</strong> ~200g CO₂ per mile</li>
-      <li><strong>Electric car:</strong> varies by electricity source (0-300g CO₂/mile)</li>
-      <li><strong>Bus:</strong> ~150g CO₂ per passenger mile</li>
-      <li><strong>Train:</strong> ~120g CO₂ per passenger mile</li>
-      <li><strong>Bicycle/Walking:</strong> essentially 0g CO₂ per mile</li>
-    </ul>
-
-    <h3>Additional Environmental Factors:</h3>
-    <ul>
-      <li><strong>Vehicle manufacturing:</strong> embedded carbon in production</li>
-      <li><strong>Infrastructure:</strong> roads, parking, and maintenance impacts</li>
-      <li><strong>Land use:</strong> space required for different transportation modes</li>
-      <li><strong>Noise pollution:</strong> traffic noise affects quality of life</li>
-      <li><strong>Heat island effect:</strong> pavement increases urban temperatures</li>
-    </ul>
-
-    <h3>Making Sustainable Choices:</h3>
-    <ul>
-      <li><strong>Trip combining:</strong> reduce total trips through efficient planning</li>
-      <li><strong>Mode shifting:</strong> choose appropriate transport for each trip</li>
-      <li><strong>Distance reduction:</strong> live closer to work and amenities</li>
-      <li><strong>Vehicle efficiency:</strong> choose fuel-efficient vehicles when driving</li>
-      <li><strong>Active transportation:</strong> walk or bike when practical</li>
-    </ul>
-
-    <h3>Health and Economic Benefits:</h3>
-    <ul>
-      <li><strong>Physical activity:</strong> walking and cycling improve cardiovascular health</li>
-      <li><strong>Air quality:</strong> reduced vehicle use improves local air quality</li>
-      <li><strong>Cost savings:</strong> alternative transportation often costs less</li>
-      <li><strong>Time efficiency:</strong> cycling can be faster than driving in urban areas</li>
-      <li><strong>Mental health:</strong> active transportation reduces stress</li>
-    </ul>
-scripts:
-  - /en/js/environmental-transportation.js
+categories:
+- environment
 faq:
-  - question: How accurate are these carbon emission calculations?
-    answer: "These calculations use EPA and IPCC emission factors and are accurate for typical vehicles. Actual emissions vary based on driving conditions, vehicle age, and maintenance."
-  - question: Do electric vehicles really have zero emissions?
-    answer: "Electric vehicles have zero local emissions but indirect emissions depend on how electricity is generated. In areas with clean electricity, EVs have much lower total emissions."
-  - question: How does weather affect transportation emissions?
-    answer: "Cold weather increases vehicle emissions due to longer warm-up times and reduced efficiency. Hot weather increases A/C use, also reducing efficiency."
-  - question: What about the environmental cost of manufacturing bicycles and cars?
-    answer: "Manufacturing emissions are included in lifecycle assessments. Cars have much higher manufacturing emissions, but these are spread over many miles of use."
-  - question: How can I reduce my transportation environmental impact?
-    answer: "Combine trips, use active transportation for short trips, choose efficient vehicles, use public transit, and consider car-sharing or electric vehicles."
-  - question: Is public transit always better for the environment?
-    answer: "Generally yes, especially in urban areas with good ridership. However, a full bus is much more efficient than a nearly empty one."
+- answer: These calculations use EPA and IPCC emission factors and are accurate for
+    typical vehicles. Actual emissions vary based on driving conditions, vehicle age,
+    and maintenance.
+  question: How accurate are these carbon emission calculations?
+- answer: Electric vehicles have zero local emissions but indirect emissions depend
+    on how electricity is generated. In areas with clean electricity, EVs have much
+    lower total emissions.
+  question: Do electric vehicles really have zero emissions?
+- answer: Cold weather increases vehicle emissions due to longer warm-up times and
+    reduced efficiency. Hot weather increases A/C use, also reducing efficiency.
+  question: How does weather affect transportation emissions?
+- answer: Manufacturing emissions are included in lifecycle assessments. Cars have
+    much higher manufacturing emissions, but these are spread over many miles of use.
+  question: What about the environmental cost of manufacturing bicycles and cars?
+- answer: Combine trips, use active transportation for short trips, choose efficient
+    vehicles, use public transit, and consider car-sharing or electric vehicles.
+  question: How can I reduce my transportation environmental impact?
+- answer: Generally yes, especially in urban areas with good ridership. However, a
+    full bus is much more efficient than a nearly empty one.
+  question: Is public transit always better for the environment?
+layout: calculator
+scripts:
+- /en/js/environmental-transportation.js
+seo:
+  content: "<h2>Environmental Impact of Transportation Calculator</h2>\n<p>Calculate\
+    \ the <strong>environmental impact</strong> of your transportation choices with\
+    \ our comprehensive calculator. Compare carbon emissions, fuel consumption, costs,\
+    \ and health benefits across different travel modes.</p>\n\n<h3>Why Transportation\
+    \ Choices Matter:</h3>\n<ul>\n  <li><strong>Climate impact:</strong> transportation\
+    \ accounts for 14% of global greenhouse gas emissions</li>\n  <li><strong>Air\
+    \ quality:</strong> vehicles produce pollutants affecting local air quality</li>\n\
+    \  <li><strong>Resource consumption:</strong> fossil fuel use and manufacturing\
+    \ impacts</li>\n  <li><strong>Urban planning:</strong> transportation choices\
+    \ shape city development</li>\n  <li><strong>Personal health:</strong> active\
+    \ transportation improves physical fitness</li>\n  <li><strong>Economic impact:</strong>\
+    \ vehicle costs vs. alternative transportation</li>\n</ul>\n\n<h3>Transportation\
+    \ Modes Compared:</h3>\n<ul>\n  <li><strong>Walking:</strong> zero emissions,\
+    \ excellent health benefits</li>\n  <li><strong>Cycling:</strong> near-zero emissions,\
+    \ good exercise, fast for short trips</li>\n  <li><strong>Public transit:</strong>\
+    \ low per-person emissions, cost-effective</li>\n  <li><strong>Electric vehicles:</strong>\
+    \ zero local emissions, depends on electricity source</li>\n  <li><strong>Hybrid\
+    \ vehicles:</strong> reduced emissions compared to conventional cars</li>\n  <li><strong>Conventional\
+    \ cars:</strong> highest personal vehicle emissions</li>\n</ul>\n\n<h3>Emission\
+    \ Factors by Mode:</h3>\n<ul>\n  <li><strong>Gasoline car:</strong> ~404g CO₂\
+    \ per mile</li>\n  <li><strong>Hybrid car:</strong> ~200g CO₂ per mile</li>\n\
+    \  <li><strong>Electric car:</strong> varies by electricity source (0-300g CO₂/mile)</li>\n\
+    \  <li><strong>Bus:</strong> ~150g CO₂ per passenger mile</li>\n  <li><strong>Train:</strong>\
+    \ ~120g CO₂ per passenger mile</li>\n  <li><strong>Bicycle/Walking:</strong> essentially\
+    \ 0g CO₂ per mile</li>\n</ul>\n\n<h3>Additional Environmental Factors:</h3>\n\
+    <ul>\n  <li><strong>Vehicle manufacturing:</strong> embedded carbon in production</li>\n\
+    \  <li><strong>Infrastructure:</strong> roads, parking, and maintenance impacts</li>\n\
+    \  <li><strong>Land use:</strong> space required for different transportation\
+    \ modes</li>\n  <li><strong>Noise pollution:</strong> traffic noise affects quality\
+    \ of life</li>\n  <li><strong>Heat island effect:</strong> pavement increases\
+    \ urban temperatures</li>\n</ul>\n\n<h3>Making Sustainable Choices:</h3>\n<ul>\n\
+    \  <li><strong>Trip combining:</strong> reduce total trips through efficient planning</li>\n\
+    \  <li><strong>Mode shifting:</strong> choose appropriate transport for each trip</li>\n\
+    \  <li><strong>Distance reduction:</strong> live closer to work and amenities</li>\n\
+    \  <li><strong>Vehicle efficiency:</strong> choose fuel-efficient vehicles when\
+    \ driving</li>\n  <li><strong>Active transportation:</strong> walk or bike when\
+    \ practical</li>\n</ul>\n\n<h3>Health and Economic Benefits:</h3>\n<ul>\n  <li><strong>Physical\
+    \ activity:</strong> walking and cycling improve cardiovascular health</li>\n\
+    \  <li><strong>Air quality:</strong> reduced vehicle use improves local air quality</li>\n\
+    \  <li><strong>Cost savings:</strong> alternative transportation often costs less</li>\n\
+    \  <li><strong>Time efficiency:</strong> cycling can be faster than driving in\
+    \ urban areas</li>\n  <li><strong>Mental health:</strong> active transportation\
+    \ reduces stress</li>\n</ul>\n"
+  description: Calculate the environmental impact of your transportation choices.
+    Compare carbon emissions, fuel consumption, and costs across different travel
+    modes.
+  keywords:
+  - carbon footprint calculator
+  - transportation emissions calculator
+  - environmental impact calculator
+  - travel carbon calculator
+  - fuel consumption calculator
+  - co2 emissions calculator
+  - green transportation calculator
+  - commute calculator
+  - vehicle emissions calculator
+  - public transport calculator
+  - walking vs driving calculator
+  - bicycle vs car calculator
+  - eco friendly travel
+  - sustainable transportation
+  - environmental travel calculator
+  - trip emissions calculator
+  - transport comparison calculator
+  - carbon offset calculator
+  - green commuting calculator
+  - climate impact calculator
+  title: Transportation Carbon Footprint Calculator | Environmental Impact Calculator
+title: Environmental Impact of Transportation Calculator
 ---
 
 <form id="transportation-form" autocomplete="off">

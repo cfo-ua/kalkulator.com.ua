@@ -1,182 +1,160 @@
 ---
-layout: calculator
-title: "3D Printing Material Cost Calculator | Filament & Resin Cost Estimator"
-categories: [other]
-permalink: /en/calculators/3d-printing-material-cost-calculator/
-seo:
-  title: "3D Printing Cost Calculator | Filament, Resin & Manufacturing Cost Estimator Online"
-  description: "Free 3D printing cost calculator to estimate material costs, printing time, electricity usage, and total production costs for filament and resin 3D printing projects."
-  keywords:
-    - 3d printing cost calculator
-    - filament cost calculator
-    - resin printing cost
-    - 3d printing material calculator
-    - fdm printing cost
-    - sla printing cost
-    - 3d print cost estimator
-    - filament usage calculator
-    - 3d printing price calculator
-    - additive manufacturing cost
-    - 3d printer material cost
-    - pla filament cost
-    - abs printing cost
-    - petg material cost
-    - tpu printing cost
-    - 3d printing economics
-    - manufacturing cost calculator
-    - prototype cost estimator
-    - 3d printing business calculator
-    - custom printing cost
-  content: |
-    <h2>3D Printing Material Cost Calculator</h2>
-    <p>Calculate comprehensive costs for your 3D printing projects with our detailed <strong>3D printing material cost calculator</strong>. Estimate filament usage, resin consumption, electricity costs, and total production expenses for FDM and SLA printing across all material types.</p>
-
-    <h3>🖨️ 3D Printing Cost Components</h3>
-    <p>Understanding the full cost structure of 3D printing projects:</p>
-    <ul>
-      <li><strong>🧵 Material Costs:</strong> Filament, resin, support material, and waste</li>
-      <li><strong>⚡ Energy Consumption:</strong> Printer power usage during printing and heating</li>
-      <li><strong>⏱️ Time Costs:</strong> Labor for setup, monitoring, and post-processing</li>
-      <li><strong>🔧 Machine Costs:</strong> Printer depreciation and maintenance</li>
-      <li><strong>🏠 Facility Costs:</strong> Space, ventilation, and utilities</li>
-      <li><strong>📦 Post-Processing:</strong> Cleaning, curing, sanding, and finishing</li>
-    </ul>
-
-    <h3>🧵 FDM/FFF Filament Materials</h3>
-    
-    <h4>🏠 Common Thermoplastics:</h4>
-    <ul>
-      <li><strong>PLA (Polylactic Acid):</strong> $20-30/kg, easy printing, biodegradable</li>
-      <li><strong>ABS (Acrylonitrile Butadiene Styrene):</strong> $25-35/kg, durable, heat resistant</li>
-      <li><strong>PETG:</strong> $30-40/kg, chemical resistant, food safe options</li>
-      <li><strong>TPU (Flexible):</strong> $40-60/kg, rubber-like flexibility</li>
-      <li><strong>ASA:</strong> $35-45/kg, UV resistant, outdoor applications</li>
-    </ul>
-
-    <h4>🏭 Engineering Materials:</h4>
-    <ul>
-      <li><strong>Nylon (PA):</strong> $50-80/kg, high strength, wear resistant</li>
-      <li><strong>PC (Polycarbonate):</strong> $60-100/kg, high temperature, transparent</li>
-      <li><strong>PEEK:</strong> $300-500/kg, aerospace grade, chemical resistant</li>
-      <li><strong>PPS:</strong> $200-400/kg, high temperature, chemical resistant</li>
-    </ul>
-
-    <h4>✨ Specialty Filaments:</h4>
-    <ul>
-      <li><strong>Wood-filled:</strong> $35-50/kg, natural wood appearance</li>
-      <li><strong>Metal-filled:</strong> $80-150/kg, copper, steel, bronze particles</li>
-      <li><strong>Carbon Fiber:</strong> $100-200/kg, lightweight, extremely strong</li>
-      <li><strong>Glow-in-the-Dark:</strong> $40-60/kg, phosphorescent additives</li>
-      <li><strong>Conductive:</strong> $150-300/kg, graphene or metal particles</li>
-    </ul>
-
-    <h3>🧪 SLA/DLP Resin Materials</h3>
-    
-    <h4>📱 Standard Resins:</h4>
-    <ul>
-      <li><strong>Standard Resin:</strong> $50-80/L, general purpose, good detail</li>
-      <li><strong>Tough Resin:</strong> $80-120/L, impact resistant, functional parts</li>
-      <li><strong>Flexible Resin:</strong> $100-150/L, rubber-like properties</li>
-      <li><strong>Clear Resin:</strong> $80-120/L, transparent, optical applications</li>
-    </ul>
-
-    <h4>🏥 Specialized Resins:</h4>
-    <ul>
-      <li><strong>Dental Resin:</strong> $200-400/L, biocompatible, FDA approved</li>
-      <li><strong>Castable Resin:</strong> $150-250/L, jewelry, investment casting</li>
-      <li><strong>Ceramic Resin:</strong> $300-500/L, high temperature applications</li>
-      <li><strong>Bio Resin:</strong> $100-200/L, plant-based, eco-friendly</li>
-    </ul>
-
-    <h3>⚡ Energy Consumption Factors</h3>
-    <ul>
-      <li><strong>🖨️ Printer Power:</strong> 50-500W depending on size and type</li>
-      <li><strong>🔥 Heated Bed:</strong> 100-300W additional for FDM printers</li>
-      <li><strong>🌡️ Enclosure Heating:</strong> 200-800W for high-temp materials</li>
-      <li><strong>💡 UV LED Array:</strong> 20-100W for SLA/DLP printers</li>
-      <li><strong>🌀 Ventilation:</strong> 50-200W for fume extraction</li>
-      <li><strong>⏰ Standby Power:</strong> 5-20W when idle but powered on</li>
-    </ul>
-
-    <h3>📏 Material Usage Calculations</h3>
-    
-    <h4>🧵 Filament Volume Calculation:</h4>
-    <ul>
-      <li><strong>Model Volume:</strong> From slicer software (cm³)</li>
-      <li><strong>Infill Percentage:</strong> 10-100% affects material usage</li>
-      <li><strong>Support Material:</strong> 5-30% additional material</li>
-      <li><strong>Waste Factor:</strong> 5-15% for purging, failed prints</li>
-      <li><strong>Density Conversion:</strong> Volume × material density = weight</li>
-    </ul>
-
-    <h4>🧪 Resin Volume Calculation:</h4>
-    <ul>
-      <li><strong>Solid Volume:</strong> Actual part volume (cm³)</li>
-      <li><strong>Hollow Optimization:</strong> Reduce material usage 50-90%</li>
-      <li><strong>Support Volume:</strong> 10-40% additional for complex parts</li>
-      <li><strong>Resin Waste:</strong> FEP film cleaning, failed prints</li>
-      <li><strong>Uncured Resin:</strong> Disposal and recycling costs</li>
-    </ul>
-
-    <h3>⏱️ Time and Labor Costs</h3>
-    <ul>
-      <li><strong>🕐 Print Time:</strong> From slicer estimates (hours)</li>
-      <li><strong>🔧 Setup Time:</strong> 15-60 minutes depending on complexity</li>
-      <li><strong>👀 Monitoring:</strong> Periodic checks during long prints</li>
-      <li><strong>🧹 Post-Processing:</strong> 30-180 minutes per part</li>
-      <li><strong>🔄 Machine Maintenance:</strong> Cleaning, calibration, repairs</li>
-      <li><strong>❌ Failed Print Risk:</strong> 5-20% failure rate factor</li>
-    </ul>
-
-    <h3>🔧 Equipment and Overhead</h3>
-    <ul>
-      <li><strong>🖨️ Printer Depreciation:</strong> $500-50,000 over 3-7 years</li>
-      <li><strong>🔩 Maintenance Costs:</strong> Nozzles, belts, FEP films, LCDs</li>
-      <li><strong>🏠 Facility Costs:</strong> Rent, utilities, insurance</li>
-      <li><strong>🌀 Ventilation Systems:</strong> Air filtration, fume extraction</li>
-      <li><strong>🧰 Tools and Accessories:</strong> Scrapers, cutters, curing stations</li>
-      <li><strong>📦 Packaging:</strong> Shipping materials for finished parts</li>
-    </ul>
-
-    <h3>💰 Pricing Strategies</h3>
-    <ul>
-      <li><strong>📊 Cost-Plus Pricing:</strong> Material + time + overhead + margin</li>
-      <li><strong>🎯 Market-Based Pricing:</strong> Competitive analysis</li>
-      <li><strong>💎 Value-Based Pricing:</strong> Based on customer benefit</li>
-      <li><strong>📦 Volume Discounts:</strong> Economies of scale for large orders</li>
-      <li><strong>⚡ Rush Orders:</strong> Premium pricing for fast turnaround</li>
-      <li><strong>🔄 Recurring Orders:</strong> Long-term contract pricing</li>
-    </ul>
-
-    <h3>🌍 Environmental Considerations</h3>
-    <ul>
-      <li><strong>♻️ Material Recycling:</strong> PLA composting, plastic recycling</li>
-      <li><strong>⚡ Energy Efficiency:</strong> Optimize print settings for lower power</li>
-      <li><strong>🧪 Resin Disposal:</strong> Proper handling of uncured resin</li>
-      <li><strong>📦 Packaging Waste:</strong> Minimize shipping materials</li>
-      <li><strong>🌱 Bio-Based Materials:</strong> Choose sustainable options when available</li>
-    </ul>
-
-    <p><strong>Note:</strong> Material costs and availability vary by region and supplier. Energy costs depend on local electricity rates. Always factor in learning curves, equipment maintenance, and quality requirements when pricing 3D printing services.</p>
-scripts:
-  - /en/js/3d-printing-material-cost-calculator.js
+categories:
+- technology
 faq:
-  - question: How much does it cost to 3D print a typical part?
-    answer: "Small parts (50g) cost $1-5 in material plus electricity. Medium parts (200g) cost $5-20. Large parts (1kg+) can cost $20-100+. Total costs including labor and overhead are typically 2-5x material costs for custom printing services."
-  - question: Which is cheaper - FDM or SLA printing?
-    answer: "FDM is generally cheaper for material costs ($20-80/kg vs $50-400/L for resin), but SLA can be more cost-effective for small, highly detailed parts due to faster printing and less post-processing time."
-  - question: How do I calculate filament usage for my print?
-    answer: "Use your slicer software to get the volume in cm³, multiply by material density (PLA ~1.24g/cm³), add 10-20% for supports and waste. For a 100cm³ part: 100 × 1.24 × 1.15 = 143g of PLA."
-  - question: What factors affect 3D printing electricity costs most?
-    answer: "Heated beds (100-300W), enclosure heating for high-temp materials (200-800W), and print time. A typical PLA print uses 0.1-0.3 kWh per hour. ABS or PETG with heated enclosure can use 0.5-1.0 kWh per hour."
-  - question: How much should I charge for 3D printing services?
-    answer: "Start with 3-5x material cost to cover time, electricity, equipment depreciation, and profit. Specialty materials or complex post-processing can justify 5-10x material cost. Research local market rates for comparison."
-  - question: What's the biggest cost factor in 3D printing?
-    answer: "For hobby printing: material costs (60-80%). For professional services: labor time for setup, monitoring, and post-processing often exceeds material costs. Equipment depreciation becomes significant for expensive industrial printers."
-  - question: How do I reduce 3D printing costs?
-    answer: "Optimize infill (10-20% for most parts), use cheaper materials when possible, batch multiple parts in one print, minimize supports through design optimization, and choose appropriate layer heights for quality vs. speed balance."
-  - question: Are expensive specialty filaments worth the cost?
-    answer: "For specific applications, yes. Carbon fiber for lightweight strength, metal-filled for appearance, food-safe for kitchen items. However, standard PLA/PETG meets 80% of printing needs at much lower cost. Choose based on functional requirements."
+- answer: Small parts (50g) cost $1-5 in material plus electricity. Medium parts (200g)
+    cost $5-20. Large parts (1kg+) can cost $20-100+. Total costs including labor
+    and overhead are typically 2-5x material costs for custom printing services.
+  question: How much does it cost to 3D print a typical part?
+- answer: FDM is generally cheaper for material costs ($20-80/kg vs $50-400/L for
+    resin), but SLA can be more cost-effective for small, highly detailed parts due
+    to faster printing and less post-processing time.
+  question: Which is cheaper - FDM or SLA printing?
+- answer: 'Use your slicer software to get the volume in cm³, multiply by material
+    density (PLA ~1.24g/cm³), add 10-20% for supports and waste. For a 100cm³ part:
+    100 × 1.24 × 1.15 = 143g of PLA.'
+  question: How do I calculate filament usage for my print?
+- answer: Heated beds (100-300W), enclosure heating for high-temp materials (200-800W),
+    and print time. A typical PLA print uses 0.1-0.3 kWh per hour. ABS or PETG with
+    heated enclosure can use 0.5-1.0 kWh per hour.
+  question: What factors affect 3D printing electricity costs most?
+- answer: Start with 3-5x material cost to cover time, electricity, equipment depreciation,
+    and profit. Specialty materials or complex post-processing can justify 5-10x material
+    cost. Research local market rates for comparison.
+  question: How much should I charge for 3D printing services?
+- answer: 'For hobby printing: material costs (60-80%). For professional services:
+    labor time for setup, monitoring, and post-processing often exceeds material costs.
+    Equipment depreciation becomes significant for expensive industrial printers.'
+  question: What's the biggest cost factor in 3D printing?
+- answer: Optimize infill (10-20% for most parts), use cheaper materials when possible,
+    batch multiple parts in one print, minimize supports through design optimization,
+    and choose appropriate layer heights for quality vs. speed balance.
+  question: How do I reduce 3D printing costs?
+- answer: For specific applications, yes. Carbon fiber for lightweight strength, metal-filled
+    for appearance, food-safe for kitchen items. However, standard PLA/PETG meets
+    80% of printing needs at much lower cost. Choose based on functional requirements.
+  question: Are expensive specialty filaments worth the cost?
+layout: calculator
+permalink: /en/calculators/3d-printing-material-cost-calculator/
+scripts:
+- /en/js/3d-printing-material-cost-calculator.js
+seo:
+  content: "<h2>3D Printing Material Cost Calculator</h2>\n<p>Calculate comprehensive\
+    \ costs for your 3D printing projects with our detailed <strong>3D printing material\
+    \ cost calculator</strong>. Estimate filament usage, resin consumption, electricity\
+    \ costs, and total production expenses for FDM and SLA printing across all material\
+    \ types.</p>\n\n<h3>\U0001F5A8️ 3D Printing Cost Components</h3>\n<p>Understanding\
+    \ the full cost structure of 3D printing projects:</p>\n<ul>\n  <li><strong>\U0001F9F5\
+    \ Material Costs:</strong> Filament, resin, support material, and waste</li>\n\
+    \  <li><strong>⚡ Energy Consumption:</strong> Printer power usage during printing\
+    \ and heating</li>\n  <li><strong>⏱️ Time Costs:</strong> Labor for setup, monitoring,\
+    \ and post-processing</li>\n  <li><strong>\U0001F527 Machine Costs:</strong> Printer\
+    \ depreciation and maintenance</li>\n  <li><strong>\U0001F3E0 Facility Costs:</strong>\
+    \ Space, ventilation, and utilities</li>\n  <li><strong>\U0001F4E6 Post-Processing:</strong>\
+    \ Cleaning, curing, sanding, and finishing</li>\n</ul>\n\n<h3>\U0001F9F5 FDM/FFF\
+    \ Filament Materials</h3>\n\n<h4>\U0001F3E0 Common Thermoplastics:</h4>\n<ul>\n\
+    \  <li><strong>PLA (Polylactic Acid):</strong> $20-30/kg, easy printing, biodegradable</li>\n\
+    \  <li><strong>ABS (Acrylonitrile Butadiene Styrene):</strong> $25-35/kg, durable,\
+    \ heat resistant</li>\n  <li><strong>PETG:</strong> $30-40/kg, chemical resistant,\
+    \ food safe options</li>\n  <li><strong>TPU (Flexible):</strong> $40-60/kg, rubber-like\
+    \ flexibility</li>\n  <li><strong>ASA:</strong> $35-45/kg, UV resistant, outdoor\
+    \ applications</li>\n</ul>\n\n<h4>\U0001F3ED Engineering Materials:</h4>\n<ul>\n\
+    \  <li><strong>Nylon (PA):</strong> $50-80/kg, high strength, wear resistant</li>\n\
+    \  <li><strong>PC (Polycarbonate):</strong> $60-100/kg, high temperature, transparent</li>\n\
+    \  <li><strong>PEEK:</strong> $300-500/kg, aerospace grade, chemical resistant</li>\n\
+    \  <li><strong>PPS:</strong> $200-400/kg, high temperature, chemical resistant</li>\n\
+    </ul>\n\n<h4>✨ Specialty Filaments:</h4>\n<ul>\n  <li><strong>Wood-filled:</strong>\
+    \ $35-50/kg, natural wood appearance</li>\n  <li><strong>Metal-filled:</strong>\
+    \ $80-150/kg, copper, steel, bronze particles</li>\n  <li><strong>Carbon Fiber:</strong>\
+    \ $100-200/kg, lightweight, extremely strong</li>\n  <li><strong>Glow-in-the-Dark:</strong>\
+    \ $40-60/kg, phosphorescent additives</li>\n  <li><strong>Conductive:</strong>\
+    \ $150-300/kg, graphene or metal particles</li>\n</ul>\n\n<h3>\U0001F9EA SLA/DLP\
+    \ Resin Materials</h3>\n\n<h4>\U0001F4F1 Standard Resins:</h4>\n<ul>\n  <li><strong>Standard\
+    \ Resin:</strong> $50-80/L, general purpose, good detail</li>\n  <li><strong>Tough\
+    \ Resin:</strong> $80-120/L, impact resistant, functional parts</li>\n  <li><strong>Flexible\
+    \ Resin:</strong> $100-150/L, rubber-like properties</li>\n  <li><strong>Clear\
+    \ Resin:</strong> $80-120/L, transparent, optical applications</li>\n</ul>\n\n\
+    <h4>\U0001F3E5 Specialized Resins:</h4>\n<ul>\n  <li><strong>Dental Resin:</strong>\
+    \ $200-400/L, biocompatible, FDA approved</li>\n  <li><strong>Castable Resin:</strong>\
+    \ $150-250/L, jewelry, investment casting</li>\n  <li><strong>Ceramic Resin:</strong>\
+    \ $300-500/L, high temperature applications</li>\n  <li><strong>Bio Resin:</strong>\
+    \ $100-200/L, plant-based, eco-friendly</li>\n</ul>\n\n<h3>⚡ Energy Consumption\
+    \ Factors</h3>\n<ul>\n  <li><strong>\U0001F5A8️ Printer Power:</strong> 50-500W\
+    \ depending on size and type</li>\n  <li><strong>\U0001F525 Heated Bed:</strong>\
+    \ 100-300W additional for FDM printers</li>\n  <li><strong>\U0001F321️ Enclosure\
+    \ Heating:</strong> 200-800W for high-temp materials</li>\n  <li><strong>\U0001F4A1\
+    \ UV LED Array:</strong> 20-100W for SLA/DLP printers</li>\n  <li><strong>\U0001F300\
+    \ Ventilation:</strong> 50-200W for fume extraction</li>\n  <li><strong>⏰ Standby\
+    \ Power:</strong> 5-20W when idle but powered on</li>\n</ul>\n\n<h3>\U0001F4CF\
+    \ Material Usage Calculations</h3>\n\n<h4>\U0001F9F5 Filament Volume Calculation:</h4>\n\
+    <ul>\n  <li><strong>Model Volume:</strong> From slicer software (cm³)</li>\n \
+    \ <li><strong>Infill Percentage:</strong> 10-100% affects material usage</li>\n\
+    \  <li><strong>Support Material:</strong> 5-30% additional material</li>\n  <li><strong>Waste\
+    \ Factor:</strong> 5-15% for purging, failed prints</li>\n  <li><strong>Density\
+    \ Conversion:</strong> Volume × material density = weight</li>\n</ul>\n\n<h4>\U0001F9EA\
+    \ Resin Volume Calculation:</h4>\n<ul>\n  <li><strong>Solid Volume:</strong> Actual\
+    \ part volume (cm³)</li>\n  <li><strong>Hollow Optimization:</strong> Reduce material\
+    \ usage 50-90%</li>\n  <li><strong>Support Volume:</strong> 10-40% additional\
+    \ for complex parts</li>\n  <li><strong>Resin Waste:</strong> FEP film cleaning,\
+    \ failed prints</li>\n  <li><strong>Uncured Resin:</strong> Disposal and recycling\
+    \ costs</li>\n</ul>\n\n<h3>⏱️ Time and Labor Costs</h3>\n<ul>\n  <li><strong>\U0001F550\
+    \ Print Time:</strong> From slicer estimates (hours)</li>\n  <li><strong>\U0001F527\
+    \ Setup Time:</strong> 15-60 minutes depending on complexity</li>\n  <li><strong>\U0001F440\
+    \ Monitoring:</strong> Periodic checks during long prints</li>\n  <li><strong>\U0001F9F9\
+    \ Post-Processing:</strong> 30-180 minutes per part</li>\n  <li><strong>\U0001F504\
+    \ Machine Maintenance:</strong> Cleaning, calibration, repairs</li>\n  <li><strong>❌\
+    \ Failed Print Risk:</strong> 5-20% failure rate factor</li>\n</ul>\n\n<h3>\U0001F527\
+    \ Equipment and Overhead</h3>\n<ul>\n  <li><strong>\U0001F5A8️ Printer Depreciation:</strong>\
+    \ $500-50,000 over 3-7 years</li>\n  <li><strong>\U0001F529 Maintenance Costs:</strong>\
+    \ Nozzles, belts, FEP films, LCDs</li>\n  <li><strong>\U0001F3E0 Facility Costs:</strong>\
+    \ Rent, utilities, insurance</li>\n  <li><strong>\U0001F300 Ventilation Systems:</strong>\
+    \ Air filtration, fume extraction</li>\n  <li><strong>\U0001F9F0 Tools and Accessories:</strong>\
+    \ Scrapers, cutters, curing stations</li>\n  <li><strong>\U0001F4E6 Packaging:</strong>\
+    \ Shipping materials for finished parts</li>\n</ul>\n\n<h3>\U0001F4B0 Pricing\
+    \ Strategies</h3>\n<ul>\n  <li><strong>\U0001F4CA Cost-Plus Pricing:</strong>\
+    \ Material + time + overhead + margin</li>\n  <li><strong>\U0001F3AF Market-Based\
+    \ Pricing:</strong> Competitive analysis</li>\n  <li><strong>\U0001F48E Value-Based\
+    \ Pricing:</strong> Based on customer benefit</li>\n  <li><strong>\U0001F4E6 Volume\
+    \ Discounts:</strong> Economies of scale for large orders</li>\n  <li><strong>⚡\
+    \ Rush Orders:</strong> Premium pricing for fast turnaround</li>\n  <li><strong>\U0001F504\
+    \ Recurring Orders:</strong> Long-term contract pricing</li>\n</ul>\n\n<h3>\U0001F30D\
+    \ Environmental Considerations</h3>\n<ul>\n  <li><strong>♻️ Material Recycling:</strong>\
+    \ PLA composting, plastic recycling</li>\n  <li><strong>⚡ Energy Efficiency:</strong>\
+    \ Optimize print settings for lower power</li>\n  <li><strong>\U0001F9EA Resin\
+    \ Disposal:</strong> Proper handling of uncured resin</li>\n  <li><strong>\U0001F4E6\
+    \ Packaging Waste:</strong> Minimize shipping materials</li>\n  <li><strong>\U0001F331\
+    \ Bio-Based Materials:</strong> Choose sustainable options when available</li>\n\
+    </ul>\n\n<p><strong>Note:</strong> Material costs and availability vary by region\
+    \ and supplier. Energy costs depend on local electricity rates. Always factor\
+    \ in learning curves, equipment maintenance, and quality requirements when pricing\
+    \ 3D printing services.</p>\n"
+  description: Free 3D printing cost calculator to estimate material costs, printing
+    time, electricity usage, and total production costs for filament and resin 3D
+    printing projects.
+  keywords:
+  - 3d printing cost calculator
+  - filament cost calculator
+  - resin printing cost
+  - 3d printing material calculator
+  - fdm printing cost
+  - sla printing cost
+  - 3d print cost estimator
+  - filament usage calculator
+  - 3d printing price calculator
+  - additive manufacturing cost
+  - 3d printer material cost
+  - pla filament cost
+  - abs printing cost
+  - petg material cost
+  - tpu printing cost
+  - 3d printing economics
+  - manufacturing cost calculator
+  - prototype cost estimator
+  - 3d printing business calculator
+  - custom printing cost
+  title: 3D Printing Cost Calculator | Filament, Resin & Manufacturing Cost Estimator
+    Online
+title: 3D Printing Material Cost Calculator | Filament & Resin Cost Estimator
 ---
 
 <form id="printing-cost-form" autocomplete="off">

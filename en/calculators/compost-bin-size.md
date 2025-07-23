@@ -1,114 +1,100 @@
 ---
-layout: calculator
-title: "Compost Bin Size Calculator"
-categories: [other]
-seo:
-  title: "Compost Bin Size Calculator | Composting System Calculator"
-  description: "Calculate the right compost bin size for your household. Determine optimal composting capacity based on waste generation and garden needs."
-  keywords:
-    - compost bin size calculator
-    - composting calculator
-    - compost system calculator
-    - organic waste calculator
-    - composting capacity calculator
-    - compost bin design calculator
-    - home composting calculator
-    - compost volume calculator
-    - composting space calculator
-    - compost tumbler size
-    - compost pile calculator
-    - composting needs calculator
-    - waste reduction calculator
-    - sustainable composting
-    - compost bin planning
-    - organic gardening calculator
-    - compost production calculator
-    - composting timeline calculator
-    - compost materials calculator
-    - eco-friendly composting
-  content: |
-    <h2>Compost Bin Size Calculator</h2>
-    <p>Calculate the <strong>optimal compost bin size</strong> for your household needs. Determine the right composting capacity based on your organic waste generation, available space, and garden requirements.</p>
-
-    <h3>Why Proper Compost Bin Sizing Matters:</h3>
-    <ul>
-      <li><strong>Efficient decomposition:</strong> right size maintains proper heat and moisture</li>
-      <li><strong>Adequate capacity:</strong> handles your household's organic waste volume</li>
-      <li><strong>Space optimization:</strong> fits available yard space without overcrowding</li>
-      <li><strong>Cost effectiveness:</strong> avoid oversized or undersized systems</li>
-      <li><strong>Maintenance ease:</strong> manageable size for turning and harvesting</li>
-      <li><strong>Continuous composting:</strong> enough capacity for ongoing waste addition</li>
-    </ul>
-
-    <h3>Types of Compost Systems:</h3>
-    <ul>
-      <li><strong>Open pile:</strong> 3x3x3 feet minimum for proper heating</li>
-      <li><strong>Three-bin system:</strong> continuous composting with rotation</li>
-      <li><strong>Tumbler:</strong> 60-160 gallon capacity for easy turning</li>
-      <li><strong>Wire bin:</strong> adjustable size, good airflow</li>
-      <li><strong>Wooden bin:</strong> insulated, attractive option</li>
-      <li><strong>Worm composting:</strong> compact, works indoors</li>
-    </ul>
-
-    <h3>Composting Material Ratios:</h3>
-    <ul>
-      <li><strong>Carbon to nitrogen:</strong> 30:1 ratio for optimal decomposition</li>
-      <li><strong>Brown materials:</strong> leaves, paper, cardboard (carbon)</li>
-      <li><strong>Green materials:</strong> kitchen scraps, grass clippings (nitrogen)</li>
-      <li><strong>Volume reduction:</strong> materials shrink 50-75% during composting</li>
-      <li><strong>Finished compost:</strong> ready in 3-12 months depending on method</li>
-    </ul>
-
-    <h3>Household Waste Generation:</h3>
-    <ul>
-      <li><strong>Average household:</strong> 1.3 lbs organic waste per person daily</li>
-      <li><strong>Kitchen scraps:</strong> fruit/vegetable peels, coffee grounds, eggshells</li>
-      <li><strong>Yard waste:</strong> grass clippings, leaves, small branches</li>
-      <li><strong>Paper products:</strong> newspaper, cardboard, paper towels</li>
-      <li><strong>Seasonal variation:</strong> more yard waste in fall, less in winter</li>
-    </ul>
-
-    <h3>Composting Timeline:</h3>
-    <ul>
-      <li><strong>Hot composting:</strong> 2-3 months with regular turning</li>
-      <li><strong>Cold composting:</strong> 6-12 months passive decomposition</li>
-      <li><strong>Tumbler composting:</strong> 6-8 weeks with regular turning</li>
-      <li><strong>Worm composting:</strong> 3-6 months for finished castings</li>
-      <li><strong>Three-bin system:</strong> continuous production year-round</li>
-    </ul>
-
-    <h3>Space and Location Considerations:</h3>
-    <ul>
-      <li><strong>Size requirements:</strong> minimum 27 cubic feet for hot composting</li>
-      <li><strong>Location:</strong> partial shade, good drainage, easy access</li>
-      <li><strong>Distance from house:</strong> 10-15 feet to avoid odors</li>
-      <li><strong>Municipal regulations:</strong> check local composting guidelines</li>
-      <li><strong>Expansion capacity:</strong> room to grow system if needed</li>
-    </ul>
-
-    <h3>Benefits of Right-Sized Composting:</h3>
-    <ul>
-      <li><strong>Waste reduction:</strong> divert 20-30% of household waste</li>
-      <li><strong>Soil improvement:</strong> rich compost improves garden health</li>
-      <li><strong>Cost savings:</strong> reduce garbage collection and fertilizer costs</li>
-      <li><strong>Environmental impact:</strong> reduce methane from landfills</li>
-      <li><strong>Sustainable gardening:</strong> close the nutrient loop in your yard</li>
-    </ul>
-scripts:
-  - /en/js/compost-bin-size.js
+categories:
+- environment
 faq:
-  - question: How big should my compost bin be?
-    answer: "Minimum 27 cubic feet (3x3x3 feet) for hot composting. For households of 4 people, a 40-60 cubic foot bin handles typical organic waste generation."
-  - question: Can I have a compost bin that's too big?
-    answer: "Yes, oversized bins are harder to maintain proper moisture and temperature. Very large bins may not decompose efficiently without enough organic matter."
-  - question: How much compost will my bin produce?
-    answer: "Finished compost is typically 25-50% of the original material volume. A 60 cubic foot bin produces about 15-30 cubic feet of finished compost annually."
-  - question: What's the best compost bin type for beginners?
-    answer: "Tumbler bins are easiest for beginners - contained, pest-resistant, and easy to turn. Wire bins are budget-friendly and adjustable."
-  - question: How often should I turn my compost?
-    answer: "Hot compost: every 1-2 weeks. Tumbler: 2-3 times per week. Cold compost: monthly or less. Regular turning speeds decomposition."
-  - question: Can I compost in winter?
-    answer: "Yes, but decomposition slows in cold weather. Larger bins retain heat better. Consider insulating or moving bins to protected areas in harsh climates."
+- answer: Minimum 27 cubic feet (3x3x3 feet) for hot composting. For households of
+    4 people, a 40-60 cubic foot bin handles typical organic waste generation.
+  question: How big should my compost bin be?
+- answer: Yes, oversized bins are harder to maintain proper moisture and temperature.
+    Very large bins may not decompose efficiently without enough organic matter.
+  question: Can I have a compost bin that's too big?
+- answer: Finished compost is typically 25-50% of the original material volume. A
+    60 cubic foot bin produces about 15-30 cubic feet of finished compost annually.
+  question: How much compost will my bin produce?
+- answer: Tumbler bins are easiest for beginners - contained, pest-resistant, and
+    easy to turn. Wire bins are budget-friendly and adjustable.
+  question: What's the best compost bin type for beginners?
+- answer: 'Hot compost: every 1-2 weeks. Tumbler: 2-3 times per week. Cold compost:
+    monthly or less. Regular turning speeds decomposition.'
+  question: How often should I turn my compost?
+- answer: Yes, but decomposition slows in cold weather. Larger bins retain heat better.
+    Consider insulating or moving bins to protected areas in harsh climates.
+  question: Can I compost in winter?
+layout: calculator
+scripts:
+- /en/js/compost-bin-size.js
+seo:
+  content: "<h2>Compost Bin Size Calculator</h2>\n<p>Calculate the <strong>optimal\
+    \ compost bin size</strong> for your household needs. Determine the right composting\
+    \ capacity based on your organic waste generation, available space, and garden\
+    \ requirements.</p>\n\n<h3>Why Proper Compost Bin Sizing Matters:</h3>\n<ul>\n\
+    \  <li><strong>Efficient decomposition:</strong> right size maintains proper heat\
+    \ and moisture</li>\n  <li><strong>Adequate capacity:</strong> handles your household's\
+    \ organic waste volume</li>\n  <li><strong>Space optimization:</strong> fits available\
+    \ yard space without overcrowding</li>\n  <li><strong>Cost effectiveness:</strong>\
+    \ avoid oversized or undersized systems</li>\n  <li><strong>Maintenance ease:</strong>\
+    \ manageable size for turning and harvesting</li>\n  <li><strong>Continuous composting:</strong>\
+    \ enough capacity for ongoing waste addition</li>\n</ul>\n\n<h3>Types of Compost\
+    \ Systems:</h3>\n<ul>\n  <li><strong>Open pile:</strong> 3x3x3 feet minimum for\
+    \ proper heating</li>\n  <li><strong>Three-bin system:</strong> continuous composting\
+    \ with rotation</li>\n  <li><strong>Tumbler:</strong> 60-160 gallon capacity for\
+    \ easy turning</li>\n  <li><strong>Wire bin:</strong> adjustable size, good airflow</li>\n\
+    \  <li><strong>Wooden bin:</strong> insulated, attractive option</li>\n  <li><strong>Worm\
+    \ composting:</strong> compact, works indoors</li>\n</ul>\n\n<h3>Composting Material\
+    \ Ratios:</h3>\n<ul>\n  <li><strong>Carbon to nitrogen:</strong> 30:1 ratio for\
+    \ optimal decomposition</li>\n  <li><strong>Brown materials:</strong> leaves,\
+    \ paper, cardboard (carbon)</li>\n  <li><strong>Green materials:</strong> kitchen\
+    \ scraps, grass clippings (nitrogen)</li>\n  <li><strong>Volume reduction:</strong>\
+    \ materials shrink 50-75% during composting</li>\n  <li><strong>Finished compost:</strong>\
+    \ ready in 3-12 months depending on method</li>\n</ul>\n\n<h3>Household Waste\
+    \ Generation:</h3>\n<ul>\n  <li><strong>Average household:</strong> 1.3 lbs organic\
+    \ waste per person daily</li>\n  <li><strong>Kitchen scraps:</strong> fruit/vegetable\
+    \ peels, coffee grounds, eggshells</li>\n  <li><strong>Yard waste:</strong> grass\
+    \ clippings, leaves, small branches</li>\n  <li><strong>Paper products:</strong>\
+    \ newspaper, cardboard, paper towels</li>\n  <li><strong>Seasonal variation:</strong>\
+    \ more yard waste in fall, less in winter</li>\n</ul>\n\n<h3>Composting Timeline:</h3>\n\
+    <ul>\n  <li><strong>Hot composting:</strong> 2-3 months with regular turning</li>\n\
+    \  <li><strong>Cold composting:</strong> 6-12 months passive decomposition</li>\n\
+    \  <li><strong>Tumbler composting:</strong> 6-8 weeks with regular turning</li>\n\
+    \  <li><strong>Worm composting:</strong> 3-6 months for finished castings</li>\n\
+    \  <li><strong>Three-bin system:</strong> continuous production year-round</li>\n\
+    </ul>\n\n<h3>Space and Location Considerations:</h3>\n<ul>\n  <li><strong>Size\
+    \ requirements:</strong> minimum 27 cubic feet for hot composting</li>\n  <li><strong>Location:</strong>\
+    \ partial shade, good drainage, easy access</li>\n  <li><strong>Distance from\
+    \ house:</strong> 10-15 feet to avoid odors</li>\n  <li><strong>Municipal regulations:</strong>\
+    \ check local composting guidelines</li>\n  <li><strong>Expansion capacity:</strong>\
+    \ room to grow system if needed</li>\n</ul>\n\n<h3>Benefits of Right-Sized Composting:</h3>\n\
+    <ul>\n  <li><strong>Waste reduction:</strong> divert 20-30% of household waste</li>\n\
+    \  <li><strong>Soil improvement:</strong> rich compost improves garden health</li>\n\
+    \  <li><strong>Cost savings:</strong> reduce garbage collection and fertilizer\
+    \ costs</li>\n  <li><strong>Environmental impact:</strong> reduce methane from\
+    \ landfills</li>\n  <li><strong>Sustainable gardening:</strong> close the nutrient\
+    \ loop in your yard</li>\n</ul>\n"
+  description: Calculate the right compost bin size for your household. Determine
+    optimal composting capacity based on waste generation and garden needs.
+  keywords:
+  - compost bin size calculator
+  - composting calculator
+  - compost system calculator
+  - organic waste calculator
+  - composting capacity calculator
+  - compost bin design calculator
+  - home composting calculator
+  - compost volume calculator
+  - composting space calculator
+  - compost tumbler size
+  - compost pile calculator
+  - composting needs calculator
+  - waste reduction calculator
+  - sustainable composting
+  - compost bin planning
+  - organic gardening calculator
+  - compost production calculator
+  - composting timeline calculator
+  - compost materials calculator
+  - eco-friendly composting
+  title: Compost Bin Size Calculator | Composting System Calculator
+title: Compost Bin Size Calculator
 ---
 
 <form id="compost-size-form" autocomplete="off">

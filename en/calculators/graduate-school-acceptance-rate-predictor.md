@@ -1,101 +1,117 @@
 ---
-layout: calculator
-title: "Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs"
-categories: [other]
-permalink: /en/calculators/graduate-school-acceptance-rate-predictor/
-seo:
-  title: "Graduate School Acceptance Calculator | PhD, Masters, MBA Admission Predictor"
-  description: "Predict your acceptance chances for graduate school programs including PhD, Masters, and MBA. Get personalized admission probability based on GPA, test scores, research experience, and more."
-  keywords:
-    - graduate school acceptance rate
-    - PhD admission predictor
-    - Masters degree acceptance
-    - MBA admission calculator
-    - grad school chances
-    - graduate admission predictor
-    - university acceptance rate
-    - graduate school calculator
-    - PhD acceptance predictor
-    - masters admission chances
-    - graduate program predictor
-    - admission probability calculator
-    - grad school assessment
-    - academic admission calculator
-    - graduate school odds
-  content: |
-    <h2>Graduate School Acceptance Rate Predictor</h2>
-    <p>Wondering about your chances of getting into graduate school? Our comprehensive predictor analyzes your academic profile, test scores, research experience, and other factors to estimate your acceptance probability for PhD, Masters, and MBA programs.</p>
-
-    <h3>🎓 Program Types Covered</h3>
-    <ul>
-      <li><strong>🔬 PhD Programs:</strong> Research-intensive doctoral programs across all fields</li>
-      <li><strong>📚 Masters Degrees:</strong> MS, MA, MEng, and other professional masters</li>
-      <li><strong>💼 MBA Programs:</strong> Full-time, part-time, and executive MBA programs</li>
-      <li><strong>⚖️ Professional Degrees:</strong> Law (JD), Medicine (MD), other professional programs</li>
-      <li><strong>🎨 Creative Programs:</strong> MFA, design, and other portfolio-based programs</li>
-    </ul>
-
-    <h3>📊 Factors We Analyze</h3>
-    <p>Our predictor considers multiple admission criteria:</p>
-    <ul>
-      <li><strong>📈 Academic Performance:</strong> GPA, academic rigor, grade trends</li>
-      <li><strong>📝 Standardized Tests:</strong> GRE, GMAT, LSAT, MCAT scores</li>
-      <li><strong>🔬 Research Experience:</strong> Publications, presentations, lab experience</li>
-      <li><strong>💼 Professional Experience:</strong> Work experience, internships, leadership</li>
-      <li><strong>🏆 Achievements:</strong> Awards, honors, scholarships, competitions</li>
-      <li><strong>📄 Application Materials:</strong> Statement quality, recommendation letters</li>
-      <li><strong>🌟 Extracurriculars:</strong> Volunteer work, activities, unique experiences</li>
-      <li><strong>🎯 Program Fit:</strong> Alignment with program goals and faculty</li>
-    </ul>
-
-    <h3>🏫 University Tiers & Acceptance Rates</h3>
-    <ul>
-      <li><strong>🏆 Top Tier (5-15% acceptance):</strong> Harvard, MIT, Stanford, etc.</li>
-      <li><strong>⭐ High Tier (15-30% acceptance):</strong> Top public and private universities</li>
-      <li><strong>🎓 Mid Tier (30-50% acceptance):</strong> Solid research universities</li>
-      <li><strong>📚 Safety Schools (50%+ acceptance):</strong> Less competitive but quality programs</li>
-    </ul>
-
-    <h3>📈 Program-Specific Acceptance Rates</h3>
-    <ul>
-      <li><strong>🔬 STEM PhD:</strong> 10-20% (highly competitive with funding)</li>
-      <li><strong>📖 Humanities PhD:</strong> 5-15% (extremely competitive, limited funding)</li>
-      <li><strong>💻 CS Masters:</strong> 15-40% (varies widely by program ranking)</li>
-      <li><strong>💼 Top MBA:</strong> 5-25% (GMAT scores and work experience crucial)</li>
-      <li><strong>⚖️ Law School:</strong> 10-80% (LSAT scores heavily weighted)</li>
-      <li><strong>🩺 Medical School:</strong> 5-15% (extremely competitive, well-rounded candidates)</li>
-    </ul>
-
-    <h3>🎯 Improving Your Chances</h3>
-    <p>Based on your profile, get personalized recommendations:</p>
-    <ul>
-      <li><strong>📚 Academic Improvements:</strong> GPA enhancement strategies</li>
-      <li><strong>📝 Test Prep:</strong> Targeted score improvement plans</li>
-      <li><strong>🔬 Research Opportunities:</strong> Finding research experience</li>
-      <li><strong>💼 Professional Development:</strong> Relevant work experience</li>
-      <li><strong>📄 Application Strategy:</strong> School selection and application tips</li>
-    </ul>
-
-    <p><strong>Note:</strong> Admission predictions are estimates based on historical data and common admission criteria. Actual decisions depend on many factors including program fit, application quality, and annual applicant pool variations. Use this as one tool in your application strategy.</p>
-scripts:
-  - /en/js/graduate-school-acceptance-rate-predictor.js
+categories:
+- school
 faq:
-  - question: How accurate are graduate school acceptance predictions?
-    answer: "Our predictions are estimates based on historical admission data and typical criteria. Accuracy varies by program type - STEM programs with clear metrics are more predictable than humanities programs that heavily weight subjective factors. Use predictions as guidance, not guarantees."
-  - question: What GPA do I need for top graduate programs?
-    answer: "Top programs typically expect 3.7+ GPA for competitive applicants. However, this varies by field: STEM PhD programs may accept 3.5+ with strong research, while top MBA programs often want 3.5+ but weigh work experience heavily. Consider overall profile, not just GPA."
-  - question: How important are standardized test scores for grad school?
-    answer: "Importance varies by program: GRE scores matter less for PhD programs (research experience more important) but crucial for competitive Masters programs. GMAT is critical for top MBA programs. LSAT dominates law school admissions. Some programs are going test-optional."
-  - question: Can work experience compensate for lower academic stats?
-    answer: "Yes, especially for professional programs like MBA, where significant work experience can offset lower GPA/test scores. For PhD programs, relevant research experience is more valuable than general work experience. Each program type weights experience differently."
-  - question: How many graduate schools should I apply to?
-    answer: "Apply to 8-12 programs across different tiers: 2-3 reach schools, 4-6 target schools, 2-3 safety schools. PhD applicants often apply to more (10-15) due to advisor fit requirements. Consider application costs and time constraints."
-  - question: What if I have research publications as an undergraduate?
-    answer: "Publications significantly boost PhD application chances, especially as first author. Even co-author publications demonstrate research capability. For Masters programs, publications are helpful but not essential. Quality and relevance matter more than quantity."
-  - question: Should I retake standardized tests to improve my chances?
-    answer: "Retake if you're significantly below program averages and have time to prepare properly. Improvements of 10+ points (GRE) or 50+ points (GMAT) can meaningfully impact chances. Consider score improvement potential vs. other application components."
-  - question: How important is the statement of purpose?
-    answer: "Critical for PhD programs (demonstrates research fit and motivation) and very important for competitive Masters/MBA programs. A compelling statement can overcome weaker stats, while a poor statement can hurt strong candidates. Tailor each statement to specific programs."
+- answer: Our predictions are estimates based on historical admission data and typical
+    criteria. Accuracy varies by program type - STEM programs with clear metrics are
+    more predictable than humanities programs that heavily weight subjective factors.
+    Use predictions as guidance, not guarantees.
+  question: How accurate are graduate school acceptance predictions?
+- answer: 'Top programs typically expect 3.7+ GPA for competitive applicants. However,
+    this varies by field: STEM PhD programs may accept 3.5+ with strong research,
+    while top MBA programs often want 3.5+ but weigh work experience heavily. Consider
+    overall profile, not just GPA.'
+  question: What GPA do I need for top graduate programs?
+- answer: 'Importance varies by program: GRE scores matter less for PhD programs (research
+    experience more important) but crucial for competitive Masters programs. GMAT
+    is critical for top MBA programs. LSAT dominates law school admissions. Some programs
+    are going test-optional.'
+  question: How important are standardized test scores for grad school?
+- answer: Yes, especially for professional programs like MBA, where significant work
+    experience can offset lower GPA/test scores. For PhD programs, relevant research
+    experience is more valuable than general work experience. Each program type weights
+    experience differently.
+  question: Can work experience compensate for lower academic stats?
+- answer: 'Apply to 8-12 programs across different tiers: 2-3 reach schools, 4-6 target
+    schools, 2-3 safety schools. PhD applicants often apply to more (10-15) due to
+    advisor fit requirements. Consider application costs and time constraints.'
+  question: How many graduate schools should I apply to?
+- answer: Publications significantly boost PhD application chances, especially as
+    first author. Even co-author publications demonstrate research capability. For
+    Masters programs, publications are helpful but not essential. Quality and relevance
+    matter more than quantity.
+  question: What if I have research publications as an undergraduate?
+- answer: Retake if you're significantly below program averages and have time to prepare
+    properly. Improvements of 10+ points (GRE) or 50+ points (GMAT) can meaningfully
+    impact chances. Consider score improvement potential vs. other application components.
+  question: Should I retake standardized tests to improve my chances?
+- answer: Critical for PhD programs (demonstrates research fit and motivation) and
+    very important for competitive Masters/MBA programs. A compelling statement can
+    overcome weaker stats, while a poor statement can hurt strong candidates. Tailor
+    each statement to specific programs.
+  question: How important is the statement of purpose?
+layout: calculator
+permalink: /en/calculators/graduate-school-acceptance-rate-predictor/
+scripts:
+- /en/js/graduate-school-acceptance-rate-predictor.js
+seo:
+  content: "<h2>Graduate School Acceptance Rate Predictor</h2>\n<p>Wondering about\
+    \ your chances of getting into graduate school? Our comprehensive predictor analyzes\
+    \ your academic profile, test scores, research experience, and other factors to\
+    \ estimate your acceptance probability for PhD, Masters, and MBA programs.</p>\n\
+    \n<h3>\U0001F393 Program Types Covered</h3>\n<ul>\n  <li><strong>\U0001F52C PhD\
+    \ Programs:</strong> Research-intensive doctoral programs across all fields</li>\n\
+    \  <li><strong>\U0001F4DA Masters Degrees:</strong> MS, MA, MEng, and other professional\
+    \ masters</li>\n  <li><strong>\U0001F4BC MBA Programs:</strong> Full-time, part-time,\
+    \ and executive MBA programs</li>\n  <li><strong>⚖️ Professional Degrees:</strong>\
+    \ Law (JD), Medicine (MD), other professional programs</li>\n  <li><strong>\U0001F3A8\
+    \ Creative Programs:</strong> MFA, design, and other portfolio-based programs</li>\n\
+    </ul>\n\n<h3>\U0001F4CA Factors We Analyze</h3>\n<p>Our predictor considers multiple\
+    \ admission criteria:</p>\n<ul>\n  <li><strong>\U0001F4C8 Academic Performance:</strong>\
+    \ GPA, academic rigor, grade trends</li>\n  <li><strong>\U0001F4DD Standardized\
+    \ Tests:</strong> GRE, GMAT, LSAT, MCAT scores</li>\n  <li><strong>\U0001F52C\
+    \ Research Experience:</strong> Publications, presentations, lab experience</li>\n\
+    \  <li><strong>\U0001F4BC Professional Experience:</strong> Work experience, internships,\
+    \ leadership</li>\n  <li><strong>\U0001F3C6 Achievements:</strong> Awards, honors,\
+    \ scholarships, competitions</li>\n  <li><strong>\U0001F4C4 Application Materials:</strong>\
+    \ Statement quality, recommendation letters</li>\n  <li><strong>\U0001F31F Extracurriculars:</strong>\
+    \ Volunteer work, activities, unique experiences</li>\n  <li><strong>\U0001F3AF\
+    \ Program Fit:</strong> Alignment with program goals and faculty</li>\n</ul>\n\
+    \n<h3>\U0001F3EB University Tiers & Acceptance Rates</h3>\n<ul>\n  <li><strong>\U0001F3C6\
+    \ Top Tier (5-15% acceptance):</strong> Harvard, MIT, Stanford, etc.</li>\n  <li><strong>⭐\
+    \ High Tier (15-30% acceptance):</strong> Top public and private universities</li>\n\
+    \  <li><strong>\U0001F393 Mid Tier (30-50% acceptance):</strong> Solid research\
+    \ universities</li>\n  <li><strong>\U0001F4DA Safety Schools (50%+ acceptance):</strong>\
+    \ Less competitive but quality programs</li>\n</ul>\n\n<h3>\U0001F4C8 Program-Specific\
+    \ Acceptance Rates</h3>\n<ul>\n  <li><strong>\U0001F52C STEM PhD:</strong> 10-20%\
+    \ (highly competitive with funding)</li>\n  <li><strong>\U0001F4D6 Humanities\
+    \ PhD:</strong> 5-15% (extremely competitive, limited funding)</li>\n  <li><strong>\U0001F4BB\
+    \ CS Masters:</strong> 15-40% (varies widely by program ranking)</li>\n  <li><strong>\U0001F4BC\
+    \ Top MBA:</strong> 5-25% (GMAT scores and work experience crucial)</li>\n  <li><strong>⚖️\
+    \ Law School:</strong> 10-80% (LSAT scores heavily weighted)</li>\n  <li><strong>\U0001FA7A\
+    \ Medical School:</strong> 5-15% (extremely competitive, well-rounded candidates)</li>\n\
+    </ul>\n\n<h3>\U0001F3AF Improving Your Chances</h3>\n<p>Based on your profile,\
+    \ get personalized recommendations:</p>\n<ul>\n  <li><strong>\U0001F4DA Academic\
+    \ Improvements:</strong> GPA enhancement strategies</li>\n  <li><strong>\U0001F4DD\
+    \ Test Prep:</strong> Targeted score improvement plans</li>\n  <li><strong>\U0001F52C\
+    \ Research Opportunities:</strong> Finding research experience</li>\n  <li><strong>\U0001F4BC\
+    \ Professional Development:</strong> Relevant work experience</li>\n  <li><strong>\U0001F4C4\
+    \ Application Strategy:</strong> School selection and application tips</li>\n\
+    </ul>\n\n<p><strong>Note:</strong> Admission predictions are estimates based on\
+    \ historical data and common admission criteria. Actual decisions depend on many\
+    \ factors including program fit, application quality, and annual applicant pool\
+    \ variations. Use this as one tool in your application strategy.</p>\n"
+  description: Predict your acceptance chances for graduate school programs including
+    PhD, Masters, and MBA. Get personalized admission probability based on GPA, test
+    scores, research experience, and more.
+  keywords:
+  - graduate school acceptance rate
+  - PhD admission predictor
+  - Masters degree acceptance
+  - MBA admission calculator
+  - grad school chances
+  - graduate admission predictor
+  - university acceptance rate
+  - graduate school calculator
+  - PhD acceptance predictor
+  - masters admission chances
+  - graduate program predictor
+  - admission probability calculator
+  - grad school assessment
+  - academic admission calculator
+  - graduate school odds
+  title: Graduate School Acceptance Calculator | PhD, Masters, MBA Admission Predictor
+title: Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs
 ---
 <form id="grad-school-form" autocomplete="off">
   <div class="form-section">

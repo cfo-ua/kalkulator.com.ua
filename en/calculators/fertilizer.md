@@ -1,92 +1,84 @@
 ---
-layout: calculator
-title: "Fertilizer Calculator"
-categories: [construction]
-seo:
-  title: "Fertilizer Calculator | Lawn & Garden Fertilizer Application Rate Calculator"
-  description: "Calculate fertilizer needed for lawns, gardens, and landscapes. Professional fertilizer calculator determines application rates, NPK requirements, and coverage areas."
-  keywords:
-    - fertilizer calculator
-    - lawn fertilizer calculator
-    - garden fertilizer calculator
-    - fertilizer application rate
-    - NPK calculator
-    - lawn care calculator
-    - fertilizer coverage calculator
-    - fertilizer spreader calculator
-    - organic fertilizer calculator
-    - liquid fertilizer calculator
-    - granular fertilizer calculator
-    - fertilizer cost calculator
-    - fertilizer schedule calculator
-    - nitrogen calculator
-    - phosphorus calculator
-    - potassium calculator
-    - lawn treatment calculator
-    - garden nutrition calculator
-    - fertilizer requirement calculator
-    - plant food calculator
-    - turf fertilizer calculator
-    - landscape fertilizer calculator
-  content: |
-    <h2>Fertilizer Calculator</h2>
-    <p>Calculate the exact amount of <strong>fertilizer needed</strong> for your lawn, garden, or landscape. This professional fertilizer calculator determines application rates, coverage areas, and nutrient requirements.</p>
-
-    <h3>Understanding NPK Numbers:</h3>
-    <ul>
-      <li><strong>N (Nitrogen):</strong> promotes leaf growth and green color</li>
-      <li><strong>P (Phosphorus):</strong> supports root development and flowering</li>
-      <li><strong>K (Potassium):</strong> enhances disease resistance and hardiness</li>
-      <li><strong>Example 10-10-10:</strong> 10% nitrogen, 10% phosphorus, 10% potassium</li>
-    </ul>
-
-    <h3>Common Fertilizer Types:</h3>
-    <ul>
-      <li><strong>Granular slow-release:</strong> 3-6 month feeding, easy application</li>
-      <li><strong>Granular quick-release:</strong> immediate results, requires frequent application</li>
-      <li><strong>Liquid fertilizer:</strong> fast absorption, requires frequent reapplication</li>
-      <li><strong>Organic fertilizer:</strong> slow release, improves soil health</li>
-    </ul>
-
-    <h3>Application Rates by Plant Type:</h3>
-    <ul>
-      <li><strong>Established lawn:</strong> 1-2 lbs nitrogen per 1000 sq ft annually</li>
-      <li><strong>New lawn:</strong> 2-3 lbs nitrogen per 1000 sq ft first year</li>
-      <li><strong>Vegetable garden:</strong> 2-4 lbs nitrogen per 1000 sq ft</li>
-      <li><strong>Flower beds:</strong> 1-2 lbs nitrogen per 1000 sq ft</li>
-      <li><strong>Trees/shrubs:</strong> 1-3 lbs per inch of trunk diameter</li>
-    </ul>
-
-    <h3>Seasonal Fertilizer Schedule:</h3>
-    <ul>
-      <li><strong>Early spring:</strong> high nitrogen for growth</li>
-      <li><strong>Late spring:</strong> balanced NPK for establishment</li>
-      <li><strong>Summer:</strong> low nitrogen, higher potassium</li>
-      <li><strong>Fall:</strong> winterizer with potassium</li>
-    </ul>
-
-    <h3>Spreader Settings Guide:</h3>
-    <ul>
-      <li><strong>Broadcast spreader:</strong> even coverage, faster application</li>
-      <li><strong>Drop spreader:</strong> precise application, prevents overlap</li>
-      <li><strong>Handheld spreader:</strong> small areas, tight spaces</li>
-      <li><strong>Calibration:</strong> test on driveway before application</li>
-    </ul>
-scripts:
-  - /en/js/fertilizer.js
+categories:
+- environment
 faq:
-  - question: How much fertilizer do I need for 5000 sq ft of lawn?
-    answer: "For established lawn: 5-10 lbs of 20-0-0 fertilizer or 10-20 lbs of 10-10-10, depending on nitrogen content and application schedule."
-  - question: When should I fertilize my lawn?
-    answer: "Spring (growth), early summer (maintenance), and fall (winterizing). Avoid fertilizing during summer stress periods or winter dormancy."
-  - question: What's the difference between organic and synthetic fertilizer?
-    answer: "Organic releases nutrients slowly, improves soil health but costs more. Synthetic provides immediate results, costs less but requires more frequent application."
-  - question: How do I calibrate my fertilizer spreader?
-    answer: "Fill spreader, walk 100 feet on driveway, collect and weigh output. Adjust setting until you get proper rate per 1000 sq ft."
-  - question: Can I over-fertilize my lawn?
-    answer: "Yes! Over-fertilization burns grass, pollutes waterways, and creates excessive growth requiring more mowing. Follow label rates carefully."
-  - question: Should I water after fertilizing?
-    answer: "Granular fertilizer: water lightly to activate. Liquid fertilizer: no watering needed. Avoid heavy watering that washes away nutrients."
+- answer: 'For established lawn: 5-10 lbs of 20-0-0 fertilizer or 10-20 lbs of 10-10-10,
+    depending on nitrogen content and application schedule.'
+  question: How much fertilizer do I need for 5000 sq ft of lawn?
+- answer: Spring (growth), early summer (maintenance), and fall (winterizing). Avoid
+    fertilizing during summer stress periods or winter dormancy.
+  question: When should I fertilize my lawn?
+- answer: Organic releases nutrients slowly, improves soil health but costs more.
+    Synthetic provides immediate results, costs less but requires more frequent application.
+  question: What's the difference between organic and synthetic fertilizer?
+- answer: Fill spreader, walk 100 feet on driveway, collect and weigh output. Adjust
+    setting until you get proper rate per 1000 sq ft.
+  question: How do I calibrate my fertilizer spreader?
+- answer: Yes! Over-fertilization burns grass, pollutes waterways, and creates excessive
+    growth requiring more mowing. Follow label rates carefully.
+  question: Can I over-fertilize my lawn?
+- answer: 'Granular fertilizer: water lightly to activate. Liquid fertilizer: no watering
+    needed. Avoid heavy watering that washes away nutrients.'
+  question: Should I water after fertilizing?
+layout: calculator
+scripts:
+- /en/js/fertilizer.js
+seo:
+  content: "<h2>Fertilizer Calculator</h2>\n<p>Calculate the exact amount of <strong>fertilizer\
+    \ needed</strong> for your lawn, garden, or landscape. This professional fertilizer\
+    \ calculator determines application rates, coverage areas, and nutrient requirements.</p>\n\
+    \n<h3>Understanding NPK Numbers:</h3>\n<ul>\n  <li><strong>N (Nitrogen):</strong>\
+    \ promotes leaf growth and green color</li>\n  <li><strong>P (Phosphorus):</strong>\
+    \ supports root development and flowering</li>\n  <li><strong>K (Potassium):</strong>\
+    \ enhances disease resistance and hardiness</li>\n  <li><strong>Example 10-10-10:</strong>\
+    \ 10% nitrogen, 10% phosphorus, 10% potassium</li>\n</ul>\n\n<h3>Common Fertilizer\
+    \ Types:</h3>\n<ul>\n  <li><strong>Granular slow-release:</strong> 3-6 month feeding,\
+    \ easy application</li>\n  <li><strong>Granular quick-release:</strong> immediate\
+    \ results, requires frequent application</li>\n  <li><strong>Liquid fertilizer:</strong>\
+    \ fast absorption, requires frequent reapplication</li>\n  <li><strong>Organic\
+    \ fertilizer:</strong> slow release, improves soil health</li>\n</ul>\n\n<h3>Application\
+    \ Rates by Plant Type:</h3>\n<ul>\n  <li><strong>Established lawn:</strong> 1-2\
+    \ lbs nitrogen per 1000 sq ft annually</li>\n  <li><strong>New lawn:</strong>\
+    \ 2-3 lbs nitrogen per 1000 sq ft first year</li>\n  <li><strong>Vegetable garden:</strong>\
+    \ 2-4 lbs nitrogen per 1000 sq ft</li>\n  <li><strong>Flower beds:</strong> 1-2\
+    \ lbs nitrogen per 1000 sq ft</li>\n  <li><strong>Trees/shrubs:</strong> 1-3 lbs\
+    \ per inch of trunk diameter</li>\n</ul>\n\n<h3>Seasonal Fertilizer Schedule:</h3>\n\
+    <ul>\n  <li><strong>Early spring:</strong> high nitrogen for growth</li>\n  <li><strong>Late\
+    \ spring:</strong> balanced NPK for establishment</li>\n  <li><strong>Summer:</strong>\
+    \ low nitrogen, higher potassium</li>\n  <li><strong>Fall:</strong> winterizer\
+    \ with potassium</li>\n</ul>\n\n<h3>Spreader Settings Guide:</h3>\n<ul>\n  <li><strong>Broadcast\
+    \ spreader:</strong> even coverage, faster application</li>\n  <li><strong>Drop\
+    \ spreader:</strong> precise application, prevents overlap</li>\n  <li><strong>Handheld\
+    \ spreader:</strong> small areas, tight spaces</li>\n  <li><strong>Calibration:</strong>\
+    \ test on driveway before application</li>\n</ul>\n"
+  description: Calculate fertilizer needed for lawns, gardens, and landscapes. Professional
+    fertilizer calculator determines application rates, NPK requirements, and coverage
+    areas.
+  keywords:
+  - fertilizer calculator
+  - lawn fertilizer calculator
+  - garden fertilizer calculator
+  - fertilizer application rate
+  - NPK calculator
+  - lawn care calculator
+  - fertilizer coverage calculator
+  - fertilizer spreader calculator
+  - organic fertilizer calculator
+  - liquid fertilizer calculator
+  - granular fertilizer calculator
+  - fertilizer cost calculator
+  - fertilizer schedule calculator
+  - nitrogen calculator
+  - phosphorus calculator
+  - potassium calculator
+  - lawn treatment calculator
+  - garden nutrition calculator
+  - fertilizer requirement calculator
+  - plant food calculator
+  - turf fertilizer calculator
+  - landscape fertilizer calculator
+  title: Fertilizer Calculator | Lawn & Garden Fertilizer Application Rate Calculator
+title: Fertilizer Calculator
 ---
 
 <form id="fertilizer-form" autocomplete="off">

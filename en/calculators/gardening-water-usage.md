@@ -1,107 +1,96 @@
 ---
-layout: calculator
-title: "Gardening Water Usage Calculator"
-categories: [other]
-seo:
-  title: "Garden Water Usage Calculator | Irrigation & Watering Calculator"
-  description: "Calculate water needs for your garden. Determine irrigation requirements, water costs, and conservation strategies for efficient garden watering."
-  keywords:
-    - garden water calculator
-    - irrigation calculator
-    - plant watering calculator
-    - garden water usage
-    - irrigation planning calculator
-    - water conservation calculator
-    - sprinkler calculator
-    - drip irrigation calculator
-    - lawn watering calculator
-    - garden water needs
-    - plant water requirements
-    - irrigation scheduling
-    - water bill calculator
-    - garden water cost
-    - efficient watering calculator
-    - water-wise gardening
-    - drought planning calculator
-    - rainwater harvesting calculator
-    - garden irrigation design
-    - water management calculator
-  content: |
-    <h2>Gardening Water Usage Calculator</h2>
-    <p>Calculate your <strong>garden's water needs</strong> with our comprehensive watering calculator. Determine irrigation requirements, water costs, and develop efficient watering strategies for healthy plants and water conservation.</p>
-
-    <h3>Why Proper Garden Watering Matters:</h3>
-    <ul>
-      <li><strong>Plant health:</strong> correct moisture levels prevent stress and disease</li>
-      <li><strong>Water conservation:</strong> avoid waste through efficient irrigation</li>
-      <li><strong>Cost management:</strong> reduce water bills with smart watering</li>
-      <li><strong>Root development:</strong> deep, infrequent watering encourages strong roots</li>
-      <li><strong>Nutrient uptake:</strong> proper moisture helps plants absorb nutrients</li>
-      <li><strong>Environmental impact:</strong> responsible water use preserves resources</li>
-    </ul>
-
-    <h3>Water Requirements by Plant Type:</h3>
-    <ul>
-      <li><strong>Vegetables:</strong> 1-2 inches per week during growing season</li>
-      <li><strong>Lawns:</strong> 1-1.5 inches per week including rainfall</li>
-      <li><strong>Annual flowers:</strong> 1-1.5 inches per week</li>
-      <li><strong>Established perennials:</strong> 0.5-1 inch per week</li>
-      <li><strong>Trees and shrubs:</strong> varies by size and maturity</li>
-      <li><strong>Native plants:</strong> often require less water once established</li>
-    </ul>
-
-    <h3>Efficient Irrigation Methods:</h3>
-    <ul>
-      <li><strong>Drip irrigation:</strong> 90% efficiency, delivers water directly to roots</li>
-      <li><strong>Soaker hoses:</strong> 85% efficiency, good for beds and rows</li>
-      <li><strong>Sprinkler systems:</strong> 70-80% efficiency when properly designed</li>
-      <li><strong>Hand watering:</strong> 80% efficiency with proper technique</li>
-      <li><strong>Micro-sprays:</strong> 85% efficiency for specific areas</li>
-    </ul>
-
-    <h3>Factors Affecting Water Needs:</h3>
-    <ul>
-      <li><strong>Climate:</strong> temperature, humidity, and wind affect evaporation</li>
-      <li><strong>Soil type:</strong> clay retains water, sand drains quickly</li>
-      <li><strong>Plant stage:</strong> seedlings need more frequent watering</li>
-      <li><strong>Season:</strong> peak summer requires more water</li>
-      <li><strong>Mulching:</strong> reduces evaporation by 50-70%</li>
-      <li><strong>Shade:</strong> shaded areas need less water</li>
-    </ul>
-
-    <h3>Water Conservation Strategies:</h3>
-    <ul>
-      <li><strong>Mulching:</strong> organic mulch retains moisture and improves soil</li>
-      <li><strong>Timing:</strong> water early morning to reduce evaporation</li>
-      <li><strong>Soil improvement:</strong> add compost to increase water retention</li>
-      <li><strong>Plant selection:</strong> choose drought-tolerant varieties</li>
-      <li><strong>Rainwater harvesting:</strong> collect roof runoff for irrigation</li>
-      <li><strong>Zoned irrigation:</strong> group plants by water needs</li>
-    </ul>
-
-    <h3>Signs of Proper Watering:</h3>
-    <ul>
-      <li><strong>Soil moisture:</strong> moist 6-8 inches deep for most plants</li>
-      <li><strong>Plant appearance:</strong> vibrant color, no wilting</li>
-      <li><strong>Growth rate:</strong> steady, healthy growth patterns</li>
-      <li><strong>Root development:</strong> strong, deep root systems</li>
-      <li><strong>Disease resistance:</strong> proper moisture reduces stress-related diseases</li>
-    </ul>
-scripts:
-  - /en/js/gardening-water-usage.js
+categories:
+- environment
 faq:
-  - question: How much water does my garden really need?
-    answer: "Most gardens need 1-2 inches of water per week, including rainfall. Check soil moisture 4-6 inches deep - if dry, it's time to water."
-  - question: When is the best time to water my garden?
-    answer: "Early morning (5-9 AM) is ideal. Plants have time to dry before evening, reducing disease risk, and less water is lost to evaporation."
-  - question: How can I tell if I'm overwatering?
-    answer: "Signs include yellowing leaves, fungal growth, weak stems, and constantly wet soil. Most plant problems come from overwatering, not underwatering."
-  - question: Is drip irrigation worth the investment?
-    answer: "Yes, especially for vegetable gardens and landscapes. Drip irrigation saves 30-50% water, reduces weeds, and delivers water directly to plant roots."
-  - question: How does mulch help with water conservation?
-    answer: "Mulch reduces evaporation by 50-70%, moderates soil temperature, and slowly releases moisture. Apply 2-4 inches around plants, keeping away from stems."
-  - question: Should I water every day in hot weather?
-    answer: "No, deep watering 2-3 times per week is better than daily light watering. This encourages deep root growth and improves drought tolerance."
+- answer: Most gardens need 1-2 inches of water per week, including rainfall. Check
+    soil moisture 4-6 inches deep - if dry, it's time to water.
+  question: How much water does my garden really need?
+- answer: Early morning (5-9 AM) is ideal. Plants have time to dry before evening,
+    reducing disease risk, and less water is lost to evaporation.
+  question: When is the best time to water my garden?
+- answer: Signs include yellowing leaves, fungal growth, weak stems, and constantly
+    wet soil. Most plant problems come from overwatering, not underwatering.
+  question: How can I tell if I'm overwatering?
+- answer: Yes, especially for vegetable gardens and landscapes. Drip irrigation saves
+    30-50% water, reduces weeds, and delivers water directly to plant roots.
+  question: Is drip irrigation worth the investment?
+- answer: Mulch reduces evaporation by 50-70%, moderates soil temperature, and slowly
+    releases moisture. Apply 2-4 inches around plants, keeping away from stems.
+  question: How does mulch help with water conservation?
+- answer: No, deep watering 2-3 times per week is better than daily light watering.
+    This encourages deep root growth and improves drought tolerance.
+  question: Should I water every day in hot weather?
+layout: calculator
+scripts:
+- /en/js/gardening-water-usage.js
+seo:
+  content: "<h2>Gardening Water Usage Calculator</h2>\n<p>Calculate your <strong>garden's\
+    \ water needs</strong> with our comprehensive watering calculator. Determine irrigation\
+    \ requirements, water costs, and develop efficient watering strategies for healthy\
+    \ plants and water conservation.</p>\n\n<h3>Why Proper Garden Watering Matters:</h3>\n\
+    <ul>\n  <li><strong>Plant health:</strong> correct moisture levels prevent stress\
+    \ and disease</li>\n  <li><strong>Water conservation:</strong> avoid waste through\
+    \ efficient irrigation</li>\n  <li><strong>Cost management:</strong> reduce water\
+    \ bills with smart watering</li>\n  <li><strong>Root development:</strong> deep,\
+    \ infrequent watering encourages strong roots</li>\n  <li><strong>Nutrient uptake:</strong>\
+    \ proper moisture helps plants absorb nutrients</li>\n  <li><strong>Environmental\
+    \ impact:</strong> responsible water use preserves resources</li>\n</ul>\n\n<h3>Water\
+    \ Requirements by Plant Type:</h3>\n<ul>\n  <li><strong>Vegetables:</strong> 1-2\
+    \ inches per week during growing season</li>\n  <li><strong>Lawns:</strong> 1-1.5\
+    \ inches per week including rainfall</li>\n  <li><strong>Annual flowers:</strong>\
+    \ 1-1.5 inches per week</li>\n  <li><strong>Established perennials:</strong> 0.5-1\
+    \ inch per week</li>\n  <li><strong>Trees and shrubs:</strong> varies by size\
+    \ and maturity</li>\n  <li><strong>Native plants:</strong> often require less\
+    \ water once established</li>\n</ul>\n\n<h3>Efficient Irrigation Methods:</h3>\n\
+    <ul>\n  <li><strong>Drip irrigation:</strong> 90% efficiency, delivers water directly\
+    \ to roots</li>\n  <li><strong>Soaker hoses:</strong> 85% efficiency, good for\
+    \ beds and rows</li>\n  <li><strong>Sprinkler systems:</strong> 70-80% efficiency\
+    \ when properly designed</li>\n  <li><strong>Hand watering:</strong> 80% efficiency\
+    \ with proper technique</li>\n  <li><strong>Micro-sprays:</strong> 85% efficiency\
+    \ for specific areas</li>\n</ul>\n\n<h3>Factors Affecting Water Needs:</h3>\n\
+    <ul>\n  <li><strong>Climate:</strong> temperature, humidity, and wind affect evaporation</li>\n\
+    \  <li><strong>Soil type:</strong> clay retains water, sand drains quickly</li>\n\
+    \  <li><strong>Plant stage:</strong> seedlings need more frequent watering</li>\n\
+    \  <li><strong>Season:</strong> peak summer requires more water</li>\n  <li><strong>Mulching:</strong>\
+    \ reduces evaporation by 50-70%</li>\n  <li><strong>Shade:</strong> shaded areas\
+    \ need less water</li>\n</ul>\n\n<h3>Water Conservation Strategies:</h3>\n<ul>\n\
+    \  <li><strong>Mulching:</strong> organic mulch retains moisture and improves\
+    \ soil</li>\n  <li><strong>Timing:</strong> water early morning to reduce evaporation</li>\n\
+    \  <li><strong>Soil improvement:</strong> add compost to increase water retention</li>\n\
+    \  <li><strong>Plant selection:</strong> choose drought-tolerant varieties</li>\n\
+    \  <li><strong>Rainwater harvesting:</strong> collect roof runoff for irrigation</li>\n\
+    \  <li><strong>Zoned irrigation:</strong> group plants by water needs</li>\n</ul>\n\
+    \n<h3>Signs of Proper Watering:</h3>\n<ul>\n  <li><strong>Soil moisture:</strong>\
+    \ moist 6-8 inches deep for most plants</li>\n  <li><strong>Plant appearance:</strong>\
+    \ vibrant color, no wilting</li>\n  <li><strong>Growth rate:</strong> steady,\
+    \ healthy growth patterns</li>\n  <li><strong>Root development:</strong> strong,\
+    \ deep root systems</li>\n  <li><strong>Disease resistance:</strong> proper moisture\
+    \ reduces stress-related diseases</li>\n</ul>\n"
+  description: Calculate water needs for your garden. Determine irrigation requirements,
+    water costs, and conservation strategies for efficient garden watering.
+  keywords:
+  - garden water calculator
+  - irrigation calculator
+  - plant watering calculator
+  - garden water usage
+  - irrigation planning calculator
+  - water conservation calculator
+  - sprinkler calculator
+  - drip irrigation calculator
+  - lawn watering calculator
+  - garden water needs
+  - plant water requirements
+  - irrigation scheduling
+  - water bill calculator
+  - garden water cost
+  - efficient watering calculator
+  - water-wise gardening
+  - drought planning calculator
+  - rainwater harvesting calculator
+  - garden irrigation design
+  - water management calculator
+  title: Garden Water Usage Calculator | Irrigation & Watering Calculator
+title: Gardening Water Usage Calculator
 ---
 
 <form id="water-usage-form" autocomplete="off">

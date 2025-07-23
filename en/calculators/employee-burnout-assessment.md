@@ -1,127 +1,131 @@
 ---
-layout: calculator
-title: "Employee Burnout Risk Assessment - Workplace Wellness Calculator"
-categories: [other]
-permalink: /en/calculators/employee-burnout-assessment/
-seo:
-  title: "Employee Burnout Risk Assessment - Workplace Stress & Wellness Calculator"
-  description: "Assess your risk of workplace burnout with our comprehensive calculator. Evaluate stress levels, work-life balance, and mental health indicators for better workplace wellness."
-  keywords:
-    - employee burnout assessment
-    - workplace stress calculator
-    - burnout risk assessment
-    - job stress evaluation
-    - work life balance test
-    - workplace wellness assessment
-    - employee mental health check
-    - job satisfaction assessment
-    - workplace burnout test
-    - stress level calculator
-    - occupational stress assessment
-    - workplace fatigue evaluation
-    - employee engagement assessment
-    - work stress indicator
-    - burnout syndrome test
-    - workplace mental health
-    - job burnout calculator
-    - professional stress assessment
-    - work exhaustion test
-    - career satisfaction evaluation
-    - workplace wellbeing check
-    - employee stress management
-    - job burnout prevention
-    - workplace resilience assessment
-    - occupational wellness test
-    - work related stress evaluation
-    - employee happiness index
-    - workplace psychology assessment
-    - job stress symptoms checker
-    - burnout recovery assessment
-  content: |
-    <h2>Employee Burnout Risk Assessment - Workplace Wellness Calculator</h2>
-    <p>This <strong>employee burnout risk assessment</strong> helps you evaluate your current stress levels, work-life balance, and overall wellbeing to identify potential burnout risks before they become serious problems.</p>
-
-    <h3>What is Employee Burnout?</h3>
-    <p>Burnout is a state of physical, emotional, and mental exhaustion caused by prolonged exposure to stressful work situations. It's characterized by three main dimensions:</p>
-    <ul>
-      <li><strong>Emotional Exhaustion:</strong> Feeling drained and depleted of emotional resources</li>
-      <li><strong>Depersonalization:</strong> Cynical attitudes toward work and colleagues</li>
-      <li><strong>Reduced Personal Accomplishment:</strong> Feeling ineffective and questioning work value</li>
-    </ul>
-
-    <h3>Why Assess Burnout Risk?</h3>
-    <ul>
-      <li><strong>Early Detection:</strong> Identify warning signs before burnout becomes severe</li>
-      <li><strong>Personal Wellbeing:</strong> Protect your mental and physical health</li>
-      <li><strong>Career Longevity:</strong> Maintain productivity and job satisfaction over time</li>
-      <li><strong>Work-Life Balance:</strong> Improve overall quality of life</li>
-      <li><strong>Performance Optimization:</strong> Maintain peak performance and creativity</li>
-      <li><strong>Relationship Health:</strong> Prevent burnout from affecting personal relationships</li>
-    </ul>
-
-    <h3>Assessment Areas Covered:</h3>
-    <ul>
-      <li><strong>🏢 Workload & Demands:</strong> Job pressure, deadlines, and work volume</li>
-      <li><strong>⚖️ Work-Life Balance:</strong> Time management and personal life boundaries</li>
-      <li><strong>💪 Control & Autonomy:</strong> Decision-making power and job flexibility</li>
-      <li><strong>🤝 Social Support:</strong> Relationships with colleagues and management</li>
-      <li><strong>🎯 Job Satisfaction:</strong> Meaning, purpose, and career fulfillment</li>
-      <li><strong>😴 Physical Symptoms:</strong> Sleep, energy levels, and health indicators</li>
-    </ul>
-
-    <h3>Perfect for:</h3>
-    <ul>
-      <li><em>Working Professionals:</em> Regular self-assessment for career health</li>
-      <li><em>Managers & Leaders:</em> Understanding team burnout risks</li>
-      <li><em>HR Professionals:</em> Identifying workplace wellness needs</li>
-      <li><em>Remote Workers:</em> Managing isolation and work-life boundaries</li>
-      <li><em>Healthcare Workers:</em> High-stress profession burnout prevention</li>
-      <li><em>Students & Academics:</em> Managing academic and research stress</li>
-      <li><em>Entrepreneurs:</em> Balancing business demands with personal wellbeing</li>
-    </ul>
-
-    <h3>Common Burnout Warning Signs:</h3>
-    <ul>
-      <li><em>Physical:</em> Chronic fatigue, insomnia, frequent illness, headaches</li>
-      <li><em>Emotional:</em> Irritability, anxiety, depression, feeling overwhelmed</li>
-      <li><em>Behavioral:</em> Procrastination, isolation, increased absenteeism</li>
-      <li><em>Cognitive:</em> Difficulty concentrating, forgetfulness, indecisiveness</li>
-      <li><em>Interpersonal:</em> Conflicts with colleagues, withdrawal from social activities</li>
-    </ul>
-
-    <h3>Benefits of Regular Assessment:</h3>
-    <ul>
-      <li><strong>Proactive Wellness:</strong> Address issues before they escalate</li>
-      <li><strong>Informed Decisions:</strong> Make career and lifestyle choices based on data</li>
-      <li><strong>Goal Setting:</strong> Establish realistic wellbeing and career goals</li>
-      <li><strong>Progress Tracking:</strong> Monitor improvements over time</li>
-      <li><strong>Resource Planning:</strong> Identify when to seek support or make changes</li>
-    </ul>
-
-    <p>After completing the assessment, you'll receive a detailed analysis of your burnout risk level along with personalized recommendations for improving your workplace wellness and preventing burnout.</p>
-scripts:
-  - /en/js/employee-burnout-assessment.js
+categories:
+- school
 faq:
-  - question: "How accurate is this burnout risk assessment?"
-    answer: "This assessment is based on validated psychological research and workplace wellness frameworks. While not a clinical diagnosis, it provides valuable insights into burnout risk factors and early warning signs."
-  - question: "How long does the burnout assessment take?"
-    answer: "The assessment typically takes 5-10 minutes to complete. Taking time to thoughtfully consider each question will provide the most accurate results."
-  - question: "Should I take this assessment if I already feel burned out?"
-    answer: "Yes, this assessment can help you understand the severity and specific areas of concern. However, if you're experiencing severe symptoms, consider speaking with a healthcare professional or counselor."
-  - question: "How often should I assess my burnout risk?"
-    answer: "We recommend monthly assessments during high-stress periods, or quarterly for regular monitoring. Significant workplace changes warrant immediate reassessment."
-  - question: "Can managers use this assessment for their teams?"
-    answer: "Managers can encourage team members to take the assessment individually. However, respect privacy - burnout assessment should be voluntary and confidential."
-  - question: "What should I do if my assessment shows high burnout risk?"
-    answer: "High risk results indicate you should take immediate action: consider reducing workload, improving work-life balance, seeking support, or discussing concerns with your manager or HR."
-  - question: "Is this assessment suitable for remote workers?"
-    answer: "Absolutely! The assessment includes questions specifically relevant to remote work challenges like isolation, boundary setting, and home office stress factors."
-  - question: "Can burnout be prevented or reversed?"
-    answer: "Yes! Early detection and intervention can prevent burnout development. Even established burnout can be addressed through lifestyle changes, workplace modifications, and professional support."
-  - question: "Are my assessment results private?"
-    answer: "Yes, all assessment data remains in your browser and is not transmitted, stored, or shared. Your privacy is completely protected."
-  - question: "Does this assessment replace professional mental health support?"
-    answer: "No, this is a screening tool for awareness and prevention. If you're experiencing severe stress, anxiety, or depression, please consult with qualified mental health professionals."
+- answer: This assessment is based on validated psychological research and workplace
+    wellness frameworks. While not a clinical diagnosis, it provides valuable insights
+    into burnout risk factors and early warning signs.
+  question: How accurate is this burnout risk assessment?
+- answer: The assessment typically takes 5-10 minutes to complete. Taking time to
+    thoughtfully consider each question will provide the most accurate results.
+  question: How long does the burnout assessment take?
+- answer: Yes, this assessment can help you understand the severity and specific areas
+    of concern. However, if you're experiencing severe symptoms, consider speaking
+    with a healthcare professional or counselor.
+  question: Should I take this assessment if I already feel burned out?
+- answer: We recommend monthly assessments during high-stress periods, or quarterly
+    for regular monitoring. Significant workplace changes warrant immediate reassessment.
+  question: How often should I assess my burnout risk?
+- answer: Managers can encourage team members to take the assessment individually.
+    However, respect privacy - burnout assessment should be voluntary and confidential.
+  question: Can managers use this assessment for their teams?
+- answer: 'High risk results indicate you should take immediate action: consider reducing
+    workload, improving work-life balance, seeking support, or discussing concerns
+    with your manager or HR.'
+  question: What should I do if my assessment shows high burnout risk?
+- answer: Absolutely! The assessment includes questions specifically relevant to remote
+    work challenges like isolation, boundary setting, and home office stress factors.
+  question: Is this assessment suitable for remote workers?
+- answer: Yes! Early detection and intervention can prevent burnout development. Even
+    established burnout can be addressed through lifestyle changes, workplace modifications,
+    and professional support.
+  question: Can burnout be prevented or reversed?
+- answer: Yes, all assessment data remains in your browser and is not transmitted,
+    stored, or shared. Your privacy is completely protected.
+  question: Are my assessment results private?
+- answer: No, this is a screening tool for awareness and prevention. If you're experiencing
+    severe stress, anxiety, or depression, please consult with qualified mental health
+    professionals.
+  question: Does this assessment replace professional mental health support?
+layout: calculator
+permalink: /en/calculators/employee-burnout-assessment/
+scripts:
+- /en/js/employee-burnout-assessment.js
+seo:
+  content: "<h2>Employee Burnout Risk Assessment - Workplace Wellness Calculator</h2>\n\
+    <p>This <strong>employee burnout risk assessment</strong> helps you evaluate your\
+    \ current stress levels, work-life balance, and overall wellbeing to identify\
+    \ potential burnout risks before they become serious problems.</p>\n\n<h3>What\
+    \ is Employee Burnout?</h3>\n<p>Burnout is a state of physical, emotional, and\
+    \ mental exhaustion caused by prolonged exposure to stressful work situations.\
+    \ It's characterized by three main dimensions:</p>\n<ul>\n  <li><strong>Emotional\
+    \ Exhaustion:</strong> Feeling drained and depleted of emotional resources</li>\n\
+    \  <li><strong>Depersonalization:</strong> Cynical attitudes toward work and colleagues</li>\n\
+    \  <li><strong>Reduced Personal Accomplishment:</strong> Feeling ineffective and\
+    \ questioning work value</li>\n</ul>\n\n<h3>Why Assess Burnout Risk?</h3>\n<ul>\n\
+    \  <li><strong>Early Detection:</strong> Identify warning signs before burnout\
+    \ becomes severe</li>\n  <li><strong>Personal Wellbeing:</strong> Protect your\
+    \ mental and physical health</li>\n  <li><strong>Career Longevity:</strong> Maintain\
+    \ productivity and job satisfaction over time</li>\n  <li><strong>Work-Life Balance:</strong>\
+    \ Improve overall quality of life</li>\n  <li><strong>Performance Optimization:</strong>\
+    \ Maintain peak performance and creativity</li>\n  <li><strong>Relationship Health:</strong>\
+    \ Prevent burnout from affecting personal relationships</li>\n</ul>\n\n<h3>Assessment\
+    \ Areas Covered:</h3>\n<ul>\n  <li><strong>\U0001F3E2 Workload & Demands:</strong>\
+    \ Job pressure, deadlines, and work volume</li>\n  <li><strong>⚖️ Work-Life Balance:</strong>\
+    \ Time management and personal life boundaries</li>\n  <li><strong>\U0001F4AA\
+    \ Control & Autonomy:</strong> Decision-making power and job flexibility</li>\n\
+    \  <li><strong>\U0001F91D Social Support:</strong> Relationships with colleagues\
+    \ and management</li>\n  <li><strong>\U0001F3AF Job Satisfaction:</strong> Meaning,\
+    \ purpose, and career fulfillment</li>\n  <li><strong>\U0001F634 Physical Symptoms:</strong>\
+    \ Sleep, energy levels, and health indicators</li>\n</ul>\n\n<h3>Perfect for:</h3>\n\
+    <ul>\n  <li><em>Working Professionals:</em> Regular self-assessment for career\
+    \ health</li>\n  <li><em>Managers & Leaders:</em> Understanding team burnout risks</li>\n\
+    \  <li><em>HR Professionals:</em> Identifying workplace wellness needs</li>\n\
+    \  <li><em>Remote Workers:</em> Managing isolation and work-life boundaries</li>\n\
+    \  <li><em>Healthcare Workers:</em> High-stress profession burnout prevention</li>\n\
+    \  <li><em>Students & Academics:</em> Managing academic and research stress</li>\n\
+    \  <li><em>Entrepreneurs:</em> Balancing business demands with personal wellbeing</li>\n\
+    </ul>\n\n<h3>Common Burnout Warning Signs:</h3>\n<ul>\n  <li><em>Physical:</em>\
+    \ Chronic fatigue, insomnia, frequent illness, headaches</li>\n  <li><em>Emotional:</em>\
+    \ Irritability, anxiety, depression, feeling overwhelmed</li>\n  <li><em>Behavioral:</em>\
+    \ Procrastination, isolation, increased absenteeism</li>\n  <li><em>Cognitive:</em>\
+    \ Difficulty concentrating, forgetfulness, indecisiveness</li>\n  <li><em>Interpersonal:</em>\
+    \ Conflicts with colleagues, withdrawal from social activities</li>\n</ul>\n\n\
+    <h3>Benefits of Regular Assessment:</h3>\n<ul>\n  <li><strong>Proactive Wellness:</strong>\
+    \ Address issues before they escalate</li>\n  <li><strong>Informed Decisions:</strong>\
+    \ Make career and lifestyle choices based on data</li>\n  <li><strong>Goal Setting:</strong>\
+    \ Establish realistic wellbeing and career goals</li>\n  <li><strong>Progress\
+    \ Tracking:</strong> Monitor improvements over time</li>\n  <li><strong>Resource\
+    \ Planning:</strong> Identify when to seek support or make changes</li>\n</ul>\n\
+    \n<p>After completing the assessment, you'll receive a detailed analysis of your\
+    \ burnout risk level along with personalized recommendations for improving your\
+    \ workplace wellness and preventing burnout.</p>\n"
+  description: Assess your risk of workplace burnout with our comprehensive calculator.
+    Evaluate stress levels, work-life balance, and mental health indicators for better
+    workplace wellness.
+  keywords:
+  - employee burnout assessment
+  - workplace stress calculator
+  - burnout risk assessment
+  - job stress evaluation
+  - work life balance test
+  - workplace wellness assessment
+  - employee mental health check
+  - job satisfaction assessment
+  - workplace burnout test
+  - stress level calculator
+  - occupational stress assessment
+  - workplace fatigue evaluation
+  - employee engagement assessment
+  - work stress indicator
+  - burnout syndrome test
+  - workplace mental health
+  - job burnout calculator
+  - professional stress assessment
+  - work exhaustion test
+  - career satisfaction evaluation
+  - workplace wellbeing check
+  - employee stress management
+  - job burnout prevention
+  - workplace resilience assessment
+  - occupational wellness test
+  - work related stress evaluation
+  - employee happiness index
+  - workplace psychology assessment
+  - job stress symptoms checker
+  - burnout recovery assessment
+  title: Employee Burnout Risk Assessment - Workplace Stress & Wellness Calculator
+title: Employee Burnout Risk Assessment - Workplace Wellness Calculator
 ---
 
 <div class="burnout-assessment-container">

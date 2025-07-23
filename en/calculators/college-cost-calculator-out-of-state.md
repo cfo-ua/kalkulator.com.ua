@@ -1,94 +1,105 @@
 ---
-layout: calculator
-title: "College Cost Calculator for Out-of-State Students"
-categories: [other]
-permalink: /en/calculators/college-cost-calculator-out-of-state/
-seo:
-  title: "Out-of-State College Cost Calculator | Calculate Total Education Expenses"
-  description: "Free college cost calculator for out-of-state and international students. Estimate tuition, housing, books, and living expenses. Compare costs across different universities and plan your education budget."
-  keywords:
-    - college cost calculator
-    - out of state tuition calculator
-    - university cost estimator
-    - college expense calculator
-    - education cost planner
-    - college budget calculator
-    - tuition fee calculator
-    - student living expenses
-    - college financial planning
-    - university cost comparison
-    - international student costs
-    - college affordability calculator
-    - education budget planner
-    - college expense estimator
-    - student cost breakdown
-  content: |
-    <h2>Out-of-State College Cost Calculator</h2>
-    <p>Planning to attend college outside your home state or as an international student? Our comprehensive college cost calculator helps you estimate the total cost of your education, including tuition, fees, housing, meals, books, and personal expenses.</p>
-
-    <h3>What Costs Are Included?</h3>
-    <p>Our calculator considers all major education-related expenses:</p>
-    <ul>
-      <li><strong>📚 Tuition & Academic Fees:</strong> Out-of-state or international tuition rates</li>
-      <li><strong>🏠 Housing & Board:</strong> Dormitory, apartment, or off-campus living costs</li>
-      <li><strong>📖 Books & Supplies:</strong> Textbooks, course materials, and academic supplies</li>
-      <li><strong>🚗 Transportation:</strong> Travel home, local transportation, and commuting costs</li>
-      <li><strong>💳 Personal Expenses:</strong> Entertainment, clothing, miscellaneous living costs</li>
-      <li><strong>💻 Technology:</strong> Laptop, software, and technology requirements</li>
-      <li><strong>🏥 Health Insurance:</strong> Required student health insurance plans</li>
-    </ul>
-
-    <h3>University Categories & Cost Ranges</h3>
-    <p>Different types of institutions have varying cost structures:</p>
-    <ul>
-      <li><strong>🏛️ Public Universities (Out-of-State):</strong> $25,000 - $45,000/year</li>
-      <li><strong>🎓 Private Universities:</strong> $35,000 - $75,000/year</li>
-      <li><strong>🏢 Community Colleges:</strong> $8,000 - $15,000/year</li>
-      <li><strong>🌟 Ivy League/Elite:</strong> $60,000 - $80,000/year</li>
-      <li><strong>💼 Professional Schools:</strong> $40,000 - $100,000/year</li>
-    </ul>
-
-    <h3>Cost-Saving Strategies</h3>
-    <p>Learn about ways to reduce your college expenses:</p>
-    <ul>
-      <li><strong>💰 Financial Aid:</strong> Scholarships, grants, and work-study programs</li>
-      <li><strong>📱 Used Books:</strong> Rent or buy used textbooks, digital alternatives</li>
-      <li><strong>🏠 Housing Options:</strong> Shared apartments vs. dormitories</li>
-      <li><strong>🍕 Meal Plans:</strong> Compare dining options and cooking arrangements</li>
-      <li><strong>🚌 Transportation:</strong> Public transit vs. car ownership</li>
-      <li><strong>💳 Student Discounts:</strong> Take advantage of student pricing on services</li>
-    </ul>
-
-    <h3>How to Use This Calculator</h3>
-    <p>Enter your specific situation including university type, location, housing preferences, and lifestyle choices. The calculator will provide:</p>
-    <ul>
-      <li>📊 Total annual cost breakdown</li>
-      <li>💰 4-year degree total cost estimation</li>
-      <li>📈 Cost comparison across different scenarios</li>
-      <li>💡 Money-saving recommendations</li>
-      <li>📋 Financial planning timeline</li>
-    </ul>
-
-    <p><strong>Note:</strong> Costs are estimates based on national averages and may vary by specific institution, location, and personal choices. Always check with universities for current tuition rates and fees.</p>
-scripts:
-  - /en/js/college-cost-calculator-out-of-state.js
+categories:
+- school
 faq:
-  - question: How much more expensive is out-of-state tuition compared to in-state?
-    answer: "Out-of-state students typically pay 2-3 times more than in-state residents. The difference ranges from $10,000-$30,000 annually at public universities. Private universities charge the same tuition regardless of residency."
-  - question: What's the total cost of a 4-year degree for out-of-state students?
-    answer: "Total costs range from $100,000-$320,000 for a 4-year degree, including tuition, housing, and living expenses. Public universities average $150,000-$200,000, while private universities average $200,000-$320,000."
-  - question: Are there ways to get in-state tuition as an out-of-state student?
-    answer: "Yes! Options include establishing residency (usually requires living in-state for 12 months), reciprocity agreements between states, merit scholarships that waive out-of-state fees, and some special programs for neighboring states."
-  - question: How do international student costs compare to out-of-state students?
-    answer: "International students often pay similar rates to out-of-state students, but may have additional costs like visa fees, international health insurance, and limited financial aid options. Some universities charge international students slightly higher rates."
-  - question: What's the most expensive part of college costs?
-    answer: "Tuition and fees typically represent 60-70% of total costs. Housing and board are the second largest expense (20-25%), followed by books, transportation, and personal expenses (10-15%)."
-  - question: How can I reduce college costs without sacrificing education quality?
-    answer: "Consider: starting at community college, living off-campus with roommates, buying used books, working part-time, applying for scholarships, choosing schools with good financial aid, and taking advantage of student discounts."
-  - question: Should I consider student loans for out-of-state college?
-    answer: "Carefully consider future earning potential vs. debt load. Limit borrowing to no more than expected first-year salary. Federal loans have better terms than private loans. Exhaust scholarships and grants first."
-  - question: How do living costs vary by location?
-    answer: "College towns in expensive cities (NYC, SF, Boston) can add $15,000-$25,000 annually in living costs. Rural or smaller cities may be $5,000-$10,000 cheaper. Research local cost of living carefully."
+- answer: Out-of-state students typically pay 2-3 times more than in-state residents.
+    The difference ranges from $10,000-$30,000 annually at public universities. Private
+    universities charge the same tuition regardless of residency.
+  question: How much more expensive is out-of-state tuition compared to in-state?
+- answer: Total costs range from $100,000-$320,000 for a 4-year degree, including
+    tuition, housing, and living expenses. Public universities average $150,000-$200,000,
+    while private universities average $200,000-$320,000.
+  question: What's the total cost of a 4-year degree for out-of-state students?
+- answer: Yes! Options include establishing residency (usually requires living in-state
+    for 12 months), reciprocity agreements between states, merit scholarships that
+    waive out-of-state fees, and some special programs for neighboring states.
+  question: Are there ways to get in-state tuition as an out-of-state student?
+- answer: International students often pay similar rates to out-of-state students,
+    but may have additional costs like visa fees, international health insurance,
+    and limited financial aid options. Some universities charge international students
+    slightly higher rates.
+  question: How do international student costs compare to out-of-state students?
+- answer: Tuition and fees typically represent 60-70% of total costs. Housing and
+    board are the second largest expense (20-25%), followed by books, transportation,
+    and personal expenses (10-15%).
+  question: What's the most expensive part of college costs?
+- answer: 'Consider: starting at community college, living off-campus with roommates,
+    buying used books, working part-time, applying for scholarships, choosing schools
+    with good financial aid, and taking advantage of student discounts.'
+  question: How can I reduce college costs without sacrificing education quality?
+- answer: Carefully consider future earning potential vs. debt load. Limit borrowing
+    to no more than expected first-year salary. Federal loans have better terms than
+    private loans. Exhaust scholarships and grants first.
+  question: Should I consider student loans for out-of-state college?
+- answer: College towns in expensive cities (NYC, SF, Boston) can add $15,000-$25,000
+    annually in living costs. Rural or smaller cities may be $5,000-$10,000 cheaper.
+    Research local cost of living carefully.
+  question: How do living costs vary by location?
+layout: calculator
+permalink: /en/calculators/college-cost-calculator-out-of-state/
+scripts:
+- /en/js/college-cost-calculator-out-of-state.js
+seo:
+  content: "<h2>Out-of-State College Cost Calculator</h2>\n<p>Planning to attend college\
+    \ outside your home state or as an international student? Our comprehensive college\
+    \ cost calculator helps you estimate the total cost of your education, including\
+    \ tuition, fees, housing, meals, books, and personal expenses.</p>\n\n<h3>What\
+    \ Costs Are Included?</h3>\n<p>Our calculator considers all major education-related\
+    \ expenses:</p>\n<ul>\n  <li><strong>\U0001F4DA Tuition & Academic Fees:</strong>\
+    \ Out-of-state or international tuition rates</li>\n  <li><strong>\U0001F3E0 Housing\
+    \ & Board:</strong> Dormitory, apartment, or off-campus living costs</li>\n  <li><strong>\U0001F4D6\
+    \ Books & Supplies:</strong> Textbooks, course materials, and academic supplies</li>\n\
+    \  <li><strong>\U0001F697 Transportation:</strong> Travel home, local transportation,\
+    \ and commuting costs</li>\n  <li><strong>\U0001F4B3 Personal Expenses:</strong>\
+    \ Entertainment, clothing, miscellaneous living costs</li>\n  <li><strong>\U0001F4BB\
+    \ Technology:</strong> Laptop, software, and technology requirements</li>\n  <li><strong>\U0001F3E5\
+    \ Health Insurance:</strong> Required student health insurance plans</li>\n</ul>\n\
+    \n<h3>University Categories & Cost Ranges</h3>\n<p>Different types of institutions\
+    \ have varying cost structures:</p>\n<ul>\n  <li><strong>\U0001F3DB️ Public Universities\
+    \ (Out-of-State):</strong> $25,000 - $45,000/year</li>\n  <li><strong>\U0001F393\
+    \ Private Universities:</strong> $35,000 - $75,000/year</li>\n  <li><strong>\U0001F3E2\
+    \ Community Colleges:</strong> $8,000 - $15,000/year</li>\n  <li><strong>\U0001F31F\
+    \ Ivy League/Elite:</strong> $60,000 - $80,000/year</li>\n  <li><strong>\U0001F4BC\
+    \ Professional Schools:</strong> $40,000 - $100,000/year</li>\n</ul>\n\n<h3>Cost-Saving\
+    \ Strategies</h3>\n<p>Learn about ways to reduce your college expenses:</p>\n\
+    <ul>\n  <li><strong>\U0001F4B0 Financial Aid:</strong> Scholarships, grants, and\
+    \ work-study programs</li>\n  <li><strong>\U0001F4F1 Used Books:</strong> Rent\
+    \ or buy used textbooks, digital alternatives</li>\n  <li><strong>\U0001F3E0 Housing\
+    \ Options:</strong> Shared apartments vs. dormitories</li>\n  <li><strong>\U0001F355\
+    \ Meal Plans:</strong> Compare dining options and cooking arrangements</li>\n\
+    \  <li><strong>\U0001F68C Transportation:</strong> Public transit vs. car ownership</li>\n\
+    \  <li><strong>\U0001F4B3 Student Discounts:</strong> Take advantage of student\
+    \ pricing on services</li>\n</ul>\n\n<h3>How to Use This Calculator</h3>\n<p>Enter\
+    \ your specific situation including university type, location, housing preferences,\
+    \ and lifestyle choices. The calculator will provide:</p>\n<ul>\n  <li>\U0001F4CA\
+    \ Total annual cost breakdown</li>\n  <li>\U0001F4B0 4-year degree total cost\
+    \ estimation</li>\n  <li>\U0001F4C8 Cost comparison across different scenarios</li>\n\
+    \  <li>\U0001F4A1 Money-saving recommendations</li>\n  <li>\U0001F4CB Financial\
+    \ planning timeline</li>\n</ul>\n\n<p><strong>Note:</strong> Costs are estimates\
+    \ based on national averages and may vary by specific institution, location, and\
+    \ personal choices. Always check with universities for current tuition rates and\
+    \ fees.</p>\n"
+  description: Free college cost calculator for out-of-state and international students.
+    Estimate tuition, housing, books, and living expenses. Compare costs across different
+    universities and plan your education budget.
+  keywords:
+  - college cost calculator
+  - out of state tuition calculator
+  - university cost estimator
+  - college expense calculator
+  - education cost planner
+  - college budget calculator
+  - tuition fee calculator
+  - student living expenses
+  - college financial planning
+  - university cost comparison
+  - international student costs
+  - college affordability calculator
+  - education budget planner
+  - college expense estimator
+  - student cost breakdown
+  title: Out-of-State College Cost Calculator | Calculate Total Education Expenses
+title: College Cost Calculator for Out-of-State Students
 ---
 <form id="college-cost-form" autocomplete="off">
   <div class="form-section">
