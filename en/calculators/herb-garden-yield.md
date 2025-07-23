@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Herb Garden Yield Estimator"
-categories: [other]
+categories: [environment]
 seo:
   title: "Herb Garden Yield Calculator | Herb Production Estimator"
   description: "Calculate expected yields from your herb garden. Estimate herb production, plan harvest schedules, and determine garden size for your needs."
