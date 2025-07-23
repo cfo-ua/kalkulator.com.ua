@@ -221,8 +221,31 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateStrengthDisplay(score, analysis, entropy, crackTime) {
     document.getElementById("strength-score").textContent = `${Math.round(score)}%`;
     document.getElementById("password-length").textContent = `${analysis.length} characters`;
-    document.getElementById("password-entropy").textContent = `${Math.round(entropy)} bits`;
     document.getElementById("crack-time").textContent = crackTime;
+
+    // Update entropy display
+    const entropyDisplay = document.getElementById("entropy-display");
+    const entropyLevel = document.getElementById("entropy-level");
+    
+    entropyDisplay.textContent = `${Math.round(entropy)} bits`;
+    
+    let entropyClass, entropyText;
+    if (entropy >= 80) {
+      entropyClass = "excellent";
+      entropyText = "🟢 Excellent Entropy";
+    } else if (entropy >= 60) {
+      entropyClass = "high";
+      entropyText = "🔵 High Entropy";
+    } else if (entropy >= 40) {
+      entropyClass = "medium";
+      entropyText = "🟡 Medium Entropy";
+    } else {
+      entropyClass = "low";
+      entropyText = "🔴 Low Entropy";
+    }
+    
+    entropyLevel.textContent = entropyText;
+    entropyLevel.className = `entropy-level ${entropyClass}`;
 
     const strengthCard = document.getElementById("strength-card");
     const strengthLevel = document.getElementById("strength-level");
@@ -312,45 +335,66 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSuggestions(password, analysis, score) {
     const suggestions = [];
     
+    // Calculate entropy for suggestions
+    let charSpace = 0;
+    if (analysis.hasLowercase) charSpace += 26;
+    if (analysis.hasUppercase) charSpace += 26;
+    if (analysis.hasNumbers) charSpace += 10;
+    if (analysis.hasSymbols) charSpace += 32;
+    const entropy = password.length * Math.log2(charSpace || 1);
+    
+    // Entropy-based suggestions
+    if (entropy < 40) {
+      suggestions.push({
+        type: "critical",
+        text: `Low password entropy (${Math.round(entropy)} bits). Increase to 60+ bits for strong security by adding length and character diversity.`
+      });
+    } else if (entropy < 60) {
+      suggestions.push({
+        type: "important",
+        text: `Moderate entropy (${Math.round(entropy)} bits). Aim for 60+ bits for better protection against attacks.`
+      });
+    }
+    
     if (password.length < 12) {
       suggestions.push({
         type: "critical",
-        text: "Increase password length to at least 12 characters for better security."
+        text: "Increase password length to at least 12 characters. Each additional character exponentially increases entropy."
       });
     }
     
     if (!analysis.hasUppercase) {
       suggestions.push({
         type: "important",
-        text: "Add uppercase letters (A-Z) to increase character diversity."
+        text: "Add uppercase letters (A-Z) to increase character diversity and entropy."
       });
     }
     
     if (!analysis.hasLowercase) {
       suggestions.push({
         type: "important",
-        text: "Add lowercase letters (a-z) to increase character diversity."
+        text: "Add lowercase letters (a-z) to increase character diversity and entropy."
       });
     }
     
     if (!analysis.hasNumbers) {
       suggestions.push({
         type: "important",
-        text: "Add numbers (0-9) to strengthen your password."
+        text: "Add numbers (0-9) to strengthen your password and increase entropy."
       });
     }
     
     if (!analysis.hasSymbols) {
       suggestions.push({
         type: "important",
-        text: "Add special symbols (!@#$%^&*) for maximum security."
+        text: "Add special symbols (!@#$%^&*) for maximum security and entropy."
       });
     }
     
     if (isCommonPassword(password)) {
       suggestions.push({
         type: "critical",
-        text: "Avoid common passwords. Use a unique combination of characters."
+        text: "Avoid common passwords. Use a unique combination to maximize entropy and unpredictability."
       });
     }
     
@@ -358,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (pattern.test(password)) {
         suggestions.push({
           type: "important",
-          text: "Avoid predictable patterns like sequential characters or repeated letters."
+          text: "Avoid predictable patterns. They reduce entropy and make passwords easier to crack."
         });
       }
     });
@@ -366,7 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (suggestions.length === 0) {
       suggestions.push({
         type: "helpful",
-        text: "Excellent! Your password meets security best practices."
+        text: `Excellent! Your password has ${Math.round(entropy)} bits of entropy and meets security best practices.`
       });
     }
     
