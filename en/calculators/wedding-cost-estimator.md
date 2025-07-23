@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Wedding Cost Estimator based on Wedding Type and Guests"
-categories: [financial]
+categories: [entertainment]
 permalink: /en/calculators/wedding-cost-estimator/
 seo:
   title: "Wedding Cost Calculator  -  Wedding Budget Planner, Wedding Expenses by Guest Count and Style"
