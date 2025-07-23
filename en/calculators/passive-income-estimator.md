@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Passive Income Stream Estimator"
-categories: [other]
+categories: [financial]
 permalink: /en/calculators/passive-income-estimator/
 seo:
   title: "Passive Income Calculator - Estimate Multiple Revenue Streams & Financial Freedom"
