@@ -24,7 +24,12 @@ seo:
 ---
 
 <h1>Онлайн калькулятори українською 🇺🇦</h1>
-<p class="intro">Понад 100 онлайн калькуляторів для щоденних розрахунків. Всі інструменти українською мовою, прості та зручні. <b>Оберіть категорію</b> та знайдіть потрібний вам калькулятор:</p>
+<p class="intro">Понад 100 онлайн калькуляторів для щоденних розрахунків. Всі інструменти українською мовою, прості та зручні. <b>Знайдіть калькулятор</b> за назвою або <b>оберіть категорію</b>:</p>
+
+<div class="calculator-search">
+  <input type="text" id="calculatorSearch" placeholder="Почніть вводити назву калькулятора..." autocomplete="off">
+  <div id="searchResults" class="search-results"></div>
+</div>
 
 <div class="categories" id="categories">
   <a class="category-card" href="/categories/school/">
