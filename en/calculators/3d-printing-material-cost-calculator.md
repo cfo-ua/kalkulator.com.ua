@@ -35,7 +35,6 @@ faq:
     80% of printing needs at much lower cost. Choose based on functional requirements.
   question: Are expensive specialty filaments worth the cost?
 layout: calculator
-permalink: /en/calculators/3d-printing-material-cost-calculator/
 scripts:
 - /en/js/3d-printing-material-cost-calculator.js
 seo:
