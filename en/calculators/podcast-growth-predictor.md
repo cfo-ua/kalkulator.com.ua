@@ -33,7 +33,6 @@ faq:
     the broader category.
   question: Should I start a podcast in a competitive niche?
 layout: calculator
-permalink: /en/calculators/podcast-growth-predictor/
 scripts:
 - /en/js/podcast-growth-predictor.js
 seo:

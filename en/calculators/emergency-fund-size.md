@@ -2,7 +2,6 @@
 layout: calculator
 title: "Emergency Fund Size Calculator"
 categories: [financial]
-permalink: /en/calculators/emergency-fund-size/
 seo:
   title: "Emergency Fund Calculator  -  How Much Emergency Savings, Financial Safety Net Size"
   description: "Calculate ideal emergency fund size based on expenses, income stability, and personal situation. Determine how many months of expenses to save for financial security."

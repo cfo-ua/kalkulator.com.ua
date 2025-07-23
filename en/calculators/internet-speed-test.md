@@ -30,7 +30,6 @@ faq:
     testing at different times, or contacting your internet service provider.
   question: What should I do if my speed is slow?
 layout: calculator
-permalink: /en/calculators/internet-speed-test/
 scripts:
 - /en/js/internet-speed-test.js
 seo:

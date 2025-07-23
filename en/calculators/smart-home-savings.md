@@ -2,7 +2,6 @@
 layout: calculator
 title: "Smart Home Device Cost vs. Savings Calculator"
 categories: [other]
-permalink: /en/calculators/smart-home-savings/
 seo:
   title: "Smart Home ROI Calculator - Device Costs vs Energy Savings Analysis"
   description: "Calculate smart home device return on investment. Compare upfront costs vs long-term energy savings, convenience benefits, and payback periods for smart devices."

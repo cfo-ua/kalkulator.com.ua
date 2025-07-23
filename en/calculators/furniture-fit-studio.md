@@ -2,7 +2,6 @@
 layout: calculator
 title: "Furniture Fit Calculator for Studio Apartments"
 categories: [other]
-permalink: /en/calculators/furniture-fit-studio/
 seo:
   title: "Studio Apartment Furniture Fit Calculator - Space Planning Tool for Small Homes"
   description: "Free furniture fit calculator for studio apartments. Plan optimal furniture placement, calculate space utilization, and visualize room layouts for maximum functionality."

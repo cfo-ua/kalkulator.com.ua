@@ -2,7 +2,6 @@
 layout: calculator
 title: "Freelancer Hourly Rate Calculator"
 categories: [other]
-permalink: /en/calculators/freelancer-hourly-rate/
 seo:
   title: "Freelancer Hourly Rate Calculator - Price Your Services Competitively"
   description: "Free freelancer hourly rate calculator with comprehensive analysis. Determine optimal pricing based on expenses, profit goals, and market positioning for sustainable freelancing business."

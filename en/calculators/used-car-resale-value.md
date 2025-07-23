@@ -2,7 +2,6 @@
 layout: calculator
 title: "Used Car Resale Value Estimator"
 categories: [financial]
-permalink: /en/calculators/used-car-resale-value/
 seo:
   title: "Used Car Resale Value Estimator  -  Car Depreciation Calculator, Vehicle Value Prediction"
   description: "Calculate your car's future resale value and depreciation. Estimate vehicle worth based on make, model, age, mileage, and condition for better financial planning."

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Ideal Portion Size Calculator for Weight Loss"
 categories: [health]
-permalink: /en/calculators/ideal-portion-size-weight-loss/
 seo:
   title: "Ideal Portion Size Calculator for Weight Loss  -  Smart Food Portions for Healthy Weight Management"
   description: "Calculate ideal portion sizes for weight loss with this comprehensive portion control calculator. Get personalized food portions based on your weight loss goals, metabolic needs, and dietary preferences for sustainable weight management."

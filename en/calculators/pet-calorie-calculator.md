@@ -2,7 +2,6 @@
 layout: calculator
 title: "Pet Calorie Calculator | Calculate Daily Calories for Dogs & Cats"
 categories: [other]
-permalink: /en/calculators/pet-calorie-calculator/
 seo:
   title: "Pet Calorie Calculator | Dog & Cat Daily Calorie Needs Online"
   description: "Free pet calorie calculator to determine daily calorie requirements for dogs, cats, and other pets. Calculate based on weight, age, activity level, and health status for optimal pet nutrition."

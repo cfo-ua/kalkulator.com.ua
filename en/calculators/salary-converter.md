@@ -2,7 +2,6 @@
 layout: calculator
 title: "Salary Period Converter"
 categories: [financial]
-permalink: /en/calculators/salary-converter/
 seo:
   title: "Salary Period Converter  -  Annual, Monthly, Weekly, Daily, Hourly Salary Calculator"
   description: "Convert your salary between different periods: annual, monthly, weekly, daily, hourly. Enter your salary amount and period to calculate equivalent rates in all other formats. Perfect for job comparisons and budget planning."

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Quadratic Equation Calculator"
 categories: [school]
-permalink: /en/calculators/quadratic/
 seo:
   title: "Quadratic Equation Calculator | School Math Calculators"
   description: "Solve quadratic equations online and find roots using a simple calculator for students. Calculate discriminant and solutions for ax² + bx + c = 0."

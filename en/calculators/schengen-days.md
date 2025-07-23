@@ -29,7 +29,6 @@ faq:
     and difficulties with future visa applications. Always comply with the rules.
   question: What happens if I overstay?
 layout: calculator
-permalink: /en/calculators/schengen-days/
 scripts:
 - /en/js/schengen-days.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Home Energy Audit Calculator"
 categories: [environment]
-permalink: /en/calculators/home-energy-audit/
 seo:
   title: "Home Energy Audit Calculator - Energy Efficiency Analysis & Savings Tool"
   description: "Free home energy audit calculator. Analyze energy usage, identify efficiency improvements, calculate potential savings, and plan home energy upgrades."

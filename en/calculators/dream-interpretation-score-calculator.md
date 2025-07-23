@@ -35,7 +35,6 @@ faq:
     your conscious mind is more active, but the experience itself is significant.
   question: How do lucid dreams differ in interpretation?
 layout: calculator
-permalink: /en/calculators/dream-interpretation-score-calculator/
 scripts:
 - /en/js/dream-interpretation-score-calculator.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Number to Text Converter"
 categories: [financial]
-permalink: /en/calculators/number-to-text/
 seo:
   title: "Number to Text Converter  -  Convert Numbers to Words, Number to Written Form"
   description: "Convert numbers to text (written form) online. Transform digits into words for documents, checks, contracts, and forms. Free number to text conversion tool."

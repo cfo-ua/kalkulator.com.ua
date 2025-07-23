@@ -2,7 +2,6 @@
 layout: calculator
 title: "E-commerce Inventory Turnover Calculator"
 categories: [business]
-permalink: /en/calculators/ecommerce-inventory-turnover/
 seo:
   title: "E-commerce Inventory Turnover Calculator  -  Optimize Stock Management"
   description: "Free e-commerce inventory turnover calculator. Calculate inventory turnover ratio, days in inventory, and optimize stock levels. Improve cash flow and reduce holding costs with data-driven inventory management."

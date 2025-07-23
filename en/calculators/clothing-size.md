@@ -27,7 +27,6 @@ faq:
     a US size 8 is often equivalent to a European size 38-40, depending on the brand.
   question: What's the difference between European and US sizing?
 layout: calculator
-permalink: /en/calculators/clothing-size/
 scripts:
 - /en/js/clothing-size.js
 seo:

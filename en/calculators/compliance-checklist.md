@@ -35,7 +35,6 @@ faq:
     address compliance requirements and data location.
   question: How does cloud adoption affect compliance?
 layout: calculator
-permalink: /en/calculators/compliance-checklist/
 scripts:
 - /en/js/compliance-checklist.js
 seo:

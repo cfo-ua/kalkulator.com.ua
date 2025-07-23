@@ -2,7 +2,6 @@
 layout: calculator
 title: "Packing List Generator for Hiking Trips"
 categories: [travel]
-permalink: /en/calculators/packing-list-hiking/
 seo:
   title: "Hiking Packing List Generator - Custom Gear Calculator for Outdoor Adventures"
   description: "Free hiking packing list generator. Create personalized gear lists based on trip duration, weather, difficulty, and hiking style. Never forget essential equipment again."

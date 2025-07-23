@@ -36,7 +36,6 @@ faq:
     Research local cost of living carefully.
   question: How do living costs vary by location?
 layout: calculator
-permalink: /en/calculators/college-cost-calculator-out-of-state/
 scripts:
 - /en/js/college-cost-calculator-out-of-state.js
 seo:

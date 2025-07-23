@@ -2,7 +2,6 @@
 layout: calculator
 title: "Conception Date Calculator"
 categories: [time-date]
-permalink: /en/calculators/conception-date/
 seo:
   title: "Conception Date Calculator  -  Calculate Date of Conception from Birth Date"
   description: "Calculate the approximate conception date of your baby based on the birth date. Uses the standard 40-week pregnancy term with adjustment options. Free online tool for parents and healthcare."

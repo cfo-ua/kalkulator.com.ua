@@ -33,7 +33,6 @@ faq:
     than definitive future prediction.
   question: Can zodiac signs predict the future?
 layout: calculator
-permalink: /en/calculators/astrology-sign/
 scripts:
 - /en/js/astrology-sign.js
 seo:

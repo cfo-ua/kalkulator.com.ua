@@ -2,7 +2,6 @@
 layout: calculator
 title: "Fitness Age Calculator"
 categories: [health]
-permalink: /en/calculators/fitness-age/
 seo:
   title: "Fitness Age Calculator  -  Biological Age Assessment Based on Cardiovascular Health & Physical Fitness"
   description: "Calculate your fitness age based on VO2 max, resting heart rate, physical activity, and health indicators. Discover if you're biologically younger or older than your chronological age with this comprehensive fitness assessment."

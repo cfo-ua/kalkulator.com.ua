@@ -2,7 +2,6 @@
 layout: calculator
 title: "401k Calculator - Retirement Savings Estimator"
 categories: [financial]
-permalink: /en/calculators/401k-calculator/
 seo:
   title: "401k Calculator - Retirement Savings & Contribution Estimator | Free Tool"
   description: "Calculate your 401k retirement savings growth with employer matching, contribution limits, and investment returns. Plan your retirement with our comprehensive 401k calculator."

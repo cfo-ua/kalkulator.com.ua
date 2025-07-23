@@ -2,7 +2,6 @@
 layout: calculator
 title: "Startup Cost Calculator for Tech Startups"
 categories: [business]
-permalink: /en/calculators/startup-cost-calculator/
 seo:
   title: "Startup Cost Calculator  -  Tech Startup Budget Planning Tool Online"
   description: "Free startup cost calculator for tech entrepreneurs. Calculate initial investment, ongoing expenses, and funding requirements. Plan your tech startup budget with comprehensive cost analysis and cash flow projections."

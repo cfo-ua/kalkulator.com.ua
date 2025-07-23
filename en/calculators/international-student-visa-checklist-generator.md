@@ -39,7 +39,6 @@ faq:
     are done independently.'
   question: Should I use an immigration consultant or lawyer?
 layout: calculator
-permalink: /en/calculators/international-student-visa-checklist-generator/
 scripts:
 - /en/js/international-student-visa-checklist-generator.js
 seo:

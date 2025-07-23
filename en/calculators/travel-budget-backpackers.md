@@ -30,7 +30,6 @@ faq:
     regularly but have backup payment methods like cards and small USD bills.
   question: How much cash should I carry while backpacking?
 layout: calculator
-permalink: /en/calculators/travel-budget-backpackers/
 scripts:
 - /en/js/travel-budget-backpackers.js
 seo:

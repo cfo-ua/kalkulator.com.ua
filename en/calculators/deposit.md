@@ -2,7 +2,6 @@
 layout: calculator
 title: "Deposit Calculator"
 categories: [financial]
-permalink: /en/calculators/deposit/
 seo:
   title: "Deposit Calculator  -  Bank Deposit Interest, Savings Account Returns, CD Calculator"
   description: "Calculate bank deposit interest, certificate of deposit returns, and savings account growth. Compare deposit rates, monthly additions, and interest payout options. Free financial planning tool."

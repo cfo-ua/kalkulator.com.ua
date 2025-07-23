@@ -35,7 +35,6 @@ faq:
     and roles where you're likely to thrive.
   question: Can I use numerology for career guidance?
 layout: calculator
-permalink: /en/calculators/numerology-life-path/
 scripts:
 - /en/js/numerology-life-path.js
 seo:

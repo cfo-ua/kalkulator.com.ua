@@ -2,7 +2,6 @@
 layout: calculator
 title: "Cryptocurrency Price Prediction Calculator - Technical Analysis"
 categories: [other]
-permalink: /en/calculators/crypto-price-prediction/
 seo:
   title: "Cryptocurrency Price Prediction Calculator - Technical Analysis Tool"
   description: "Predict cryptocurrency prices using technical analysis indicators including RSI, MACD, moving averages, and support/resistance levels. Educational tool for crypto trading analysis."

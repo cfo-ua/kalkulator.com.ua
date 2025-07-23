@@ -32,7 +32,6 @@ faq:
     at their largest due to daily swelling.
   question: When is the best time to measure my feet?
 layout: calculator
-permalink: /en/calculators/shoe-size/
 scripts:
 - /en/js/shoe-size.js
 seo:

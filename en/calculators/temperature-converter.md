@@ -2,7 +2,6 @@
 layout: calculator
 title: "Temperature Converter Online"
 categories: [conversion]
-permalink: /en/calculators/temperature-converter/
 seo:
   title: "Temperature Converter  -  Celsius, Fahrenheit, Kelvin | Online Calculator"
   description: "Convert temperature between Celsius, Fahrenheit, and Kelvin scales. Perfect for cooking, science, weather, travel, and academic use. Fast and accurate conversions."

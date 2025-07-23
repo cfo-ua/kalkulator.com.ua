@@ -35,7 +35,6 @@ faq:
     between the two birth charts.
   question: Is this the same as a full synastry reading?
 layout: calculator
-permalink: /en/calculators/astrology-compatibility/
 scripts:
 - /en/js/astrology-compatibility.js
 seo:

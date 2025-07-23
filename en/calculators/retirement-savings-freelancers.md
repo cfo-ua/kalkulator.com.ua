@@ -2,7 +2,6 @@
 layout: calculator
 title: "Retirement Savings Calculator for Freelancers"
 categories: [financial]
-permalink: /en/calculators/retirement-savings-freelancers/
 seo:
   title: "Retirement Savings Calculator for Freelancers  -  Self-Employed Retirement Planning, Irregular Income"
   description: "Calculate retirement savings for freelancers and self-employed workers. Plan for retirement with irregular income, SEP-IRA, Solo 401k, and variable earnings."

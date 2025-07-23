@@ -35,7 +35,6 @@ faq:
     and extend your timeline to 6-8 months.
   question: How should I adjust my study plan if I'm working full-time?
 layout: calculator
-permalink: /en/calculators/study-time-optimizer/
 scripts:
 - /en/js/study-time-optimizer.js
 seo:

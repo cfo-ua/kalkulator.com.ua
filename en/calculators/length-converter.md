@@ -2,7 +2,6 @@
 layout: calculator
 title: "Length Converter Online"
 categories: [conversion]
-permalink: /en/calculators/length-converter/
 seo:
   title: "Length Converter  -  Meters, Feet, Inches, Miles, Kilometers | Online Calculator"
   description: "Convert between length units: meters, centimeters, feet, inches, yards, miles, kilometers. Perfect for construction, engineering, travel, and education."

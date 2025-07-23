@@ -2,7 +2,6 @@
 layout: calculator
 title: "Social Media Earnings Calculator (TikTok, Instagram)"
 categories: [other]
-permalink: /en/calculators/social-media-earnings/
 seo:
   title: "TikTok Instagram Earnings Calculator - Social Media Revenue Estimator"
   description: "Calculate earnings from TikTok, Instagram, and other social platforms. Estimate revenue from brand partnerships, creator funds, and monetization features."

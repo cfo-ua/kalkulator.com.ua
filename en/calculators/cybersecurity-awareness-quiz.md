@@ -38,7 +38,6 @@ faq:
     more about the topics you missed.
   question: What should I do if I score poorly on the quiz?
 layout: calculator
-permalink: /en/calculators/cybersecurity-awareness-quiz/
 scripts:
 - /en/js/cybersecurity-awareness-quiz.js
 seo:

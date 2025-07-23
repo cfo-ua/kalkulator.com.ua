@@ -36,7 +36,6 @@ faq:
     about maintenance power for accessing devices and periodic updates.
   question: How do I calculate total power consumption for an IoT network?
 layout: calculator
-permalink: /en/calculators/iot-device-power-consumption-estimator/
 scripts:
 - /en/js/iot-device-power-consumption-estimator.js
 seo:

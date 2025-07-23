@@ -2,7 +2,6 @@
 layout: calculator
 title: "Savings Goal Calculator"
 categories: [financial]
-permalink: /en/calculators/savings-goal/
 seo:
   title: "Savings Goal Calculator  -  How Much to Save Monthly, Financial Goal Planning, Budget Calculator"
   description: "Calculate how much to save monthly to reach your financial goals. Plan for vacation, car, house down payment, emergency fund. Free savings and budget planning tool."

@@ -40,7 +40,6 @@ faq:
     to guide your efforts.
   question: How do I prioritize improvements based on the assessment?
 layout: calculator
-permalink: /en/calculators/cybersecurity-compliance-assessment/
 scripts:
 - /en/js/cybersecurity-compliance-assessment.js
 seo:

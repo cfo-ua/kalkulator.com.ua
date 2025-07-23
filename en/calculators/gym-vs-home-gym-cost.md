@@ -2,7 +2,6 @@
 layout: calculator
 title: "Gym Membership Cost vs. Home Gym Calculator"
 categories: [other]
-permalink: /en/calculators/gym-vs-home-gym-cost/
 seo:
   title: "Gym Membership vs Home Gym Cost Calculator - Fitness Investment Comparison Tool"
   description: "Free gym vs home gym cost calculator. Compare membership fees, equipment costs, and long-term savings to make the best fitness investment decision."

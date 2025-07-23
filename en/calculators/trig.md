@@ -2,7 +2,6 @@
 layout: calculator
 title: "Trigonometric Functions Calculator"
 categories: [school]
-permalink: /en/calculators/trig/
 seo:
   title: "Trigonometry Calculator | School Math Calculators"
   description: "Calculate values of sin, cos, tan, and cot for any angle in degrees. Online trigonometry calculator for students and math learners."

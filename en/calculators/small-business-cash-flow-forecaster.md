@@ -2,7 +2,6 @@
 layout: calculator
 title: "Small Business Cash Flow Forecaster"
 categories: [business]
-permalink: /en/calculators/small-business-cash-flow-forecaster/
 seo:
   title: "Small Business Cash Flow Forecaster  -  12-Month Cash Flow Projection Tool"
   description: "Free small business cash flow forecaster. Create 12-month cash flow projections, identify cash gaps, and plan working capital needs. Optimize cash flow management with seasonal analysis."

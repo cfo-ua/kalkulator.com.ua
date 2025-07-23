@@ -2,7 +2,6 @@
 layout: calculator
 title: "OnlyFans Earnings Calculator - Calculate Potential Income & Revenue"
 categories: [other]
-permalink: /en/calculators/onlyfans-earnings-calculator/
 seo:
   title: "OnlyFans Earnings Calculator - Calculate Monthly Revenue, Tips & Income Potential"
   description: "Calculate potential OnlyFans earnings from subscriptions, tips, PPV messages, and custom content. See realistic income projections, platform fees, and tax considerations for content creators."

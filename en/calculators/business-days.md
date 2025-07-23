@@ -2,7 +2,6 @@
 layout: calculator
 title: "Business Days Calculator"
 categories: [time-date]
-permalink: /en/calculators/business-days/
 seo:
   title: "Business Days Calculator  -  Count Working Days and Weekends Between Dates"
   description: "Calculate business days, weekends, and total days between any two dates. Perfect for project planning, vacation scheduling, payroll calculations, and deadline management."

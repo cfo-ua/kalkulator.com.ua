@@ -43,7 +43,6 @@ faq:
     competition if you do win.
   question: Is it worth playing when the jackpot gets very large?
 layout: calculator
-permalink: /en/calculators/lottery-probability-calculator/
 scripts:
 - /en/js/lottery-probability-calculator.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Text Analyzer - Count Letters, Words, Sentences Online"
 categories: [other]
-permalink: /en/calculators/text-analyzer/
 seo:
   title: "Text Analyzer Calculator - Count Letters, Words, Sentences Online Free"
   description: "Analyze your text instantly! Count exact letters, total characters, words, sentences, and paragraphs. Perfect for essays, social media posts, SEO content, and writing projects."

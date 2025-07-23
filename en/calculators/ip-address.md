@@ -26,7 +26,6 @@ faq:
     for a new assignment, or use mobile hotspot.
   question: How can I change my IP address?
 layout: calculator
-permalink: /en/calculators/ip-address/
 scripts:
 - /en/js/ip-address.js
 seo:

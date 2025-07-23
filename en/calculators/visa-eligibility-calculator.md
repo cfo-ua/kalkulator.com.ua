@@ -37,7 +37,6 @@ faq:
     and check current processing times on official websites.'
   question: How long does visa processing typically take?
 layout: calculator
-permalink: /en/calculators/visa-eligibility-calculator/
 scripts:
 - /en/js/visa-eligibility-calculator.js
 seo:

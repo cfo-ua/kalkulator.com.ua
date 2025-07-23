@@ -2,7 +2,6 @@
 layout: calculator
 title: "Date Difference Calculator"
 categories: [time-date]
-permalink: /en/calculators/date-difference/
 seo:
   title: "Date Difference Calculator  -  Calculate Days, Months, Years Between Dates"
   description: "Calculate the exact difference between two dates in days, months, and years. Perfect for age calculation, event planning, project timelines, and date countdown."

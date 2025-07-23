@@ -2,7 +2,6 @@
 layout: calculator
 title: "Sphere Surface Area and Volume Calculator"
 categories: [school]
-permalink: /en/calculators/sphere/
 seo:
   title: "Sphere Surface Area and Volume Calculator | School Math Calculators"
   description: "Online calculator for computing sphere surface area and volume given radius. Formulas and quick calculations for school geometry."

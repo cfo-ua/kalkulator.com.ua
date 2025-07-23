@@ -2,7 +2,6 @@
 layout: calculator
 title: "Food Weight Calculator by Quantity"
 categories: [health]
-permalink: /en/calculators/food-weight-by-quantity/
 seo:
   title: "Food Weight Calculator  -  How Much Do Fruits & Vegetables Weigh by Quantity"
   description: "Calculate the total weight of fruits, vegetables, and foods by quantity. Find out how much apples, bananas, oranges, and other foods weigh when buying by the piece. Perfect for online grocery shopping and meal planning."

@@ -41,7 +41,6 @@ faq:
     each statement to specific programs.
   question: How important is the statement of purpose?
 layout: calculator
-permalink: /en/calculators/graduate-school-acceptance-rate-predictor/
 scripts:
 - /en/js/graduate-school-acceptance-rate-predictor.js
 seo:

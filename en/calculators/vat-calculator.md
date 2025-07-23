@@ -2,7 +2,6 @@
 layout: calculator
 title: "VAT Calculator"
 categories: [business]
-permalink: /en/calculators/vat-calculator/
 seo:
   title: "VAT Calculator  -  Add or Remove VAT Tax from Prices Online"
   description: "Calculate prices with VAT, without VAT, or determine VAT rate. Enter any two values and instantly get the third. Perfect for businesses, accountants, and consumers dealing with value-added tax calculations."

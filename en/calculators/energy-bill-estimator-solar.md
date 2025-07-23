@@ -29,7 +29,6 @@ faq:
     costs.
   question: What government incentives are available for solar panels?
 layout: calculator
-permalink: /en/calculators/energy-bill-estimator-solar/
 scripts:
 - /en/js/energy-bill-estimator-solar.js
 seo:

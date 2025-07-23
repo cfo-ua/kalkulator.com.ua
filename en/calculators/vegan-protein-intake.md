@@ -2,7 +2,6 @@
 layout: calculator
 title: "Vegan Protein Intake Calculator"
 categories: [health]
-permalink: /en/calculators/vegan-protein-intake/
 seo:
   title: "Vegan Protein Intake Calculator  -  Plant-Based Protein Requirements & Sources for Optimal Health"
   description: "Calculate your daily vegan protein needs based on weight, activity level, and goals. Get personalized recommendations for plant-based protein sources, meal planning, and optimal amino acid profiles for vegans and vegetarians."

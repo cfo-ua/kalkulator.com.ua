@@ -2,7 +2,6 @@
 layout: calculator
 title: "Daily Calorie Needs Calculator"
 categories: [health]
-permalink: /en/calculators/calorie-needs/
 seo:
   title: "Daily Calorie Needs Calculator - TDEE, BMR & Metabolism Calculator Online"
   description: "Calculate your daily calorie requirements using proven TDEE and BMR formulas. Determine how many calories you need per day for weight loss, gain, or maintenance based on age, gender, activity level, and metabolism."

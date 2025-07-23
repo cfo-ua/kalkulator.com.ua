@@ -17,7 +17,6 @@ faq:
     the system.
   question: When is mechanical energy conserved?
 layout: calculator
-permalink: /en/calculators/energy/
 scripts:
 - /en/js/energy.js
 seo:

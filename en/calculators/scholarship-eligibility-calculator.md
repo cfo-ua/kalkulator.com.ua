@@ -35,7 +35,6 @@ faq:
     Take time to tailor each application.'
   question: What are the most common mistakes in scholarship applications?
 layout: calculator
-permalink: /en/calculators/scholarship-eligibility-calculator/
 scripts:
 - /en/js/scholarship-eligibility-calculator.js
 seo:

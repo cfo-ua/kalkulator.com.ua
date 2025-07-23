@@ -2,7 +2,6 @@
 layout: calculator
 title: "Ohm's Law Calculator"
 categories: [school]
-permalink: /en/calculators/ohm/
 seo:
   title: "Ohm's Law Calculator | School Physics Calculators"
   description: "Online calculator for calculating voltage, current or resistance using Ohm's law formula (U = I × R). Perfect for students and electrical calculations."

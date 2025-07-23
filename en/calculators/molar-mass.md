@@ -2,7 +2,6 @@
 layout: calculator
 title: "Molar Mass Calculator"
 categories: [school]
-permalink: /en/calculators/molar-mass/
 seo:
   title: "Molar Mass Calculator | School Chemistry Calculators"
   description: "Calculate molar mass of chemical compounds online by chemical formula. Perfect for students, teachers, and scientists."

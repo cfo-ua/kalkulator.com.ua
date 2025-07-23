@@ -27,7 +27,6 @@ faq:
     time zone settings in your regular tools match your calculations.
   question: What tools integrate well with this calculator?
 layout: calculator
-permalink: /en/calculators/timezone-converter-nomads/
 scripts:
 - /en/js/timezone-converter-nomads.js
 seo:

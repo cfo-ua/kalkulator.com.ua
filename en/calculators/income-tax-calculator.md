@@ -2,7 +2,6 @@
 layout: calculator
 title: "Income Tax Calculator - Federal & State Tax Estimator"
 categories: [financial]
-permalink: /en/calculators/income-tax-calculator/
 seo:
   title: "Income Tax Calculator - Federal & State Tax Calculator | Free Tool"
   description: "Calculate your income taxes with our comprehensive tax calculator. Estimate federal and state taxes, deductions, and refunds. Updated for current tax brackets and rules."

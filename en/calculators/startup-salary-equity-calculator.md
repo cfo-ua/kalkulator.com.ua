@@ -2,7 +2,6 @@
 layout: calculator
 title: "Employee Salary Calculator for Startups with Equity Options"
 categories: [business]
-permalink: /en/calculators/startup-salary-equity-calculator/
 seo:
   title: "Startup Salary & Equity Calculator  -  Employee Compensation Planning Tool"
   description: "Free startup employee salary and equity calculator. Calculate competitive compensation packages including base salary, equity options, and total compensation value for startup hiring and retention."

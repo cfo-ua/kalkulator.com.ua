@@ -40,7 +40,6 @@ faq:
     improvements without major renovation costs.'
   question: Is it expensive to implement Feng Shui changes?
 layout: calculator
-permalink: /en/calculators/feng-shui-home-layout-optimizer/
 scripts:
 - /en/js/feng-shui-home-layout-optimizer.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Weight Converter Online"
 categories: [conversion]
-permalink: /en/calculators/weight-converter/
 seo:
   title: "Weight Converter  -  Kilograms, Pounds, Ounces, Grams, Tons | Online Calculator"
   description: "Convert weight between metric and imperial units: kilograms, grams, pounds, ounces, tons. Perfect for cooking, fitness, shipping, and international business."

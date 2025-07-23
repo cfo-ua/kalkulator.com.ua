@@ -2,7 +2,6 @@
 layout: calculator
 title: "Anxiety Management Plan Generator"
 categories: [health]
-permalink: /en/calculators/anxiety-management-plan/
 seo:
   title: "Anxiety Management Plan Generator  -  Personalized Anxiety Relief Strategies & Coping Techniques"
   description: "Generate a personalized anxiety management plan with tailored coping strategies, breathing exercises, and therapeutic techniques. Get customized anxiety relief methods based on your specific symptoms and triggers."
