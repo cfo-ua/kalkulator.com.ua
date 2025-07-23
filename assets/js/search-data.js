@@ -2,347 +2,347 @@ window.calculatorSearchData = {
   "uk": [
     {
       "title": "Калькулятор потужності кондиціонера",
-      "url": "/calculators/ac-power/",
+      "url": "/calculators/ac-power.html",
       "filename": "ac-power"
     },
     {
       "title": "Калькулятор віку онлайн",
-      "url": "/calculators/age/",
+      "url": "/calculators/age.html",
       "filename": "age"
     },
     {
       "title": "Конвертер площі онлайн",
-      "url": "/calculators/area-converter/",
+      "url": "/calculators/area-converter.html",
       "filename": "area-converter"
     },
     {
       "title": "Калькулятор астрологічного знаку за датою народження",
-      "url": "/calculators/astrology-sign/",
+      "url": "/calculators/astrology-sign.html",
       "filename": "astrology-sign"
     },
     {
       "title": "Калькулятор довжини плінтуса",
-      "url": "/calculators/baseboard/",
+      "url": "/calculators/baseboard.html",
       "filename": "baseboard"
     },
     {
       "title": "Калькулятор потужності котла",
-      "url": "/calculators/boiler-power/",
+      "url": "/calculators/boiler-power.html",
       "filename": "boiler-power"
     },
     {
       "title": "Калькулятор точки беззбитковості",
-      "url": "/calculators/break-even/",
+      "url": "/calculators/break-even.html",
       "filename": "break-even"
     },
     {
       "title": "Калькулятор цегли",
-      "url": "/calculators/bricks/",
+      "url": "/calculators/bricks.html",
       "filename": "bricks"
     },
     {
       "title": "Калькулятор робочих і вихідних днів",
-      "url": "/calculators/business-days/",
+      "url": "/calculators/business-days.html",
       "filename": "business-days"
     },
     {
       "title": "Калькулятор прибутку бізнесу",
-      "url": "/calculators/business-profit/",
+      "url": "/calculators/business-profit.html",
       "filename": "business-profit"
     },
     {
       "title": "Калькулятор витрати калорій на активність",
-      "url": "/calculators/calorie-burn/",
+      "url": "/calculators/calorie-burn.html",
       "filename": "calorie-burn"
     },
     {
       "title": "Калькулятор добової норми калорій",
-      "url": "/calculators/calorie-needs/",
+      "url": "/calculators/calorie-needs.html",
       "filename": "calorie-needs"
     },
     {
       "title": "Калькулятор розміру одягу",
-      "url": "/calculators/clothing-size/",
+      "url": "/calculators/clothing-size.html",
       "filename": "clothing-size"
     },
     {
       "title": "Калькулятор складних відсотків",
-      "url": "/calculators/compound-interest/",
+      "url": "/calculators/compound-interest.html",
       "filename": "compound-interest"
     },
     {
       "title": "Калькулятор дати зачаття дитини",
-      "url": "/calculators/conception-date/",
+      "url": "/calculators/conception-date.html",
       "filename": "conception-date"
     },
     {
       "title": "Калькулятор бетону",
-      "url": "/calculators/concrete/",
+      "url": "/calculators/concrete.html",
       "filename": "concrete"
     },
     {
       "title": "Калькулятор валют онлайн",
-      "url": "/calculators/currency/",
+      "url": "/calculators/currency.html",
       "filename": "currency"
     },
     {
       "title": "Калькулятор різниці між датами",
-      "url": "/calculators/date-difference/",
+      "url": "/calculators/date-difference.html",
       "filename": "date-difference"
     },
     {
       "title": "Калькулятор дати за кількістю днів",
-      "url": "/calculators/date-plus-days/",
+      "url": "/calculators/date-plus-days.html",
       "filename": "date-plus-days"
     },
     {
       "title": "Депозитний калькулятор",
-      "url": "/calculators/deposit/",
+      "url": "/calculators/deposit.html",
       "filename": "deposit"
     },
     {
       "title": "Калькулятор похідної функції",
-      "url": "/calculators/derivative/",
+      "url": "/calculators/derivative.html",
       "filename": "derivative"
     },
     {
       "title": "Калькулятор розведення розчину",
-      "url": "/calculators/dilution/",
+      "url": "/calculators/dilution.html",
       "filename": "dilution"
     },
     {
       "title": "Калькулятор електричної потужності",
-      "url": "/calculators/electric-load/",
+      "url": "/calculators/electric-load.html",
       "filename": "electric-load"
     },
     {
       "title": "Калькулятор закону збереження енергії",
-      "url": "/calculators/energy/",
+      "url": "/calculators/energy.html",
       "filename": "energy"
     },
     {
       "title": "Калькулятор калорій у їжі",
-      "url": "/calculators/food-calories/",
+      "url": "/calculators/food-calories.html",
       "filename": "food-calories"
     },
     {
       "title": "Калькулятор ваги за кількістю продуктів",
-      "url": "/calculators/food-weight-by-quantity/",
+      "url": "/calculators/food-weight-by-quantity.html",
       "filename": "food-weight-by-quantity"
     },
     {
       "title": "Калькулятор податків ФОП",
-      "url": "/calculators/fop-taxes/",
+      "url": "/calculators/fop-taxes.html",
       "filename": "fop-taxes"
     },
     {
       "title": "Калькулятор періоду і частоти коливань",
-      "url": "/calculators/frequency/",
+      "url": "/calculators/frequency.html",
       "filename": "frequency"
     },
     {
       "title": "Калькулятор вартості пального",
-      "url": "/calculators/fuel-cost/",
+      "url": "/calculators/fuel-cost.html",
       "filename": "fuel-cost"
     },
     {
       "title": "Калькулятор ідеального газу (PV=nRT)",
-      "url": "/calculators/ideal-gas/",
+      "url": "/calculators/ideal-gas.html",
       "filename": "ideal-gas"
     },
     {
       "title": "Тест швидкості інтернету — Онлайн перевірка швидкості завантаження",
-      "url": "/calculators/internet-speed-test/",
+      "url": "/calculators/internet-speed-test.html",
       "filename": "internet-speed-test"
     },
     {
       "title": "Яка у мене IP адреса — Перевірити свою IP адресу онлайн",
-      "url": "/calculators/ip-address/",
+      "url": "/calculators/ip-address.html",
       "filename": "ip-address"
     },
     {
       "title": "Калькулятор ламінату",
-      "url": "/calculators/laminate/",
+      "url": "/calculators/laminate.html",
       "filename": "laminate"
     },
     {
       "title": "Конвертер довжини онлайн",
-      "url": "/calculators/length-converter/",
+      "url": "/calculators/length-converter.html",
       "filename": "length-converter"
     },
     {
       "title": "Кредитний калькулятор",
-      "url": "/calculators/loan/",
+      "url": "/calculators/loan.html",
       "filename": "loan"
     },
     {
       "title": "Калькулятор маржі та націнки",
-      "url": "/calculators/markup-margin/",
+      "url": "/calculators/markup-margin.html",
       "filename": "markup-margin"
     },
     {
       "title": "Калькулятор середнього арифметичного",
-      "url": "/calculators/mean/",
+      "url": "/calculators/mean.html",
       "filename": "mean"
     },
     {
       "title": "Калькулятор молярної маси речовини",
-      "url": "/calculators/molar-mass/",
+      "url": "/calculators/molar-mass.html",
       "filename": "molar-mass"
     },
     {
       "title": "Перетворення числа у пропис",
-      "url": "/calculators/number-to-text/",
+      "url": "/calculators/number-to-text.html",
       "filename": "number-to-text"
     },
     {
       "title": "Калькулятор закону Ома",
-      "url": "/calculators/ohm/",
+      "url": "/calculators/ohm.html",
       "filename": "ohm"
     },
     {
       "title": "Калькулятор прибутковості ОВДП",
-      "url": "/calculators/ovdp-yield/",
+      "url": "/calculators/ovdp-yield.html",
       "filename": "ovdp-yield"
     },
     {
       "title": "Калькулятор відсотків",
-      "url": "/calculators/percent/",
+      "url": "/calculators/percent.html",
       "filename": "percent"
     },
     {
       "title": "Калькулятор pH розчину",
-      "url": "/calculators/ph/",
+      "url": "/calculators/ph.html",
       "filename": "ph"
     },
     {
       "title": "Калькулятор штукатурки",
-      "url": "/calculators/plaster/",
+      "url": "/calculators/plaster.html",
       "filename": "plaster"
     },
     {
       "title": "Калькулятор квадратного рівняння",
-      "url": "/calculators/quadratic/",
+      "url": "/calculators/quadratic.html",
       "filename": "quadratic"
     },
     {
       "title": "Калькулятор площі та периметру прямокутника",
-      "url": "/calculators/rectangle/",
+      "url": "/calculators/rectangle.html",
       "filename": "rectangle"
     },
     {
       "title": "Калькулятор вартості ремонту",
-      "url": "/calculators/renovation-cost/",
+      "url": "/calculators/renovation-cost.html",
       "filename": "renovation-cost"
     },
     {
       "title": "Калькулятор: Оренда чи Купівля квартири",
-      "url": "/calculators/rent-vs-buy/",
+      "url": "/calculators/rent-vs-buy.html",
       "filename": "rent-vs-buy"
     },
     {
       "title": "Калькулятор ROAS — Повернення на рекламні витрати",
-      "url": "/calculators/roas/",
+      "url": "/calculators/roas.html",
       "filename": "roas"
     },
     {
       "title": "Калькулятор ROI — Повернення інвестицій онлайн",
-      "url": "/calculators/roi/",
+      "url": "/calculators/roi.html",
       "filename": "roi"
     },
     {
       "title": "Калькулятор площі кімнати",
-      "url": "/calculators/room-area/",
+      "url": "/calculators/room-area.html",
       "filename": "room-area"
     },
     {
       "title": "Калькулятор зарплати по періодах",
-      "url": "/calculators/salary-converter/",
+      "url": "/calculators/salary-converter.html",
       "filename": "salary-converter"
     },
     {
       "title": "Калькулятор зарплати та податків",
-      "url": "/calculators/salary-taxes/",
+      "url": "/calculators/salary-taxes.html",
       "filename": "salary-taxes"
     },
     {
       "title": "Калькулятор заощаджень до цілі",
-      "url": "/calculators/savings-goal/",
+      "url": "/calculators/savings-goal.html",
       "filename": "savings-goal"
     },
     {
       "title": "Калькулятор днів перебування в Шенгенській зоні",
-      "url": "/calculators/schengen-days/",
+      "url": "/calculators/schengen-days.html",
       "filename": "schengen-days"
     },
     {
       "title": "Калькулятор розміру взуття",
-      "url": "/calculators/shoe-size/",
+      "url": "/calculators/shoe-size.html",
       "filename": "shoe-size"
     },
     {
       "title": "Конвертер швидкості онлайн",
-      "url": "/calculators/speed-converter/",
+      "url": "/calculators/speed-converter.html",
       "filename": "speed-converter"
     },
     {
       "title": "Калькулятор площі та обʼєму кулі",
-      "url": "/calculators/sphere/",
+      "url": "/calculators/sphere.html",
       "filename": "sphere"
     },
     {
       "title": "Конвертер температури онлайн",
-      "url": "/calculators/temperature-converter/",
+      "url": "/calculators/temperature-converter.html",
       "filename": "temperature-converter"
     },
     {
       "title": "Калькулятор кількості плитки",
-      "url": "/calculators/tile/",
+      "url": "/calculators/tile.html",
       "filename": "tile"
     },
     {
       "title": "Конвертер часу онлайн",
-      "url": "/calculators/time-converter/",
+      "url": "/calculators/time-converter.html",
       "filename": "time-converter"
     },
     {
       "title": "Калькулятор тригонометричних функцій",
-      "url": "/calculators/trig/",
+      "url": "/calculators/trig.html",
       "filename": "trig"
     },
     {
       "title": "Калькулятор юніт-економіки",
-      "url": "/calculators/unit-economics/",
+      "url": "/calculators/unit-economics.html",
       "filename": "unit-economics"
     },
     {
       "title": "Калькулятор ПДВ",
-      "url": "/calculators/vat-calculator/",
+      "url": "/calculators/vat-calculator.html",
       "filename": "vat-calculator"
     },
     {
       "title": "Конвертер об’єму (ємності) онлайн",
-      "url": "/calculators/volume-converter/",
+      "url": "/calculators/volume-converter.html",
       "filename": "volume-converter"
     },
     {
       "title": "Калькулятор площі стін",
-      "url": "/calculators/wall-area/",
+      "url": "/calculators/wall-area.html",
       "filename": "wall-area"
     },
     {
       "title": "Калькулятор шпалер",
-      "url": "/calculators/wallpaper/",
+      "url": "/calculators/wallpaper.html",
       "filename": "wallpaper"
     },
     {
       "title": "Конвертер ваги онлайн",
-      "url": "/calculators/weight-converter/",
+      "url": "/calculators/weight-converter.html",
       "filename": "weight-converter"
     },
     {
       "title": "Калькулятор сили тяжіння",
-      "url": "/calculators/weight/",
+      "url": "/calculators/weight.html",
       "filename": "weight"
     }
   ],
