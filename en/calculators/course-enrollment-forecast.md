@@ -1,6 +1,6 @@
 ---
 categories:
-- school
+- business
 faq:
 - answer: Predictions are based on industry averages and typical success patterns.
     Actual results vary significantly based on course quality, marketing effectiveness,
