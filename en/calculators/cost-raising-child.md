@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Cost of Raising a Child Calculator"
-categories: [financial]
+categories: [other]
 permalink: /en/calculators/cost-raising-child/
 seo:
   title: "Cost of Raising a Child Calculator  -  Baby Expenses, Childcare Costs, Family Budget Planning"
