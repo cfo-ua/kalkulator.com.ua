@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Ideal Weight Calculator - Calculate Your Perfect Body Weight"
-categories: [other]
+categories: [health]
 permalink: /en/calculators/ideal-weight-calculator/
 seo:
   title: "Ideal Weight Calculator - Calculate Perfect Body Weight Using Multiple Formulas"
