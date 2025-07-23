@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Packing List Generator for Hiking Trips"
-categories: [other]
+categories: [travel]
 permalink: /en/calculators/packing-list-hiking/
 seo:
   title: "Hiking Packing List Generator - Custom Gear Calculator for Outdoor Adventures"
