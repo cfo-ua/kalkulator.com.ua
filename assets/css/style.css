@@ -2711,6 +2711,14 @@ button.chart-range-btn:active {
   box-shadow: 0 1px 4px rgba(60, 60, 60, 0.09) inset;
 }
 
+/* Active button pressed state - ensure active buttons maintain their styling when pressed */
+button.chart-range-btn.active:active {
+  background: var(--accent-hover); /* slightly darker blue but still maintain active appearance */
+  color: #fff;
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(60, 60, 60, 0.09) inset;
+}
+
 
 
 /* --- Modern Food Calculator Row Design (2024 Improved) --- */
