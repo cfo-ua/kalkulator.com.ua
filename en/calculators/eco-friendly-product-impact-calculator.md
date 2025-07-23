@@ -35,7 +35,6 @@ faq:
     momentum and motivation.
   question: Are there apps or tools to track my ongoing environmental impact?
 layout: calculator
-permalink: /en/calculators/eco-friendly-product-impact-calculator/
 scripts:
 - /en/js/eco-friendly-product-impact-calculator.js
 seo:

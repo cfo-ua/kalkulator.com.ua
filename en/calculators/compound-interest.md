@@ -2,7 +2,6 @@
 layout: calculator
 title: "Compound Interest Calculator"
 categories: [financial]
-permalink: /en/calculators/compound-interest/
 seo:
   title: "Compound Interest Calculator  -  Investment Growth, Compound Returns, Wealth Building"
   description: "Calculate compound interest returns on investments, deposits, and savings. See how your money grows with regular contributions, compounding frequency, and time. Free online tool for financial planning."

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Volume Converter Online"
 categories: [conversion]
-permalink: /en/calculators/volume-converter/
 seo:
   title: "Volume Converter  -  Liters, Gallons, Cubic Meters, Fluid Ounces | Online Calculator"
   description: "Convert volume units between metric and imperial systems: liters, milliliters, gallons, cubic meters, fluid ounces, pints, quarts. Perfect for cooking, chemistry, and construction."

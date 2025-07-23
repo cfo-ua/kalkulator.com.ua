@@ -2,7 +2,6 @@
 layout: calculator
 title: "Bad Habit Cost Calculator - Calculate the True Cost of Smoking, Drinking & More"
 categories: [other]
-permalink: /en/calculators/bad-habit-cost-calculator/
 seo:
   title: "Bad Habit Cost Calculator - Calculate Financial Impact of Smoking, Drinking & Habits"
   description: "Calculate the true financial cost of bad habits like smoking, drinking, fast food, and more. See daily, weekly, monthly, and yearly expenses plus 10-year projections to motivate positive change."

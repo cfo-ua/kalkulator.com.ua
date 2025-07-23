@@ -35,7 +35,6 @@ faq:
     more.
   question: How far in advance should I book cross-country movers?
 layout: calculator
-permalink: /en/calculators/moving-cost-cross-country/
 scripts:
 - /en/js/moving-cost-cross-country.js
 seo:

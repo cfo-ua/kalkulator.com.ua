@@ -2,7 +2,6 @@
 layout: calculator
 title: "Ideal Gas Law Calculator (PV=nRT)"
 categories: [school]
-permalink: /en/calculators/ideal-gas/
 seo:
   title: "Ideal Gas Law Calculator  -  PV=nRT Formula | School Calculators"
   description: "Calculate pressure, volume, amount of substance, or temperature using PV=nRT formula. Convenient online calculator for chemistry and physics."

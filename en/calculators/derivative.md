@@ -2,7 +2,6 @@
 layout: calculator
 title: "Derivative Calculator"
 categories: [school]
-permalink: /en/calculators/derivative/
 seo:
   title: "Derivative Calculator Online  -  Find Derivative of Expression"
   description: "Calculate the derivative of any function online: polynomials, trigonometric, logarithmic, exponential expressions. Supports sin, log, powers, fractions, abs."

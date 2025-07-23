@@ -2,7 +2,6 @@
 layout: calculator
 title: "ROI Calculator  -  Return on Investment"
 categories: [financial]
-permalink: /en/calculators/roi/
 seo:
   title: "ROI Calculator  -  Calculate Return on Investment Percentage Online"
   description: "Free ROI calculator to measure investment profitability. Enter investment amount and total return to instantly calculate ROI percentage. Perfect for business decisions, marketing campaigns, and investment analysis."

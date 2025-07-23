@@ -2,7 +2,6 @@
 layout: calculator
 title: "Markup and Margin Calculator"
 categories: [business]
-permalink: /en/calculators/markup-margin/
 seo:
   title: "Markup vs Margin Calculator  -  Profit Calculation Tool for Business Pricing"
   description: "Calculate markup, margin, profit, cost, or selling price by entering any two parameters. Essential business tool for pricing strategies, retail management, and profitability analysis."

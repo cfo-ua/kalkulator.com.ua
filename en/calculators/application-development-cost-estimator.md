@@ -36,7 +36,6 @@ faq:
     development. You can add features iteratively based on user feedback.
   question: Is it cheaper to build an MVP first?
 layout: calculator
-permalink: /en/calculators/application-development-cost-estimator/
 scripts:
 - /en/js/application-development-cost-estimator.js
 seo:

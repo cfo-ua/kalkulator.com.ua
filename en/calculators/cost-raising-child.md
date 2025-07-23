@@ -2,7 +2,6 @@
 layout: calculator
 title: "Cost of Raising a Child Calculator"
 categories: [other]
-permalink: /en/calculators/cost-raising-child/
 seo:
   title: "Cost of Raising a Child Calculator  -  Baby Expenses, Childcare Costs, Family Budget Planning"
   description: "Calculate the total cost of raising a child from birth to 18. Includes childcare, education, healthcare, food, clothing, and activities. Plan your family budget with realistic child-rearing expenses."

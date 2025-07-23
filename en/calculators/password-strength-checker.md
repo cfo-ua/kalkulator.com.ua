@@ -39,7 +39,6 @@ faq:
     Select your target policy and the generator will create compliant passwords automatically.
   question: Can the generator create passwords for specific requirements?
 layout: calculator
-permalink: /en/calculators/password-strength-checker/
 scripts:
 - /en/js/password-strength-checker.js
 seo:

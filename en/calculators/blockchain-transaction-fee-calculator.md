@@ -36,7 +36,6 @@ faq:
     environments (like arbitrage), higher priority fees increase success chances.
   question: What are MEV and priority fees?
 layout: calculator
-permalink: /en/calculators/blockchain-transaction-fee-calculator/
 scripts:
 - /en/js/blockchain-transaction-fee-calculator.js
 seo:

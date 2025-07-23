@@ -32,7 +32,6 @@ faq:
     gradually.
   question: What's the best approach for small businesses starting carbon management?
 layout: calculator
-permalink: /en/calculators/carbon-offset-business/
 scripts:
 - /en/js/carbon-offset-business.js
 seo:

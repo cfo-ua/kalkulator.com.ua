@@ -2,7 +2,6 @@
 layout: calculator
 title: "Business Profit Calculator"
 categories: [business]
-permalink: /en/calculators/business-profit/
 seo:
   title: "Business Profit Calculator  -  Revenue Requirements for Target Profit Online"
   description: "Calculate required sales revenue to achieve your target profit. Enter desired monthly profit and business margin to determine daily, weekly, monthly and annual revenue targets for your business."

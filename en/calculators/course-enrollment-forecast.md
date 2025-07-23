@@ -33,7 +33,6 @@ faq:
     with practical exercises.
   question: How long should I make my online course?
 layout: calculator
-permalink: /en/calculators/course-enrollment-forecast/
 scripts:
 - /en/js/course-enrollment-forecast.js
 seo:

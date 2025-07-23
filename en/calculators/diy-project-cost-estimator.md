@@ -2,7 +2,6 @@
 layout: calculator
 title: "DIY Project Material Cost Estimator"
 categories: [other]
-permalink: /en/calculators/diy-project-cost-estimator/
 seo:
   title: "DIY Project Material Cost Estimator - Home Improvement Budget Calculator"
   description: "Free DIY project cost calculator. Estimate materials, tools, and total costs for home improvement projects. Plan budgets for flooring, painting, decking, and more."

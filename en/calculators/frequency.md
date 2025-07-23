@@ -2,7 +2,6 @@
 layout: calculator
 title: "Period and Frequency Calculator"
 categories: [school]
-permalink: /en/calculators/frequency/
 seo:
   title: "Period and Frequency Calculator Online"
   description: "Quickly calculate period (T) or frequency (f) using the formula T = 1/f. Convenient online calculator for physics and engineering students."

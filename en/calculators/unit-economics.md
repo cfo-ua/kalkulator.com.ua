@@ -2,7 +2,6 @@
 layout: calculator
 title: "Unit Economics Calculator"
 categories: [business]
-permalink: /en/calculators/unit-economics/
 seo:
   title: "Unit Economics Calculator  -  Analyze Product Profitability and Break-Even"
   description: "Calculate unit economics including contribution margin, break-even point, and profit projections. Essential tool for startups, SaaS businesses, and entrepreneurs to analyze product profitability and scalability."

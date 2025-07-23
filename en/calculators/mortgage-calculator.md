@@ -2,7 +2,6 @@
 layout: calculator
 title: "Mortgage Calculator - Monthly Payment & Amortization Schedule"
 categories: [financial]
-permalink: /en/calculators/mortgage-calculator/
 seo:
   title: "Mortgage Calculator - Monthly Payment, Interest & Amortization Schedule | Free Tool"
   description: "Calculate monthly mortgage payments, total interest, and view amortization schedules. Compare loan terms, down payments, and PMI with our comprehensive mortgage calculator."

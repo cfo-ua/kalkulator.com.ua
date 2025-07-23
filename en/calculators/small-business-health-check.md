@@ -2,7 +2,6 @@
 layout: calculator
 title: "Small Business Health Check Calculator"
 categories: [other]
-permalink: /en/calculators/small-business-health-check/
 seo:
   title: "Small Business Health Check Calculator - Assess Your Business Performance Online"
   description: "Comprehensive small business health assessment tool. Evaluate your business across key areas including finances, operations, marketing, and growth potential. Get actionable insights and improvement recommendations."

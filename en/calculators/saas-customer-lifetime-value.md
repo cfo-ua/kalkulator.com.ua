@@ -2,7 +2,6 @@
 layout: calculator
 title: "Customer Lifetime Value Calculator for SaaS Businesses"
 categories: [business]
-permalink: /en/calculators/saas-customer-lifetime-value/
 seo:
   title: "SaaS CLV Calculator  -  Customer Lifetime Value for Subscription Businesses"
   description: "Free SaaS customer lifetime value (CLV) calculator. Calculate CLV, customer acquisition cost (CAC), and LTV:CAC ratio for subscription businesses. Optimize pricing and retention strategies with comprehensive SaaS metrics."

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Depression Symptom Tracker"
 categories: [health]
-permalink: /en/calculators/depression-symptom-tracker/
 seo:
   title: "Depression Symptom Tracker  -  Depression Assessment & Mood Monitoring Tool"
   description: "Track depression symptoms with this comprehensive depression assessment tool. Monitor mood patterns, severity levels, and symptoms over time with personalized depression management strategies and professional guidance recommendations."

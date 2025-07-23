@@ -2,7 +2,6 @@
 layout: calculator
 title: "pH Calculator"
 categories: [school]
-permalink: /en/calculators/ph/
 seo:
   title: "pH Calculator  -  Calculate Acidity or Alkalinity of Solution Online"
   description: "Determine pH or pOH of a solution from H⁺ or OH⁻ ion concentration. Online calculator for chemistry students and teachers. Identify acidic, basic, or neutral solutions."

@@ -39,7 +39,6 @@ faq:
     evolving compensation standards in your field.
   question: How often should I reassess my career path and salary?
 layout: calculator
-permalink: /en/calculators/career-path-salary-estimator/
 scripts:
 - /en/js/career-path-salary-estimator.js
 seo:

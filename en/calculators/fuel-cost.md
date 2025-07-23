@@ -2,7 +2,6 @@
 layout: calculator
 title: "Fuel Cost Calculator"
 categories: [travel]
-permalink: /en/calculators/fuel-cost/
 seo:
   title: "Fuel Cost Calculator  -  Trip Cost, Mileage, Consumption, Price Calculator"
   description: "Dynamic fuel calculator: enter any two or three values (consumption, mileage, liters, price, or total cost) and get accurate calculations for the rest. Simple and flexible tool for drivers and businesses."

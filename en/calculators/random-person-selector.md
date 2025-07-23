@@ -34,7 +34,6 @@ faq:
     Every participant has an exactly equal chance of being chosen.
   question: Is there a way to weight the selection towards certain people?
 layout: calculator
-permalink: /en/calculators/random-person-selector/
 scripts:
 - /en/js/random-person-selector.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Age Calculator Online"
 categories: [time-date]
-permalink: /en/calculators/age/
 seo:
   title: "Age Calculator  -  Calculate Exact Age from Date of Birth Online"
   description: "Calculate your exact age in years, months, and days instantly. Perfect for school enrollment, pension applications, medical forms, insurance documents, and official paperwork."

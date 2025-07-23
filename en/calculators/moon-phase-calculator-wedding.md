@@ -37,7 +37,6 @@ faq:
     but consult local astronomical data for precise timing.
   question: How accurate is moon phase timing for wedding planning?
 layout: calculator
-permalink: /en/calculators/moon-phase-calculator-wedding/
 scripts:
 - /en/js/moon-phase-calculator-wedding.js
 seo:

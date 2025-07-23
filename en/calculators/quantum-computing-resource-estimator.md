@@ -35,7 +35,6 @@ faq:
     with classical computing.
   question: What programming languages are used for quantum computing?
 layout: calculator
-permalink: /en/calculators/quantum-computing-resource-estimator/
 scripts:
 - /en/js/quantum-computing-resource-estimator.js
 seo:

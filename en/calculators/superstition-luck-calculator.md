@@ -35,7 +35,6 @@ faq:
     bonding experiences, as long as they don't become obsessive.
   question: Are there any benefits to believing in superstitions?
 layout: calculator
-permalink: /en/calculators/superstition-luck-calculator/
 scripts:
 - /en/js/superstition-luck-calculator.js
 seo:

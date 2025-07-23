@@ -31,7 +31,6 @@ faq:
     is performed locally in your browser for complete privacy.
   question: Does the calculator store my readings?
 layout: calculator
-permalink: /en/calculators/tarot-card-reading/
 scripts:
 - /en/js/tarot-card-reading.js
 seo:

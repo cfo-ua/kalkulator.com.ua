@@ -2,7 +2,6 @@
 layout: calculator
 title: "Average Calculator"
 categories: [school]
-permalink: /en/calculators/mean/
 seo:
   title: "Average Calculator Online  -  Calculate Mean of Numbers"
   description: "Calculate the arithmetic mean of a set of numbers online: enter numbers separated by commas, and the calculator will show the average. Perfect for school, statistics, and finance."

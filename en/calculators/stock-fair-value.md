@@ -2,7 +2,6 @@
 layout: calculator
 title: "Stock Fair Value Calculator - Graham Intelligent Investor Method"
 categories: [other]
-permalink: /en/calculators/stock-fair-value/
 seo:
   title: "Stock Fair Value Calculator - Benjamin Graham Intelligent Investor Method"
   description: "Calculate stock intrinsic value using Benjamin Graham's proven methodology from The Intelligent Investor. Evaluate P/E ratios, growth rates, and financial strength for informed investment decisions."

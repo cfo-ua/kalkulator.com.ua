@@ -2,7 +2,6 @@
 layout: calculator
 title: "Freelancer Project Pricing Calculator"
 categories: [other]
-permalink: /en/calculators/project-pricing-calculator/
 seo:
   title: "Project Pricing Calculator for Freelancers - Estimate Costs Based on Historical Data"
   description: "Free freelancer project pricing calculator. Estimate project costs based on historical data, complexity, timeline, and requirements. Smart pricing for consultants and freelancers."

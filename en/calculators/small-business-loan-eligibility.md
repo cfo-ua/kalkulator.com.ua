@@ -2,7 +2,6 @@
 layout: calculator
 title: "Small Business Loan Eligibility Calculator"
 categories: [business]
-permalink: /en/calculators/small-business-loan-eligibility/
 seo:
   title: "Small Business Loan Eligibility Calculator  -  Check Qualification Online"
   description: "Free small business loan eligibility calculator. Check loan qualification, estimate approval chances, and compare loan options based on credit score, revenue, and business profile. Get personalized funding recommendations."

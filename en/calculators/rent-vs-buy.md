@@ -2,7 +2,6 @@
 layout: calculator
 title: "Rent vs Buy Calculator"
 categories: [financial]
-permalink: /en/calculators/rent-vs-buy/
 seo:
   title: "Rent vs Buy Calculator  -  Should I Rent or Buy Property, Real Estate Investment Analysis"
   description: "Compare renting vs buying property costs over time. Analyze rental expenses against investment returns from property purchase funds. Make informed real estate decisions with our financial calculator."

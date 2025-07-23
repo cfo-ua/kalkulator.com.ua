@@ -28,7 +28,6 @@ faq:
     engines, making them far more energy efficient overall.
   question: How does EV efficiency compare to gasoline vehicles?
 layout: calculator
-permalink: /en/calculators/electric-vehicle-range/
 scripts:
 - /en/js/electric-vehicle-range.js
 seo:

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Rectangle Area and Perimeter Calculator"
 categories: [school]
-permalink: /en/calculators/rectangle/
 seo:
   title: "Rectangle Area and Perimeter Calculator | School Math Calculators"
   description: "Calculate the area and perimeter of a rectangle online. Formulas, examples, convenient calculator for students and adults."

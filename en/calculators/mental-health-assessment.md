@@ -2,7 +2,6 @@
 layout: calculator
 title: "Mental Health Assessment Calculator - Comprehensive Wellbeing & Resilience Evaluation"
 categories: [health]
-permalink: /en/calculators/mental-health-assessment/
 seo:
   title: "Mental Health Assessment Calculator - Comprehensive Mental Wellness & Resilience Evaluation Tool"
   description: "Comprehensive mental health assessment combining wellbeing evaluation and resilience scoring. Get insights into depression, anxiety, stress levels, coping skills, and overall psychological health with personalized recommendations."

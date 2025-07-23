@@ -2,7 +2,6 @@
 layout: calculator
 title: "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception"
 categories: [time-date]
-permalink: /en/calculators/pregnancy-due-date-calculator/
 seo:
   title: "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception Date"
   description: "Calculate your baby's due date from last menstrual period (LMP) or conception date. Get pregnancy timeline, current week, trimester info, and important milestone dates."

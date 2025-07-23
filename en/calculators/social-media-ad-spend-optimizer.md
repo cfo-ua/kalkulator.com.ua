@@ -2,7 +2,6 @@
 layout: calculator
 title: "Social Media Ad Spend Optimizer"
 categories: [business]
-permalink: /en/calculators/social-media-ad-spend-optimizer/
 seo:
   title: "Social Media Ad Spend Optimizer  -  Maximize ROI Across Platforms"
   description: "Free social media advertising spend optimizer. Calculate optimal budget allocation, ROAS, and CAC across Facebook, Google, Instagram, and more. Maximize marketing ROI with data-driven ad spend distribution."

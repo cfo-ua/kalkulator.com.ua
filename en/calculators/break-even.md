@@ -2,7 +2,6 @@
 layout: calculator
 title: "Break-Even Analysis Calculator"
 categories: [business]
-permalink: /en/calculators/break-even/
 seo:
   title: "Break-Even Point Calculator  -  Business Profitability Analysis Tool Online"
   description: "Free break-even analysis calculator with profit forecast chart. Calculate break-even point in units, determine minimum sales needed for profitability, and visualize 12-month profit projections for your business."

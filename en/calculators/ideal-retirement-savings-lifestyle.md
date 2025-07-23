@@ -2,7 +2,6 @@
 layout: calculator
 title: "Ideal Retirement Savings Calculator based on Lifestyle"
 categories: [financial]
-permalink: /en/calculators/ideal-retirement-savings-lifestyle/
 seo:
   title: "Ideal Retirement Savings Calculator  -  Lifestyle-Based Retirement Planning, FIRE Calculator"
   description: "Calculate ideal retirement savings based on your desired lifestyle. Plan for luxury, comfortable, or modest retirement with personalized savings targets and withdrawal strategies."

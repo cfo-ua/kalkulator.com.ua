@@ -38,7 +38,6 @@ faq:
     professionals.
   question: Does this assessment replace professional mental health support?
 layout: calculator
-permalink: /en/calculators/employee-burnout-assessment/
 scripts:
 - /en/js/employee-burnout-assessment.js
 seo:

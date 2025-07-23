@@ -2,7 +2,6 @@
 layout: calculator
 title: "Pet Medication Dosage Calculator | Safe Dosing for Dogs & Cats"
 categories: [other]
-permalink: /en/calculators/pet-medication-dosage-calculator/
 seo:
   title: "Pet Medication Dosage Calculator | Dog & Cat Medicine Dosing Guide Online"
   description: "Free pet medication dosage calculator for safe drug dosing in dogs, cats, and other pets. Calculate proper dosages based on weight for common veterinary medications and supplements."

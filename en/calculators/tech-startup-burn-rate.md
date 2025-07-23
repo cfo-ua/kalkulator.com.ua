@@ -2,7 +2,6 @@
 layout: calculator
 title: "Tech Startup Burn Rate Calculator"
 categories: [business]
-permalink: /en/calculators/tech-startup-burn-rate/
 seo:
   title: "Startup Burn Rate Calculator  -  Track Cash Runway & Monthly Burn Rate"
   description: "Free tech startup burn rate calculator. Calculate monthly burn rate, cash runway, and funding timeline. Monitor startup cash flow and plan fundraising with comprehensive burn rate analysis."

@@ -2,7 +2,6 @@
 layout: calculator
 title: "Solution Dilution Calculator"
 categories: [school]
-permalink: /en/calculators/dilution/
 seo:
   title: "Solution Dilution Calculator Online  -  C₁V₁ = C₂V₂ Formula for Chemistry and Biology"
   description: "Online calculator for calculating concentration or volume of solution during dilution. Use C₁V₁ = C₂V₂ formula for chemistry, biology, medicine and laboratory practice."

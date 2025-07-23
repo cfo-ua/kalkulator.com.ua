@@ -2,7 +2,6 @@
 layout: calculator
 title: "YouTube Channel Monetization Estimator"
 categories: [other]
-permalink: /en/calculators/youtube-monetization-estimator/
 seo:
   title: "YouTube Revenue Calculator - Estimate Channel Earnings & Monetization Potential"
   description: "Free YouTube monetization calculator. Estimate earnings from ad revenue, sponsorships, memberships based on views, subscribers, and engagement metrics."

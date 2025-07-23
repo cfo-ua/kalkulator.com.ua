@@ -2,7 +2,6 @@
 layout: calculator
 title: "Ideal Weight Calculator - Calculate Your Perfect Body Weight"
 categories: [health]
-permalink: /en/calculators/ideal-weight-calculator/
 seo:
   title: "Ideal Weight Calculator - Calculate Perfect Body Weight Using Multiple Formulas"
   description: "Calculate your ideal body weight using proven medical formulas including BMI, Devine, Hamwi, and Robinson methods. Get healthy weight ranges for your height, age, and body frame."

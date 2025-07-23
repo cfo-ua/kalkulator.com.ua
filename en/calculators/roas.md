@@ -2,7 +2,6 @@
 layout: calculator
 title: "ROAS Calculator  -  Return on Advertising Spend"
 categories: [business]
-permalink: /en/calculators/roas/
 seo:
   title: "ROAS Calculator  -  Measure Return on Advertising Spend Online"
   description: "Free ROAS calculator to measure advertising campaign effectiveness. Calculate return on ad spend instantly to optimize marketing budgets, compare channels, and improve campaign ROI performance."

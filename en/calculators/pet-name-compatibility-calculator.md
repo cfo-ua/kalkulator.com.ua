@@ -2,7 +2,6 @@
 layout: calculator
 title: "Pet Name Compatibility Calculator | Find the Perfect Name for Your Pet"
 categories: [other]
-permalink: /en/calculators/pet-name-compatibility-calculator/
 seo:
   title: "Pet Name Compatibility Calculator | Match Your Pet's Personality & Appearance Online"
   description: "Free pet name compatibility calculator to find the perfect name for your dog, cat, or other pets. Match names to personality traits, appearance, and behavior for the ideal pet name."

@@ -28,7 +28,6 @@ faq:
     coverage) require purchase before departure. Buy before traveling for full protection.
   question: Can I buy travel insurance after my trip starts?
 layout: calculator
-permalink: /en/calculators/travel-insurance-estimator/
 scripts:
 - /en/js/travel-insurance-estimator.js
 seo:

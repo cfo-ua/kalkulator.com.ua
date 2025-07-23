@@ -2,7 +2,6 @@
 layout: calculator
 title: "Investment Return Calculator for Real Estate"
 categories: [financial]
-permalink: /en/calculators/real-estate-investment-return/
 seo:
   title: "Real Estate Investment Return Calculator  -  ROI, Cash Flow, Cap Rate, Property Analysis"
   description: "Calculate real estate investment returns including ROI, cash flow, cap rate, cash-on-cash return. Analyze rental properties, flips, and commercial real estate investments."

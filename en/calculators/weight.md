@@ -2,7 +2,6 @@
 layout: calculator
 title: "Gravitational Force Calculator"
 categories: [school]
-permalink: /en/calculators/weight/
 seo:
   title: "Gravitational Force Calculator | Calculate F = m × g Online"
   description: "Enter object mass and find gravitational force (weight) in Newtons. Formula F = m × g. Online calculator for physics lessons."

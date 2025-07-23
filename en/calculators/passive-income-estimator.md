@@ -2,7 +2,6 @@
 layout: calculator
 title: "Passive Income Stream Estimator"
 categories: [financial]
-permalink: /en/calculators/passive-income-estimator/
 seo:
   title: "Passive Income Calculator - Estimate Multiple Revenue Streams & Financial Freedom"
   description: "Free passive income calculator to estimate earnings from multiple streams. Plan your path to financial independence with rental, dividend, business, and investment income projections."
