@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
       return [];
     }
     
-    // Search by first letter(s) - case insensitive
+    // Search within all words - case insensitive
     const searchTerm = query.toLowerCase();
     return calculators.filter(calc => 
-      calc.title.toLowerCase().startsWith(searchTerm)
+      calc.title.toLowerCase().includes(searchTerm)
     );
   }
   
