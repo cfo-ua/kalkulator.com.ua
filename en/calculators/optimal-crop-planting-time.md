@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Optimal Crop Planting Time Calculator"
-categories: [other]
+categories: [environment]
 seo:
   title: "Crop Planting Time Calculator | Garden Planting Schedule Calculator"
   description: "Calculate optimal planting times for crops based on frost dates and climate zones. Professional planting calendar calculator for maximum harvest success."
