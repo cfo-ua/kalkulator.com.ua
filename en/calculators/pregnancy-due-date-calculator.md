@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception"
-categories: [other]
+categories: [time-date]
 permalink: /en/calculators/pregnancy-due-date-calculator/
 seo:
   title: "Pregnancy Due Date Calculator - Calculate Baby Due Date from LMP or Conception Date"
