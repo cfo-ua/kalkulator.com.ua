@@ -1,6 +1,6 @@
 ---
 categories:
-- school
+- business
 faq:
 - answer: GDPR applies to EU residents' data globally, while CCPA applies to California
     consumers. GDPR has broader scope with stricter consent requirements, while CCPA
