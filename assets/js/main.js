@@ -70,6 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
   
+  // Handle link clicks with debugging
+  function handleLinkClick(url, title) {
+    console.log('Navigating to:', title, 'URL:', url);
+    window.location.href = url;
+  }
+  
   function displayResults(results) {
     searchResults.innerHTML = '';
     
@@ -89,6 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const link = document.createElement('a');
       link.href = calc.url;
       link.textContent = calc.title;
+      
+      // Add click event listener for debugging and handling
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        handleLinkClick(calc.url, calc.title);
+      });
       
       item.appendChild(link);
       searchResults.appendChild(item);
@@ -153,7 +165,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activeItem) {
         const link = activeItem.querySelector('a');
         if (link) {
-          window.location.href = link.href;
+          // Find the calculator data for this link
+          const calculatorTitle = link.textContent;
+          const calculatorUrl = link.href;
+          handleLinkClick(calculatorUrl, calculatorTitle);
         }
       }
     } else if (e.key === 'Escape') {
