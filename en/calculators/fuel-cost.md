@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Fuel Cost Calculator"
-categories: [other]
+categories: [travel]
 permalink: /en/calculators/fuel-cost/
 seo:
   title: "Fuel Cost Calculator  -  Trip Cost, Mileage, Consumption, Price Calculator"
