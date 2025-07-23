@@ -132,7 +132,7 @@ title: Numerology Life Path Number Calculator
 
     <label>
       Birth Year:
-      <input type="number" id="birthYear" min="1900" max="2024" placeholder="YYYY" required>
+      <input type="number" id="birthYear" min="1900" max="2030" placeholder="YYYY" required>
     </label>
   </div>
 

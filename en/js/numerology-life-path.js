@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update days based on selected month
   function updateDays() {
     const month = parseInt(monthSelect.value);
-    const year = parseInt(yearInput.value) || 2024;
+    const year = parseInt(yearInput.value) || new Date().getFullYear();
     
     if (month) {
       const daysInMonth = new Date(year, month, 0).getDate();
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    if (year < 1900 || year > 2024) {
+    if (year < 1900 || year > 2030) {
       result.innerHTML = '<p style="color: #e74c3c;">Please enter a valid birth year.</p>';
       return;
     }
