@@ -190,13 +190,25 @@ header {
 /* Calculator Search */
 .calculator-search {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   margin: 2rem auto;
-  padding: 0 clamp(1rem, 5vw, 4rem);
+  padding: 0 clamp(1rem, 4vw, 3rem);
   box-sizing: border-box;
 }
 
-/* Wider search bar on large screens */
+/* Wider search bar on tablet and larger screens */
+@media (min-width: 768px) {
+  .calculator-search {
+    max-width: 900px;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+  }
+  
+  .search-results {
+    left: clamp(1.5rem, 4vw, 3rem);
+    right: clamp(1.5rem, 4vw, 3rem);
+  }
+}
+
 @media (min-width: 1024px) {
   .calculator-search {
     max-width: 1000px;
@@ -242,8 +254,8 @@ header {
 .search-results {
   position: absolute;
   top: 100%;
-  left: clamp(1rem, 5vw, 4rem);
-  right: clamp(1rem, 5vw, 4rem);
+  left: clamp(1rem, 4vw, 3rem);
+  right: clamp(1rem, 4vw, 3rem);
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -291,6 +303,7 @@ header {
   .calculator-search {
     margin: 1.5rem auto;
     padding: 0 clamp(0.5rem, 3vw, 2rem);
+    max-width: 95vw;
   }
   
   .search-results {
