@@ -113,12 +113,13 @@ seo:
       <li>Math, science, and special education teachers get higher amounts</li>
     </ul>
 
-    <h3>Current Interest Rates (2023-2024):</h3>
+    <h3>Federal Student Loan Interest Rates:</h3>
+    <p><em>Note: Interest rates are set annually. Check the U.S. Department of Education website for current rates.</em></p>
     <ul>
-      <li><strong>Undergraduate Federal:</strong> 5.50% fixed</li>
-      <li><strong>Graduate Federal:</strong> 7.05% fixed</li>
-      <li><strong>PLUS Loans:</strong> 8.05% fixed</li>
-      <li><strong>Private Loans:</strong> 4.00% - 14.00% (variable or fixed)</li>
+      <li><strong>Undergraduate Federal:</strong> 5.50% fixed (example rate)</li>
+      <li><strong>Graduate Federal:</strong> 7.05% fixed (example rate)</li>
+      <li><strong>PLUS Loans:</strong> 8.05% fixed (example rate)</li>
+      <li><strong>Private Loans:</strong> 4.00% - 14.00% (variable or fixed, market-dependent)</li>
     </ul>
 
     <h3>Strategies to Reduce Student Loan Costs:</h3>

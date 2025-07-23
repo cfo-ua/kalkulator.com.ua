@@ -52,15 +52,16 @@ seo:
       <li>Higher contribution limits for catch-up contributions</li>
     </ul>
 
-    <h3>2024 Roth IRA Contribution Limits:</h3>
+    <h3>Current Roth IRA Contribution Limits:</h3>
     <ul>
-      <li><strong>Under 50:</strong> $7,000 annually</li>
+      <li><strong>Under 50:</strong> $7,000 annually (default current limit)</li>
       <li><strong>50 and older:</strong> $8,000 annually (includes $1,000 catch-up)</li>
       <li><strong>Income limits for full contribution:</strong></li>
       <ul>
-        <li>Single: $138,000 - $153,000 (phaseout range)</li>
-        <li>Married filing jointly: $218,000 - $228,000 (phaseout range)</li>
+        <li>Single: $138,000 - $153,000 (current phaseout range)</li>
+        <li>Married filing jointly: $218,000 - $228,000 (current phaseout range)</li>
       </ul>
+      <li><em>Note: These limits are updated annually by the IRS. Use the calculator's advanced settings to input current year limits.</em></li>
     </ul>
 
     <h3>Roth IRA Withdrawal Rules:</h3>
@@ -155,13 +156,13 @@ faq:
   - question: "Should I choose Roth or Traditional IRA?"
     answer: "Choose Roth if you're in a lower tax bracket now than you expect in retirement, or if you value tax-free withdrawals and no RMDs. Choose Traditional if you need the current tax deduction and expect to be in a lower bracket in retirement."
   - question: "Can I contribute to both Roth and Traditional IRA?"
-    answer: "Yes, but your total contributions to all IRAs cannot exceed the annual limit ($7,000 for 2024, $8,000 if 50+). You can split contributions between account types."
+    answer: "Yes, but your total contributions to all IRAs cannot exceed the annual limit ($7,000 current standard limit, $8,000 if 50+). You can split contributions between account types."
   - question: "What is a backdoor Roth IRA?"
     answer: "A strategy for high earners to contribute to a Roth IRA by making a non-deductible Traditional IRA contribution and immediately converting it to Roth. This bypasses the income limits for direct Roth contributions."
   - question: "When can I withdraw money from my Roth IRA?"
     answer: "Contributions can be withdrawn anytime tax and penalty-free. Earnings can be withdrawn tax and penalty-free after age 59½ and the account has been open for 5 years. Some exceptions allow early withdrawal of earnings."
   - question: "How much should I contribute to my Roth IRA?"
-    answer: "Ideally, contribute the maximum allowed ($7,000 for 2024, $8,000 if 50+). If you can't max out, contribute what you can afford consistently. Even small regular contributions can grow significantly over time."
+    answer: "Ideally, contribute the maximum allowed (currently $7,000 standard limit, $8,000 if 50+). If you can't max out, contribute what you can afford consistently. Even small regular contributions can grow significantly over time."
   - question: "Can I convert my Traditional IRA to Roth?"
     answer: "Yes, you can convert any amount from Traditional to Roth IRA, but you'll owe income tax on the converted amount. This can be beneficial during low-income years or to reduce future RMDs."
   - question: "What happens to my Roth IRA when I die?"
@@ -286,6 +287,36 @@ faq:
           <input type="checkbox" id="includeInflation"> Show inflation-adjusted values
         </label>
       </div>
+    </div>
+    
+    <div>
+      <h4>⚙️ Advanced Settings</h4>
+      <details style="margin-bottom: 1rem;">
+        <summary style="cursor: pointer; font-weight: bold;">Custom Contribution Limits</summary>
+        <div style="padding-top: 1rem;">
+          <label for="limitUnder50">Contribution Limit (Under 50) ($)</label>
+          <input type="number" id="limitUnder50" value="7000" min="0" step="500" placeholder="Annual limit for under 50">
+          
+          <label for="limitOver50">Contribution Limit (50+) ($)</label>
+          <input type="number" id="limitOver50" value="8000" min="0" step="500" placeholder="Annual limit for 50 and older">
+          
+          <label for="singlePhaseoutStart">Single Phaseout Start ($)</label>
+          <input type="number" id="singlePhaseoutStart" value="138000" min="0" step="1000" placeholder="Income where phaseout begins">
+          
+          <label for="singlePhaseoutEnd">Single Phaseout End ($)</label>
+          <input type="number" id="singlePhaseoutEnd" value="153000" min="0" step="1000" placeholder="Income where eligibility ends">
+          
+          <label for="marriedPhaseoutStart">Married Joint Phaseout Start ($)</label>
+          <input type="number" id="marriedPhaseoutStart" value="218000" min="0" step="1000" placeholder="Income where phaseout begins">
+          
+          <label for="marriedPhaseoutEnd">Married Joint Phaseout End ($)</label>
+          <input type="number" id="marriedPhaseoutEnd" value="228000" min="0" step="1000" placeholder="Income where eligibility ends">
+        </div>
+      </details>
+      
+      <p style="font-size: 0.9rem; color: #666;">
+        <strong>Note:</strong> Default values reflect current IRS limits. Update these fields if limits change in future years.
+      </p>
     </div>
   </div>
   

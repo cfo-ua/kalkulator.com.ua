@@ -95,12 +95,13 @@ seo:
       <li>Higher down payment typically required</li>
     </ul>
 
-    <h3>Current Auto Loan Rates (2024):</h3>
+    <h3>Typical Auto Loan Rate Ranges:</h3>
+    <p><em>Note: Rates change frequently based on Federal Reserve policy and market conditions. Check with lenders for current rates.</em></p>
     <ul>
-      <li><strong>New cars (excellent credit):</strong> 5.5% - 7.5%</li>
-      <li><strong>New cars (good credit):</strong> 7.5% - 10.5%</li>
-      <li><strong>Used cars (excellent credit):</strong> 6.5% - 9.5%</li>
-      <li><strong>Used cars (good credit):</strong> 9.5% - 15.5%</li>
+      <li><strong>New cars (excellent credit):</strong> 5.5% - 7.5% (example range)</li>
+      <li><strong>New cars (good credit):</strong> 7.5% - 10.5% (example range)</li>
+      <li><strong>Used cars (excellent credit):</strong> 6.5% - 9.5% (example range)</li>
+      <li><strong>Used cars (good credit):</strong> 9.5% - 15.5% (example range)</li>
       <li><strong>Credit union rates:</strong> Often 1-2% lower than banks</li>
     </ul>
 

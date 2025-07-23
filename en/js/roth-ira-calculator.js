@@ -6,23 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const withdrawalDiv = document.getElementById('withdrawal-strategy');
   const projectionDiv = document.getElementById('year-by-year');
 
-  // 2024 Contribution limits and income thresholds
-  const CONTRIBUTION_LIMITS = {
-    2024: {
-      under50: 7000,
-      over50: 8000,
-      incomePhaseout: {
-        single: { start: 138000, end: 153000 },
-        marriedJoint: { start: 218000, end: 228000 },
-        marriedSeparate: { start: 0, end: 10000 }
-      }
+  // Current year contribution limits and income thresholds (user-editable)
+  const currentYear = new Date().getFullYear();
+  
+  // Default contribution limits (users can override these)
+  let CONTRIBUTION_LIMITS = {
+    under50: 7000,
+    over50: 8000,
+    incomePhaseout: {
+      single: { start: 138000, end: 153000 },
+      marriedJoint: { start: 218000, end: 228000 },
+      marriedSeparate: { start: 0, end: 10000 }
     }
   };
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    updateContributionLimits();
     calculateRothIRA();
   });
+
+  function updateContributionLimits() {
+    // Update contribution limits from user inputs
+    CONTRIBUTION_LIMITS.under50 = parseFloat(document.getElementById('limitUnder50').value) || 7000;
+    CONTRIBUTION_LIMITS.over50 = parseFloat(document.getElementById('limitOver50').value) || 8000;
+    CONTRIBUTION_LIMITS.incomePhaseout.single.start = parseFloat(document.getElementById('singlePhaseoutStart').value) || 138000;
+    CONTRIBUTION_LIMITS.incomePhaseout.single.end = parseFloat(document.getElementById('singlePhaseoutEnd').value) || 153000;
+    CONTRIBUTION_LIMITS.incomePhaseout.marriedJoint.start = parseFloat(document.getElementById('marriedPhaseoutStart').value) || 218000;
+    CONTRIBUTION_LIMITS.incomePhaseout.marriedJoint.end = parseFloat(document.getElementById('marriedPhaseoutEnd').value) || 228000;
+  }
 
   function calculateRothIRA() {
     const currentAge = parseInt(document.getElementById('currentAge').value);
@@ -186,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getMaxContribution(age, income, filingStatus) {
-    const limits = CONTRIBUTION_LIMITS[2024];
+    const limits = CONTRIBUTION_LIMITS;
     let maxContribution = age >= 50 ? limits.over50 : limits.under50;
     
     // Apply income phaseout
@@ -349,8 +361,8 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="contribution-analysis">
         <h4>📈 Contribution Limits & Eligibility</h4>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
-          <div><strong>2024 Limit (Under 50):</strong> $${CONTRIBUTION_LIMITS[2024].under50.toLocaleString()}</div>
-          <div><strong>2024 Limit (50+):</strong> $${CONTRIBUTION_LIMITS[2024].over50.toLocaleString()}</div>
+          <div><strong>${currentYear} Limit (Under 50):</strong> $${CONTRIBUTION_LIMITS.under50.toLocaleString()}</div>
+          <div><strong>${currentYear} Limit (50+):</strong> $${CONTRIBUTION_LIMITS.over50.toLocaleString()}</div>
           <div><strong>Your Maximum:</strong> $${maxContribution.toLocaleString()}</div>
           <div><strong>Current Contribution:</strong> $${currentContribution.toLocaleString()}</div>
         </div>
@@ -378,13 +390,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Income phaseout information
-    const phaseout = CONTRIBUTION_LIMITS[2024].incomePhaseout[filingStatus === 'married-joint' ? 'marriedJoint' : 'single'];
     contributionHtml += `
-      <h5>Income Phaseout Ranges (2024)</h5>
+      <h5>Income Phaseout Ranges (${currentYear})</h5>
       <ul>
-        <li><strong>Single/Head of Household:</strong> $${CONTRIBUTION_LIMITS[2024].incomePhaseout.single.start.toLocaleString()} - $${CONTRIBUTION_LIMITS[2024].incomePhaseout.single.end.toLocaleString()}</li>
-        <li><strong>Married Filing Jointly:</strong> $${CONTRIBUTION_LIMITS[2024].incomePhaseout.marriedJoint.start.toLocaleString()} - $${CONTRIBUTION_LIMITS[2024].incomePhaseout.marriedJoint.end.toLocaleString()}</li>
-        <li><strong>Married Filing Separately:</strong> $${CONTRIBUTION_LIMITS[2024].incomePhaseout.marriedSeparate.start.toLocaleString()} - $${CONTRIBUTION_LIMITS[2024].incomePhaseout.marriedSeparate.end.toLocaleString()}</li>
+        <li><strong>Single/Head of Household:</strong> $${CONTRIBUTION_LIMITS.incomePhaseout.single.start.toLocaleString()} - $${CONTRIBUTION_LIMITS.incomePhaseout.single.end.toLocaleString()}</li>
+        <li><strong>Married Filing Jointly:</strong> $${CONTRIBUTION_LIMITS.incomePhaseout.marriedJoint.start.toLocaleString()} - $${CONTRIBUTION_LIMITS.incomePhaseout.marriedJoint.end.toLocaleString()}</li>
+        <li><strong>Married Filing Separately:</strong> $${CONTRIBUTION_LIMITS.incomePhaseout.marriedSeparate.start.toLocaleString()} - $${CONTRIBUTION_LIMITS.incomePhaseout.marriedSeparate.end.toLocaleString()}</li>
       </ul>
       </div>
     `;

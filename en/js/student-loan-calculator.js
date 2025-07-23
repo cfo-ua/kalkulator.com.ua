@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const comparisonDiv = document.getElementById('repayment-comparison');
   const pslfDiv = document.getElementById('pslf-analysis');
 
-  // Federal poverty guidelines (2023)
-  const povertyGuidelines = {
+  // Federal poverty guidelines (user can update these if needed)
+  let povertyGuidelines = {
     1: 14580,
     2: 19720,
     3: 24860,
