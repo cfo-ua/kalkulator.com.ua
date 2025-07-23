@@ -2,9 +2,14 @@
 ---
 window.calculatorSearchData = {
   "uk": [
-    {%- assign uk_calculators = site.pages | where_exp: "page", "page.url contains '/calculators/'" | where_exp: "page", "page.url != '/calculators/'" -%}
-    {%- assign uk_calculators = uk_calculators | where_exp: "page", "page.url contains '/en/' == false" -%}
-    {%- assign uk_calculators = uk_calculators | where_exp: "page", "page.url contains '/categories/' == false" -%}
+    {%- assign uk_calculators = "" | split: "," -%}
+    {%- for page in site.pages -%}
+      {%- if page.url contains '/calculators/' and page.url != '/calculators/' -%}
+        {%- unless page.url contains '/en/' or page.url contains '/categories/' -%}
+          {%- assign uk_calculators = uk_calculators | push: page -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
     {%- for page in uk_calculators -%}
       {%- assign filename = page.url | remove: '/calculators/' | remove: '.html' -%}
     {
