@@ -22,3 +22,12 @@ vendor/
 
 # Temporary analysis files
 /tmp/
+
+# Analysis and migration files (prevent accidental commits)
+*Migration_Table.md
+*Summary_Table.md
+*Categorization_Analysis.md
+*migration_table.csv
+Calculator_*.md
+Category_*.md
+English_Calculator_*.md
