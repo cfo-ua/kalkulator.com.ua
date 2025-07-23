@@ -190,46 +190,47 @@ header {
 /* Calculator Search */
 .calculator-search {
   position: relative;
-  max-width: 800px;
+  max-width: 90vw;
+  width: 100%;
   margin: 2rem auto;
-  padding: 0 clamp(1rem, 4vw, 3rem);
+  padding: 0 clamp(1rem, 3vw, 2rem);
   box-sizing: border-box;
 }
 
 /* Wider search bar on tablet and larger screens */
 @media (min-width: 768px) {
   .calculator-search {
-    max-width: 900px;
-    padding: 0 clamp(1.5rem, 4vw, 3rem);
+    max-width: 95vw;
+    padding: 0 clamp(1.5rem, 3vw, 2.5rem);
   }
   
   .search-results {
-    left: clamp(1.5rem, 4vw, 3rem);
-    right: clamp(1.5rem, 4vw, 3rem);
+    left: clamp(1.5rem, 3vw, 2.5rem);
+    right: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
 
 @media (min-width: 1024px) {
   .calculator-search {
-    max-width: 1000px;
+    max-width: 1100px;
   }
 }
 
 @media (min-width: 1200px) {
   .calculator-search {
-    max-width: 1200px;
+    max-width: 1300px;
   }
 }
 
 @media (min-width: 1440px) {
   .calculator-search {
-    max-width: 1400px;
+    max-width: 1500px;
   }
 }
 
 @media (min-width: 1920px) {
   .calculator-search {
-    max-width: 1600px;
+    max-width: 1700px;
   }
 }
 
@@ -254,8 +255,8 @@ header {
 .search-results {
   position: absolute;
   top: 100%;
-  left: clamp(1rem, 4vw, 3rem);
-  right: clamp(1rem, 4vw, 3rem);
+  left: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -302,13 +303,13 @@ header {
 @media (max-width: 768px) {
   .calculator-search {
     margin: 1.5rem auto;
-    padding: 0 clamp(0.5rem, 3vw, 2rem);
-    max-width: 95vw;
+    padding: 0 clamp(0.5rem, 3vw, 1.5rem);
+    max-width: 98vw;
   }
   
   .search-results {
-    left: clamp(0.5rem, 3vw, 2rem);
-    right: clamp(0.5rem, 3vw, 2rem);
+    left: clamp(0.5rem, 3vw, 1.5rem);
+    right: clamp(0.5rem, 3vw, 1.5rem);
   }
 }
 
