@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Home Energy Audit Calculator"
-categories: [other]
+categories: [environment]
 permalink: /en/calculators/home-energy-audit/
 seo:
   title: "Home Energy Audit Calculator - Energy Efficiency Analysis & Savings Tool"
