@@ -42,11 +42,12 @@ layout: calculator
 scripts:
 - /en/js/password-strength-checker.js
 seo:
-  content: "<h2>Password Strength Checker - Comprehensive Security Policy Validator</h2>\n\
-    <p>This <strong>password strength checker</strong> evaluates your passwords against\
-    \ multiple security policies and provides detailed feedback for improvement. Test\
-    \ password security and generate strong, compliant passwords instantly.</p>\n\n\
-    <h3>Why Use a Password Strength Checker?</h3>\n<ul>\n  <li><strong>Security Assessment:</strong>\
+  content: "<h2>Password Strength Checker & Entropy Calculator - Comprehensive Security Analysis</h2>\n\
+    <p>This advanced <strong>password entropy calculator</strong> and <strong>password strength checker</strong> evaluates your passwords against\
+    \ multiple security policies and provides detailed entropy analysis. Calculate <strong>password entropy</strong> in bits,\
+    \ test password security, and generate strong, compliant passwords instantly.</p>\n\n\
+    <h3>Why Use a Password Entropy Calculator?</h3>\n<ul>\n  <li><strong>Entropy Measurement:</strong>\
+    \ Calculate password randomness and unpredictability in bits</li>\n  <li><strong>Security Assessment:</strong>\
     \ Identify password vulnerabilities before attackers do</li>\n  <li><strong>Policy\
     \ Compliance:</strong> Ensure passwords meet organizational security requirements</li>\n\
     \  <li><strong>Breach Prevention:</strong> Protect accounts from unauthorized\
@@ -54,7 +55,13 @@ seo:
     \ Learn what makes passwords truly secure</li>\n  <li><strong>Immediate Feedback:</strong>\
     \ Get real-time suggestions for password improvement</li>\n  <li><strong>Multi-Policy\
     \ Testing:</strong> Check against various security standards simultaneously</li>\n\
-    </ul>\n\n<h3>Security Policies Evaluated:</h3>\n<ul>\n  <li><strong>\U0001F3E2\
+    </ul>\n\n<h3>Password Entropy Calculation Explained:</h3>\n<ul>\n  <li><strong>What is Password Entropy:</strong>\
+    \ A mathematical measure of password randomness and unpredictability</li>\n  <li><strong>Entropy Formula:</strong>\
+    \ Calculated using character set size and password length</li>\n  <li><strong>Entropy Scale:</strong>\
+    \ Measured in bits - higher values indicate stronger passwords</li>\n  <li><strong>Minimum Entropy:</strong>\
+    \ 50+ bits for basic security, 60+ for strong, 80+ for excellent</li>\n  <li><strong>Character Space Impact:</strong>\
+    \ Larger character sets (uppercase, lowercase, numbers, symbols) increase entropy</li>\n  <li><strong>Length Multiplier:</strong>\
+    \ Password length exponentially increases entropy value</li>\n</ul>\n\n<h3>Security Policies Evaluated:</h3>\n<ul>\n  <li><strong>\U0001F3E2\
     \ Enterprise Standard:</strong> Corporate security requirements (12+ chars, mixed\
     \ case, numbers, symbols)</li>\n  <li><strong>\U0001F3E6 Banking/Financial:</strong>\
     \ High-security standards for financial institutions</li>\n  <li><strong>\U0001F3E5\
@@ -66,41 +73,47 @@ seo:
     \ Web:</strong> Common online service password requirements</li>\n</ul>\n\n<h3>Password\
     \ Strength Factors Analyzed:</h3>\n<ul>\n  <li><strong>Length:</strong> Minimum\
     \ character count requirements</li>\n  <li><strong>Character Diversity:</strong>\
-    \ Uppercase, lowercase, numbers, special symbols</li>\n  <li><strong>Common Pattern\
+    \ Uppercase, lowercase, numbers, special symbols</li>\n  <li><strong>Entropy Calculation:</strong>\
+    \ Mathematical measure of password randomness in bits</li>\n  <li><strong>Common Pattern\
     \ Detection:</strong> Sequential characters, keyboard patterns</li>\n  <li><strong>Dictionary\
-    \ Attack Resistance:</strong> Protection against common word lists</li>\n  <li><strong>Entropy\
-    \ Calculation:</strong> Mathematical measure of password randomness</li>\n  <li><strong>Brute\
-    \ Force Resistance:</strong> Estimated time to crack the password</li>\n</ul>\n\
+    \ Attack Resistance:</strong> Protection against common word lists</li>\n  <li><strong>Brute\
+    \ Force Resistance:</strong> Estimated time to crack based on entropy</li>\n</ul>\n\
     \n<h3>Perfect for:</h3>\n<ul>\n  <li><em>Security Professionals:</em> Password\
-    \ policy development and testing</li>\n  <li><em>IT Administrators:</em> Validating\
-    \ user password compliance</li>\n  <li><em>Business Users:</em> Meeting corporate\
-    \ security requirements</li>\n  <li><em>Personal Security:</em> Improving individual\
-    \ account protection</li>\n  <li><em>Students & Educators:</em> Learning cybersecurity\
-    \ best practices</li>\n  <li><em>Developers:</em> Implementing password validation\
-    \ in applications</li>\n  <li><em>Compliance Officers:</em> Ensuring regulatory\
-    \ requirement adherence</li>\n</ul>\n\n<h3>Common Password Mistakes to Avoid:</h3>\n\
-    <ul>\n  <li><em>Using personal information:</em> Names, birthdays, addresses</li>\n\
+    \ policy development and entropy analysis</li>\n  <li><em>IT Administrators:</em> Validating\
+    \ user password compliance and entropy levels</li>\n  <li><em>Business Users:</em> Meeting corporate\
+    \ security requirements with entropy guidelines</li>\n  <li><em>Personal Security:</em> Improving individual\
+    \ account protection through entropy calculation</li>\n  <li><em>Students & Educators:</em> Learning cybersecurity\
+    \ and entropy concepts</li>\n  <li><em>Developers:</em> Implementing password validation\
+    \ with entropy requirements</li>\n  <li><em>Compliance Officers:</em> Ensuring regulatory\
+    \ requirement adherence with entropy standards</li>\n</ul>\n\n<h3>Common Password Mistakes to Avoid:</h3>\n\
+    <ul>\n  <li><em>Low entropy passwords:</em> Predictable patterns that reduce randomness</li>\n\
+    \  <li><em>Using personal information:</em> Names, birthdays, addresses</li>\n\
     \  <li><em>Dictionary words:</em> Common words, even with number substitutions</li>\n\
     \  <li><em>Keyboard patterns:</em> qwerty, 123456, asdf sequences</li>\n  <li><em>Repeated\
-    \ characters:</em> aaa, 111, !!! patterns</li>\n  <li><em>Short passwords:</em>\
-    \ Less than 12 characters</li>\n  <li><em>Single character type:</em> Only letters\
-    \ or only numbers</li>\n</ul>\n\n<h3>Password Generator Features:</h3>\n<ul>\n\
-    \  <li><strong>Customizable Length:</strong> 8-128 character passwords</li>\n\
-    \  <li><strong>Character Set Options:</strong> Choose which character types to\
-    \ include</li>\n  <li><strong>Policy Compliance:</strong> Generate passwords meeting\
-    \ specific security standards</li>\n  <li><strong>Exclude Ambiguous:</strong>\
+    \ characters:</em> aaa, 111, !!! patterns that lower entropy</li>\n  <li><em>Short passwords:</em>\
+    \ Less than 12 characters with insufficient entropy</li>\n  <li><em>Single character type:</em> Only letters\
+    \ or only numbers reducing entropy potential</li>\n</ul>\n\n<h3>Password Generator Features:</h3>\n<ul>\n\
+    \  <li><strong>High Entropy Generation:</strong> Create passwords with optimal entropy levels</li>\n\
+    \  <li><strong>Customizable Length:</strong> 8-128 character passwords for varying entropy</li>\n\
+    \  <li><strong>Character Set Options:</strong> Choose character types to maximize entropy</li>\n\
+    \  <li><strong>Policy Compliance:</strong> Generate passwords meeting\
+    \ specific security standards and entropy requirements</li>\n  <li><strong>Exclude Ambiguous:</strong>\
     \ Avoid confusing characters like 0, O, l, 1</li>\n  <li><strong>Multiple Options:</strong>\
-    \ Generate several password options to choose from</li>\n  <li><strong>Instant\
-    \ Validation:</strong> Generated passwords automatically tested for strength</li>\n\
-    </ul>\n\n<p>Use this tool to create and validate strong passwords that protect\
+    \ Generate several password options with entropy analysis</li>\n  <li><strong>Instant\
+    \ Validation:</strong> Generated passwords automatically tested for strength and entropy</li>\n\
+    </ul>\n\n<p>Use this advanced password entropy calculator to create and validate strong passwords that protect\
     \ your accounts against modern cyber threats. Whether for personal use or organizational\
-    \ compliance, ensure your passwords meet the highest security standards.</p>\n"
-  description: Check password strength against multiple security policies and get
-    improvement suggestions. Generate secure passwords with customizable options for
-    maximum protection.
+    \ compliance, ensure your passwords have sufficient entropy and meet the highest security standards.</p>\n"
+  description: Calculate password entropy and check strength against multiple security policies. Advanced password entropy calculator with detailed analysis and secure password generation.
   keywords:
+  - password entropy calculator
+  - password entropy
   - password strength checker
   - password security test
+  - password entropy bits
+  - entropy calculator
+  - password randomness calculator
+  - password entropy meter
   - strong password generator
   - password validator
   - security policy checker
@@ -129,8 +142,10 @@ seo:
   - password security rating
   - password robustness test
   - password security evaluation
-  title: Password Strength Checker - Test Security & Generate Strong Passwords Online
-title: Password Strength Checker - Security Policy Validator & Generator
+  - password entropy calculation
+  - password randomness test
+  title: Password Strength Checker & Entropy Calculator - Test Security Online
+title: Password Strength Checker & Entropy Calculator - Security Policy Validator
 ---
 
 <div class="password-checker-container">
@@ -160,15 +175,17 @@ title: Password Strength Checker - Security Policy Validator & Generator
         </div>
         
         <div class="insight-card info">
+          <h6>🔢 Password Entropy</h6>
+          <div class="big-number" id="entropy-display">0 bits</div>
+          <div id="entropy-level" class="entropy-level">Calculate entropy</div>
+        </div>
+        
+        <div class="insight-card info">
           <h6>📊 Password Analysis</h6>
           <div id="password-stats">
             <div class="stat-item">
               <span>Length:</span>
               <span id="password-length">0 characters</span>
-            </div>
-            <div class="stat-item">
-              <span>Entropy:</span>
-              <span id="password-entropy">0 bits</span>
             </div>
             <div class="stat-item">
               <span>Time to crack:</span>
@@ -389,6 +406,28 @@ title: Password Strength Checker - Security Policy Validator & Generator
 }
 
 .strength-level.very-strong {
+  color: #28a745;
+}
+
+.entropy-level {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.entropy-level.low {
+  color: #dc3545;
+}
+
+.entropy-level.medium {
+  color: #ffc107;
+}
+
+.entropy-level.high {
+  color: #17a2b8;
+}
+
+.entropy-level.excellent {
   color: #28a745;
 }
 
