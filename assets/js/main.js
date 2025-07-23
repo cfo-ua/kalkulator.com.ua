@@ -55,21 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const isEnglish = window.location.pathname.includes('/en/');
   const lang = isEnglish ? 'en' : 'uk';
   
-  // Get calculator data with validation
+  // Get calculator data
   const calculators = window.calculatorSearchData && window.calculatorSearchData[lang] ? window.calculatorSearchData[lang] : [];
-  
-  // Debug information
-  console.log('Search initialized:', {
-    language: lang,
-    calculatorCount: calculators.length,
-    sampleCalculators: calculators.slice(0, 3).map(c => ({ title: c.title, url: c.url }))
-  });
-  
-  // Validate calculator data
-  const invalidCalculators = calculators.filter(calc => !calc.url || !calc.title);
-  if (invalidCalculators.length > 0) {
-    console.warn('Found calculators with invalid data:', invalidCalculators);
-  }
   
   function searchCalculators(query) {
     if (!query || query.length < 1) {
@@ -81,47 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return calculators.filter(calc => 
       calc.title.toLowerCase().includes(searchTerm)
     );
-  }
-  
-  // Enhanced error handling and user feedback for navigation issues
-  function handleNavigationError(url, title) {
-    console.error('Navigation failed for:', title, 'URL:', url);
-    
-    // Show user-friendly error message with suggestions
-    const errorMsg = isEnglish 
-      ? `The calculator "${title}" might be temporarily unavailable. Please try:\n• Refreshing the page\n• Using the category menu to browse calculators\n• Checking your internet connection`
-      : `Калькулятор "${title}" може бути тимчасово недоступний. Спробуйте:\n• Оновити сторінку\n• Скористатися меню категорій\n• Перевірити з'єднання з інтернетом`;
-    
-    alert(errorMsg);
-    
-    // Optionally redirect to home page or categories after a delay
-    setTimeout(() => {
-      const homeUrl = isEnglish ? '/en/' : '/';
-      if (confirm(isEnglish ? 'Go to home page?' : 'Перейти на головну сторінку?')) {
-        window.location.href = homeUrl;
-      }
-    }, 1000);
-  }
-
-  // Handle link clicks with robust URL fallback for Jekyll sites
-  function handleLinkClick(url, title) {
-    console.log('Navigating to:', title, 'URL:', url);
-    
-    // Add some basic validation
-    if (!url || !url.startsWith('/')) {
-      console.error('Invalid URL:', url);
-      handleNavigationError(url, title);
-      return;
-    }
-    
-    // For Jekyll sites, there can be URL format inconsistencies
-    // The URLs in search data should be correct based on Jekyll collection permalinks
-    try {
-      window.location.href = url;
-    } catch (error) {
-      console.error('Navigation error:', error);
-      handleNavigationError(url, title);
-    }
   }
   
   function displayResults(results) {
@@ -143,12 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const link = document.createElement('a');
       link.href = calc.url;
       link.textContent = calc.title;
-      
-      // Add click event listener for debugging and handling
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        handleLinkClick(calc.url, calc.title);
-      });
       
       item.appendChild(link);
       searchResults.appendChild(item);
@@ -213,10 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (activeItem) {
         const link = activeItem.querySelector('a');
         if (link) {
-          // Find the calculator data for this link
-          const calculatorTitle = link.textContent;
-          const calculatorUrl = link.href;
-          handleLinkClick(calculatorUrl, calculatorTitle);
+          window.location.href = link.href;
         }
       }
     } else if (e.key === 'Escape') {
