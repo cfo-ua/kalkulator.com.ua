@@ -197,9 +197,27 @@ header {
 }
 
 /* Wider search bar on large screens */
+@media (min-width: 1024px) {
+  .calculator-search {
+    max-width: 750px;
+  }
+}
+
 @media (min-width: 1200px) {
   .calculator-search {
-    max-width: 800px;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .calculator-search {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .calculator-search {
+    max-width: 1200px;
   }
 }
 
