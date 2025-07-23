@@ -1,115 +1,103 @@
 ---
-layout: calculator
-title: "Beekeeping Honey Production Calculator"
-categories: [other]
-seo:
-  title: "Beekeeping Honey Production Calculator | Hive Yield Estimator"
-  description: "Calculate expected honey production from your beehives. Estimate yields, plan harvest schedules, and analyze beekeeping profitability."
-  keywords:
-    - beekeeping calculator
-    - honey production calculator
-    - hive yield calculator
-    - beekeeping profit calculator
-    - honey harvest calculator
-    - bee colony calculator
-    - apiary calculator
-    - honey yield estimator
-    - beekeeping ROI calculator
-    - hive productivity calculator
-    - bee farm calculator
-    - honey production planning
-    - beekeeping cost calculator
-    - hive management calculator
-    - bee colony strength calculator
-    - honey flow calculator
-    - beekeeping business calculator
-    - apiarian calculator
-    - honey bee production
-    - commercial beekeeping calculator
-  content: |
-    <h2>Beekeeping Honey Production Calculator</h2>
-    <p>Calculate the <strong>expected honey production</strong> from your beehives with our comprehensive calculator. Estimate yields, plan harvest schedules, analyze costs, and determine the profitability of your beekeeping operation.</p>
-
-    <h3>Why Calculate Honey Production:</h3>
-    <ul>
-      <li><strong>Harvest planning:</strong> know when and how much honey to expect</li>
-      <li><strong>Equipment needs:</strong> plan for extraction and storage equipment</li>
-      <li><strong>Financial planning:</strong> estimate income and return on investment</li>
-      <li><strong>Hive management:</strong> track colony productivity and health</li>
-      <li><strong>Marketing preparation:</strong> plan sales and distribution</li>
-      <li><strong>Expansion decisions:</strong> determine when to add more hives</li>
-    </ul>
-
-    <h3>Factors Affecting Honey Production:</h3>
-    <ul>
-      <li><strong>Colony strength:</strong> healthy, populous colonies produce more honey</li>
-      <li><strong>Local flora:</strong> diverse, abundant nectar sources increase yields</li>
-      <li><strong>Weather conditions:</strong> temperature, rainfall affect nectar flow</li>
-      <li><strong>Season length:</strong> longer warm seasons allow more honey production</li>
-      <li><strong>Hive management:</strong> proper care and timing of interventions</li>
-      <li><strong>Queen quality:</strong> prolific queens build stronger colonies</li>
-    </ul>
-
-    <h3>Typical Honey Yields by Region:</h3>
-    <ul>
-      <li><strong>Northern climates:</strong> 30-60 lbs per hive annually</li>
-      <li><strong>Temperate zones:</strong> 60-100 lbs per hive annually</li>
-      <li><strong>Southern regions:</strong> 80-150 lbs per hive annually</li>
-      <li><strong>Optimal conditions:</strong> 100-200+ lbs per hive possible</li>
-      <li><strong>First-year hives:</strong> often produce little to no surplus honey</li>
-    </ul>
-
-    <h3>Beekeeping Timeline:</h3>
-    <ul>
-      <li><strong>Early spring:</strong> colony building, add supers before main flow</li>
-      <li><strong>Late spring:</strong> major nectar flows begin, monitor space</li>
-      <li><strong>Summer:</strong> peak production, harvest surplus honey</li>
-      <li><strong>Late summer:</strong> final harvest, prepare colonies for winter</li>
-      <li><strong>Fall/Winter:</strong> colony maintenance, equipment preparation</li>
-    </ul>
-
-    <h3>Honey Types and Values:</h3>
-    <ul>
-      <li><strong>Wildflower honey:</strong> $8-12 per pound retail</li>
-      <li><strong>Specialty varietals:</strong> $12-20 per pound (clover, orange blossom)</li>
-      <li><strong>Raw/unprocessed:</strong> premium pricing, $15-25 per pound</li>
-      <li><strong>Bulk/wholesale:</strong> $3-6 per pound to distributors</li>
-      <li><strong>Farmer's market:</strong> $10-18 per pound direct sales</li>
-    </ul>
-
-    <h3>Beekeeping Costs:</h3>
-    <ul>
-      <li><strong>Initial hive setup:</strong> $150-250 per hive</li>
-      <li><strong>Annual maintenance:</strong> $50-100 per hive</li>
-      <li><strong>Extraction equipment:</strong> $200-2000 depending on scale</li>
-      <li><strong>Protective gear:</strong> $100-200 per beekeeper</li>
-      <li><strong>Treatment/medications:</strong> $20-40 per hive annually</li>
-    </ul>
-
-    <h3>Management Practices for Higher Yields:</h3>
-    <ul>
-      <li><strong>Strong colonies:</strong> maintain populations of 40,000-60,000 bees</li>
-      <li><strong>Supering:</strong> add honey supers before nectar flows</li>
-      <li><strong>Disease control:</strong> monitor and treat varroa mites and diseases</li>
-      <li><strong>Queen management:</strong> replace queens every 1-2 years</li>
-      <li><strong>Feeding:</strong> supplement during dearth periods if needed</li>
-      <li><strong>Location:</strong> place hives near diverse, abundant nectar sources</li>
-    </ul>
-scripts:
-  - /en/js/beekeeping-honey-production.js
+categories:
+- environment
 faq:
-  - question: How much honey can I expect from my first hive?
-    answer: "First-year hives typically produce little to no surplus honey as they focus on building comb and establishing the colony. Expect 0-30 lbs in the first year."
-  - question: When should I harvest honey from my hives?
-    answer: "Harvest when honey supers are at least 80% capped, typically late summer. Leave 40-60 lbs of honey for the colony to survive winter in most climates."
-  - question: How many hives do I need to make beekeeping profitable?
-    answer: "Hobbyist profitability starts around 10-20 hives. Commercial operations typically need 100+ hives for full-time income, depending on local market conditions."
-  - question: What affects honey production the most?
-    answer: "Colony strength and local nectar sources are the biggest factors. A strong colony in a good location can produce 3-5 times more honey than a weak colony."
-  - question: How do I increase honey production from my hives?
-    answer: "Maintain strong colonies, control diseases/pests, provide adequate space with supers, ensure good nectar sources, and practice proper timing of management activities."
-  - question: Is beekeeping profitable as a side business?
-    answer: "Yes, with proper management. Small operations (5-20 hives) can generate $500-2000 annually per hive in profit after expenses, depending on local market conditions."
+- answer: First-year hives typically produce little to no surplus honey as they focus
+    on building comb and establishing the colony. Expect 0-30 lbs in the first year.
+  question: How much honey can I expect from my first hive?
+- answer: Harvest when honey supers are at least 80% capped, typically late summer.
+    Leave 40-60 lbs of honey for the colony to survive winter in most climates.
+  question: When should I harvest honey from my hives?
+- answer: Hobbyist profitability starts around 10-20 hives. Commercial operations
+    typically need 100+ hives for full-time income, depending on local market conditions.
+  question: How many hives do I need to make beekeeping profitable?
+- answer: Colony strength and local nectar sources are the biggest factors. A strong
+    colony in a good location can produce 3-5 times more honey than a weak colony.
+  question: What affects honey production the most?
+- answer: Maintain strong colonies, control diseases/pests, provide adequate space
+    with supers, ensure good nectar sources, and practice proper timing of management
+    activities.
+  question: How do I increase honey production from my hives?
+- answer: Yes, with proper management. Small operations (5-20 hives) can generate
+    $500-2000 annually per hive in profit after expenses, depending on local market
+    conditions.
+  question: Is beekeeping profitable as a side business?
+layout: calculator
+scripts:
+- /en/js/beekeeping-honey-production.js
+seo:
+  content: "<h2>Beekeeping Honey Production Calculator</h2>\n<p>Calculate the <strong>expected\
+    \ honey production</strong> from your beehives with our comprehensive calculator.\
+    \ Estimate yields, plan harvest schedules, analyze costs, and determine the profitability\
+    \ of your beekeeping operation.</p>\n\n<h3>Why Calculate Honey Production:</h3>\n\
+    <ul>\n  <li><strong>Harvest planning:</strong> know when and how much honey to\
+    \ expect</li>\n  <li><strong>Equipment needs:</strong> plan for extraction and\
+    \ storage equipment</li>\n  <li><strong>Financial planning:</strong> estimate\
+    \ income and return on investment</li>\n  <li><strong>Hive management:</strong>\
+    \ track colony productivity and health</li>\n  <li><strong>Marketing preparation:</strong>\
+    \ plan sales and distribution</li>\n  <li><strong>Expansion decisions:</strong>\
+    \ determine when to add more hives</li>\n</ul>\n\n<h3>Factors Affecting Honey\
+    \ Production:</h3>\n<ul>\n  <li><strong>Colony strength:</strong> healthy, populous\
+    \ colonies produce more honey</li>\n  <li><strong>Local flora:</strong> diverse,\
+    \ abundant nectar sources increase yields</li>\n  <li><strong>Weather conditions:</strong>\
+    \ temperature, rainfall affect nectar flow</li>\n  <li><strong>Season length:</strong>\
+    \ longer warm seasons allow more honey production</li>\n  <li><strong>Hive management:</strong>\
+    \ proper care and timing of interventions</li>\n  <li><strong>Queen quality:</strong>\
+    \ prolific queens build stronger colonies</li>\n</ul>\n\n<h3>Typical Honey Yields\
+    \ by Region:</h3>\n<ul>\n  <li><strong>Northern climates:</strong> 30-60 lbs per\
+    \ hive annually</li>\n  <li><strong>Temperate zones:</strong> 60-100 lbs per hive\
+    \ annually</li>\n  <li><strong>Southern regions:</strong> 80-150 lbs per hive\
+    \ annually</li>\n  <li><strong>Optimal conditions:</strong> 100-200+ lbs per hive\
+    \ possible</li>\n  <li><strong>First-year hives:</strong> often produce little\
+    \ to no surplus honey</li>\n</ul>\n\n<h3>Beekeeping Timeline:</h3>\n<ul>\n  <li><strong>Early\
+    \ spring:</strong> colony building, add supers before main flow</li>\n  <li><strong>Late\
+    \ spring:</strong> major nectar flows begin, monitor space</li>\n  <li><strong>Summer:</strong>\
+    \ peak production, harvest surplus honey</li>\n  <li><strong>Late summer:</strong>\
+    \ final harvest, prepare colonies for winter</li>\n  <li><strong>Fall/Winter:</strong>\
+    \ colony maintenance, equipment preparation</li>\n</ul>\n\n<h3>Honey Types and\
+    \ Values:</h3>\n<ul>\n  <li><strong>Wildflower honey:</strong> $8-12 per pound\
+    \ retail</li>\n  <li><strong>Specialty varietals:</strong> $12-20 per pound (clover,\
+    \ orange blossom)</li>\n  <li><strong>Raw/unprocessed:</strong> premium pricing,\
+    \ $15-25 per pound</li>\n  <li><strong>Bulk/wholesale:</strong> $3-6 per pound\
+    \ to distributors</li>\n  <li><strong>Farmer's market:</strong> $10-18 per pound\
+    \ direct sales</li>\n</ul>\n\n<h3>Beekeeping Costs:</h3>\n<ul>\n  <li><strong>Initial\
+    \ hive setup:</strong> $150-250 per hive</li>\n  <li><strong>Annual maintenance:</strong>\
+    \ $50-100 per hive</li>\n  <li><strong>Extraction equipment:</strong> $200-2000\
+    \ depending on scale</li>\n  <li><strong>Protective gear:</strong> $100-200 per\
+    \ beekeeper</li>\n  <li><strong>Treatment/medications:</strong> $20-40 per hive\
+    \ annually</li>\n</ul>\n\n<h3>Management Practices for Higher Yields:</h3>\n<ul>\n\
+    \  <li><strong>Strong colonies:</strong> maintain populations of 40,000-60,000\
+    \ bees</li>\n  <li><strong>Supering:</strong> add honey supers before nectar flows</li>\n\
+    \  <li><strong>Disease control:</strong> monitor and treat varroa mites and diseases</li>\n\
+    \  <li><strong>Queen management:</strong> replace queens every 1-2 years</li>\n\
+    \  <li><strong>Feeding:</strong> supplement during dearth periods if needed</li>\n\
+    \  <li><strong>Location:</strong> place hives near diverse, abundant nectar sources</li>\n\
+    </ul>\n"
+  description: Calculate expected honey production from your beehives. Estimate yields,
+    plan harvest schedules, and analyze beekeeping profitability.
+  keywords:
+  - beekeeping calculator
+  - honey production calculator
+  - hive yield calculator
+  - beekeeping profit calculator
+  - honey harvest calculator
+  - bee colony calculator
+  - apiary calculator
+  - honey yield estimator
+  - beekeeping ROI calculator
+  - hive productivity calculator
+  - bee farm calculator
+  - honey production planning
+  - beekeeping cost calculator
+  - hive management calculator
+  - bee colony strength calculator
+  - honey flow calculator
+  - beekeeping business calculator
+  - apiarian calculator
+  - honey bee production
+  - commercial beekeeping calculator
+  title: Beekeeping Honey Production Calculator | Hive Yield Estimator
+title: Beekeeping Honey Production Calculator
 ---
 
 <form id="honey-production-form" autocomplete="off">

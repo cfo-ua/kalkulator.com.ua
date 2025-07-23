@@ -1,91 +1,110 @@
 ---
-layout: calculator
-title: "Moon Phase Calculator for Wedding Planning & Special Events"
-categories: [other]
-permalink: /en/calculators/moon-phase-calculator-wedding/
-seo:
-  title: "Moon Phase Calculator for Wedding Planning | Find Perfect Moon Phase for Your Special Day"
-  description: "Plan your wedding or special event with our moon phase calculator. Discover the perfect lunar phase for your ceremony, reception, and romantic occasions. Check full moon, new moon dates for 2024-2025."
-  keywords:
-    - moon phase calculator
-    - wedding moon phase
-    - lunar calendar wedding
-    - full moon wedding
-    - new moon wedding
-    - moon phase finder
-    - lunar phase calculator
-    - wedding date astrology
-    - moon calendar planning
-    - romantic moon phases
-    - wedding lunar calendar
-    - moon phase planner
-    - celestial wedding planning
-    - lunar cycle calculator
-    - wedding astronomy
-  content: |
-    <h2>Moon Phase Calculator for Wedding Planning</h2>
-    <p>Planning a magical wedding or special event? Our moon phase calculator helps you choose the perfect lunar phase for your special day. Whether you want a romantic full moon ceremony or a meaningful new moon celebration, discover the optimal timing for your event.</p>
-
-    <h3>Moon Phases and Their Wedding Meanings</h3>
-    <ul>
-      <li><strong>🌕 Full Moon:</strong> Peak romance, maximum illumination, dramatic photos, heightened emotions</li>
-      <li><strong>🌑 New Moon:</strong> New beginnings, fresh starts, intimate ceremonies, setting intentions</li>
-      <li><strong>🌒 Waxing Crescent:</strong> Growth and manifestation, building energy, promising future</li>
-      <li><strong>🌓 First Quarter:</strong> Decision-making, taking action, overcoming challenges</li>
-      <li><strong>🌔 Waxing Gibbous:</strong> Refinement, patience, almost complete, anticipation</li>
-      <li><strong>🌖 Waning Gibbous:</strong> Gratitude, sharing wisdom, celebration of abundance</li>
-      <li><strong>🌗 Third Quarter:</strong> Release, forgiveness, letting go of the past</li>
-      <li><strong>🌘 Waning Crescent:</strong> Rest, reflection, quiet ceremonies, spiritual connection</li>
-    </ul>
-
-    <h3>Popular Wedding Moon Phase Choices</h3>
-    <p>Different couples choose different lunar phases based on their preferences:</p>
-    <ul>
-      <li><strong>🌕 Full Moon Weddings (45% of lunar-planned weddings):</strong> Maximum romance, stunning photography, outdoor ceremonies, beach weddings</li>
-      <li><strong>🌑 New Moon Weddings (25%):</strong> Intimate gatherings, focusing on the couple, symbolic new beginnings</li>
-      <li><strong>🌔 Waxing Phases (20%):</strong> Growing love, building future together, optimistic energy</li>
-      <li><strong>🌖 Waning Phases (10%):</strong> Mature love, second marriages, autumn/winter ceremonies</li>
-    </ul>
-
-    <h3>Moon Phase Benefits for Wedding Planning</h3>
-    <ul>
-      <li><strong>📸 Photography:</strong> Full moons provide natural lighting for evening photos</li>
-      <li><strong>🌊 Outdoor Venues:</strong> Tidal considerations for beach or waterfront venues</li>
-      <li><strong>🎭 Guest Experience:</strong> Dramatic celestial backdrop for ceremonies</li>
-      <li><strong>💰 Venue Pricing:</strong> Some venues offer special rates during certain moon phases</li>
-      <li><strong>✨ Symbolic Meaning:</strong> Adding deeper significance to your special day</li>
-      <li><strong>🌙 Night Events:</strong> Natural illumination for evening receptions</li>
-    </ul>
-
-    <h3>Practical Considerations</h3>
-    <ul>
-      <li><strong>🌤️ Weather Patterns:</strong> Full moons can affect weather systems</li>
-      <li><strong>🌊 Tides:</strong> Important for coastal venues and water activities</li>
-      <li><strong>🦋 Seasonal Timing:</strong> Combine moon phases with seasonal preferences</li>
-      <li><strong>📅 Guest Availability:</strong> Balance lunar timing with practical scheduling</li>
-      <li><strong>💵 Budget Impact:</strong> Some dates may have premium pricing</li>
-    </ul>
-
-    <p><strong>Cultural Note:</strong> Many cultures consider specific moon phases auspicious for weddings. Research your cultural traditions and personal beliefs when selecting your date.</p>
-scripts:
-  - /en/js/moon-phase-calculator-wedding.js
+categories:
+- entertainment
 faq:
-  - question: What is the best moon phase for a wedding?
-    answer: "Full moons are most popular (45% of lunar-planned weddings) for their romantic ambiance and natural lighting. New moons are ideal for intimate ceremonies and new beginnings. The 'best' phase depends on your personal preference and ceremony style."
-  - question: How far in advance should I plan around moon phases?
-    answer: "Moon phases repeat every 29.5 days, so you have flexibility. Popular wedding months may have limited venue availability during full moons, so book 12-18 months in advance for full moon weddings."
-  - question: Do moon phases affect wedding photography?
-    answer: "Yes! Full moons provide excellent natural lighting for evening outdoor photos. New moons create a more intimate, candle-lit atmosphere. Photographers often adjust their equipment and approach based on lunar lighting."
-  - question: Are there any superstitions about wedding moon phases?
-    answer: "Many cultures have lunar wedding traditions. Some believe full moon weddings bring fertility and prosperity, while new moon weddings symbolize fresh starts. Waning moons are sometimes avoided as they represent decline, but others see them as releasing past relationships."
-  - question: How do moon phases affect tides at beach weddings?
-    answer: "Full and new moons create the highest (spring) tides, which can impact beach ceremonies. Plan your ceremony timing around high/low tides. Spring tides occur 2-3 days after full/new moons, not on the exact day."
-  - question: Can I see the moon during a daytime wedding ceremony?
-    answer: "Yes! The moon is often visible during daytime, especially during first/third quarter phases. Full moons rise at sunset, so they're perfect for evening ceremonies. New moons aren't visible as they're too close to the sun."
-  - question: Do venues charge different rates based on moon phases?
-    answer: "Some venues, especially outdoor and waterfront locations, may have premium pricing for full moon dates due to higher demand. New moon dates might offer discounts. Always ask about lunar pricing when booking."
-  - question: How accurate is moon phase timing for wedding planning?
-    answer: "Moon phases are precisely calculable years in advance. However, the exact timing varies by location and time zone. Our calculator provides accurate dates, but consult local astronomical data for precise timing."
+- answer: Full moons are most popular (45% of lunar-planned weddings) for their romantic
+    ambiance and natural lighting. New moons are ideal for intimate ceremonies and
+    new beginnings. The 'best' phase depends on your personal preference and ceremony
+    style.
+  question: What is the best moon phase for a wedding?
+- answer: Moon phases repeat every 29.5 days, so you have flexibility. Popular wedding
+    months may have limited venue availability during full moons, so book 12-18 months
+    in advance for full moon weddings.
+  question: How far in advance should I plan around moon phases?
+- answer: Yes! Full moons provide excellent natural lighting for evening outdoor photos.
+    New moons create a more intimate, candle-lit atmosphere. Photographers often adjust
+    their equipment and approach based on lunar lighting.
+  question: Do moon phases affect wedding photography?
+- answer: Many cultures have lunar wedding traditions. Some believe full moon weddings
+    bring fertility and prosperity, while new moon weddings symbolize fresh starts.
+    Waning moons are sometimes avoided as they represent decline, but others see them
+    as releasing past relationships.
+  question: Are there any superstitions about wedding moon phases?
+- answer: Full and new moons create the highest (spring) tides, which can impact beach
+    ceremonies. Plan your ceremony timing around high/low tides. Spring tides occur
+    2-3 days after full/new moons, not on the exact day.
+  question: How do moon phases affect tides at beach weddings?
+- answer: Yes! The moon is often visible during daytime, especially during first/third
+    quarter phases. Full moons rise at sunset, so they're perfect for evening ceremonies.
+    New moons aren't visible as they're too close to the sun.
+  question: Can I see the moon during a daytime wedding ceremony?
+- answer: Some venues, especially outdoor and waterfront locations, may have premium
+    pricing for full moon dates due to higher demand. New moon dates might offer discounts.
+    Always ask about lunar pricing when booking.
+  question: Do venues charge different rates based on moon phases?
+- answer: Moon phases are precisely calculable years in advance. However, the exact
+    timing varies by location and time zone. Our calculator provides accurate dates,
+    but consult local astronomical data for precise timing.
+  question: How accurate is moon phase timing for wedding planning?
+layout: calculator
+permalink: /en/calculators/moon-phase-calculator-wedding/
+scripts:
+- /en/js/moon-phase-calculator-wedding.js
+seo:
+  content: "<h2>Moon Phase Calculator for Wedding Planning</h2>\n<p>Planning a magical\
+    \ wedding or special event? Our moon phase calculator helps you choose the perfect\
+    \ lunar phase for your special day. Whether you want a romantic full moon ceremony\
+    \ or a meaningful new moon celebration, discover the optimal timing for your event.</p>\n\
+    \n<h3>Moon Phases and Their Wedding Meanings</h3>\n<ul>\n  <li><strong>\U0001F315\
+    \ Full Moon:</strong> Peak romance, maximum illumination, dramatic photos, heightened\
+    \ emotions</li>\n  <li><strong>\U0001F311 New Moon:</strong> New beginnings, fresh\
+    \ starts, intimate ceremonies, setting intentions</li>\n  <li><strong>\U0001F312\
+    \ Waxing Crescent:</strong> Growth and manifestation, building energy, promising\
+    \ future</li>\n  <li><strong>\U0001F313 First Quarter:</strong> Decision-making,\
+    \ taking action, overcoming challenges</li>\n  <li><strong>\U0001F314 Waxing Gibbous:</strong>\
+    \ Refinement, patience, almost complete, anticipation</li>\n  <li><strong>\U0001F316\
+    \ Waning Gibbous:</strong> Gratitude, sharing wisdom, celebration of abundance</li>\n\
+    \  <li><strong>\U0001F317 Third Quarter:</strong> Release, forgiveness, letting\
+    \ go of the past</li>\n  <li><strong>\U0001F318 Waning Crescent:</strong> Rest,\
+    \ reflection, quiet ceremonies, spiritual connection</li>\n</ul>\n\n<h3>Popular\
+    \ Wedding Moon Phase Choices</h3>\n<p>Different couples choose different lunar\
+    \ phases based on their preferences:</p>\n<ul>\n  <li><strong>\U0001F315 Full\
+    \ Moon Weddings (45% of lunar-planned weddings):</strong> Maximum romance, stunning\
+    \ photography, outdoor ceremonies, beach weddings</li>\n  <li><strong>\U0001F311\
+    \ New Moon Weddings (25%):</strong> Intimate gatherings, focusing on the couple,\
+    \ symbolic new beginnings</li>\n  <li><strong>\U0001F314 Waxing Phases (20%):</strong>\
+    \ Growing love, building future together, optimistic energy</li>\n  <li><strong>\U0001F316\
+    \ Waning Phases (10%):</strong> Mature love, second marriages, autumn/winter ceremonies</li>\n\
+    </ul>\n\n<h3>Moon Phase Benefits for Wedding Planning</h3>\n<ul>\n  <li><strong>\U0001F4F8\
+    \ Photography:</strong> Full moons provide natural lighting for evening photos</li>\n\
+    \  <li><strong>\U0001F30A Outdoor Venues:</strong> Tidal considerations for beach\
+    \ or waterfront venues</li>\n  <li><strong>\U0001F3AD Guest Experience:</strong>\
+    \ Dramatic celestial backdrop for ceremonies</li>\n  <li><strong>\U0001F4B0 Venue\
+    \ Pricing:</strong> Some venues offer special rates during certain moon phases</li>\n\
+    \  <li><strong>✨ Symbolic Meaning:</strong> Adding deeper significance to your\
+    \ special day</li>\n  <li><strong>\U0001F319 Night Events:</strong> Natural illumination\
+    \ for evening receptions</li>\n</ul>\n\n<h3>Practical Considerations</h3>\n<ul>\n\
+    \  <li><strong>\U0001F324️ Weather Patterns:</strong> Full moons can affect weather\
+    \ systems</li>\n  <li><strong>\U0001F30A Tides:</strong> Important for coastal\
+    \ venues and water activities</li>\n  <li><strong>\U0001F98B Seasonal Timing:</strong>\
+    \ Combine moon phases with seasonal preferences</li>\n  <li><strong>\U0001F4C5\
+    \ Guest Availability:</strong> Balance lunar timing with practical scheduling</li>\n\
+    \  <li><strong>\U0001F4B5 Budget Impact:</strong> Some dates may have premium\
+    \ pricing</li>\n</ul>\n\n<p><strong>Cultural Note:</strong> Many cultures consider\
+    \ specific moon phases auspicious for weddings. Research your cultural traditions\
+    \ and personal beliefs when selecting your date.</p>\n"
+  description: Plan your wedding or special event with our moon phase calculator.
+    Discover the perfect lunar phase for your ceremony, reception, and romantic occasions.
+    Check full moon, new moon dates for 2024-2025.
+  keywords:
+  - moon phase calculator
+  - wedding moon phase
+  - lunar calendar wedding
+  - full moon wedding
+  - new moon wedding
+  - moon phase finder
+  - lunar phase calculator
+  - wedding date astrology
+  - moon calendar planning
+  - romantic moon phases
+  - wedding lunar calendar
+  - moon phase planner
+  - celestial wedding planning
+  - lunar cycle calculator
+  - wedding astronomy
+  title: Moon Phase Calculator for Wedding Planning | Find Perfect Moon Phase for
+    Your Special Day
+title: Moon Phase Calculator for Wedding Planning & Special Events
 ---
 <form id="moon-phase-form" autocomplete="off">
   <div class="form-section">

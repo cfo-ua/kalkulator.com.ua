@@ -1,91 +1,104 @@
 ---
-layout: calculator
-title: "Scholarship Eligibility Calculator for International Students"
-categories: [other]
-permalink: /en/calculators/scholarship-eligibility-calculator/
-seo:
-  title: "Scholarship Eligibility Calculator | International Student Scholarships Assessment"
-  description: "Free scholarship eligibility calculator for international students. Check your chances for merit-based, need-based, and country-specific scholarships. Get personalized recommendations and application tips."
-  keywords:
-    - scholarship eligibility calculator
-    - international student scholarships
-    - scholarship assessment tool
-    - merit scholarship calculator
-    - need based scholarship
-    - study abroad scholarships
-    - university scholarship checker
-    - scholarship eligibility requirements
-    - international scholarship finder
-    - student financial aid calculator
-    - scholarship application assessment
-    - education funding calculator
-    - scholarship chances calculator
-    - student grant eligibility
-    - academic scholarship calculator
-  content: |
-    <h2>International Student Scholarship Eligibility Calculator</h2>
-    <p>Discover your eligibility for scholarships as an international student! Our comprehensive calculator evaluates your academic profile, financial need, extracurricular activities, and personal circumstances to assess your chances for various scholarship types.</p>
-
-    <h3>Types of Scholarships Assessed</h3>
-    <ul>
-      <li><strong>🎓 Merit-Based Scholarships:</strong> Based on academic excellence, test scores, and achievements</li>
-      <li><strong>💰 Need-Based Scholarships:</strong> Financial assistance for students with demonstrated need</li>
-      <li><strong>🌍 Country-Specific Scholarships:</strong> Programs targeting students from specific regions</li>
-      <li><strong>🎯 Field-Specific Scholarships:</strong> STEM, arts, business, and other discipline-focused awards</li>
-      <li><strong>🏆 Leadership Scholarships:</strong> For students with exceptional leadership and community service</li>
-      <li><strong>🌟 Diversity Scholarships:</strong> Promoting educational diversity and inclusion</li>
-    </ul>
-
-    <h3>What Factors Are Considered?</h3>
-    <p>Our calculator evaluates multiple criteria that scholarship committees typically consider:</p>
-    <ul>
-      <li><strong>Academic Performance:</strong> GPA, standardized test scores, class rank</li>
-      <li><strong>Financial Need:</strong> Family income, financial circumstances</li>
-      <li><strong>Extracurricular Activities:</strong> Leadership roles, community service, sports</li>
-      <li><strong>Personal Background:</strong> Country of origin, underrepresented groups</li>
-      <li><strong>Field of Study:</strong> STEM fields often have more funding available</li>
-      <li><strong>Language Proficiency:</strong> English language test scores for international students</li>
-    </ul>
-
-    <h3>Popular Scholarship Programs for International Students</h3>
-    <ul>
-      <li><strong>🇺🇸 United States:</strong> Fulbright, Gates Cambridge, university-specific scholarships</li>
-      <li><strong>🇬🇧 United Kingdom:</strong> Chevening, Commonwealth Scholarships, Rhodes Scholarship</li>
-      <li><strong>🇨🇦 Canada:</strong> Vanier Canada Graduate Scholarships, university awards</li>
-      <li><strong>🇦🇺 Australia:</strong> Australia Awards, Endeavour Scholarships</li>
-      <li><strong>🇪🇺 Europe:</strong> Erasmus+, DAAD (Germany), government scholarships</li>
-    </ul>
-
-    <h3>How to Use This Calculator</h3>
-    <p>Fill in your academic credentials, financial situation, extracurricular activities, and personal background. The calculator will provide:</p>
-    <ul>
-      <li>📊 Overall scholarship eligibility score</li>
-      <li>🎯 Recommended scholarship types to target</li>
-      <li>💡 Tips to improve your scholarship applications</li>
-      <li>📋 Application timeline and deadlines</li>
-      <li>🔗 Resources for finding specific scholarships</li>
-    </ul>
-
-    <p><strong>Note:</strong> This calculator provides general guidance based on common scholarship criteria. Actual eligibility varies by specific scholarship programs. Always check individual scholarship requirements and deadlines.</p>
-scripts:
-  - /en/js/scholarship-eligibility-calculator.js
+categories:
+- school
 faq:
-  - question: What GPA do I need for scholarships as an international student?
-    answer: "GPA requirements vary by scholarship type. Merit scholarships typically require 3.5+ (US scale), while highly competitive scholarships may require 3.8+. However, many scholarships consider other factors beyond GPA."
-  - question: Can students from any country apply for international scholarships?
-    answer: "Most scholarships are open to international students, but some are country-specific. Students from developing countries often have access to additional scholarship opportunities through government and NGO programs."
-  - question: How important are standardized test scores for scholarships?
-    answer: "Test scores (SAT, GRE, GMAT, IELTS, TOEFL) are important for merit-based scholarships. Higher scores significantly improve your chances, especially for competitive programs. Minimum requirements vary by scholarship."
-  - question: What if I don't have much extracurricular experience?
-    answer: "While extracurriculars help, they're not always required. Focus on academic excellence, and consider starting volunteer work or leadership activities. Some scholarships prioritize academic merit over extracurriculars."
-  - question: Are there scholarships for older or non-traditional students?
-    answer: "Yes! Many scholarships don't have age limits. Some specifically target non-traditional students, working professionals, or those returning to education. Highlight your unique experiences and motivation."
-  - question: How far in advance should I start applying for scholarships?
-    answer: "Start researching and preparing 12-18 months before your intended study start date. Many scholarships have deadlines 8-12 months before the academic year begins. Early preparation is crucial."
-  - question: Can I apply for multiple scholarships simultaneously?
-    answer: "Absolutely! Apply for as many scholarships as you're eligible for. Diversify your applications across different types (merit, need-based, country-specific) to maximize your chances of success."
-  - question: What are the most common mistakes in scholarship applications?
-    answer: "Common mistakes include: missing deadlines, not following instructions, generic essays, inadequate documentation, and not highlighting unique qualities. Take time to tailor each application."
+- answer: GPA requirements vary by scholarship type. Merit scholarships typically
+    require 3.5+ (US scale), while highly competitive scholarships may require 3.8+.
+    However, many scholarships consider other factors beyond GPA.
+  question: What GPA do I need for scholarships as an international student?
+- answer: Most scholarships are open to international students, but some are country-specific.
+    Students from developing countries often have access to additional scholarship
+    opportunities through government and NGO programs.
+  question: Can students from any country apply for international scholarships?
+- answer: Test scores (SAT, GRE, GMAT, IELTS, TOEFL) are important for merit-based
+    scholarships. Higher scores significantly improve your chances, especially for
+    competitive programs. Minimum requirements vary by scholarship.
+  question: How important are standardized test scores for scholarships?
+- answer: While extracurriculars help, they're not always required. Focus on academic
+    excellence, and consider starting volunteer work or leadership activities. Some
+    scholarships prioritize academic merit over extracurriculars.
+  question: What if I don't have much extracurricular experience?
+- answer: Yes! Many scholarships don't have age limits. Some specifically target non-traditional
+    students, working professionals, or those returning to education. Highlight your
+    unique experiences and motivation.
+  question: Are there scholarships for older or non-traditional students?
+- answer: Start researching and preparing 12-18 months before your intended study
+    start date. Many scholarships have deadlines 8-12 months before the academic year
+    begins. Early preparation is crucial.
+  question: How far in advance should I start applying for scholarships?
+- answer: Absolutely! Apply for as many scholarships as you're eligible for. Diversify
+    your applications across different types (merit, need-based, country-specific)
+    to maximize your chances of success.
+  question: Can I apply for multiple scholarships simultaneously?
+- answer: 'Common mistakes include: missing deadlines, not following instructions,
+    generic essays, inadequate documentation, and not highlighting unique qualities.
+    Take time to tailor each application.'
+  question: What are the most common mistakes in scholarship applications?
+layout: calculator
+permalink: /en/calculators/scholarship-eligibility-calculator/
+scripts:
+- /en/js/scholarship-eligibility-calculator.js
+seo:
+  content: "<h2>International Student Scholarship Eligibility Calculator</h2>\n<p>Discover\
+    \ your eligibility for scholarships as an international student! Our comprehensive\
+    \ calculator evaluates your academic profile, financial need, extracurricular\
+    \ activities, and personal circumstances to assess your chances for various scholarship\
+    \ types.</p>\n\n<h3>Types of Scholarships Assessed</h3>\n<ul>\n  <li><strong>\U0001F393\
+    \ Merit-Based Scholarships:</strong> Based on academic excellence, test scores,\
+    \ and achievements</li>\n  <li><strong>\U0001F4B0 Need-Based Scholarships:</strong>\
+    \ Financial assistance for students with demonstrated need</li>\n  <li><strong>\U0001F30D\
+    \ Country-Specific Scholarships:</strong> Programs targeting students from specific\
+    \ regions</li>\n  <li><strong>\U0001F3AF Field-Specific Scholarships:</strong>\
+    \ STEM, arts, business, and other discipline-focused awards</li>\n  <li><strong>\U0001F3C6\
+    \ Leadership Scholarships:</strong> For students with exceptional leadership and\
+    \ community service</li>\n  <li><strong>\U0001F31F Diversity Scholarships:</strong>\
+    \ Promoting educational diversity and inclusion</li>\n</ul>\n\n<h3>What Factors\
+    \ Are Considered?</h3>\n<p>Our calculator evaluates multiple criteria that scholarship\
+    \ committees typically consider:</p>\n<ul>\n  <li><strong>Academic Performance:</strong>\
+    \ GPA, standardized test scores, class rank</li>\n  <li><strong>Financial Need:</strong>\
+    \ Family income, financial circumstances</li>\n  <li><strong>Extracurricular Activities:</strong>\
+    \ Leadership roles, community service, sports</li>\n  <li><strong>Personal Background:</strong>\
+    \ Country of origin, underrepresented groups</li>\n  <li><strong>Field of Study:</strong>\
+    \ STEM fields often have more funding available</li>\n  <li><strong>Language Proficiency:</strong>\
+    \ English language test scores for international students</li>\n</ul>\n\n<h3>Popular\
+    \ Scholarship Programs for International Students</h3>\n<ul>\n  <li><strong>\U0001F1FA\
+    \U0001F1F8 United States:</strong> Fulbright, Gates Cambridge, university-specific\
+    \ scholarships</li>\n  <li><strong>\U0001F1EC\U0001F1E7 United Kingdom:</strong>\
+    \ Chevening, Commonwealth Scholarships, Rhodes Scholarship</li>\n  <li><strong>\U0001F1E8\
+    \U0001F1E6 Canada:</strong> Vanier Canada Graduate Scholarships, university awards</li>\n\
+    \  <li><strong>\U0001F1E6\U0001F1FA Australia:</strong> Australia Awards, Endeavour\
+    \ Scholarships</li>\n  <li><strong>\U0001F1EA\U0001F1FA Europe:</strong> Erasmus+,\
+    \ DAAD (Germany), government scholarships</li>\n</ul>\n\n<h3>How to Use This Calculator</h3>\n\
+    <p>Fill in your academic credentials, financial situation, extracurricular activities,\
+    \ and personal background. The calculator will provide:</p>\n<ul>\n  <li>\U0001F4CA\
+    \ Overall scholarship eligibility score</li>\n  <li>\U0001F3AF Recommended scholarship\
+    \ types to target</li>\n  <li>\U0001F4A1 Tips to improve your scholarship applications</li>\n\
+    \  <li>\U0001F4CB Application timeline and deadlines</li>\n  <li>\U0001F517 Resources\
+    \ for finding specific scholarships</li>\n</ul>\n\n<p><strong>Note:</strong> This\
+    \ calculator provides general guidance based on common scholarship criteria. Actual\
+    \ eligibility varies by specific scholarship programs. Always check individual\
+    \ scholarship requirements and deadlines.</p>\n"
+  description: Free scholarship eligibility calculator for international students.
+    Check your chances for merit-based, need-based, and country-specific scholarships.
+    Get personalized recommendations and application tips.
+  keywords:
+  - scholarship eligibility calculator
+  - international student scholarships
+  - scholarship assessment tool
+  - merit scholarship calculator
+  - need based scholarship
+  - study abroad scholarships
+  - university scholarship checker
+  - scholarship eligibility requirements
+  - international scholarship finder
+  - student financial aid calculator
+  - scholarship application assessment
+  - education funding calculator
+  - scholarship chances calculator
+  - student grant eligibility
+  - academic scholarship calculator
+  title: Scholarship Eligibility Calculator | International Student Scholarships Assessment
+title: Scholarship Eligibility Calculator for International Students
 ---
 <form id="scholarship-form" autocomplete="off">
   <div class="form-section">

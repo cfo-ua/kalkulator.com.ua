@@ -1,95 +1,106 @@
 ---
-layout: calculator
-title: "Moving Cost Calculator for Cross-Country Moves"
-categories: [financial]
-permalink: /en/calculators/moving-cost-cross-country/
-seo:
-  title: "Cross-Country Moving Cost Calculator  -  Long Distance Moving Budget, Relocation Expenses"
-  description: "Calculate cross-country moving costs including truck rental, professional movers, packing supplies, travel expenses. Plan your long-distance relocation budget."
-  keywords:
-    - cross country moving cost calculator
-    - long distance moving calculator
-    - moving budget calculator
-    - relocation cost estimator
-    - interstate moving costs
-    - moving expense calculator
-    - long distance move budget
-    - cross country relocation costs
-    - moving truck rental calculator
-    - professional movers cost
-    - packing supplies cost
-    - moving cost estimator
-    - relocation budget planner
-    - long distance moving budget
-    - interstate relocation calculator
-    - moving expenses planner
-    - cross country move planner
-    - long distance moving expenses
-    - relocation cost planner
-    - moving budget estimator
-  content: |
-    <h2>Moving Cost Calculator for Cross-Country Moves</h2>
-    <p>Planning a <strong>cross-country move</strong>? This calculator helps you estimate all the costs involved in long-distance relocation, from hiring professional movers to DIY truck rentals, packing supplies, and travel expenses.</p>
-
-    <h3>Cross-Country Moving Options:</h3>
-    <ul>
-      <li><strong>Full-Service Movers:</strong> $2,500-$8,000+ for complete packing, loading, transport, and unpacking</li>
-      <li><strong>Moving Container (PODS):</strong> $1,500-$4,000 for portable storage containers</li>
-      <li><strong>Truck Rental (DIY):</strong> $1,200-$3,000 for truck, gas, and supplies</li>
-      <li><strong>Freight/LTL:</strong> $1,000-$3,500 for less-than-truckload shipping</li>
-      <li><strong>Hybrid Options:</strong> Mix of professional and DIY services</li>
-    </ul>
-
-    <h3>Factors Affecting Moving Costs:</h3>
-    <ul>
-      <li><strong>Distance:</strong> Mileage between origin and destination cities</li>
-      <li><strong>Home Size:</strong> Number of bedrooms and total cubic feet of belongings</li>
-      <li><strong>Weight:</strong> Total weight of household goods (especially for full-service moves)</li>
-      <li><strong>Services:</strong> Packing, loading, storage, specialty item handling</li>
-      <li><strong>Timing:</strong> Peak season (summer) vs. off-peak pricing</li>
-      <li><strong>Accessibility:</strong> Stairs, elevators, long carry distances</li>
-    </ul>
-
-    <h3>Additional Relocation Expenses:</h3>
-    <ul>
-      <li><strong>Travel Costs:</strong> Hotels, meals, gas for family during move</li>
-      <li><strong>Temporary Lodging:</strong> Short-term rentals if timing doesn't align</li>
-      <li><strong>Storage Fees:</strong> If belongings need temporary storage</li>
-      <li><strong>Utility Connections:</strong> Deposits and connection fees</li>
-      <li><strong>Vehicle Transport:</strong> Auto shipping for multiple vehicles</li>
-      <li><strong>Pet Transport:</strong> Professional pet relocation services</li>
-    </ul>
-
-    <h3>Ways to Reduce Moving Costs:</h3>
-    <ul>
-      <li><strong>Declutter First:</strong> Sell, donate, or discard items to reduce weight/volume</li>
-      <li><strong>Off-Peak Timing:</strong> Move during fall/winter or mid-month</li>
-      <li><strong>Get Multiple Quotes:</strong> Compare at least 3 moving company estimates</li>
-      <li><strong>Flexible Dates:</strong> Allow movers to choose delivery window</li>
-      <li><strong>Pack Yourself:</strong> Self-pack non-fragile items to save labor costs</li>
-      <li><strong>Tax Deductions:</strong> Some moving expenses may be tax-deductible</li>
-    </ul>
-
-    <p>This calculator provides <strong>comprehensive moving cost estimates</strong> for different relocation scenarios, helping you budget for your cross-country move and choose the best option for your situation.</p>
-scripts:
-  - /en/js/moving-cost-cross-country.js
+categories:
+- travel
 faq:
-  - question: "How much does a cross-country move cost?"
-    answer: "Cross-country moves typically cost $2,500-$8,000 for full-service movers, $1,200-$3,000 for DIY truck rental, or $1,500-$4,000 for moving containers. Costs depend on distance, home size, and services needed."
-  - question: "What's the cheapest way to move cross-country?"
-    answer: "DIY truck rental is usually cheapest for smaller moves. For larger homes, moving containers or freight services may be more economical than full-service movers while still being manageable."
-  - question: "When is the best time to move to save money?"
-    answer: "Fall and winter (October-April) offer lower rates. Avoid summer peak season, holidays, and end/beginning of months. Mid-week moves are typically cheaper than weekends."
-  - question: "How much should I tip cross-country movers?"
-    answer: "Tip each mover $20-40 per day for local crew, and $40-80 total for long-distance driver. Adjust based on service quality and difficulty of move. Tip in cash at completion."
-  - question: "Are moving expenses tax deductible?"
-    answer: "For military members, moving expenses for permanent change of station are deductible. For others, moving expense deductions were suspended 2018-2025 except for active duty military."
-  - question: "How do I get accurate moving quotes?"
-    answer: "Get in-home estimates from 3+ licensed movers. Provide detailed inventory, mention any challenging items or access issues. Compare binding vs. non-binding estimates carefully."
-  - question: "What should I pack myself vs. let movers pack?"
-    answer: "Pack valuable items, important documents, and essentials yourself. Let movers pack fragile items, furniture, and appliances - they're insured for damage to items they pack."
-  - question: "How far in advance should I book cross-country movers?"
-    answer: "Book 6-8 weeks in advance, especially for summer moves. Popular routes and peak season may require even earlier booking. Last-minute moves cost significantly more."
+- answer: Cross-country moves typically cost $2,500-$8,000 for full-service movers,
+    $1,200-$3,000 for DIY truck rental, or $1,500-$4,000 for moving containers. Costs
+    depend on distance, home size, and services needed.
+  question: How much does a cross-country move cost?
+- answer: DIY truck rental is usually cheapest for smaller moves. For larger homes,
+    moving containers or freight services may be more economical than full-service
+    movers while still being manageable.
+  question: What's the cheapest way to move cross-country?
+- answer: Fall and winter (October-April) offer lower rates. Avoid summer peak season,
+    holidays, and end/beginning of months. Mid-week moves are typically cheaper than
+    weekends.
+  question: When is the best time to move to save money?
+- answer: Tip each mover $20-40 per day for local crew, and $40-80 total for long-distance
+    driver. Adjust based on service quality and difficulty of move. Tip in cash at
+    completion.
+  question: How much should I tip cross-country movers?
+- answer: For military members, moving expenses for permanent change of station are
+    deductible. For others, moving expense deductions were suspended 2018-2025 except
+    for active duty military.
+  question: Are moving expenses tax deductible?
+- answer: Get in-home estimates from 3+ licensed movers. Provide detailed inventory,
+    mention any challenging items or access issues. Compare binding vs. non-binding
+    estimates carefully.
+  question: How do I get accurate moving quotes?
+- answer: Pack valuable items, important documents, and essentials yourself. Let movers
+    pack fragile items, furniture, and appliances - they're insured for damage to
+    items they pack.
+  question: What should I pack myself vs. let movers pack?
+- answer: Book 6-8 weeks in advance, especially for summer moves. Popular routes and
+    peak season may require even earlier booking. Last-minute moves cost significantly
+    more.
+  question: How far in advance should I book cross-country movers?
+layout: calculator
+permalink: /en/calculators/moving-cost-cross-country/
+scripts:
+- /en/js/moving-cost-cross-country.js
+seo:
+  content: "<h2>Moving Cost Calculator for Cross-Country Moves</h2>\n<p>Planning a\
+    \ <strong>cross-country move</strong>? This calculator helps you estimate all\
+    \ the costs involved in long-distance relocation, from hiring professional movers\
+    \ to DIY truck rentals, packing supplies, and travel expenses.</p>\n\n<h3>Cross-Country\
+    \ Moving Options:</h3>\n<ul>\n  <li><strong>Full-Service Movers:</strong> $2,500-$8,000+\
+    \ for complete packing, loading, transport, and unpacking</li>\n  <li><strong>Moving\
+    \ Container (PODS):</strong> $1,500-$4,000 for portable storage containers</li>\n\
+    \  <li><strong>Truck Rental (DIY):</strong> $1,200-$3,000 for truck, gas, and\
+    \ supplies</li>\n  <li><strong>Freight/LTL:</strong> $1,000-$3,500 for less-than-truckload\
+    \ shipping</li>\n  <li><strong>Hybrid Options:</strong> Mix of professional and\
+    \ DIY services</li>\n</ul>\n\n<h3>Factors Affecting Moving Costs:</h3>\n<ul>\n\
+    \  <li><strong>Distance:</strong> Mileage between origin and destination cities</li>\n\
+    \  <li><strong>Home Size:</strong> Number of bedrooms and total cubic feet of\
+    \ belongings</li>\n  <li><strong>Weight:</strong> Total weight of household goods\
+    \ (especially for full-service moves)</li>\n  <li><strong>Services:</strong> Packing,\
+    \ loading, storage, specialty item handling</li>\n  <li><strong>Timing:</strong>\
+    \ Peak season (summer) vs. off-peak pricing</li>\n  <li><strong>Accessibility:</strong>\
+    \ Stairs, elevators, long carry distances</li>\n</ul>\n\n<h3>Additional Relocation\
+    \ Expenses:</h3>\n<ul>\n  <li><strong>Travel Costs:</strong> Hotels, meals, gas\
+    \ for family during move</li>\n  <li><strong>Temporary Lodging:</strong> Short-term\
+    \ rentals if timing doesn't align</li>\n  <li><strong>Storage Fees:</strong> If\
+    \ belongings need temporary storage</li>\n  <li><strong>Utility Connections:</strong>\
+    \ Deposits and connection fees</li>\n  <li><strong>Vehicle Transport:</strong>\
+    \ Auto shipping for multiple vehicles</li>\n  <li><strong>Pet Transport:</strong>\
+    \ Professional pet relocation services</li>\n</ul>\n\n<h3>Ways to Reduce Moving\
+    \ Costs:</h3>\n<ul>\n  <li><strong>Declutter First:</strong> Sell, donate, or\
+    \ discard items to reduce weight/volume</li>\n  <li><strong>Off-Peak Timing:</strong>\
+    \ Move during fall/winter or mid-month</li>\n  <li><strong>Get Multiple Quotes:</strong>\
+    \ Compare at least 3 moving company estimates</li>\n  <li><strong>Flexible Dates:</strong>\
+    \ Allow movers to choose delivery window</li>\n  <li><strong>Pack Yourself:</strong>\
+    \ Self-pack non-fragile items to save labor costs</li>\n  <li><strong>Tax Deductions:</strong>\
+    \ Some moving expenses may be tax-deductible</li>\n</ul>\n\n<p>This calculator\
+    \ provides <strong>comprehensive moving cost estimates</strong> for different\
+    \ relocation scenarios, helping you budget for your cross-country move and choose\
+    \ the best option for your situation.</p>\n"
+  description: Calculate cross-country moving costs including truck rental, professional
+    movers, packing supplies, travel expenses. Plan your long-distance relocation
+    budget.
+  keywords:
+  - cross country moving cost calculator
+  - long distance moving calculator
+  - moving budget calculator
+  - relocation cost estimator
+  - interstate moving costs
+  - moving expense calculator
+  - long distance move budget
+  - cross country relocation costs
+  - moving truck rental calculator
+  - professional movers cost
+  - packing supplies cost
+  - moving cost estimator
+  - relocation budget planner
+  - long distance moving budget
+  - interstate relocation calculator
+  - moving expenses planner
+  - cross country move planner
+  - long distance moving expenses
+  - relocation cost planner
+  - moving budget estimator
+  title: Cross-Country Moving Cost Calculator  -  Long Distance Moving Budget, Relocation
+    Expenses
+title: Moving Cost Calculator for Cross-Country Moves
 ---
 
 <form id="moving-cost-form">
