@@ -328,12 +328,21 @@ title: Password Strength Checker & Entropy Calculator - Security Policy Validato
 }
 
 .tab-button.active {
-  color: var(--accent);
+  color: white;
+  background: var(--accent);
+  border-radius: 8px 8px 0 0;
   border-bottom-color: var(--accent);
 }
 
 .tab-button:hover {
   color: var(--accent);
+  background: var(--card-bg);
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-button.active:hover {
+  color: white;
+  background: var(--accent-hover);
 }
 
 .checker-section {
