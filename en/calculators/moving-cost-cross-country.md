@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Moving Cost Calculator for Cross-Country Moves
 categories:
 - travel
 faq:
@@ -34,7 +36,6 @@ faq:
     peak season may require even earlier booking. Last-minute moves cost significantly
     more.
   question: How far in advance should I book cross-country movers?
-layout: calculator
 scripts:
 - /en/js/moving-cost-cross-country.js
 seo:
@@ -99,7 +100,6 @@ seo:
   - moving budget estimator
   title: Cross-Country Moving Cost Calculator  -  Long Distance Moving Budget, Relocation
     Expenses
-title: Moving Cost Calculator for Cross-Country Moves
 ---
 
 <form id="moving-cost-form">

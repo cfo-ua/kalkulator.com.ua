@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment
 categories:
 - environment
 faq:
@@ -34,7 +36,6 @@ faq:
     ones include JouleBug, HowGood, and Think Dirty. Regular tracking helps maintain
     momentum and motivation.
   question: Are there apps or tools to track my ongoing environmental impact?
-layout: calculator
 scripts:
 - /en/js/eco-friendly-product-impact-calculator.js
 seo:
@@ -138,7 +139,6 @@ seo:
   - climate impact calculator
   title: Eco-Friendly Product Impact Calculator | Carbon Footprint & Environmental
     Assessment Online
-title: Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment
 ---
 
 <form id="eco-impact-form" autocomplete="off">

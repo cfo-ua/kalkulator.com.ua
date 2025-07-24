@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Clothing Size Calculator
 categories:
 - travel
 faq:
@@ -26,7 +28,6 @@ faq:
 - answer: European sizes are typically 4-6 numbers higher than US sizes. For example,
     a US size 8 is often equivalent to a European size 38-40, depending on the brand.
   question: What's the difference between European and US sizing?
-layout: calculator
 scripts:
 - /en/js/clothing-size.js
 seo:
@@ -84,7 +85,6 @@ seo:
   - apparel size calculator
   - fashion size converter
   title: Clothing Size Calculator  -  Find Your Perfect Size (US, EU, UK, International)
-title: Clothing Size Calculator
 ---
 
 <form id="clothing-size-form" autocomplete="off">

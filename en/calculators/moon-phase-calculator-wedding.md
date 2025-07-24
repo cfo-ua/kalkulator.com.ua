@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Moon Phase Calculator for Wedding Planning & Special Events
 categories:
 - entertainment
 faq:
@@ -36,7 +38,6 @@ faq:
     timing varies by location and time zone. Our calculator provides accurate dates,
     but consult local astronomical data for precise timing.
   question: How accurate is moon phase timing for wedding planning?
-layout: calculator
 scripts:
 - /en/js/moon-phase-calculator-wedding.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - wedding astronomy
   title: Moon Phase Calculator for Wedding Planning | Find Perfect Moon Phase for
     Your Special Day
-title: Moon Phase Calculator for Wedding Planning & Special Events
 ---
 <form id="moon-phase-form" autocomplete="off">
   <div class="form-section">

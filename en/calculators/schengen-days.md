@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Schengen Days Calculator
 categories:
 - travel
 faq:
@@ -28,7 +30,6 @@ faq:
 - answer: Overstaying can result in fines, entry bans (up to several years), deportation,
     and difficulties with future visa applications. Always comply with the rules.
   question: What happens if I overstay?
-layout: calculator
 scripts:
 - /en/js/schengen-days.js
 seo:
@@ -90,7 +91,6 @@ seo:
   - travel days tracker europe
   - schengen border calculator
   title: Schengen Days Calculator  -  Online 90/180 Rule Checker | Travel Calculator
-title: Schengen Days Calculator
 ---
 
 <form id="schengen-form">

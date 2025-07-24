@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: College Cost Calculator for Out-of-State Students
 categories:
 - school
 faq:
@@ -35,7 +37,6 @@ faq:
     annually in living costs. Rural or smaller cities may be $5,000-$10,000 cheaper.
     Research local cost of living carefully.
   question: How do living costs vary by location?
-layout: calculator
 scripts:
 - /en/js/college-cost-calculator-out-of-state.js
 seo:
@@ -98,7 +99,6 @@ seo:
   - college expense estimator
   - student cost breakdown
   title: Out-of-State College Cost Calculator | Calculate Total Education Expenses
-title: College Cost Calculator for Out-of-State Students
 ---
 <form id="college-cost-form" autocomplete="off">
   <div class="form-section">

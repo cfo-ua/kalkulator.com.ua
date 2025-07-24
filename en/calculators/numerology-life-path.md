@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Numerology Life Path Number Calculator
 categories:
 - entertainment
 faq:
@@ -34,7 +36,6 @@ faq:
     your natural talents and life purpose. It can help identify work environments
     and roles where you're likely to thrive.
   question: Can I use numerology for career guidance?
-layout: calculator
 scripts:
 - /en/js/numerology-life-path.js
 seo:
@@ -99,7 +100,6 @@ seo:
   - personality number reading
   - soul number calculator
   title: Numerology Life Path Number Calculator  -  Find Your Life Path Number Free
-title: Numerology Life Path Number Calculator
 ---
 
 <form id="numerology-form" autocomplete="off">

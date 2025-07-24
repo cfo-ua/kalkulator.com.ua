@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Quantum Computing Resource Estimator | Quantum Algorithm Analysis Tool
 categories:
 - technology
 faq:
@@ -34,7 +36,6 @@ faq:
     Q# (Microsoft), and OpenQASM. Most are based on Python for ease of use and integration
     with classical computing.
   question: What programming languages are used for quantum computing?
-layout: calculator
 scripts:
 - /en/js/quantum-computing-resource-estimator.js
 seo:
@@ -134,7 +135,6 @@ seo:
   - quantum system estimator
   title: Quantum Computing Resource Estimator | Quantum Algorithm Analysis & Resource
     Planning Online
-title: Quantum Computing Resource Estimator | Quantum Algorithm Analysis Tool
 ---
 
 <form id="quantum-estimator-form" autocomplete="off">

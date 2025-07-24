@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Cybersecurity Awareness Quiz - Test Your Security Knowledge
 categories:
 - technology
 faq:
@@ -37,7 +39,6 @@ faq:
     consider taking cybersecurity awareness training, and retake the quiz after learning
     more about the topics you missed.
   question: What should I do if I score poorly on the quiz?
-layout: calculator
 scripts:
 - /en/js/cybersecurity-awareness-quiz.js
 seo:
@@ -121,7 +122,6 @@ seo:
   - digital safety assessment
   - cyber resilience test
   title: Cybersecurity Awareness Quiz - Test Your Online Security Knowledge Free
-title: Cybersecurity Awareness Quiz - Test Your Security Knowledge
 ---
 
 <div class="quiz-container">

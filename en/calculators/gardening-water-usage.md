@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Gardening Water Usage Calculator
 categories:
 - environment
 faq:
@@ -20,7 +22,6 @@ faq:
 - answer: No, deep watering 2-3 times per week is better than daily light watering.
     This encourages deep root growth and improves drought tolerance.
   question: Should I water every day in hot weather?
-layout: calculator
 scripts:
 - /en/js/gardening-water-usage.js
 seo:
@@ -90,7 +91,6 @@ seo:
   - garden irrigation design
   - water management calculator
   title: Garden Water Usage Calculator | Irrigation & Watering Calculator
-title: Gardening Water Usage Calculator
 ---
 
 <form id="water-usage-form" autocomplete="off">

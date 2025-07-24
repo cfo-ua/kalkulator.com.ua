@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Random Person Selector - Pick Random People for Games & Challenges
 categories:
 - entertainment
 faq:
@@ -33,7 +35,6 @@ faq:
 - answer: No, this tool is designed for completely fair, unweighted random selection.
     Every participant has an exactly equal chance of being chosen.
   question: Is there a way to weight the selection towards certain people?
-layout: calculator
 scripts:
 - /en/js/random-person-selector.js
 seo:
@@ -113,7 +114,6 @@ seo:
   - random student picker
   - activity partner selector
   title: Random Person Selector - Fair Person Picker for Games, Teams & Challenges
-title: Random Person Selector - Pick Random People for Games & Challenges
 ---
 
 <div class="random-selector-container">

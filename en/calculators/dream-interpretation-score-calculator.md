@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Dream Interpretation Score Calculator & Meaning Analysis
 categories:
 - entertainment
 faq:
@@ -34,7 +36,6 @@ faq:
     self-awareness and control in your life. The content may be less symbolic since
     your conscious mind is more active, but the experience itself is significant.
   question: How do lucid dreams differ in interpretation?
-layout: calculator
 scripts:
 - /en/js/dream-interpretation-score-calculator.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - lucid dream analysis
   - recurring dream meaning
   title: Dream Interpretation Calculator | Analyze Dream Meanings & Symbolism Online
-title: Dream Interpretation Score Calculator & Meaning Analysis
 ---
 <form id="dream-form" autocomplete="off">
   <div class="form-section">

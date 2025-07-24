@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Travel Budget Calculator for Backpackers
 categories:
 - travel
 faq:
@@ -29,7 +31,6 @@ faq:
 - answer: Carry 3-7 days worth of expenses in cash, plus emergency money. Use ATMs
     regularly but have backup payment methods like cards and small USD bills.
   question: How much cash should I carry while backpacking?
-layout: calculator
 scripts:
 - /en/js/travel-budget-backpackers.js
 seo:
@@ -89,7 +90,6 @@ seo:
   - travel planning budget
   title: Travel Budget Calculator for Backpackers  -  Plan Your Backpacking Trip Cost,
     Budget Travel Planning
-title: Travel Budget Calculator for Backpackers
 ---
 
 <form id="travel-budget-form">

@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: International Student Visa Application Checklist Generator
 categories:
 - travel
 faq:
@@ -38,7 +40,6 @@ faq:
     situations, criminal history, or unusual circumstances. Many successful applications
     are done independently.'
   question: Should I use an immigration consultant or lawyer?
-layout: calculator
 scripts:
 - /en/js/international-student-visa-checklist-generator.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - student permit checklist
   - overseas study visa
   title: Student Visa Checklist Generator | International Student Application Requirements
-title: International Student Visa Application Checklist Generator
 ---
 <form id="visa-checklist-form" autocomplete="off">
   <div class="form-section">

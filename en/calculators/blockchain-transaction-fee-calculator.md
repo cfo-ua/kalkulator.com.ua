@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Blockchain Transaction Fee Calculator | Crypto Gas Fee Estimator
 categories:
 - technology
 faq:
@@ -35,7 +37,6 @@ faq:
     Priority fees incentivize validators to include your transaction faster. In competitive
     environments (like arbitrage), higher priority fees increase success chances.
   question: What are MEV and priority fees?
-layout: calculator
 scripts:
 - /en/js/blockchain-transaction-fee-calculator.js
 seo:
@@ -130,7 +131,6 @@ seo:
   - blockchain fee comparison
   - crypto gas estimator
   title: Blockchain Transaction Fee Calculator | Crypto Gas Fees & Network Costs Online
-title: Blockchain Transaction Fee Calculator | Crypto Gas Fee Estimator
 ---
 
 <form id="blockchain-fee-form" autocomplete="off">

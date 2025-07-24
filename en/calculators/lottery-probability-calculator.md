@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Lottery Probability Calculator - Calculate Your Odds of Winning Any Lottery
 categories:
 - entertainment
 faq:
@@ -42,7 +44,6 @@ faq:
     terrible odds. Large jackpots just mean more people are playing, creating more
     competition if you do win.
   question: Is it worth playing when the jackpot gets very large?
-layout: calculator
 scripts:
 - /en/js/lottery-probability-calculator.js
 seo:
@@ -160,7 +161,6 @@ seo:
   - lottery odds reality check
   title: Lottery Probability Calculator - Calculate Exact Odds of Winning Powerball,
     Mega Millions
-title: Lottery Probability Calculator - Calculate Your Odds of Winning Any Lottery
 ---
 
 <form id="lottery-form" autocomplete="off">

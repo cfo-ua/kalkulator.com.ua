@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Compost Bin Size Calculator
 categories:
 - environment
 faq:
@@ -20,7 +22,6 @@ faq:
 - answer: Yes, but decomposition slows in cold weather. Larger bins retain heat better.
     Consider insulating or moving bins to protected areas in harsh climates.
   question: Can I compost in winter?
-layout: calculator
 scripts:
 - /en/js/compost-bin-size.js
 seo:
@@ -94,7 +95,6 @@ seo:
   - compost materials calculator
   - eco-friendly composting
   title: Compost Bin Size Calculator | Composting System Calculator
-title: Compost Bin Size Calculator
 ---
 
 <form id="compost-size-form" autocomplete="off">

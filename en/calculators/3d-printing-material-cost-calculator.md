@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: 3D Printing Material Cost Calculator | Filament & Resin Cost Estimator
 categories:
 - technology
 faq:
@@ -34,7 +36,6 @@ faq:
     for appearance, food-safe for kitchen items. However, standard PLA/PETG meets
     80% of printing needs at much lower cost. Choose based on functional requirements.
   question: Are expensive specialty filaments worth the cost?
-layout: calculator
 scripts:
 - /en/js/3d-printing-material-cost-calculator.js
 seo:
@@ -153,7 +154,6 @@ seo:
   - custom printing cost
   title: 3D Printing Cost Calculator | Filament, Resin & Manufacturing Cost Estimator
     Online
-title: 3D Printing Material Cost Calculator | Filament & Resin Cost Estimator
 ---
 
 <form id="printing-cost-form" autocomplete="off">

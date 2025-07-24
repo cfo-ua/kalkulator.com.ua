@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: GDPR, SOX, ESG Compliance Checklist Calculator
 categories:
 - business
 faq:
@@ -34,7 +36,6 @@ faq:
     relevant certifications, understand shared responsibility models, and ensure contracts
     address compliance requirements and data location.
   question: How does cloud adoption affect compliance?
-layout: calculator
 scripts:
 - /en/js/compliance-checklist.js
 seo:
@@ -135,7 +136,6 @@ seo:
   - regulatory compliance audit
   - compliance maturity assessment
   title: GDPR, SOX, ESG Compliance Checklist Calculator - Business Compliance Assessment
-title: GDPR, SOX, ESG Compliance Checklist Calculator
 ---
 
 <form id="compliance-form" autocomplete="off">

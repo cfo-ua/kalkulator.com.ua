@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Fertilizer Calculator
 categories:
 - environment
 faq:
@@ -20,7 +22,6 @@ faq:
 - answer: 'Granular fertilizer: water lightly to activate. Liquid fertilizer: no watering
     needed. Avoid heavy watering that washes away nutrients.'
   question: Should I water after fertilizing?
-layout: calculator
 scripts:
 - /en/js/fertilizer.js
 seo:
@@ -78,7 +79,6 @@ seo:
   - turf fertilizer calculator
   - landscape fertilizer calculator
   title: Fertilizer Calculator | Lawn & Garden Fertilizer Application Rate Calculator
-title: Fertilizer Calculator
 ---
 
 <form id="fertilizer-form" autocomplete="off">

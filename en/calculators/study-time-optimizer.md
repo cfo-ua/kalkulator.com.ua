@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Study Time Optimizer for MCAT, LSAT, GRE, GMAT & Medical Exams
 categories:
 - school
 faq:
@@ -34,7 +36,6 @@ faq:
     than comprehensive content review. Study 1-2 hours on weekdays, 4-6 hours on weekends,
     and extend your timeline to 6-8 months.
   question: How should I adjust my study plan if I'm working full-time?
-layout: calculator
 scripts:
 - /en/js/study-time-optimizer.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - professional exam prep
   - study efficiency calculator
   title: Study Time Optimizer Calculator | MCAT, LSAT, GRE, GMAT Preparation Planner
-title: Study Time Optimizer for MCAT, LSAT, GRE, GMAT & Medical Exams
 ---
 <form id="study-optimizer-form" autocomplete="off">
   <div class="form-section">

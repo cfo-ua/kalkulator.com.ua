@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Cybersecurity Compliance Readiness Assessment - Business Security Checklist
 categories:
 - technology
 faq:
@@ -39,7 +41,6 @@ faq:
     then address governance and training. The assessment provides priority rankings
     to guide your efforts.
   question: How do I prioritize improvements based on the assessment?
-layout: calculator
 scripts:
 - /en/js/cybersecurity-compliance-assessment.js
 seo:
@@ -125,7 +126,6 @@ seo:
   - endpoint security checklist
   - security documentation audit
   title: Cybersecurity Compliance Assessment - Business Security Readiness Checklist
-title: Cybersecurity Compliance Readiness Assessment - Business Security Checklist
 ---
 
 <div class="compliance-assessment-container">

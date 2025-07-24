@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Scholarship Eligibility Calculator for International Students
 categories:
 - school
 faq:
@@ -34,7 +36,6 @@ faq:
     generic essays, inadequate documentation, and not highlighting unique qualities.
     Take time to tailor each application.'
   question: What are the most common mistakes in scholarship applications?
-layout: calculator
 scripts:
 - /en/js/scholarship-eligibility-calculator.js
 seo:
@@ -97,7 +98,6 @@ seo:
   - student grant eligibility
   - academic scholarship calculator
   title: Scholarship Eligibility Calculator | International Student Scholarships Assessment
-title: Scholarship Eligibility Calculator for International Students
 ---
 <form id="scholarship-form" autocomplete="off">
   <div class="form-section">

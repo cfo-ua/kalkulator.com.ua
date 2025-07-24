@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Tarot Card Reading Interpretation Score Calculator
 categories:
 - entertainment
 faq:
@@ -30,7 +32,6 @@ faq:
 - answer: No, we don't store any personal information or reading data. Each calculation
     is performed locally in your browser for complete privacy.
   question: Does the calculator store my readings?
-layout: calculator
 scripts:
 - /en/js/tarot-card-reading.js
 seo:
@@ -88,7 +89,6 @@ seo:
   - personal tarot calculator
   title: Tarot Card Reading Interpretation Score Calculator  -  Free Online Tarot
     Calculator
-title: Tarot Card Reading Interpretation Score Calculator
 ---
 
 <form id="tarot-form" autocomplete="off">

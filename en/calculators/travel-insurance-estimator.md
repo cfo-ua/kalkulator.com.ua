@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Travel Insurance Premium Estimator
 categories:
 - travel
 faq:
@@ -27,7 +29,6 @@ faq:
 - answer: Limited coverage may be available, but many benefits (especially cancellation
     coverage) require purchase before departure. Buy before traveling for full protection.
   question: Can I buy travel insurance after my trip starts?
-layout: calculator
 scripts:
 - /en/js/travel-insurance-estimator.js
 seo:
@@ -98,7 +99,6 @@ seo:
   - trip cancellation insurance cost
   - travel health insurance calculator
   title: Travel Insurance Calculator - Compare Costs & Coverage for Your Trip
-title: Travel Insurance Premium Estimator
 ---
 
 <form id="travel-insurance-form">

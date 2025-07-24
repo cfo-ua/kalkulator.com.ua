@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Astrology Birth Chart Compatibility Calculator
 categories:
 - entertainment
 faq:
@@ -34,7 +36,6 @@ faq:
     reading would examine all planetary aspects, houses, and more complex interactions
     between the two birth charts.
   question: Is this the same as a full synastry reading?
-layout: calculator
 scripts:
 - /en/js/astrology-compatibility.js
 seo:
@@ -100,7 +101,6 @@ seo:
   - astrological harmony test
   title: Astrology Birth Chart Compatibility Calculator  -  Free Love & Relationship
     Compatibility
-title: Astrology Birth Chart Compatibility Calculator
 ---
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">

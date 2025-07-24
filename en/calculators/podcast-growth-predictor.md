@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Podcast Listener Growth Predictor
 categories:
 - technology
 faq:
@@ -32,7 +34,6 @@ faq:
     unique positioning, exceptional quality, or serving an underserved sub-niche within
     the broader category.
   question: Should I start a podcast in a competitive niche?
-layout: calculator
 scripts:
 - /en/js/podcast-growth-predictor.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - podcast success metrics
   - podcast growth strategy
   title: Podcast Growth Calculator - Predict Listener Growth & Revenue Potential
-title: Podcast Listener Growth Predictor
 ---
 
 <form id="podcast-growth-form">

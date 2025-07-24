@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Visa Eligibility Calculator - US, Canada, UK, Australia
 categories:
 - travel
 faq:
@@ -36,7 +38,6 @@ faq:
     Canada (2-12 weeks), UK (3-6 weeks), Australia (2-4 weeks). Apply well in advance
     and check current processing times on official websites.'
   question: How long does visa processing typically take?
-layout: calculator
 scripts:
 - /en/js/visa-eligibility-calculator.js
 seo:
@@ -89,7 +90,6 @@ seo:
   - visa requirements checker
   title: Visa Eligibility Calculator | Check US, Canada, UK, Australia Visa Requirements
     Online
-title: Visa Eligibility Calculator - US, Canada, UK, Australia
 ---
 <form id="visa-form" autocomplete="off">
   <div class="form-section">

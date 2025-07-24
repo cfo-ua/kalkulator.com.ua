@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Online Course Enrollment Forecast Calculator
 categories:
 - business
 faq:
@@ -32,7 +34,6 @@ faq:
     Most successful courses are 2-8 hours of content, broken into digestible modules
     with practical exercises.
   question: How long should I make my online course?
-layout: calculator
 scripts:
 - /en/js/course-enrollment-forecast.js
 seo:
@@ -107,7 +108,6 @@ seo:
   - course growth calculator
   - education entrepreneur calculator
   title: Online Course Enrollment Calculator - Student Growth & Revenue Predictions
-title: Online Course Enrollment Forecast Calculator
 ---
 
 <form id="course-enrollment-form">

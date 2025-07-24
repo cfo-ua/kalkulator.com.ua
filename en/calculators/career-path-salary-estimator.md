@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More
 categories:
 - school
 faq:
@@ -38,7 +40,6 @@ faq:
     change rapidly. Stay informed about industry trends, new skills in demand, and
     evolving compensation standards in your field.
   question: How often should I reassess my career path and salary?
-layout: calculator
 scripts:
 - /en/js/career-path-salary-estimator.js
 seo:
@@ -113,7 +114,6 @@ seo:
   - finance career salary
   - salary progression calculator
   title: Career Salary Calculator | Data Scientist, Doctor, Engineer Salary Estimator
-title: Career Path Salary Estimator - Data Scientists, Doctors, Engineers & More
 ---
 <form id="career-salary-form" autocomplete="off">
   <div class="form-section">

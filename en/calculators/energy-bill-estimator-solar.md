@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Energy Bill Estimator for Solar Panels
 categories:
 - environment
 faq:
@@ -28,7 +30,6 @@ faq:
     credits, state rebates, and local utility programs that can reduce effective installation
     costs.
   question: What government incentives are available for solar panels?
-layout: calculator
 scripts:
 - /en/js/energy-bill-estimator-solar.js
 seo:
@@ -98,7 +99,6 @@ seo:
   - residential solar calculator
   - solar power investment calculator
   title: Solar Panel Energy Bill Calculator - Estimate Monthly Savings & Payback Period
-title: Energy Bill Estimator for Solar Panels
 ---
 
 <form id="solar-calculator-form">
