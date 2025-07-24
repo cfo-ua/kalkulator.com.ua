@@ -95,7 +95,7 @@ seo:
   </a>
   <a class="category-card" href="/en/categories/other/">
     <span>✨</span>
-    <div>Other<br><small>IP address, internet speed, etc.</small></div>
+    <div>Other<br><small>Lifestyle, pets, social media, personal tools</small></div>
   </a>
 </div>
 
@@ -183,8 +183,8 @@ seo:
     <li style="margin-bottom: 0.8rem;"><strong>Entertainment:</strong> gaming calculators, party planning, event tools</li>
     <li style="margin-bottom: 0.8rem;"><strong>Travel:</strong> distance calculators, travel budget, currency conversion</li>
     <li style="margin-bottom: 0.8rem;"><strong>Other:</strong> 
-      <a href="/en/calculators/internet-speed-test/" style="color:#0071e3; text-decoration: underline;">internet speed test</a>, 
-      <a href="/en/calculators/ip-address/" style="color:#0071e3; text-decoration: underline;">IP address checker</a>, and more useful tools</li>
+      <a href="/en/calculators/bad-habit-cost-calculator/" style="color:#0071e3; text-decoration: underline;">bad habit cost calculator</a>, 
+      <a href="/en/calculators/pet-calorie-calculator/" style="color:#0071e3; text-decoration: underline;">pet calorie calculator</a>, and more lifestyle tools</li>
   </ul>
 
   <h3>How to use our calculators</h3>
