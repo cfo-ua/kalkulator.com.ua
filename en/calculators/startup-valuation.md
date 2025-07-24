@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Startup Valuation Calculator"
-categories: [other]
+categories: [business]
 seo:
   title: "Startup Valuation Calculator - Estimate Your Company Value Online"
   description: "Calculate startup valuation using multiple proven methods including revenue multiples, cost approach, and market comparables. Get comprehensive valuation analysis for investment planning and fundraising."
