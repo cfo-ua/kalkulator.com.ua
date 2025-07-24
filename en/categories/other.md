@@ -4,8 +4,8 @@ title: "Other Calculators"
 category_id: other
 permalink: /en/categories/other/
 seo:
-  title: "Other Useful Calculators — Travel, Lifestyle, and Miscellaneous Tools"
-  description: "Diverse collection of useful calculators for everyday life. Travel calculators, fuel cost estimators, internet speed tests, and various lifestyle calculation tools."
-  keywords: ["useful calculators", "travel calculators", "fuel cost calculator", "internet speed test", "lifestyle calculators", "miscellaneous calculators", "everyday tools", "utility calculators", "practical tools", "general calculators"]
-  intro: "Discover various useful calculators for travel, lifestyle, and everyday needs. From fuel costs to internet speed tests and more."
+  title: "Lifestyle & Utility Calculators — Personal Finance, Pet Care, Social Media & Cost Analysis"
+  description: "Diverse collection of practical calculators for everyday life. Calculate pet care costs, social media earnings, cryptocurrency investments, DIY project costs, furniture planning, habit costs, freelancing rates, and personal lifestyle expenses. Comprehensive tools for modern living."
+  keywords: ["utility calculators", "lifestyle calculators", "personal calculator", "pet calculator", "social media calculator", "cryptocurrency calculator", "freelancer calculator", "cost calculator", "habit cost calculator", "pet care calculator", "pet calorie calculator", "pet medication calculator", "onlyfans calculator", "youtube calculator", "tiktok calculator", "XRP calculator", "crypto calculator", "DIY calculator", "furniture calculator", "home gym calculator", "smart home calculator", "project cost calculator", "resale value calculator", "text analyzer", "practical calculators", "everyday calculators", "personal finance tools", "lifestyle planning tools", "hobby calculator"]
+  intro: "Practical calculators for modern lifestyle needs. From pet care and social media earnings to cryptocurrency investments and personal cost analysis — find the right tool for every aspect of your daily life."
 ---
