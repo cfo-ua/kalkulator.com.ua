@@ -328,30 +328,41 @@ header {
 .category-card {
   display: flex;
   align-items: center;
-  background: var(--card-bg);
+  background: linear-gradient(135deg, var(--card-bg) 0%, #f0f4ff 100%);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  padding: 1.3em 1em;
-  min-height: 90px;
+  border: 1px solid rgba(21, 122, 255, 0.08);
+  padding: 1.5em 1.2em;
+  min-height: 95px;
   font-size: 1.1rem;
-  gap: 1.2em;
+  gap: 1.4em;
   color: var(--main-color);
   text-decoration: none;
-  transition: box-shadow 0.2s, background 0.2s, transform 0.15s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 0;
   max-width: 100%;
   overflow-x: auto;
+  position: relative;
 }
+
 .category-card:hover, .category-card:focus {
-  box-shadow: 0 6px 24px 0 rgba(60,60,60,0.12);
-  background: #eaf3ff;
-  transform: translateY(-2px) scale(1.012);
+  box-shadow: 0 8px 32px 0 rgba(21, 122, 255, 0.15), 0 2px 8px 0 rgba(60,60,60,0.08);
+  background: linear-gradient(135deg, #eaf3ff 0%, #d6e9ff 100%);
+  transform: translateY(-3px) scale(1.02);
   outline: none;
+  border-color: rgba(21, 122, 255, 0.2);
 }
 
 .category-card span {
-  font-size: 2.3em;
-  min-width: 0;
+  font-size: 2.5em;
+  min-width: 60px;
+  text-align: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover span {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .intro {
