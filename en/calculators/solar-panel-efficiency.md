@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Solar Panel Efficiency Calculator"
-categories: [other]
+categories: [environment]
 seo:
   title: "Solar Panel Efficiency Calculator - Performance Analysis & Energy Output Tool"
   description: "Free solar panel efficiency calculator. Analyze panel performance, energy output, efficiency ratings, and optimal positioning for maximum solar energy generation."
