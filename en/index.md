@@ -51,51 +51,51 @@ seo:
 <div class="categories" id="categories">
   <a class="category-card" href="/en/categories/school/">
     <span>📐</span>
-    <div>School<br><small>Quadratic equations, derivatives, physics laws</small></div>
+    <div>School<br><small>Math equations, calculus derivatives, physics formulas, algebra solvers</small></div>
   </a>
   <a class="category-card" href="/en/categories/financial/">
     <span>💵</span>
-    <div>Financial<br><small>Mortgage, 401k, compound interest, loans</small></div>
+    <div>Financial<br><small>Mortgage payments, retirement planning, investment growth, debt payoff</small></div>
   </a>
   <a class="category-card" href="/en/categories/business/">
     <span>📈</span>
-    <div>Business<br><small>Break-even, ROAS, profit margins, cash flow</small></div>
+    <div>Business<br><small>Profit analysis, ROI calculations, break-even analysis, cash flow</small></div>
   </a>
   <a class="category-card" href="/en/categories/conversion/">
     <span>🔄</span>
-    <div>Conversion<br><small>Length, weight, temperature, area units</small></div>
+    <div>Conversion<br><small>Unit conversions, metric imperial, currency exchange, measurements</small></div>
   </a>
   <a class="category-card" href="/en/categories/health/">
     <span>❤️</span>
-    <div>Health<br><small>Daily calories, BMI, ideal weight, fitness</small></div>
+    <div>Health<br><small>Calorie counting, BMI calculation, fitness tracking, weight management</small></div>
   </a>
   <a class="category-card" href="/en/categories/construction/">
     <span>🏗️</span>
-    <div>Construction<br><small>Concrete, drywall, fencing, electrical</small></div>
+    <div>Construction<br><small>Material estimators, concrete volume, area calculations, project costs</small></div>
   </a>
   <a class="category-card" href="/en/categories/time-date/">
     <span>⏰</span>
-    <div>Time & Date<br><small>Calendar, age, time difference</small></div>
+    <div>Time & Date<br><small>Age calculations, date differences, business days, time zones</small></div>
   </a>
   <a class="category-card" href="/en/categories/environment/">
     <span>🌱</span>
-    <div>Environment<br><small>Carbon footprint, sustainability, eco tools</small></div>
+    <div>Environment<br><small>Carbon footprint, energy savings, solar efficiency, eco impact</small></div>
   </a>
   <a class="category-card" href="/en/categories/technology/">
     <span>💻</span>
-    <div>Technology<br><small>Network, programming, computing tools</small></div>
+    <div>Technology<br><small>Password strength, internet speed, IP tools, network diagnostics</small></div>
   </a>
   <a class="category-card" href="/en/categories/entertainment/">
     <span>🎬</span>
-    <div>Entertainment<br><small>Gaming, movies, events, fun tools</small></div>
+    <div>Entertainment<br><small>Wedding planning, astrology compatibility, tarot readings, luck calculators</small></div>
   </a>
   <a class="category-card" href="/en/categories/travel/">
     <span>✈️</span>
-    <div>Travel<br><small>Distance, currency, trip planning</small></div>
+    <div>Travel<br><small>Visa eligibility, travel budgets, backpacking costs, international planning</small></div>
   </a>
   <a class="category-card" href="/en/categories/other/">
     <span>✨</span>
-    <div>Other<br><small>Lifestyle, pets, social media, personal tools</small></div>
+    <div>Other<br><small>Lifestyle tools, pet care, social media, personal calculators</small></div>
   </a>
 </div>
 
@@ -139,52 +139,72 @@ seo:
 
   <ul style="margin-bottom: 2rem; padding-left: 1.2rem;">
     <li style="margin-bottom: 0.8rem;"><strong>Financial:</strong> 
-      <a href="/en/calculators/mortgage-calculator/" style="color:#0071e3; text-decoration: underline;">mortgage calculator</a>, 
-      <a href="/en/calculators/401k-calculator/" style="color:#0071e3; text-decoration: underline;">401k calculator</a>, 
-      <a href="/en/calculators/compound-interest/" style="color:#0071e3; text-decoration: underline;">compound interest</a>, 
-      <a href="/en/calculators/debt-snowball-avalanche/" style="color:#0071e3; text-decoration: underline;">debt payoff strategies</a></li>
+      <a href="/en/calculators/mortgage-calculator/" style="color:#0071e3; text-decoration: underline;">mortgage payment calculator</a>, 
+      <a href="/en/calculators/401k-calculator/" style="color:#0071e3; text-decoration: underline;">401k retirement calculator</a>, 
+      <a href="/en/calculators/compound-interest/" style="color:#0071e3; text-decoration: underline;">compound interest calculator</a>, 
+      <a href="/en/calculators/debt-snowball-avalanche/" style="color:#0071e3; text-decoration: underline;">debt payoff strategies calculator</a>, 
+      loan amortization, investment growth projections</li>
     <li style="margin-bottom: 0.8rem;"><strong>Business:</strong> 
-      <a href="/en/calculators/break-even/" style="color:#0071e3; text-decoration: underline;">break-even analysis</a>, 
-      <a href="/en/calculators/roas/" style="color:#0071e3; text-decoration: underline;">ROAS calculator</a>, 
-      <a href="/en/calculators/business-profit/" style="color:#0071e3; text-decoration: underline;">profit calculations</a>, 
-      <a href="/en/calculators/markup-margin/" style="color:#0071e3; text-decoration: underline;">markup & margin</a></li>
+      <a href="/en/calculators/break-even/" style="color:#0071e3; text-decoration: underline;">break-even point analysis</a>, 
+      <a href="/en/calculators/roas/" style="color:#0071e3; text-decoration: underline;">ROAS return calculator</a>, 
+      <a href="/en/calculators/business-profit/" style="color:#0071e3; text-decoration: underline;">profit margin calculator</a>, 
+      <a href="/en/calculators/markup-margin/" style="color:#0071e3; text-decoration: underline;">markup margin calculator</a>, 
+      cash flow analysis, ROI calculations</li>
     <li style="margin-bottom: 0.8rem;"><strong>School:</strong> 
       <a href="/en/calculators/quadratic/" style="color:#0071e3; text-decoration: underline;">quadratic equation solver</a>, 
-      <a href="/en/calculators/derivative/" style="color:#0071e3; text-decoration: underline;">derivative calculator</a>, 
+      <a href="/en/calculators/derivative/" style="color:#0071e3; text-decoration: underline;">calculus derivative calculator</a>, 
       <a href="/en/calculators/percent/" style="color:#0071e3; text-decoration: underline;">percentage calculator</a>, 
-      <a href="/en/calculators/ohm/" style="color:#0071e3; text-decoration: underline;">Ohm's law calculator</a></li>
+      <a href="/en/calculators/ohm/" style="color:#0071e3; text-decoration: underline;">Ohm's law physics calculator</a>, 
+      algebra solutions, math homework help</li>
     <li style="margin-bottom: 0.8rem;"><strong>Health:</strong> 
-      <a href="/en/calculators/calorie-needs/" style="color:#0071e3; text-decoration: underline;">daily calorie calculator</a>, 
-      <a href="/en/calculators/ideal-weight-calculator/" style="color:#0071e3; text-decoration: underline;">ideal weight calculator</a>, 
-      <a href="/en/calculators/calorie-burn/" style="color:#0071e3; text-decoration: underline;">calories burned calculator</a>, 
-      <a href="/en/calculators/fitness-age/" style="color:#0071e3; text-decoration: underline;">fitness age calculator</a></li>
+      <a href="/en/calculators/calorie-needs/" style="color:#0071e3; text-decoration: underline;">daily calorie needs calculator</a>, 
+      <a href="/en/calculators/ideal-weight-calculator/" style="color:#0071e3; text-decoration: underline;">ideal weight BMI calculator</a>, 
+      <a href="/en/calculators/calorie-burn/" style="color:#0071e3; text-decoration: underline;">calories burned exercise calculator</a>, 
+      <a href="/en/calculators/fitness-age/" style="color:#0071e3; text-decoration: underline;">fitness age health calculator</a>, 
+      weight loss planning, nutrition tracking</li>
     <li style="margin-bottom: 0.8rem;"><strong>Construction:</strong> 
-      <a href="/en/calculators/concrete/" style="color:#0071e3; text-decoration: underline;">concrete calculator</a>, 
-      <a href="/en/calculators/drywall/" style="color:#0071e3; text-decoration: underline;">drywall calculator</a>, 
-      <a href="/en/calculators/fence-material/" style="color:#0071e3; text-decoration: underline;">fence material calculator</a>, 
-      <a href="/en/calculators/room-area/" style="color:#0071e3; text-decoration: underline;">room area calculator</a></li>
+      <a href="/en/calculators/concrete/" style="color:#0071e3; text-decoration: underline;">concrete volume calculator</a>, 
+      <a href="/en/calculators/drywall/" style="color:#0071e3; text-decoration: underline;">drywall material calculator</a>, 
+      <a href="/en/calculators/fence-material/" style="color:#0071e3; text-decoration: underline;">fence material cost calculator</a>, 
+      <a href="/en/calculators/room-area/" style="color:#0071e3; text-decoration: underline;">room area square footage calculator</a>, 
+      building materials estimation, project cost planning</li>
     <li style="margin-bottom: 0.8rem;"><strong>Conversion:</strong> 
-      <a href="/en/calculators/length-converter/" style="color:#0071e3; text-decoration: underline;">length converter</a>, 
-      <a href="/en/calculators/weight-converter/" style="color:#0071e3; text-decoration: underline;">weight converter</a>, 
-      <a href="/en/calculators/temperature-converter/" style="color:#0071e3; text-decoration: underline;">temperature converter</a>, 
-      <a href="/en/calculators/area-converter/" style="color:#0071e3; text-decoration: underline;">area converter</a></li>
+      <a href="/en/calculators/length-converter/" style="color:#0071e3; text-decoration: underline;">length unit converter</a>, 
+      <a href="/en/calculators/weight-converter/" style="color:#0071e3; text-decoration: underline;">weight mass converter</a>, 
+      <a href="/en/calculators/temperature-converter/" style="color:#0071e3; text-decoration: underline;">temperature converter Celsius Fahrenheit</a>, 
+      <a href="/en/calculators/area-converter/" style="color:#0071e3; text-decoration: underline;">area unit converter</a>, 
+      metric imperial conversion, measurement tools</li>
     <li style="margin-bottom: 0.8rem;"><strong>Time & Date:</strong> 
-      <a href="/en/calculators/age/" style="color:#0071e3; text-decoration: underline;">age calculator</a>, 
+      <a href="/en/calculators/age/" style="color:#0071e3; text-decoration: underline;">age calculator exact years</a>, 
       <a href="/en/calculators/date-difference/" style="color:#0071e3; text-decoration: underline;">date difference calculator</a>, 
-      <a href="/en/calculators/business-days/" style="color:#0071e3; text-decoration: underline;">business days calculator</a></li>
+      <a href="/en/calculators/business-days/" style="color:#0071e3; text-decoration: underline;">business days calculator</a>, 
+      working days calculation, time between dates</li>
     <li style="margin-bottom: 0.8rem;"><strong>Environment:</strong> 
-      <a href="/en/calculators/carbon-offset-business/" style="color:#0071e3; text-decoration: underline;">carbon footprint calculator</a>, 
+      <a href="/en/calculators/carbon-offset-business/" style="color:#0071e3; text-decoration: underline;">carbon footprint business calculator</a>, 
       <a href="/en/calculators/energy/" style="color:#0071e3; text-decoration: underline;">energy savings calculator</a>, 
-      <a href="/en/calculators/solar-panel-efficiency/" style="color:#0071e3; text-decoration: underline;">solar panel efficiency</a></li>
+      <a href="/en/calculators/solar-panel-efficiency/" style="color:#0071e3; text-decoration: underline;">solar panel efficiency calculator</a>, 
+      eco-friendly impact assessment, sustainability metrics</li>
     <li style="margin-bottom: 0.8rem;"><strong>Technology:</strong> 
-      <a href="/en/calculators/password-strength-checker/" style="color:#0071e3; text-decoration: underline;">password strength checker</a>, 
-      <a href="/en/calculators/internet-speed-test/" style="color:#0071e3; text-decoration: underline;">internet speed test</a>, 
-      <a href="/en/calculators/ip-address/" style="color:#0071e3; text-decoration: underline;">IP address checker</a></li>
-    <li style="margin-bottom: 0.8rem;"><strong>Entertainment:</strong> gaming calculators, party planning, event tools</li>
-    <li style="margin-bottom: 0.8rem;"><strong>Travel:</strong> distance calculators, travel budget, currency conversion</li>
+      <a href="/en/calculators/password-strength-checker/" style="color:#0071e3; text-decoration: underline;">password strength security checker</a>, 
+      <a href="/en/calculators/internet-speed-test/" style="color:#0071e3; text-decoration: underline;">internet speed test tool</a>, 
+      <a href="/en/calculators/ip-address/" style="color:#0071e3; text-decoration: underline;">IP address location checker</a>, 
+      network diagnostics, tech utilities</li>
+    <li style="margin-bottom: 0.8rem;"><strong>Entertainment:</strong> 
+      <a href="/en/calculators/wedding-cost-estimator/" style="color:#0071e3; text-decoration: underline;">wedding cost estimator</a>, 
+      <a href="/en/calculators/astrology-compatibility/" style="color:#0071e3; text-decoration: underline;">astrology compatibility</a>, 
+      <a href="/en/calculators/superstition-luck-calculator/" style="color:#0071e3; text-decoration: underline;">superstition luck calculator</a>, 
+      <a href="/en/calculators/tarot-card-reading/" style="color:#0071e3; text-decoration: underline;">tarot card reading</a>, 
+      <a href="/en/calculators/moon-phase-calculator-wedding/" style="color:#0071e3; text-decoration: underline;">moon phase wedding planner</a></li>
+    <li style="margin-bottom: 0.8rem;"><strong>Travel:</strong> 
+      <a href="/en/calculators/visa-eligibility-calculator/" style="color:#0071e3; text-decoration: underline;">visa eligibility calculator</a>, 
+      <a href="/en/calculators/travel-budget-backpackers/" style="color:#0071e3; text-decoration: underline;">backpacking budget planner</a>, 
+      <a href="/en/calculators/travel-insurance-estimator/" style="color:#0071e3; text-decoration: underline;">travel insurance estimator</a>, 
+      <a href="/en/calculators/schengen-days/" style="color:#0071e3; text-decoration: underline;">Schengen stay calculator</a>, 
+      <a href="/en/calculators/fuel-cost/" style="color:#0071e3; text-decoration: underline;">fuel cost trip calculator</a></li>
     <li style="margin-bottom: 0.8rem;"><strong>Other:</strong> 
       <a href="/en/calculators/bad-habit-cost-calculator/" style="color:#0071e3; text-decoration: underline;">bad habit cost calculator</a>, 
-      <a href="/en/calculators/pet-calorie-calculator/" style="color:#0071e3; text-decoration: underline;">pet calorie calculator</a>, and more lifestyle tools</li>
+      <a href="/en/calculators/pet-calorie-calculator/" style="color:#0071e3; text-decoration: underline;">pet calorie needs calculator</a>, 
+      lifestyle optimization tools, personal productivity calculators</li>
   </ul>
 
   <h3>How to use our calculators</h3>
