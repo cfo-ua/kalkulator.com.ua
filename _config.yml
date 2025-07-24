@@ -34,6 +34,12 @@ defaults:
       layout: calculator
       seo:
         keywords: ["калькулятор", "онлайн калькулятор", "україна"]
+  - scope:
+      path: "en/calculators"
+      type: pages
+    values:
+      layout: calculator
+      permalink: /en/calculators/:basename/
 
 # (Optional) Configuration for Markdown rendering
 kramdown:
