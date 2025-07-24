@@ -210,7 +210,7 @@ seo:
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="/en/calculators/mortgage-calculator/" style="background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Calculate Mortgage</a>
       <a href="/en/calculators/calorie-needs/" style="background: var(--accent); color: white; padding: 0.8rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">Calculate Calories</a>
-      <a href="/en/categories/" style="background: transparent; color: var(--accent); padding: 0.8rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; border: 2px solid var(--accent); transition: all 0.3s ease;">Browse All Categories</a>
+      <a href="/en/#categories" style="background: transparent; color: var(--accent); padding: 0.8rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; border: 2px solid var(--accent); transition: all 0.3s ease;">Browse All Categories</a>
     </div>
   </div>
 </section>
