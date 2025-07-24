@@ -70,7 +70,7 @@ seo:
   </a>
   <a class="category-card" href="/categories/other/">
     <span>✨</span>
-    <div>Інше<br><small>IP-адреса, швидкість інтернету тощо</small></div>
+    <div>Інше<br><small>Інтернет, подорожі, астрологія тощо</small></div>
   </a>
 </div>
 
