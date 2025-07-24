@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Electric Vehicle Range Calculator
 categories:
 - environment
 faq:
@@ -27,7 +29,6 @@ faq:
 - answer: EVs convert about 85-90% of electrical energy to motion vs. 20-30% for gasoline
     engines, making them far more energy efficient overall.
   question: How does EV efficiency compare to gasoline vehicles?
-layout: calculator
 scripts:
 - /en/js/electric-vehicle-range.js
 seo:
@@ -106,7 +107,6 @@ seo:
   - electric car travel calculator
   - EV range optimization tool
   title: Electric Vehicle Range Calculator - EV Driving Distance & Battery Life Tool
-title: Electric Vehicle Range Calculator
 ---
 
 <form id="ev-range-form">

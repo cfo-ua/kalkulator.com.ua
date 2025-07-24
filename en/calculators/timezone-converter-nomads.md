@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Time Zone Converter for Digital Nomads
 categories:
 - travel
 faq:
@@ -26,7 +28,6 @@ faq:
 - answer: Most calendar apps, Calendly, and project management tools. Always verify
     time zone settings in your regular tools match your calculations.
   question: What tools integrate well with this calculator?
-layout: calculator
 scripts:
 - /en/js/timezone-converter-nomads.js
 seo:
@@ -97,7 +98,6 @@ seo:
   - remote collaboration time
   - global workspace timezone
   title: Digital Nomad Time Zone Converter - Meeting Scheduler & World Clock Tool
-title: Time Zone Converter for Digital Nomads
 ---
 
 <form id="timezone-form">

@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Carbon Offset Calculator for Businesses
 categories:
 - environment
 faq:
@@ -31,7 +33,6 @@ faq:
     Use utility bills and travel records for initial assessment, then expand scope
     gradually.
   question: What's the best approach for small businesses starting carbon management?
-layout: calculator
 scripts:
 - /en/js/carbon-offset-business.js
 seo:
@@ -114,7 +115,6 @@ seo:
   - corporate ESG calculator
   title: Business Carbon Offset Calculator - Corporate Carbon Footprint & Sustainability
     Tool
-title: Carbon Offset Calculator for Businesses
 ---
 
 <form id="carbon-form">

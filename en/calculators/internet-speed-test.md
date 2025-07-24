@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Internet Speed Test  -  Online Download Speed Checker
 categories:
 - technology
 faq:
@@ -29,7 +31,6 @@ faq:
 - answer: Try restarting your router, moving closer to Wi-Fi, closing other apps,
     testing at different times, or contacting your internet service provider.
   question: What should I do if my speed is slow?
-layout: calculator
 scripts:
 - /en/js/internet-speed-test.js
 seo:
@@ -84,7 +85,6 @@ seo:
   - cable speed test
   - mobile speed test
   title: Internet Speed Test Online  -  Check Download Speed in Mbps
-title: Internet Speed Test  -  Online Download Speed Checker
 ---
 <div style="text-align: center; margin: 20px 0;">
   <button id="start-test" style="padding: 15px 30px; font-size: 18px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer;">Start Speed Test</button>

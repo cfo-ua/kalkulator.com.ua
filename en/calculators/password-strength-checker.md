@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: "Password Strength Checker & Entropy Calculator - Security Policy Validator"
 categories:
 - technology
 faq:
@@ -38,7 +40,6 @@ faq:
 - answer: Yes! The generator can create passwords meeting specific policy requirements.
     Select your target policy and the generator will create compliant passwords automatically.
   question: Can the generator create passwords for specific requirements?
-layout: calculator
 scripts:
 - /en/js/password-strength-checker.js
 seo:
@@ -144,8 +145,6 @@ seo:
   - password security evaluation
   - password entropy calculation
   - password randomness test
-  title: Password Strength Checker & Entropy Calculator - Test Security Online
-title: Password Strength Checker & Entropy Calculator - Security Policy Validator
 ---
 
 <div class="password-checker-container">

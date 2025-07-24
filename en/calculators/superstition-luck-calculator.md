@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Superstition Luck Calculator - Daily Fortune & Lucky Signs
 categories:
 - entertainment
 faq:
@@ -34,7 +36,6 @@ faq:
     a sense of control. They're also part of cultural heritage and can be fun social
     bonding experiences, as long as they don't become obsessive.
   question: Are there any benefits to believing in superstitions?
-layout: calculator
 scripts:
 - /en/js/superstition-luck-calculator.js
 seo:
@@ -107,7 +108,6 @@ seo:
   - lucky charm calculator
   - bad luck calculator
   title: Superstition Luck Calculator | Daily Fortune & Lucky Signs Assessment
-title: Superstition Luck Calculator - Daily Fortune & Lucky Signs
 ---
 <form id="superstition-form" autocomplete="off">
   <div class="form-section">

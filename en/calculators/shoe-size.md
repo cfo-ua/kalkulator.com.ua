@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Shoe Size Converter
 categories:
 - travel
 faq:
@@ -31,7 +33,6 @@ faq:
 - answer: Measure your feet in the late afternoon or evening when they're naturally
     at their largest due to daily swelling.
   question: When is the best time to measure my feet?
-layout: calculator
 scripts:
 - /en/js/shoe-size.js
 seo:
@@ -103,7 +104,6 @@ seo:
   - perfect shoe size calculator
   - athletic shoe size converter
   title: Shoe Size Converter  -  EU, UK, US, Mondopoint Size Calculator by Foot Length
-title: Shoe Size Converter
 ---
 
 <form id="shoe-size-form">

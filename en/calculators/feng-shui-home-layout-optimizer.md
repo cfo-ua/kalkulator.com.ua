@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Feng Shui Home Layout Optimizer | Feng Shui Calculator & Analysis
 categories:
 - entertainment
 faq:
@@ -39,7 +41,6 @@ faq:
     plants ($10-50), mirrors ($20-100), or crystals ($15-75) can make significant
     improvements without major renovation costs.'
   question: Is it expensive to implement Feng Shui changes?
-layout: calculator
 scripts:
 - /en/js/feng-shui-home-layout-optimizer.js
 seo:
@@ -172,7 +173,6 @@ seo:
   - home feng shui analysis
   - space energy optimization
   title: Feng Shui Calculator | Home Layout Optimizer & Energy Analysis Online
-title: Feng Shui Home Layout Optimizer | Feng Shui Calculator & Analysis
 ---
 
 <form id="fengshui-form" autocomplete="off">

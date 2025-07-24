@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: What Is My IP Address  -  Check Your IP Address Online
 categories:
 - technology
 faq:
@@ -25,7 +27,6 @@ faq:
 - answer: Use a VPN service, restart your modem (for dynamic IPs), contact your ISP
     for a new assignment, or use mobile hotspot.
   question: How can I change my IP address?
-layout: calculator
 scripts:
 - /en/js/ip-address.js
 seo:
@@ -86,7 +87,6 @@ seo:
   - network ip address
   - isp ip lookup
   title: What Is My IP Address  -  Check Your IP Address Online
-title: What Is My IP Address  -  Check Your IP Address Online
 ---
 <h3>Your IP Address Information:</h3>
 <div class="result" id="ip-address-wrapper"></div>

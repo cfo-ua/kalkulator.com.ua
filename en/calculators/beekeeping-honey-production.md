@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Beekeeping Honey Production Calculator
 categories:
 - environment
 faq:
@@ -22,7 +24,6 @@ faq:
     $500-2000 annually per hive in profit after expenses, depending on local market
     conditions.
   question: Is beekeeping profitable as a side business?
-layout: calculator
 scripts:
 - /en/js/beekeeping-honey-production.js
 seo:
@@ -97,7 +98,6 @@ seo:
   - honey bee production
   - commercial beekeeping calculator
   title: Beekeeping Honey Production Calculator | Hive Yield Estimator
-title: Beekeeping Honey Production Calculator
 ---
 
 <form id="honey-production-form" autocomplete="off">

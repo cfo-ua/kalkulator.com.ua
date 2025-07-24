@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Employee Burnout Risk Assessment - Workplace Wellness Calculator
 categories:
 - business
 faq:
@@ -37,7 +39,6 @@ faq:
     severe stress, anxiety, or depression, please consult with qualified mental health
     professionals.
   question: Does this assessment replace professional mental health support?
-layout: calculator
 scripts:
 - /en/js/employee-burnout-assessment.js
 seo:
@@ -124,7 +125,6 @@ seo:
   - job stress symptoms checker
   - burnout recovery assessment
   title: Employee Burnout Risk Assessment - Workplace Stress & Wellness Calculator
-title: Employee Burnout Risk Assessment - Workplace Wellness Calculator
 ---
 
 <div class="burnout-assessment-container">

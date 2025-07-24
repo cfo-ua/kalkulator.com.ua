@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs
 categories:
 - school
 faq:
@@ -40,7 +42,6 @@ faq:
     overcome weaker stats, while a poor statement can hurt strong candidates. Tailor
     each statement to specific programs.
   question: How important is the statement of purpose?
-layout: calculator
 scripts:
 - /en/js/graduate-school-acceptance-rate-predictor.js
 seo:
@@ -110,7 +111,6 @@ seo:
   - academic admission calculator
   - graduate school odds
   title: Graduate School Acceptance Calculator | PhD, Masters, MBA Admission Predictor
-title: Graduate School Acceptance Rate Predictor - PhD, Masters, MBA Programs
 ---
 <form id="grad-school-form" autocomplete="off">
   <div class="form-section">

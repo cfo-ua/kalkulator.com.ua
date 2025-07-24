@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Aquaponics System Design Calculator
 categories:
 - environment
 faq:
@@ -21,7 +23,6 @@ faq:
     and occasional equipment replacement. Expect $2-5 per square foot in annual operating
     costs.
   question: What are the main costs of running an aquaponics system?
-layout: calculator
 scripts:
 - /en/js/aquaponics-system-design.js
 seo:
@@ -98,7 +99,6 @@ seo:
   - commercial aquaponics calculator
   - home aquaponics calculator
   title: Aquaponics System Design Calculator | Aquaponics Planning Calculator
-title: Aquaponics System Design Calculator
 ---
 
 <form id="aquaponics-design-form" autocomplete="off">

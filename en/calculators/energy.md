@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Energy Conservation Calculator
 categories:
 - environment
 faq:
@@ -16,7 +18,6 @@ faq:
 - answer: When no non-conservative forces (like friction or air resistance) act on
     the system.
   question: When is mechanical energy conserved?
-layout: calculator
 scripts:
 - /en/js/energy.js
 seo:
@@ -49,7 +50,6 @@ seo:
   - energy formula
   - physics tools
   title: Energy Conservation Calculator Online
-title: Energy Conservation Calculator
 ---
 
 <form id="energy-form" autocomplete="off">

@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Application Development Cost Estimator | Software Development Price Calculator
 categories:
 - technology
 faq:
@@ -35,7 +37,6 @@ faq:
     less initially and allows you to validate the concept before investing in full
     development. You can add features iteratively based on user feedback.
   question: Is it cheaper to build an MVP first?
-layout: calculator
 scripts:
 - /en/js/application-development-cost-estimator.js
 seo:
@@ -158,7 +159,6 @@ seo:
   - software development planning
   - development cost analysis
   title: App Development Cost Calculator | Software Development Price Estimator Online
-title: Application Development Cost Estimator | Software Development Price Calculator
 ---
 
 <form id="development-cost-form" autocomplete="off">

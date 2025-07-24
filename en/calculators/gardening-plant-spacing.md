@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Gardening Plant Spacing Calculator
 categories:
 - environment
 faq:
@@ -20,7 +22,6 @@ faq:
 - answer: Companion plants can share space if they have different growth habits (tall/short,
     deep/shallow roots) or complement each other's needs.
   question: How does companion planting affect spacing?
-layout: calculator
 scripts:
 - /en/js/gardening-plant-spacing.js
 seo:
@@ -83,7 +84,6 @@ seo:
   - optimal plant spacing
   - garden plot calculator
   title: Plant Spacing Calculator | Garden Layout & Plant Distance Calculator
-title: Gardening Plant Spacing Calculator
 ---
 
 <form id="plant-spacing-form" autocomplete="off">

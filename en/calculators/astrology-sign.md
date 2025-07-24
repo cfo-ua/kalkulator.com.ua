@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Astrology Sign Calculator by Birth Date
 categories:
 - entertainment
 faq:
@@ -32,7 +34,6 @@ faq:
     and potential outcomes, it's best viewed as a tool for self-reflection rather
     than definitive future prediction.
   question: Can zodiac signs predict the future?
-layout: calculator
 scripts:
 - /en/js/astrology-sign.js
 seo:
@@ -93,7 +94,6 @@ seo:
   - horoscope birth date lookup
   - celestial sign calculator
   title: Astrology Sign Calculator  -  Find Your Zodiac Sign by Birth Date Online
-title: Astrology Sign Calculator by Birth Date
 ---
 
 <form id="astrology-sign-form" autocomplete="off">

@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: Environmental Impact of Transportation Calculator
 categories:
 - environment
 faq:
@@ -22,7 +24,6 @@ faq:
 - answer: Generally yes, especially in urban areas with good ridership. However, a
     full bus is much more efficient than a nearly empty one.
   question: Is public transit always better for the environment?
-layout: calculator
 scripts:
 - /en/js/environmental-transportation.js
 seo:
@@ -94,7 +95,6 @@ seo:
   - green commuting calculator
   - climate impact calculator
   title: Transportation Carbon Footprint Calculator | Environmental Impact Calculator
-title: Environmental Impact of Transportation Calculator
 ---
 
 <form id="transportation-form" autocomplete="off">

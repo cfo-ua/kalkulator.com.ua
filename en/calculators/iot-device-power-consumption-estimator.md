@@ -1,4 +1,6 @@
 ---
+layout: calculator
+title: IoT Device Power Consumption Estimator | Smart Device Energy Calculator
 categories:
 - technology
 faq:
@@ -35,7 +37,6 @@ faq:
     network infrastructure, and account for overhead like data processing. Don't forget
     about maintenance power for accessing devices and periodic updates.
   question: How do I calculate total power consumption for an IoT network?
-layout: calculator
 scripts:
 - /en/js/iot-device-power-consumption-estimator.js
 seo:
@@ -144,7 +145,6 @@ seo:
   - iot infrastructure power cost
   title: IoT Device Power Consumption Calculator | Smart Home Energy Usage Estimator
     Online
-title: IoT Device Power Consumption Estimator | Smart Device Energy Calculator
 ---
 
 <form id="iot-power-form" autocomplete="off">
