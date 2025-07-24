@@ -19,6 +19,13 @@ seo:
     - калькулятор часу і дати
     - конвертер одиниць
     - конвертер валюти
+    - астрологічний калькулятор
+    - калькулятор знаку зодіаку
+    - планування весілля калькулятор
+    - шенген калькулятор
+    - калькулятор подорожей
+    - візовий калькулятор
+    - калькулятор бюджету подорожі
     - перевірити швидкість інтернету
     - дізнатися IP адресу
 ---
@@ -34,27 +41,27 @@ seo:
 <div class="categories" id="categories">
   <a class="category-card" href="/categories/school/">
     <span>📐</span>
-    <div>Шкільні<br><small>Математика, фізика, формули</small></div>
+    <div>Шкільні<br><small>Математичні формули, похідні, фізичні розрахунки, квадратні рівняння, тригонометрія, середні значення</small></div>
   </a>
   <a class="category-card" href="/categories/financial/">
     <span>💵</span>
-    <div>Фінансові<br><small>Кредити, депозити, інвестиції</small></div>
+    <div>Фінансові<br><small>Кредитні калькулятори, депозитні відсотки, складні відсотки, інвестиційні розрахунки, прибутковість</small></div>
   </a>
   <a class="category-card" href="/categories/salary-taxes/">
     <span>💼</span>
-    <div>Зарплата і податки<br><small>ПДФО, ЄСВ, чиста зарплата</small></div>
+    <div>Зарплата і податки<br><small>Розрахунок ПДФО, ЄСВ, чиста зарплата, податки ФОП, конвертер зарплати</small></div>
   </a>
   <a class="category-card" href="/categories/business/">
     <span>📈</span>
-    <div>Бізнес<br><small>Прибуток, ПДВ, ROI, беззбитковість</small></div>
+    <div>Бізнес<br><small>Розрахунок прибутку, ПДВ калькулятор, ROI, рентабельність, беззбитковість, наукоємність</small></div>
   </a>
   <a class="category-card" href="/categories/conversion/">
     <span>🔄</span>
-    <div>Конвертація<br><small>Валюта, одиниці, температура</small></div>
+    <div>Конвертація<br><small>Валютний курс, одиниці вимірювання, температурні шкали, швидкість, довжина, вага, об'єм</small></div>
   </a>
   <a class="category-card" href="/categories/health/">
     <span>❤️</span>
-    <div>Здоров’я<br><small>Калорії, ІМТ, пульс, тиск</small></div>
+    <div>Здоров’я<br><small>Калорійність продуктів, спалювання калорій, індекс маси тіла, добова потреба в калоріях</small></div>
   </a>
   <a class="category-card" href="/categories/construction/">
     <span>🏗️</span>
@@ -62,15 +69,23 @@ seo:
   </a>
   <a class="category-card" href="/categories/clothing/">
     <span>👗</span>
-    <div>Одяг та взуття<br><small>Розміри, таблиці, конвертер</small></div>
+    <div>Одяг та взуття<br><small>Розміри одягу та взуття, міжнародні таблиці розмірів, конвертер розмірів для різних країн</small></div>
   </a>
   <a class="category-card" href="/categories/time-date/">
     <span>⏰</span>
-    <div>Час і дата<br><small>Календар, вік, різниця в часі</small></div>
+    <div>Час і дата<br><small>Калькулятор віку, різниця між датами, робочі дні, календарні розрахунки, дата зачаття</small></div>
+  </a>
+  <a class="category-card" href="/categories/entertainment/">
+    <span>🎬</span>
+    <div>Розваги<br><small>Астрологічні знаки, нумерологія, планування весілля, розрахунок вартості свят, забобони</small></div>
+  </a>
+  <a class="category-card" href="/categories/travel/">
+    <span>✈️</span>
+    <div>Подорожі<br><small>Шенген калькулятор, візові вимоги, бюджет подорожі, страхування, конвертер розмірів за кордоном</small></div>
   </a>
   <a class="category-card" href="/categories/other/">
     <span>✨</span>
-    <div>Інше<br><small>Інтернет, подорожі, астрологія тощо</small></div>
+    <div>Інше<br><small>Швидкість інтернету, IP адреса, розведення рідин, технічні розрахунки, корисні інструменти</small></div>
   </a>
 </div>
 
@@ -118,7 +133,22 @@ seo:
     <li style="margin-bottom: 1.5rem;">
       <a href="/calculators/age.html" style="font-weight:600; color:#0a4d8c;">Калькулятор віку</a> — визначає точний вік у роках, місяцях і днях на вказану дату.
     </li>
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/astrology-sign.html" style="font-weight:600; color:#0a4d8c;">Калькулятор астрологічного знаку</a> — визначає ваш знак зодіаку за датою народження та дає характеристику.
+    </li>
+    <li style="margin-bottom: 1.5rem;">
+      <a href="/calculators/schengen-days.html" style="font-weight:600; color:#0a4d8c;">Калькулятор днів у Шенгені</a> — відстежує ваше перебування в Шенгенській зоні згідно правила 90/180 днів.
+    </li>
   </ul>
+
+  <p style="margin-bottom: 2rem;">
+    Наші калькулятори охоплюють 12 основних категорій життя: від фінансових розрахунків і школьних завдань до планування подорожей і розваг. 
+    Знайдіть калькулятори для <strong>бізнесу та податків</strong> (ПДВ, ФОП, прибутковість), 
+    <strong>здоров'я та фітнесу</strong> (калорії, ІМТ, спалювання калорій), 
+    <strong>будівництва</strong> (матеріали, площі, об'єми), 
+    <strong>подорожей</strong> (Шенген, віза, бюджет) та 
+    <strong>розваг</strong> (астрологія, планування свят).
+  </p>
 
   <p style="margin-bottom: 2rem;">
     Усі калькулятори працюють українською мовою, оптимізовані для мобільних пристроїв та не потребують реєстрації.
