@@ -4,8 +4,8 @@ title: "Environment Calculators"
 category_id: environment
 permalink: /en/categories/environment/
 seo:
-  title: "Environment Calculators — Carbon Footprint, Sustainability, Eco Tools"
-  description: "Calculate your environmental impact with our eco-friendly tools. Carbon footprint calculator, energy savings, water usage, recycling benefits, and sustainability metrics. Go green with data-driven decisions."
-  keywords: ["environment calculators", "carbon footprint calculator", "sustainability calculator", "eco calculator", "energy savings calculator", "water usage calculator", "recycling calculator", "green living tools", "climate impact calculator", "environmental metrics", "carbon emissions", "renewable energy calculator"]
-  intro: "Measure and reduce your environmental impact with comprehensive calculators for carbon footprint, energy efficiency, and sustainable living."
+  title: "Environmental & Sustainability Calculators — Carbon Footprint, Solar Energy, Gardening & Green Living"
+  description: "Comprehensive environmental calculators for sustainable living and eco-friendly decisions. Calculate carbon footprint, solar panel efficiency, energy savings, gardening needs, composting requirements, beekeeping yields, aquaponics systems, and green transportation impact. Professional tools for environmental responsibility."
+  keywords: ["environment calculators", "sustainability calculators", "carbon footprint calculator", "eco calculator", "green living calculator", "environmental impact calculator", "solar calculator", "energy calculator", "gardening calculator", "composting calculator", "beekeeping calculator", "aquaponics calculator", "fertilizer calculator", "plant spacing calculator", "water usage calculator", "herb garden calculator", "crop planting calculator", "electric vehicle calculator", "renewable energy calculator", "home energy audit calculator", "green transportation calculator", "sustainable agriculture calculator", "eco-friendly calculator", "climate calculator", "carbon offset calculator", "organic farming calculator", "permaculture calculator"]
+  intro: "Science-based environmental calculators for sustainable living. Make informed eco-friendly decisions with tools for renewable energy, sustainable gardening, carbon footprint reduction, and green lifestyle planning."
 ---
