@@ -200,10 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Determine winner
     const anglePerOption = 360 / options.length;
     
-    // The pointer is at the top (0 degrees), so we need to find which sector 
-    // is positioned under the pointer after rotation
-    // Fix: Correct calculation for clockwise rotation
-    const winnerIndex = Math.floor(finalRotation / anglePerOption) % options.length;
+    // The pointer is at the top (12 o'clock = 270° in canvas coordinates)
+    // Canvas draws from 3 o'clock (0°), so we need to account for this offset
+    // Fix: Account for pointer position and correct coordinate system
+    const pointerAngle = 270; // 12 o'clock position in canvas degrees
+    const adjustedAngle = (pointerAngle - finalRotation + 360) % 360;
+    const winnerIndex = Math.floor(adjustedAngle / anglePerOption) % options.length;
     const winner = options[winnerIndex];
     
     // Animate spin
