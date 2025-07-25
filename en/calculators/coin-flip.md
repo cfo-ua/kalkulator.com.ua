@@ -338,10 +338,6 @@ faq:
   transform: rotateY(180deg);
 }
 
-.coin.tails-result .tails .coin-text {
-  transform: scaleX(-1);
-}
-
 @media (max-width: 768px) {
   .coin-flip-container {
     padding: 1rem;
