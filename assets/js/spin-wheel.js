@@ -101,7 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsList.innerHTML = options.map((option, index) => `
       <div class="option-item" style="border-left-color: ${getColor(index)}">
         <span class="option-text">${option}</span>
-        <button class="option-remove" onclick="removeOption(${index})">×</button>
+        <button class="option-remove" onclick="removeOption(${index})" 
+                aria-label="Видалити варіант: ${option}"
+                title="Видалити варіант">
+        </button>
       </div>
     `).join("");
   }

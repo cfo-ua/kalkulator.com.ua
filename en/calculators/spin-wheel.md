@@ -393,6 +393,7 @@ faq:
   border-radius: var(--radius);
   border-left: 4px solid;
   transition: all var(--transition);
+  gap: 0.75rem;
 }
 
 .option-item:hover {
@@ -403,36 +404,51 @@ faq:
 .option-text {
   flex: 1;
   font-weight: 500;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .option-remove {
-  background: #ff4757;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  background: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition);
-  box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
-  font-weight: bold;
+  transition: all 0.2s ease;
+  font-weight: normal;
   line-height: 1;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  margin-left: 8px;
+  flex-shrink: 0;
 }
 
 .option-remove:hover {
-  background: #ff3742;
-  transform: scale(1.1);
-  box-shadow: 0 3px 8px rgba(255, 71, 87, 0.4);
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
 }
 
 .option-remove:active {
-  transform: scale(0.95);
-  box-shadow: 0 1px 2px rgba(255, 71, 87, 0.3);
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(220, 53, 69, 0.2);
+}
+
+.option-remove:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.option-remove::before {
+  content: "🗑️";
+  font-size: 14px;
 }
 
 .bulk-actions {
