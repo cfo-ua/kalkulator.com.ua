@@ -176,7 +176,7 @@ faq:
 .tails {
   background: linear-gradient(45deg, #c0c0c0, #e8e8e8);
   color: #2c2c2c;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) scaleX(-1);
 }
 
 .coin-text {
