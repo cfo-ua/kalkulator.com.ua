@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsList.innerHTML = options.map((option, index) => `
       <div class="option-item" style="border-left-color: ${getColor(index)}">
         <span class="option-text">${option}</span>
-        <button class="option-remove" onclick="removeOption(${index})">❌</button>
+        <button class="option-remove" onclick="removeOption(${index})">×</button>
       </div>
     `).join("");
   }
@@ -203,8 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // The pointer is at the top (0 degrees), so we need to find which sector 
     // is positioned under the pointer after rotation
     // Fix: Correct calculation for clockwise rotation
-    const normalizedRotation = ((360 - finalRotation) % 360);
-    const winnerIndex = Math.floor(normalizedRotation / anglePerOption) % options.length;
+    const winnerIndex = Math.floor(finalRotation / anglePerOption) % options.length;
     const winner = options[winnerIndex];
     
     // Animate spin

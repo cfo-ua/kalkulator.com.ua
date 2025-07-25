@@ -385,33 +385,30 @@ faq:
 }
 
 .option-remove {
-  background: #ff4757;
+  background: #dc3545;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition);
-  box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .option-remove:hover {
-  background: #ff3742;
+  background: #c82333;
   transform: scale(1.1);
-  box-shadow: 0 3px 8px rgba(255, 71, 87, 0.4);
 }
 
 .option-remove:active {
   transform: scale(0.95);
-  box-shadow: 0 1px 2px rgba(255, 71, 87, 0.3);
 }
 
 .bulk-actions {
