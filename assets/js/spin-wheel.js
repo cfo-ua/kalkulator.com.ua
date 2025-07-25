@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
+  // Make removeOption globally accessible
+  window.removeOption = removeOption;
+  
   function clearAllOptions() {
     if (options.length > 0 && confirm("Видалити всі варіанти?")) {
       options = [];

@@ -279,7 +279,7 @@ faq:
 }
 
 .coin.tails-result {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 @media (max-width: 768px) {
