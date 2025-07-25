@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let acceptanceScore = 50; // Base 50%
       let tips = [];
       let warnings = [];
-      let recommendations = [];
+      let recommendationMessages = [];
       
       // Program type base acceptance rates
       const baseProgramRates = {
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
       generateSpecificRecommendations(acceptanceScore, programType, universityTier, gpa, researchExperience, sopQuality, recommendations, warnings);
       
       // Display results
-      displayGradSchoolResults(acceptanceScore, programType, universityTier, field, recommendations, warnings, tips);
+      displayGradSchoolResults(acceptanceScore, programType, universityTier, field, recommendationMessages, warnings, tips);
     });
   }
   
