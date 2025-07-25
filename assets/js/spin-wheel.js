@@ -202,10 +202,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // The pointer is at the top (0 degrees), so we need to find which sector 
     // is positioned under the pointer after rotation
-    // We need to add half a sector to account for the pointer being at the edge
-    const pointerAngle = 0; // Arrow points at top (0 degrees)
-    const adjustedAngle = (pointerAngle - finalRotation + 360) % 360;
-    const winnerIndex = Math.floor(adjustedAngle / anglePerOption);
+    // Fix: Correct calculation for clockwise rotation
+    const normalizedRotation = ((360 - finalRotation) % 360);
+    const winnerIndex = Math.floor(normalizedRotation / anglePerOption) % options.length;
     const winner = options[winnerIndex];
     
     // Animate spin
