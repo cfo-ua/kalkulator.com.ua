@@ -399,6 +399,8 @@ faq:
   transition: all var(--transition);
   box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
   font-weight: bold;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 
 .option-remove:hover {
