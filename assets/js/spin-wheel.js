@@ -101,10 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsList.innerHTML = options.map((option, index) => `
       <div class="option-item" style="border-left-color: ${getColor(index)}">
         <span class="option-text">${option}</span>
-        <button class="option-remove" onclick="removeOption(${index})" 
-                aria-label="Видалити варіант: ${option}"
-                title="Видалити варіант">
-        </button>
+        <button class="option-remove" onclick="removeOption(${index})">✕</button>
       </div>
     `).join("");
   }
@@ -200,15 +197,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const spinAmount = Math.random() * 360 + 1440 + 720; // 4-6 full rotations
     const finalRotation = (rotation + spinAmount) % 360;
     
-    // Determine winner
-    const anglePerOption = 360 / options.length;
+    // Determine winner - Fixed to match the drawing coordinate system
+    const anglePerOptionDegrees = 360 / options.length;
     
     // The pointer is at the top (12 o'clock = 270° in canvas coordinates)
-    // Canvas draws from 3 o'clock (0°), so we need to account for this offset
-    // Fix: Account for pointer position and correct coordinate system
-    const pointerAngle = 270; // 12 o'clock position in canvas degrees
-    const adjustedAngle = (pointerAngle - finalRotation + 360) % 360;
-    const winnerIndex = Math.floor(adjustedAngle / anglePerOption) % options.length;
+    // Since we draw sectors starting from 0° (3 o'clock) going clockwise,
+    // we need to account for the pointer position and the sector layout
+    const pointerAngle = 270; // 12 o'clock position in degrees
+    
+    // Calculate which sector the pointer is pointing to after rotation
+    // The wheel rotates clockwise, so we subtract the rotation from the pointer position
+    let adjustedAngle = (pointerAngle - finalRotation + 360) % 360;
+    
+    // Since sectors are drawn starting from 0°, we need to find which sector contains this angle
+    const winnerIndex = Math.floor(adjustedAngle / anglePerOptionDegrees) % options.length;
     const winner = options[winnerIndex];
     
     // Animate spin

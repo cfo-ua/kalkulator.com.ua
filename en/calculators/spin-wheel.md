@@ -409,46 +409,37 @@ faq:
 }
 
 .option-remove {
-  background: #f8f9fa;
-  color: #6c757d;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  font-weight: normal;
-  line-height: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  margin-left: 8px;
-  flex-shrink: 0;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: #ff3b30 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(255, 59, 48, 0.3) !important;
+  outline: none !important;
 }
 
 .option-remove:hover {
-  background: #dc3545;
-  color: white;
-  border-color: #dc3545;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
-}
-
-.option-remove:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 2px rgba(220, 53, 69, 0.2);
+  background: #d70015 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(215, 0, 21, 0.4) !important;
 }
 
 .option-remove:focus {
-  outline: 2px solid #0d6efd;
-  outline-offset: 2px;
+  background: #d70015 !important;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.3) !important;
 }
 
-.option-remove::before {
-  content: "🗑️";
-  font-size: 14px;
+.option-remove:active {
+  transform: scale(0.95) !important;
+  box-shadow: 0 1px 2px rgba(255, 59, 48, 0.3) !important;
 }
 
 .bulk-actions {
