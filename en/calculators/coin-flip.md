@@ -131,6 +131,13 @@ faq:
       <span class="stat-value" id="totalCount">0</span>
     </div>
   </div>
+  
+  <div class="reset-section">
+    <button id="resetStatsBtn" class="reset-button">
+      <span class="reset-icon">🔄</span>
+      <span>Reset Statistics</span>
+    </button>
+  </div>
 </div>
 
 <style>
@@ -275,6 +282,41 @@ faq:
   color: var(--accent);
 }
 
+.reset-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.reset-button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+}
+
+.reset-button:hover {
+  background: #ff3742;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+.reset-icon {
+  font-size: 1rem;
+}
+
 /* Animation classes */
 .coin.flipping {
   animation: flip 2s ease-in-out;
@@ -294,6 +336,10 @@ faq:
 
 .coin.tails-result {
   transform: rotateY(180deg);
+}
+
+.coin.tails-result .tails .coin-text {
+  transform: scaleX(-1);
 }
 
 @media (max-width: 768px) {

@@ -146,6 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Add reset stats functionality (hidden feature - double click on total)
   totalCount.addEventListener('dblclick', () => {
+    resetStats();
+  });
+  
+  // Add reset button functionality (new visible button)
+  const resetStatsBtn = document.getElementById('resetStatsBtn');
+  if (resetStatsBtn) {
+    resetStatsBtn.addEventListener('click', resetStats);
+  }
+  
+  function resetStats() {
     if (confirm('Скинути всю статистику підкидань?')) {
       stats = { heads: 0, tails: 0, total: 0 };
       headsCount.textContent = '0';
@@ -161,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       result.classList.remove("heads", "tails");
     }
-  });
+  }
   
   // Add keyboard support
   document.addEventListener('keydown', (event) => {

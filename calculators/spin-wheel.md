@@ -385,23 +385,31 @@ faq:
 }
 
 .option-remove {
-  background: #ff4444;
+  background: #ff4757;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition);
+  box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
+  font-weight: bold;
 }
 
 .option-remove:hover {
-  background: #cc0000;
+  background: #ff3742;
   transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(255, 71, 87, 0.4);
+}
+
+.option-remove:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(255, 71, 87, 0.3);
 }
 
 .bulk-actions {
