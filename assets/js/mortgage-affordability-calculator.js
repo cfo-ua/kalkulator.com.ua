@@ -172,7 +172,8 @@ document.getElementById("affordability-form").addEventListener("submit", functio
   document.getElementById("affordability-result").innerHTML = resultHTML;
   
   // Показати графік
-  displayAffordabilityChart(totalMonthlyIncome, totalDebts, totalExpenses, actualMonthlyPayment);
+  document.getElementById("affordability-chart-block").style.display = "block";
+  ensureChartJs(() => displayAffordabilityChart(totalMonthlyIncome, totalDebts, totalExpenses, actualMonthlyPayment));
 });
 
 function getRiskLevel(dti, availableIncome, monthlyPayment) {
@@ -227,11 +228,8 @@ function getRecommendations(dti, downPayment, maxHomePrice, totalIncome) {
 }
 
 function displayAffordabilityChart(totalIncome, debts, expenses, mortgagePayment) {
-  const chartBlock = document.getElementById("affordability-chart-block");
   const canvas = document.getElementById("affordability-chart");
   const ctx = canvas.getContext("2d");
-  
-  chartBlock.style.display = "block";
   
   // Очистити попередній графік
   if (window.affordabilityChart) {
@@ -293,4 +291,13 @@ function formatNumber(num) {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
   }).format(Math.round(num));
+}
+
+// Chart.js loader
+function ensureChartJs(callback) {
+  if (window.Chart) return callback();
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/chart.js";
+  script.onload = callback;
+  document.body.appendChild(script);
 }
