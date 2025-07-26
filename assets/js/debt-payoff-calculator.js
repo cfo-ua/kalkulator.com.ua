@@ -376,6 +376,10 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
@@ -402,6 +406,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                 return context.dataset.label + ': ₴' + 
                                     context.parsed.y.toLocaleString('uk-UA', { maximumFractionDigits: 0 });
                             }
+                        }
+                    }
+                },
+                // Prevent infinite resize loops
+                onResize: function(chart, size) {
+                    const canvas = chart.canvas;
+                    const container = canvas.parentNode;
+                    if (container) {
+                        const maxHeight = parseInt(getComputedStyle(canvas).maxHeight);
+                        if (maxHeight && size.height > maxHeight) {
+                            chart.resize(size.width, maxHeight);
                         }
                     }
                 }

@@ -263,6 +263,10 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 scales: {
                     y: {
                         type: 'linear',
@@ -313,6 +317,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                 return context.dataset.label + ': $' + 
                                     value.toLocaleString('en-US', { maximumFractionDigits: 0 });
                             }
+                        }
+                    }
+                },
+                // Prevent infinite resize loops
+                onResize: function(chart, size) {
+                    const canvas = chart.canvas;
+                    const container = canvas.parentNode;
+                    if (container) {
+                        const maxHeight = parseInt(getComputedStyle(canvas).maxHeight);
+                        if (maxHeight && size.height > maxHeight) {
+                            chart.resize(size.width, maxHeight);
                         }
                     }
                 }
@@ -372,6 +387,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                 return context.label + ': $' + value.toLocaleString('en-US', { maximumFractionDigits: 0 }) + 
                                        ' (' + percentage + '%)';
                             }
+                        }
+                    }
+                },
+                // Prevent infinite resize loops
+                onResize: function(chart, size) {
+                    const canvas = chart.canvas;
+                    const container = canvas.parentNode;
+                    if (container) {
+                        const maxHeight = parseInt(getComputedStyle(canvas).maxHeight);
+                        if (maxHeight && size.height > maxHeight) {
+                            chart.resize(size.width, maxHeight);
                         }
                     }
                 }
