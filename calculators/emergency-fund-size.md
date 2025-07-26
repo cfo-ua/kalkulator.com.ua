@@ -146,7 +146,7 @@ faq:
       <input type="number" id="transportCosts" value="2000" min="0" step="200" required>
       
       <label for="healthCosts">Медицина/здоров'я</label>
-      <input type="number" id="healthCosts" value="1500" min="0" step="200">
+      <input type="number" id="healthCosts" value="1500" min="0">
       
       <label for="debtPayments">Кредити та борги</label>
       <input type="number" id="debtPayments" value="0" min="0" step="500">
