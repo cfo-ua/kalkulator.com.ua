@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function convertLength() {
     const value = parseFloat(input.value);
     if (isNaN(value)) {
-      result.textContent = "Будь ласка, введіть числове значення.";
+      result.innerHTML = '<div class="insight-card warning"><h6>⚠️ Помилка вводу</h6><p>Будь ласка, введіть числове значення.</p></div>';
       return;
     }
 
@@ -28,7 +28,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const valueInMeters = value * conversionRates[fromUnit];
     const convertedValue = valueInMeters / conversionRates[toUnit];
 
-    result.textContent = `${value} ${from.options[from.selectedIndex].text} = ${convertedValue.toFixed(4)} ${to.options[to.selectedIndex].text}`;
+    const fromLabel = from.options[from.selectedIndex].text;
+    const toLabel = to.options[to.selectedIndex].text;
+
+    // Generate additional useful conversions
+    let additionalInfo = '';
+    if (toUnit === 'm') {
+      if (convertedValue >= 1000) {
+        additionalInfo += `<p>🛣️ ${(convertedValue / 1000).toFixed(3)} км</p>`;
+      }
+      if (convertedValue < 1) {
+        additionalInfo += `<p>📐 ${(convertedValue * 100).toFixed(2)} см</p>`;
+      }
+    }
+    
+    // Add context based on length
+    let context = '';
+    let emoji = '📏';
+    if (toUnit === 'm') {
+      if (convertedValue < 0.01) {
+        context = 'Розмір комах або деталей';
+        emoji = '🔍';
+      } else if (convertedValue < 0.1) {
+        context = 'Розмір монет або дрібних предметів';
+        emoji = '🪙';
+      } else if (convertedValue < 1) {
+        context = 'Розмір ручки або телефону';
+        emoji = '📱';
+      } else if (convertedValue < 3) {
+        context = 'Зріст людини';
+        emoji = '🧍';
+      } else if (convertedValue < 100) {
+        context = 'Розмір кімнати або дерева';
+        emoji = '🏠';
+      } else if (convertedValue < 1000) {
+        context = 'Довжина вулиці або спортивного поля';
+        emoji = '🏟️';
+      } else {
+        context = 'Відстань між містами';
+        emoji = '🛣️';
+      }
+    }
+
+    result.innerHTML = `
+      <div class="insight-cards" style="margin-top: 1rem;">
+        <div class="insight-card success">
+          <h6>✅ Результат конвертації</h6>
+          <div class="big-number">${convertedValue.toFixed(4)}</div>
+          <p><strong>${value} ${fromLabel} = ${convertedValue.toFixed(4)} ${toLabel}</strong></p>
+          ${additionalInfo}
+        </div>
+        ${context ? `<div class="insight-card info"><h6>${emoji} Контекст</h6><p>${context}</p></div>` : ''}
+      </div>
+    `;
   }
 
   input.addEventListener("input", convertLength);
