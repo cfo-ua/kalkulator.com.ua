@@ -299,16 +299,19 @@ function generateAutoAmortization(loanAmount, monthlyRate, monthlyPayment, total
 function displayAutoChart(loanPayment, fees, insurance, maintenance) {
   const chartBlock = document.getElementById("auto-payment-chart-block");
   const canvas = document.getElementById("auto-payment-chart");
-  const ctx = canvas.getContext("2d");
   
   chartBlock.style.display = "block";
   
-  // Очистити попередній графік
-  if (window.autoPaymentChart) {
-    window.autoPaymentChart.destroy();
-  }
-  
-  window.autoPaymentChart = new Chart(ctx, {
+  // Ensure Chart.js is loaded before creating chart
+  ensureChartJs(() => {
+    const ctx = canvas.getContext("2d");
+    
+    // Очистити попередній графік
+    if (window.autoPaymentChart) {
+      window.autoPaymentChart.destroy();
+    }
+    
+    window.autoPaymentChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
       labels: [
@@ -355,6 +358,16 @@ function displayAutoChart(loanPayment, fees, insurance, maintenance) {
       }
     }
   });
+  });
+}
+
+// Dynamic loader for Chart.js
+function ensureChartJs(callback) {
+  if (window.Chart) return callback();
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/chart.js";
+  script.onload = callback;
+  document.body.appendChild(script);
 }
 
 function displayAutoAmortizationTable(amortizationData) {

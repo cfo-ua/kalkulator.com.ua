@@ -205,7 +205,7 @@ faq:
       <input type="number" id="lifeInsurance" value="2000" min="0" step="200">
       
       <label for="maintenance">Технічне обслуговування (грн/місяць)</label>
-      <input type="number" id="maintenance" value="1500" min="0" step="200">
+      <input type="number" id="maintenance" value="1500" min="0" step="100">
       
       <div style="margin-top: 1rem;">
         <label>
