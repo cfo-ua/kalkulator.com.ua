@@ -239,17 +239,17 @@ faq:
         <div class="insight-cards">
           <div class="insight-card info">
             <h6>⏰ Час погашення</h6>
-            <div class="big-number" id="snowball-time">0 місяців</div>
+            <div class="result-value" id="snowball-time">0 місяців</div>
             <p class="insight-detail">До повного погашення</p>
           </div>
           <div class="insight-card">
             <h6>💰 Загальна сума</h6>
-            <div class="big-number" id="snowball-total">₴0</div>
+            <div class="result-value" id="snowball-total">₴0</div>
             <p class="insight-detail">Основний борг + відсотки</p>
           </div>
           <div class="insight-card warning">
             <h6>📈 Відсотки</h6>
-            <div class="big-number" id="snowball-interest">₴0</div>
+            <div class="result-value" id="snowball-interest">₴0</div>
             <p class="insight-detail">Загальні відсотки</p>
           </div>
         </div>
@@ -261,17 +261,17 @@ faq:
         <div class="insight-cards">
           <div class="insight-card info">
             <h6>⏰ Час погашення</h6>
-            <div class="big-number" id="avalanche-time">0 місяців</div>
+            <div class="result-value" id="avalanche-time">0 місяців</div>
             <p class="insight-detail">До повного погашення</p>
           </div>
           <div class="insight-card">
             <h6>💰 Загальна сума</h6>
-            <div class="big-number" id="avalanche-total">₴0</div>
+            <div class="result-value" id="avalanche-total">₴0</div>
             <p class="insight-detail">Основний борг + відсотки</p>
           </div>
           <div class="insight-card success">
             <h6>📈 Відсотки</h6>
-            <div class="big-number" id="avalanche-interest">₴0</div>
+            <div class="result-value" id="avalanche-interest">₴0</div>
             <p class="insight-detail">Загальні відсотки</p>
           </div>
         </div>
@@ -284,17 +284,17 @@ faq:
       <div class="insight-cards">
         <div class="insight-card success">
           <h6>💵 Економія лавини</h6>
-          <div class="big-number" id="savings-amount">₴0</div>
+          <div class="result-value" id="savings-amount">₴0</div>
           <p class="insight-detail">Відсотків заощаджено</p>
         </div>
         <div class="insight-card info">
           <h6>⏱️ Економія часу</h6>
-          <div class="big-number" id="time-savings">0 міс.</div>
+          <div class="result-value" id="time-savings">0 міс.</div>
           <p class="insight-detail">Швидше з лавиною</p>
         </div>
         <div class="insight-card warning">
           <h6>🎯 Рекомендація</h6>
-          <div class="big-number" id="recommendation">?</div>
+          <div class="result-value" id="recommendation">?</div>
           <p class="insight-detail" id="recommendation-text">Аналізуємо...</p>
         </div>
       </div>
