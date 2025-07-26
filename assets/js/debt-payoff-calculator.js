@@ -54,34 +54,107 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateDebtPayoff();
     });
 
+    function parseNumericInput(value, defaultValue = 0) {
+        // Handle empty strings, null, undefined
+        if (!value || value.toString().trim() === '') {
+            return defaultValue;
+        }
+        
+        // Clean the input - remove common formatting
+        const cleanValue = value.toString()
+            .replace(/\s/g, '') // Remove spaces
+            .replace(/,/g, '.') // Replace comma with dot for decimal
+            .replace(/[^\d.-]/g, ''); // Remove non-numeric characters except dots and minus
+        
+        const parsed = parseFloat(cleanValue);
+        
+        // Check if parsing resulted in a valid number
+        if (isNaN(parsed) || !isFinite(parsed)) {
+            return defaultValue;
+        }
+        
+        return Math.max(0, parsed); // Ensure non-negative values
+    }
+
+    function validateDebtInput(name, balance, rate, minimum) {
+        const errors = [];
+        
+        if (!name || name.trim() === '') {
+            errors.push('Назва боргу не може бути порожньою');
+        }
+        
+        if (balance <= 0) {
+            errors.push('Баланс боргу повинен бути більше 0');
+        }
+        
+        if (rate < 0 || rate > 100) {
+            errors.push('Процентна ставка повинна бути від 0% до 100%');
+        }
+        
+        if (minimum <= 0) {
+            errors.push('Мінімальний платіж повинен бути більше 0');
+        }
+        
+        if (minimum > balance) {
+            errors.push('Мінімальний платіж не може бути більшим за баланс боргу');
+        }
+        
+        return errors;
+    }
     function calculateDebtPayoff() {
         // Collect debt data
         const debts = [];
+        const allErrors = [];
+        
         for (let i = 1; i <= debtCount; i++) {
-            const name = document.getElementById(`debt-name-${i}`).value;
-            const balance = parseFloat(document.getElementById(`debt-balance-${i}`).value);
-            const rate = parseFloat(document.getElementById(`debt-rate-${i}`).value) / 100 / 12; // Monthly rate
-            const minimum = parseFloat(document.getElementById(`debt-minimum-${i}`).value);
+            const nameElement = document.getElementById(`debt-name-${i}`);
+            const balanceElement = document.getElementById(`debt-balance-${i}`);
+            const rateElement = document.getElementById(`debt-rate-${i}`);
+            const minimumElement = document.getElementById(`debt-minimum-${i}`);
             
-            if (name && balance && rate >= 0 && minimum) {
+            if (!nameElement || !balanceElement || !rateElement || !minimumElement) {
+                continue; // Skip if elements don't exist
+            }
+            
+            const name = nameElement.value.trim();
+            const balance = parseNumericInput(balanceElement.value);
+            const rate = parseNumericInput(rateElement.value);
+            const minimum = parseNumericInput(minimumElement.value);
+            
+            // Validate individual debt
+            const errors = validateDebtInput(name, balance, rate, minimum);
+            if (errors.length > 0) {
+                allErrors.push(`Борг #${i}: ${errors.join(', ')}`);
+                continue;
+            }
+            
+            // Only add valid debts
+            if (name && balance > 0 && rate >= 0 && minimum > 0) {
                 debts.push({
                     id: i,
                     name: name,
                     balance: balance,
                     originalBalance: balance,
-                    rate: rate,
-                    annualRate: rate * 12 * 100,
+                    rate: rate / 100 / 12, // Monthly rate
+                    annualRate: rate,
                     minimum: minimum
                 });
             }
         }
 
-        if (debts.length === 0) {
-            alert('Будь ласка, додайте хоча б один борг');
+        // Show validation errors
+        if (allErrors.length > 0) {
+            alert('Виявлено помилки у введених даних:\n\n' + allErrors.join('\n\n') + 
+                  '\n\nБудь ласка, виправте помилки та спробуйте знову.');
             return;
         }
 
-        const extraPayment = parseFloat(document.getElementById('extra-payment').value) || 0;
+        if (debts.length === 0) {
+            alert('Будь ласка, додайте хоча б один валідний борг з коректними даними.');
+            return;
+        }
+
+        const extraPayment = parseNumericInput(document.getElementById('extra-payment').value, 0);
 
         // Calculate both strategies
         const snowballResult = calculateStrategy('snowball', debts, extraPayment);
@@ -235,7 +308,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createPayoffChart(snowball, avalanche) {
-        const ctx = document.getElementById('payoffChart').getContext('2d');
+        // Check if Chart.js is available
+        if (typeof Chart === 'undefined') {
+            console.warn('Chart.js is not available. Chart functionality disabled.');
+            // Hide chart container or show message
+            const chartContainer = document.getElementById('payoff-chart');
+            if (chartContainer) {
+                chartContainer.innerHTML = '<p>📊 <em>Графік недоступний (заблоковано Chart.js CDN)</em></p>';
+            }
+            return;
+        }
+
+        const ctx = document.getElementById('payoffChart');
+        if (!ctx) {
+            console.warn('Chart canvas element not found');
+            return;
+        }
+        
+        const chartContext = ctx.getContext('2d');
+        if (!chartContext) {
+            console.warn('Unable to get chart context');
+            return;
+        }
         
         // Prepare data
         const maxMonths = Math.max(snowball.months, avalanche.months);
@@ -251,11 +345,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Destroy existing chart
-        if (window.payoffChart) {
+        if (window.payoffChart && typeof window.payoffChart.destroy === 'function') {
             window.payoffChart.destroy();
         }
 
-        window.payoffChart = new Chart(ctx, {
+        try {
+            window.payoffChart = new Chart(chartContext, {
             type: 'line',
             data: {
                 labels: months,
@@ -312,6 +407,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+        } catch (error) {
+            console.error('Error creating chart:', error);
+            const chartContainer = document.getElementById('payoff-chart');
+            if (chartContainer) {
+                chartContainer.innerHTML = '<p>📊 <em>Помилка створення графіка. Розрахунки працюють коректно.</em></p>';
+            }
+        }
     }
 
     function createDetailedSchedule(snowball, avalanche) {
