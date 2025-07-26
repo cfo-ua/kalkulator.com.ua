@@ -40,23 +40,53 @@ seo:
       <li><strong>Додаткові витрати:</strong> Оцінка, нотаріус, реєстрація</li>
     </ul>
 
-    <h3>Поточні іпотечні ставки в Україні (2024):</h3>
-    <ul>
-      <li><strong>ПриватБанк:</strong> 19-22% річних (в гривні)</li>
-      <li><strong>ПУМБ:</strong> 18-21% річних (в гривні)</li>
-      <li><strong>Укргазбанк:</strong> 17-20% річних (державні програми)</li>
-      <li><strong>А-банк:</strong> 19-23% річних (комерційні програми)</li>
-      <li><strong>Державні програми:</strong> 7-10% річних (під державну підтримку)</li>
-    </ul>
+    <h3>🏦 Поточні іпотечні ставки в Україні (2025):</h3>
+    <div class="insight-cards">
+      <div class="insight-card info">
+        <h6>🏛️ Державні програми</h6>
+        <div class="big-number">7-9%</div>
+        <p class="insight-detail">Під державну підтримку для захисників та їх сімей</p>
+      </div>
+      <div class="insight-card">
+        <h6>🏦 ПриватБанк</h6>
+        <div class="big-number">18-21%</div>
+        <p class="insight-detail">Стандартні програми в гривні</p>
+      </div>
+      <div class="insight-card">
+        <h6>🏦 ПУМБ</h6>
+        <div class="big-number">17-20%</div>
+        <p class="insight-detail">Конкурентні ставки для зарплатних клієнтів</p>
+      </div>
+      <div class="insight-card warning">
+        <h6>🏦 Комерційні банки</h6>
+        <div class="big-number">19-24%</div>
+        <p class="insight-detail">Середні ставки по ринку</p>
+      </div>
+    </div>
 
-    <h3>Варіанти первинного внеску:</h3>
-    <ul>
-      <li><strong>30% і більше:</strong> Найкращі ставки, менші комісії</li>
-      <li><strong>20-29%:</strong> Стандартні умови кредитування</li>
-      <li><strong>10-19%:</strong> Можливі додаткові вимоги до страхування</li>
-      <li><strong>Менше 10%:</strong> Спеціальні програми, вищі ставки</li>
-      <li><strong>Державні програми:</strong> 1-10% для окремих категорій</li>
-    </ul>
+    <h3>💰 Варіанти первинного внеску:</h3>
+    <div class="insight-cards">
+      <div class="insight-card success">
+        <h6>30%+</h6>
+        <div class="big-number">💚</div>
+        <p class="insight-detail">Найкращі ставки та умови</p>
+      </div>
+      <div class="insight-card info">
+        <h6>20-29%</h6>
+        <div class="big-number">📊</div>
+        <p class="insight-detail">Стандартні програми</p>
+      </div>
+      <div class="insight-card warning">
+        <h6>10-19%</h6>
+        <div class="big-number">⚠️</div>
+        <p class="insight-detail">Додаткові вимоги</p>
+      </div>
+      <div class="insight-card">
+        <h6>1-10%</h6>
+        <div class="big-number">🏛️</div>
+        <p class="insight-detail">Спеціальні програми</p>
+      </div>
+    </div>
 
     <h3>Типи іпотечних програм в Україні:</h3>
     <ul>
