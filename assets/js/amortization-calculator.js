@@ -465,13 +465,13 @@ document.addEventListener('DOMContentLoaded', function() {
             row.innerHTML = `
                 <td>${payment.paymentNumber}</td>
                 <td>${payment.date.toLocaleDateString('uk-UA')}</td>
-                <td>₴${payment.totalPayment.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
-                <td>₴${payment.principal.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
-                <td>₴${payment.interest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
-                <td class="${payment.extraPayment > 0 ? 'extra-payment' : ''}">
+                <td class="amount">₴${payment.totalPayment.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                <td class="amount">₴${payment.principal.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                <td class="amount">₴${payment.interest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                <td class="amount ${payment.extraPayment > 0 ? 'extra-payment' : ''}">
                     ₴${payment.extraPayment.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}
                 </td>
-                <td>₴${payment.balance.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                <td class="amount">₴${payment.balance.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
             `;
             tbody.appendChild(row);
         });

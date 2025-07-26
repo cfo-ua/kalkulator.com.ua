@@ -453,29 +453,39 @@ document.addEventListener('DOMContentLoaded', function() {
             const details = result.monthlyDetails.slice(0, 24); // Show first 24 months
             
             let html = `
-                <div class="schedule-table">
-                    <div class="schedule-header">
-                        <span>Місяць</span>
-                        <span>Залишок боргу</span>
-                        <span>Відсотки</span>
-                        <span>Основний борг</span>
-                        <span>Загальні відсотки</span>
-                    </div>
+                <div class="table-container">
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Місяць</th>
+                                    <th>Залишок боргу</th>
+                                    <th>Відсотки</th>
+                                    <th>Основний борг</th>
+                                    <th>Загальні відсотки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
             `;
             
             details.forEach(detail => {
                 html += `
-                    <div class="schedule-row">
-                        <span>${detail.month}</span>
-                        <span>₴${detail.totalBalance.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</span>
-                        <span>₴${detail.monthlyInterest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</span>
-                        <span>₴${detail.monthlyPrincipal.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</span>
-                        <span>₴${detail.totalInterest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</span>
-                    </div>
+                    <tr>
+                        <td>${detail.month}</td>
+                        <td class="amount">₴${detail.totalBalance.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                        <td class="amount">₴${detail.monthlyInterest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                        <td class="amount">₴${detail.monthlyPrincipal.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                        <td class="amount">₴${detail.totalInterest.toLocaleString('uk-UA', { maximumFractionDigits: 0 })}</td>
+                    </tr>
                 `;
             });
             
-            html += '</div>';
+            html += `
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
             
             if (result.months > 24) {
                 html += `<p><em>Показано перші 24 місяці з ${result.months}</em></p>`;
