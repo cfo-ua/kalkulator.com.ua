@@ -325,13 +325,17 @@ faq:
 <div id="amortization-charts" style="margin-top: 2rem; display: none;">
   <h3>Amortization Visualization</h3>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
-    <div>
+    <div class="chart-container">
       <h4>Principal vs Interest Over Time</h4>
-      <canvas id="principalInterestChart" width="400" height="300"></canvas>
+      <div class="chart-wrapper">
+        <canvas id="principalInterestChart"></canvas>
+      </div>
     </div>
-    <div>
+    <div class="chart-container">
       <h4>Remaining Balance</h4>
-      <canvas id="balanceChart" width="400" height="300"></canvas>
+      <div class="chart-wrapper">
+        <canvas id="balanceChart"></canvas>
+      </div>
     </div>
   </div>
 </div>

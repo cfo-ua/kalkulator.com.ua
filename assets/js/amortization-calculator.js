@@ -279,7 +279,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createPaymentsChart(schedule) {
-        const ctx = document.getElementById('paymentsChart').getContext('2d');
+        const canvas = document.getElementById('paymentsChart');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
         
         // Sample data (every 6th payment to keep chart readable)
         const step = Math.max(1, Math.floor(schedule.schedule.length / 50));
@@ -294,8 +297,10 @@ document.addEventListener('DOMContentLoaded', function() {
             interestData.push(payment.interest);
         }
 
+        // Destroy existing chart if it exists
         if (window.paymentsChart && typeof window.paymentsChart.destroy === 'function') {
             window.paymentsChart.destroy();
+            window.paymentsChart = null;
         }
 
         window.paymentsChart = new Chart(ctx, {
@@ -320,6 +325,10 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 scales: {
                     x: {
                         title: {
@@ -352,13 +361,22 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
                         }
                     }
+                },
+                // Prevent chart from growing infinitely
+                onResize: function(chart, size) {
+                    if (size.height > 500) {
+                        chart.resize(size.width, 400);
+                    }
                 }
             }
         });
     }
 
     function createBalanceChart(schedule) {
-        const ctx = document.getElementById('balanceChart').getContext('2d');
+        const canvas = document.getElementById('balanceChart');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
         
         const step = Math.max(1, Math.floor(schedule.schedule.length / 100));
         const labels = [];
@@ -370,8 +388,10 @@ document.addEventListener('DOMContentLoaded', function() {
             balanceData.push(payment.balance);
         }
 
+        // Destroy existing chart if it exists
         if (window.balanceChart && typeof window.balanceChart.destroy === 'function') {
             window.balanceChart.destroy();
+            window.balanceChart = null;
         }
 
         window.balanceChart = new Chart(ctx, {
@@ -390,6 +410,10 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 scales: {
                     x: {
                         title: {
@@ -420,6 +444,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                     context.parsed.y.toLocaleString('uk-UA', { maximumFractionDigits: 0 });
                             }
                         }
+                    }
+                },
+                // Prevent chart from growing infinitely
+                onResize: function(chart, size) {
+                    if (size.height > 500) {
+                        chart.resize(size.width, 400);
                     }
                 }
             }

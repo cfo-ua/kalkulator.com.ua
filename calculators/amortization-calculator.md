@@ -306,14 +306,18 @@ faq:
       </div>
     </div>
 
-    <div id="payment-chart">
+    <div id="payment-chart" class="chart-container">
       <h3>📈 Структура платежів по часу</h3>
-      <canvas id="paymentsChart" width="400" height="200"></canvas>
+      <div class="chart-wrapper">
+        <canvas id="paymentsChart"></canvas>
+      </div>
     </div>
 
-    <div id="balance-chart">
+    <div id="balance-chart" class="chart-container">
       <h3>📉 Зменшення залишку боргу</h3>
-      <canvas id="balanceChart" width="400" height="200"></canvas>
+      <div class="chart-wrapper">
+        <canvas id="balanceChart"></canvas>
+      </div>
     </div>
 
     <h3>📅 Детальний графік платежів</h3>
