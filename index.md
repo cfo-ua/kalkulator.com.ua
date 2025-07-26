@@ -68,9 +68,25 @@ seo:
     <span>⏰</span>
     <div>Час і дата<br><small>Календар, вік, різниця в часі</small></div>
   </a>
+  <a class="category-card" href="/categories/dovkillia/">
+    <span>🌱</span>
+    <div>Довкілля<br><small>Вуглецевий слід, сталий розвиток, екологія</small></div>
+  </a>
+  <a class="category-card" href="/categories/technology/">
+    <span>💻</span>
+    <div>Технології<br><small>Мережі, програмування, обчислення</small></div>
+  </a>
+  <a class="category-card" href="/categories/rozvagy/">
+    <span>🎬</span>
+    <div>Розваги<br><small>Ігри, фільми, події, веселі інструменти</small></div>
+  </a>
+  <a class="category-card" href="/categories/podorozhi/">
+    <span>✈️</span>
+    <div>Подорожі<br><small>Відстані, валюта, планування поїздок</small></div>
+  </a>
   <a class="category-card" href="/categories/other/">
     <span>✨</span>
-    <div>Інше<br><small>Інтернет, подорожі, астрологія тощо</small></div>
+    <div>Інше<br><small>Особистість, домашні тварини, соцмережі</small></div>
   </a>
 </div>
 
