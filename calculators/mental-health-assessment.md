@@ -368,6 +368,5 @@ faq:
     <li><strong>Служба екстреної допомоги:</strong> 103</li>
     <li><strong>Поліція:</strong> 102</li>
     <li><strong>Центри соціальних служб:</strong> За місцем проживання</li>
-    <li><strong>Онлайн-підтримка:</strong> <a href="https://dopomoha.com.ua" target="_blank">Психологічна допомога онлайн</a></li>
   </ul>
 </div>
