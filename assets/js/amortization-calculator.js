@@ -223,8 +223,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function createCharts(schedule) {
-        createPaymentsChart(schedule);
-        createBalanceChart(schedule);
+        // Wait for Chart.js to load before creating charts
+        if (typeof Chart === 'undefined') {
+            // Keep track of how long we've been waiting
+            if (!createCharts.attemptCount) {
+                createCharts.attemptCount = 0;
+            }
+            createCharts.attemptCount++;
+            
+            // Stop trying after 50 attempts (5 seconds)
+            if (createCharts.attemptCount < 50) {
+                setTimeout(() => createCharts(schedule), 100);
+                return;
+            } else {
+                // Show error message if Chart.js couldn't load
+                showChartLoadingError();
+                return;
+            }
+        }
+        
+        // Reset attempt count for future calls
+        createCharts.attemptCount = 0;
+        
+        try {
+            createPaymentsChart(schedule);
+            createBalanceChart(schedule);
+        } catch (error) {
+            console.error('Error creating charts:', error);
+            showChartLoadingError();
+        }
+    }
+
+    function showChartLoadingError() {
+        // Show user-friendly message when charts can't be displayed
+        const paymentsChartContainer = document.getElementById('payment-chart');
+        const balanceChartContainer = document.getElementById('balance-chart');
+        
+        if (paymentsChartContainer) {
+            paymentsChartContainer.innerHTML = `
+                <h3>📈 Структура платежів по часу</h3>
+                <div style="padding: 20px; text-align: center; color: #666; border: 1px dashed #ccc; border-radius: 5px;">
+                    📊 Графік тимчасово недоступний. Усі розрахунки виконані коректно і показані в таблиці нижче.
+                </div>
+            `;
+        }
+        
+        if (balanceChartContainer) {
+            balanceChartContainer.innerHTML = `
+                <h3>📉 Зменшення залишку боргу</h3>
+                <div style="padding: 20px; text-align: center; color: #666; border: 1px dashed #ccc; border-radius: 5px;">
+                    📊 Графік тимчасово недоступний. Усі розрахунки виконані коректно і показані в таблиці нижче.
+                </div>
+            `;
+        }
     }
 
     function createPaymentsChart(schedule) {
@@ -243,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
             interestData.push(payment.interest);
         }
 
-        if (window.paymentsChart) {
+        if (window.paymentsChart && typeof window.paymentsChart.destroy === 'function') {
             window.paymentsChart.destroy();
         }
 
@@ -319,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
             balanceData.push(payment.balance);
         }
 
-        if (window.balanceChart) {
+        if (window.balanceChart && typeof window.balanceChart.destroy === 'function') {
             window.balanceChart.destroy();
         }
 
@@ -467,6 +518,24 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof Chart === 'undefined') {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+        script.async = false; // Load synchronously to avoid timing issues
+        script.onload = function() {
+            console.log('Chart.js loaded successfully');
+        };
+        script.onerror = function() {
+            console.error('Failed to load Chart.js from jsdelivr, trying unpkg fallback');
+            // Try alternative CDN
+            const fallbackScript = document.createElement('script');
+            fallbackScript.src = 'https://unpkg.com/chart.js/dist/chart.min.js';
+            fallbackScript.async = false;
+            fallbackScript.onload = function() {
+                console.log('Chart.js loaded successfully from unpkg fallback');
+            };
+            fallbackScript.onerror = function() {
+                console.error('Failed to load Chart.js from all CDNs. Charts will not be displayed.');
+            };
+            document.head.appendChild(fallbackScript);
+        };
         document.head.appendChild(script);
     }
 });
