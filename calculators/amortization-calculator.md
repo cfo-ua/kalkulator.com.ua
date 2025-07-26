@@ -334,22 +334,24 @@ faq:
       <button id="print-table" type="button">🖨️ Друк</button>
     </div>
 
-    <div id="amortization-table-container">
-      <table id="amortization-table">
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Дата</th>
-            <th>Платіж</th>
-            <th>Основний борг</th>
-            <th>Відсотки</th>
-            <th>Доплата</th>
-            <th>Залишок</th>
-          </tr>
-        </thead>
-        <tbody id="payment-schedule">
-        </tbody>
-      </table>
+    <div class="table-container">
+      <div id="amortization-table-container" class="amortization-table">
+        <table id="amortization-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Дата</th>
+              <th>Платіж</th>
+              <th>Основний борг</th>
+              <th>Відсотки</th>
+              <th>Доплата</th>
+              <th>Залишок</th>
+            </tr>
+          </thead>
+          <tbody id="payment-schedule">
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <h3>📊 Порівняння сценаріїв</h3>

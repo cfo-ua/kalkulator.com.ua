@@ -3560,8 +3560,174 @@ input[type="date"]::-moz-focus-inner {
   }
 }
 
+/* Enhanced Table Styling for Calculator Results */
+.schedule-table, .amortization-table {
+  width: 100%;
+  background: var(--bg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.schedule-table table, .amortization-table table,
+#amortization-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  font-size: 0.9rem;
+}
+
+.schedule-table th, .schedule-table td,
+.amortization-table th, .amortization-table td,
+#amortization-table th, #amortization-table td {
+  padding: 0.75rem 0.5rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.schedule-table th, .amortization-table th,
+#amortization-table th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.schedule-table th:first-child, .schedule-table td:first-child,
+.amortization-table th:first-child, .amortization-table td:first-child,
+#amortization-table th:first-child, #amortization-table td:first-child {
+  text-align: center;
+  font-weight: 600;
+}
+
+.schedule-table tbody tr:hover, .amortization-table tbody tr:hover,
+#amortization-table tbody tr:hover {
+  background: var(--card-bg);
+  transition: background 0.2s ease;
+}
+
+.schedule-table tbody tr:nth-child(even), .amortization-table tbody tr:nth-child(even),
+#amortization-table tbody tr:nth-child(even) {
+  background: rgba(247, 248, 250, 0.5);
+}
+
+.schedule-table tbody tr:nth-child(even):hover, .amortization-table tbody tr:nth-child(even):hover,
+#amortization-table tbody tr:nth-child(even):hover {
+  background: var(--card-bg);
+}
+
+/* Extra payment highlighting */
+.extra-payment {
+  background: #d4edda !important;
+  color: #155724;
+  font-weight: 600;
+}
+
+.extra-payment:hover {
+  background: #c3e6cb !important;
+}
+
+/* Amount formatting for better readability */
+.schedule-table .amount, .amortization-table .amount {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+/* Table controls styling */
+.table-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.table-controls label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.table-controls select {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--main-color);
+}
+
+.table-controls button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background var(--transition);
+}
+
+.table-controls button:hover {
+  background: var(--accent-hover);
+}
+
+/* Container for table scrolling on mobile */
+.table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Responsive table design */
+@media (max-width: 768px) {
+  .schedule-table, .amortization-table {
+    font-size: 0.8rem;
+  }
+  
+  .schedule-table th, .schedule-table td,
+  .amortization-table th, .amortization-table td,
+  #amortization-table th, #amortization-table td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .table-controls > * {
+    margin: 0.25rem 0;
+  }
+}
+
 @media (max-width: 600px) {
   /* For smaller mobile screens, reduce gap further */
+  .schedule-table, .amortization-table {
+    font-size: 0.75rem;
+    margin: 1rem 0;
+  }
+  
+  .schedule-table th, .schedule-table td,
+  .amortization-table th, .amortization-table td,
+  #amortization-table th, #amortization-table td {
+    padding: 0.4rem 0.2rem;
+  }
+  
+  .schedule-table th, .amortization-table th,
+  #amortization-table th {
+    font-size: 0.75rem;
+  }
+  
+  /* Ensure horizontal scrolling works properly */
+  .table-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
   .calculator-block div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
