@@ -2,7 +2,7 @@
 layout: calculator
 title: Energy Conservation Calculator
 categories:
-- environment
+- school
 faq:
 - answer: 'Total mechanical energy is the sum of potential and kinetic energy: E =
     mgh + ½mv².'
