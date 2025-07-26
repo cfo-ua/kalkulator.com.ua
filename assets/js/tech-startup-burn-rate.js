@@ -203,9 +203,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Очистити попередній графік
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Налаштування canvas
+    // Налаштування canvas - responsive height from container
     const width = canvas.offsetWidth;
-    const height = 300;
+    const container = canvas.parentElement;
+    const height = container ? container.offsetHeight - 40 : Math.min(340, Math.max(168, width * 0.4));
     canvas.width = width;
     canvas.height = height;
     
