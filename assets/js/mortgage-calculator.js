@@ -238,20 +238,28 @@ function calculateEarlyPayoff(loanAmount, monthlyRate, regularPayment, extraPaym
 function displayChart(chartData, termYears) {
   const chartBlock = document.getElementById("mortgage-chart-block");
   const canvas = document.getElementById("mortgage-chart");
-  const ctx = canvas.getContext("2d");
   
   chartBlock.style.display = "block";
   
-  // Очистити попередній графік
-  if (window.mortgageChart) {
-    window.mortgageChart.destroy();
-  }
+  // Create a simple chart without external dependencies
+  createSimpleChart(canvas, chartData, termYears);
+}
+
+function createSimpleChart(canvas, chartData, termYears) {
+  const ctx = canvas.getContext("2d");
   
+  // Set canvas size
+  canvas.width = 800;
+  canvas.height = 400;
+  
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Prepare data by years
   const years = [];
   const principalData = [];
   const interestData = [];
   
-  // Групувати дані по роках
   for (let year = 1; year <= termYears; year++) {
     years.push(`Рік ${year}`);
     const yearData = chartData.filter(d => d.month > (year-1)*12 && d.month <= year*12);
@@ -262,66 +270,100 @@ function displayChart(chartData, termYears) {
     interestData.push(yearInterest);
   }
   
-  window.mortgageChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: years,
-      datasets: [
-        {
-          label: 'Основний борг',
-          data: principalData,
-          backgroundColor: 'rgba(74, 144, 226, 0.8)',
-          borderColor: 'rgba(74, 144, 226, 1)',
-          borderWidth: 1
-        },
-        {
-          label: 'Проценти',
-          data: interestData,
-          backgroundColor: 'rgba(255, 99, 132, 0.8)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          borderWidth: 1
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          stacked: true,
-          title: {
-            display: true,
-            text: 'Роки'
-          }
-        },
-        y: {
-          stacked: true,
-          title: {
-            display: true,
-            text: 'Сума (грн)'
-          },
-          ticks: {
-            callback: function(value) {
-              return formatNumber(value) + ' грн';
-            }
-          }
-        }
-      },
-      plugins: {
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return context.dataset.label + ': ' + formatNumber(context.parsed.y) + ' грн';
-            }
-          }
-        },
-        legend: {
-          display: true,
-          position: 'top'
-        }
-      }
+  // Chart dimensions
+  const padding = 60;
+  const chartWidth = canvas.width - 2 * padding;
+  const chartHeight = canvas.height - 2 * padding;
+  
+  // Find max value for scaling
+  const maxValue = Math.max(...principalData.map((p, i) => p + interestData[i]));
+  
+  // Bar width
+  const barWidth = chartWidth / termYears - 10;
+  
+  // Draw bars
+  for (let i = 0; i < termYears; i++) {
+    const x = padding + i * (chartWidth / termYears) + 5;
+    const principalHeight = (principalData[i] / maxValue) * chartHeight;
+    const interestHeight = (interestData[i] / maxValue) * chartHeight;
+    const totalHeight = principalHeight + interestHeight;
+    
+    // Draw interest (red)
+    ctx.fillStyle = 'rgba(255, 99, 132, 0.8)';
+    ctx.fillRect(x, padding + chartHeight - totalHeight, barWidth, interestHeight);
+    
+    // Draw principal (blue)
+    ctx.fillStyle = 'rgba(74, 144, 226, 0.8)';
+    ctx.fillRect(x, padding + chartHeight - principalHeight, barWidth, principalHeight);
+    
+    // Draw year label
+    ctx.fillStyle = '#333';
+    ctx.font = '12px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(years[i], x + barWidth/2, canvas.height - 20);
+  }
+  
+  // Draw axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  
+  // Y-axis
+  ctx.beginPath();
+  ctx.moveTo(padding, padding);
+  ctx.lineTo(padding, padding + chartHeight);
+  ctx.stroke();
+  
+  // X-axis
+  ctx.beginPath();
+  ctx.moveTo(padding, padding + chartHeight);
+  ctx.lineTo(padding + chartWidth, padding + chartHeight);
+  ctx.stroke();
+  
+  // Y-axis labels
+  ctx.fillStyle = '#666';
+  ctx.font = '10px Arial';
+  ctx.textAlign = 'right';
+  
+  const steps = 5;
+  for (let i = 0; i <= steps; i++) {
+    const value = (maxValue / steps) * i;
+    const y = padding + chartHeight - (i / steps) * chartHeight;
+    
+    ctx.fillText(formatNumber(value) + ' грн', padding - 5, y + 3);
+    
+    // Draw grid line
+    if (i > 0) {
+      ctx.strokeStyle = '#eee';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(padding, y);
+      ctx.lineTo(padding + chartWidth, y);
+      ctx.stroke();
     }
-  });
+  }
+  
+  // Legend
+  const legendY = padding - 30;
+  
+  // Principal legend
+  ctx.fillStyle = 'rgba(74, 144, 226, 0.8)';
+  ctx.fillRect(padding, legendY, 15, 15);
+  ctx.fillStyle = '#333';
+  ctx.font = '12px Arial';
+  ctx.textAlign = 'left';
+  ctx.fillText('Основний борг', padding + 20, legendY + 12);
+  
+  // Interest legend
+  ctx.fillStyle = 'rgba(255, 99, 132, 0.8)';
+  ctx.fillRect(padding + 150, legendY, 15, 15);
+  ctx.fillStyle = '#333';
+  ctx.fillText('Проценти', padding + 175, legendY + 12);
+  
+  // Chart title
+  ctx.fillStyle = '#333';
+  ctx.font = 'bold 14px Arial';
+  ctx.textAlign = 'center';
+  ctx.fillText('Основний борг та проценти за роками', canvas.width / 2, 25);
 }
 
 function displayAmortizationTable(amortizationData) {
