@@ -1,19 +1,52 @@
+// Helper function for safe number parsing with validation
+function safeParseFloat(value, defaultValue = 0, min = 0) {
+  if (value === null || value === undefined || value === '') {
+    return defaultValue;
+  }
+  
+  // Remove whitespace and common currency symbols
+  const cleanValue = String(value).trim().replace(/[₴$€£,\s]/g, '');
+  
+  const parsed = parseFloat(cleanValue);
+  
+  if (isNaN(parsed)) {
+    return defaultValue;
+  }
+  
+  return Math.max(parsed, min);
+}
+
+// Helper function for safe integer parsing
+function safeParseInt(value, defaultValue = 0, min = 0) {
+  if (value === null || value === undefined || value === '') {
+    return defaultValue;
+  }
+  
+  const parsed = parseInt(value);
+  
+  if (isNaN(parsed)) {
+    return defaultValue;
+  }
+  
+  return Math.max(parsed, min);
+}
+
 document.getElementById("emergency-fund-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const housingCosts = parseFloat(document.getElementById("housingCosts").value) || 0;
-  const foodCosts = parseFloat(document.getElementById("foodCosts").value) || 0;
-  const transportCosts = parseFloat(document.getElementById("transportCosts").value) || 0;
-  const healthCosts = parseFloat(document.getElementById("healthCosts").value) || 0;
-  const debtPayments = parseFloat(document.getElementById("debtPayments").value) || 0;
-  const otherExpenses = parseFloat(document.getElementById("otherExpenses").value) || 0;
+  const housingCosts = safeParseFloat(document.getElementById("housingCosts").value);
+  const foodCosts = safeParseFloat(document.getElementById("foodCosts").value);
+  const transportCosts = safeParseFloat(document.getElementById("transportCosts").value);
+  const healthCosts = safeParseFloat(document.getElementById("healthCosts").value);
+  const debtPayments = safeParseFloat(document.getElementById("debtPayments").value);
+  const otherExpenses = safeParseFloat(document.getElementById("otherExpenses").value);
   const employmentStatus = document.getElementById("employmentStatus").value;
-  const incomeSourcesCount = parseInt(document.getElementById("incomeSourcesCount").value);
-  const dependentsCount = parseInt(document.getElementById("dependentsCount").value);
+  const incomeSourcesCount = safeParseInt(document.getElementById("incomeSourcesCount").value, 1, 1);
+  const dependentsCount = safeParseInt(document.getElementById("dependentsCount").value, 0, 0);
   const healthStatus = document.getElementById("healthStatus").value;
-  const monthlyIncome = parseFloat(document.getElementById("monthlyIncome").value) || 0;
-  const currentSavings = parseFloat(document.getElementById("currentSavings").value) || 0;
-  const monthlySavings = parseFloat(document.getElementById("monthlySavings").value) || 0;
+  const monthlyIncome = safeParseFloat(document.getElementById("monthlyIncome").value);
+  const currentSavings = safeParseFloat(document.getElementById("currentSavings").value);
+  const monthlySavings = safeParseFloat(document.getElementById("monthlySavings").value);
   const riskTolerance = document.getElementById("riskTolerance").value;
   const hasInsurance = document.getElementById("hasInsurance").checked;
   const hasProperty = document.getElementById("hasProperty").checked;
@@ -21,9 +54,26 @@ document.getElementById("emergency-fund-form").addEventListener("submit", functi
   // Розрахунок загальних щомісячних витрат
   const totalMonthlyExpenses = housingCosts + foodCosts + transportCosts + healthCosts + debtPayments + otherExpenses;
   
+  // Enhanced validation
+  const validationErrors = [];
+  
   if (totalMonthlyExpenses <= 0) {
+    validationErrors.push('Будь ласка, вкажіть ваші щомісячні витрати.');
+  }
+  
+  if (monthlyIncome <= 0) {
+    validationErrors.push('Будь ласка, вкажіть ваш щомісячний дохід.');
+  }
+  
+  if (totalMonthlyExpenses > monthlyIncome * 2) {
+    validationErrors.push('Ваші витрати значно перевищують дохід. Будь ласка, перевірте введені дані.');
+  }
+  
+  if (validationErrors.length > 0) {
     document.getElementById("emergency-fund-result").innerHTML = 
-      '<p style="color: red;">Будь ласка, вкажіть ваші щомісячні витрати.</p>';
+      '<div style="color: red;"><h4>Помилки в даних:</h4><ul>' + 
+      validationErrors.map(error => `<li>${error}</li>`).join('') + 
+      '</ul></div>';
     return;
   }
 
@@ -411,34 +461,52 @@ function getSavingsStrategy(currentSavings, targetAmount, monthlyIncome, monthly
   return { steps };
 }
 
+function ensureChartJs(callback) {
+  if (typeof Chart !== 'undefined') {
+    callback();
+  } else {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+    script.onload = callback;
+    document.head.appendChild(script);
+  }
+}
+
 function displayEmergencyFundChart(currentSavings, targetAmount, monthlySavings, monthsToSave) {
   const chartBlock = document.getElementById("emergency-fund-chart-block");
   const canvas = document.getElementById("emergency-fund-chart");
-  const ctx = canvas.getContext("2d");
+  
+  if (!canvas) {
+    console.error('Chart canvas not found');
+    return;
+  }
   
   chartBlock.style.display = "block";
   
-  // Очистити попередній графік
-  if (window.emergencyFundChart) {
-    window.emergencyFundChart.destroy();
-  }
-  
-  // Генерація даних для графіку накопичення
-  const months = [];
-  const savingsProgress = [];
-  
-  let currentAmount = currentSavings;
-  
-  for (let month = 0; month <= Math.min(monthsToSave + 6, 60); month++) {
-    months.push(month === 0 ? 'Зараз' : `${month} міс`);
-    savingsProgress.push(currentAmount);
+  ensureChartJs(() => {
+    const ctx = canvas.getContext("2d");
     
-    if (month > 0 && currentAmount < targetAmount) {
-      currentAmount = Math.min(currentAmount + monthlySavings, targetAmount);
+    // Очистити попередній графік
+    if (window.emergencyFundChart) {
+      window.emergencyFundChart.destroy();
     }
-  }
-  
-  window.emergencyFundChart = new Chart(ctx, {
+    
+    // Генерація даних для графіку накопичення
+    const months = [];
+    const savingsProgress = [];
+    
+    let currentAmount = currentSavings;
+    
+    for (let month = 0; month <= Math.min(monthsToSave + 6, 60); month++) {
+      months.push(month === 0 ? 'Зараз' : `${month} міс`);
+      savingsProgress.push(currentAmount);
+      
+      if (month > 0 && currentAmount < targetAmount) {
+        currentAmount = Math.min(currentAmount + monthlySavings, targetAmount);
+      }
+    }
+    
+    window.emergencyFundChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: months,
@@ -499,6 +567,7 @@ function displayEmergencyFundChart(currentSavings, targetAmount, monthlySavings,
         }
       }
     }
+  });
   });
 }
 
