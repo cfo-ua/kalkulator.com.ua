@@ -39,22 +39,22 @@ seo:
     <div class="insight-cards">
       <div class="insight-card info">
         <h6>❄️ Сніжний ком</h6>
-        <div class="big-number">Мотивація</div>
+        <div class="result-value">Мотивація</div>
         <p class="insight-detail">Спочатку найменший борг</p>
       </div>
       <div class="insight-card warning">
         <h6>🏔️ Лавина</h6>
-        <div class="big-number">Економія</div>
+        <div class="result-value">Економія</div>
         <p class="insight-detail">Спочатку найвищий відсоток</p>
       </div>
       <div class="insight-card success">
         <h6>🎯 Гібрид</h6>
-        <div class="big-number">Баланс</div>
+        <div class="result-value">Баланс</div>
         <p class="insight-detail">Комбінація обох методів</p>
       </div>
       <div class="insight-card">
         <h6>💡 Консолідація</h6>
-        <div class="big-number">Простота</div>
+        <div class="result-value">Простота</div>
         <p class="insight-detail">Об'єднання в один кредит</p>
       </div>
     </div>
@@ -100,22 +100,22 @@ seo:
     <div class="insight-cards">
       <div class="insight-card warning">
         <h6>💳 Кредитні картки</h6>
-        <div class="big-number">25-45%</div>
+        <div class="result-value">25-45%</div>
         <p class="insight-detail">Найдорожчі борги</p>
       </div>
       <div class="insight-card">
         <h6>💰 Мікрокредити</h6>
-        <div class="big-number">300-500%</div>
+        <div class="result-value">300-500%</div>
         <p class="insight-detail">Екстремально високі ставки</p>
       </div>
       <div class="insight-card info">
         <h6>🚗 Автокредити</h6>
-        <div class="big-number">20-30%</div>
+        <div class="result-value">20-30%</div>
         <p class="insight-detail">Середні ставки</p>
       </div>
       <div class="insight-card success">
         <h6>🏠 Іпотека</h6>
-        <div class="big-number">17-22%</div>
+        <div class="result-value">17-22%</div>
         <p class="insight-detail">Найнижчі ставки</p>
       </div>
     </div>
