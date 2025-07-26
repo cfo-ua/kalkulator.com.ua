@@ -40,22 +40,22 @@ seo:
     <div class="insight-cards">
       <div class="insight-card info">
         <h6>📊 Аннуїтетні</h6>
-        <div class="result-value">Рівні</div>
+        <div class="big-number">Рівні</div>
         <p class="insight-detail">Однакові щомісячні платежі</p>
       </div>
       <div class="insight-card warning">
         <h6>📉 Диференційовані</h6>
-        <div class="result-value">Спадні</div>
+        <div class="big-number">Спадні</div>
         <p class="insight-detail">Платежі зменшуються з часом</p>
       </div>
       <div class="insight-card success">
         <h6>💰 З дострокових</h6>
-        <div class="result-value">Гнучкі</div>
+        <div class="big-number">Гнучкі</div>
         <p class="insight-detail">Додаткові погашення</p>
       </div>
       <div class="insight-card">
         <h6>🎯 Комбіновані</h6>
-        <div class="result-value">Змішані</div>
+        <div class="big-number">Змішані</div>
         <p class="insight-detail">Різні періоди та ставки</p>
       </div>
     </div>
@@ -65,22 +65,22 @@ seo:
     <div class="insight-cards">
       <div class="insight-card success">
         <h6>🏠 Іпотека</h6>
-        <div class="result-value">17-22%</div>
+        <div class="big-number">17-22%</div>
         <p class="insight-detail">Кредити на нерухомість</p>
       </div>
       <div class="insight-card info">
         <h6>🚗 Автокредити</h6>
-        <div class="result-value">20-30%</div>
+        <div class="big-number">20-30%</div>
         <p class="insight-detail">Кредити на авто</p>
       </div>
       <div class="insight-card warning">
         <h6>💳 Споживчі</h6>
-        <div class="result-value">25-45%</div>
+        <div class="big-number">25-45%</div>
         <p class="insight-detail">Готівкові кредити</p>
       </div>
       <div class="insight-card">
         <h6>💼 Бізнес</h6>
-        <div class="result-value">22-35%</div>
+        <div class="big-number">22-35%</div>
         <p class="insight-detail">Кредити для ФОП</p>
       </div>
     </div>

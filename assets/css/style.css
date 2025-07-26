@@ -3648,6 +3648,7 @@ input[type="date"]::-moz-focus-inner {
 .schedule-table .amount, .amortization-table .amount {
   font-family: 'Courier New', monospace;
   font-weight: 600;
+  font-size: 0.9rem; /* Override large .amount font-size for tables */
 }
 
 /* Table controls styling */
