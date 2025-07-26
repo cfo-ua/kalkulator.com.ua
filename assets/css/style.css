@@ -2528,6 +2528,88 @@ footer {
   }
 }
 
+/* Chart containers height constraints to prevent infinite growth */
+#payoff-chart {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+  width: 100%;
+}
+
+#payoff-chart canvas {
+  width: 100% !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  display: block;
+}
+
+#passive-income-chart {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+  width: 100%;
+}
+
+#passive-income-chart canvas {
+  width: 100% !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  display: block;
+}
+
+#portfolio-composition {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+  width: 100%;
+}
+
+#portfolio-composition canvas {
+  width: 100% !important;
+  height: 300px !important;
+  max-height: 300px !important;
+  display: block;
+}
+
+/* Responsive chart adjustments */
+@media (max-width: 768px) {
+  #payoff-chart canvas,
+  #passive-income-chart canvas {
+    height: 300px !important;
+    max-height: 300px !important;
+  }
+  
+  #portfolio-composition canvas {
+    height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #payoff-chart canvas,
+  #passive-income-chart canvas {
+    height: 250px !important;
+    max-height: 250px !important;
+  }
+  
+  #portfolio-composition canvas {
+    height: 200px !important;
+    max-height: 200px !important;
+  }
+}
+
 /* Responsive images and SVGs */
 img, svg {
   max-width: 100%;
