@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: "Конвертер часу онлайн"
+title: "⏰ Конвертер часу онлайн"
 categories: [conversion]
 seo:
   title: "Конвертер часу — години, хвилини, секунди, мілісекунди, дні"

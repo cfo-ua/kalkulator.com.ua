@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function convertVolume() {
     const value = parseFloat(input.value);
     if (isNaN(value)) {
-      result.textContent = "Будь ласка, введіть числове значення.";
+      result.innerHTML = '<div class="insight-card warning"><h6>⚠️ Помилка вводу</h6><p>Будь ласка, введіть числове значення.</p></div>';
       return;
     }
 
@@ -28,7 +28,58 @@ document.addEventListener("DOMContentLoaded", function () {
     const valueInLiters = value * conversionRates[fromUnit];
     const convertedValue = valueInLiters / conversionRates[toUnit];
 
-    result.textContent = `${value} ${from.options[from.selectedIndex].text} = ${convertedValue.toFixed(4)} ${to.options[to.selectedIndex].text}`;
+    const fromLabel = from.options[from.selectedIndex].text;
+    const toLabel = to.options[to.selectedIndex].text;
+
+    // Generate additional useful conversions
+    let additionalInfo = '';
+    if (toUnit !== 'l' && valueInLiters !== convertedValue) {
+      additionalInfo += `<p>🥤 ${valueInLiters.toFixed(3)} літрів</p>`;
+    }
+    if (toUnit !== 'ml' && valueInLiters < 10) {
+      additionalInfo += `<p>💧 ${(valueInLiters * 1000).toFixed(1)} мл</p>`;
+    }
+    
+    // Add context based on volume
+    let context = '';
+    let emoji = '🥤';
+    if (valueInLiters < 0.001) {
+      context = 'Дуже малий об\'єм (краплі)';
+      emoji = '💧';
+    } else if (valueInLiters < 0.05) {
+      context = 'Ложка або невеликий ковток';
+      emoji = '🥄';
+    } else if (valueInLiters < 0.5) {
+      context = 'Склянка або чашка';
+      emoji = '🥤';
+    } else if (valueInLiters < 2) {
+      context = 'Пляшка води або напою';
+      emoji = '🍼';
+    } else if (valueInLiters < 20) {
+      context = 'Каструля або відро';
+      emoji = '🪣';
+    } else if (valueInLiters < 200) {
+      context = 'Бочка або великий контейнер';
+      emoji = '🛢️';
+    } else {
+      context = 'Резервуар або басейн';
+      emoji = '🏊';
+    }
+
+    result.innerHTML = `
+      <div class="insight-cards" style="margin-top: 1rem;">
+        <div class="insight-card success">
+          <h6>✅ Результат конвертації</h6>
+          <div class="big-number">${convertedValue.toFixed(4)}</div>
+          <p><strong>${value} ${fromLabel} = ${convertedValue.toFixed(4)} ${toLabel}</strong></p>
+          ${additionalInfo}
+        </div>
+        <div class="insight-card info">
+          <h6>${emoji} Контекст</h6>
+          <p>${context}</p>
+        </div>
+      </div>
+    `;
   }
 
   input.addEventListener("input", convertVolume);
