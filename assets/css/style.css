@@ -1715,6 +1715,14 @@ footer {
   line-height: 1;
 }
 
+.result-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
 .insight-detail {
   margin: 0;
   color: #666;
@@ -1751,6 +1759,10 @@ footer {
   
   .big-number {
     font-size: 1.5rem;
+  }
+  
+  .result-value {
+    font-size: 1.05rem;
   }
 }
 

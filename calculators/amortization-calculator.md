@@ -270,22 +270,22 @@ faq:
     <div class="insight-cards">
       <div class="insight-card info">
         <h6>💰 Щомісячний платіж</h6>
-        <div class="big-number" id="monthly-payment">₴0</div>
+        <div class="result-value" id="monthly-payment">₴0</div>
         <p class="insight-detail">Основний платіж (без доплат)</p>
       </div>
       <div class="insight-card warning">
         <h6>📈 Загальна переплата</h6>
-        <div class="big-number" id="total-interest">₴0</div>
+        <div class="result-value" id="total-interest">₴0</div>
         <p class="insight-detail">Всі відсотки за термін кредиту</p>
       </div>
       <div class="insight-card success">
         <h6>💵 Загальна сума</h6>
-        <div class="big-number" id="total-amount">₴0</div>
+        <div class="result-value" id="total-amount">₴0</div>
         <p class="insight-detail">Кредит + відсотки + комісії</p>
       </div>
       <div class="insight-card">
         <h6>⏰ Термін погашення</h6>
-        <div class="big-number" id="payoff-time">0 років</div>
+        <div class="result-value" id="payoff-time">0 років</div>
         <p class="insight-detail">З урахуванням доплат</p>
       </div>
     </div>
@@ -295,12 +295,12 @@ faq:
       <div class="insight-cards">
         <div class="insight-card success">
           <h6>💰 Економія відсотків</h6>
-          <div class="big-number" id="interest-savings">₴0</div>
+          <div class="result-value" id="interest-savings">₴0</div>
           <p class="insight-detail">Заощаджено на відсотках</p>
         </div>
         <div class="insight-card info">
           <h6>⏱️ Економія часу</h6>
-          <div class="big-number" id="time-savings">0 міс.</div>
+          <div class="result-value" id="time-savings">0 міс.</div>
           <p class="insight-detail">Скорочення терміну</p>
         </div>
       </div>
