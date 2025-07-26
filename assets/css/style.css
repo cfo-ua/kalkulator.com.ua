@@ -2682,6 +2682,71 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
 }
 
 /* ============================= */
+/* Real Estate Cash Flow Chart    */
+/* ============================= */
+
+#cash-flow-chart {
+  background: #fff;
+  box-shadow: 0 4px 32px 0 rgba(60,60,60,0.08), 0 1.5px 8px 0 rgba(21,122,255,0.06);
+  border-radius: 24px;
+  max-width: 900px;
+  margin: 2em auto 1em auto;
+  padding: 1.5em 2em 2.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96vw;
+  min-width: 0;
+  transition: box-shadow 0.18s;
+}
+
+#cash-flow-chart h3 {
+  font-size: 1.22em;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+  color: #222;
+}
+
+#cash-flow-chart canvas {
+  width: 100% !important;
+  height: 340px !important;
+  max-width: 860px;
+  margin: 0 auto;
+  display: block;
+  background: none;
+}
+
+@media (max-width: 800px) {
+  #cash-flow-chart {
+    max-width: 99vw;
+    padding: 1.1em 0.3em 2em 0.3em;
+    border-radius: 16px;
+  }
+  #cash-flow-chart canvas { 
+    height: 220px !important; 
+  }
+}
+
+@media (max-width: 480px) {
+  #cash-flow-chart {
+    padding: 0.7em 0em 1.1em 0em;
+    border-radius: 12px;
+  }
+  #cash-flow-chart canvas { 
+    height: 168px !important; 
+  }
+}
+
+@media (max-width: 600px) {
+  #cash-flow-chart {
+    margin-left: 1vw !important;
+    margin-right: 1vw !important;
+    width: 98vw !important;
+    box-sizing: border-box;
+  }
+}
+
+/* ============================= */
 /* Chart Quick Range Button UI  */
 /* ============================= */
 
