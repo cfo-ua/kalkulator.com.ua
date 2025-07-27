@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const chartBlock = document.getElementById('efficiency-chart-block');
       if (chartBlock) {
         chartBlock.style.display = 'block';
-        createEfficiencyChart(yearlyProductions.slice(0, 10)); // Show first 10 years
+        ensureChartJs(() => createEfficiencyChart(yearlyProductions.slice(0, 10))); // Show first 10 years
       }
     });
   }
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createEfficiencyChart(yearlyData) {
     const canvas = document.getElementById('efficiency-chart');
-    if (!canvas || !window.Chart) return;
+    if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
     
@@ -338,5 +338,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+  }
+
+  function ensureChartJs(callback) {
+    if (typeof Chart !== 'undefined') {
+      callback();
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
   }
 });
