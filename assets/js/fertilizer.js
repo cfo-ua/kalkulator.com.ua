@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const plantType = parseFloat(document.getElementById('fertilizer-plant-type').value);
       const fertilizer = document.getElementById('fertilizer-npk').value;
       const applicationTimes = parseInt(document.getElementById('fertilizer-application').value);
-      const fertilizerForm = document.getElementById('fertilizer-form').value;
+      const fertilizerForm = document.getElementById('fertilizer-form-type').value;
       
       if (!area || !plantType || !fertilizer || !applicationTimes || !fertilizerForm) {
         result.textContent = "Будь ласка, заповніть всі поля.";
