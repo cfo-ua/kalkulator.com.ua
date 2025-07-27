@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // DOM elements
   const assessmentIntro = document.getElementById("assessment-intro");
-  const assessmentQuestions = document.getElementById("assessment-questions");
+  const assessmentQuestionsElement = document.getElementById("assessment-questions");
   const assessmentResults = document.getElementById("assessment-results");
   
   const startButton = document.getElementById("start-assessment");
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function startAssessment() {
     assessmentIntro.style.display = "none";
-    assessmentQuestions.style.display = "block";
+    assessmentQuestionsElement.style.display = "block";
     displayQuestion();
   }
 
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const results = calculateResults();
     displayResults(results);
     
-    assessmentQuestions.style.display = "none";
+    assessmentQuestionsElement.style.display = "none";
     assessmentResults.style.display = "block";
   }
 
