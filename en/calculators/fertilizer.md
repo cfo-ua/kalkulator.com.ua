@@ -118,7 +118,7 @@ seo:
   </label>
   <label>
     Fertilizer Form:
-    <select id="fertilizer-form" required>
+    <select id="fertilizer-form-type" required>
       <option value="granular">Granular (50 lb bags)</option>
       <option value="liquid">Liquid concentrate</option>
       <option value="organic">Organic granular</option>

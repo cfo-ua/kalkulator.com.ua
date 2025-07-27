@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const nitrogenRate = parseFloat(document.getElementById('fertilizer-plant-type').value);
       const [nitrogen, phosphorus, potassium, costPer50lb] = document.getElementById('fertilizer-npk').value.split(',').map(Number);
       const applications = parseFloat(document.getElementById('fertilizer-application').value);
-      const form = document.getElementById('fertilizer-form').value;
+      const form = document.getElementById('fertilizer-form-type').value;
       
       if (area <= 0) {
         result.textContent = "Please enter a valid area.";

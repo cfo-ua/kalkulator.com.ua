@@ -84,7 +84,7 @@ seo:
   </label>
   <label>
     Форма добрив:
-    <select id="fertilizer-form" required>
+    <select id="fertilizer-form-type" required>
       <option value="granular">Гранульовані (мішки 25 кг)</option>
       <option value="liquid">Рідкий концентрат</option>
       <option value="organic">Органічні гранульовані</option>
