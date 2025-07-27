@@ -1,382 +1,656 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('energy-audit-form');
-  const result = document.getElementById('energy-audit-result');
+  const form = document.getElementById("energy-audit-form");
+  if (!form) return;
 
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      
-      // Get form values
-      const homeSize = parseFloat(document.getElementById('homeSize').value);
-      const homeAge = parseFloat(document.getElementById('homeAge').value);
-      const homeType = document.getElementById('homeType').value;
-      const stories = parseFloat(document.getElementById('stories').value);
-      
-      const monthlyElectric = parseFloat(document.getElementById('monthlyElectric').value);
-      const monthlyGas = parseFloat(document.getElementById('monthlyGas').value);
-      const electricRate = parseFloat(document.getElementById('electricRate').value);
-      const gasRate = parseFloat(document.getElementById('gasRate').value);
-      
-      const heatingType = document.getElementById('heatingType').value;
-      const heatingAge = parseFloat(document.getElementById('heatingAge').value);
-      const coolingType = document.getElementById('coolingType').value;
-      const programmableThermostat = document.getElementById('programmableThermostat').value;
-      
-      const insulationLevel = document.getElementById('insulationLevel').value;
-      const windowType = document.getElementById('windowType').value;
-      const airLeakage = document.getElementById('airLeakage').value;
-      
-      const waterHeaterType = document.getElementById('waterHeaterType').value;
-      const waterHeaterAge = parseFloat(document.getElementById('waterHeaterAge').value);
-      const waterHeaterInsulation = document.getElementById('waterHeaterInsulation').value;
-      
-      const lightingType = document.getElementById('lightingType').value;
-      const applianceAge = document.getElementById('applianceAge').value;
-      const energyStarAppliances = document.getElementById('energyStarAppliances').value;
-      
-      const climateZone = document.getElementById('climateZone').value;
-      const heatingDegreeeDays = parseFloat(document.getElementById('heatingDegreeeDays').value);
-      const coolingDegreeDays = parseFloat(document.getElementById('coolingDegreeDays').value);
-      
-      if (homeSize <= 0 || monthlyElectric <= 0) {
-        result.textContent = "Будь ласка, заповніть всі обов'язкові поля дійсними значеннями.";
-        return;
+  // Energy efficiency factors and improvement opportunities
+  const efficiencyFactors = {
+    heating: {
+      "gas-furnace": { efficiency: 0.85, cost: 1.0 },
+      "electric-heat-pump": { efficiency: 2.5, cost: 0.9 },
+      "electric-resistance": { efficiency: 1.0, cost: 1.5 },
+      "oil-furnace": { efficiency: 0.82, cost: 1.2 },
+      "boiler": { efficiency: 0.88, cost: 1.1 }
+    },
+    cooling: {
+      "central-ac": { efficiency: 3.0, cost: 1.0 },
+      "heat-pump": { efficiency: 3.2, cost: 0.9 },
+      "window-units": { efficiency: 2.5, cost: 1.2 },
+      "none": { efficiency: 0, cost: 0 }
+    },
+    insulation: {
+      poor: { rValue: 10, heatLoss: 1.4 },
+      fair: { rValue: 20, heatLoss: 1.2 },
+      good: { rValue: 35, heatLoss: 1.0 },
+      excellent: { rValue: 50, heatLoss: 0.8 }
+    },
+    windows: {
+      single: { uValue: 1.1, cost: 1.3 },
+      double: { uValue: 0.6, cost: 1.0 },
+      triple: { uValue: 0.3, cost: 0.8 },
+      storm: { uValue: 0.5, cost: 0.9 }
+    },
+    airLeakage: {
+      high: { infiltration: 1.5 },
+      moderate: { infiltration: 1.2 },
+      low: { infiltration: 1.0 }
+    }
+  };
+
+  // Improvement recommendations database (Ukrainian translations and UAH pricing)
+  const improvements = {
+    airSealing: {
+      name: "Герметизація повітря",
+      cost: 20000, // 800 USD * 25 UAH/USD
+      savings: 0.15,
+      payback: 2,
+      description: "Заклейте витоки повітря навколо вікон, дверей та отворів"
+    },
+    atticInsulation: {
+      name: "Утеплення горища",
+      cost: 37500, // 1500 USD * 25
+      savings: 0.12,
+      payback: 3,
+      description: "Покращте утеплення горища до R-38 до R-50"
+    },
+    wallInsulation: {
+      name: "Утеплення стін",
+      cost: 87500, // 3500 USD * 25
+      savings: 0.08,
+      payback: 8,
+      description: "Додайте утеплення до зовнішніх стін"
+    },
+    windowUpgrade: {
+      name: "Модернізація вікон",
+      cost: 200000, // 8000 USD * 25
+      savings: 0.10,
+      payback: 15,
+      description: "Замініть на сертифіковані Energy Star вікна"
+    },
+    hvacUpgrade: {
+      name: "Модернізація HVAC",
+      cost: 150000, // 6000 USD * 25
+      savings: 0.20,
+      payback: 8,
+      description: "Замініть на високоефективну систему опалення/охолодження"
+    },
+    smartThermostat: {
+      name: "Розумний термостат",
+      cost: 6250, // 250 USD * 25
+      savings: 0.08,
+      payback: 1.5,
+      description: "Встановіть програмований або розумний термостат"
+    },
+    waterHeaterUpgrade: {
+      name: "Модернізація водонагрівача",
+      cost: 30000, // 1200 USD * 25
+      savings: 0.06,
+      payback: 8,
+      description: "Замініть на високоефективний агрегат"
+    },
+    ledLighting: {
+      name: "Перехід на LED освітлення",
+      cost: 7500, // 300 USD * 25
+      savings: 0.04,
+      payback: 1,
+      description: "Замініть всі лампи на LED освітлення"
+    },
+    ductSealing: {
+      name: "Герметизація повітроводів",
+      cost: 15000, // 600 USD * 25
+      savings: 0.10,
+      payback: 3,
+      description: "Загерметизуйте та утепліть повітроводи HVAC"
+    }
+  };
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect form data
+    const homeSize = parseFloat(document.getElementById("homeSize").value);
+    const homeAge = parseInt(document.getElementById("homeAge").value);
+    const homeType = document.getElementById("homeType").value;
+    const stories = document.getElementById("stories").value;
+    const monthlyElectric = parseFloat(document.getElementById("monthlyElectric").value);
+    const monthlyGas = parseFloat(document.getElementById("monthlyGas").value);
+    const electricRate = parseFloat(document.getElementById("electricRate").value);
+    const gasRate = parseFloat(document.getElementById("gasRate").value);
+    const heatingType = document.getElementById("heatingType").value;
+    const heatingAge = parseInt(document.getElementById("heatingAge").value);
+    const coolingType = document.getElementById("coolingType").value;
+    const programmableThermostat = document.getElementById("programmableThermostat").value;
+    const insulationLevel = document.getElementById("insulationLevel").value;
+    const windowType = document.getElementById("windowType").value;
+    const airLeakage = document.getElementById("airLeakage").value;
+    const waterHeaterType = document.getElementById("waterHeaterType").value;
+    const waterHeaterAge = parseInt(document.getElementById("waterHeaterAge").value);
+    const waterHeaterInsulation = document.getElementById("waterHeaterInsulation").value;
+    const lightingType = document.getElementById("lightingType").value;
+    const applianceAge = document.getElementById("applianceAge").value;
+    const energyStarAppliances = document.getElementById("energyStarAppliances").value;
+    const climateZone = document.getElementById("climateZone").value;
+    const heatingDegreeDays = parseInt(document.getElementById("heatingDegreeeDays").value);
+    const coolingDegreeDays = parseInt(document.getElementById("coolingDegreeDays").value);
+
+    // Calculate current energy usage breakdown
+    const currentUsage = calculateCurrentUsage({
+      homeSize, monthlyElectric, monthlyGas, electricRate, gasRate,
+      heatingType, coolingType, heatingDegreeDays, coolingDegreeDays
+    });
+
+    // Calculate energy efficiency score
+    const efficiencyScore = calculateEfficiencyScore({
+      homeAge, heatingType, heatingAge, coolingType, insulationLevel,
+      windowType, airLeakage, waterHeaterType, waterHeaterAge,
+      lightingType, applianceAge, programmableThermostat
+    });
+
+    // Generate improvement recommendations
+    const recommendations = generateRecommendations({
+      homeSize, homeAge, currentUsage, efficiencyScore,
+      heatingType, heatingAge, coolingType, insulationLevel,
+      windowType, airLeakage, programmableThermostat, lightingType,
+      waterHeaterType, waterHeaterAge
+    });
+
+    // Calculate potential savings
+    const savingsAnalysis = calculateSavingsAnalysis(currentUsage, recommendations);
+
+    // Generate priority improvement plan
+    const improvementPlan = generateImprovementPlan(recommendations, currentUsage.total);
+
+    // Display results
+    displayResults({
+      currentUsage,
+      efficiencyScore,
+      recommendations,
+      savingsAnalysis,
+      improvementPlan,
+      homeSize,
+      homeAge,
+      climateZone
+    });
+
+    // Show energy breakdown chart
+    showEnergyChart(currentUsage, savingsAnalysis);
+  });
+
+
+
+  function calculateCurrentUsage(data) {
+    const electricUsage = data.monthlyElectric / data.electricRate; // kWh
+    const gasUsage = data.monthlyGas / data.gasRate; // m³
+    
+    // Estimate breakdown based on typical home patterns
+    const heatingPercent = Math.min(0.6, data.heatingDegreeDays / 8000);
+    const coolingPercent = Math.min(0.3, data.coolingDegreeDays / 3000);
+    const basePercent = 1 - heatingPercent - coolingPercent;
+
+    const breakdown = {
+      heating: data.monthlyGas * heatingPercent + data.monthlyElectric * 0.1,
+      cooling: data.monthlyElectric * coolingPercent,
+      waterHeating: data.monthlyGas * 0.3 + data.monthlyElectric * 0.15,
+      lighting: data.monthlyElectric * 0.12,
+      appliances: data.monthlyElectric * 0.35,
+      other: data.monthlyElectric * basePercent + data.monthlyGas * 0.1
+    };
+
+    breakdown.total = data.monthlyElectric + data.monthlyGas;
+    breakdown.annual = breakdown.total * 12;
+    breakdown.perSqM = breakdown.total / data.homeSize;
+
+    return breakdown;
+  }
+
+  function calculateEfficiencyScore(data) {
+    let score = 50; // Base score
+
+    // Heating system efficiency
+    const heatingFactor = efficiencyFactors.heating[data.heatingType];
+    if (heatingFactor) {
+      score += (heatingFactor.efficiency - 1) * 10;
+      score -= Math.max(0, (data.heatingAge - 10) * 2); // Age penalty
+    }
+
+    // Insulation quality
+    const insulationFactor = efficiencyFactors.insulation[data.insulationLevel];
+    if (insulationFactor) {
+      score += (insulationFactor.rValue - 20) / 2;
+    }
+
+    // Window efficiency
+    const windowFactor = efficiencyFactors.windows[data.windowType];
+    if (windowFactor) {
+      score += (0.6 - windowFactor.uValue) * 20;
+    }
+
+    // Air sealing
+    const airFactor = efficiencyFactors.airLeakage[data.airLeakage];
+    if (airFactor) {
+      score += (1.5 - airFactor.infiltration) * 15;
+    }
+
+    // Thermostat control
+    if (data.programmableThermostat === "smart") score += 8;
+    else if (data.programmableThermostat === "basic") score += 4;
+
+    // Lighting efficiency
+    if (data.lightingType === "led") score += 8;
+    else if (data.lightingType === "cfl") score += 4;
+    else if (data.lightingType === "incandescent") score -= 5;
+
+    // Water heater age
+    score -= Math.max(0, (data.waterHeaterAge - 8) * 1.5);
+
+    // Home age factor
+    score -= Math.max(0, (data.homeAge - 20) * 0.5);
+
+    return {
+      score: Math.max(0, Math.min(100, score)),
+      rating: getEfficiencyRating(score)
+    };
+  }
+
+  function getEfficiencyRating(score) {
+    if (score >= 85) return { level: "Відмінно", class: "success", description: "Високоефективний дім" };
+    if (score >= 70) return { level: "Добре", class: "success", description: "Ефективність вище середнього" };
+    if (score >= 55) return { level: "Задовільно", class: "warning", description: "Середня ефективність" };
+    if (score >= 40) return { level: "Погано", class: "warning", description: "Ефективність нижче середнього" };
+    return { level: "Дуже погано", class: "error", description: "Потрібні значні покращення" };
+  }
+
+  function generateRecommendations(data) {
+    const recs = [];
+
+    // Air sealing (almost always recommended)
+    if (data.airLeakage !== "low") {
+      recs.push({
+        ...improvements.airSealing,
+        priority: 1,
+        applicable: true
+      });
+    }
+
+    // Insulation upgrades
+    if (data.insulationLevel === "poor" || data.insulationLevel === "fair") {
+      recs.push({
+        ...improvements.atticInsulation,
+        priority: data.insulationLevel === "poor" ? 1 : 2,
+        applicable: true
+      });
+
+      if (data.insulationLevel === "poor") {
+        recs.push({
+          ...improvements.wallInsulation,
+          priority: 3,
+          applicable: true
+        });
       }
+    }
 
-      // Calculate current usage
-      const monthlyElectricKwh = monthlyElectric / electricRate;
-      const monthlyGasM3 = monthlyGas / gasRate;
-      const annualElectricKwh = monthlyElectricKwh * 12;
-      const annualGasM3 = monthlyGasM3 * 12;
-      const annualEnergyCost = (monthlyElectric + monthlyGas) * 12;
-      
-      // Calculate energy intensity
-      const electricIntensity = monthlyElectricKwh / homeSize; // kWh/m²/month
-      const gasIntensity = monthlyGasM3 / homeSize; // m³/m²/month
-      
-      // Efficiency factors
-      const insulationFactors = { poor: 0.6, fair: 0.75, good: 0.9, excellent: 1.0 };
-      const airLeakageFactors = { high: 0.7, moderate: 0.85, low: 1.0 };
-      const windowFactors = { single: 0.6, double: 0.8, triple: 0.95, storm: 0.85 };
-      const heatingEfficiencyFactors = {
-        'gas-furnace': heatingAge > 15 ? 0.7 : 0.85,
-        'electric-heat-pump': heatingAge > 10 ? 0.8 : 0.9,
-        'electric-resistance': 0.95,
-        'oil-furnace': heatingAge > 20 ? 0.65 : 0.8,
-        'boiler': heatingAge > 15 ? 0.75 : 0.88
-      };
-      
-      // Calculate potential improvements
-      const insulationImprovement = insulationLevel === 'poor' || insulationLevel === 'fair' ? 0.2 : 0.1;
-      const airSealingImprovement = airLeakage === 'high' ? 0.25 : airLeakage === 'moderate' ? 0.15 : 0.05;
-      const windowImprovement = windowType === 'single' ? 0.3 : windowType === 'double' ? 0.15 : 0.05;
-      const heatingImprovement = heatingAge > 15 ? 0.25 : heatingAge > 10 ? 0.15 : 0.05;
-      const lightingImprovement = lightingType === 'incandescent' ? 0.75 : lightingType === 'cfl' ? 0.5 : lightingType === 'mixed' ? 0.4 : 0.1;
-      const applianceImprovement = applianceAge === 'old' ? 0.3 : applianceAge === 'moderate' ? 0.2 : 0.1;
-      const thermostatImprovement = programmableThermostat === 'no' ? 0.15 : programmableThermostat === 'basic' ? 0.1 : 0.05;
-      
-      // Calculate water heating efficiency
-      const waterHeaterEfficiency = getWaterHeaterEfficiency(waterHeaterType, waterHeaterAge, waterHeaterInsulation);
-      const waterHeatingImprovement = waterHeaterAge > 10 ? 0.25 : waterHeaterInsulation === 'none' ? 0.15 : 0.1;
-      
-      // Calculate potential savings
-      const totalPotentialSavings = Math.min(0.4, 
-        insulationImprovement * 0.3 + 
-        airSealingImprovement * 0.25 + 
-        windowImprovement * 0.15 + 
-        heatingImprovement * 0.2 + 
-        lightingImprovement * 0.05 + 
-        applianceImprovement * 0.1 + 
-        thermostatImprovement * 0.1 + 
-        waterHeatingImprovement * 0.15
-      );
-      
-      const annualSavings = annualEnergyCost * totalPotentialSavings;
-      const monthlySavings = annualSavings / 12;
-      
-      // Calculate improvement costs and payback periods
-      const improvements = calculateImprovements(homeSize, totalPotentialSavings, annualSavings);
-      
-      // Calculate carbon footprint
-      const annualCO2Electric = annualElectricKwh * 0.55; // kg CO2/kWh for Ukraine grid
-      const annualCO2Gas = annualGasM3 * 2.0; // kg CO2/m³ for natural gas
-      const totalCO2 = annualCO2Electric + annualCO2Gas;
-      const co2Reduction = totalCO2 * totalPotentialSavings;
-      
-      // Energy efficiency rating
-      const currentRating = calculateEnergyRating(electricIntensity, gasIntensity, homeAge, insulationLevel);
-      const improvedRating = calculateEnergyRating(
-        electricIntensity * (1 - totalPotentialSavings * 0.6),
-        gasIntensity * (1 - totalPotentialSavings * 0.7),
-        homeAge,
-        'good'
-      );
+    // HVAC system upgrade
+    if (data.heatingAge > 15 || data.heatingType === "electric-resistance") {
+      recs.push({
+        ...improvements.hvacUpgrade,
+        priority: data.heatingAge > 20 ? 2 : 3,
+        applicable: true
+      });
+    }
 
-      result.innerHTML = `
-        <div class="result-section">
-          <h4>🏠 Поточний енергетичний профіль:</h4>
-          <p>Площа дому: ${homeSize} м²</p>
-          <p>Вік дому: ${homeAge} років</p>
-          <p>Тип: ${getHomeTypeLabel(homeType)}</p>
-          <p>Поверхів: ${stories}</p>
-        </div>
-        
-        <div class="result-usage">
-          <h4>📊 Споживання енергії:</h4>
-          <p><strong>Місячні витрати: ${(monthlyElectric + monthlyGas).toFixed(0)} грн</strong></p>
-          <p>Електроенергія: ${monthlyElectricKwh.toFixed(0)} кВтг (${monthlyElectric.toFixed(0)} грн)</p>
-          <p>Газ: ${monthlyGasM3.toFixed(0)} м³ (${monthlyGas.toFixed(0)} грн)</p>
-          <p>Річні витрати: ${annualEnergyCost.toFixed(0)} грн</p>
-          <p>Інтенсивність електроенергії: ${electricIntensity.toFixed(1)} кВтг/м²/місяць</p>
-          <p>Інтенсивність газу: ${gasIntensity.toFixed(2)} м³/м²/місяць</p>
-        </div>
-        
-        <div class="result-rating">
-          <h4>⭐ Енергетичний рейтинг:</h4>
-          <p><strong>Поточний рейтинг: ${currentRating}</strong></p>
-          <p>Потенційний рейтинг після покращень: ${improvedRating}</p>
-          <p>Клас ефективності: ${getEfficiencyClass(currentRating)}</p>
-        </div>
-        
-        <div class="result-savings">
-          <h4>💰 Потенційна економія:</h4>
-          <p><strong>Загальний потенціал економії: ${(totalPotentialSavings * 100).toFixed(1)}%</strong></p>
-          <p><strong>Річна економія: ${annualSavings.toFixed(0)} грн</strong></p>
-          <p>Місячна економія: ${monthlySavings.toFixed(0)} грн</p>
-          <p>Економія за 10 років: ${(annualSavings * 10).toFixed(0)} грн</p>
-        </div>
-        
-        <div class="result-carbon">
-          <h4>🌱 Вплив на довкілля:</h4>
-          <p>Поточні річні викиди CO₂: ${totalCO2.toFixed(0)} кг</p>
-          <p><strong>Потенційне скорочення CO₂: ${co2Reduction.toFixed(0)} кг/рік</strong></p>
-          <p>Еквівалент: ${(co2Reduction / 22).toFixed(1)} дерев на рік</p>
-          <p>Скорочення викидів від електроенергії: ${(annualCO2Electric * totalPotentialSavings).toFixed(0)} кг/рік</p>
-          <p>Скорочення викидів від газу: ${(annualCO2Gas * totalPotentialSavings).toFixed(0)} кг/рік</p>
-        </div>
-        
-        <div class="result-improvements">
-          <h4>🔧 Рекомендовані покращення:</h4>
-          ${improvements.map(imp => `
-            <div class="improvement-item" style="margin: 1rem 0; padding: 1rem; border-left: 4px solid #157aff; background: #f8f9fa;">
-              <h5>${imp.name}</h5>
-              <p><strong>Потенційна економія:</strong> ${imp.savings.toFixed(0)} грн/рік</p>
-              <p><strong>Орієнтовна вартість:</strong> ${imp.cost.toFixed(0)} грн</p>
-              <p><strong>Період окупності:</strong> ${imp.payback.toFixed(1)} років</p>
-              <p><strong>Пріоритет:</strong> ${imp.priority}</p>
-              <p>${imp.description}</p>
-            </div>
-          `).join('')}
-        </div>
-        
-        <div class="result-efficiency-tips">
-          <h4>💡 Швидкі поради для енергоефективності:</h4>
-          ${getEfficiencyTips(insulationLevel, airLeakage, heatingType, lightingType).map(tip => `<p>${tip}</p>`).join('')}
-        </div>
-        
-        <div class="result-seasonal">
-          <h4>🌡️ Сезонні рекомендації:</h4>
-          <p>❄️ Зима: Встановіть термостат на 18-20°C, заклейте витоки повітря</p>
-          <p>☀️ Літо: Використовуйте вентилятори, закривайте штори вдень</p>
-          <p>🍂 Осінь: Перевірте ущільнення вікон, почистіть фільтри HVAC</p>
-          <p>🌸 Весна: Заплануйте енергетичні модернізації, провітріть природно</p>
-        </div>
-        
-        <div class="result-financial">
-          <h4>💳 Фінансові міркування:</h4>
-          <p>Загальна вартість усіх покращень: ${improvements.reduce((sum, imp) => sum + imp.cost, 0).toFixed(0)} грн</p>
-          <p>Середній період окупності: ${(improvements.reduce((sum, imp) => sum + imp.payback, 0) / improvements.length).toFixed(1)} років</p>
-          <p>Збільшення вартості дому: ~${(annualSavings * 15).toFixed(0)} грн</p>
-          <p>💡 Шукайте державні програми енергоефективності та пільги</p>
-        </div>
-        
-        <div class="result-next-steps">
-          <h4>📋 Наступні кроки:</h4>
-          <p>1️⃣ Почніть з найрентабельніших покращень (герметизація повітря)</p>
-          <p>2️⃣ Отримайте професійні оцінки для великих модернізацій</p>
-          <p>3️⃣ Дослідіджуйте місцеві програми знижок та пільг</p>
-          <p>4️⃣ Розгляньте фінансування енергоефективності</p>
-          <p>5️⃣ Моніторте споживання енергії після покращень</p>
-        </div>
-      `;
-      
-      // Show chart if available
-      const chartBlock = document.getElementById('energy-audit-chart-block');
-      if (chartBlock) {
-        chartBlock.style.display = 'block';
-        createEnergyChart(monthlyElectricKwh, monthlyGasM3, improvements);
-      }
+    // Smart thermostat
+    if (data.programmableThermostat === "no") {
+      recs.push({
+        ...improvements.smartThermostat,
+        priority: 1,
+        applicable: true
+      });
+    }
+
+    // Window upgrades
+    if (data.windowType === "single") {
+      recs.push({
+        ...improvements.windowUpgrade,
+        priority: 4,
+        applicable: true
+      });
+    }
+
+    // Water heater upgrade
+    if (data.waterHeaterAge > 12 || data.waterHeaterType === "electric-tank") {
+      recs.push({
+        ...improvements.waterHeaterUpgrade,
+        priority: 3,
+        applicable: true
+      });
+    }
+
+    // LED lighting
+    if (data.lightingType !== "led") {
+      recs.push({
+        ...improvements.ledLighting,
+        priority: 1,
+        applicable: true
+      });
+    }
+
+    // Duct sealing (for older homes with central systems)
+    if (data.homeAge > 10 && data.heatingType.includes("furnace")) {
+      recs.push({
+        ...improvements.ductSealing,
+        priority: 2,
+        applicable: true
+      });
+    }
+
+    // Sort by priority and payback period
+    return recs.sort((a, b) => {
+      if (a.priority !== b.priority) return a.priority - b.priority;
+      return a.payback - b.payback;
     });
   }
 
-  function getHomeTypeLabel(type) {
-    const labels = {
-      'single-family': 'Приватний дім',
-      'townhouse': 'Таунхаус',
-      'condo': 'Квартира/Кондомініум',
-      'mobile': 'Мобільний будинок'
+  function calculateSavingsAnalysis(currentUsage, recommendations) {
+    let totalInvestment = 0;
+    let totalAnnualSavings = 0;
+    let cumulativeSavings = 0;
+
+    const implementedSavings = recommendations.map(rec => {
+      if (rec.applicable) {
+        const annualSaving = currentUsage.annual * rec.savings;
+        totalInvestment += rec.cost;
+        totalAnnualSavings += annualSaving;
+        cumulativeSavings += annualSaving;
+
+        return {
+          ...rec,
+          annualSaving: annualSaving,
+          lifetimeSaving: annualSaving * 15, // 15-year analysis
+          actualPayback: rec.cost / annualSaving
+        };
+      }
+      return rec;
+    });
+
+    return {
+      totalInvestment,
+      totalAnnualSavings,
+      totalLifetimeSavings: totalAnnualSavings * 15,
+      averagePayback: totalInvestment / totalAnnualSavings,
+      roi: (totalAnnualSavings * 15 - totalInvestment) / totalInvestment * 100,
+      recommendations: implementedSavings
     };
-    return labels[type] || type;
   }
 
-  function getWaterHeaterEfficiency(type, age, insulation) {
-    let baseEfficiency = 0.8;
-    
-    if (type === 'gas-tankless' || type === 'electric-tankless') {
-      baseEfficiency = 0.95;
-    } else if (type === 'heat-pump') {
-      baseEfficiency = 3.0; // COP
-    }
-    
-    if (age > 10) baseEfficiency *= 0.9;
-    if (insulation === 'blanket') baseEfficiency *= 1.05;
-    if (insulation === 'built-in') baseEfficiency *= 1.1;
-    
-    return baseEfficiency;
-  }
-
-  function calculateEnergyRating(electricIntensity, gasIntensity, homeAge, insulationLevel) {
-    let score = 100;
-    
-    // Electric intensity penalty
-    if (electricIntensity > 15) score -= 20;
-    else if (electricIntensity > 12) score -= 15;
-    else if (electricIntensity > 10) score -= 10;
-    
-    // Gas intensity penalty
-    if (gasIntensity > 0.8) score -= 20;
-    else if (gasIntensity > 0.6) score -= 15;
-    else if (gasIntensity > 0.4) score -= 10;
-    
-    // Age penalty
-    if (homeAge > 30) score -= 15;
-    else if (homeAge > 20) score -= 10;
-    else if (homeAge > 10) score -= 5;
-    
-    // Insulation bonus/penalty
-    if (insulationLevel === 'excellent') score += 10;
-    else if (insulationLevel === 'poor') score -= 15;
-    else if (insulationLevel === 'fair') score -= 5;
-    
-    return Math.max(0, Math.min(100, score)).toFixed(0);
-  }
-
-  function getEfficiencyClass(rating) {
-    if (rating >= 90) return 'A (Відмінно)';
-    if (rating >= 80) return 'B (Добре)';
-    if (rating >= 70) return 'C (Задовільно)';
-    if (rating >= 60) return 'D (Середнє)';
-    if (rating >= 50) return 'E (Погано)';
-    return 'F (Дуже погано)';
-  }
-
-  function calculateImprovements(homeSize, totalSavings, annualSavings) {
-    const improvements = [
+  function generateImprovementPlan(recommendations, currentAnnualCost) {
+    const phases = [
       {
-        name: '🌬️ Герметизація повітря',
-        savings: annualSavings * 0.25,
-        cost: homeSize * 80, // 80 грн/м²
-        priority: 'Високий',
-        description: 'Заклейте витоки повітря навколо вікон, дверей та отворів. Найрентабельніше покращення.'
+        phase: "Фаза 1: Швидкі покращення (Рік 1)",
+        budget: 50000,
+        items: [],
+        totalCost: 0,
+        totalSavings: 0
       },
       {
-        name: '🏠 Покращення утеплення',
-        savings: annualSavings * 0.3,
-        cost: homeSize * 200, // 200 грн/м²
-        priority: 'Високий',
-        description: 'Додайте або покращіть утеплення горища, стін та підвалу.'
+        phase: "Фаза 2: Великі покращення (Роки 2-3)", 
+        budget: 200000,
+        items: [],
+        totalCost: 0,
+        totalSavings: 0
       },
       {
-        name: '🌡️ Програмований термостат',
-        savings: annualSavings * 0.1,
-        cost: 3500, // 3500 грн
-        priority: 'Середній',
-        description: 'Автоматично регулюйте температуру для економії енергії.'
-      },
-      {
-        name: '🪟 Покращення вікон',
-        savings: annualSavings * 0.15,
-        cost: homeSize * 150, // 150 грн/м² площі вікон
-        priority: 'Середній',
-        description: 'Замініть старі вікна або додайте штормові вікна.'
-      },
-      {
-        name: '💡 LED освітлення',
-        savings: annualSavings * 0.05,
-        cost: 5000, // 5000 грн
-        priority: 'Низький',
-        description: 'Замініть всі лампи на енергоефективні LED.'
-      },
-      {
-        name: '💧 Утеплення водонагрівача',
-        savings: annualSavings * 0.1,
-        cost: 2000, // 2000 грн
-        priority: 'Середній',
-        description: 'Додайте утеплюючий кожух та утепліть труби.'
+        phase: "Фаза 3: Модернізація систем (Роки 4-5)",
+        budget: 375000,
+        items: [],
+        totalCost: 0,
+        totalSavings: 0
       }
     ];
 
-    return improvements.map(imp => ({
-      ...imp,
-      payback: imp.cost / imp.savings
-    })).sort((a, b) => a.payback - b.payback);
+    let remainingRecs = [...recommendations];
+
+    // Phase 1: Low-cost, high-impact improvements
+    phases[0].items = remainingRecs.filter(rec => 
+      rec.applicable && rec.cost <= 25000 && rec.payback <= 3
+    );
+
+    // Phase 2: Medium-cost improvements
+    const phase1Items = phases[0].items.map(item => item.name);
+    remainingRecs = remainingRecs.filter(rec => !phase1Items.includes(rec.name));
+    
+    phases[1].items = remainingRecs.filter(rec =>
+      rec.applicable && rec.cost <= 125000
+    );
+
+    // Phase 3: Major system upgrades
+    const phase2Items = phases[1].items.map(item => item.name);
+    remainingRecs = remainingRecs.filter(rec => !phase2Items.includes(rec.name));
+    
+    phases[2].items = remainingRecs.filter(rec => rec.applicable);
+
+    // Calculate phase totals
+    phases.forEach(phase => {
+      phase.totalCost = phase.items.reduce((sum, item) => sum + item.cost, 0);
+      phase.totalSavings = phase.items.reduce((sum, item) => 
+        sum + (currentAnnualCost * item.savings), 0
+      );
+      phase.payback = phase.totalCost / (phase.totalSavings || 1);
+    });
+
+    return phases;
   }
 
-  function getEfficiencyTips(insulation, airLeakage, heating, lighting) {
-    const tips = [];
+  function displayResults(data) {
+    const resultBlock = document.getElementById("energy-audit-result");
     
-    if (insulation === 'poor' || insulation === 'fair') {
-      tips.push('🏠 Покращте утеплення - це може заощадити до 30% енергії');
-    }
-    
-    if (airLeakage === 'high' || airLeakage === 'moderate') {
-      tips.push('🌬️ Загерметизуйте витоки повітря герметиком та ущільнювачами');
-    }
-    
-    if (heating === 'gas-furnace') {
-      tips.push('🔧 Регулярно міняйте фільтри HVAC кожні 1-3 місяці');
-    }
-    
-    if (lighting === 'incandescent' || lighting === 'mixed') {
-      tips.push('💡 Замініть лампи розжарювання на LED - економія до 75% енергії');
-    }
-    
-    tips.push('❄️ Знизьте термостат на 1°C - заощадьте 5-10% витрат на опалення');
-    tips.push('💧 Використовуйте холодну воду для прання - заощадьте до 90% енергії');
-    tips.push('🔌 Відключайте електроприлади коли не користуєтесь');
-    
-    return tips;
+    resultBlock.innerHTML = `
+      <div class="insight-cards">
+        <div class="insight-card ${data.efficiencyScore.rating.class}">
+          <h6>⭐ Рейтинг ефективності</h6>
+          <div class="big-number">${data.efficiencyScore.score}</div>
+          <p class="insight-detail">${data.efficiencyScore.rating.level}</p>
+        </div>
+        <div class="insight-card warning">
+          <h6>💰 Річні витрати на енергію</h6>
+          <div class="big-number">${data.currentUsage.annual.toLocaleString()} грн</div>
+          <p class="insight-detail">поточні витрати</p>
+        </div>
+        <div class="insight-card success">
+          <h6>📉 Потенційна економія</h6>
+          <div class="big-number">${data.savingsAnalysis.totalAnnualSavings.toFixed(0)} грн</div>
+          <p class="insight-detail">річна з покращеннями</p>
+        </div>
+        <div class="insight-card info">
+          <h6>⏱️ Період окупності</h6>
+          <div class="big-number">${data.savingsAnalysis.averagePayback.toFixed(1)}</div>
+          <p class="insight-detail">років в середньому</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius);">
+        <h4 style="margin-top: 0;">🏠 Аналіз енергетичної ефективності дому</h4>
+        
+        <div style="margin-bottom: 1.5rem; padding: 1rem; background: ${data.efficiencyScore.rating.class === 'success' ? '#e8f8e8' : data.efficiencyScore.rating.class === 'warning' ? '#fff8e1' : '#ffe8e8'}; 
+                    border-radius: 8px; border: 2px solid ${data.efficiencyScore.rating.class === 'success' ? '#28a745' : data.efficiencyScore.rating.class === 'warning' ? '#ffc107' : '#dc3545'};">
+          <p style="margin: 0;"><strong>📊 Загальна оцінка:</strong> Ваш дім має ${data.efficiencyScore.score}/100 балів (${data.efficiencyScore.rating.description})</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          <div>
+            <h5>🏠 Профіль дому</h5>
+            <p><strong>Площа:</strong> ${data.homeSize} м²</p>
+            <p><strong>Вік:</strong> ${data.homeAge} років</p>
+            <p><strong>Кліматична зона:</strong> ${data.climateZone}</p>
+            <p><strong>Витрати на енергію за м²:</strong> ${data.currentUsage.perSqM.toFixed(2)} грн/місяць</p>
+          </div>
+          
+          <div>
+            <h5>💡 Поточне споживання енергії</h5>
+            <p><strong>Щомісячно загалом:</strong> ${data.currentUsage.total.toFixed(0)} грн</p>
+            <p><strong>Щорічно загалом:</strong> ${data.currentUsage.annual.toLocaleString()} грн</p>
+            <p><strong>Опалення:</strong> ${data.currentUsage.heating.toFixed(0)} грн</p>
+            <p><strong>Охолодження:</strong> ${data.currentUsage.cooling.toFixed(0)} грн</p>
+            <p><strong>Нагрівання води:</strong> ${data.currentUsage.waterHeating.toFixed(0)} грн</p>
+          </div>
+          
+          <div>
+            <h5>📈 Потенціал покращення</h5>
+            <p><strong>Загальні інвестиції:</strong> ${data.savingsAnalysis.totalInvestment.toLocaleString()} грн</p>
+            <p><strong>Річна економія:</strong> ${data.savingsAnalysis.totalAnnualSavings.toFixed(0)} грн</p>
+            <p><strong>15-річна економія:</strong> ${data.savingsAnalysis.totalLifetimeSavings.toLocaleString()} грн</p>
+            <p><strong>ROI:</strong> ${data.savingsAnalysis.roi.toFixed(0)}%</p>
+          </div>
+        </div>
+
+        <h5>🎯 Пріоритетні рекомендації з покращення</h5>
+        <div style="margin-bottom: 2rem;">
+          ${data.recommendations.filter(rec => rec.applicable).map((rec, index) => `
+            <div style="display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 1rem; align-items: center; 
+                        padding: 1rem; margin-bottom: 0.5rem; background: white; border-radius: 8px; 
+                        border-left: 4px solid ${rec.priority === 1 ? '#f44336' : rec.priority === 2 ? '#ff9800' : '#4caf50'};">
+              <span style="font-weight: 600; color: ${rec.priority === 1 ? '#f44336' : rec.priority === 2 ? '#ff9800' : '#4caf50'};">
+                #${index + 1}
+              </span>
+              <div>
+                <p style="margin: 0; font-weight: 600;">${rec.name}</p>
+                <p style="margin: 0.25rem 0 0 0; font-size: 0.9rem; color: #666;">${rec.description}</p>
+              </div>
+              <span style="font-weight: 600;">${rec.cost.toLocaleString()} грн</span>
+              <span style="color: #28a745;">${(data.currentUsage.annual * rec.savings).toFixed(0)} грн/рік</span>
+              <span style="color: #1976d2;">${rec.payback.toFixed(1)} років</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <h5>📅 Поетапний план впровадження</h5>
+        <div style="display: grid; gap: 1.5rem; margin-bottom: 2rem;">
+          ${data.improvementPlan.map(phase => `
+            <div style="padding: 1rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+              <h6 style="margin-top: 0; color: var(--accent);">${phase.phase}</h6>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                <p><strong>Загальна вартість:</strong> ${phase.totalCost.toLocaleString()} грн</p>
+                <p><strong>Річна економія:</strong> ${phase.totalSavings.toFixed(0)} грн</p>
+                <p><strong>Окупність:</strong> ${phase.payback.toFixed(1)} років</p>
+                <p><strong>Елементи:</strong> ${phase.items.length}</p>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.5rem;">
+                ${phase.items.map(item => `
+                  <div style="padding: 0.5rem; background: #f8f9fa; border-radius: 4px; font-size: 0.9rem;">
+                    ✓ ${item.name} (${item.cost.toLocaleString()} грн)
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+          <div style="padding: 1rem; background: #e3f2fd; border-radius: 8px; border: 2px solid #1976d2;">
+            <h6 style="margin-top: 0; color: #1976d2;">💡 Поради з енергозбереження</h6>
+            <ul style="margin: 0; font-size: 0.9rem;">
+              <li>Встановлюйте термостат на 18°C взимку, 25°C влітку</li>
+              <li>Використовуйте стельові вентилятори для покращення комфорту</li>
+              <li>Відключайте електроніку коли не користуєтесь</li>
+              <li>Запускайте посудомийку та пральну машину при повному завантаженні</li>
+            </ul>
+          </div>
+          
+          <div style="padding: 1rem; background: #e8f5e8; border-radius: 8px; border: 2px solid #28a745;">
+            <h6 style="margin-top: 0; color: #28a745;">🎯 Наступні кроки</h6>
+            <ul style="margin: 0; font-size: 0.9rem;">
+              <li>Почніть з швидких покращень Фази 1</li>
+              <li>Отримайте професійний енергоаудит для детального аналізу</li>
+              <li>Дослідіть комунальні знижки та податкові пільги</li>
+              <li>Розгляньте варіанти фінансування для великих покращень</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
-  function createEnergyChart(electricKwh, gasM3, improvements) {
-    const canvas = document.getElementById('energy-audit-chart');
-    if (!canvas || !window.Chart) return;
+  function showEnergyChart(currentUsage, savingsAnalysis) {
+    const chartBlock = document.getElementById("energy-audit-chart-block");
+    chartBlock.style.display = "block";
 
-    const ctx = canvas.getContext('2d');
-    
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Опалення/Охолодження', 'Нагрівання води', 'Освітлення', 'Побутова техніка', 'Інше'],
-        datasets: [{
-          data: [45, 18, 12, 20, 5],
-          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff'],
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'bottom'
+    ensureChartJs(() => {
+      const ctx = document.getElementById("energy-audit-chart").getContext("2d");
+      if (window.energyAuditChart) window.energyAuditChart.destroy();
+
+      const labels = ['Опалення', 'Охолодження', 'Нагрівання води', 'Освітлення', 'Побутова техніка', 'Інше'];
+      const currentData = [
+        currentUsage.heating,
+        currentUsage.cooling,
+        currentUsage.waterHeating,
+        currentUsage.lighting,
+        currentUsage.appliances,
+        currentUsage.other
+      ];
+
+      const improvedData = currentData.map(value => 
+        value * (1 - savingsAnalysis.totalAnnualSavings / currentUsage.annual)
+      );
+
+      window.energyAuditChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Поточні щомісячні витрати",
+            data: currentData,
+            backgroundColor: '#ff9800',
+            borderWidth: 2,
+            borderColor: '#fff'
+          }, {
+            label: "Після покращень",
+            data: improvedData,
+            backgroundColor: '#4caf50',
+            borderWidth: 2,
+            borderColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: 'Розподіл витрат на енергію: поточний vs покращений'
+            },
+            legend: {
+              display: true
+            }
           },
-          title: {
-            display: true,
-            text: 'Розподіл споживання енергії'
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Щомісячні витрати (грн)'
+              },
+              ticks: {
+                callback: function(value) {
+                  return value.toFixed(0) + ' грн';
+                }
+              }
+            }
           }
         }
-      }
+      });
     });
   }
 });
+
+// Ensure Chart.js is loaded
+function ensureChartJs(callback) {
+  if (typeof Chart !== 'undefined') {
+    callback();
+  } else {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js';
+    script.onload = callback;
+    script.onerror = function() {
+      // Fallback: try alternative CDN or show message
+      console.warn('Failed to load Chart.js from CDN, chart will not be displayed');
+    };
+    document.head.appendChild(script);
+  }
+}
