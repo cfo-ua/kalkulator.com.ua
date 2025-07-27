@@ -472,8 +472,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const suggestions = [];
     
     if (data.costAnalysis.materialPercentage < 30) {
-      suggestions.push('💰 <strong>Високі немат
-еріальні витрати:</strong> Розгляньте пакетний друк або швидші налаштування друку для зменшення витрат часу');
+      suggestions.push('💰 <strong>Високі нематеріальні витрати:</strong> Розгляньте пакетний друк або швидші налаштування друку для зменшення витрат часу');
     }
     
     if (data.costAnalysis.laborPercentage > 40) {
