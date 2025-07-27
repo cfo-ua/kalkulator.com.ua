@@ -711,6 +711,32 @@ footer {
   box-sizing: border-box;
 }
 
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.footer-email-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.footer-email-link:hover {
+  color: var(--accent-hover);
+  background: rgba(21, 122, 255, 0.1);
+}
+
+.footer-email-icon {
+  display: block;
+}
+
 /* Enhanced Calculator Results Styling */
 .result-section {
   background: var(--bg);
