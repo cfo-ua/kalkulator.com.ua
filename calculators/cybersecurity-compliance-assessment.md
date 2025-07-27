@@ -60,7 +60,7 @@ seo:
 ---
 
 <div class="compliance-assessment-container">
-  <div class="assessment-intro">
+  <div id="assessment-intro" class="assessment-intro">
     <div class="insight-card info">
       <h6>🛡️ Оцінка готовності до кібербезпеки</h6>
       <p>Оцініть безпекову позицію вашої організації та готовність до регуляторної відповідності. Ця оцінка охоплює ключові області кібербезпеки та надає персоналізовані рекомендації.</p>
