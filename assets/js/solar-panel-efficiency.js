@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h4>📈 Показники окупності:</h4>
           <p>Річна віддача: ${((annualSavings / (ratedPower * 35)) * 100).toFixed(1)}% (припускаючи 35 грн/Вт)</p>
           <p>Простий період окупності: ~${(ratedPower * 35 / annualSavings).toFixed(1)} років</p>
-          <p>Внутрішня норма прибутку: ~${(Math.pow(lifetimeSavings / (ratedPower * 35), 1/analysisYears) - 1) * 100 || 0).toFixed(1)}%</p>
+          <p>Внутрішня норма прибутку: ~${((Math.pow(lifetimeSavings / (ratedPower * 35), 1/analysisYears) - 1) * 100 || 0).toFixed(1)}%</p>
           <p>💡 Врахуйте державні субсидії та пільги при розрахунку ROI</p>
         </div>
       `;
