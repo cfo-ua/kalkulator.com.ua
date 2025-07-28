@@ -31,19 +31,19 @@ faq:
 <form id="tile-form" autocomplete="off">
   <label>
     Площа (м²):
-    <input type="number" id="tile-area" min="0" step="any" required>
+    <input type="number" id="tile-area" min="0" required>
   </label>
   <label>
     Довжина плитки (см):
-    <input type="number" id="tile-length" min="0" step="any" required>
+    <input type="number" id="tile-length" min="0" required>
   </label>
   <label>
     Ширина плитки (см):
-    <input type="number" id="tile-width" min="0" step="any" required>
+    <input type="number" id="tile-width" min="0" required>
   </label>
   <label>
     Запас (%):
-    <input type="number" id="tile-waste" min="0" value="10" step="any" required>
+    <input type="number" id="tile-waste" min="0" value="10" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

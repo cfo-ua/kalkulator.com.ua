@@ -127,12 +127,12 @@ faq:
 <form id="insulation-form" autocomplete="off">
   <label>
     Area Length (ft):
-    <input type="number" id="insulation-length" min="0" step="any" required>
+    <input type="number" id="insulation-length" min="0" required>
     <small>Length of area to insulate</small>
   </label>
   <label>
     Area Width (ft):
-    <input type="number" id="insulation-width" min="0" step="any" required>
+    <input type="number" id="insulation-width" min="0" required>
     <small>Width of area to insulate</small>
   </label>
   <label>

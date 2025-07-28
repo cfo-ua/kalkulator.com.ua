@@ -111,7 +111,7 @@ faq:
 <form id="paint-form" autocomplete="off">
   <label>
     Total Wall Area (sq ft):
-    <input type="number" id="paint-wall-area" min="0" step="any" required>
+    <input type="number" id="paint-wall-area" min="0" required>
     <small>Length × height of all walls to be painted</small>
   </label>
   <label>

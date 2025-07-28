@@ -171,10 +171,10 @@ faq:
     <div>
       <h4>🏠 Параметри кредиту</h4>
       <label for="homePrice">Вартість нерухомості (грн)</label>
-      <input type="number" id="homePrice" value="2000000" min="100000" step="10000" required>
+      <input type="number" id="homePrice" value="2000000" min="100000" required>
       
       <label for="downPayment">Первинний внесок (грн)</label>
-      <input type="number" id="downPayment" value="600000" min="0" step="10000" required>
+      <input type="number" id="downPayment" value="600000" min="0" required>
       
       <label for="loanTerm">Термін кредиту (років)</label>
       <select id="loanTerm" required>
@@ -186,34 +186,34 @@ faq:
       </select>
       
       <label for="interestRate">Процентна ставка (%)</label>
-      <input type="number" id="interestRate" value="19.5" min="5" max="30" step="0.1" required>
+      <input type="number" id="interestRate" value="19.5" min="5" max="30" required>
     </div>
     
     <div>
       <h4>💰 Додаткові витрати</h4>
       <label for="propertyInsurance">Страхування нерухомості (грн/рік)</label>
-      <input type="number" id="propertyInsurance" value="8000" min="0" step="500" required>
+      <input type="number" id="propertyInsurance" value="8000" min="0" required>
       
       <label for="lifeInsurance">Страхування життя (грн/рік)</label>
-      <input type="number" id="lifeInsurance" value="12000" min="0" step="500" required>
+      <input type="number" id="lifeInsurance" value="12000" min="0" required>
       
       <label for="bankCommission">Комісія банку (грн/місяць)</label>
-      <input type="number" id="bankCommission" value="200" min="0" step="50">
+      <input type="number" id="bankCommission" value="200" min="0">
       
       <label for="maintenanceFees">Обслуговування будинку (грн/місяць)</label>
-      <input type="number" id="maintenanceFees" value="0" min="0" step="100">
+      <input type="number" id="maintenanceFees" value="0" min="0">
     </div>
     
     <div>
       <h4>📊 Додаткові опції</h4>
       <label for="extraPayment">Додатковий платіж (грн/місяць)</label>
-      <input type="number" id="extraPayment" value="0" min="0" step="500">
+      <input type="number" id="extraPayment" value="0" min="0">
       
       <label for="processingFee">Комісія за оформлення (%)</label>
-      <input type="number" id="processingFee" value="1" min="0" max="5" step="0.1">
+      <input type="number" id="processingFee" value="1" min="0" max="5">
       
       <label for="closingCosts">Додаткові витрати (грн)</label>
-      <input type="number" id="closingCosts" value="30000" min="0" step="1000">
+      <input type="number" id="closingCosts" value="30000" min="0">
       
       <div style="margin-top: 1rem;">
         <label>

@@ -100,7 +100,7 @@ seo:
     <label>
       Вартість матеріалу за одиницю:
       <div style="display: flex; gap: 10px; align-items: center;">
-        <input type="number" id="material-cost" step="0.01" min="0" max="1000" required>
+        <input type="number" id="material-cost" min="0" max="1000" required>
         <select id="cost-unit">
           <option value="kg">$/кг (філамент)</option>
           <option value="liter">$/л (смола)</option>
@@ -114,20 +114,20 @@ seo:
     
     <label>
       Об'єм деталі (см³):
-      <input type="number" id="part-volume" step="0.1" min="0.1" max="10000" value="50" required>
+      <input type="number" id="part-volume" min="0.1" max="10000" value="50" required>
       <small>З програми слайсера або CAD моделі</small>
     </label>
 
     <label>
       Відсоток заповнення (%):
-      <input type="range" id="infill-percentage" min="0" max="100" value="20" step="5">
+      <input type="range" id="infill-percentage" min="0" max="100" value="20">
       <span id="infill-display">20%</span>
       <small>Тільки FDM - впливає на використання матеріалу</small>
     </label>
 
     <label>
       Підтримуючий матеріал (%):
-      <input type="range" id="support-percentage" min="0" max="50" value="15" step="5">
+      <input type="range" id="support-percentage" min="0" max="50" value="15">
       <span id="support-display">15%</span>
       <small>Додатковий матеріал для підтримок</small>
     </label>
@@ -139,7 +139,7 @@ seo:
 
     <label>
       Фактор відходів (%):
-      <input type="range" id="waste-factor" min="0" max="30" value="10" step="5">
+      <input type="range" id="waste-factor" min="0" max="30" value="10">
       <span id="waste-display">10%</span>
       <small>Невдалі друки, очищення, відходи</small>
     </label>
@@ -150,7 +150,7 @@ seo:
     
     <label>
       Час друку (години):
-      <input type="number" id="print-time" step="0.1" min="0.1" max="200" value="5" required>
+      <input type="number" id="print-time" min="0.1" max="200" value="5" required>
       <small>З оцінки слайсера</small>
     </label>
 
@@ -162,7 +162,7 @@ seo:
 
     <label>
       Тариф на електрику ($/кВт⋅год):
-      <input type="number" id="electricity-rate" step="0.01" min="0.01" max="1" value="0.12">
+      <input type="number" id="electricity-rate" min="0.01" max="1" value="0.12">
     </label>
 
     <label>
@@ -183,33 +183,33 @@ seo:
     
     <label>
       Почасова оплата праці ($/година):
-      <input type="number" id="labor-rate" step="0.50" min="0" max="200" value="25">
+      <input type="number" id="labor-rate" min="0" max="200" value="25">
       <small>Ваш час або ставка послуги</small>
     </label>
 
     <label>
       Вартість машини (Амортизація $/година):
-      <input type="number" id="machine-cost" step="0.01" min="0" max="50" value="2">
+      <input type="number" id="machine-cost" min="0" max="50" value="2">
       <small>Амортизація обладнання на годину</small>
     </label>
 
     <label>
       Накладні витрати (%):
-      <input type="range" id="overhead-rate" min="0" max="100" value="30" step="5">
+      <input type="range" id="overhead-rate" min="0" max="100" value="30">
       <span id="overhead-display">30%</span>
       <small>Приміщення, комунальні послуги, страховка</small>
     </label>
 
     <label>
       Маржа прибутку (%):
-      <input type="range" id="profit-margin" min="0" max="200" value="50" step="10">
+      <input type="range" id="profit-margin" min="0" max="200" value="50">
       <span id="profit-display">50%</span>
       <small>Бажаний прибуток від загальної вартості</small>
     </label>
 
     <label>
       Відсоток невдач (%):
-      <input type="range" id="failure-rate" min="0" max="50" value="10" step="5">
+      <input type="range" id="failure-rate" min="0" max="50" value="10">
       <span id="failure-display">10%</span>
       <small>Очікуваний відсоток невдалих друків</small>
     </label>

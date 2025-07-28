@@ -101,11 +101,11 @@ faq:
 <form id="deck-board-form" autocomplete="off">
   <label>
     Довжина терас (м):
-    <input type="number" id="deck-length" min="0" step="any" placeholder="напр. 6" required>
+    <input type="number" id="deck-length" min="0" placeholder="напр. 6" required>
   </label>
   <label>
     Ширина терас (м):
-    <input type="number" id="deck-width" min="0" step="any" placeholder="напр. 4" required>
+    <input type="number" id="deck-width" min="0" placeholder="напр. 4" required>
   </label>
   <label>
     Тип терасних дощок:

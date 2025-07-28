@@ -106,7 +106,7 @@ seo:
   <div class="form-section">
     <h3>Move Details</h3>
     <label for="move-distance">Moving Distance (miles):</label>
-    <input type="number" id="move-distance" min="100" step="50" value="2000" required>
+    <input type="number" id="move-distance" min="100" value="2000" required>
     
     <label for="home-size">Home Size:</label>
     <select id="home-size" required>
@@ -120,10 +120,10 @@ seo:
     
     <div id="custom-size" style="display:none;">
       <label for="estimated-weight">Estimated Weight (lbs):</label>
-      <input type="number" id="estimated-weight" min="1000" step="500" value="8000">
+      <input type="number" id="estimated-weight" min="1000" value="8000">
       
       <label for="cubic-feet">Estimated Cubic Feet:</label>
-      <input type="number" id="cubic-feet" min="100" step="100" value="1000">
+      <input type="number" id="cubic-feet" min="100" value="1000">
     </div>
     
     <label for="move-type">Moving Method:</label>
@@ -151,16 +151,16 @@ seo:
   <div class="form-section">
     <h3>Travel & Lodging</h3>
     <label for="family-size">Number of People Moving:</label>
-    <input type="number" id="family-size" min="1" max="10" step="1" value="2" required>
+    <input type="number" id="family-size" min="1" max="10" value="2" required>
     
     <label for="travel-days">Days for Travel/Move:</label>
-    <input type="number" id="travel-days" min="1" max="14" step="1" value="3" required>
+    <input type="number" id="travel-days" min="1" max="14" value="3" required>
     
     <label for="hotel-nights">Hotel Nights Needed:</label>
-    <input type="number" id="hotel-nights" min="0" max="14" step="1" value="2" required>
+    <input type="number" id="hotel-nights" min="0" max="14" value="2" required>
     
     <label for="pets">Number of Pets:</label>
-    <input type="number" id="pets" min="0" max="10" step="1" value="0">
+    <input type="number" id="pets" min="0" max="10" value="0">
   </div>
 
   <div class="form-section">

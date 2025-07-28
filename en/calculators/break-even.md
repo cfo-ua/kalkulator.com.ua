@@ -106,16 +106,16 @@ faq:
 
 <form id="break-even-form">
   <label for="fixedCosts">Monthly Fixed Costs</label>
-  <input type="number" id="fixedCosts" value="50000" min="0" step="any" required>
+  <input type="number" id="fixedCosts" value="50000" min="0" required>
 
   <label for="variableCost">Variable Cost per Unit</label>
-  <input type="number" id="variableCost" value="200" min="0" step="any" required>
+  <input type="number" id="variableCost" value="200" min="0" required>
 
   <label for="unitPrice">Unit Selling Price</label>
-  <input type="number" id="unitPrice" value="500" min="0" step="any" required>
+  <input type="number" id="unitPrice" value="500" min="0" required>
 
   <label for="monthlySales">Expected Monthly Sales (units)</label>
-  <input type="number" id="monthlySales" value="200" min="0" step="any" required>
+  <input type="number" id="monthlySales" value="200" min="0" required>
 
   <button type="submit">Calculate Break-Even</button>
 </form>

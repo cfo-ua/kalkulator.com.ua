@@ -120,12 +120,12 @@ faq:
 <form id="mulch-form" autocomplete="off">
   <label>
     Garden Bed Length (ft):
-    <input type="number" id="mulch-length" min="0" step="any" required>
+    <input type="number" id="mulch-length" min="0" required>
     <small>Length of your garden bed or landscape area</small>
   </label>
   <label>
     Garden Bed Width (ft):
-    <input type="number" id="mulch-width" min="0" step="any" required>
+    <input type="number" id="mulch-width" min="0" required>
     <small>Width of your garden bed or landscape area</small>
   </label>
   <label>

@@ -60,7 +60,7 @@ faq:
 <form id="deposit-form" autocomplete="off">
   <label>
     Ставка (% річних)
-    <input type="number" id="deposit-rate" required min="0" step="0.01" value="10">
+    <input type="number" id="deposit-rate" required min="0" value="10">
   </label>
   <label>
     Термін (місяців)
@@ -68,14 +68,14 @@ faq:
   </label>
   <label>
     Сума вкладу
-    <input type="number" id="deposit-amount" required min="0" step="100" value="1000">
+    <input type="number" id="deposit-amount" required min="0" value="1000">
   </label>
   <div>
     <label>
       <input type="checkbox" id="deposit-replenish-enable">
       Щомісячне поповнення
     </label>
-    <input type="number" id="deposit-replenish" min="0" step="100" value="0" style="max-width:110px;" disabled>
+    <input type="number" id="deposit-replenish" min="0" value="0" style="max-width:110px;" disabled>
   </div>
   <fieldset style="border: none; padding: 0; margin: 1em 0 0.5em 0;">
     <legend style="font-size:1em;font-weight:600;margin-bottom:0.2em;">Спосіб виплати відсотків</legend>

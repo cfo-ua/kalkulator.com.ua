@@ -78,7 +78,7 @@ faq:
 ---
 <form id="currency-form" autocomplete="off" style="max-width:440px;margin:0 auto;">
   <label for="currency-amount">Сума</label>
-  <input type="number" id="currency-amount" min="0" step="any" value="1000" required>
+  <input type="number" id="currency-amount" min="0" value="1000" required>
 
   <div style="display:flex;flex-direction:column;gap:0.4em;margin-bottom:1.2em;">
     <div style="position:relative;">

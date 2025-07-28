@@ -235,7 +235,7 @@ faq:
     <h3>🎯 Цілі пасивного доходу</h3>
     
     <label for="target-monthly-income">Цільовий щомісячний пасивний дохід (USD):</label>
-    <input type="number" id="target-monthly-income" min="0" step="100" value="2000" required>
+    <input type="number" id="target-monthly-income" min="0" value="2000" required>
     
     <label for="current-age">Поточний вік:</label>
     <input type="number" id="current-age" min="18" max="80" value="30" required>
@@ -244,7 +244,7 @@ faq:
     <input type="number" id="target-age" min="25" max="80" value="50" required>
     
     <label for="current-savings">Поточні накопичення (USD):</label>
-    <input type="number" id="current-savings" min="0" step="1000" value="10000" required>
+    <input type="number" id="current-savings" min="0" value="10000" required>
   </div>
 
   <div class="form-section">
@@ -252,51 +252,51 @@ faq:
     
     <h4>🏠 Нерухомість</h4>
     <label for="real-estate-investment">Інвестиції в нерухомість (USD):</label>
-    <input type="number" id="real-estate-investment" min="0" step="5000" value="50000">
+    <input type="number" id="real-estate-investment" min="0" value="50000">
     
     <label for="real-estate-yield">Очікувана доходність (%):</label>
-    <input type="number" id="real-estate-yield" min="0" max="30" step="0.5" value="6" required>
+    <input type="number" id="real-estate-yield" min="0" max="30" value="6" required>
     
     <h4>📈 Дивідендні акції</h4>
     <label for="dividend-stocks-investment">Інвестиції в дивідендні акції (USD):</label>
-    <input type="number" id="dividend-stocks-investment" min="0" step="1000" value="30000">
+    <input type="number" id="dividend-stocks-investment" min="0" value="30000">
     
     <label for="dividend-yield">Середня дивідендна доходність (%):</label>
-    <input type="number" id="dividend-yield" min="0" max="20" step="0.1" value="4.5" required>
+    <input type="number" id="dividend-yield" min="0" max="20" value="4.5" required>
     
     <h4>🏛️ Облігації (ОВДП, корпоративні)</h4>
     <label for="bonds-investment">Інвестиції в облігації (USD):</label>
-    <input type="number" id="bonds-investment" min="0" step="1000" value="20000">
+    <input type="number" id="bonds-investment" min="0" value="20000">
     
     <label for="bonds-yield">Доходність облігацій (%):</label>
-    <input type="number" id="bonds-yield" min="0" max="30" step="0.5" value="15" required>
+    <input type="number" id="bonds-yield" min="0" max="30" value="15" required>
     
     <h4>🏦 Депозити</h4>
     <label for="deposits-investment">Сума на депозитах (USD):</label>
-    <input type="number" id="deposits-investment" min="0" step="1000" value="15000">
+    <input type="number" id="deposits-investment" min="0" value="15000">
     
     <label for="deposits-yield">Доходність депозитів (%):</label>
-    <input type="number" id="deposits-yield" min="0" max="25" step="0.5" value="12" required>
+    <input type="number" id="deposits-yield" min="0" max="25" value="12" required>
     
     <h4>💼 Бізнес та інші джерела</h4>
     <label for="business-investment">Бізнес інвестиції (USD):</label>
-    <input type="number" id="business-investment" min="0" step="5000" value="25000">
+    <input type="number" id="business-investment" min="0" value="25000">
     
     <label for="business-yield">Очікувана доходність бізнесу (%):</label>
-    <input type="number" id="business-yield" min="0" max="50" step="1" value="12" required>
+    <input type="number" id="business-yield" min="0" max="50" value="12" required>
   </div>
 
   <div class="form-section">
     <h3>📊 Додаткові параметри</h3>
     
     <label for="monthly-contribution">Щомісячні додаткові інвестиції (USD):</label>
-    <input type="number" id="monthly-contribution" min="0" step="100" value="1000" required>
+    <input type="number" id="monthly-contribution" min="0" value="1000" required>
     
     <label for="inflation-rate">Очікувана інфляція (%):</label>
-    <input type="number" id="inflation-rate" min="0" max="20" step="0.5" value="8" required>
+    <input type="number" id="inflation-rate" min="0" max="20" value="8" required>
     
     <label for="reinvestment-rate">Відсоток реінвестування доходів (%):</label>
-    <input type="number" id="reinvestment-rate" min="0" max="100" step="5" value="70" required>
+    <input type="number" id="reinvestment-rate" min="0" max="100" value="70" required>
     <small>Скільки відсотків доходу ви будете реінвестувати</small>
     
     <label for="risk-tolerance">Толерантність до ризику:</label>

@@ -92,7 +92,7 @@ faq:
   <div class="form-section">
     <h3>Vehicle Information</h3>
     <label for="purchase-price">Original Purchase Price ($):</label>
-    <input type="number" id="purchase-price" min="0" step="1000" value="25000" required>
+    <input type="number" id="purchase-price" min="0" value="25000" required>
     
     <label for="purchase-year">Year Purchased:</label>
     <input type="number" id="purchase-year" min="1990" max="2024" value="2020" required>
@@ -136,10 +136,10 @@ faq:
   <div class="form-section">
     <h3>Vehicle Details</h3>
     <label for="current-mileage">Current Mileage:</label>
-    <input type="number" id="current-mileage" min="0" step="1000" value="60000" required>
+    <input type="number" id="current-mileage" min="0" value="60000" required>
     
     <label for="annual-mileage">Average Annual Mileage:</label>
-    <input type="number" id="annual-mileage" min="5000" max="30000" step="1000" value="12000" required>
+    <input type="number" id="annual-mileage" min="5000" max="30000" value="12000" required>
     
     <label for="vehicle-condition">Overall Condition:</label>
     <select id="vehicle-condition" required>
@@ -187,10 +187,10 @@ faq:
   <div class="form-section">
     <h3>Future Projection</h3>
     <label for="projection-years">Estimate Value in How Many Years?</label>
-    <input type="number" id="projection-years" min="0" max="20" step="1" value="2" required>
+    <input type="number" id="projection-years" min="0" max="20" value="2" required>
     
     <label for="planned-mileage">Expected Additional Annual Miles:</label>
-    <input type="number" id="planned-mileage" min="0" max="30000" step="1000" value="12000" required>
+    <input type="number" id="planned-mileage" min="0" max="30000" value="12000" required>
   </div>
 
   <button type="submit">Calculate Resale Value</button>

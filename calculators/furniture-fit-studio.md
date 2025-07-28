@@ -127,10 +127,10 @@ faq:
     <div>
       <h4>🏠 Розміри кімнати</h4>
       <label for="roomLength">Довжина кімнати (м)</label>
-      <input type="number" id="roomLength" value="6" min="3" max="15" step="0.1" required>
+      <input type="number" id="roomLength" value="6" min="3" max="15" required>
       
       <label for="roomWidth">Ширина кімнати (м)</label>
-      <input type="number" id="roomWidth" value="4" min="3" max="15" step="0.1" required>
+      <input type="number" id="roomWidth" value="4" min="3" max="15" required>
     </div>
     
     <div>

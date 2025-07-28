@@ -73,52 +73,52 @@ seo:
       </select>
       
       <label for="employees">Кількість співробітників</label>
-      <input type="number" id="employees" value="150" min="1" max="100000" step="1" required>
+      <input type="number" id="employees" value="150" min="1" max="100000" required>
     </div>
     
     <div>
       <h4>⚡ Споживання енергії (річне)</h4>
       <label for="electricityUsage">Споживання електроенергії (кВтг)</label>
-      <input type="number" id="electricityUsage" value="500000" min="0" step="1000" required>
+      <input type="number" id="electricityUsage" value="500000" min="0" required>
       
       <label for="naturalGasUsage">Споживання природного газу (куб. м)</label>
-      <input type="number" id="naturalGasUsage" value="8000" min="0" step="100" required>
+      <input type="number" id="naturalGasUsage" value="8000" min="0" required>
       
       <label for="heatingOilUsage">Споживання мазуту (літри)</label>
-      <input type="number" id="heatingOilUsage" value="0" min="0" step="100" required>
+      <input type="number" id="heatingOilUsage" value="0" min="0" required>
       
       <label for="renewablePercent">Відновлювана енергія (%)</label>
-      <input type="number" id="renewablePercent" value="20" min="0" max="100" step="5" required>
+      <input type="number" id="renewablePercent" value="20" min="0" max="100" required>
     </div>
     
     <div>
       <h4>🚗 Транспорт (річний)</h4>
       <label for="fleetVehicles">Автопарк (кількість)</label>
-      <input type="number" id="fleetVehicles" value="10" min="0" step="1" required>
+      <input type="number" id="fleetVehicles" value="10" min="0" required>
       
       <label for="fleetMileage">Пробіг автопарку (км)</label>
-      <input type="number" id="fleetMileage" value="240000" min="0" step="1000" required>
+      <input type="number" id="fleetMileage" value="240000" min="0" required>
       
       <label for="businessTravel">Ділові поїздки (грн)</label>
-      <input type="number" id="businessTravel" value="2250000" min="0" step="10000" required>
+      <input type="number" id="businessTravel" value="2250000" min="0" required>
       
       <label for="employeeCommuting">Комунальні переміщення співробітників (середні км/день)</label>
-      <input type="number" id="employeeCommuting" value="40" min="0" step="1" required>
+      <input type="number" id="employeeCommuting" value="40" min="0" required>
     </div>
     
     <div>
       <h4>🏭 Операції (річні)</h4>
       <label for="facilitySize">Розмір приміщень (кв. м)</label>
-      <input type="number" id="facilitySize" value="4645" min="100" max="1000000" step="100" required>
+      <input type="number" id="facilitySize" value="4645" min="100" max="1000000" required>
       
       <label for="wasteGeneration">Утворення відходів (тонни)</label>
-      <input type="number" id="wasteGeneration" value="50" min="0" step="1" required>
+      <input type="number" id="wasteGeneration" value="50" min="0" required>
       
       <label for="recyclingRate">Рівень переробки (%)</label>
-      <input type="number" id="recyclingRate" value="40" min="0" max="100" step="5" required>
+      <input type="number" id="recyclingRate" value="40" min="0" max="100" required>
       
       <label for="supplychainSpend">Витрати на ланцюг постачання (грн)</label>
-      <input type="number" id="supplychainSpend" value="60000000" min="0" step="100000" required>
+      <input type="number" id="supplychainSpend" value="60000000" min="0" required>
     </div>
   </div>
   
@@ -127,15 +127,15 @@ seo:
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
       <div>
         <label for="offsetPrice">Ціна компенсації (грн/тонна CO2)</label>
-        <input type="number" id="offsetPrice" value="750" min="150" max="4500" step="30" required>
+        <input type="number" id="offsetPrice" value="750" min="150" max="4500" required>
       </div>
       <div>
         <label for="reductionTarget">Ціль скорочення викидів (%)</label>
-        <input type="number" id="reductionTarget" value="50" min="0" max="100" step="5" required>
+        <input type="number" id="reductionTarget" value="50" min="0" max="100" required>
       </div>
       <div>
         <label for="timeframe">Цільові часові рамки (роки)</label>
-        <input type="number" id="timeframe" value="10" min="1" max="30" step="1" required>
+        <input type="number" id="timeframe" value="10" min="1" max="30" required>
       </div>
     </div>
   </div>

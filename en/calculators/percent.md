@@ -42,11 +42,11 @@ faq:
     <h3>What is X% of Y?</h3>
     <div class="input-group">
       <label for="percent1">Percentage (%):</label>
-      <input type="number" id="percent1" step="0.01" placeholder="Enter percentage">
+      <input type="number" id="percent1" placeholder="Enter percentage">
     </div>
     <div class="input-group">
       <label for="number1">Number:</label>
-      <input type="number" id="number1" step="0.01" placeholder="Enter number">
+      <input type="number" id="number1" placeholder="Enter number">
     </div>
     <div class="result" id="result1"></div>
   </div>
@@ -55,11 +55,11 @@ faq:
     <h3>X is what % of Y?</h3>
     <div class="input-group">
       <label for="part">Part (X):</label>
-      <input type="number" id="part" step="0.01" placeholder="Enter part">
+      <input type="number" id="part" placeholder="Enter part">
     </div>
     <div class="input-group">
       <label for="whole">Whole (Y):</label>
-      <input type="number" id="whole" step="0.01" placeholder="Enter whole">
+      <input type="number" id="whole" placeholder="Enter whole">
     </div>
     <div class="result" id="result2"></div>
   </div>
@@ -68,11 +68,11 @@ faq:
     <h3>Percentage Change</h3>
     <div class="input-group">
       <label for="oldValue">Old Value:</label>
-      <input type="number" id="oldValue" step="0.01" placeholder="Enter old value">
+      <input type="number" id="oldValue" placeholder="Enter old value">
     </div>
     <div class="input-group">
       <label for="newValue">New Value:</label>
-      <input type="number" id="newValue" step="0.01" placeholder="Enter new value">
+      <input type="number" id="newValue" placeholder="Enter new value">
     </div>
     <div class="result" id="result3"></div>
   </div>

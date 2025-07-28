@@ -207,7 +207,7 @@ scripts:
     <label>
       Weight:
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="weight" min="30" max="300" step="0.1" placeholder="70" required style="flex: 1;">
+        <input type="number" name="weight" min="30" max="300" placeholder="70" required style="flex: 1;">
         <select name="weight-unit" required style="width: 80px;">
           <option value="kg">kg</option>
           <option value="lbs">lbs</option>

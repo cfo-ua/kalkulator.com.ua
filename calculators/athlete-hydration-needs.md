@@ -192,7 +192,7 @@ scripts:
     <label>
       Вага тіла:
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="weight" min="40" max="150" step="0.1" placeholder="70" required style="flex: 1;">
+        <input type="number" name="weight" min="40" max="150" placeholder="70" required style="flex: 1;">
         <select name="weight-unit" required style="width: 80px;">
           <option value="kg">кг</option>
           <option value="lbs">фунтів</option>
@@ -290,7 +290,7 @@ scripts:
     <label>
       Ваша швидкість потовиділення (якщо відома):
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="sweat-rate" min="0.3" max="4.0" step="0.1" placeholder="Залиште порожнім для оцінки" style="flex: 1;">
+        <input type="number" name="sweat-rate" min="0.3" max="4.0" placeholder="Залиште порожнім для оцінки" style="flex: 1;">
         <span style="padding: 8px; color: #666;">л/год</span>
       </div>
       <small style="color: #666;">Необов'язково: Розрахуйте зважуючись до/після тренування (1кг втрати = ~1л поту)</small>

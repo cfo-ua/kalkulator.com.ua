@@ -113,15 +113,15 @@ faq:
 <form id="raised-bed-form" autocomplete="off">
   <label>
     Довжина грядки (м):
-    <input type="number" id="bed-length" min="0" step="any" placeholder="напр. 3" required>
+    <input type="number" id="bed-length" min="0" placeholder="напр. 3" required>
   </label>
   <label>
     Ширина грядки (м):
-    <input type="number" id="bed-width" min="0" step="any" placeholder="напр. 1.2" required>
+    <input type="number" id="bed-width" min="0" placeholder="напр. 1.2" required>
   </label>
   <label>
     Глибина/висота грядки (м):
-    <input type="number" id="bed-depth" min="0" step="0.05" placeholder="напр. 0.4" required>
+    <input type="number" id="bed-depth" min="0" placeholder="напр. 0.4" required>
   </label>
   <label>
     Кількість грядок:

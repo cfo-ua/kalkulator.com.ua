@@ -70,15 +70,15 @@ faq:
 <form id="concrete-form" autocomplete="off">
   <label>
     Length (ft):
-    <input type="number" id="concrete-length" min="0" step="any" required>
+    <input type="number" id="concrete-length" min="0" required>
   </label>
   <label>
     Width (ft):
-    <input type="number" id="concrete-width" min="0" step="any" required>
+    <input type="number" id="concrete-width" min="0" required>
   </label>
   <label>
     Thickness (ft):
-    <input type="number" id="concrete-height" min="0" step="any" placeholder="0.33 (4 inches)" required>
+    <input type="number" id="concrete-height" min="0" placeholder="0.33 (4 inches)" required>
   </label>
   <button type="submit">Calculate Volume</button>
 </form>

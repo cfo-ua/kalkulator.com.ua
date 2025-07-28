@@ -181,17 +181,17 @@ faq:
 
     <label>
       Current Price ($):
-      <input type="number" id="current-price" min="0" step="0.000001" required placeholder="Enter current price">
+      <input type="number" id="current-price" min="0" required placeholder="Enter current price">
     </label>
 
     <label>
       24-Hour Price Change (%):
-      <input type="number" id="daily-change" min="-100" max="1000" step="0.1" placeholder="Enter 24h percentage change">
+      <input type="number" id="daily-change" min="-100" max="1000" placeholder="Enter 24h percentage change">
     </label>
 
     <label>
       7-Day Price Change (%):
-      <input type="number" id="weekly-change" min="-100" max="1000" step="0.1" placeholder="Enter 7-day percentage change">
+      <input type="number" id="weekly-change" min="-100" max="1000" placeholder="Enter 7-day percentage change">
     </label>
 
     <label>
@@ -212,7 +212,7 @@ faq:
     
     <label>
       RSI (Relative Strength Index):
-      <input type="number" id="rsi" min="0" max="100" step="1" placeholder="Enter RSI value (0-100)">
+      <input type="number" id="rsi" min="0" max="100" placeholder="Enter RSI value (0-100)">
     </label>
 
     <label>

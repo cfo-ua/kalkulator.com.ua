@@ -103,22 +103,22 @@ seo:
 
 <form id="solar-calculator-form">
   <label for="monthlyUsage">Monthly Electricity Usage (kWh)</label>
-  <input type="number" id="monthlyUsage" value="1000" min="0" step="any" required>
+  <input type="number" id="monthlyUsage" value="1000" min="0" required>
 
   <label for="electricityRate">Electricity Rate ($ per kWh)</label>
-  <input type="number" id="electricityRate" value="0.12" min="0" step="0.001" required>
+  <input type="number" id="electricityRate" value="0.12" min="0" required>
 
   <label for="systemSize">Solar System Size (kW)</label>
-  <input type="number" id="systemSize" value="8" min="0" step="0.1" required>
+  <input type="number" id="systemSize" value="8" min="0" required>
 
   <label for="installationCost">Total Installation Cost ($)</label>
-  <input type="number" id="installationCost" value="24000" min="0" step="any" required>
+  <input type="number" id="installationCost" value="24000" min="0" required>
 
   <label for="peakSunHours">Peak Sun Hours per Day</label>
-  <input type="number" id="peakSunHours" value="5" min="0" step="0.1" required>
+  <input type="number" id="peakSunHours" value="5" min="0" required>
 
   <label for="systemEfficiency">System Efficiency (%)</label>
-  <input type="number" id="systemEfficiency" value="85" min="0" max="100" step="1" required>
+  <input type="number" id="systemEfficiency" value="85" min="0" max="100" required>
 
   <button type="submit">Calculate Solar Savings</button>
 </form>

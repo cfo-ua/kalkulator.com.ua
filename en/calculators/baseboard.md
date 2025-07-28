@@ -91,15 +91,15 @@ faq:
 <form id="baseboard-form" autocomplete="off">
   <label>
     Room Length (ft):
-    <input type="number" id="baseboard-length" min="0" step="any" required>
+    <input type="number" id="baseboard-length" min="0" required>
   </label>
   <label>
     Room Width (ft):
-    <input type="number" id="baseboard-width" min="0" step="any" required>
+    <input type="number" id="baseboard-width" min="0" required>
   </label>
   <label>
     Total Door Opening Width (ft):
-    <input type="number" id="baseboard-doors" min="0" step="any" value="0" placeholder="2.5 (standard door)">
+    <input type="number" id="baseboard-doors" min="0" value="0" placeholder="2.5 (standard door)">
   </label>
   <button type="submit">Calculate Baseboard</button>
 </form>

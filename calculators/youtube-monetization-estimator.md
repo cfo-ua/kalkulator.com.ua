@@ -116,16 +116,16 @@ faq:
 <form id="youtube-monetization-form">
   <h3>📊 Поточний статус каналу</h3>
   <label for="subscribers">Поточні підписники</label>
-  <input type="number" id="subscribers" value="25000" min="0" step="any" required>
+  <input type="number" id="subscribers" value="25000" min="0" required>
 
   <label for="monthlyViews">Місячні перегляди</label>
-  <input type="number" id="monthlyViews" value="500000" min="0" step="any" required>
+  <input type="number" id="monthlyViews" value="500000" min="0" required>
 
   <label for="avgViewDuration">Середня тривалість перегляду (%)</label>
-  <input type="number" id="avgViewDuration" value="45" min="0" max="100" step="1" required>
+  <input type="number" id="avgViewDuration" value="45" min="0" max="100" required>
 
   <label for="videosPerMonth">Відео публікується на місяць</label>
-  <input type="number" id="videosPerMonth" value="8" min="0" max="100" step="1" required>
+  <input type="number" id="videosPerMonth" value="8" min="0" max="100" required>
 
   <h3>🎯 Категорія контенту та аудиторія</h3>
   <label for="contentCategory">Категорія контенту</label>
@@ -149,7 +149,7 @@ faq:
   </select>
 
   <label for="engagementRate">Рівень залученості (%)</label>
-  <input type="number" id="engagementRate" value="4.5" min="0" max="20" step="0.1" required>
+  <input type="number" id="engagementRate" value="4.5" min="0" max="20" required>
 
   <h3>💼 Функції монетизації</h3>
   <label for="monetizationEnabled">YouTube Partner Program</label>
@@ -165,7 +165,7 @@ faq:
   </select>
 
   <label for="sponsorshipRate">Можливості спонсорства на місяць</label>
-  <input type="number" id="sponsorshipRate" value="2" min="0" max="20" step="1">
+  <input type="number" id="sponsorshipRate" value="2" min="0" max="20">
 
   <label for="merchandiseEnabled">Мерч/Продукти</label>
   <select id="merchandiseEnabled">
@@ -175,10 +175,10 @@ faq:
 
   <h3>📈 Прогнози зростання</h3>
   <label for="monthlyGrowthRate">Очікуване місячне зростання (%)</label>
-  <input type="number" id="monthlyGrowthRate" value="8" min="0" max="50" step="1" required>
+  <input type="number" id="monthlyGrowthRate" value="8" min="0" max="50" required>
 
   <label for="projectionMonths">Період прогнозування (місяці)</label>
-  <input type="number" id="projectionMonths" value="12" min="3" max="24" step="1" required>
+  <input type="number" id="projectionMonths" value="12" min="3" max="24" required>
 
   <button type="submit">Розрахувати доходи YouTube</button>
 </form>

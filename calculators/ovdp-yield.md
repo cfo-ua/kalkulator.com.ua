@@ -58,13 +58,13 @@ faq:
 
 <form id="ovdp-form" autocomplete="off">
   <label>Поточна ціна 1 ОВДП (грн):
-    <input type="number" id="price" min="0" step="0.01" required>
+    <input type="number" id="price" min="0" required>
   </label>
   <label>Дата наступної виплати:
     <input type="date" id="nextDate" required>
   </label>
   <label>Сума щопіврічного купону (грн):
-    <input type="number" id="nextCoupon" min="0" step="0.01" required>
+    <input type="number" id="nextCoupon" min="0" required>
   </label>
   <label>Дата погашення:
     <input type="date" id="finalDate" required>

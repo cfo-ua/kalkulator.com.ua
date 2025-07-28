@@ -212,7 +212,7 @@ faq:
       Вартість квитка (необов'язково):
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">₴</span>
-        <input type="number" name="ticket-cost" min="1" max="500" step="1" placeholder="20" style="flex: 1;">
+        <input type="number" name="ticket-cost" min="1" max="500" placeholder="20" style="flex: 1;">
       </div>
     </label>
   </div>

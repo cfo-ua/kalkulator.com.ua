@@ -45,10 +45,10 @@ faq:
 
 <form id="roas-form">
   <label for="adSpend">Витрати на рекламу</label>
-  <input type="number" id="adSpend" value="10000" min="0" step="any" required>
+  <input type="number" id="adSpend" value="10000" min="0" required>
 
   <label for="revenue">Дохід від реклами</label>
-  <input type="number" id="revenue" value="40000" min="0" step="any" required>
+  <input type="number" id="revenue" value="40000" min="0" required>
 
   <button type="submit">Розрахувати ROAS</button>
 </form>

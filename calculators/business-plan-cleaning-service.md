@@ -144,19 +144,19 @@ faq:
       </label>
       <label>
         Обладнання та інструменти ($):
-        <input type="number" id="equipment-cost" min="2000" step="500" value="8000" required>
+        <input type="number" id="equipment-cost" min="2000" value="8000" required>
       </label>
       <label>
         Транспорт (купівля/оренда) ($):
-        <input type="number" id="vehicle-cost" min="3000" step="1000" value="12000" required>
+        <input type="number" id="vehicle-cost" min="3000" value="12000" required>
       </label>
       <label>
         Початкові витратні матеріали ($):
-        <input type="number" id="supplies-cost" min="500" step="250" value="2000" required>
+        <input type="number" id="supplies-cost" min="500" value="2000" required>
       </label>
       <label>
         Додаткові витрати (ліцензії, страхування) ($):
-        <input type="number" id="additional-costs" min="1000" step="500" value="3000" required>
+        <input type="number" id="additional-costs" min="1000" value="3000" required>
       </label>
     </div>
 
@@ -164,23 +164,23 @@ faq:
       <h4>📊 Параметри послуг</h4>
       <label>
         Кількість регулярних клієнтів:
-        <input type="number" id="regular-clients" min="10" max="200" step="5" value="45" required>
+        <input type="number" id="regular-clients" min="10" max="200" value="45" required>
       </label>
       <label>
         Середня вартість послуги за годину ($):
-        <input type="number" id="hourly-rate" min="10" max="60" step="2" value="25" required>
+        <input type="number" id="hourly-rate" min="10" max="60" value="25" required>
       </label>
       <label>
         Середня кількість годин на клієнта:
-        <input type="number" id="hours-per-client" min="1" max="8" step="0.5" value="3" required>
+        <input type="number" id="hours-per-client" min="1" max="8" value="3" required>
       </label>
       <label>
         Частота обслуговування (разів на місяць):
-        <input type="number" id="service-frequency" min="1" max="20" step="1" value="4" required>
+        <input type="number" id="service-frequency" min="1" max="20" value="4" required>
       </label>
       <label>
         Додаткові разові замовлення на місяць:
-        <input type="number" id="one-time-jobs" min="5" max="50" step="5" value="15" required>
+        <input type="number" id="one-time-jobs" min="5" max="50" value="15" required>
       </label>
     </div>
 
@@ -188,23 +188,23 @@ faq:
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Зарплати співробітників ($):
-        <input type="number" id="staff-wages" min="1500" step="200" value="4500" required>
+        <input type="number" id="staff-wages" min="1500" value="4500" required>
       </label>
       <label>
         Витратні матеріали та хімія ($):
-        <input type="number" id="monthly-supplies" min="300" step="100" value="800" required>
+        <input type="number" id="monthly-supplies" min="300" value="800" required>
       </label>
       <label>
         Паливо та транспортні витрати ($):
-        <input type="number" id="transport-costs" min="200" step="50" value="500" required>
+        <input type="number" id="transport-costs" min="200" value="500" required>
       </label>
       <label>
         Маркетинг та реклама ($):
-        <input type="number" id="marketing-costs" min="100" step="50" value="400" required>
+        <input type="number" id="marketing-costs" min="100" value="400" required>
       </label>
       <label>
         Інші витрати (страхування, обслуговування) ($):
-        <input type="number" id="other-expenses" min="200" step="100" value="600" required>
+        <input type="number" id="other-expenses" min="200" value="600" required>
       </label>
     </div>
 

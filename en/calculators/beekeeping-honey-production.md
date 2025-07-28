@@ -103,7 +103,7 @@ seo:
 <form id="honey-production-form" autocomplete="off">
   <label>
     Number of Hives:
-    <input type="number" id="hive-count" min="1" step="1" required>
+    <input type="number" id="hive-count" min="1" required>
   </label>
   <label>
     Hive Age/Experience:
@@ -168,7 +168,7 @@ seo:
   </label>
   <label>
     Honey Price ($ per pound):
-    <input type="number" id="honey-price" min="0" step="0.50" value="12.00" required>
+    <input type="number" id="honey-price" min="0" value="12.00" required>
     <small>Local retail price for your honey</small>
   </label>
   <label>

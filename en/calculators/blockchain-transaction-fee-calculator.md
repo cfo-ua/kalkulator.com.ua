@@ -187,7 +187,7 @@ seo:
     
     <label>
       Transaction Amount (USD):
-      <input type="number" id="amount-usd" min="0" step="0.01" value="100">
+      <input type="number" id="amount-usd" min="0" value="100">
       <small>For fee percentage calculation</small>
     </label>
 

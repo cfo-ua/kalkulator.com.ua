@@ -35,11 +35,11 @@ faq:
 <form id="rectangle-form" autocomplete="off">
   <label>
     Сторона a:
-    <input type="number" id="rect-a" value="1" min="0" step="any" required>
+    <input type="number" id="rect-a" value="1" min="0" required>
   </label>
   <label>
     Сторона b:
-    <input type="number" id="rect-b" value="1" min="0" step="any" required>
+    <input type="number" id="rect-b" value="1" min="0" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

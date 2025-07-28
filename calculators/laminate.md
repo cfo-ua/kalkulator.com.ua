@@ -53,15 +53,15 @@ faq:
 <form id="laminate-form" autocomplete="off">
   <label>
     Площа кімнати (м²):
-    <input type="number" id="laminate-area" min="0" step="any" required>
+    <input type="number" id="laminate-area" min="0" required>
   </label>
   <label>
     Площа однієї упаковки ламінату (м²):
-    <input type="number" id="laminate-pack" min="0" step="any" required>
+    <input type="number" id="laminate-pack" min="0" required>
   </label>
   <label>
     Запас (%):
-    <input type="number" id="laminate-waste" min="0" step="any" value="7">
+    <input type="number" id="laminate-waste" min="0" value="7">
   </label>
   <button type="submit">Розрахувати</button>
 </form>

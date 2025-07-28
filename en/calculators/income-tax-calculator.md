@@ -165,34 +165,34 @@ faq:
       </select>
       
       <label for="age">Age</label>
-      <input type="number" id="age" value="35" min="18" max="100" step="1" required>
+      <input type="number" id="age" value="35" min="18" max="100" required>
       
       <label for="spouseAge">Spouse Age (if married)</label>
-      <input type="number" id="spouseAge" min="18" max="100" step="1" placeholder="Leave blank if not married">
+      <input type="number" id="spouseAge" min="18" max="100" placeholder="Leave blank if not married">
       
       <label for="dependents">Number of Dependents</label>
-      <input type="number" id="dependents" value="0" min="0" max="10" step="1" required>
+      <input type="number" id="dependents" value="0" min="0" max="10" required>
       
       <label for="qualifyingChildren">Qualifying Children (under 17)</label>
-      <input type="number" id="qualifyingChildren" value="0" min="0" max="10" step="1" required>
+      <input type="number" id="qualifyingChildren" value="0" min="0" max="10" required>
     </div>
     
     <div>
       <h4>💰 Income Information</h4>
       <label for="annualIncome">Annual Gross Income ($)</label>
-      <input type="number" id="annualIncome" value="75000" min="0" step="1000" required>
+      <input type="number" id="annualIncome" value="75000" min="0" required>
       
       <label for="spouseIncome">Spouse Income ($)</label>
-      <input type="number" id="spouseIncome" value="0" min="0" step="1000" placeholder="If married filing jointly">
+      <input type="number" id="spouseIncome" value="0" min="0" placeholder="If married filing jointly">
       
       <label for="otherIncome">Other Income ($)</label>
-      <input type="number" id="otherIncome" value="0" min="0" step="100" placeholder="Interest, dividends, etc.">
+      <input type="number" id="otherIncome" value="0" min="0" placeholder="Interest, dividends, etc.">
       
       <label for="selfEmploymentIncome">Self-Employment Income ($)</label>
-      <input type="number" id="selfEmploymentIncome" value="0" min="0" step="1000">
+      <input type="number" id="selfEmploymentIncome" value="0" min="0">
       
       <label for="capitalGains">Capital Gains ($)</label>
-      <input type="number" id="capitalGains" value="0" min="0" step="1000">
+      <input type="number" id="capitalGains" value="0" min="0">
     </div>
     
     <div>
@@ -223,16 +223,16 @@ faq:
       </select>
       
       <label for="federalWithheld">Federal Tax Withheld ($)</label>
-      <input type="number" id="federalWithheld" value="0" min="0" step="100">
+      <input type="number" id="federalWithheld" value="0" min="0">
       
       <label for="stateWithheld">State Tax Withheld ($)</label>
-      <input type="number" id="stateWithheld" value="0" min="0" step="100">
+      <input type="number" id="stateWithheld" value="0" min="0">
       
       <label for="socialSecurityWithheld">Social Security Withheld ($)</label>
-      <input type="number" id="socialSecurityWithheld" value="0" min="0" step="100">
+      <input type="number" id="socialSecurityWithheld" value="0" min="0">
       
       <label for="medicareWithheld">Medicare Withheld ($)</label>
-      <input type="number" id="medicareWithheld" value="0" min="0" step="100">
+      <input type="number" id="medicareWithheld" value="0" min="0">
     </div>
     
     <div>
@@ -245,19 +245,19 @@ faq:
       </select>
       
       <label for="saltDeduction">State/Local Tax Deduction ($)</label>
-      <input type="number" id="saltDeduction" value="0" min="0" max="10000" step="100" placeholder="Max $10,000">
+      <input type="number" id="saltDeduction" value="0" min="0" max="10000" placeholder="Max $10,000">
       
       <label for="mortgageInterest">Mortgage Interest ($)</label>
-      <input type="number" id="mortgageInterest" value="0" min="0" step="100">
+      <input type="number" id="mortgageInterest" value="0" min="0">
       
       <label for="charitableGiving">Charitable Donations ($)</label>
-      <input type="number" id="charitableGiving" value="0" min="0" step="100">
+      <input type="number" id="charitableGiving" value="0" min="0">
       
       <label for="retirementContributions">401k/IRA Contributions ($)</label>
-      <input type="number" id="retirementContributions" value="0" min="0" step="500">
+      <input type="number" id="retirementContributions" value="0" min="0">
       
       <label for="hsaContributions">HSA Contributions ($)</label>
-      <input type="number" id="hsaContributions" value="0" min="0" step="100">
+      <input type="number" id="hsaContributions" value="0" min="0">
     </div>
   </div>
   

@@ -30,15 +30,15 @@ faq:
 <form id="baseboard-form" autocomplete="off">
   <label>
     Довжина кімнати (м):
-    <input type="number" id="baseboard-length" min="0" step="any" required>
+    <input type="number" id="baseboard-length" min="0" required>
   </label>
   <label>
     Ширина кімнати (м):
-    <input type="number" id="baseboard-width" min="0" step="any" required>
+    <input type="number" id="baseboard-width" min="0" required>
   </label>
   <label>
     Загальна довжина дверей/проходів (м):
-    <input type="number" id="baseboard-doors" min="0" step="any" value="0">
+    <input type="number" id="baseboard-doors" min="0" value="0">
   </label>
   <button type="submit">Розрахувати</button>
 </form>

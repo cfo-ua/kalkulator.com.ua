@@ -160,7 +160,7 @@ faq:
 
     <label>
       Activity Level (1-10):
-      <input type="range" id="activity-level" min="1" max="10" value="5" step="1">
+      <input type="range" id="activity-level" min="1" max="10" value="5">
       <span id="activity-display">5 - Moderate</span>
     </label>
   </div>

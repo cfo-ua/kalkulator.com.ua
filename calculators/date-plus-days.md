@@ -56,7 +56,7 @@ faq:
   </label>
   <label>
     Кількість днів (може бути відʼємним):
-    <input type="number" id="day-offset" step="1" value="40" required>
+    <input type="number" id="day-offset" value="40" required>
   </label>
   <button type="submit">Обчислити дату</button>
 </form>

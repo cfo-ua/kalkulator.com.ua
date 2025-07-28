@@ -212,57 +212,57 @@ faq:
   </select>
 
   <label for="yearsInBusiness">Скільки років працює бізнес?</label>
-  <input type="number" id="yearsInBusiness" value="3" min="0" max="50" step="0.5" placeholder="Роки роботи">
+  <input type="number" id="yearsInBusiness" value="3" min="0" max="50" placeholder="Роки роботи">
 
   <label for="numberOfEmployees">Кількість співробітників</label>
-  <input type="number" id="numberOfEmployees" value="15" min="1" max="500" step="1" placeholder="Штатні та частково зайняті">
+  <input type="number" id="numberOfEmployees" value="15" min="1" max="500" placeholder="Штатні та частково зайняті">
 
   <h3>Фінансові показники (за останній рік)</h3>
 
   <label for="annualRevenue">Річний дохід</label>
-  <input type="number" id="annualRevenue" value="12000000" min="0" step="100000" placeholder="Валовий річний дохід">
+  <input type="number" id="annualRevenue" value="12000000" min="0" placeholder="Валовий річний дохід">
 
   <label for="costOfGoodsSold">Собівартість товарів/послуг</label>
-  <input type="number" id="costOfGoodsSold" value="7200000" min="0" step="50000" placeholder="Прямі витрати на виробництво">
+  <input type="number" id="costOfGoodsSold" value="7200000" min="0" placeholder="Прямі витрати на виробництво">
 
   <label for="operatingExpenses">Операційні витрати</label>
-  <input type="number" id="operatingExpenses" value="3600000" min="0" step="50000" placeholder="Зарплати, оренда, маркетинг, інше">
+  <input type="number" id="operatingExpenses" value="3600000" min="0" placeholder="Зарплати, оренда, маркетинг, інше">
 
   <label for="netProfit">Чистий прибуток</label>
-  <input type="number" id="netProfit" value="1200000" min="-1000000" step="50000" placeholder="Прибуток після всіх витрат та податків">
+  <input type="number" id="netProfit" value="1200000" min="-1000000" placeholder="Прибуток після всіх витрат та податків">
 
   <h3>Баланс та ліквідність</h3>
 
   <label for="currentAssets">Оборотні активи</label>
-  <input type="number" id="currentAssets" value="3000000" min="0" step="100000" placeholder="Готівка, дебіторка, запаси">
+  <input type="number" id="currentAssets" value="3000000" min="0" placeholder="Готівка, дебіторка, запаси">
 
   <label for="currentLiabilities">Поточні зобов'язання</label>
-  <input type="number" id="currentLiabilities" value="1500000" min="0" step="50000" placeholder="Кредиторка, короткострокові кредити">
+  <input type="number" id="currentLiabilities" value="1500000" min="0" placeholder="Кредиторка, короткострокові кредити">
 
   <label for="totalDebt">Загальна заборгованість</label>
-  <input type="number" id="totalDebt" value="2000000" min="0" step="100000" placeholder="Всі кредити та позики">
+  <input type="number" id="totalDebt" value="2000000" min="0" placeholder="Всі кредити та позики">
 
   <label for="totalEquity">Власний капітал</label>
-  <input type="number" id="totalEquity" value="5000000" min="0" step="100000" placeholder="Інвестиції засновників + нерозподілений прибуток">
+  <input type="number" id="totalEquity" value="5000000" min="0" placeholder="Інвестиції засновників + нерозподілений прибуток">
 
   <h3>Операційні показники</h3>
 
   <label for="averageTransactionValue">Середній чек</label>
-  <input type="number" id="averageTransactionValue" value="800" min="0" step="10" placeholder="Середня сума одної покупки">
+  <input type="number" id="averageTransactionValue" value="800" min="0" placeholder="Середня сума одної покупки">
 
   <label for="monthlyCustomers">Кількість клієнтів на місяць</label>
-  <input type="number" id="monthlyCustomers" value="1250" min="0" step="50" placeholder="Унікальні клієнти щомісячно">
+  <input type="number" id="monthlyCustomers" value="1250" min="0" placeholder="Унікальні клієнти щомісячно">
 
   <label for="customerRetentionRate">Утримання клієнтів (%)</label>
-  <input type="number" id="customerRetentionRate" value="75" min="0" max="100" step="5" placeholder="Відсоток клієнтів що повертаються">
+  <input type="number" id="customerRetentionRate" value="75" min="0" max="100" placeholder="Відсоток клієнтів що повертаються">
 
   <label for="inventoryTurnover">Оборотність запасів (разів на рік)</label>
-  <input type="number" id="inventoryTurnover" value="8" min="0" max="50" step="1" placeholder="Скільки разів обновлюються запаси">
+  <input type="number" id="inventoryTurnover" value="8" min="0" max="50" placeholder="Скільки разів обновлюються запаси">
 
   <h3>Ринкова позиція</h3>
 
   <label for="marketShare">Оцінка ринкової частки (%)</label>
-  <input type="number" id="marketShare" value="5" min="0" max="100" step="1" placeholder="Частка на локальному ринку">
+  <input type="number" id="marketShare" value="5" min="0" max="100" placeholder="Частка на локальному ринку">
 
   <label for="competitivePosition">Конкурентна позиція</label>
   <select id="competitivePosition">
@@ -274,7 +274,7 @@ faq:
   </select>
 
   <label for="customerSatisfaction">Задоволеність клієнтів (1-10)</label>
-  <input type="number" id="customerSatisfaction" value="8" min="1" max="10" step="1" placeholder="Оцінка якості обслуговування">
+  <input type="number" id="customerSatisfaction" value="8" min="1" max="10" placeholder="Оцінка якості обслуговування">
 
   <button type="submit">Оцінити здоров'я бізнесу</button>
 </form>

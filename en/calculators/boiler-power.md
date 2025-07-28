@@ -99,11 +99,11 @@ faq:
 <form id="boiler-power-form" autocomplete="off">
   <label>
     Home Area (sq ft):
-    <input type="number" id="boiler-area" min="0" step="any" required>
+    <input type="number" id="boiler-area" min="0" required>
   </label>
   <label>
     Average Ceiling Height (ft):
-    <input type="number" id="boiler-height" min="7" step="any" value="8" required>
+    <input type="number" id="boiler-height" min="7" value="8" required>
   </label>
   <label>
     Insulation Quality:

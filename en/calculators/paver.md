@@ -101,11 +101,11 @@ faq:
 <form id="paver-form" autocomplete="off">
   <label>
     Area Length (ft):
-    <input type="number" id="paver-length" min="0" step="any" required>
+    <input type="number" id="paver-length" min="0" required>
   </label>
   <label>
     Area Width (ft):
-    <input type="number" id="paver-width" min="0" step="any" required>
+    <input type="number" id="paver-width" min="0" required>
   </label>
   <label>
     Paver Size:

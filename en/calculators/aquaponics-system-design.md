@@ -125,7 +125,7 @@ seo:
   </label>
   <label>
     Available Space (square feet):
-    <input type="number" id="available-space" min="10" step="10" required>
+    <input type="number" id="available-space" min="10" required>
   </label>
   <label>
     Fish Species:
@@ -179,11 +179,11 @@ seo:
   </label>
   <label>
     Local Fish Price ($ per pound):
-    <input type="number" id="fish-price" min="0" step="0.50" value="8.00" required>
+    <input type="number" id="fish-price" min="0" value="8.00" required>
   </label>
   <label>
     Local Vegetable Price ($ per pound):
-    <input type="number" id="vegetable-price" min="0" step="0.50" value="4.00" required>
+    <input type="number" id="vegetable-price" min="0" value="4.00" required>
   </label>
   <button type="submit">Design Aquaponics System</button>
 </form>

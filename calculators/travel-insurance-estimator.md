@@ -77,13 +77,13 @@ seo:
   </select>
 
   <label for="duration">Тривалість поїздки (дні)</label>
-  <input type="number" id="duration" value="14" min="1" max="365" step="1" required>
+  <input type="number" id="duration" value="14" min="1" max="365" required>
 
   <label for="age">Вік мандрівника</label>
-  <input type="number" id="age" value="35" min="1" max="100" step="1" required>
+  <input type="number" id="age" value="35" min="1" max="100" required>
 
   <label for="tripValue">Загальна вартість поїздки (грн)</label>
-  <input type="number" id="tripValue" value="150000" min="3000" step="any" required>
+  <input type="number" id="tripValue" value="150000" min="3000" required>
 
   <label for="coverage">Рівень покриття</label>
   <select id="coverage" required>
@@ -100,7 +100,7 @@ seo:
   </select>
 
   <label for="travelers">Кількість мандрівників</label>
-  <input type="number" id="travelers" value="2" min="1" max="10" step="1" required>
+  <input type="number" id="travelers" value="2" min="1" max="10" required>
 
   <button type="submit">Розрахувати вартість страховки</button>
 </form>

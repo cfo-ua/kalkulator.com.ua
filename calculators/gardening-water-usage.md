@@ -50,7 +50,7 @@ seo:
     <div>
       <h4>🌱 Інформація про сад</h4>
       <label for="gardenArea">Площа саду (м²)</label>
-      <input type="number" id="gardenArea" value="50" min="1" max="10000" step="1" required>
+      <input type="number" id="gardenArea" value="50" min="1" max="10000" required>
       
       <label for="gardenType">Тип саду</label>
       <select id="gardenType" required>
@@ -129,10 +129,10 @@ seo:
       </select>
       
       <label for="irrigationEfficiency">Ефективність системи (%)</label>
-      <input type="number" id="irrigationEfficiency" value="75" min="50" max="95" step="5">
+      <input type="number" id="irrigationEfficiency" value="75" min="50" max="95">
       
       <label for="mulchCoverage">Покриття мульчею (%)</label>
-      <input type="number" id="mulchCoverage" value="50" min="0" max="100" step="10">
+      <input type="number" id="mulchCoverage" value="50" min="0" max="100">
       
       <label for="rainwaterCollection">Збір дощової води</label>
       <select id="rainwaterCollection">
@@ -154,16 +154,16 @@ seo:
       </select>
       
       <label for="averageTemp">Середня температура (°C)</label>
-      <input type="number" id="averageTemp" value="25" min="-10" max="40" step="1" required>
+      <input type="number" id="averageTemp" value="25" min="-10" max="40" required>
       
       <label for="humidity">Вологість повітря (%)</label>
-      <input type="number" id="humidity" value="60" min="20" max="90" step="5">
+      <input type="number" id="humidity" value="60" min="20" max="90">
       
       <label for="weeklyRainfall">Тижневі опади (мм)</label>
-      <input type="number" id="weeklyRainfall" value="10" min="0" max="100" step="1">
+      <input type="number" id="weeklyRainfall" value="10" min="0" max="100">
       
       <label for="waterCost">Вартість води (грн/м³)</label>
-      <input type="number" id="waterCost" value="25.50" min="5" max="100" step="0.10" required>
+      <input type="number" id="waterCost" value="25.50" min="5" max="100" required>
     </div>
   </div>
   

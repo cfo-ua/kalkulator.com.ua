@@ -117,19 +117,19 @@ faq:
   <h3>📱 Основні платформи</h3>
   
   <label for="instagramFollowers">Підписники Instagram</label>
-  <input type="number" id="instagramFollowers" value="15000" min="0" step="any">
+  <input type="number" id="instagramFollowers" value="15000" min="0">
 
   <label for="instagramEngagement">Рівень залученості Instagram (%)</label>
-  <input type="number" id="instagramEngagement" value="4.2" min="0" max="20" step="0.1">
+  <input type="number" id="instagramEngagement" value="4.2" min="0" max="20">
 
   <label for="tiktokFollowers">Підписники TikTok</label>
-  <input type="number" id="tiktokFollowers" value="25000" min="0" step="any">
+  <input type="number" id="tiktokFollowers" value="25000" min="0">
 
   <label for="tiktokEngagement">Рівень залученості TikTok (%)</label>
-  <input type="number" id="tiktokEngagement" value="8.5" min="0" max="30" step="0.1">
+  <input type="number" id="tiktokEngagement" value="8.5" min="0" max="30">
 
   <label for="telegramSubscribers">Підписники Telegram каналу</label>
-  <input type="number" id="telegramSubscribers" value="5000" min="0" step="any">
+  <input type="number" id="telegramSubscribers" value="5000" min="0">
 
   <h3>🎯 Контент та аудиторія</h3>
   
@@ -165,7 +165,7 @@ faq:
   <h3>💼 Монетизація</h3>
   
   <label for="monthlyPosts">Рекламних постів на місяць</label>
-  <input type="number" id="monthlyPosts" value="4" min="0" max="30" step="1">
+  <input type="number" id="monthlyPosts" value="4" min="0" max="30">
 
   <label for="affiliateActive">Афілійний маркетинг</label>
   <select id="affiliateActive">

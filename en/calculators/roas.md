@@ -123,10 +123,10 @@ faq:
 
 <form id="roas-form">
   <label for="adSpend">Advertising Spend</label>
-  <input type="number" id="adSpend" value="10000" min="0" step="any" required>
+  <input type="number" id="adSpend" value="10000" min="0" required>
 
   <label for="revenue">Revenue from Ads</label>
-  <input type="number" id="revenue" value="40000" min="0" step="any" required>
+  <input type="number" id="revenue" value="40000" min="0" required>
 
   <button type="submit">Calculate ROAS</button>
 </form>

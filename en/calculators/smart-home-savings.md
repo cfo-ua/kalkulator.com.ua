@@ -96,39 +96,39 @@ faq:
 <form id="smart-home-form">
   <h3>🏠 Current Home Details</h3>
   <label for="homeSize">Home Size (sq ft)</label>
-  <input type="number" id="homeSize" value="2000" min="500" max="10000" step="100" required>
+  <input type="number" id="homeSize" value="2000" min="500" max="10000" required>
 
   <label for="monthlyUtility">Monthly Utility Bill ($)</label>
-  <input type="number" id="monthlyUtility" value="180" min="50" step="any" required>
+  <input type="number" id="monthlyUtility" value="180" min="50" required>
 
   <label for="energyRate">Energy Rate ($/kWh)</label>
-  <input type="number" id="energyRate" value="0.13" min="0.05" max="0.50" step="0.01" required>
+  <input type="number" id="energyRate" value="0.13" min="0.05" max="0.50" required>
 
   <h3>🔧 Smart Device Investments</h3>
   <label for="thermostatCost">Smart Thermostat Cost ($)</label>
-  <input type="number" id="thermostatCost" value="250" min="0" step="any">
+  <input type="number" id="thermostatCost" value="250" min="0">
 
   <label for="lightingCost">Smart Lighting Package ($)</label>
-  <input type="number" id="lightingCost" value="400" min="0" step="any">
+  <input type="number" id="lightingCost" value="400" min="0">
 
   <label for="securityCost">Security System ($)</label>
-  <input type="number" id="securityCost" value="600" min="0" step="any">
+  <input type="number" id="securityCost" value="600" min="0">
 
   <label for="plugsCost">Smart Plugs/Switches ($)</label>
-  <input type="number" id="plugsCost" value="200" min="0" step="any">
+  <input type="number" id="plugsCost" value="200" min="0">
 
   <label for="waterCost">Water Management ($)</label>
-  <input type="number" id="waterCost" value="300" min="0" step="any">
+  <input type="number" id="waterCost" value="300" min="0">
 
   <h3>📊 Savings Expectations</h3>
   <label for="energySavingsPercent">Expected Energy Savings (%)</label>
-  <input type="number" id="energySavingsPercent" value="18" min="0" max="50" step="1" required>
+  <input type="number" id="energySavingsPercent" value="18" min="0" max="50" required>
 
   <label for="insuranceDiscount">Insurance Discount (%)</label>
-  <input type="number" id="insuranceDiscount" value="5" min="0" max="20" step="1">
+  <input type="number" id="insuranceDiscount" value="5" min="0" max="20">
 
   <label for="annualInsurance">Annual Insurance Cost ($)</label>
-  <input type="number" id="annualInsurance" value="1200" min="200" step="any">
+  <input type="number" id="annualInsurance" value="1200" min="200">
 
   <button type="submit">Calculate Smart Home ROI</button>
 </form>

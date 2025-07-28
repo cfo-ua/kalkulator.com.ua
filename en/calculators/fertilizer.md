@@ -84,7 +84,7 @@ seo:
 <form id="fertilizer-form" autocomplete="off">
   <label>
     Area to Fertilize (sq ft):
-    <input type="number" id="fertilizer-area" min="0" step="any" required>
+    <input type="number" id="fertilizer-area" min="0" required>
   </label>
   <label>
     Plant Type:

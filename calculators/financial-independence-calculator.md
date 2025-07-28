@@ -194,13 +194,13 @@ faq:
     <input type="number" id="current-age" min="18" max="80" value="30" required>
     
     <label for="current-savings">Поточні накопичення (USD):</label>
-    <input type="number" id="current-savings" min="0" step="1000" value="10000" required>
+    <input type="number" id="current-savings" min="0" value="10000" required>
     
     <label for="monthly-income">Щомісячний дохід (USD):</label>
-    <input type="number" id="monthly-income" min="0" step="500" value="2000" required>
+    <input type="number" id="monthly-income" min="0" value="2000" required>
     
     <label for="monthly-expenses">Щомісячні витрати (USD):</label>
-    <input type="number" id="monthly-expenses" min="0" step="100" value="1200" required>
+    <input type="number" id="monthly-expenses" min="0" value="1200" required>
   </div>
 
   <div class="form-section">
@@ -215,7 +215,7 @@ faq:
     </select>
     
     <label for="retirement-expenses">Планові місячні витрати на пенсії (USD):</label>
-    <input type="number" id="retirement-expenses" min="0" step="100" value="1500" required>
+    <input type="number" id="retirement-expenses" min="0" value="1500" required>
     
     <label for="target-age">Цільовий вік для FIRE:</label>
     <input type="number" id="target-age" min="30" max="70" value="50" required>
@@ -232,27 +232,27 @@ faq:
     </select>
     
     <label for="withdrawal-rate">Ставка виведення (%): </label>
-    <input type="number" id="withdrawal-rate" min="2" max="6" step="0.1" value="4" required>
+    <input type="number" id="withdrawal-rate" min="2" max="6" value="4" required>
     <small>Класичне правило — 4%, консервативне — 3-3.5%</small>
     
     <label for="inflation-rate">Очікувана інфляція (%):</label>
-    <input type="number" id="inflation-rate" min="0" max="20" step="0.5" value="8" required>
+    <input type="number" id="inflation-rate" min="0" max="20" value="8" required>
   </div>
 
   <div class="form-section">
     <h3>💼 Додаткові параметри</h3>
     
     <label for="income-growth">Річне зростання доходу (%):</label>
-    <input type="number" id="income-growth" min="0" max="20" step="0.5" value="5" required>
+    <input type="number" id="income-growth" min="0" max="20" value="5" required>
     
     <label for="savings-rate">Ставка заощаджень (% від доходу):</label>
-    <input type="number" id="savings-rate" min="5" max="80" step="1" value="30" required>
+    <input type="number" id="savings-rate" min="5" max="80" value="30" required>
     
     <label for="pension-age">Вік отримання пенсії:</label>
     <input type="number" id="pension-age" min="55" max="70" value="60" required>
     
     <label for="expected-pension">Очікувана пенсія (USD/місяць):</label>
-    <input type="number" id="expected-pension" min="0" step="50" value="300" required>
+    <input type="number" id="expected-pension" min="0" value="300" required>
   </div>
 
   <button type="submit">🎯 Розрахувати FIRE план</button>

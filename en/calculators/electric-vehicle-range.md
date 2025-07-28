@@ -129,19 +129,19 @@ seo:
       </select>
       
       <label for="batteryCapacity">Battery Capacity (kWh)</label>
-      <input type="number" id="batteryCapacity" value="75" min="20" max="200" step="1" required>
+      <input type="number" id="batteryCapacity" value="75" min="20" max="200" required>
       
       <label for="epaRange">EPA Range (miles)</label>
-      <input type="number" id="epaRange" value="326" min="50" max="600" step="1" required>
+      <input type="number" id="epaRange" value="326" min="50" max="600" required>
       
       <label for="currentBattery">Current Battery Level (%)</label>
-      <input type="number" id="currentBattery" value="90" min="0" max="100" step="1" required>
+      <input type="number" id="currentBattery" value="90" min="0" max="100" required>
     </div>
     
     <div>
       <h4>🌡️ Environmental Conditions</h4>
       <label for="outsideTemperature">Outside Temperature (°F)</label>
-      <input type="number" id="outsideTemperature" value="70" min="-20" max="120" step="1" required>
+      <input type="number" id="outsideTemperature" value="70" min="-20" max="120" required>
       
       <label for="weatherCondition">Weather Conditions</label>
       <select id="weatherCondition">
@@ -172,7 +172,7 @@ seo:
       </select>
       
       <label for="averageSpeed">Average Speed (mph)</label>
-      <input type="number" id="averageSpeed" value="45" min="15" max="85" step="1" required>
+      <input type="number" id="averageSpeed" value="45" min="15" max="85" required>
       
       <label for="drivingStyle">Driving Style</label>
       <select id="drivingStyle">
@@ -200,10 +200,10 @@ seo:
       </select>
       
       <label for="passengerCount">Number of Passengers</label>
-      <input type="number" id="passengerCount" value="2" min="1" max="8" step="1" required>
+      <input type="number" id="passengerCount" value="2" min="1" max="8" required>
       
       <label for="cargoWeight">Cargo Weight (lbs)</label>
-      <input type="number" id="cargoWeight" value="50" min="0" max="2000" step="10" required>
+      <input type="number" id="cargoWeight" value="50" min="0" max="2000" required>
       
       <label for="preconditioning">Battery Preconditioning</label>
       <select id="preconditioning">
@@ -218,15 +218,15 @@ seo:
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
       <div>
         <label for="electricityRate">Electricity Rate ($/kWh)</label>
-        <input type="number" id="electricityRate" value="0.13" min="0.05" max="0.50" step="0.01" required>
+        <input type="number" id="electricityRate" value="0.13" min="0.05" max="0.50" required>
       </div>
       <div>
         <label for="chargingEfficiency">Charging Efficiency (%)</label>
-        <input type="number" id="chargingEfficiency" value="90" min="70" max="98" step="1" required>
+        <input type="number" id="chargingEfficiency" value="90" min="70" max="98" required>
       </div>
       <div>
         <label for="targetChargeLevel">Target Charge Level (%)</label>
-        <input type="number" id="targetChargeLevel" value="80" min="50" max="100" step="5" required>
+        <input type="number" id="targetChargeLevel" value="80" min="50" max="100" required>
       </div>
     </div>
   </div>

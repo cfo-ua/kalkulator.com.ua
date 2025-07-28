@@ -32,11 +32,11 @@ faq:
 <form id="room-area-form" autocomplete="off">
   <label>
     Довжина кімнати (м):
-    <input type="number" id="room-length" min="0" step="any" required>
+    <input type="number" id="room-length" min="0" required>
   </label>
   <label>
     Ширина кімнати (м):
-    <input type="number" id="room-width" min="0" step="any" required>
+    <input type="number" id="room-width" min="0" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

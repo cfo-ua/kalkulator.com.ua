@@ -109,10 +109,10 @@ faq:
     <div>
       <h4>🏠 Room Dimensions</h4>
       <label for="roomLength">Room Length (feet)</label>
-      <input type="number" id="roomLength" value="20" min="8" max="50" step="0.5" required>
+      <input type="number" id="roomLength" value="20" min="8" max="50" required>
       
       <label for="roomWidth">Room Width (feet)</label>
-      <input type="number" id="roomWidth" value="12" min="8" max="50" step="0.5" required>
+      <input type="number" id="roomWidth" value="12" min="8" max="50" required>
     </div>
     
     <div>

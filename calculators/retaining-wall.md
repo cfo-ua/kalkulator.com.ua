@@ -110,11 +110,11 @@ faq:
 <form id="retaining-wall-form" autocomplete="off">
   <label>
     Довжина стіни (м):
-    <input type="number" id="wall-length" min="0" step="any" placeholder="напр. 15" required>
+    <input type="number" id="wall-length" min="0" placeholder="напр. 15" required>
   </label>
   <label>
     Висота стіни (м):
-    <input type="number" id="wall-height" min="0" step="any" placeholder="напр. 1.2" required>
+    <input type="number" id="wall-height" min="0" placeholder="напр. 1.2" required>
   </label>
   <label>
     Тип блоків:

@@ -84,16 +84,16 @@ seo:
       </select>
       
       <label for="customSpacing">Власна відстань (см)</label>
-      <input type="number" id="customSpacing" min="1" max="200" step="1" placeholder="Для 'Інша рослина'">
+      <input type="number" id="customSpacing" min="1" max="200" placeholder="Для 'Інша рослина'">
     </div>
     
     <div>
       <h4>📐 Параметри саду</h4>
       <label for="gardenLength">Довжина ділянки (м)</label>
-      <input type="number" id="gardenLength" value="5" min="0.5" max="100" step="0.1" required>
+      <input type="number" id="gardenLength" value="5" min="0.5" max="100" required>
       
       <label for="gardenWidth">Ширина ділянки (м)</label>
-      <input type="number" id="gardenWidth" value="3" min="0.5" max="100" step="0.1" required>
+      <input type="number" id="gardenWidth" value="3" min="0.5" max="100" required>
       
       <label for="spacingPattern">Схема посадки</label>
       <select id="spacingPattern" required>
@@ -104,7 +104,7 @@ seo:
       </select>
       
       <label for="pathWidth">Ширина доріжок (см)</label>
-      <input type="number" id="pathWidth" value="50" min="20" max="100" step="5">
+      <input type="number" id="pathWidth" value="50" min="20" max="100">
     </div>
     
     <div>

@@ -94,7 +94,7 @@ faq:
 <form id="renovation-cost-form" autocomplete="off">
   <label>
     Renovation Area (sq ft):
-    <input type="number" id="renovation-area" min="0" step="any" required>
+    <input type="number" id="renovation-area" min="0" required>
   </label>
   <label>
     Renovation Type:
@@ -111,7 +111,7 @@ faq:
   </label>
   <label id="custom-price-label" style="display: none;">
     Cost per Square Foot ($):
-    <input type="number" id="renovation-price" min="0" step="any">
+    <input type="number" id="renovation-price" min="0">
   </label>
   <button type="submit">Calculate Cost</button>
 </form>

@@ -96,13 +96,13 @@ faq:
         <input type="text" id="debt1-name" value="Credit Card 1" required>
         
         <label for="debt1-balance">Current Balance ($):</label>
-        <input type="number" id="debt1-balance" min="0" step="0.01" value="5000" required>
+        <input type="number" id="debt1-balance" min="0" value="5000" required>
         
         <label for="debt1-rate">Interest Rate (% annual):</label>
-        <input type="number" id="debt1-rate" min="0" max="50" step="0.01" value="18.99" required>
+        <input type="number" id="debt1-rate" min="0" max="50" value="18.99" required>
         
         <label for="debt1-minimum">Minimum Payment ($):</label>
-        <input type="number" id="debt1-minimum" min="0" step="0.01" value="100" required>
+        <input type="number" id="debt1-minimum" min="0" value="100" required>
       </div>
     </div>
     
@@ -113,7 +113,7 @@ faq:
   <div class="form-section">
     <h3>Payment Strategy</h3>
     <label for="extra-payment">Additional Monthly Payment Available ($):</label>
-    <input type="number" id="extra-payment" min="0" step="0.01" value="200" required>
+    <input type="number" id="extra-payment" min="0" value="200" required>
     
     <label for="strategy-preference">Your Preference:</label>
     <select id="strategy-preference">

@@ -175,7 +175,7 @@ seo:
 
     <label>
       Success Probability Required:
-      <input type="range" id="success-probability" min="50" max="99" value="95" step="5">
+      <input type="range" id="success-probability" min="50" max="99" value="95">
       <span id="success-display">95%</span>
     </label>
   </div>

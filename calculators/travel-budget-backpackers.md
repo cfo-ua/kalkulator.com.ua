@@ -55,45 +55,45 @@ seo:
   <div class="form-section">
     <h3>Деталі поїздки</h3>
     <label for="trip-duration">Тривалість поїздки (дні):</label>
-    <input type="number" id="trip-duration" min="1" step="1" value="30" required>
+    <input type="number" id="trip-duration" min="1" value="30" required>
     
     <label for="travelers">Кількість мандрівників:</label>
-    <input type="number" id="travelers" min="1" step="1" value="1" required>
+    <input type="number" id="travelers" min="1" value="1" required>
   </div>
 
   <div class="form-section">
     <h3>Щоденні витрати (на особу в грн)</h3>
     
     <label for="accommodation">Проживання (хостели/бюджетні готелі):</label>
-    <input type="number" id="accommodation" min="0" step="0.01" value="450" required>
+    <input type="number" id="accommodation" min="0" value="450" required>
     
     <label for="food">Їжа та напої:</label>
-    <input type="number" id="food" min="0" step="0.01" value="300" required>
+    <input type="number" id="food" min="0" value="300" required>
     
     <label for="transport">Місцевий транспорт:</label>
-    <input type="number" id="transport" min="0" step="0.01" value="150" required>
+    <input type="number" id="transport" min="0" value="150" required>
     
     <label for="activities">Активності та огляд визначних місць:</label>
-    <input type="number" id="activities" min="0" step="0.01" value="240" required>
+    <input type="number" id="activities" min="0" value="240" required>
     
     <label for="miscellaneous">Різне (пральня, SIM тощо):</label>
-    <input type="number" id="miscellaneous" min="0" step="0.01" value="90" required>
+    <input type="number" id="miscellaneous" min="0" value="90" required>
   </div>
 
   <div class="form-section">
     <h3>Додаткові витрати</h3>
     
     <label for="flights">Міжнародні авіаквитки (загалом):</label>
-    <input type="number" id="flights" min="0" step="0.01" value="24000" required>
+    <input type="number" id="flights" min="0" value="24000" required>
     
     <label for="visas">Візи та туристична страховка:</label>
-    <input type="number" id="visas" min="0" step="0.01" value="3000" required>
+    <input type="number" id="visas" min="0" value="3000" required>
     
     <label for="gear">Туристичне спорядження та обладнання:</label>
-    <input type="number" id="gear" min="0" step="0.01" value="6000" required>
+    <input type="number" id="gear" min="0" value="6000" required>
     
     <label for="emergency-buffer">Аварійний буфер (%):</label>
-    <input type="number" id="emergency-buffer" min="0" max="50" step="1" value="20" required>
+    <input type="number" id="emergency-buffer" min="0" max="50" value="20" required>
   </div>
 
   <button type="submit">Розрахувати бюджет подорожі</button>

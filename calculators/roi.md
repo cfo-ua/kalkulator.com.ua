@@ -41,10 +41,10 @@ faq:
 
 <form id="roi-form">
   <label for="investment">Сума інвестицій</label>
-  <input type="number" id="investment" value="100000" min="0" step="any" required>
+  <input type="number" id="investment" value="100000" min="0" required>
 
   <label for="profit">Чистий прибуток від інвестиції</label>
-  <input type="number" id="profit" value="150000" min="0" step="any" required>
+  <input type="number" id="profit" value="150000" min="0" required>
 
   <button type="submit">Розрахувати ROI</button>
 </form>

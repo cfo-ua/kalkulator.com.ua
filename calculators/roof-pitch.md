@@ -117,17 +117,17 @@ faq:
 <form id="roof-pitch-form" autocomplete="off">
   <label>
     Довжина прогону (м):
-    <input type="number" id="roof-run" min="0" step="0.1" value="10" required>
+    <input type="number" id="roof-run" min="0" value="10" required>
     <small>Горизонтальна відстань від карнизу до коника</small>
   </label>
   <label>
     Висота підйому (м):
-    <input type="number" id="roof-rise" min="0" step="0.1" value="3" required>
+    <input type="number" id="roof-rise" min="0" value="3" required>
     <small>Вертикальна відстань від карнизу до коника</small>
   </label>
   <label>
     Довжина будинку (м):
-    <input type="number" id="roof-length" min="0" step="0.1" value="12" required>
+    <input type="number" id="roof-length" min="0" value="12" required>
     <small>Довжина будинку вздовж коника</small>
   </label>
   <label>

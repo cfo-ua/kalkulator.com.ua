@@ -49,13 +49,13 @@ seo:
 <form id="podcast-growth-form">
   <h3>🎙️ Поточний статус подкасту</h3>
   <label for="currentListeners">Поточна кількість щомісячних слухачів</label>
-  <input type="number" id="currentListeners" value="150" min="0" step="any" required>
+  <input type="number" id="currentListeners" value="150" min="0" required>
 
   <label for="monthsActive">Місяців з моменту запуску</label>
-  <input type="number" id="monthsActive" value="3" min="0" max="60" step="1" required>
+  <input type="number" id="monthsActive" value="3" min="0" max="60" required>
 
   <label for="episodesPublished">Загальна кількість опублікованих епізодів</label>
-  <input type="number" id="episodesPublished" value="12" min="0" step="1" required>
+  <input type="number" id="episodesPublished" value="12" min="0" required>
 
   <h3>📅 Контент-стратегія</h3>
   <label for="publishingFrequency">Розклад публікації</label>
@@ -85,7 +85,7 @@ seo:
 
   <h3>📈 Маркетинг та просування</h3>
   <label for="marketingBudget">Щомісячний маркетинговий бюджет ($)</label>
-  <input type="number" id="marketingBudget" value="200" min="0" step="any">
+  <input type="number" id="marketingBudget" value="200" min="0">
 
   <label for="socialMediaEffort">Зусилля в соціальних мережах</label>
   <select id="socialMediaEffort" required>
@@ -113,7 +113,7 @@ seo:
   </select>
 
   <label for="projectionMonths">Період прогнозування зростання (місяці)</label>
-  <input type="number" id="projectionMonths" value="12" min="3" max="36" step="1" required>
+  <input type="number" id="projectionMonths" value="12" min="3" max="36" required>
 
   <button type="submit">Прогнозувати зростання подкасту</button>
 </form>

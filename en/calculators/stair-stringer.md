@@ -91,17 +91,17 @@ faq:
 <form id="stair-stringer-form" autocomplete="off">
   <label>
     Total Rise (inches):
-    <input type="number" id="stringer-total-rise" min="0" step="any" required>
+    <input type="number" id="stringer-total-rise" min="0" required>
     <small>Vertical distance from bottom to top</small>
   </label>
   <label>
     Total Run (inches):
-    <input type="number" id="stringer-total-run" min="0" step="any" required>
+    <input type="number" id="stringer-total-run" min="0" required>
     <small>Horizontal distance available</small>
   </label>
   <label>
     Stair Width (inches):
-    <input type="number" id="stringer-width" min="24" max="120" step="any" value="36" required>
+    <input type="number" id="stringer-width" min="24" max="120" value="36" required>
     <small>Width of staircase</small>
   </label>
   <label>

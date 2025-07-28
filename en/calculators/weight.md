@@ -69,7 +69,7 @@ faq:
 <form id="weight-form" autocomplete="off">
   <label>
     Mass of object (kg):
-    <input type="number" id="weight-m" min="0" step="any" value="1" required>
+    <input type="number" id="weight-m" min="0" value="1" required>
   </label>
   <button type="submit">Calculate</button>
 </form>

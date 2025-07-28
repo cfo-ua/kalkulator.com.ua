@@ -129,58 +129,58 @@ faq:
       </select>
       
       <label for="ratedPower">Номінальна потужність панелі (Вт)</label>
-      <input type="number" id="ratedPower" value="400" min="100" max="1000" step="10" required>
+      <input type="number" id="ratedPower" value="400" min="100" max="1000" required>
       
       <label for="panelEfficiency">Ефективність панелі (%)</label>
-      <input type="number" id="panelEfficiency" value="20" min="10" max="26" step="0.1" required>
+      <input type="number" id="panelEfficiency" value="20" min="10" max="26" required>
       
       <label for="panelArea">Площа панелі (м²)</label>
-      <input type="number" id="panelArea" value="2" min="1" max="5" step="0.1" required>
+      <input type="number" id="panelArea" value="2" min="1" max="5" required>
     </div>
     
     <div>
       <h4>🌍 Екологічні умови</h4>
       <label for="averageIrradiance">Середня сонячна освітленість (Вт/м²)</label>
-      <input type="number" id="averageIrradiance" value="800" min="200" max="1200" step="10" required>
+      <input type="number" id="averageIrradiance" value="800" min="200" max="1200" required>
       
       <label for="averageTemperature">Середня температура панелі (°C)</label>
-      <input type="number" id="averageTemperature" value="45" min="0" max="80" step="1" required>
+      <input type="number" id="averageTemperature" value="45" min="0" max="80" required>
       
       <label for="tempCoefficient">Температурний коефіцієнт (%/°C)</label>
-      <input type="number" id="tempCoefficient" value="-0.4" min="-0.8" max="-0.2" step="0.05" required>
+      <input type="number" id="tempCoefficient" value="-0.4" min="-0.8" max="-0.2" required>
       
       <label for="peakSunHours">Години пікового сонця на день</label>
-      <input type="number" id="peakSunHours" value="4.5" min="2" max="8" step="0.1" required>
+      <input type="number" id="peakSunHours" value="4.5" min="2" max="8" required>
     </div>
     
     <div>
       <h4>📐 Параметри установки</h4>
       <label for="tiltAngle">Кут нахилу панелі (градуси)</label>
-      <input type="number" id="tiltAngle" value="35" min="0" max="90" step="1" required>
+      <input type="number" id="tiltAngle" value="35" min="0" max="90" required>
       
       <label for="azimuthAngle">Азимутний кут (градуси від півдня)</label>
-      <input type="number" id="azimuthAngle" value="0" min="-180" max="180" step="5" required>
+      <input type="number" id="azimuthAngle" value="0" min="-180" max="180" required>
       
       <label for="shadingLoss">Втрати від затінення (%)</label>
-      <input type="number" id="shadingLoss" value="5" min="0" max="50" step="1" required>
+      <input type="number" id="shadingLoss" value="5" min="0" max="50" required>
       
       <label for="inverterEfficiency">Ефективність інвертора (%)</label>
-      <input type="number" id="inverterEfficiency" value="96" min="90" max="99" step="0.5" required>
+      <input type="number" id="inverterEfficiency" value="96" min="90" max="99" required>
     </div>
     
     <div>
       <h4>📊 Аналіз ефективності</h4>
       <label for="systemAge">Вік системи (років)</label>
-      <input type="number" id="systemAge" value="0" min="0" max="30" step="1" required>
+      <input type="number" id="systemAge" value="0" min="0" max="30" required>
       
       <label for="degradationRate">Річна швидкість деградації (%)</label>
-      <input type="number" id="degradationRate" value="0.6" min="0.3" max="1.2" step="0.1" required>
+      <input type="number" id="degradationRate" value="0.6" min="0.3" max="1.2" required>
       
       <label for="analysisYears">Період аналізу (років)</label>
-      <input type="number" id="analysisYears" value="25" min="1" max="30" step="1" required>
+      <input type="number" id="analysisYears" value="25" min="1" max="30" required>
       
       <label for="electricityRate">Тариф на електроенергію (грн/кВтг)</label>
-      <input type="number" id="electricityRate" value="4.32" min="2.00" max="12.00" step="0.10" required>
+      <input type="number" id="electricityRate" value="4.32" min="2.00" max="12.00" required>
     </div>
   </div>
   

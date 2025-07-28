@@ -210,25 +210,25 @@ seo:
     
     <label>
       Active Power Consumption (mW):
-      <input type="number" id="active-power" min="0.1" max="100000" step="0.1" value="100">
+      <input type="number" id="active-power" min="0.1" max="100000" value="100">
       <small>Power when device is actively working</small>
     </label>
 
     <label>
       Sleep Power Consumption (mW):
-      <input type="number" id="sleep-power" min="0.001" max="1000" step="0.001" value="1">
+      <input type="number" id="sleep-power" min="0.001" max="1000" value="1">
       <small>Power when device is in sleep mode</small>
     </label>
 
     <label>
       Transmission Power (mW):
-      <input type="number" id="transmission-power" min="1" max="5000" step="1" value="200">
+      <input type="number" id="transmission-power" min="1" max="5000" value="200">
       <small>Additional power during data transmission</small>
     </label>
 
     <label>
       Duty Cycle (%):
-      <input type="range" id="duty-cycle" min="0.1" max="100" value="5" step="0.1">
+      <input type="range" id="duty-cycle" min="0.1" max="100" value="5">
       <span id="duty-display">5%</span>
       <small>Percentage of time device is active</small>
     </label>
@@ -253,7 +253,7 @@ seo:
 
     <label>
       Transmission Duration (seconds):
-      <input type="number" id="transmission-duration" min="0.1" max="300" step="0.1" value="2">
+      <input type="number" id="transmission-duration" min="0.1" max="300" value="2">
       <small>How long each transmission takes</small>
     </label>
 
@@ -265,7 +265,7 @@ seo:
 
     <label>
       Operating Hours per Day:
-      <input type="range" id="operating-hours" min="1" max="24" value="24" step="1">
+      <input type="range" id="operating-hours" min="1" max="24" value="24">
       <span id="hours-display">24</span> hours
     </label>
   </div>
@@ -281,23 +281,23 @@ seo:
 
     <label>
       Battery Voltage (V):
-      <input type="number" id="battery-voltage" min="1" max="48" step="0.1" value="3.7">
+      <input type="number" id="battery-voltage" min="1" max="48" value="3.7">
     </label>
 
     <label>
       Electricity Rate ($/kWh):
-      <input type="number" id="electricity-rate" min="0.01" max="1" step="0.01" value="0.12">
+      <input type="number" id="electricity-rate" min="0.01" max="1" value="0.12">
     </label>
 
     <label>
       Battery Cost ($):
-      <input type="number" id="battery-cost" min="0" max="200" step="0.01" value="10">
+      <input type="number" id="battery-cost" min="0" max="200" value="10">
       <small>Cost to replace battery</small>
     </label>
 
     <label>
       Ambient Temperature (°C):
-      <input type="range" id="temperature" min="-20" max="60" value="20" step="1">
+      <input type="range" id="temperature" min="-20" max="60" value="20">
       <span id="temp-display">20°C</span>
       <small>Affects battery performance</small>
     </label>

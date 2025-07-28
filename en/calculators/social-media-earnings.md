@@ -107,25 +107,25 @@ faq:
 <form id="social-media-form">
   <h3>📱 Platform Followers & Engagement</h3>
   <label for="tiktokFollowers">TikTok Followers</label>
-  <input type="number" id="tiktokFollowers" value="75000" min="0" step="any">
+  <input type="number" id="tiktokFollowers" value="75000" min="0">
   
   <label for="tiktokEngagement">TikTok Engagement Rate (%)</label>
-  <input type="number" id="tiktokEngagement" value="6.5" min="0" max="20" step="0.1">
+  <input type="number" id="tiktokEngagement" value="6.5" min="0" max="20">
 
   <label for="instagramFollowers">Instagram Followers</label>
-  <input type="number" id="instagramFollowers" value="45000" min="0" step="any">
+  <input type="number" id="instagramFollowers" value="45000" min="0">
   
   <label for="instagramEngagement">Instagram Engagement Rate (%)</label>
-  <input type="number" id="instagramEngagement" value="4.2" min="0" max="20" step="0.1">
+  <input type="number" id="instagramEngagement" value="4.2" min="0" max="20">
 
   <label for="youtubeSubscribers">YouTube Subscribers</label>
-  <input type="number" id="youtubeSubscribers" value="15000" min="0" step="any">
+  <input type="number" id="youtubeSubscribers" value="15000" min="0">
   
   <label for="youtubeEngagement">YouTube Engagement Rate (%)</label>
-  <input type="number" id="youtubeEngagement" value="5.8" min="0" max="20" step="0.1">
+  <input type="number" id="youtubeEngagement" value="5.8" min="0" max="20">
 
   <label for="twitterFollowers">Twitter/X Followers</label>
-  <input type="number" id="twitterFollowers" value="12000" min="0" step="any">
+  <input type="number" id="twitterFollowers" value="12000" min="0">
 
   <h3>🎯 Content & Audience</h3>
   <label for="contentNiche">Content Niche</label>
@@ -159,10 +159,10 @@ faq:
 
   <h3>📊 Current Monetization</h3>
   <label for="monthlySponsored">Monthly Sponsored Posts</label>
-  <input type="number" id="monthlySponsored" value="4" min="0" max="50" step="1">
+  <input type="number" id="monthlySponsored" value="4" min="0" max="50">
 
   <label for="avgSponsoredRate">Average Sponsored Post Rate ($)</label>
-  <input type="number" id="avgSponsoredRate" value="800" min="0" step="any">
+  <input type="number" id="avgSponsoredRate" value="800" min="0">
 
   <label for="affiliateEnabled">Affiliate Marketing</label>
   <select id="affiliateEnabled">
@@ -178,10 +178,10 @@ faq:
 
   <h3>📈 Growth & Strategy</h3>
   <label for="postsPerWeek">Total Posts per Week (All Platforms)</label>
-  <input type="number" id="postsPerWeek" value="14" min="1" max="50" step="1" required>
+  <input type="number" id="postsPerWeek" value="14" min="1" max="50" required>
 
   <label for="growthRate">Monthly Follower Growth Rate (%)</label>
-  <input type="number" id="growthRate" value="12" min="0" max="100" step="1" required>
+  <input type="number" id="growthRate" value="12" min="0" max="100" required>
 
   <button type="submit">Calculate Social Media Earnings</button>
 </form>

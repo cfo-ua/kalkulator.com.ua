@@ -54,19 +54,19 @@ faq:
 <form id="markup-margin-form" autocomplete="off">
   <label>
     Собівартість (Cost):
-    <input type="number" id="cost" step="any" min="0">
+    <input type="number" id="cost" min="0">
   </label>
   <label>
     Ціна продажу (Price):
-    <input type="number" id="price" step="any" min="0">
+    <input type="number" id="price" min="0">
   </label>
   <label>
     Маржа (%):
-    <input type="number" id="margin" step="any" min="0" max="100">
+    <input type="number" id="margin" min="0" max="100">
   </label>
   <label>
     Націнка (%):
-    <input type="number" id="markup" step="any" min="0">
+    <input type="number" id="markup" min="0">
   </label>
   <button type="submit">Розрахувати</button>
 </form>

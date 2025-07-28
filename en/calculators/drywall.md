@@ -125,7 +125,7 @@ faq:
 <form id="drywall-form" autocomplete="off">
   <label>
     Total Wall Area (sq ft):
-    <input type="number" id="drywall-walls" min="0" step="any" required>
+    <input type="number" id="drywall-walls" min="0" required>
     <small>Length × height of all walls to cover</small>
   </label>
   <label>

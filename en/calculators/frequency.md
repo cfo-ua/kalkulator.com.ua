@@ -64,11 +64,11 @@ faq:
 <form id="frequency-form" autocomplete="off">
   <label>
     Period (T, s):
-    <input type="number" id="freq-t" min="0" step="any">
+    <input type="number" id="freq-t" min="0">
   </label>
   <label>
     Frequency (f, Hz):
-    <input type="number" id="freq-f" min="0" step="any">
+    <input type="number" id="freq-f" min="0">
   </label>
   <button type="submit">Calculate</button>
 </form>

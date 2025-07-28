@@ -89,11 +89,11 @@ seo:
 <form id="plant-spacing-form" autocomplete="off">
   <label>
     Garden Area Length (feet):
-    <input type="number" id="garden-length" min="0" step="0.1" required>
+    <input type="number" id="garden-length" min="0" required>
   </label>
   <label>
     Garden Area Width (feet):
-    <input type="number" id="garden-width" min="0" step="0.1" required>
+    <input type="number" id="garden-width" min="0" required>
   </label>
   <label>
     Plant Type:
@@ -114,11 +114,11 @@ seo:
   <div id="custom-spacing" style="display: none;">
     <label>
       Plant Spacing - Length (inches):
-      <input type="number" id="custom-length" min="0.5" step="0.5">
+      <input type="number" id="custom-length" min="0.5">
     </label>
     <label>
       Plant Spacing - Width (inches):
-      <input type="number" id="custom-width" min="0.5" step="0.5">
+      <input type="number" id="custom-width" min="0.5">
     </label>
   </div>
   <label>
@@ -138,7 +138,7 @@ seo:
   </label>
   <label>
     Border Space (inches):
-    <input type="number" id="border-space" min="0" value="6" step="1">
+    <input type="number" id="border-space" min="0" value="6">
     <small>Space left around garden edges</small>
   </label>
   <button type="submit">Calculate Plant Spacing</button>

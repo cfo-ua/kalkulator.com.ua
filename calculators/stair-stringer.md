@@ -90,15 +90,15 @@ faq:
 <form id="stair-stringer-form" autocomplete="off">
   <label>
     Загальна висота підйому (мм):
-    <input type="number" id="stringer-total-rise" min="0" step="any" placeholder="напр. 2800" required>
+    <input type="number" id="stringer-total-rise" min="0" placeholder="напр. 2800" required>
   </label>
   <label>
     Загальна довжина прольоту (мм):
-    <input type="number" id="stringer-total-run" min="0" step="any" placeholder="напр. 3600" required>
+    <input type="number" id="stringer-total-run" min="0" placeholder="напр. 3600" required>
   </label>
   <label>
     Ширина сходів (мм):
-    <input type="number" id="stringer-width" min="0" step="any" placeholder="напр. 1000" required>
+    <input type="number" id="stringer-width" min="0" placeholder="напр. 1000" required>
   </label>
   <label>
     Розмір тетиви:

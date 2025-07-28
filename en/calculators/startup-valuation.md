@@ -132,32 +132,32 @@ faq:
     
     <label>
       Annual Revenue (Last 12 Months):
-      <input type="number" id="annual-revenue" min="0" step="1000" placeholder="Enter annual revenue in USD">
+      <input type="number" id="annual-revenue" min="0" placeholder="Enter annual revenue in USD">
     </label>
 
     <label>
       Annual Revenue Growth Rate (%):
-      <input type="number" id="growth-rate" min="-100" max="1000" step="1" placeholder="Enter growth rate percentage">
+      <input type="number" id="growth-rate" min="-100" max="1000" placeholder="Enter growth rate percentage">
     </label>
 
     <label>
       Monthly Recurring Revenue (MRR) - if applicable:
-      <input type="number" id="mrr" min="0" step="100" placeholder="Enter MRR for subscription businesses">
+      <input type="number" id="mrr" min="0" placeholder="Enter MRR for subscription businesses">
     </label>
 
     <label>
       Gross Profit Margin (%):
-      <input type="number" id="profit-margin" min="0" max="100" step="1" placeholder="Enter gross profit margin percentage">
+      <input type="number" id="profit-margin" min="0" max="100" placeholder="Enter gross profit margin percentage">
     </label>
 
     <label>
       Total Investment/Capital Raised:
-      <input type="number" id="total-investment" min="0" step="1000" placeholder="Total funding raised to date">
+      <input type="number" id="total-investment" min="0" placeholder="Total funding raised to date">
     </label>
 
     <label>
       Development & Operating Costs:
-      <input type="number" id="development-costs" min="0" step="1000" placeholder="Total R&D and operating expenses">
+      <input type="number" id="development-costs" min="0" placeholder="Total R&D and operating expenses">
     </label>
   </div>
 
@@ -212,12 +212,12 @@ faq:
 
     <label>
       Number of Active Customers:
-      <input type="number" id="customers" min="0" step="1" placeholder="Total active customers">
+      <input type="number" id="customers" min="0" placeholder="Total active customers">
     </label>
 
     <label>
       Team Size:
-      <input type="number" id="team-size" min="1" max="1000" step="1" placeholder="Number of employees">
+      <input type="number" id="team-size" min="1" max="1000" placeholder="Number of employees">
     </label>
   </div>
 

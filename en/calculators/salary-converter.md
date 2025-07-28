@@ -76,7 +76,7 @@ faq:
 
 <form id="salary-period-form">
   <label for="amount">Salary Amount:</label>
-  <input type="number" id="amount" min="0" step="any" required placeholder="Enter salary amount">
+  <input type="number" id="amount" min="0" required placeholder="Enter salary amount">
   <label for="period">Time Period:</label>
   <select id="period">
     <option value="month">per month</option>

@@ -69,7 +69,7 @@ seo:
   </label>
   <label>
     Доступна площа (квадратні метри):
-    <input type="number" id="available-space" min="1" step="1" required>
+    <input type="number" id="available-space" min="1" required>
   </label>
   <label>
     Вид риби:
@@ -123,11 +123,11 @@ seo:
   </label>
   <label>
     Місцева ціна риби (грн за кілограм):
-    <input type="number" id="fish-price" min="0" step="10" value="240" required>
+    <input type="number" id="fish-price" min="0" value="240" required>
   </label>
   <label>
     Місцева ціна овочів (грн за кілограм):
-    <input type="number" id="vegetable-price" min="0" step="10" value="120" required>
+    <input type="number" id="vegetable-price" min="0" value="120" required>
   </label>
   <button type="submit">Спроектувати аквапонічну систему</button>
 </form>

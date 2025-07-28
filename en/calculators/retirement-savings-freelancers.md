@@ -97,16 +97,16 @@ faq:
     <input type="number" id="retirement-age" min="50" max="80" value="65" required>
     
     <label for="current-savings">Current Retirement Savings ($):</label>
-    <input type="number" id="current-savings" min="0" step="100" value="25000" required>
+    <input type="number" id="current-savings" min="0" value="25000" required>
   </div>
 
   <div class="form-section">
     <h3>Income Information</h3>
     <label for="annual-income">Average Annual Income ($):</label>
-    <input type="number" id="annual-income" min="0" step="1000" value="75000" required>
+    <input type="number" id="annual-income" min="0" value="75000" required>
     
     <label for="income-growth">Expected Annual Income Growth (%):</label>
-    <input type="number" id="income-growth" min="0" max="15" step="0.1" value="3" required>
+    <input type="number" id="income-growth" min="0" max="15" value="3" required>
     
     <label for="income-variability">Income Variability:</label>
     <select id="income-variability" required>
@@ -120,7 +120,7 @@ faq:
   <div class="form-section">
     <h3>Retirement Goals</h3>
     <label for="retirement-income">Desired Annual Retirement Income ($):</label>
-    <input type="number" id="retirement-income" min="0" step="1000" value="60000" required>
+    <input type="number" id="retirement-income" min="0" value="60000" required>
     
     <label for="retirement-years">Expected Years in Retirement:</label>
     <input type="number" id="retirement-years" min="10" max="40" value="25" required>
@@ -129,13 +129,13 @@ faq:
   <div class="form-section">
     <h3>Savings Strategy</h3>
     <label for="current-contribution">Current Monthly Contribution ($):</label>
-    <input type="number" id="current-contribution" min="0" step="50" value="500" required>
+    <input type="number" id="current-contribution" min="0" value="500" required>
     
     <label for="contribution-percentage">Target Savings Rate (% of income):</label>
-    <input type="number" id="contribution-percentage" min="5" max="50" step="1" value="20" required>
+    <input type="number" id="contribution-percentage" min="5" max="50" value="20" required>
     
     <label for="investment-return">Expected Annual Return (%):</label>
-    <input type="number" id="investment-return" min="0" max="15" step="0.1" value="7" required>
+    <input type="number" id="investment-return" min="0" max="15" value="7" required>
   </div>
 
   <div class="form-section">

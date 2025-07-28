@@ -125,7 +125,7 @@ faq:
   </label>
   <label>
     Lumber Length (feet):
-    <input type="number" id="lumber-length" min="1" step="any" value="8" required>
+    <input type="number" id="lumber-length" min="1" value="8" required>
   </label>
   <label>
     Number of Pieces:

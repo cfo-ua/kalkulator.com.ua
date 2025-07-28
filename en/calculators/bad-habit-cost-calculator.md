@@ -169,7 +169,7 @@ faq:
       Cost per Instance:
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="cost" min="0.01" max="1000" step="0.01" placeholder="8.50" required style="flex: 1;">
+        <input type="number" name="cost" min="0.01" max="1000" placeholder="8.50" required style="flex: 1;">
       </div>
     </label>
   </div>
@@ -192,7 +192,7 @@ faq:
   <div class="form-row" id="custom-frequency" style="display: none;">
     <label>
       Times per week:
-      <input type="number" name="custom-times" min="0.1" max="21" step="0.1" placeholder="3.5">
+      <input type="number" name="custom-times" min="0.1" max="21" placeholder="3.5">
     </label>
   </div>
   

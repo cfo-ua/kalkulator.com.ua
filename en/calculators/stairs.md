@@ -101,22 +101,22 @@ faq:
 <form id="stairs-form" autocomplete="off">
   <label>
     Total Rise (inches):
-    <input type="number" id="stairs-total-rise" min="0" step="any" placeholder="108" required>
+    <input type="number" id="stairs-total-rise" min="0" placeholder="108" required>
     <small>Vertical distance from bottom floor to top floor</small>
   </label>
   <label>
     Total Run Available (inches):
-    <input type="number" id="stairs-total-run" min="0" step="any" placeholder="120" required>
+    <input type="number" id="stairs-total-run" min="0" placeholder="120" required>
     <small>Horizontal space available for stairs (optional)</small>
   </label>
   <label>
     Desired Riser Height (inches):
-    <input type="number" id="stairs-riser" min="6" max="8" step="0.125" value="7.5" required>
+    <input type="number" id="stairs-riser" min="6" max="8" value="7.5" required>
     <small>Step height (6-8 inches, ideal: 7-7.75)</small>
   </label>
   <label>
     Desired Tread Depth (inches):
-    <input type="number" id="stairs-tread" min="9" max="12" step="0.125" value="10" required>
+    <input type="number" id="stairs-tread" min="9" max="12" value="10" required>
     <small>Step depth (9-12 inches, ideal: 10-11)</small>
   </label>
   <button type="submit">Calculate Stairs</button>

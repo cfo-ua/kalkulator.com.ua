@@ -91,15 +91,15 @@ faq:
 <form id="wallpaper-form" autocomplete="off">
   <label>
     Wall Area (sq ft):
-    <input type="number" id="wallpaper-wall-area" min="0" step="any" required>
+    <input type="number" id="wallpaper-wall-area" min="0" required>
   </label>
   <label>
     Roll Length (ft):
-    <input type="number" id="wallpaper-roll-length" min="0" step="any" placeholder="16.5" required>
+    <input type="number" id="wallpaper-roll-length" min="0" placeholder="16.5" required>
   </label>
   <label>
     Roll Width (inches):
-    <input type="number" id="wallpaper-roll-width" min="0" step="any" placeholder="20.5" required>
+    <input type="number" id="wallpaper-roll-width" min="0" placeholder="20.5" required>
   </label>
   <label>
     Pattern Type:

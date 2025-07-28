@@ -54,15 +54,15 @@ faq:
 <form id="ohm-form" autocomplete="off">
   <label>
     Voltage (U, V):
-    <input type="number" id="ohm-u" step="any">
+    <input type="number" id="ohm-u">
   </label>
   <label>
     Current (I, A):
-    <input type="number" id="ohm-i" step="any">
+    <input type="number" id="ohm-i">
   </label>
   <label>
     Resistance (R, Ω):
-    <input type="number" id="ohm-r" step="any">
+    <input type="number" id="ohm-r">
   </label>
   <button type="submit">Calculate</button>
 </form>

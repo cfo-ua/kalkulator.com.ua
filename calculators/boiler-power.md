@@ -68,11 +68,11 @@ faq:
 <form id="boiler-power-form" autocomplete="off">
   <label>
     Площа приміщення (м²):
-    <input type="number" id="boiler-area" min="0" step="any" required>
+    <input type="number" id="boiler-area" min="0" required>
   </label>
   <label>
     Висота стелі (м):
-    <input type="number" id="boiler-height" min="2" step="any" value="2.7" required>
+    <input type="number" id="boiler-height" min="2" value="2.7" required>
   </label>
   <label>
     Ступінь утеплення:

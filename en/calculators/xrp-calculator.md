@@ -149,13 +149,13 @@ faq:
       </select>
       
       <label for="investmentAmount">Investment Amount ($)</label>
-      <input type="number" id="investmentAmount" value="1000" min="1" step="0.01" required>
+      <input type="number" id="investmentAmount" value="1000" min="1" required>
       
       <label for="purchasePrice">Purchase Price per XRP ($)</label>
-      <input type="number" id="purchasePrice" value="0.50" min="0" step="0.00001" required>
+      <input type="number" id="purchasePrice" value="0.50" min="0" required>
       
       <label for="currentPrice">Current XRP Price ($)</label>
-      <input type="number" id="currentPrice" value="0.60" min="0" step="0.00001" required>
+      <input type="number" id="currentPrice" value="0.60" min="0" required>
       
       <button type="button" id="fetchCurrentPrice" style="margin-top: 0.5rem; padding: 0.5rem; background: #007bff; color: white; border: none; border-radius: 0.25rem; cursor: pointer;">
         📡 Fetch Current Price
@@ -165,7 +165,7 @@ faq:
     <div>
       <h4>📊 DCA Settings (if applicable)</h4>
       <label for="dcaAmount">Regular Investment Amount ($)</label>
-      <input type="number" id="dcaAmount" value="100" min="1" step="0.01" placeholder="Weekly/monthly investment">
+      <input type="number" id="dcaAmount" value="100" min="1" placeholder="Weekly/monthly investment">
       
       <label for="dcaFrequency">Investment Frequency</label>
       <select id="dcaFrequency">
@@ -176,7 +176,7 @@ faq:
       </select>
       
       <label for="dcaPeriod">DCA Period (months)</label>
-      <input type="number" id="dcaPeriod" value="12" min="1" max="120" step="1">
+      <input type="number" id="dcaPeriod" value="12" min="1" max="120">
       
       <label for="priceVolatility">Expected Price Volatility</label>
       <select id="priceVolatility">
@@ -190,10 +190,10 @@ faq:
     <div>
       <h4>🎯 Price Targets & Analysis</h4>
       <label for="targetPrice">Target Sell Price ($)</label>
-      <input type="number" id="targetPrice" value="2.00" min="0" step="0.001" placeholder="Your price target">
+      <input type="number" id="targetPrice" value="2.00" min="0" placeholder="Your price target">
       
       <label for="stopLoss">Stop Loss Price ($)</label>
-      <input type="number" id="stopLoss" value="0.30" min="0" step="0.001" placeholder="Exit price if losses">
+      <input type="number" id="stopLoss" value="0.30" min="0" placeholder="Exit price if losses">
       
       <label for="riskTolerance">Risk Tolerance</label>
       <select id="riskTolerance">
@@ -214,10 +214,10 @@ faq:
     <div>
       <h4>⚖️ Portfolio & Tax Settings</h4>
       <label for="portfolioValue">Total Portfolio Value ($)</label>
-      <input type="number" id="portfolioValue" value="10000" min="0" step="0.01" placeholder="Your total investment portfolio">
+      <input type="number" id="portfolioValue" value="10000" min="0" placeholder="Your total investment portfolio">
       
       <label for="cryptoAllocation">Desired Crypto Allocation (%)</label>
-      <input type="number" id="cryptoAllocation" value="10" min="0" max="100" step="1">
+      <input type="number" id="cryptoAllocation" value="10" min="0" max="100">
       
       <label for="taxBracket">Tax Bracket (%)</label>
       <select id="taxBracket">

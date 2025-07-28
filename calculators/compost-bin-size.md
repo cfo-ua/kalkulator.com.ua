@@ -48,7 +48,7 @@ seo:
 <form id="compost-size-form" autocomplete="off">
   <label>
     Кількість людей у домогосподарстві:
-    <input type="number" id="household-size" min="1" step="1" required>
+    <input type="number" id="household-size" min="1" required>
   </label>
   <label>
     Звички приготування їжі:

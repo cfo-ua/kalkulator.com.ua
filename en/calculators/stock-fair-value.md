@@ -142,32 +142,32 @@ faq:
     
     <label>
       Current Stock Price ($):
-      <input type="number" id="current-price" min="0" step="0.01" required placeholder="Enter current market price">
+      <input type="number" id="current-price" min="0" required placeholder="Enter current market price">
     </label>
 
     <label>
       Earnings Per Share (EPS) - Latest 12 Months:
-      <input type="number" id="eps" min="0" step="0.01" required placeholder="Enter earnings per share">
+      <input type="number" id="eps" min="0" required placeholder="Enter earnings per share">
     </label>
 
     <label>
       Book Value Per Share ($):
-      <input type="number" id="book-value" min="0" step="0.01" required placeholder="Enter book value per share">
+      <input type="number" id="book-value" min="0" required placeholder="Enter book value per share">
     </label>
 
     <label>
       Annual Dividend Per Share ($):
-      <input type="number" id="dividend" min="0" step="0.01" placeholder="Enter annual dividend (0 if none)">
+      <input type="number" id="dividend" min="0" placeholder="Enter annual dividend (0 if none)">
     </label>
 
     <label>
       Expected EPS Growth Rate (% annually):
-      <input type="number" id="growth-rate" min="-50" max="100" step="0.1" placeholder="Expected earnings growth rate">
+      <input type="number" id="growth-rate" min="-50" max="100" placeholder="Expected earnings growth rate">
     </label>
 
     <label>
       Total Debt to Equity Ratio (%):
-      <input type="number" id="debt-equity" min="0" max="500" step="1" placeholder="Enter debt-to-equity percentage">
+      <input type="number" id="debt-equity" min="0" max="500" placeholder="Enter debt-to-equity percentage">
     </label>
   </div>
 
@@ -228,7 +228,7 @@ faq:
     
     <label>
       Required Rate of Return (% annually):
-      <input type="number" id="required-return" min="5" max="30" step="0.1" value="10" placeholder="Your required return rate">
+      <input type="number" id="required-return" min="5" max="30" value="10" placeholder="Your required return rate">
     </label>
 
     <label>

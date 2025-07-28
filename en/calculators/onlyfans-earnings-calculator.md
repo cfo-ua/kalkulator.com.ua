@@ -190,7 +190,7 @@ faq:
       Monthly Subscription Price:
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="subscription-price" min="4.99" max="50" step="0.01" value="15.00" required style="flex: 1;">
+        <input type="number" name="subscription-price" min="4.99" max="50" value="15.00" required style="flex: 1;">
       </div>
     </label>
   </div>
@@ -200,7 +200,7 @@ faq:
       Average Monthly Tips per Subscriber:
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="tips-per-subscriber" min="0" max="100" step="0.50" value="5.00" style="flex: 1;">
+        <input type="number" name="tips-per-subscriber" min="0" max="100" value="5.00" style="flex: 1;">
       </div>
     </label>
   </div>
@@ -217,7 +217,7 @@ faq:
       Average PPV Message Price:
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="ppv-price" min="0" max="50" step="0.50" value="12.00" style="flex: 1;">
+        <input type="number" name="ppv-price" min="0" max="50" value="12.00" style="flex: 1;">
       </div>
     </label>
   </div>
@@ -242,7 +242,7 @@ faq:
       Average Custom Content Price:
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="custom-price" min="0" max="500" step="5" value="50.00" style="flex: 1;">
+        <input type="number" name="custom-price" min="0" max="500" value="50.00" style="flex: 1;">
       </div>
     </label>
   </div>

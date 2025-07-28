@@ -107,11 +107,11 @@ faq:
 <form id="paver-form" autocomplete="off">
   <label>
     Довжина зони мощення (м):
-    <input type="number" id="paver-length" min="0" step="any" placeholder="напр. 6" required>
+    <input type="number" id="paver-length" min="0" placeholder="напр. 6" required>
   </label>
   <label>
     Ширина зони мощення (м):
-    <input type="number" id="paver-width" min="0" step="any" placeholder="напр. 4" required>
+    <input type="number" id="paver-width" min="0" placeholder="напр. 4" required>
   </label>
   <label>
     Тип і розмір плитки:

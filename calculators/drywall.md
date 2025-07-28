@@ -125,7 +125,7 @@ faq:
 <form id="drywall-form" autocomplete="off">
   <label>
     Загальна площа стін (м²):
-    <input type="number" id="drywall-walls" min="0" step="any" required>
+    <input type="number" id="drywall-walls" min="0" required>
     <small>Довжина × висота всіх стін для покриття</small>
   </label>
   <label>

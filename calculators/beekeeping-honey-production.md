@@ -48,7 +48,7 @@ seo:
 <form id="honey-production-form" autocomplete="off">
   <label>
     Кількість вуликів:
-    <input type="number" id="hive-count" min="1" step="1" required>
+    <input type="number" id="hive-count" min="1" required>
   </label>
   <label>
     Вік/досвід вулика:
@@ -113,7 +113,7 @@ seo:
   </label>
   <label>
     Ціна меду (грн за кілограм):
-    <input type="number" id="honey-price" min="0" step="10" value="360" required>
+    <input type="number" id="honey-price" min="0" value="360" required>
     <small>Місцева роздрібна ціна для вашого меду</small>
   </label>
   <label>

@@ -101,11 +101,11 @@ faq:
 <form id="raised-bed-form" autocomplete="off">
   <label>
     Bed Length (ft):
-    <input type="number" id="bed-length" min="0" step="any" required>
+    <input type="number" id="bed-length" min="0" required>
   </label>
   <label>
     Bed Width (ft):
-    <input type="number" id="bed-width" min="0" step="any" required>
+    <input type="number" id="bed-width" min="0" required>
   </label>
   <label>
     Bed Depth (inches):

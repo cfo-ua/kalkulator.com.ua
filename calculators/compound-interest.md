@@ -68,13 +68,13 @@ faq:
 
 <form id="compound-form">
   <label>Початкова сума</label>
-  <input type="number" id="initial" value="10000" min="0" step="any" required>
+  <input type="number" id="initial" value="10000" min="0" required>
 
   <label>Річна відсоткова ставка (%)</label>
-  <input type="number" id="rate" value="12" min="0" step="any" required>
+  <input type="number" id="rate" value="12" min="0" required>
 
   <label>Термін (років)</label>
-  <input type="number" id="years" value="5" min="0" step="any" required>
+  <input type="number" id="years" value="5" min="0" required>
 
   <label>Капіталізація</label>
   <select id="compound-frequency">
@@ -85,7 +85,7 @@ faq:
   </select>
 
   <label>Регулярний внесок</label>
-  <input type="number" id="contribution" value="0" min="0" step="any">
+  <input type="number" id="contribution" value="0" min="0">
 
   <label>Частота внеску</label>
   <select id="contribution-frequency">

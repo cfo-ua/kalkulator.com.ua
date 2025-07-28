@@ -70,19 +70,19 @@ faq:
 <form id="dilution-form" autocomplete="off">
   <label>
     Initial concentration (C₁, mol/L):
-    <input type="number" id="dil-c1" step="any">
+    <input type="number" id="dil-c1">
   </label>
   <label>
     Initial volume (V₁, L):
-    <input type="number" id="dil-v1" step="any">
+    <input type="number" id="dil-v1">
   </label>
   <label>
     Final concentration (C₂, mol/L):
-    <input type="number" id="dil-c2" step="any">
+    <input type="number" id="dil-c2">
   </label>
   <label>
     Final volume (V₂, L):
-    <input type="number" id="dil-v2" step="any">
+    <input type="number" id="dil-v2">
   </label>
   <button type="submit">Calculate</button>
 </form>

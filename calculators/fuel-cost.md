@@ -43,19 +43,19 @@ faq:
 
 <form id="fuel-cost-form">
   <label for="consumption">Витрата пального (л/100 км)</label>
-  <input type="number" id="consumption" step="any" min="0">
+  <input type="number" id="consumption" min="0">
 
   <label for="range">Пробіг (км)</label>
-  <input type="number" id="range" step="any" min="0">
+  <input type="number" id="range" min="0">
 
   <label for="pricePerLiter">Ціна за 1 літр пального</label>
-  <input type="number" id="pricePerLiter" step="any" min="0">
+  <input type="number" id="pricePerLiter" min="0">
 
   <label for="liters">Витрачено пального (літрів)</label>
-  <input type="number" id="liters" step="any" min="0">
+  <input type="number" id="liters" min="0">
 
   <label for="totalCost">Загальна вартість пального</label>
-  <input type="number" id="totalCost" step="any" min="0">
+  <input type="number" id="totalCost" min="0">
 
   <button type="submit">Розрахувати</button>
 </form>

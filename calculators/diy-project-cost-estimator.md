@@ -162,7 +162,7 @@ faq:
       </select>
       
       <label for="projectArea">Площа проекту (м²)</label>
-      <input type="number" id="projectArea" value="40" min="1" max="1000" step="1" required>
+      <input type="number" id="projectArea" value="40" min="1" max="1000" required>
       
       <label for="projectComplexity">Складність проекту</label>
       <select id="projectComplexity">
@@ -190,7 +190,7 @@ faq:
       </select>
       
       <label for="wasteBuffer">Буфер відходів/надлишків (%)</label>
-      <input type="number" id="wasteBuffer" value="10" min="5" max="25" step="1" required>
+      <input type="number" id="wasteBuffer" value="10" min="5" max="25" required>
       
       <label for="laborComparison">Включити порівняння з роботою</label>
       <select id="laborComparison">
@@ -225,7 +225,7 @@ faq:
       </select>
       
       <label for="projectDuration">Оцінювана тривалість (днів)</label>
-      <input type="number" id="projectDuration" value="3" min="1" max="30" step="1" required>
+      <input type="number" id="projectDuration" value="3" min="1" max="30" required>
       
       <label for="includeSafety">Включити засоби безпеки</label>
       <select id="includeSafety">

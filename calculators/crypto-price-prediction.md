@@ -199,17 +199,17 @@ faq:
 
     <label>
       Поточна ціна ($):
-      <input type="number" id="current-price" min="0" step="0.000001" required placeholder="Введіть поточну ціну">
+      <input type="number" id="current-price" min="0" required placeholder="Введіть поточну ціну">
     </label>
 
     <label>
       24-годинна зміна ціни (%):
-      <input type="number" id="daily-change" min="-100" max="1000" step="0.1" placeholder="Введіть відсоткову зміну за 24 год">
+      <input type="number" id="daily-change" min="-100" max="1000" placeholder="Введіть відсоткову зміну за 24 год">
     </label>
 
     <label>
       7-денна зміна ціни (%):
-      <input type="number" id="weekly-change" min="-100" max="1000" step="0.1" placeholder="Введіть зміну за 7 днів">
+      <input type="number" id="weekly-change" min="-100" max="1000" placeholder="Введіть зміну за 7 днів">
     </label>
 
     <label>
@@ -230,7 +230,7 @@ faq:
     
     <label>
       RSI (Індекс відносної сили):
-      <input type="number" id="rsi" min="0" max="100" step="1" placeholder="Введіть значення RSI (0-100)">
+      <input type="number" id="rsi" min="0" max="100" placeholder="Введіть значення RSI (0-100)">
     </label>
 
     <label>

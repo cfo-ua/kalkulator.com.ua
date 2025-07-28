@@ -43,13 +43,13 @@ faq:
 
 <form id="rent-buy-form">
   <label for="propertyCost">Вартість квартири</label>
-  <input type="number" id="propertyCost" value="1500000" min="0" step="any" required>
+  <input type="number" id="propertyCost" value="1500000" min="0" required>
 
   <label for="monthlyRent">Місячна орендна плата</label>
-  <input type="number" id="monthlyRent" value="15000" min="0" step="any" required>
+  <input type="number" id="monthlyRent" value="15000" min="0" required>
 
   <label for="investmentRate">Річна прибутковість інвестиції (%)</label>
-  <input type="number" id="investmentRate" value="10" min="0" step="any" required>
+  <input type="number" id="investmentRate" value="10" min="0" required>
 
   <button type="submit">Порівняти</button>
 </form>

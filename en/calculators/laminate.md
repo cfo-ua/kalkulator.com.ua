@@ -85,15 +85,15 @@ faq:
 <form id="laminate-form" autocomplete="off">
   <label>
     Room Area (sq ft):
-    <input type="number" id="laminate-area" min="0" step="any" required>
+    <input type="number" id="laminate-area" min="0" required>
   </label>
   <label>
     Coverage per Box (sq ft):
-    <input type="number" id="laminate-pack" min="0" step="any" placeholder="20" required>
+    <input type="number" id="laminate-pack" min="0" placeholder="20" required>
   </label>
   <label>
     Waste Factor (%):
-    <input type="number" id="laminate-waste" min="0" step="any" value="7">
+    <input type="number" id="laminate-waste" min="0" value="7">
   </label>
   <button type="submit">Calculate Boxes</button>
 </form>

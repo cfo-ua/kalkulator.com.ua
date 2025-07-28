@@ -126,7 +126,7 @@ faq:
 <form id="fence-form" autocomplete="off">
   <label>
     Довжина паркану (погонні метри):
-    <input type="number" id="fence-length" min="0" step="any" required>
+    <input type="number" id="fence-length" min="0" required>
     <small>Загальний периметр для огорожі</small>
   </label>
   <label>

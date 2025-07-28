@@ -83,19 +83,19 @@ faq:
 <form id="tile-form" autocomplete="off">
   <label>
     Total Area (sq ft):
-    <input type="number" id="tile-area" min="0" step="any" required>
+    <input type="number" id="tile-area" min="0" required>
   </label>
   <label>
     Tile Length (inches):
-    <input type="number" id="tile-length" min="0" step="any" placeholder="12" required>
+    <input type="number" id="tile-length" min="0" placeholder="12" required>
   </label>
   <label>
     Tile Width (inches):
-    <input type="number" id="tile-width" min="0" step="any" placeholder="12" required>
+    <input type="number" id="tile-width" min="0" placeholder="12" required>
   </label>
   <label>
     Waste Factor (%):
-    <input type="number" id="tile-waste" min="0" value="10" step="any" required>
+    <input type="number" id="tile-waste" min="0" value="10" required>
   </label>
   <button type="submit">Calculate Tiles</button>
 </form>

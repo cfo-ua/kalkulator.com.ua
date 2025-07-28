@@ -96,7 +96,7 @@ faq:
   <div class="form-section">
     <h3>Wedding Basics</h3>
     <label for="guest-count">Number of Guests:</label>
-    <input type="number" id="guest-count" min="10" max="500" step="5" value="100" required>
+    <input type="number" id="guest-count" min="10" max="500" value="100" required>
     
     <label for="wedding-style">Wedding Style:</label>
     <select id="wedding-style" required>

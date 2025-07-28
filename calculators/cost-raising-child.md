@@ -118,61 +118,61 @@ faq:
     </select>
     
     <label for="household-income">Річний дохід сім'ї (грн):</label>
-    <input type="number" id="household-income" min="0" step="10000" value="500000" required>
+    <input type="number" id="household-income" min="0" value="500000" required>
     
     <label for="number-of-children">Кількість дітей для планування:</label>
-    <input type="number" id="number-of-children" min="1" max="10" step="1" value="1" required>
+    <input type="number" id="number-of-children" min="1" max="10" value="1" required>
   </div>
 
   <div class="form-section">
     <h3>Догляд та освіта (на рік)</h3>
     <label for="infant-childcare">Догляд за немовлятами/малюками (0-2 роки) (грн):</label>
-    <input type="number" id="infant-childcare" min="0" step="5000" value="120000" required>
+    <input type="number" id="infant-childcare" min="0" value="120000" required>
     
     <label for="preschool">Дитячий садок (3-5 років) (грн):</label>
-    <input type="number" id="preschool" min="0" step="5000" value="80000" required>
+    <input type="number" id="preschool" min="0" value="80000" required>
     
     <label for="school-age-care">Продовжена група/позашкільний догляд (6-17 років) (грн):</label>
-    <input type="number" id="school-age-care" min="0" step="2000" value="30000" required>
+    <input type="number" id="school-age-care" min="0" value="30000" required>
     
     <label for="private-school">Приватна школа (необов'язково, на рік) (грн):</label>
-    <input type="number" id="private-school" min="0" step="10000" value="0">
+    <input type="number" id="private-school" min="0" value="0">
   </div>
 
   <div class="form-section">
     <h3>Щомісячні витрати на життя (на дитину)</h3>
     <label for="food-expenses">Їжа та харчування (грн):</label>
-    <input type="number" id="food-expenses" min="0" step="500" value="5000" required>
+    <input type="number" id="food-expenses" min="0" value="5000" required>
     
     <label for="clothing">Одяг та взуття (грн):</label>
-    <input type="number" id="clothing" min="0" step="100" value="1500" required>
+    <input type="number" id="clothing" min="0" value="1500" required>
     
     <label for="healthcare">Медицина (страховка, доплати тощо) (грн):</label>
-    <input type="number" id="healthcare" min="0" step="500" value="3000" required>
+    <input type="number" id="healthcare" min="0" value="3000" required>
     
     <label for="activities">Активності та розваги (грн):</label>
-    <input type="number" id="activities" min="0" step="500" value="2000" required>
+    <input type="number" id="activities" min="0" value="2000" required>
   </div>
 
   <div class="form-section">
     <h3>Житло та транспорт</h3>
     <label for="housing-increase">Додаткові витрати на житло (щомісяця на дитину) (грн):</label>
-    <input type="number" id="housing-increase" min="0" step="1000" value="4000" required>
+    <input type="number" id="housing-increase" min="0" value="4000" required>
     
     <label for="transportation">Додаткові транспортні витрати (щомісяця) (грн):</label>
-    <input type="number" id="transportation" min="0" step="500" value="1500" required>
+    <input type="number" id="transportation" min="0" value="1500" required>
   </div>
 
   <div class="form-section">
     <h3>Одноразові та великі витрати</h3>
     <label for="baby-gear">Дитячі речі та облаштування (перший рік) (грн):</label>
-    <input type="number" id="baby-gear" min="0" step="5000" value="50000" required>
+    <input type="number" id="baby-gear" min="0" value="50000" required>
     
     <label for="education-savings">Освітні накопичення (на рік) (грн):</label>
-    <input type="number" id="education-savings" min="0" step="5000" value="40000" required>
+    <input type="number" id="education-savings" min="0" value="40000" required>
     
     <label for="emergency-buffer">Резервний буфер (% від загальних витрат):</label>
-    <input type="number" id="emergency-buffer" min="0" max="30" step="1" value="10" required>
+    <input type="number" id="emergency-buffer" min="0" max="30" value="10" required>
   </div>
 
   <div class="form-section">

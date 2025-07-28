@@ -100,11 +100,11 @@ seo:
 <form id="transportation-form" autocomplete="off">
   <label>
     Trip Distance (miles):
-    <input type="number" id="trip-distance" min="0.1" step="0.1" required>
+    <input type="number" id="trip-distance" min="0.1" required>
   </label>
   <label>
     Number of Trips per Week:
-    <input type="number" id="trips-per-week" min="1" step="1" value="5" required>
+    <input type="number" id="trips-per-week" min="1" value="5" required>
   </label>
   <label>
     Primary Transportation Mode:
@@ -142,12 +142,12 @@ seo:
   </label>
   <label>
     Fuel Price ($ per gallon):
-    <input type="number" id="fuel-price" min="0" step="0.01" value="3.50">
+    <input type="number" id="fuel-price" min="0" value="3.50">
     <small>Used for cost calculations</small>
   </label>
   <label>
     Electricity Rate ($ per kWh):
-    <input type="number" id="electricity-rate" min="0" step="0.01" value="0.12">
+    <input type="number" id="electricity-rate" min="0" value="0.12">
     <small>For electric vehicle calculations</small>
   </label>
   <label>

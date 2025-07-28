@@ -108,11 +108,11 @@ faq:
 <form id="business-profit-form" autocomplete="off">
   <label>
     Target Monthly Profit:
-    <input type="number" id="target-profit" min="0" step="any" required>
+    <input type="number" id="target-profit" min="0" required>
   </label>
   <label>
     Business Margin (%):
-    <input type="number" id="business-margin" min="0" max="100" step="any" required>
+    <input type="number" id="business-margin" min="0" max="100" required>
   </label>
   <button type="submit">Calculate Revenue</button>
 </form>

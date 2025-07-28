@@ -256,7 +256,7 @@ seo:
     
     <label>
       Резерв на непередбачені витрати (%):
-      <input type="range" id="contingency" min="10" max="50" value="20" step="5">
+      <input type="range" id="contingency" min="10" max="50" value="20">
       <span id="contingency-display">20%</span>
       <small>Рекомендується 15-30% для більшості проектів</small>
     </label>

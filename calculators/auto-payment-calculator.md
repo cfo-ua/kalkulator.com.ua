@@ -152,13 +152,13 @@ faq:
     <div>
       <h4>🚗 Параметри автомобіля</h4>
       <label for="carPrice">Вартість автомобіля (грн)</label>
-      <input type="number" id="carPrice" value="500000" min="50000" step="10000" required>
+      <input type="number" id="carPrice" value="500000" min="50000" required>
       
       <label for="downPayment">Первинний внесок (грн)</label>
-      <input type="number" id="downPayment" value="150000" min="0" step="5000" required>
+      <input type="number" id="downPayment" value="150000" min="0" required>
       
       <label for="tradeInValue">Вартість обміну (Trade-in)</label>
-      <input type="number" id="tradeInValue" value="0" min="0" step="5000">
+      <input type="number" id="tradeInValue" value="0" min="0">
       
       <label for="carAge">Вік автомобіля</label>
       <select id="carAge">
@@ -174,7 +174,7 @@ faq:
     <div>
       <h4>💰 Умови кредиту</h4>
       <label for="interestRate">Процентна ставка (%)</label>
-      <input type="number" id="interestRate" value="25" min="0" max="40" step="0.1" required>
+      <input type="number" id="interestRate" value="25" min="0" max="40" required>
       
       <label for="loanTerm">Термін кредиту (років)</label>
       <select id="loanTerm" required>
@@ -187,25 +187,25 @@ faq:
       </select>
       
       <label for="processingFee">Комісія за оформлення (%)</label>
-      <input type="number" id="processingFee" value="2" min="0" max="5" step="0.1">
+      <input type="number" id="processingFee" value="2" min="0" max="5">
       
       <label for="monthlyFee">Щомісячна комісія (грн)</label>
-      <input type="number" id="monthlyFee" value="150" min="0" step="50">
+      <input type="number" id="monthlyFee" value="150" min="0">
     </div>
     
     <div>
       <h4>🛡️ Страхування та додаткові витрати</h4>
       <label for="kaskoRate">КАСКО (% від вартості авто)</label>
-      <input type="number" id="kaskoRate" value="5" min="0" max="15" step="0.5">
+      <input type="number" id="kaskoRate" value="5" min="0" max="15">
       
       <label for="osago">ОСАЦВ (грн/рік)</label>
-      <input type="number" id="osago" value="3000" min="0" step="200">
+      <input type="number" id="osago" value="3000" min="0">
       
       <label for="lifeInsurance">Страхування життя (грн/рік)</label>
-      <input type="number" id="lifeInsurance" value="2000" min="0" step="200">
+      <input type="number" id="lifeInsurance" value="2000" min="0">
       
       <label for="maintenance">Технічне обслуговування (грн/місяць)</label>
-      <input type="number" id="maintenance" value="1500" min="0" step="100">
+      <input type="number" id="maintenance" value="1500" min="0">
       
       <div style="margin-top: 1rem;">
         <label>

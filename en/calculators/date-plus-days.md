@@ -101,7 +101,7 @@ faq:
   </label>
   <label>
     Number of Days (can be negative):
-    <input type="number" id="day-offset" step="1" value="30" required>
+    <input type="number" id="day-offset" value="30" required>
   </label>
   <button type="submit">Calculate Date</button>
 </form>

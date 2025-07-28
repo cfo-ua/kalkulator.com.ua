@@ -32,19 +32,19 @@ faq:
 <form id="ideal-gas-form" autocomplete="off">
   <label>
     Тиск (P, атм):
-    <input type="number" id="ig-p" step="any">
+    <input type="number" id="ig-p">
   </label>
   <label>
     Обʼєм (V, л):
-    <input type="number" id="ig-v" step="any">
+    <input type="number" id="ig-v">
   </label>
   <label>
     Кількість речовини (n, моль):
-    <input type="number" id="ig-n" step="any">
+    <input type="number" id="ig-n">
   </label>
   <label>
     Температура (T, K):
-    <input type="number" id="ig-t" step="any">
+    <input type="number" id="ig-t">
   </label>
   <button type="submit">Обчислити</button>
 </form>

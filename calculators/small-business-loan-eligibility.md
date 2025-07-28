@@ -166,10 +166,10 @@ faq:
   <h3>Основна інформація про бізнес</h3>
   
   <label for="businessAge">Скільки часу працює ваш бізнес (місяці)?</label>
-  <input type="number" id="businessAge" value="24" min="0" max="240" step="1" placeholder="Терм роботи в місяцях">
+  <input type="number" id="businessAge" value="24" min="0" max="240" placeholder="Терм роботи в місяцях">
 
   <label for="monthlyRevenue">Середній щомісячний дохід</label>
-  <input type="number" id="monthlyRevenue" value="500000" min="0" step="10000" placeholder="Валовий щомісячний дохід">
+  <input type="number" id="monthlyRevenue" value="500000" min="0" placeholder="Валовий щомісячний дохід">
 
   <label for="industryType">Тип галузі</label>
   <select id="industryType">
@@ -189,13 +189,13 @@ faq:
   <h3>Фінансові показники</h3>
 
   <label for="cashFlow">Щомісячний чистий грошовий потік</label>
-  <input type="number" id="cashFlow" value="150000" min="-100000" step="5000" placeholder="Позитивний/негативний грошовий потік">
+  <input type="number" id="cashFlow" value="150000" min="-100000" placeholder="Позитивний/негативний грошовий потік">
 
   <label for="existingDebt">Існуючі щомісячні платежі по боргах</label>
-  <input type="number" id="existingDebt" value="80000" min="0" step="5000" placeholder="Щомісячні платежі по кредитах">
+  <input type="number" id="existingDebt" value="80000" min="0" placeholder="Щомісячні платежі по кредитах">
 
   <label for="bankBalance">Середній баланс на рахунках</label>
-  <input type="number" id="bankBalance" value="800000" min="0" step="50000" placeholder="Середній залишок на банківських рахунках">
+  <input type="number" id="bankBalance" value="800000" min="0" placeholder="Середній залишок на банківських рахунках">
 
   <h3>Кредитний профіль</h3>
 
@@ -218,12 +218,12 @@ faq:
   </select>
 
   <label for="paymentHistory">Історія платежів (% своєчасних платежів)</label>
-  <input type="number" id="paymentHistory" value="95" min="0" max="100" step="5" placeholder="Відсоток своєчасних платежів">
+  <input type="number" id="paymentHistory" value="95" min="0" max="100" placeholder="Відсоток своєчасних платежів">
 
   <h3>Деталі кредиту</h3>
 
   <label for="loanAmount">Бажана сума кредиту</label>
-  <input type="number" id="loanAmount" value="1000000" min="50000" step="50000" placeholder="Сума кредиту в гривнях">
+  <input type="number" id="loanAmount" value="1000000" min="50000" placeholder="Сума кредиту в гривнях">
 
   <label for="loanPurpose">Мета кредиту</label>
   <select id="loanPurpose">
@@ -236,7 +236,7 @@ faq:
   </select>
 
   <label for="collateralValue">Вартість доступної застави</label>
-  <input type="number" id="collateralValue" value="500000" min="0" step="50000" placeholder="Вартість активів для застави">
+  <input type="number" id="collateralValue" value="500000" min="0" placeholder="Вартість активів для застави">
 
   <button type="submit">Оцінити кредитоспроможність</button>
 </form>

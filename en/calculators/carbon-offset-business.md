@@ -141,52 +141,52 @@ seo:
       </select>
       
       <label for="employees">Number of Employees</label>
-      <input type="number" id="employees" value="150" min="1" max="100000" step="1" required>
+      <input type="number" id="employees" value="150" min="1" max="100000" required>
     </div>
     
     <div>
       <h4>⚡ Energy Usage (Annual)</h4>
       <label for="electricityUsage">Electricity Usage (kWh)</label>
-      <input type="number" id="electricityUsage" value="500000" min="0" step="1000" required>
+      <input type="number" id="electricityUsage" value="500000" min="0" required>
       
       <label for="naturalGasUsage">Natural Gas Usage (therms)</label>
-      <input type="number" id="naturalGasUsage" value="8000" min="0" step="100" required>
+      <input type="number" id="naturalGasUsage" value="8000" min="0" required>
       
       <label for="heatingOilUsage">Heating Oil Usage (gallons)</label>
-      <input type="number" id="heatingOilUsage" value="0" min="0" step="100" required>
+      <input type="number" id="heatingOilUsage" value="0" min="0" required>
       
       <label for="renewablePercent">Renewable Energy (%)</label>
-      <input type="number" id="renewablePercent" value="20" min="0" max="100" step="5" required>
+      <input type="number" id="renewablePercent" value="20" min="0" max="100" required>
     </div>
     
     <div>
       <h4>🚗 Transportation (Annual)</h4>
       <label for="fleetVehicles">Fleet Vehicles</label>
-      <input type="number" id="fleetVehicles" value="10" min="0" step="1" required>
+      <input type="number" id="fleetVehicles" value="10" min="0" required>
       
       <label for="fleetMileage">Fleet Mileage (miles)</label>
-      <input type="number" id="fleetMileage" value="150000" min="0" step="1000" required>
+      <input type="number" id="fleetMileage" value="150000" min="0" required>
       
       <label for="businessTravel">Business Travel ($)</label>
-      <input type="number" id="businessTravel" value="75000" min="0" step="1000" required>
+      <input type="number" id="businessTravel" value="75000" min="0" required>
       
       <label for="employeeCommuting">Employee Commuting (average miles/day)</label>
-      <input type="number" id="employeeCommuting" value="25" min="0" step="1" required>
+      <input type="number" id="employeeCommuting" value="25" min="0" required>
     </div>
     
     <div>
       <h4>🏭 Operations (Annual)</h4>
       <label for="facilitySize">Facility Size (sq ft)</label>
-      <input type="number" id="facilitySize" value="50000" min="1000" max="10000000" step="1000" required>
+      <input type="number" id="facilitySize" value="50000" min="1000" max="10000000" required>
       
       <label for="wasteGeneration">Waste Generation (tons)</label>
-      <input type="number" id="wasteGeneration" value="50" min="0" step="1" required>
+      <input type="number" id="wasteGeneration" value="50" min="0" required>
       
       <label for="recyclingRate">Recycling Rate (%)</label>
-      <input type="number" id="recyclingRate" value="40" min="0" max="100" step="5" required>
+      <input type="number" id="recyclingRate" value="40" min="0" max="100" required>
       
       <label for="supplychainSpend">Supply Chain Spend ($)</label>
-      <input type="number" id="supplychainSpend" value="2000000" min="0" step="10000" required>
+      <input type="number" id="supplychainSpend" value="2000000" min="0" required>
     </div>
   </div>
   
@@ -195,15 +195,15 @@ seo:
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
       <div>
         <label for="offsetPrice">Offset Price ($/ton CO2)</label>
-        <input type="number" id="offsetPrice" value="25" min="5" max="150" step="1" required>
+        <input type="number" id="offsetPrice" value="25" min="5" max="150" required>
       </div>
       <div>
         <label for="reductionTarget">Emission Reduction Target (%)</label>
-        <input type="number" id="reductionTarget" value="50" min="0" max="100" step="5" required>
+        <input type="number" id="reductionTarget" value="50" min="0" max="100" required>
       </div>
       <div>
         <label for="timeframe">Target Timeframe (years)</label>
-        <input type="number" id="timeframe" value="10" min="1" max="30" step="1" required>
+        <input type="number" id="timeframe" value="10" min="1" max="30" required>
       </div>
     </div>
   </div>

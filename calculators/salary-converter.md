@@ -29,7 +29,7 @@ faq:
 
 <form id="salary-period-form">
   <label for="amount">Сума:</label>
-  <input type="number" id="amount" min="0" step="any" required>
+  <input type="number" id="amount" min="0" required>
   <label for="period">Період:</label>
   <select id="period">
     <option value="month">місяць</option>

@@ -57,13 +57,13 @@ faq:
 
 <form id="vat-form" autocomplete="off">
   <label>Ціна без ПДВ:
-    <input type="number" id="price-net" min="0" step="0.01" placeholder="напр. 1000">
+    <input type="number" id="price-net" min="0" placeholder="напр. 1000">
   </label>
   <label>Ціна з ПДВ:
-    <input type="number" id="price-gross" min="0" step="0.01" placeholder="напр. 1200">
+    <input type="number" id="price-gross" min="0" placeholder="напр. 1200">
   </label>
   <label>Ставка ПДВ (%):
-    <input type="number" id="vat-rate" min="0" step="0.1" placeholder="напр. 20" value="20">
+    <input type="number" id="vat-rate" min="0" placeholder="напр. 20" value="20">
   </label>
   <button type="submit">Розрахувати</button>
 </form>

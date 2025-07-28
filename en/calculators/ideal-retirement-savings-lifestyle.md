@@ -96,10 +96,10 @@ faq:
     <input type="number" id="retirement-age" min="50" max="80" value="65" required>
     
     <label for="current-income">Current Annual Income ($):</label>
-    <input type="number" id="current-income" min="0" step="5000" value="80000" required>
+    <input type="number" id="current-income" min="0" value="80000" required>
     
     <label for="current-savings">Current Retirement Savings ($):</label>
-    <input type="number" id="current-savings" min="0" step="1000" value="50000" required>
+    <input type="number" id="current-savings" min="0" value="50000" required>
   </div>
 
   <div class="form-section">
@@ -115,7 +115,7 @@ faq:
     
     <div id="custom-percentage" style="display:none;">
       <label for="custom-income-replacement">Custom Income Replacement (%):</label>
-      <input type="number" id="custom-income-replacement" min="30" max="150" step="5" value="75">
+      <input type="number" id="custom-income-replacement" min="30" max="150" value="75">
     </div>
   </div>
 
@@ -156,16 +156,16 @@ faq:
   <div class="form-section">
     <h3>Other Income Sources</h3>
     <label for="social-security">Expected Monthly Social Security ($):</label>
-    <input type="number" id="social-security" min="0" step="100" value="2000" required>
+    <input type="number" id="social-security" min="0" value="2000" required>
     
     <label for="pension">Monthly Pension Income ($):</label>
-    <input type="number" id="pension" min="0" step="100" value="0">
+    <input type="number" id="pension" min="0" value="0">
     
     <label for="part-time-income">Expected Part-time Income in Retirement ($):</label>
-    <input type="number" id="part-time-income" min="0" step="500" value="0">
+    <input type="number" id="part-time-income" min="0" value="0">
     
     <label for="rental-income">Rental or Investment Income ($):</label>
-    <input type="number" id="rental-income" min="0" step="100" value="0">
+    <input type="number" id="rental-income" min="0" value="0">
   </div>
 
   <div class="form-section">
@@ -178,10 +178,10 @@ faq:
     </select>
     
     <label for="inflation-rate">Expected Inflation Rate (%):</label>
-    <input type="number" id="inflation-rate" min="0" max="6" step="0.1" value="2.5" required>
+    <input type="number" id="inflation-rate" min="0" max="6" value="2.5" required>
     
     <label for="investment-return">Expected Investment Return (%):</label>
-    <input type="number" id="investment-return" min="3" max="12" step="0.1" value="7" required>
+    <input type="number" id="investment-return" min="3" max="12" value="7" required>
   </div>
 
   <button type="submit">Calculate Ideal Retirement Savings</button>

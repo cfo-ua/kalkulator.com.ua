@@ -60,19 +60,19 @@ faq:
 <form id="wall-area-form" autocomplete="off">
   <label>
     Довжина кімнати (м):
-    <input type="number" id="wall-length" min="0" step="any" required>
+    <input type="number" id="wall-length" min="0" required>
   </label>
   <label>
     Ширина кімнати (м):
-    <input type="number" id="wall-width" min="0" step="any" required>
+    <input type="number" id="wall-width" min="0" required>
   </label>
   <label>
     Висота стін (м):
-    <input type="number" id="wall-height" min="0" step="any" required>
+    <input type="number" id="wall-height" min="0" required>
   </label>
   <label>
     Площа дверей і вікон (м²) <em>(необовʼязково)</em>:
-    <input type="number" id="wall-doors" min="0" step="any" value="0">
+    <input type="number" id="wall-doors" min="0" value="0">
   </label>
   <button type="submit">Обчислити</button>
 </form>

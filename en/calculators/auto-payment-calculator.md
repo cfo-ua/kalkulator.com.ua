@@ -193,16 +193,16 @@ faq:
     <div>
       <h4>🚗 Vehicle Information</h4>
       <label for="vehiclePrice">Vehicle Price ($)</label>
-      <input type="number" id="vehiclePrice" value="30000" min="1000" step="500" required>
+      <input type="number" id="vehiclePrice" value="30000" min="1000" required>
       
       <label for="downPayment">Down Payment ($)</label>
-      <input type="number" id="downPayment" value="6000" min="0" step="500" required>
+      <input type="number" id="downPayment" value="6000" min="0" required>
       
       <label for="tradeInValue">Trade-in Value ($)</label>
-      <input type="number" id="tradeInValue" value="0" min="0" step="500" placeholder="Current vehicle value">
+      <input type="number" id="tradeInValue" value="0" min="0" placeholder="Current vehicle value">
       
       <label for="tradeInOwed">Amount Owed on Trade ($)</label>
-      <input type="number" id="tradeInOwed" value="0" min="0" step="500" placeholder="Remaining loan balance">
+      <input type="number" id="tradeInOwed" value="0" min="0" placeholder="Remaining loan balance">
       
       <label for="vehicleType">Vehicle Type</label>
       <select id="vehicleType">
@@ -216,7 +216,7 @@ faq:
     <div>
       <h4>💳 Financing Details</h4>
       <label for="interestRate">Interest Rate (APR %)</label>
-      <input type="number" id="interestRate" value="6.5" min="0" max="30" step="0.1" required>
+      <input type="number" id="interestRate" value="6.5" min="0" max="30" required>
       
       <label for="loanTerm">Loan Term</label>
       <select id="loanTerm" required>
@@ -229,13 +229,13 @@ faq:
       </select>
       
       <label for="customTerm">Custom Term (months)</label>
-      <input type="number" id="customTerm" min="12" max="96" step="6" placeholder="Enter custom term" style="display: none;">
+      <input type="number" id="customTerm" min="12" max="96" placeholder="Enter custom term" style="display: none;">
       
       <label for="salesTax">Sales Tax Rate (%)</label>
-      <input type="number" id="salesTax" value="6" min="0" max="15" step="0.1" placeholder="State/local tax rate">
+      <input type="number" id="salesTax" value="6" min="0" max="15" placeholder="State/local tax rate">
       
       <label for="additionalFees">Additional Fees ($)</label>
-      <input type="number" id="additionalFees" value="1500" min="0" step="100" placeholder="Doc fees, extended warranty, etc.">
+      <input type="number" id="additionalFees" value="1500" min="0" placeholder="Doc fees, extended warranty, etc.">
     </div>
     
     <div>
@@ -250,10 +250,10 @@ faq:
       </select>
       
       <label for="monthlyIncome">Monthly Gross Income ($)</label>
-      <input type="number" id="monthlyIncome" value="5000" min="0" step="100" placeholder="Before taxes">
+      <input type="number" id="monthlyIncome" value="5000" min="0" placeholder="Before taxes">
       
       <label for="otherDebts">Other Monthly Debt Payments ($)</label>
-      <input type="number" id="otherDebts" value="800" min="0" step="50" placeholder="Credit cards, loans, etc.">
+      <input type="number" id="otherDebts" value="800" min="0" placeholder="Credit cards, loans, etc.">
       
       <label for="lenderType">Preferred Lender Type</label>
       <select id="lenderType">
@@ -276,7 +276,7 @@ faq:
       </select>
       
       <label for="leasePrice">Lease Monthly Payment ($)</label>
-      <input type="number" id="leasePrice" value="350" min="100" step="25" placeholder="For lease comparison">
+      <input type="number" id="leasePrice" value="350" min="100" placeholder="For lease comparison">
       
       <label for="leaseTerm">Lease Term (months)</label>
       <select id="leaseTerm">

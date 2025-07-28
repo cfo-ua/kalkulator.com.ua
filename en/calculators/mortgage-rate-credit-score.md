@@ -92,10 +92,10 @@ faq:
   <div class="form-section">
     <h3>Loan Information</h3>
     <label for="home-price">Home Purchase Price ($):</label>
-    <input type="number" id="home-price" min="50000" step="5000" value="350000" required>
+    <input type="number" id="home-price" min="50000" value="350000" required>
     
     <label for="down-payment">Down Payment ($):</label>
-    <input type="number" id="down-payment" min="0" step="1000" value="70000" required>
+    <input type="number" id="down-payment" min="0" value="70000" required>
     
     <label for="loan-term">Loan Term:</label>
     <select id="loan-term" required>
@@ -116,7 +116,7 @@ faq:
   <div class="form-section">
     <h3>Credit Information</h3>
     <label for="credit-score">Your Credit Score:</label>
-    <input type="number" id="credit-score" min="300" max="850" step="1" value="720" required>
+    <input type="number" id="credit-score" min="300" max="850" value="720" required>
     
     <label for="credit-range">Credit Score Range:</label>
     <select id="credit-range" required>
@@ -131,25 +131,25 @@ faq:
   <div class="form-section">
     <h3>Financial Information</h3>
     <label for="annual-income">Annual Gross Income ($):</label>
-    <input type="number" id="annual-income" min="0" step="5000" value="85000" required>
+    <input type="number" id="annual-income" min="0" value="85000" required>
     
     <label for="monthly-debts">Monthly Debt Payments ($):</label>
-    <input type="number" id="monthly-debts" min="0" step="50" value="400" required>
+    <input type="number" id="monthly-debts" min="0" value="400" required>
     
     <label for="current-interest-rate">Current Market Rate (% annual):</label>
-    <input type="number" id="current-interest-rate" min="3" max="12" step="0.01" value="7.0" required>
+    <input type="number" id="current-interest-rate" min="3" max="12" value="7.0" required>
   </div>
 
   <div class="form-section">
     <h3>Additional Costs</h3>
     <label for="property-tax">Annual Property Tax ($):</label>
-    <input type="number" id="property-tax" min="0" step="1" value="4200" required>
+    <input type="number" id="property-tax" min="0" value="4200" required>
     
     <label for="home-insurance">Annual Home Insurance ($):</label>
-    <input type="number" id="home-insurance" min="0" step="100" value="1200" required>
+    <input type="number" id="home-insurance" min="0" value="1200" required>
     
     <label for="hoa-fees">Monthly HOA Fees ($):</label>
-    <input type="number" id="hoa-fees" min="0" step="25" value="0" required>
+    <input type="number" id="hoa-fees" min="0" value="0" required>
   </div>
 
   <div class="form-section">

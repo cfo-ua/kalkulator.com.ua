@@ -186,10 +186,10 @@ faq:
     <div>
       <h4>💰 Loan Details</h4>
       <label for="loanAmount">Loan Amount ($)</label>
-      <input type="number" id="loanAmount" value="300000" min="1000" step="1000" required>
+      <input type="number" id="loanAmount" value="300000" min="1000" required>
       
       <label for="interestRate">Annual Interest Rate (%)</label>
-      <input type="number" id="interestRate" value="6.5" min="0" max="30" step="0.01" required>
+      <input type="number" id="interestRate" value="6.5" min="0" max="30" required>
       
       <label for="loanTerm">Loan Term</label>
       <select id="loanTerm" required>
@@ -204,7 +204,7 @@ faq:
       </select>
       
       <label for="customTerm">Custom Term (years)</label>
-      <input type="number" id="customTerm" min="1" max="50" step="0.5" placeholder="Enter if using custom" style="display: none;">
+      <input type="number" id="customTerm" min="1" max="50" placeholder="Enter if using custom" style="display: none;">
       
       <label for="startDate">Loan Start Date</label>
       <input type="month" id="startDate">
@@ -213,10 +213,10 @@ faq:
     <div>
       <h4>📈 Extra Payments</h4>
       <label for="extraMonthly">Extra Monthly Payment ($)</label>
-      <input type="number" id="extraMonthly" value="0" min="0" step="25" placeholder="Additional monthly principal">
+      <input type="number" id="extraMonthly" value="0" min="0" placeholder="Additional monthly principal">
       
       <label for="extraAnnual">Extra Annual Payment ($)</label>
-      <input type="number" id="extraAnnual" value="0" min="0" step="100" placeholder="Annual lump sum payment">
+      <input type="number" id="extraAnnual" value="0" min="0" placeholder="Annual lump sum payment">
       
       <label for="extraAnnualMonth">Annual Payment Month</label>
       <select id="extraAnnualMonth">
@@ -235,10 +235,10 @@ faq:
       </select>
       
       <label for="oneTimeExtra">One-Time Extra Payment ($)</label>
-      <input type="number" id="oneTimeExtra" value="0" min="0" step="100" placeholder="Single extra payment">
+      <input type="number" id="oneTimeExtra" value="0" min="0" placeholder="Single extra payment">
       
       <label for="oneTimeMonth">One-Time Payment Month</label>
-      <input type="number" id="oneTimeMonth" min="1" max="360" step="1" placeholder="Payment number (1-360)">
+      <input type="number" id="oneTimeMonth" min="1" max="360" placeholder="Payment number (1-360)">
     </div>
     
     <div>
@@ -275,25 +275,25 @@ faq:
       </div>
       
       <label for="taxBracket">Tax Bracket (% for deductions)</label>
-      <input type="number" id="taxBracket" value="24" min="0" max="50" step="1" placeholder="Marginal tax rate">
+      <input type="number" id="taxBracket" value="24" min="0" max="50" placeholder="Marginal tax rate">
     </div>
     
     <div>
       <h4>📊 Scenario Comparison</h4>
       <label for="compareRate1">Compare Rate 1 (%)</label>
-      <input type="number" id="compareRate1" value="5.5" min="0" max="30" step="0.01" placeholder="Alternative interest rate">
+      <input type="number" id="compareRate1" value="5.5" min="0" max="30" placeholder="Alternative interest rate">
       
       <label for="compareRate2">Compare Rate 2 (%)</label>
-      <input type="number" id="compareRate2" value="7.5" min="0" max="30" step="0.01" placeholder="Another interest rate">
+      <input type="number" id="compareRate2" value="7.5" min="0" max="30" placeholder="Another interest rate">
       
       <label for="compareTerm1">Compare Term 1 (years)</label>
-      <input type="number" id="compareTerm1" value="15" min="1" max="50" step="1" placeholder="Alternative loan term">
+      <input type="number" id="compareTerm1" value="15" min="1" max="50" placeholder="Alternative loan term">
       
       <label for="compareTerm2">Compare Term 2 (years)</label>
-      <input type="number" id="compareTerm2" value="20" min="1" max="50" step="1" placeholder="Another loan term">
+      <input type="number" id="compareTerm2" value="20" min="1" max="50" placeholder="Another loan term">
       
       <label for="compareExtra">Compare Extra Payment ($)</label>
-      <input type="number" id="compareExtra" value="200" min="0" step="25" placeholder="Alternative extra payment">
+      <input type="number" id="compareExtra" value="200" min="0" placeholder="Alternative extra payment">
     </div>
   </div>
   

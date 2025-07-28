@@ -133,34 +133,34 @@ faq:
   <h3>Інформація про дохід та ціноутворення</h3>
   
   <label for="monthlyArpu">Середній дохід на користувача (ARPU) — Місячний</label>
-  <input type="number" id="monthlyArpu" value="99" min="0" step="0.01" placeholder="Місячний дохід від підписки на клієнта">
+  <input type="number" id="monthlyArpu" value="99" min="0" placeholder="Місячний дохід від підписки на клієнта">
 
   <label for="grossMargin">Валова маржа (%)</label>
-  <input type="number" id="grossMargin" value="80" min="0" max="100" step="1" placeholder="Маржа прибутку після прямих витрат">
+  <input type="number" id="grossMargin" value="80" min="0" max="100" placeholder="Маржа прибутку після прямих витрат">
 
   <h3>Метрики утримання клієнтів</h3>
 
   <label for="monthlyChurn">Місячний Churn Rate (%)</label>
-  <input type="number" id="monthlyChurn" value="3.5" min="0" max="50" step="0.1" placeholder="Відсоток клієнтів, втрачених щомісяця">
+  <input type="number" id="monthlyChurn" value="3.5" min="0" max="50" placeholder="Відсоток клієнтів, втрачених щомісяця">
 
   <label for="expansionRate">Місячний коефіцієнт розширення (%)</label>
-  <input type="number" id="expansionRate" value="2.0" min="0" max="20" step="0.1" placeholder="Зростання доходу від існуючих клієнтів">
+  <input type="number" id="expansionRate" value="2.0" min="0" max="20" placeholder="Зростання доходу від існуючих клієнтів">
 
   <h3>Залучення клієнтів</h3>
 
   <label for="customerAcquisitionCost">Вартість залучення клієнта (CAC)</label>
-  <input type="number" id="customerAcquisitionCost" value="350" min="0" step="1" placeholder="Загальна вартість залучення нового клієнта">
+  <input type="number" id="customerAcquisitionCost" value="350" min="0" placeholder="Загальна вартість залучення нового клієнта">
 
   <label for="newCustomersMonthly">Нових клієнтів на місяць</label>
-  <input type="number" id="newCustomersMonthly" value="100" min="0" step="1" placeholder="Місячний темп залучення клієнтів">
+  <input type="number" id="newCustomersMonthly" value="100" min="0" placeholder="Місячний темп залучення клієнтів">
 
   <h3>Розширені параметри</h3>
 
   <label for="discountRate">Річна ставка дисконтування (%)</label>
-  <input type="number" id="discountRate" value="10" min="0" max="30" step="1" placeholder="Вартість капіталу для розрахунку NPV">
+  <input type="number" id="discountRate" value="10" min="0" max="30" placeholder="Вартість капіталу для розрахунку NPV">
 
   <label for="projectionMonths">Період аналізу (місяці)</label>
-  <input type="number" id="projectionMonths" value="36" min="12" max="60" step="6" placeholder="Часовий горизонт для аналізу CLV">
+  <input type="number" id="projectionMonths" value="36" min="12" max="60" placeholder="Часовий горизонт для аналізу CLV">
 
   <button type="submit">Розрахувати SaaS CLV метрики</button>
 </form>
