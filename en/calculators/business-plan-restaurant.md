@@ -83,7 +83,7 @@ seo:
 
     <p>Use our calculator to create a realistic <strong>restaurant business plan</strong> and make informed investment decisions in the food service industry.</p>
 scripts:
-  - /assets/js/business-plan-restaurant.js
+  - /en/js/business-plan-restaurant.js
 faq:
   - question: "How much does it cost to open a restaurant?"
     answer: "Startup costs range from $150,000 to $400,000, including kitchen equipment ($40,000-$150,000), renovation ($30,000-$120,000), furniture ($25,000-$80,000), and working capital ($30,000-$50,000)."
@@ -119,19 +119,19 @@ faq:
       </label>
       <label>
         Kitchen Equipment ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="80000" required>
+        <input type="number" id="equipment-cost" min="1000" value="80000" required>
       </label>
       <label>
         Renovation Cost ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="60000" required>
+        <input type="number" id="renovation-cost" min="1000" value="60000" required>
       </label>
       <label>
         Furniture & Interior ($):
-        <input type="number" id="furniture-cost" min="1000" step="1000" value="40000" required>
+        <input type="number" id="furniture-cost" min="1000" value="40000" required>
       </label>
       <label>
         Additional Costs - licenses, working capital ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="35000" required>
+        <input type="number" id="additional-costs" min="1000" value="35000" required>
       </label>
     </div>
 
@@ -139,7 +139,7 @@ faq:
       <h4>📊 Operating Parameters</h4>
       <label>
         Average Check ($):
-        <input type="number" id="avg-check" min="1" step="0.5" value="28" required>
+        <input type="number" id="avg-check" min="1" value="28" required>
       </label>
       <label>
         Customers per Day:
@@ -159,19 +159,19 @@ faq:
       <h4>💸 Monthly Expenses</h4>
       <label>
         Monthly Rent ($):
-        <input type="number" id="monthly-rent" min="100" step="100" value="12000" required>
+        <input type="number" id="monthly-rent" min="100" value="12000" required>
       </label>
       <label>
         Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="18000" required>
+        <input type="number" id="staff-salaries" min="500" value="18000" required>
       </label>
       <label>
         Utilities ($):
-        <input type="number" id="utilities" min="50" step="50" value="1400" required>
+        <input type="number" id="utilities" min="50" value="1400" required>
       </label>
       <label>
         Other Expenses (marketing, banking, insurance) ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="2500" required>
+        <input type="number" id="other-expenses" min="100" value="2500" required>
       </label>
     </div>
 

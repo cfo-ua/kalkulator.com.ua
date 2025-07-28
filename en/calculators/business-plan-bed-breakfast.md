@@ -151,15 +151,15 @@ faq:
       </label>
       <label>
         Property Cost ($):
-        <input type="number" id="property-cost" min="50000" step="10000" value="200000" required>
+        <input type="number" id="property-cost" min="50000" value="200000" required>
       </label>
       <label>
         Renovation & Furnishing ($):
-        <input type="number" id="renovation-cost" min="10000" step="5000" value="50000" required>
+        <input type="number" id="renovation-cost" min="10000" value="50000" required>
       </label>
       <label>
         Additional Costs - Licenses, Equipment ($):
-        <input type="number" id="additional-costs" min="2000" step="1000" value="8000" required>
+        <input type="number" id="additional-costs" min="2000" value="8000" required>
       </label>
     </div>
 
@@ -167,7 +167,7 @@ faq:
       <h4>📊 Operational Parameters</h4>
       <label>
         Average Nightly Rate ($):
-        <input type="number" id="avg-nightly-rate" min="20" max="300" step="5" value="65" required>
+        <input type="number" id="avg-nightly-rate" min="20" max="300" value="65" required>
       </label>
       <label>
         High Season Occupancy (%):
@@ -187,19 +187,19 @@ faq:
       <h4>💸 Monthly Operating Costs</h4>
       <label>
         Staff (Housekeeping, Front Desk) ($):
-        <input type="number" id="staff-costs" min="1000" step="200" value="2500" required>
+        <input type="number" id="staff-costs" min="1000" value="2500" required>
       </label>
       <label>
         Utilities (Electric, Water, Internet) ($):
-        <input type="number" id="utilities" min="500" step="100" value="1200" required>
+        <input type="number" id="utilities" min="500" value="1200" required>
       </label>
       <label>
         Marketing & Platform Commissions ($):
-        <input type="number" id="marketing" min="200" step="100" value="800" required>
+        <input type="number" id="marketing" min="200" value="800" required>
       </label>
       <label>
         Other Expenses (Insurance, Supplies) ($):
-        <input type="number" id="other-expenses" min="300" step="100" value="600" required>
+        <input type="number" id="other-expenses" min="300" value="600" required>
       </label>
     </div>
 

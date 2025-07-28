@@ -120,15 +120,15 @@ faq:
       </label>
       <label>
         Вартість нерухомості ($):
-        <input type="number" id="property-cost" min="50000" step="10000" value="200000" required>
+        <input type="number" id="property-cost" min="50000" value="200000" required>
       </label>
       <label>
         Ремонт та меблі ($):
-        <input type="number" id="renovation-cost" min="10000" step="5000" value="50000" required>
+        <input type="number" id="renovation-cost" min="10000" value="50000" required>
       </label>
       <label>
         Додаткові витрати - ліцензії, обладнання ($):
-        <input type="number" id="additional-costs" min="2000" step="1000" value="8000" required>
+        <input type="number" id="additional-costs" min="2000" value="8000" required>
       </label>
     </div>
 
@@ -136,7 +136,7 @@ faq:
       <h4>📊 Операційні параметри</h4>
       <label>
         Середня ціна за ніч ($):
-        <input type="number" id="avg-nightly-rate" min="20" max="300" step="5" value="65" required>
+        <input type="number" id="avg-nightly-rate" min="20" max="300" value="65" required>
       </label>
       <label>
         Заповнюваність - високий сезон (%):
@@ -156,19 +156,19 @@ faq:
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Персонал (прибирання, адміністратор) ($):
-        <input type="number" id="staff-costs" min="1000" step="200" value="2500" required>
+        <input type="number" id="staff-costs" min="1000" value="2500" required>
       </label>
       <label>
         Комунальні послуги ($):
-        <input type="number" id="utilities" min="500" step="100" value="1200" required>
+        <input type="number" id="utilities" min="500" value="1200" required>
       </label>
       <label>
         Маркетинг та комісії платформ ($):
-        <input type="number" id="marketing" min="200" step="100" value="800" required>
+        <input type="number" id="marketing" min="200" value="800" required>
       </label>
       <label>
         Інші витрати (страхування, витратні матеріали) ($):
-        <input type="number" id="other-expenses" min="300" step="100" value="600" required>
+        <input type="number" id="other-expenses" min="300" value="600" required>
       </label>
     </div>
 

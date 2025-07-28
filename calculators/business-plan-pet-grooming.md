@@ -111,15 +111,15 @@ faq:
       </label>
       <label>
         Вартість обладнання ($):
-        <input type="number" id="equipment-cost" min="10000" step="1000" value="25000" required>
+        <input type="number" id="equipment-cost" min="10000" value="25000" required>
       </label>
       <label>
         Вартість ремонту приміщення ($):
-        <input type="number" id="renovation-cost" min="5000" step="1000" value="18000" required>
+        <input type="number" id="renovation-cost" min="5000" value="18000" required>
       </label>
       <label>
         Додаткові витрати - ліцензії, початковий капітал ($):
-        <input type="number" id="additional-costs" min="3000" step="1000" value="7000" required>
+        <input type="number" id="additional-costs" min="3000" value="7000" required>
       </label>
     </div>
 
@@ -127,11 +127,11 @@ faq:
       <h4>📊 Операційні параметри</h4>
       <label>
         Щомісячна оренда ($):
-        <input type="number" id="monthly-rent" min="1000" step="200" value="4000" required>
+        <input type="number" id="monthly-rent" min="1000" value="4000" required>
       </label>
       <label>
         Середня ціна за груммінг ($):
-        <input type="number" id="avg-service-price" min="20" max="100" step="5" value="45" required>
+        <input type="number" id="avg-service-price" min="20" max="100" value="45" required>
       </label>
       <label>
         Клієнтів на день:
@@ -147,19 +147,19 @@ faq:
       <h4>👥 Персонал та витрати</h4>
       <label>
         Зарплати персоналу ($):
-        <input type="number" id="staff-salaries" min="2000" step="500" value="5500" required>
+        <input type="number" id="staff-salaries" min="2000" value="5500" required>
       </label>
       <label>
         Витратні матеріали ($):
-        <input type="number" id="supplies" min="300" step="100" value="800" required>
+        <input type="number" id="supplies" min="300" value="800" required>
       </label>
       <label>
         Страхування ($):
-        <input type="number" id="insurance" min="100" step="50" value="300" required>
+        <input type="number" id="insurance" min="100" value="300" required>
       </label>
       <label>
         Інші витрати (реклама, комунальні) ($):
-        <input type="number" id="other-expenses" min="200" step="100" value="600" required>
+        <input type="number" id="other-expenses" min="200" value="600" required>
       </label>
     </div>
 

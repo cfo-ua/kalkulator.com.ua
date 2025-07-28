@@ -82,7 +82,7 @@ seo:
 
     <p>Use our calculator to create a realistic <strong>food truck business plan</strong> and make informed investment decisions in the mobile food industry.</p>
 scripts:
-  - /assets/js/business-plan-food-truck.js
+  - /en/js/business-plan-food-truck.js
 faq:
   - question: "How much does it cost to start a food truck?"
     answer: "Startup costs range from $60,000 to $180,000, including truck purchase ($30,000-$100,000), equipment ($15,000-$40,000), customization ($10,000-$30,000), and permits ($2,000-$8,000)."
@@ -118,19 +118,19 @@ faq:
       </label>
       <label>
         Truck Cost ($):
-        <input type="number" id="truck-cost" min="1000" step="1000" value="75000" required>
+        <input type="number" id="truck-cost" min="1000" value="75000" required>
       </label>
       <label>
         Kitchen Equipment ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="25000" required>
+        <input type="number" id="equipment-cost" min="1000" value="25000" required>
       </label>
       <label>
         Customization & Design ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="20000" required>
+        <input type="number" id="renovation-cost" min="1000" value="20000" required>
       </label>
       <label>
         Permits, Licenses & Working Capital ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="12000" required>
+        <input type="number" id="additional-costs" min="1000" value="12000" required>
       </label>
     </div>
 
@@ -146,7 +146,7 @@ faq:
       </label>
       <label>
         Average Transaction ($):
-        <input type="number" id="avg-check" min="1" step="0.25" value="8" required>
+        <input type="number" id="avg-check" min="1" value="8" required>
       </label>
       <label>
         Customers per Hour:
@@ -162,15 +162,15 @@ faq:
       <h4>💸 Monthly Expenses</h4>
       <label>
         Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="4500" required>
+        <input type="number" id="staff-salaries" min="500" value="4500" required>
       </label>
       <label>
         Fuel & Maintenance ($):
-        <input type="number" id="fuel-maintenance" min="100" step="100" value="1200" required>
+        <input type="number" id="fuel-maintenance" min="100" value="1200" required>
       </label>
       <label>
         Insurance, Permits & Other Expenses ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="800" required>
+        <input type="number" id="other-expenses" min="100" value="800" required>
       </label>
     </div>
 
