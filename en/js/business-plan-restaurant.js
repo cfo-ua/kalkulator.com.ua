@@ -31,34 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-  function generateCSVData(data) {
-    const csvData = [
-      ['Metric', 'Value'],
-      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
-      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
-      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
-      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
-      ['ROI (%)', data.roi.toFixed(1)],
-      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
-    ];
-    
-    return csvData.map(row => row.join(',')).join('\n');
-  }
-
-  function downloadCSV(data) {
-    const csv = generateCSVData(data);
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'restaurant_business_plan.csv';
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }
-
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -109,36 +81,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Determine business viability
       let viabilityType = 'warning';
-      let viabilityMessage = 'Потребує оптимізації';
+      let viabilityMessage = 'Needs Optimization';
       if (roi >= 15 && profitMargin >= 12) {
         viabilityType = 'success';
-        viabilityMessage = 'Високоприбутковий ресторан';
+        viabilityMessage = 'High Profit Restaurant';
       } else if (roi >= 8 && profitMargin >= 6) {
         viabilityType = 'info';
-        viabilityMessage = 'Стабільний бізнес';
+        viabilityMessage = 'Stable Business';
       }
 
       // Generate recommendations
       let recommendations = [];
       if (profitMargin < 8) {
-        recommendations.push('📈 Підвищіть середній чек через меню преміум-позиції');
-        recommendations.push('💰 Оптимізуйте витрати на продукти (цільовий показник 28-32%)');
+        recommendations.push('📈 Increase average check through premium menu items');
+        recommendations.push('💰 Optimize food costs (target 28-32% of revenue)');
       }
       if (laborCostPercent > 35) {
-        recommendations.push('👥 Оптимізуйте штат персоналу (цільовий показник 25-32% від виручки)');
-        recommendations.push('🤖 Впровадьте автоматизацію для зменшення потреби в персоналі');
+        recommendations.push('👥 Optimize staff size (target 25-32% of revenue)');
+        recommendations.push('🤖 Implement automation to reduce labor needs');
       }
       if (rentPercent > 10) {
-        recommendations.push('🏢 Розгляньте переїзд у приміщення з меншою орендою');
-        recommendations.push('📦 Додайте доставку для збільшення оборотності без додаткових місць');
+        recommendations.push('🏢 Consider relocating to lower rent location');
+        recommendations.push('📦 Add delivery to increase turnover without extra seating');
       }
       if (seatTurnover < 2) {
-        recommendations.push('⏰ Збільшіть оборотність столів через швидший сервіс');
-        recommendations.push('🎯 Проведіть маркетингові кампанії для залучення клієнтів');
+        recommendations.push('⏰ Increase table turnover through faster service');
+        recommendations.push('🎯 Run marketing campaigns to attract customers');
       }
       if (avgCheck < 20) {
-        recommendations.push('🍷 Додайте алкогольні напої та десерти з високою маржею');
-        recommendations.push('🎉 Створіть спеціальні пропозиції та сети-меню');
+        recommendations.push('🍷 Add alcoholic beverages and high-margin desserts');
+        recommendations.push('🎉 Create special offers and set menus');
+      }
       }
 
       const data = {
@@ -162,27 +135,27 @@ document.addEventListener("DOMContentLoaded", function () {
             'info'
           )}
           ${createInsightCard(
-            '📈 Щомісячний дохід',
+            '📈 Monthly Revenue',
             formatNumber(monthlyRevenue),
-            `${clientsPerDay} клієнтів × ${avgCheck}$ × ${workingDays} днів`,
+            `${clientsPerDay} customers × $${avgCheck} × ${workingDays} days`,
             'success'
           )}
           ${createInsightCard(
-            '💸 Щомісячні витрати',
+            '💸 Monthly Expenses',
             formatNumber(monthlyExpenses),
-            `Включно з ${formatPercent(cogsPercent)} собівартості`,
+            `Including ${formatPercent(cogsPercent)} COGS`,
             'warning'
           )}
           ${createInsightCard(
-            '💵 Чистий прибуток',
+            '💵 Net Profit',
             formatNumber(monthlyProfit),
-            `Маржа: ${formatPercent(profitMargin)}`,
+            `Margin: ${formatPercent(profitMargin)}`,
             viabilityType
           )}
           ${createInsightCard(
-            '⏳ Окупність',
-            `${paybackPeriod.toFixed(1)} років`,
-            paybackPeriod < 4 ? 'Швидка окупність' : paybackPeriod < 6 ? 'Помірна окупність' : 'Повільна окупність',
+            '⏳ Payback Period',
+            `${paybackPeriod.toFixed(1)} years`,
+            paybackPeriod < 4 ? 'Fast Payback' : paybackPeriod < 6 ? 'Moderate Payback' : 'Slow Payback',
             paybackPeriod < 4 ? 'success' : paybackPeriod < 6 ? 'info' : 'warning'
           )}
           ${createInsightCard(
@@ -194,46 +167,46 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Детальний аналіз ресторану</h4>
+          <h4>📋 Detailed Restaurant Analysis</h4>
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-label">Річний дохід:</span>
+              <span class="metric-label">Annual Revenue:</span>
               <span class="metric-value">${formatNumber(annualRevenue)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Річний прибуток:</span>
+              <span class="metric-label">Annual Profit:</span>
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на місце:</span>
-              <span class="metric-value">${formatNumber(revenuePerSeat)}/місяць</span>
+              <span class="metric-label">Revenue per Seat:</span>
+              <span class="metric-value">${formatNumber(revenuePerSeat)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на м²:</span>
-              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/місяць</span>
+              <span class="metric-label">Revenue per Sq Ft:</span>
+              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Оборотність столів:</span>
-              <span class="metric-value">${seatTurnover.toFixed(1)} за день</span>
+              <span class="metric-label">Table Turnover:</span>
+              <span class="metric-value">${seatTurnover.toFixed(1)} per day</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на персонал:</span>
-              <span class="metric-value">${formatPercent(laborCostPercent)} від доходу</span>
+              <span class="metric-label">Labor Costs:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} of revenue</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на оренду:</span>
-              <span class="metric-value">${formatPercent(rentPercent)} від доходу</span>
+              <span class="metric-label">Rent Costs:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} of revenue</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Собівартість продуктів:</span>
-              <span class="metric-value">${formatNumber(monthlyCoGS)}/місяць</span>
+              <span class="metric-label">Cost of Goods:</span>
+              <span class="metric-value">${formatNumber(monthlyCoGS)}/month</span>
             </div>
           </div>
         </div>
 
         ${recommendations.length > 0 ? `
           <div class="recommendations">
-            <h4>💡 Рекомендації для оптимізації</h4>
+            <h4>💡 Optimization Recommendations</h4>
             <ul>
               ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
             </ul>
@@ -241,8 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ` : ''}
 
         <div class="action-buttons">
-          <button onclick="window.print()" class="btn-secondary">🖨️ Друкувати звіт</button>
-          <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">📊 Завантажити дані CSV</button>
+          <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
+          <button onclick="downloadCSV()" class="btn-primary">📊 Download CSV Data</button>
         </div>
 
         <div class="disclaimer">
@@ -250,8 +223,40 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
 
-      // Expose downloadCSV function globally for the button
-      window.downloadCSV = downloadCSV;
+      // Store data for CSV download
+      window.restaurantBusinessData = {
+        'Restaurant Area (sq ft)': area,
+        'Number of Seats': seats,
+        'Total Investment ($)': totalInvestment,
+        'Annual Revenue ($)': annualRevenue,
+        'Annual Expenses ($)': monthlyExpenses * 12,
+        'Annual Profit ($)': annualProfit,
+        'Monthly Profit ($)': monthlyProfit,
+        'Profit Margin (%)': profitMargin,
+        'Annual ROI (%)': roi,
+        'Payback Period (years)': paybackPeriod,
+        'Revenue per Seat ($)': revenuePerSeat,
+        'Revenue per Sq Ft ($)': revenuePerSqUnit,
+        'Average Check ($)': avgCheck,
+        'Seat Turnover': seatTurnover,
+        'Labor Cost (%)': laborCostPercent,
+        'Rent as % of Revenue': rentPercent
+      };
     });
   }
+
+  // CSV download function
+  window.downloadCSV = function() {
+    if (!window.restaurantBusinessData) return;
+    
+    const csv = Object.entries(window.restaurantBusinessData)
+      .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
+      .join('\n');
+    
+    const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'restaurant-business-plan.csv';
+    link.click();
+  };
 });

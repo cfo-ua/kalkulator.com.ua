@@ -31,34 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-  function generateCSVData(data) {
-    const csvData = [
-      ['Metric', 'Value'],
-      ['Total Investment', `$${data.totalInvestment.toLocaleString()}`],
-      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
-      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
-      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
-      ['ROI (%)', data.roi.toFixed(1)],
-      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
-    ];
-    
-    return csvData.map(row => row.join(',')).join('\n');
-  }
-
-  function downloadCSV(data) {
-    const csv = generateCSVData(data);
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'cafe_business_plan.csv';
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }
-
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -228,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="action-buttons">
           <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
-          <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">📊 Download CSV Data</button>
+          <button onclick="downloadCSV()" class="btn-primary">📊 Download CSV Data</button>
         </div>
 
         <div class="disclaimer">
@@ -236,8 +208,38 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
 
-      // Expose downloadCSV function globally for the button
-      window.downloadCSV = downloadCSV;
+      // Store data for CSV download
+      window.cafeBusinessData = {
+        'Area (sq ft)': area,
+        'Number of Seats': seats,
+        'Total Investment ($)': totalInvestment,
+        'Annual Revenue ($)': annualRevenue,
+        'Annual Expenses ($)': monthlyExpenses * 12,
+        'Annual Profit ($)': annualProfit,
+        'Monthly Profit ($)': monthlyProfit,
+        'Profit Margin (%)': profitMargin,
+        'Annual ROI (%)': roi,
+        'Payback Period (years)': paybackPeriod,
+        'Capacity Utilization (%)': capacityUtilization,
+        'Revenue per Sq Ft ($)': revenuePerSqUnit,
+        'Average Check ($)': avgCheck,
+        'Clients per Day': clientsPerDay
+      };
     });
   }
+
+  // CSV download function
+  window.downloadCSV = function() {
+    if (!window.cafeBusinessData) return;
+    
+    const csv = Object.entries(window.cafeBusinessData)
+      .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
+      .join('\n');
+    
+    const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'cafe-business-plan.csv';
+    link.click();
+  };
 });
