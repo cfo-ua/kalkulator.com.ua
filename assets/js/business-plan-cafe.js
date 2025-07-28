@@ -1,6 +1,131 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('cafe-form');
   const result = document.getElementById('cafe-result');
+  
+  // Detect language based on URL
+  const isEnglish = window.location.pathname.includes('/en/');
+  
+  // Language-specific text
+  const text = {
+    uk: {
+      totalInvestment: '💰 Загальні інвестиції',
+      initialCapital: 'Початковий капітал',
+      monthlyRevenue: '📈 Щомісячний дохід',
+      monthlyExpenses: '💸 Щомісячні витрати',
+      netProfit: '💵 Чистий прибуток',
+      margin: 'Маржа',
+      paybackPeriod: '⏳ Окупність',
+      roi: '📊 ROI',
+      detailedAnalysis: '📋 Детальний аналіз',
+      annualRevenue: 'Річний дохід:',
+      annualProfit: 'Річний прибуток:',
+      capacityUtilization: 'Використання місць:',
+      revenuePerSqUnit: 'Дохід на м²:',
+      revenuePerSeat: 'Дохід на місце:',
+      costOfGoods: 'Собівартість продуктів:',
+      recommendations: '💡 Рекомендації',
+      optimizationRecommendations: '💡 Рекомендації для оптимізації',
+      printReport: '🖨️ Друкувати звіт',
+      downloadCsv: '📊 Завантажити дані CSV',
+      disclaimer: '⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації та ефективності управління.',
+      month: '/місяць',
+      errorMessage: 'Будь ласка, введіть коректні значення для всіх полів.',
+      csvHeaders: {
+        metric: 'Показник',
+        value: 'Значення',
+        totalInvestment: 'Загальні інвестиції',
+        monthlyRevenue: 'Щомісячний дохід',
+        monthlyExpenses: 'Щомісячні витрати',
+        monthlyProfit: 'Щомісячний прибуток',
+        annualRevenue: 'Річний дохід',
+        annualProfit: 'Річний прибуток',
+        paybackPeriod: 'Термін окупності (років)',
+        roiPercent: 'ROI (%)',
+        profitMargin: 'Маржа прибутку (%)'
+      }
+      fastPayback: 'Швидка окупність',
+      moderatePayback: 'Помірна окупність',
+      slowPayback: 'Повільна окупність',
+      highProfitBusiness: 'Високоприбутковий бізнес',
+      stableBusiness: 'Стабільний бізнес',
+      needsOptimization: 'Потребує оптимізації',
+      includesCogs: 'Включно з',
+      costOfGoods: 'собівартості',
+      clients: 'клієнтів',
+      days: 'днів',
+      years: 'років',
+      recommendations: {
+        increaseAvgCheck: '📈 Підвищіть середній чек через меню преміум-класу',
+        optimizeCosts: '💰 Оптимізуйте витрати на продукти (цільовий показник 25-30%)',
+        attractClients: '🎯 Залучіть більше клієнтів через маркетинг та програми лояльності',
+        expandHours: '⏰ Розширте робочі години або додайте послуги доставки',
+        reduceSpace: '🏢 Розгляньте меншу площу для зниження оренди',
+        addTakeaway: '📦 Додайте takeaway формат для збільшення оборотності',
+        addSpecialties: '☕ Запропонуйте спеціальні кавові напої та десерти',
+        expandMenu: '🥐 Розширте меню снідаків та легких обідів'
+      }
+    },
+    en: {
+      totalInvestment: '💰 Total Investment',
+      initialCapital: 'Initial Capital',
+      monthlyRevenue: '📈 Monthly Revenue',
+      monthlyExpenses: '💸 Monthly Expenses',
+      netProfit: '💵 Net Profit',
+      margin: 'Margin',
+      paybackPeriod: '⏳ Payback Period',
+      roi: '📊 ROI',
+      detailedAnalysis: '📋 Detailed Analysis',
+      annualRevenue: 'Annual Revenue:',
+      annualProfit: 'Annual Profit:',
+      capacityUtilization: 'Capacity Utilization:',
+      revenuePerSqUnit: 'Revenue per sq ft:',
+      revenuePerSeat: 'Revenue per Seat:',
+      costOfGoods: 'Cost of Goods:',
+      recommendations: '💡 Recommendations',
+      optimizationRecommendations: '💡 Optimization Recommendations',
+      printReport: '🖨️ Print Report',
+      downloadCsv: '📊 Download CSV Data',
+      disclaimer: '⚠️ Calculations are approximate and based on input data. Actual results may vary depending on market conditions, location, and management efficiency.',
+      month: '/month',
+      errorMessage: 'Please enter valid values for all fields.',
+      csvHeaders: {
+        metric: 'Metric',
+        value: 'Value',
+        totalInvestment: 'Total Startup Investment',
+        monthlyRevenue: 'Monthly Revenue',
+        monthlyExpenses: 'Monthly Expenses',
+        monthlyProfit: 'Monthly Net Profit',
+        annualRevenue: 'Annual Revenue',
+        annualProfit: 'Annual Net Profit',
+        paybackPeriod: 'Payback Period (years)',
+        roiPercent: 'ROI (%)',
+        profitMargin: 'Profit Margin (%)'
+      }
+      fastPayback: 'Fast Payback',
+      moderatePayback: 'Moderate Payback',
+      slowPayback: 'Slow Payback',
+      highProfitBusiness: 'High Profit Business',
+      stableBusiness: 'Stable Business',
+      needsOptimization: 'Needs Optimization',
+      includesCogs: 'Including',
+      costOfGoods: 'COGS',
+      clients: 'customers',
+      days: 'days',
+      years: 'years',
+      recommendations: {
+        increaseAvgCheck: '📈 Increase average transaction with premium menu items',
+        optimizeCosts: '💰 Optimize food costs (target 25-30% of revenue)',
+        attractClients: '🎯 Attract more customers through marketing and loyalty programs',
+        expandHours: '⏰ Extend operating hours or add delivery services',
+        reduceSpace: '🏢 Consider smaller space to reduce rent costs',
+        addTakeaway: '📦 Add takeaway format to increase turnover',
+        addSpecialties: '☕ Offer specialty coffee drinks and desserts',
+        expandMenu: '🥐 Expand breakfast and light lunch menu'
+      }
+    }
+  };
+  
+  const t = text[isEnglish ? 'en' : 'uk'];
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -33,16 +158,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCSVData(data) {
     const csvData = [
-      ['Metric', 'Value'],
-      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
-      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
-      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
-      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
-      ['ROI (%)', data.roi.toFixed(1)],
-      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
+      [t.csvHeaders.metric, t.csvHeaders.value],
+      [t.csvHeaders.totalInvestment, `$${data.totalInvestment.toLocaleString()}`],
+      [t.csvHeaders.monthlyRevenue, `$${data.monthlyRevenue.toLocaleString()}`],
+      [t.csvHeaders.monthlyExpenses, `$${data.monthlyExpenses.toLocaleString()}`],
+      [t.csvHeaders.monthlyProfit, `$${data.monthlyProfit.toLocaleString()}`],
+      [t.csvHeaders.annualRevenue, `$${data.annualRevenue.toLocaleString()}`],
+      [t.csvHeaders.annualProfit, `$${data.annualProfit.toLocaleString()}`],
+      [t.csvHeaders.paybackPeriod, data.paybackPeriod.toFixed(1)],
+      [t.csvHeaders.roiPercent, data.roi.toFixed(1)],
+      [t.csvHeaders.profitMargin, data.profitMargin.toFixed(1)]
     ];
     
     return csvData.map(row => row.join(',')).join('\n');
@@ -107,32 +232,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Determine business viability
       let viabilityType = 'warning';
-      let viabilityMessage = 'Потребує оптимізації';
+      let viabilityMessage = t.needsOptimization;
       if (roi >= 20 && profitMargin >= 15) {
         viabilityType = 'success';
-        viabilityMessage = 'Високоприбутковий бізнес';
+        viabilityMessage = t.highProfitBusiness;
       } else if (roi >= 12 && profitMargin >= 8) {
         viabilityType = 'info';
-        viabilityMessage = 'Стабільний бізнес';
+        viabilityMessage = t.stableBusiness;
       }
 
       // Generate recommendations
       let recommendations = [];
       if (profitMargin < 10) {
-        recommendations.push('📈 Підвищіть середній чек через меню преміум-класу');
-        recommendations.push('💰 Оптимізуйте витрати на продукти (цільовий показник 25-30%)');
+        recommendations.push(t.recommendations.increaseAvgCheck);
+        recommendations.push(t.recommendations.optimizeCosts);
       }
       if (capacityUtilization < 50) {
-        recommendations.push('🎯 Залучіть більше клієнтів через маркетинг та програми лояльності');
-        recommendations.push('⏰ Розширте робочі години або додайте послуги доставки');
+        recommendations.push(t.recommendations.attractClients);
+        recommendations.push(t.recommendations.expandHours);
       }
       if (revenuePerSqUnit < 50) {
-        recommendations.push('🏢 Розгляньте меншу площу для зниження оренди');
-        recommendations.push('📦 Додайте takeaway формат для збільшення оборотності');
+        recommendations.push(t.recommendations.reduceSpace);
+        recommendations.push(t.recommendations.addTakeaway);
       }
       if (avgCheck < 8) {
-        recommendations.push('☕ Запропонуйте спеціальні кавові напої та десерти');
-        recommendations.push('🥐 Розширте меню снідаків та легких обідів');
+        recommendations.push(t.recommendations.addSpecialties);
+        recommendations.push(t.recommendations.expandMenu);
       }
 
       const data = {
@@ -150,37 +275,37 @@ document.addEventListener("DOMContentLoaded", function () {
       result.innerHTML = `
         <div class="insight-cards">
           ${createInsightCard(
-            '💰 Загальні інвестиції',
+            t.totalInvestment,
             formatNumber(totalInvestment),
-            'Початковий капітал',
+            t.initialCapital,
             'info'
           )}
           ${createInsightCard(
-            '📈 Щомісячний дохід',
+            t.monthlyRevenue,
             formatNumber(monthlyRevenue),
-            `${clientsPerDay} клієнтів × ${avgCheck}$ × ${workingDays} днів`,
+            `${clientsPerDay} ${t.clients} × ${avgCheck}$ × ${workingDays} ${t.days}`,
             'success'
           )}
           ${createInsightCard(
-            '💸 Щомісячні витрати',
+            t.monthlyExpenses,
             formatNumber(monthlyExpenses),
-            `Включно з ${formatPercent(cogsPercent)} собівартості`,
+            `${t.includesCogs} ${formatPercent(cogsPercent)} ${t.costOfGoods}`,
             'warning'
           )}
           ${createInsightCard(
-            '💵 Чистий прибуток',
+            t.netProfit,
             formatNumber(monthlyProfit),
-            `Маржа: ${formatPercent(profitMargin)}`,
+            `${t.margin}: ${formatPercent(profitMargin)}`,
             viabilityType
           )}
           ${createInsightCard(
-            '⏳ Окупність',
-            `${paybackPeriod.toFixed(1)} років`,
-            paybackPeriod < 3 ? 'Швидка окупність' : paybackPeriod < 5 ? 'Помірна окупність' : 'Повільна окупність',
+            t.paybackPeriod,
+            `${paybackPeriod.toFixed(1)} ${t.years}`,
+            paybackPeriod < 3 ? t.fastPayback : paybackPeriod < 5 ? t.moderatePayback : t.slowPayback,
             paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
           )}
           ${createInsightCard(
-            '📊 ROI',
+            t.roi,
             formatPercent(roi),
             viabilityMessage,
             viabilityType
@@ -188,38 +313,38 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Детальний аналіз</h4>
+          <h4>${t.detailedAnalysis}</h4>
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-label">Річний дохід:</span>
+              <span class="metric-label">${t.annualRevenue}</span>
               <span class="metric-value">${formatNumber(annualRevenue)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Річний прибуток:</span>
+              <span class="metric-label">${t.annualProfit}</span>
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Завантаженість залу:</span>
+              <span class="metric-label">${t.capacityUtilization}</span>
               <span class="metric-value">${formatPercent(capacityUtilization)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на м²:</span>
-              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/місяць</span>
+              <span class="metric-label">${t.revenuePerSqUnit}</span>
+              <span class="metric-value">${formatNumber(revenuePerSqUnit)}${t.month}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на місце:</span>
-              <span class="metric-value">${formatNumber(monthlyRevenue / seats)}/місяць</span>
+              <span class="metric-label">${t.revenuePerSeat}</span>
+              <span class="metric-value">${formatNumber(monthlyRevenue / seats)}${t.month}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Собівартість продуктів:</span>
-              <span class="metric-value">${formatNumber(monthlyCoGS)}/місяць</span>
+              <span class="metric-label">${t.costOfGoods}</span>
+              <span class="metric-value">${formatNumber(monthlyCoGS)}${t.month}</span>
             </div>
           </div>
         </div>
 
         ${recommendations.length > 0 ? `
           <div class="recommendations">
-            <h4>💡 Рекомендації для оптимізації</h4>
+            <h4>${t.optimizationRecommendations}</h4>
             <ul>
               ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
             </ul>
@@ -227,12 +352,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ` : ''}
 
         <div class="action-buttons">
-          <button onclick="window.print()" class="btn-secondary">🖨️ Друкувати звіт</button>
-          <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">📊 Завантажити дані CSV</button>
+          <button onclick="window.print()" class="btn-secondary">${t.printReport}</button>
+          <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">${t.downloadCsv}</button>
         </div>
 
         <div class="disclaimer">
-          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації та ефективності управління.</small></p>
+          <p><small>${t.disclaimer}</small></p>
         </div>
       `;
 
