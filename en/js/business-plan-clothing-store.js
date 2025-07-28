@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('clothing-store-form');
   const result = document.getElementById('clothing-store-result');
+  
+  // Store type automation
+  const storeTypeSelect = document.getElementById('store-type');
+  const markupInput = document.getElementById('markup-percent');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -30,38 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
   }
-
-  function generateCSVData(data) {
-    const csvData = [
-      ['Metric', 'Value'],
-      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
-      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
-      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
-      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
-      ['ROI (%)', data.roi.toFixed(1)],
-      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
-    ];
-    
-    return csvData.map(row => row.join(',')).join('\n');
-  }
-
-  function downloadCSV(data) {
-    const csv = generateCSVData(data);
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'clothing_store_business_plan.csv';
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }
-
-  // Update markup based on store type selection
-  const storeTypeSelect = document.getElementById('store-type');
-  const markupInput = document.getElementById('markup-percent');
 
   if (storeTypeSelect && markupInput) {
     storeTypeSelect.addEventListener('change', function() {
@@ -99,17 +71,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const inventoryTurnover = parseFloat(document.getElementById('inventory-turnover').value);
       const staffSalaries = parseFloat(document.getElementById('staff-salaries').value);
       const utilities = parseFloat(document.getElementById('utilities').value);
-      const marketing = parseFloat(document.getElementById('marketing').value);
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
+
+      // Store type names
+      const storeTypeNames = {
+        mass: 'Mass Market',
+        mid: 'Mid-Range',
+        premium: 'Premium',
+        boutique: 'Boutique'
+      };
 
       // Calculate total startup investment
       const totalInvestment = inventoryCost + equipmentCost + renovationCost + additionalCosts;
 
-      // Calculate monthly revenue (Cost + Markup)
-      const monthlyRevenue = monthlySalesCost * (1 + markupPercent / 100);
+      // Calculate monthly revenue
+      const monthlyRevenue = (monthlySalesCost * markupPercent) / 100;
 
       // Calculate monthly expenses
-      const monthlyExpenses = monthlyRent + staffSalaries + monthlySalesCost + utilities + marketing + otherExpenses;
+      const monthlyExpenses = monthlyRent + staffSalaries + monthlySalesCost + utilities + otherExpenses;
 
       // Calculate profit metrics
       const monthlyProfit = monthlyRevenue - monthlyExpenses;
@@ -123,103 +102,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Calculate efficiency metrics
       const revenuePerSqUnit = monthlyRevenue / area;
-      const grossMargin = ((monthlyRevenue - monthlySalesCost) / monthlyRevenue) * 100;
-      const averageInventoryValue = inventoryCost;
-      const inventoryTurnoverMonthly = inventoryTurnover / 12;
+      const inventoryEfficiency = (monthlySalesCost * 12) / inventoryCost;
 
-      // Retail specific analysis
+      // Clothing store specific analysis
       const rentPercent = (monthlyRent / monthlyRevenue) * 100;
-      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
-      const cogsPercent = (monthlySalesCost / monthlyRevenue) * 100;
+      const staffPercent = (staffSalaries / monthlyRevenue) * 100;
+      const cogPercent = (monthlySalesCost / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
-      let viabilityMessage = 'Потребує оптимізації';
-      if (roi >= 20 && profitMargin >= 15) {
+      let viabilityMessage = 'Needs Optimization';
+      if (roi >= 25 && profitMargin >= 20) {
         viabilityType = 'success';
-        viabilityMessage = 'Високоприбутковий магазин';
-      } else if (roi >= 12 && profitMargin >= 8) {
+        viabilityMessage = 'High Profit Store';
+      } else if (roi >= 15 && profitMargin >= 12) {
         viabilityType = 'info';
-        viabilityMessage = 'Стабільний бізнес';
+        viabilityMessage = 'Stable Business';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 10) {
-        recommendations.push('📈 Підвищіть наукову на товари або знизьте витрати');
-        recommendations.push('🛒 Зосередьтеся на товарах з вищою маржею');
-      }
-      if (rentPercent > 15) {
-        recommendations.push('🏢 Розгляньте переїзд у приміщення з меншою орендою');
-        recommendations.push('📦 Додайте онлайн-продажі для збільшення оборотності');
+      if (profitMargin < 15) {
+        recommendations.push('📈 Increase markup or reduce cost of goods');
+        recommendations.push('💰 Negotiate better wholesale prices');
       }
       if (inventoryTurnover < 4) {
-        recommendations.push('📊 Покращіте управління запасами');
-        recommendations.push('💰 Проводьте розпродажі застарілих товарів');
+        recommendations.push('📦 Improve inventory management and turnover');
+        recommendations.push('🔄 Reduce slow-moving stock with promotions');
       }
-      if (laborCostPercent > 20) {
-        recommendations.push('👥 Оптимізуйте графік роботи персоналу');
-        recommendations.push('🤖 Впровадьте самообслуговування де можливо');
+      if (rentPercent > 15) {
+        recommendations.push('🏢 Consider relocating to reduce rent costs');
+        recommendations.push('🌐 Add online sales to increase revenue per sq ft');
       }
-      if (revenuePerSqUnit < 60) {
-        recommendations.push('🎯 Покращіть мерчандайзинг та викладку товарів');
-        recommendations.push('📱 Активізуйте маркетинг для залучення клієнтів');
+      if (revenuePerSqUnit < 100) {
+        recommendations.push('📈 Optimize store layout for better sales');
+        recommendations.push('🛍️ Add complementary products and accessories');
       }
-      if (grossMargin < 50) {
-        recommendations.push('💎 Додайте товари преміум-сегменту');
-        recommendations.push('🏷️ Переглянте ціноутворення та постачальників');
+      if (cogPercent > 60) {
+        recommendations.push('💎 Focus on higher-margin products');
+        recommendations.push('🤝 Negotiate volume discounts with suppliers');
       }
-
-      // Store type specific insights
-      const storeTypeNames = {
-        'mass': 'Масовий сегмент',
-        'mid': 'Середній сегмент', 
-        'premium': 'Преміум сегмент',
-        'boutique': 'Бутік'
-      };
-
-      const data = {
-        totalInvestment,
-        monthlyRevenue,
-        monthlyExpenses,
-        monthlyProfit,
-        annualRevenue,
-        annualProfit,
-        paybackPeriod,
-        roi,
-        profitMargin
-      };
 
       result.innerHTML = `
         <div class="insight-cards">
           ${createInsightCard(
-            '💰 Загальні інвестиції',
+            '💰 Total Investment',
             formatNumber(totalInvestment),
-            'Початковий капітал',
+            'Initial Capital',
             'info'
           )}
           ${createInsightCard(
-            '📈 Щомісячний дохід',
+            '📈 Monthly Revenue',
             formatNumber(monthlyRevenue),
-            `${storeTypeNames[storeType]}, наукова ${markupPercent}%`,
+            `${storeTypeNames[storeType]}, ${markupPercent}% markup`,
             'success'
           )}
           ${createInsightCard(
-            '💸 Щомісячні витрати',
+            '💸 Monthly Expenses',
             formatNumber(monthlyExpenses),
-            `Включно з собівартістю ${formatNumber(monthlySalesCost)}`,
+            `Including COGS ${formatNumber(monthlySalesCost)}`,
             'warning'
           )}
           ${createInsightCard(
-            '💵 Чистий прибуток',
+            '💵 Net Profit',
             formatNumber(monthlyProfit),
-            `Маржа: ${formatPercent(profitMargin)}`,
+            `Margin: ${formatPercent(profitMargin)}`,
             viabilityType
           )}
           ${createInsightCard(
-            '⏳ Окупність',
-            `${paybackPeriod.toFixed(1)} років`,
-            paybackPeriod < 3 ? 'Швидка окупність' : paybackPeriod < 5 ? 'Помірна окупність' : 'Повільна окупність',
+            '⏳ Payback Period',
+            `${paybackPeriod.toFixed(1)} years`,
+            paybackPeriod < 3 ? 'Fast Payback' : paybackPeriod < 5 ? 'Moderate Payback' : 'Slow Payback',
             paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
           )}
           ${createInsightCard(
@@ -231,46 +184,46 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Детальний аналіз магазину одягу</h4>
+          <h4>📋 Detailed Clothing Store Analysis</h4>
           <div class="metrics-grid">
             <div class="metric-item">
-              <span class="metric-label">Річний дохід:</span>
+              <span class="metric-label">Annual Revenue:</span>
               <span class="metric-value">${formatNumber(annualRevenue)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Річний прибуток:</span>
+              <span class="metric-label">Annual Profit:</span>
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на м²:</span>
-              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/місяць</span>
+              <span class="metric-label">Revenue per Sq Ft:</span>
+              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Валова маржа:</span>
-              <span class="metric-value">${formatPercent(grossMargin)}</span>
+              <span class="metric-label">Inventory Turnover:</span>
+              <span class="metric-value">${inventoryEfficiency.toFixed(1)}x per year</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Оборотність запасів:</span>
-              <span class="metric-value">${inventoryTurnover.toFixed(1)} разів/рік</span>
+              <span class="metric-label">Rent Costs:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} of revenue</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на оренду:</span>
-              <span class="metric-value">${formatPercent(rentPercent)} від доходу</span>
+              <span class="metric-label">Staff Costs:</span>
+              <span class="metric-value">${formatPercent(staffPercent)} of revenue</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на персонал:</span>
-              <span class="metric-value">${formatPercent(laborCostPercent)} від доходу</span>
+              <span class="metric-label">Cost of Goods:</span>
+              <span class="metric-value">${formatPercent(cogPercent)} of revenue</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Собівартість товарів:</span>
-              <span class="metric-value">${formatPercent(cogsPercent)} від доходу</span>
+              <span class="metric-label">Store Type:</span>
+              <span class="metric-value">${storeTypeNames[storeType]}</span>
             </div>
           </div>
         </div>
 
         ${recommendations.length > 0 ? `
           <div class="recommendations">
-            <h4>💡 Рекомендації для оптимізації</h4>
+            <h4>💡 Optimization Recommendations</h4>
             <ul>
               ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
             </ul>
@@ -278,17 +231,49 @@ document.addEventListener("DOMContentLoaded", function () {
         ` : ''}
 
         <div class="action-buttons">
-          <button onclick="window.print()" class="btn-secondary">🖨️ Друкувати звіт</button>
-          <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">📊 Завантажити дані CSV</button>
+          <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
+          <button onclick="downloadCSV()" class="btn-primary">📊 Download CSV Data</button>
         </div>
 
         <div class="disclaimer">
-          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від сезонності, трендів моди, ефективності закупівель та управління запасами.</small></p>
+          <p><small>⚠️ Calculations are approximate and based on input data. Actual results may vary depending on market conditions, location, and management efficiency.</small></p>
         </div>
       `;
 
-      // Expose downloadCSV function globally for the button
-      window.downloadCSV = downloadCSV;
+      // Store data for CSV download
+      window.clothingBusinessData = {
+        'Store Area (sq ft)': area,
+        'Store Type': storeTypeNames[storeType],
+        'Total Investment ($)': totalInvestment,
+        'Annual Revenue ($)': annualRevenue,
+        'Annual Expenses ($)': monthlyExpenses * 12,
+        'Annual Profit ($)': annualProfit,
+        'Monthly Profit ($)': monthlyProfit,
+        'Profit Margin (%)': profitMargin,
+        'Annual ROI (%)': roi,
+        'Payback Period (years)': paybackPeriod,
+        'Revenue per Sq Ft ($)': revenuePerSqUnit,
+        'Inventory Turnover': inventoryEfficiency,
+        'Markup (%)': markupPercent,
+        'Rent as % of Revenue': rentPercent,
+        'Staff as % of Revenue': staffPercent,
+        'COGS as % of Revenue': cogPercent
+      };
     });
   }
+
+  // CSV download function
+  window.downloadCSV = function() {
+    if (!window.clothingBusinessData) return;
+    
+    const csv = Object.entries(window.clothingBusinessData)
+      .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
+      .join('\n');
+    
+    const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'clothing-store-business-plan.csv';
+    link.click();
+  };
 });

@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('beauty-salon-form');
   const result = document.getElementById('beauty-salon-result');
 
-  // Detect language based on URL
-  const isEnglish = window.location.pathname.includes('/en/');
-
   function formatNumber(value) {
     if (value >= 1_000_000) {
       return `$${(value / 1_000_000).toFixed(1)}M`;
@@ -32,34 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="metric-subtitle">${subtitle}</div>
       </div>
     `;
-  }
-
-  function generateCSVData(data) {
-    const csvData = [
-      ['Metric', 'Value'],
-      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
-      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
-      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
-      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
-      ['ROI (%)', data.roi.toFixed(1)],
-      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
-    ];
-    
-    return csvData.map(row => row.join(',')).join('\n');
-  }
-
-  function downloadCSV(data) {
-    const csv = generateCSVData(data);
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'beauty_salon_business_plan.csv';
-    a.click();
-    window.URL.revokeObjectURL(url);
   }
 
   if (form) {
@@ -112,241 +81,170 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Determine business viability
       let viabilityType = 'warning';
-      let viabilityMessage = isEnglish ? 'Needs optimization' : 'Потребує оптимізації';
-      if (roi >= 25 && profitMargin >= 20) {
+      let viabilityMessage = 'Needs Optimization';
+      if (roi >= 20 && profitMargin >= 15) {
         viabilityType = 'success';
-        viabilityMessage = isEnglish ? 'Highly profitable salon' : 'Високоприбутковий салон';
-      } else if (roi >= 15 && profitMargin >= 12) {
+        viabilityMessage = 'High Profit Business';
+      } else if (roi >= 12 && profitMargin >= 10) {
         viabilityType = 'info';
-        viabilityMessage = isEnglish ? 'Stable business' : 'Стабільний бізнес';
+        viabilityMessage = 'Stable Business';
       }
-
-      // Language-specific text
-      const labels = isEnglish ? {
-        title: '💅 Beauty Salon Business Plan',
-        totalInvestment: 'Total Investment',
-        startupCapital: 'Startup Capital',
-        monthlyRevenue: 'Monthly Revenue',
-        monthlyExpenses: 'Monthly Expenses',
-        rent: 'Rent',
-        staff: 'Staff',
-        netProfit: 'Net Profit',
-        margin: 'Margin',
-        payback: 'Payback Period',
-        roi: 'ROI',
-        fastPayback: 'Fast payback',
-        moderatePayback: 'Moderate payback',
-        slowPayback: 'Slow payback',
-        detailedAnalysis: '📋 Detailed Beauty Salon Analysis',
-        annualRevenue: 'Annual Revenue',
-        annualProfit: 'Annual Profit',
-        revenuePerStation: 'Revenue per Station',
-        revenuePerSqUnit: 'Revenue per Sq Ft',
-        clientsPerStation: 'Clients per Station',
-        laborCost: 'Labor Cost',
-        rentCost: 'Rent Cost',
-        supplyCost: 'Supply Cost',
-        recommendations: '💡 Optimization Recommendations',
-        printReport: '🖨️ Print Report',
-        downloadData: '📊 Download CSV Data',
-        disclaimer: '⚠️ Calculations are approximate and based on entered data. Actual results may vary depending on market conditions, location, seasonality, and beauty salon management efficiency.'
-      } : {
-        title: '💅 Бізнес-план салону краси',
-        totalInvestment: 'Загальні інвестиції',
-        startupCapital: 'Початковий капітал',
-        monthlyRevenue: 'Щомісячний дохід',
-        monthlyExpenses: 'Щомісячні витрати',
-        rent: 'Оренда',
-        staff: 'Персонал',
-        netProfit: 'Чистий прибуток',
-        margin: 'Маржа',
-        payback: 'Окупність',
-        roi: 'ROI',
-        fastPayback: 'Швидка окупність',
-        moderatePayback: 'Помірна окупність',
-        slowPayback: 'Повільна окупність',
-        detailedAnalysis: '📋 Детальний аналіз салону краси',
-        annualRevenue: 'Річний дохід',
-        annualProfit: 'Річний прибуток',
-        revenuePerStation: 'Дохід на робоче місце',
-        revenuePerSqUnit: 'Дохід на м²',
-        clientsPerStation: 'Клієнтів на робоче місце',
-        laborCost: 'Витрати на персонал',
-        rentCost: 'Витрати на оренду',
-        supplyCost: 'Витрати на матеріали',
-        recommendations: '💡 Рекомендації для оптимізації',
-        printReport: '🖨️ Друкувати звіт',
-        downloadData: '📊 Завантажити дані CSV',
-        disclaimer: '⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації, сезонності та ефективності управління салоном краси.'
-      };
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 15) {
-        recommendations.push(isEnglish ? 
-          '📈 Increase prices on popular services' : 
-          '📈 Підвищіть ціни на популярні послуги');
-        recommendations.push(isEnglish ?
-          '💰 Add retail cosmetics with high margin' :
-          '💰 Додайте продаж косметики з високою маржею');
+      if (profitMargin < 12) {
+        recommendations.push('📈 Increase service prices or reduce costs');
+        recommendations.push('💰 Optimize supply costs (target 8-12% of revenue)');
       }
-      if (laborCostPercent > 40) {
-        recommendations.push(isEnglish ?
-          '👥 Optimize staff schedules' :
-          '👥 Оптимізуйте графік роботи майстрів');
-        recommendations.push(isEnglish ?
-          '📈 Increase clients per stylist' :
-          '📈 Збільшіть кількість клієнтів на майстра');
+      if (laborCostPercent > 45) {
+        recommendations.push('👥 Optimize staff schedule (target 35-40% of revenue)');
+        recommendations.push('🤖 Consider booking automation to improve efficiency');
       }
       if (rentPercent > 15) {
-        recommendations.push(isEnglish ?
-          '🏢 Consider relocating to lower rent location' :
-          '🏢 Розгляньте переїзд у приміщення з меншою орендою');
-        recommendations.push(isEnglish ?
-          '📦 Add home services for VIP clients' :
-          '📦 Додайте послуги на дому для VIP-клієнтів');
+        recommendations.push('🏢 Consider relocating to a more affordable location');
+        recommendations.push('📦 Add mobile services or product sales');
       }
-      if (clientsPerWorkstation < 3) {
-        recommendations.push(isEnglish ?
-          '🎯 Improve marketing to attract clients' :
-          '🎯 Покращіть маркетинг для залучення клієнтів');
-        recommendations.push(isEnglish ?
-          '📅 Implement loyalty programs and packages' :
-          '📅 Впровадьте програми лояльності та абонементи');
+      if (clientsPerWorkstation < 8) {
+        recommendations.push('🎯 Increase marketing to attract more clients');
+        recommendations.push('⏰ Extend operating hours or offer online booking');
       }
-      if (avgCheck < 30) {
-        recommendations.push(isEnglish ?
-          '💅 Offer comprehensive services and packages' :
-          '💅 Запропонуйте комплексні послуги та пакети');
-        recommendations.push(isEnglish ?
-          '✨ Add premium procedures with higher price' :
-          '✨ Додайте преміум-процедури з вищою ціною');
+      if (avgCheck < 35) {
+        recommendations.push('💅 Add premium services and packages');
+        recommendations.push('🛍️ Sell beauty products with higher margins');
       }
-      if (supplyCostPercent > 10) {
-        recommendations.push(isEnglish ?
-          '🛒 Optimize material purchasing' :
-          '🛒 Оптимізуйте закупівлі матеріалів');
-        recommendations.push(isEnglish ?
-          '📊 Analyze costs per service' :
-          '📊 Аналізуйте витрати по кожній послузі');
-      }
-
-      const data = {
-        totalInvestment,
-        monthlyRevenue,
-        monthlyExpenses,
-        monthlyProfit,
-        annualRevenue,
-        annualProfit,
-        paybackPeriod,
-        roi,
-        profitMargin
-      };
 
       result.innerHTML = `
-        <div class="business-plan-results">
-          <h3>${labels.title}</h3>
-          
-          <div class="insight-cards">
-            ${createInsightCard(
-              labels.totalInvestment,
-              formatNumber(totalInvestment),
-              labels.startupCapital,
-              'info'
-            )}
-            ${createInsightCard(
-              labels.monthlyRevenue,
-              formatNumber(monthlyRevenue),
-              `${clientsPerDay} ${isEnglish ? 'clients' : 'клієнтів'} × ${formatNumber(avgCheck)} × ${workingDays} ${isEnglish ? 'days' : 'днів'}`,
-              'success'
-            )}
-            ${createInsightCard(
-              labels.monthlyExpenses,
-              formatNumber(monthlyExpenses),
-              `${labels.rent} ${formatNumber(monthlyRent)} + ${labels.staff} ${formatNumber(staffSalaries)}`,
-              'warning'
-            )}
-            ${createInsightCard(
-              labels.netProfit,
-              formatNumber(monthlyProfit),
-              `${labels.margin}: ${formatPercent(profitMargin)}`,
-              viabilityType
-            )}
-            ${createInsightCard(
-              labels.payback,
-              `${paybackPeriod.toFixed(1)} ${isEnglish ? 'years' : 'років'}`,
-              paybackPeriod < 3 ? labels.fastPayback : paybackPeriod < 5 ? labels.moderatePayback : labels.slowPayback,
-              paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
-            )}
-            ${createInsightCard(
-              labels.roi,
-              formatPercent(roi),
-              viabilityMessage,
-              viabilityType
-            )}
-          </div>
+        <div class="insight-cards">
+          ${createInsightCard(
+            '💰 Total Investment',
+            formatNumber(totalInvestment),
+            'Initial Capital',
+            'info'
+          )}
+          ${createInsightCard(
+            '📈 Monthly Revenue',
+            formatNumber(monthlyRevenue),
+            `${clientsPerDay} clients × $${avgCheck} × ${workingDays} days`,
+            'success'
+          )}
+          ${createInsightCard(
+            '💸 Monthly Expenses',
+            formatNumber(monthlyExpenses),
+            `Including supplies & staff`,
+            'warning'
+          )}
+          ${createInsightCard(
+            '💵 Net Profit',
+            formatNumber(monthlyProfit),
+            `Margin: ${formatPercent(profitMargin)}`,
+            viabilityType
+          )}
+          ${createInsightCard(
+            '⏳ Payback Period',
+            `${paybackPeriod.toFixed(1)} years`,
+            paybackPeriod < 3 ? 'Fast Payback' : paybackPeriod < 5 ? 'Moderate Payback' : 'Slow Payback',
+            paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
+          )}
+          ${createInsightCard(
+            '📊 ROI',
+            formatPercent(roi),
+            viabilityMessage,
+            viabilityType
+          )}
+        </div>
 
-          <div class="financial-breakdown">
-            <h4>${labels.detailedAnalysis}</h4>
-            
-            <div class="breakdown-table">
-              <div class="breakdown-row">
-                <span>${labels.annualRevenue}:</span>
-                <span>${formatNumber(annualRevenue)}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.annualProfit}:</span>
-                <span>${formatNumber(annualProfit)}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.revenuePerStation}:</span>
-                <span>${formatNumber(revenuePerWorkstation)}/${isEnglish ? 'month' : 'місяць'}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.revenuePerSqUnit}:</span>
-                <span>${formatNumber(revenuePerSqUnit)}/${isEnglish ? 'month' : 'місяць'}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.clientsPerStation}:</span>
-                <span>${clientsPerWorkstation.toFixed(1)}/${isEnglish ? 'day' : 'день'}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.laborCost}:</span>
-                <span>${formatPercent(laborCostPercent)} ${isEnglish ? 'of revenue' : 'від доходу'}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.rentCost}:</span>
-                <span>${formatPercent(rentPercent)} ${isEnglish ? 'of revenue' : 'від доходу'}</span>
-              </div>
-              <div class="breakdown-row">
-                <span>${labels.supplyCost}:</span>
-                <span>${formatPercent(supplyCostPercent)} ${isEnglish ? 'of revenue' : 'від доходу'}</span>
-              </div>
+        <div class="analysis-section">
+          <h4>📋 Detailed Beauty Salon Analysis</h4>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-label">Annual Revenue:</span>
+              <span class="metric-value">${formatNumber(annualRevenue)}</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Annual Profit:</span>
+              <span class="metric-value">${formatNumber(annualProfit)}</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Revenue per Station:</span>
+              <span class="metric-value">${formatNumber(revenuePerWorkstation)}/month</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Revenue per Sq Ft:</span>
+              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Clients per Station:</span>
+              <span class="metric-value">${clientsPerWorkstation.toFixed(1)} per day</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Labor Costs:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Rent Costs:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Supply Costs:</span>
+              <span class="metric-value">${formatPercent(supplyCostPercent)} of revenue</span>
             </div>
           </div>
+        </div>
 
-          ${recommendations.length > 0 ? `
-            <div class="recommendations">
-              <h4>${labels.recommendations}</h4>
-              <ul>
-                ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
-              </ul>
-            </div>
-          ` : ''}
-
-          <div class="action-buttons">
-            <button onclick="window.print()" class="btn-secondary">${labels.printReport}</button>
-            <button onclick="downloadCSV(${JSON.stringify(data).replace(/"/g, '&quot;')})" class="btn-primary">${labels.downloadData}</button>
+        ${recommendations.length > 0 ? `
+          <div class="recommendations">
+            <h4>💡 Optimization Recommendations</h4>
+            <ul>
+              ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+            </ul>
           </div>
+        ` : ''}
 
-          <div class="disclaimer">
-            <p><small>${labels.disclaimer}</small></p>
-          </div>
+        <div class="action-buttons">
+          <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
+          <button onclick="downloadCSV()" class="btn-primary">📊 Download CSV Data</button>
+        </div>
+
+        <div class="disclaimer">
+          <p><small>⚠️ Calculations are approximate and based on input data. Actual results may vary depending on market conditions, location, and management efficiency.</small></p>
         </div>
       `;
 
-      // Expose downloadCSV function globally for the button
-      window.downloadCSV = downloadCSV;
+      // Store data for CSV download
+      window.beautyBusinessData = {
+        'Salon Area (sq ft)': area,
+        'Number of Workstations': workstations,
+        'Total Investment ($)': totalInvestment,
+        'Annual Revenue ($)': annualRevenue,
+        'Annual Expenses ($)': monthlyExpenses * 12,
+        'Annual Profit ($)': annualProfit,
+        'Monthly Profit ($)': monthlyProfit,
+        'Profit Margin (%)': profitMargin,
+        'Annual ROI (%)': roi,
+        'Payback Period (years)': paybackPeriod,
+        'Revenue per Station ($)': revenuePerWorkstation,
+        'Revenue per Sq Ft ($)': revenuePerSqUnit,
+        'Average Check ($)': avgCheck,
+        'Clients per Station': clientsPerWorkstation,
+        'Labor Cost (%)': laborCostPercent,
+        'Rent as % of Revenue': rentPercent,
+        'Supply Cost (%)': supplyCostPercent
+      };
     });
   }
+
+  // CSV download function
+  window.downloadCSV = function() {
+    if (!window.beautyBusinessData) return;
+    
+    const csv = Object.entries(window.beautyBusinessData)
+      .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
+      .join('\n');
+    
+    const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'beauty-salon-business-plan.csv';
+    link.click();
+  };
 });
