@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('cafe-form');
-  const result = document.getElementById('cafe-result');
+  const form = document.getElementById('restaurant-form');
+  const result = document.getElementById('restaurant-result');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -70,41 +70,48 @@ document.addEventListener("DOMContentLoaded", function () {
       const roi = monthlyProfit > 0 ? (annualProfit / totalInvestment) * 100 : 0;
       const profitMargin = monthlyRevenue > 0 ? (monthlyProfit / monthlyRevenue) * 100 : 0;
 
-      // Calculate capacity utilization
-      const maxDailyCapacity = seats * 4; // Assume 4 turnovers per day
-      const capacityUtilization = (clientsPerDay / maxDailyCapacity) * 100;
-
-      // Calculate revenue per square meter/foot
+      // Calculate efficiency metrics
+      const revenuePerSeat = monthlyRevenue / seats;
       const revenuePerSqUnit = monthlyRevenue / area;
+      const seatTurnover = clientsPerDay / seats;
+
+      // Restaurant-specific analysis
+      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
+      const rentPercent = (monthlyRent / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
       let viabilityMessage = 'Needs Optimization';
-      if (roi >= 20 && profitMargin >= 15) {
+      if (roi >= 15 && profitMargin >= 12) {
         viabilityType = 'success';
-        viabilityMessage = 'High Profit Business';
-      } else if (roi >= 12 && profitMargin >= 8) {
+        viabilityMessage = 'High Profit Restaurant';
+      } else if (roi >= 8 && profitMargin >= 6) {
         viabilityType = 'info';
         viabilityMessage = 'Stable Business';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 10) {
-        recommendations.push('📈 Increase average transaction with premium menu items');
-        recommendations.push('💰 Optimize food costs (target 25-30% of revenue)');
+      if (profitMargin < 8) {
+        recommendations.push('📈 Increase average check through premium menu items');
+        recommendations.push('💰 Optimize food costs (target 28-32% of revenue)');
       }
-      if (capacityUtilization < 50) {
-        recommendations.push('🎯 Attract more customers through marketing and loyalty programs');
-        recommendations.push('⏰ Extend operating hours or add delivery services');
+      if (laborCostPercent > 35) {
+        recommendations.push('👥 Optimize staff size (target 25-32% of revenue)');
+        recommendations.push('🤖 Implement automation to reduce labor needs');
       }
-      if (revenuePerSqUnit < 50) {
-        recommendations.push('🏢 Consider smaller space to reduce rent costs');
-        recommendations.push('📦 Add takeaway format to increase turnover');
+      if (rentPercent > 10) {
+        recommendations.push('🏢 Consider relocating to lower rent location');
+        recommendations.push('📦 Add delivery to increase turnover without extra seating');
       }
-      if (avgCheck < 8) {
-        recommendations.push('☕ Offer specialty coffee drinks and desserts');
-        recommendations.push('🥐 Expand breakfast and light lunch menu');
+      if (seatTurnover < 2) {
+        recommendations.push('⏰ Increase table turnover through faster service');
+        recommendations.push('🎯 Run marketing campaigns to attract customers');
+      }
+      if (avgCheck < 20) {
+        recommendations.push('🍷 Add alcoholic beverages and high-margin desserts');
+        recommendations.push('🎉 Create special offers and set menus');
+      }
       }
 
       const data = {
@@ -122,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
       result.innerHTML = `
         <div class="insight-cards">
           ${createInsightCard(
-            '💰 Total Investment',
+            '💰 Загальні інвестиції',
             formatNumber(totalInvestment),
-            'Initial Capital',
+            'Початковий капітал',
             'info'
           )}
           ${createInsightCard(
@@ -148,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '⏳ Payback Period',
             `${paybackPeriod.toFixed(1)} years`,
-            paybackPeriod < 3 ? 'Fast Payback' : paybackPeriod < 5 ? 'Moderate Payback' : 'Slow Payback',
-            paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
+            paybackPeriod < 4 ? 'Fast Payback' : paybackPeriod < 6 ? 'Moderate Payback' : 'Slow Payback',
+            paybackPeriod < 4 ? 'success' : paybackPeriod < 6 ? 'info' : 'warning'
           )}
           ${createInsightCard(
             '📊 ROI',
@@ -160,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Detailed Analysis</h4>
+          <h4>📋 Detailed Restaurant Analysis</h4>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-label">Annual Revenue:</span>
@@ -171,16 +178,24 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Capacity Utilization:</span>
-              <span class="metric-value">${formatPercent(capacityUtilization)}</span>
+              <span class="metric-label">Revenue per Seat:</span>
+              <span class="metric-value">${formatNumber(revenuePerSeat)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per sq ft:</span>
+              <span class="metric-label">Revenue per Sq Ft:</span>
               <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per Seat:</span>
-              <span class="metric-value">${formatNumber(monthlyRevenue / seats)}/month</span>
+              <span class="metric-label">Table Turnover:</span>
+              <span class="metric-value">${seatTurnover.toFixed(1)} per day</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Labor Costs:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Rent Costs:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} of revenue</span>
             </div>
             <div class="metric-item">
               <span class="metric-label">Cost of Goods:</span>
@@ -204,13 +219,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="disclaimer">
-          <p><small>⚠️ Calculations are approximate and based on input data. Actual results may vary depending on market conditions, location, and management efficiency.</small></p>
+          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації та ефективності управління ресторану.</small></p>
         </div>
       `;
 
       // Store data for CSV download
-      window.cafeBusinessData = {
-        'Area (sq ft)': area,
+      window.restaurantBusinessData = {
+        'Restaurant Area (sq ft)': area,
         'Number of Seats': seats,
         'Total Investment ($)': totalInvestment,
         'Annual Revenue ($)': annualRevenue,
@@ -220,26 +235,28 @@ document.addEventListener("DOMContentLoaded", function () {
         'Profit Margin (%)': profitMargin,
         'Annual ROI (%)': roi,
         'Payback Period (years)': paybackPeriod,
-        'Capacity Utilization (%)': capacityUtilization,
+        'Revenue per Seat ($)': revenuePerSeat,
         'Revenue per Sq Ft ($)': revenuePerSqUnit,
         'Average Check ($)': avgCheck,
-        'Clients per Day': clientsPerDay
+        'Seat Turnover': seatTurnover,
+        'Labor Cost (%)': laborCostPercent,
+        'Rent as % of Revenue': rentPercent
       };
     });
   }
 
   // CSV download function
   window.downloadCSV = function() {
-    if (!window.cafeBusinessData) return;
+    if (!window.restaurantBusinessData) return;
     
-    const csv = Object.entries(window.cafeBusinessData)
+    const csv = Object.entries(window.restaurantBusinessData)
       .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
       .join('\n');
     
     const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'cafe-business-plan.csv';
+    link.download = 'restaurant-business-plan.csv';
     link.click();
   };
 });

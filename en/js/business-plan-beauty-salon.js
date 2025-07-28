@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('cafe-form');
-  const result = document.getElementById('cafe-result');
+  const form = document.getElementById('beauty-salon-form');
+  const result = document.getElementById('beauty-salon-result');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const area = parseFloat(document.getElementById('area').value);
-      const seats = parseFloat(document.getElementById('seats').value);
+      const workstations = parseFloat(document.getElementById('workstations').value);
       const equipmentCost = parseFloat(document.getElementById('equipment-cost').value);
       const renovationCost = parseFloat(document.getElementById('renovation-cost').value);
       const furnitureCost = parseFloat(document.getElementById('furniture-cost').value);
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const clientsPerDay = parseFloat(document.getElementById('clients-per-day').value);
       const workingDays = parseFloat(document.getElementById('working-days').value);
       const staffSalaries = parseFloat(document.getElementById('staff-salaries').value);
-      const cogsPercent = parseFloat(document.getElementById('cogs-percent').value);
+      const supplies = parseFloat(document.getElementById('supplies').value);
       const utilities = parseFloat(document.getElementById('utilities').value);
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
 
@@ -57,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const monthlyRevenue = avgCheck * clientsPerDay * workingDays;
 
       // Calculate monthly expenses
-      const monthlyCoGS = monthlyRevenue * (cogsPercent / 100);
-      const monthlyExpenses = monthlyRent + staffSalaries + monthlyCoGS + utilities + otherExpenses;
+      const monthlyExpenses = monthlyRent + staffSalaries + supplies + utilities + otherExpenses;
 
       // Calculate profit metrics
       const monthlyProfit = monthlyRevenue - monthlyExpenses;
@@ -70,12 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const roi = monthlyProfit > 0 ? (annualProfit / totalInvestment) * 100 : 0;
       const profitMargin = monthlyRevenue > 0 ? (monthlyProfit / monthlyRevenue) * 100 : 0;
 
-      // Calculate capacity utilization
-      const maxDailyCapacity = seats * 4; // Assume 4 turnovers per day
-      const capacityUtilization = (clientsPerDay / maxDailyCapacity) * 100;
-
-      // Calculate revenue per square meter/foot
+      // Calculate efficiency metrics
+      const revenuePerWorkstation = monthlyRevenue / workstations;
       const revenuePerSqUnit = monthlyRevenue / area;
+      const clientsPerWorkstation = clientsPerDay / workstations;
+
+      // Beauty salon specific analysis
+      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
+      const rentPercent = (monthlyRent / monthlyRevenue) * 100;
+      const supplyCostPercent = (supplies / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
@@ -83,41 +85,33 @@ document.addEventListener("DOMContentLoaded", function () {
       if (roi >= 20 && profitMargin >= 15) {
         viabilityType = 'success';
         viabilityMessage = 'High Profit Business';
-      } else if (roi >= 12 && profitMargin >= 8) {
+      } else if (roi >= 12 && profitMargin >= 10) {
         viabilityType = 'info';
         viabilityMessage = 'Stable Business';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 10) {
-        recommendations.push('📈 Increase average transaction with premium menu items');
-        recommendations.push('💰 Optimize food costs (target 25-30% of revenue)');
+      if (profitMargin < 12) {
+        recommendations.push('📈 Increase service prices or reduce costs');
+        recommendations.push('💰 Optimize supply costs (target 8-12% of revenue)');
       }
-      if (capacityUtilization < 50) {
-        recommendations.push('🎯 Attract more customers through marketing and loyalty programs');
-        recommendations.push('⏰ Extend operating hours or add delivery services');
+      if (laborCostPercent > 45) {
+        recommendations.push('👥 Optimize staff schedule (target 35-40% of revenue)');
+        recommendations.push('🤖 Consider booking automation to improve efficiency');
       }
-      if (revenuePerSqUnit < 50) {
-        recommendations.push('🏢 Consider smaller space to reduce rent costs');
-        recommendations.push('📦 Add takeaway format to increase turnover');
+      if (rentPercent > 15) {
+        recommendations.push('🏢 Consider relocating to a more affordable location');
+        recommendations.push('📦 Add mobile services or product sales');
       }
-      if (avgCheck < 8) {
-        recommendations.push('☕ Offer specialty coffee drinks and desserts');
-        recommendations.push('🥐 Expand breakfast and light lunch menu');
+      if (clientsPerWorkstation < 8) {
+        recommendations.push('🎯 Increase marketing to attract more clients');
+        recommendations.push('⏰ Extend operating hours or offer online booking');
       }
-
-      const data = {
-        totalInvestment,
-        monthlyRevenue,
-        monthlyExpenses,
-        monthlyProfit,
-        annualRevenue,
-        annualProfit,
-        paybackPeriod,
-        roi,
-        profitMargin
-      };
+      if (avgCheck < 35) {
+        recommendations.push('💅 Add premium services and packages');
+        recommendations.push('🛍️ Sell beauty products with higher margins');
+      }
 
       result.innerHTML = `
         <div class="insight-cards">
@@ -130,13 +124,13 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '📈 Monthly Revenue',
             formatNumber(monthlyRevenue),
-            `${clientsPerDay} customers × $${avgCheck} × ${workingDays} days`,
+            `${clientsPerDay} clients × $${avgCheck} × ${workingDays} days`,
             'success'
           )}
           ${createInsightCard(
             '💸 Monthly Expenses',
             formatNumber(monthlyExpenses),
-            `Including ${formatPercent(cogsPercent)} COGS`,
+            `Including supplies & staff`,
             'warning'
           )}
           ${createInsightCard(
@@ -160,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Detailed Analysis</h4>
+          <h4>📋 Detailed Beauty Salon Analysis</h4>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-label">Annual Revenue:</span>
@@ -171,20 +165,28 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Capacity Utilization:</span>
-              <span class="metric-value">${formatPercent(capacityUtilization)}</span>
+              <span class="metric-label">Revenue per Station:</span>
+              <span class="metric-value">${formatNumber(revenuePerWorkstation)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per sq ft:</span>
+              <span class="metric-label">Revenue per Sq Ft:</span>
               <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per Seat:</span>
-              <span class="metric-value">${formatNumber(monthlyRevenue / seats)}/month</span>
+              <span class="metric-label">Clients per Station:</span>
+              <span class="metric-value">${clientsPerWorkstation.toFixed(1)} per day</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Cost of Goods:</span>
-              <span class="metric-value">${formatNumber(monthlyCoGS)}/month</span>
+              <span class="metric-label">Labor Costs:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Rent Costs:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Supply Costs:</span>
+              <span class="metric-value">${formatPercent(supplyCostPercent)} of revenue</span>
             </div>
           </div>
         </div>
@@ -209,9 +211,9 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       // Store data for CSV download
-      window.cafeBusinessData = {
-        'Area (sq ft)': area,
-        'Number of Seats': seats,
+      window.beautyBusinessData = {
+        'Salon Area (sq ft)': area,
+        'Number of Workstations': workstations,
         'Total Investment ($)': totalInvestment,
         'Annual Revenue ($)': annualRevenue,
         'Annual Expenses ($)': monthlyExpenses * 12,
@@ -220,26 +222,29 @@ document.addEventListener("DOMContentLoaded", function () {
         'Profit Margin (%)': profitMargin,
         'Annual ROI (%)': roi,
         'Payback Period (years)': paybackPeriod,
-        'Capacity Utilization (%)': capacityUtilization,
+        'Revenue per Station ($)': revenuePerWorkstation,
         'Revenue per Sq Ft ($)': revenuePerSqUnit,
         'Average Check ($)': avgCheck,
-        'Clients per Day': clientsPerDay
+        'Clients per Station': clientsPerWorkstation,
+        'Labor Cost (%)': laborCostPercent,
+        'Rent as % of Revenue': rentPercent,
+        'Supply Cost (%)': supplyCostPercent
       };
     });
   }
 
   // CSV download function
   window.downloadCSV = function() {
-    if (!window.cafeBusinessData) return;
+    if (!window.beautyBusinessData) return;
     
-    const csv = Object.entries(window.cafeBusinessData)
+    const csv = Object.entries(window.beautyBusinessData)
       .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
       .join('\n');
     
     const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'cafe-business-plan.csv';
+    link.download = 'beauty-salon-business-plan.csv';
     link.click();
   };
 });

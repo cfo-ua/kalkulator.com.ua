@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('cafe-form');
-  const result = document.getElementById('cafe-result');
+  const form = document.getElementById('food-truck-form');
+  const result = document.getElementById('food-truck-result');
+  
+  // Truck type automation
+  const truckTypeSelect = document.getElementById('truck-type');
+  const truckCostInput = document.getElementById('truck-cost');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -31,34 +35,51 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
+  if (truckTypeSelect && truckCostInput) {
+    truckTypeSelect.addEventListener('change', function() {
+      const type = this.value;
+      switch(type) {
+        case 'used':
+          truckCostInput.value = 45000;
+          break;
+        case 'new':
+          truckCostInput.value = 75000;
+          break;
+        case 'custom':
+          truckCostInput.value = 115000;
+          break;
+      }
+    });
+  }
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const area = parseFloat(document.getElementById('area').value);
-      const seats = parseFloat(document.getElementById('seats').value);
+      const truckCost = parseFloat(document.getElementById('truck-cost').value);
       const equipmentCost = parseFloat(document.getElementById('equipment-cost').value);
       const renovationCost = parseFloat(document.getElementById('renovation-cost').value);
-      const furnitureCost = parseFloat(document.getElementById('furniture-cost').value);
       const additionalCosts = parseFloat(document.getElementById('additional-costs').value);
-      const monthlyRent = parseFloat(document.getElementById('monthly-rent').value);
+      const workingDaysWeek = parseFloat(document.getElementById('working-days-week').value);
+      const workingHours = parseFloat(document.getElementById('working-hours').value);
       const avgCheck = parseFloat(document.getElementById('avg-check').value);
-      const clientsPerDay = parseFloat(document.getElementById('clients-per-day').value);
-      const workingDays = parseFloat(document.getElementById('working-days').value);
+      const clientsPerHour = parseFloat(document.getElementById('clients-per-hour').value);
       const staffSalaries = parseFloat(document.getElementById('staff-salaries').value);
       const cogsPercent = parseFloat(document.getElementById('cogs-percent').value);
-      const utilities = parseFloat(document.getElementById('utilities').value);
+      const fuelMaintenance = parseFloat(document.getElementById('fuel-maintenance').value);
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
 
       // Calculate total startup investment
-      const totalInvestment = equipmentCost + renovationCost + furnitureCost + additionalCosts;
+      const totalInvestment = truckCost + equipmentCost + renovationCost + additionalCosts;
 
-      // Calculate monthly revenue
-      const monthlyRevenue = avgCheck * clientsPerDay * workingDays;
+      // Calculate monthly operational metrics
+      const monthlyWorkingDays = (workingDaysWeek * 4.33); // Average weeks per month
+      const dailyRevenue = avgCheck * clientsPerHour * workingHours;
+      const monthlyRevenue = dailyRevenue * monthlyWorkingDays;
 
       // Calculate monthly expenses
       const monthlyCoGS = monthlyRevenue * (cogsPercent / 100);
-      const monthlyExpenses = monthlyRent + staffSalaries + monthlyCoGS + utilities + otherExpenses;
+      const monthlyExpenses = staffSalaries + monthlyCoGS + fuelMaintenance + otherExpenses;
 
       // Calculate profit metrics
       const monthlyProfit = monthlyRevenue - monthlyExpenses;
@@ -70,12 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const roi = monthlyProfit > 0 ? (annualProfit / totalInvestment) * 100 : 0;
       const profitMargin = monthlyRevenue > 0 ? (monthlyProfit / monthlyRevenue) * 100 : 0;
 
-      // Calculate capacity utilization
-      const maxDailyCapacity = seats * 4; // Assume 4 turnovers per day
-      const capacityUtilization = (clientsPerDay / maxDailyCapacity) * 100;
+      // Calculate efficiency metrics
+      const revenuePerHour = dailyRevenue / workingHours;
+      const revenuePerDay = dailyRevenue;
 
-      // Calculate revenue per square meter/foot
-      const revenuePerSqUnit = monthlyRevenue / area;
+      // Food truck specific analysis
+      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
+      const fuelPercent = (fuelMaintenance / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
@@ -83,54 +105,46 @@ document.addEventListener("DOMContentLoaded", function () {
       if (roi >= 20 && profitMargin >= 15) {
         viabilityType = 'success';
         viabilityMessage = 'High Profit Business';
-      } else if (roi >= 12 && profitMargin >= 8) {
+      } else if (roi >= 12 && profitMargin >= 10) {
         viabilityType = 'info';
         viabilityMessage = 'Stable Business';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 10) {
-        recommendations.push('📈 Increase average transaction with premium menu items');
+      if (profitMargin < 12) {
+        recommendations.push('📈 Increase menu prices or reduce portion costs');
         recommendations.push('💰 Optimize food costs (target 25-30% of revenue)');
       }
-      if (capacityUtilization < 50) {
-        recommendations.push('🎯 Attract more customers through marketing and loyalty programs');
-        recommendations.push('⏰ Extend operating hours or add delivery services');
+      if (clientsPerHour < 8) {
+        recommendations.push('📍 Find higher traffic locations');
+        recommendations.push('📱 Use social media to announce location and specials');
       }
-      if (revenuePerSqUnit < 50) {
-        recommendations.push('🏢 Consider smaller space to reduce rent costs');
-        recommendations.push('📦 Add takeaway format to increase turnover');
+      if (avgCheck < 12) {
+        recommendations.push('🍟 Add high-margin sides and beverages');
+        recommendations.push('📦 Create combo meals to increase average check');
       }
-      if (avgCheck < 8) {
-        recommendations.push('☕ Offer specialty coffee drinks and desserts');
-        recommendations.push('🥐 Expand breakfast and light lunch menu');
+      if (workingDaysWeek < 5) {
+        recommendations.push('📅 Consider working more days per week');
+        recommendations.push('🎪 Participate in events and festivals');
       }
-
-      const data = {
-        totalInvestment,
-        monthlyRevenue,
-        monthlyExpenses,
-        monthlyProfit,
-        annualRevenue,
-        annualProfit,
-        paybackPeriod,
-        roi,
-        profitMargin
-      };
+      if (fuelPercent > 8) {
+        recommendations.push('⛽ Optimize routes and reduce fuel costs');
+        recommendations.push('📍 Focus on locations with longer stays');
+      }
 
       result.innerHTML = `
         <div class="insight-cards">
           ${createInsightCard(
             '💰 Total Investment',
             formatNumber(totalInvestment),
-            'Initial Capital',
+            'Truck + Equipment + Setup',
             'info'
           )}
           ${createInsightCard(
             '📈 Monthly Revenue',
             formatNumber(monthlyRevenue),
-            `${clientsPerDay} customers × $${avgCheck} × ${workingDays} days`,
+            `${clientsPerHour}/hr × ${workingHours}hrs × ${workingDaysWeek}days`,
             'success'
           )}
           ${createInsightCard(
@@ -160,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Detailed Analysis</h4>
+          <h4>📋 Detailed Food Truck Analysis</h4>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-label">Annual Revenue:</span>
@@ -171,20 +185,28 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Capacity Utilization:</span>
-              <span class="metric-value">${formatPercent(capacityUtilization)}</span>
+              <span class="metric-label">Revenue per Hour:</span>
+              <span class="metric-value">${formatNumber(revenuePerHour)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per sq ft:</span>
-              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/month</span>
+              <span class="metric-label">Revenue per Day:</span>
+              <span class="metric-value">${formatNumber(revenuePerDay)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Revenue per Seat:</span>
-              <span class="metric-value">${formatNumber(monthlyRevenue / seats)}/month</span>
+              <span class="metric-label">Working Days/Week:</span>
+              <span class="metric-value">${workingDaysWeek} days</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Cost of Goods:</span>
-              <span class="metric-value">${formatNumber(monthlyCoGS)}/month</span>
+              <span class="metric-label">Average Check:</span>
+              <span class="metric-value">${formatNumber(avgCheck)}</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Labor Costs:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} of revenue</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Fuel & Maintenance:</span>
+              <span class="metric-value">${formatPercent(fuelPercent)} of revenue</span>
             </div>
           </div>
         </div>
@@ -209,9 +231,8 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       // Store data for CSV download
-      window.cafeBusinessData = {
-        'Area (sq ft)': area,
-        'Number of Seats': seats,
+      window.foodTruckBusinessData = {
+        'Truck Cost ($)': truckCost,
         'Total Investment ($)': totalInvestment,
         'Annual Revenue ($)': annualRevenue,
         'Annual Expenses ($)': monthlyExpenses * 12,
@@ -220,26 +241,31 @@ document.addEventListener("DOMContentLoaded", function () {
         'Profit Margin (%)': profitMargin,
         'Annual ROI (%)': roi,
         'Payback Period (years)': paybackPeriod,
-        'Capacity Utilization (%)': capacityUtilization,
-        'Revenue per Sq Ft ($)': revenuePerSqUnit,
+        'Revenue per Hour ($)': revenuePerHour,
+        'Revenue per Day ($)': revenuePerDay,
         'Average Check ($)': avgCheck,
-        'Clients per Day': clientsPerDay
+        'Clients per Hour': clientsPerHour,
+        'Working Days per Week': workingDaysWeek,
+        'Working Hours per Day': workingHours,
+        'Labor Cost (%)': laborCostPercent,
+        'COGS (%)': cogsPercent,
+        'Fuel & Maintenance (%)': fuelPercent
       };
     });
   }
 
   // CSV download function
   window.downloadCSV = function() {
-    if (!window.cafeBusinessData) return;
+    if (!window.foodTruckBusinessData) return;
     
-    const csv = Object.entries(window.cafeBusinessData)
+    const csv = Object.entries(window.foodTruckBusinessData)
       .map(([key, value]) => `"${key}","${typeof value === 'number' ? value.toFixed(2) : value}"`)
       .join('\n');
     
     const blob = new Blob(['\ufeff' + 'Metric,Value\n' + csv], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'cafe-business-plan.csv';
+    link.download = 'food-truck-business-plan.csv';
     link.click();
   };
 });
