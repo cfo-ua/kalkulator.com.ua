@@ -38,6 +38,25 @@ seo:
     - daily calculations
     - instant results
     - accurate calculations
+    - business plan calculator
+    - entrepreneur calculators
+    - startup calculator
+    - business planning online
+    - business profitability calculator
+    - startup cost calculator
+    - business model calculator
+    - business planning tools
+    - entrepreneurship calculators
+    - business investment calculator
+    - break even analysis
+    - ROI calculator
+    - business payback period
+    - financial planning business
+    - restaurant business plan
+    - cafe business plan
+    - cleaning service plan
+    - marketing agency plan
+    - fitness center business plan
 ---
 
 <h1>Online Calculators</h1>
@@ -128,6 +147,56 @@ seo:
     <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
       <h4 style="margin: 0 0 0.5rem 0; color: var(--accent);"><a href="/en/calculators/compound-interest/" style="color: var(--accent); text-decoration: none;">💰 Compound Interest Calculator</a></h4>
       <p style="margin: 0; font-size: 0.9rem; color: #666;">See how your investments grow over time with the power of compound interest.</p>
+    </div>
+  </div>
+
+  <div class="business-plan-section" style="background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(21, 122, 255, 0.1); margin: 2.5rem 0;">
+    <h3 style="margin: 0 0 1rem 0; color: var(--accent); text-align: center;">🚀 Business Plan Calculators for Entrepreneurs</h3>
+    <p style="margin: 0 0 2rem 0; color: #555; text-align: center; font-size: 1.1rem;">Comprehensive <strong>business plans</strong> and <strong>profitability calculations</strong> for successful business launch. From <strong>startup ventures</strong> to <strong>traditional businesses</strong> — assess opportunities and plan investments.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/business-plan-restaurant/" style="color: var(--accent); text-decoration: none;">🍽️ Restaurant Business</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Calculate <strong>restaurant startup costs</strong>, projected revenue, <strong>payback period</strong> and monthly profit. Perfect for food service businesses.</p>
+        <div style="font-size: 0.85rem; color: #888;">💰 Investment • 📊 ROI • ⏱️ Payback</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/business-plan-cafe/" style="color: var(--accent); text-decoration: none;">☕ Cafe & Coffee Shop</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Detailed <strong>coffee shop business plan</strong> with equipment, rent, staff calculations and <strong>profitability forecast</strong>.</p>
+        <div style="font-size: 0.85rem; color: #888;">☕ Equipment • 🏢 Rent • 👥 Staff</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/business-plan-marketing-agency/" style="color: var(--accent); text-decoration: none;">📈 Marketing Agency</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;"><strong>Digital agency</strong> planning: team costs, tools, client base development and <strong>revenue forecast</strong> from services.</p>
+        <div style="font-size: 0.85rem; color: #888;">💻 Digital • 🎯 SMM • 🔍 SEO</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/startup-cost-calculator/" style="color: var(--accent); text-decoration: none;">🚀 Startup Costs</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Comprehensive <strong>initial investment</strong> calculation, operational costs and <strong>startup funding</strong> requirements assessment.</p>
+        <div style="font-size: 0.85rem; color: #888;">💡 Idea • 💰 Investment • 📊 Model</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/business-plan-cleaning-service/" style="color: var(--accent); text-decoration: none;">🧹 Cleaning Service</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Plan your <strong>cleaning business</strong>: equipment, supplies, staff costs and competitive <strong>service pricing</strong> calculation.</p>
+        <div style="font-size: 0.85rem; color: #888;">🧽 Equipment • 🏢 Commercial • 🏠 Residential</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/en/calculators/business-plan-gym/" style="color: var(--accent); text-decoration: none;">💪 Fitness Center</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Calculate <strong>gym startup costs</strong>: equipment, rent, membership pricing and <strong>profitability model</strong> for fitness business.</p>
+        <div style="font-size: 0.85rem; color: #888;">🏋️ Equipment • 🎫 Memberships • 💪 Fitness</div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/en/categories/business/" style="background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(21, 122, 255, 0.3); transition: all 0.3s ease;">
+        📈 Explore All 26 Business Plans
+      </a>
+      <p style="margin: 1rem 0 0 0; font-size: 0.9rem; color: #777;">From <strong>startups</strong> to <strong>traditional business</strong> • <strong>Detailed calculations</strong> • <strong>Real-world scenarios</strong></p>
     </div>
   </div>
 
