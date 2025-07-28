@@ -82,7 +82,7 @@ seo:
 
     <p>Use our calculator to create a realistic <strong>café business plan</strong> and make informed investment decisions in the food service industry.</p>
 scripts:
-  - /assets/js/business-plan-cafe.js
+  - /en/js/business-plan-cafe.js
 faq:
   - question: "How much does it cost to open a café?"
     answer: "Startup costs range from $60,000 to $150,000, including equipment ($25,000-$65,000), renovation ($15,000-$50,000), furniture ($8,000-$20,000), and working capital ($12,000-$15,000)."
