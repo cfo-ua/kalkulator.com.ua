@@ -113,78 +113,67 @@ faq:
 
 <div class="calculator-container">
   <form id="clothing-store-form" autocomplete="off">
-    <div class="input-group">
-      <h4>💰 Стартові інвестиції</h4>
-      <label>
-        Площа магазину (м²):
-        <input type="number" id="area" min="30" max="300" value="80" required>
-      </label>
-      <label>
-        Тип магазину:
-        <select id="store-type" required>
-          <option value="mass">Масовий сегмент</option>
-          <option value="mid" selected>Середній сегмент</option>
-          <option value="premium">Преміум сегмент</option>
-          <option value="boutique">Бутік</option>
-        </select>
-      </label>
-      <label>
-        Початковий товарний запас ($):
-        <input type="number" id="inventory-cost" min="20000" step="5000" value="45000" required>
-      </label>
-      <label>
-        Обладнання та меблі ($):
-        <input type="number" id="equipment-cost" min="5000" step="2000" value="15000" required>
-      </label>
-      <label>
-        Ремонт та дизайн ($):
-        <input type="number" id="renovation-cost" min="8000" step="2000" value="20000" required>
-      </label>
-      <label>
-        Додаткові витрати - ліцензії, робочий капітал ($):
-        <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>📊 Операційні параметри</h4>
-      <label>
-        Щомісячна оренда ($):
-        <input type="number" id="monthly-rent" min="1500" step="500" value="5000" required>
-      </label>
-      <label>
-        Наукова на товар (%):
-        <input type="number" id="markup-percent" min="80" max="400" value="180" required>
-      </label>
-      <label>
-        Щомісячні продажі товару (собівартість) ($):
-        <input type="number" id="monthly-sales-cost" min="3000" step="1000" value="12000" required>
-      </label>
-      <label>
-        Оборотність товару (разів на рік):
-        <input type="number" id="inventory-turnover" min="2" max="12" step="0.5" value="5" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>👥 Персонал та витрати</h4>
-      <label>
-        Зарплати персоналу ($):
-        <input type="number" id="staff-salaries" min="1500" step="500" value="4500" required>
-      </label>
-      <label>
-        Комунальні послуги ($):
-        <input type="number" id="utilities" min="200" step="100" value="400" required>
-      </label>
-      <label>
-        Реклама та маркетинг ($):
-        <input type="number" id="marketing" min="300" step="200" value="800" required>
-      </label>
-      <label>
-        Інші витрати (банк, страхування, податки) ($):
-        <input type="number" id="other-expenses" min="300" step="200" value="700" required>
-      </label>
-    </div>
+    <label>
+      Площа магазину (м²):
+      <input type="number" id="area" min="30" max="300" value="80" required>
+    </label>
+    <label>
+      Тип магазину:
+      <select id="store-type" required>
+        <option value="mass">Масовий сегмент</option>
+        <option value="mid" selected>Середній сегмент</option>
+        <option value="premium">Преміум сегмент</option>
+        <option value="boutique">Бутік</option>
+      </select>
+    </label>
+    <label>
+      Початковий товарний запас ($):
+      <input type="number" id="inventory-cost" min="20000" step="5000" value="45000" required>
+    </label>
+    <label>
+      Обладнання та меблі ($):
+      <input type="number" id="equipment-cost" min="5000" step="2000" value="15000" required>
+    </label>
+    <label>
+      Ремонт та дизайн ($):
+      <input type="number" id="renovation-cost" min="8000" step="2000" value="20000" required>
+    </label>
+    <label>
+      Додаткові витрати - ліцензії, робочий капітал ($):
+      <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
+    </label>
+    <label>
+      Щомісячна оренда ($):
+      <input type="number" id="monthly-rent" min="1500" step="500" value="5000" required>
+    </label>
+    <label>
+      Наукова на товар (%):
+      <input type="number" id="markup-percent" min="80" max="400" value="180" required>
+    </label>
+    <label>
+      Щомісячні продажі товару (собівартість) ($):
+      <input type="number" id="monthly-sales-cost" min="3000" step="1000" value="12000" required>
+    </label>
+    <label>
+      Оборотність товару (разів на рік):
+      <input type="number" id="inventory-turnover" min="2" max="12" step="0.5" value="5" required>
+    </label>
+    <label>
+      Зарплати персоналу ($):
+      <input type="number" id="staff-salaries" min="1500" step="500" value="4500" required>
+    </label>
+    <label>
+      Комунальні послуги ($):
+      <input type="number" id="utilities" min="200" step="100" value="400" required>
+    </label>
+    <label>
+      Реклама та маркетинг ($):
+      <input type="number" id="marketing" min="300" step="200" value="800" required>
+    </label>
+    <label>
+      Інші витрати (банк, страхування, податки) ($):
+      <input type="number" id="other-expenses" min="300" step="200" value="700" required>
+    </label>
 
     <button type="submit">👗 Розрахувати бізнес-план магазину одягу</button>
   </form>
