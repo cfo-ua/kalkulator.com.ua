@@ -96,45 +96,45 @@ seo:
   <div class="form-section">
     <h3>Trip Details</h3>
     <label for="trip-duration">Trip Duration (days):</label>
-    <input type="number" id="trip-duration" min="1" step="1" value="30" required>
+    <input type="number" id="trip-duration" min="1" value="30" required>
     
     <label for="travelers">Number of Travelers:</label>
-    <input type="number" id="travelers" min="1" step="1" value="1" required>
+    <input type="number" id="travelers" min="1" value="1" required>
   </div>
 
   <div class="form-section">
     <h3>Daily Costs (per person in USD)</h3>
     
     <label for="accommodation">Accommodation (hostels/budget hotels):</label>
-    <input type="number" id="accommodation" min="0" step="0.01" value="15" required>
+    <input type="number" id="accommodation" min="0" value="15" required>
     
     <label for="food">Food & Drinks:</label>
-    <input type="number" id="food" min="0" step="0.01" value="10" required>
+    <input type="number" id="food" min="0" value="10" required>
     
     <label for="transport">Local Transportation:</label>
-    <input type="number" id="transport" min="0" step="0.01" value="5" required>
+    <input type="number" id="transport" min="0" value="5" required>
     
     <label for="activities">Activities & Sightseeing:</label>
-    <input type="number" id="activities" min="0" step="0.01" value="8" required>
+    <input type="number" id="activities" min="0" value="8" required>
     
     <label for="miscellaneous">Miscellaneous (laundry, SIM, etc.):</label>
-    <input type="number" id="miscellaneous" min="0" step="0.01" value="3" required>
+    <input type="number" id="miscellaneous" min="0" value="3" required>
   </div>
 
   <div class="form-section">
     <h3>Additional Costs</h3>
     
     <label for="flights">International Flights (total):</label>
-    <input type="number" id="flights" min="0" step="0.01" value="800" required>
+    <input type="number" id="flights" min="0" value="800" required>
     
     <label for="visas">Visas & Travel Insurance:</label>
-    <input type="number" id="visas" min="0" step="0.01" value="100" required>
+    <input type="number" id="visas" min="0" value="100" required>
     
     <label for="gear">Travel Gear & Equipment:</label>
-    <input type="number" id="gear" min="0" step="0.01" value="200" required>
+    <input type="number" id="gear" min="0" value="200" required>
     
     <label for="emergency-buffer">Emergency Buffer (%):</label>
-    <input type="number" id="emergency-buffer" min="0" max="50" step="1" value="20" required>
+    <input type="number" id="emergency-buffer" min="0" max="50" value="20" required>
   </div>
 
   <button type="submit">Calculate Travel Budget</button>

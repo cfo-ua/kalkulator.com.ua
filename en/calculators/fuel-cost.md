@@ -85,19 +85,19 @@ faq:
 
 <form id="fuel-cost-form">
   <label for="consumption">Fuel consumption (L/100 km)</label>
-  <input type="number" id="consumption" step="any" min="0" placeholder="e.g., 8.5">
+  <input type="number" id="consumption" min="0" placeholder="e.g., 8.5">
 
   <label for="range">Distance (km)</label>
-  <input type="number" id="range" step="any" min="0" placeholder="e.g., 350">
+  <input type="number" id="range" min="0" placeholder="e.g., 350">
 
   <label for="pricePerLiter">Price per liter</label>
-  <input type="number" id="pricePerLiter" step="any" min="0" placeholder="e.g., 1.45">
+  <input type="number" id="pricePerLiter" min="0" placeholder="e.g., 1.45">
 
   <label for="liters">Fuel used (liters)</label>
-  <input type="number" id="liters" step="any" min="0" placeholder="e.g., 29.75">
+  <input type="number" id="liters" min="0" placeholder="e.g., 29.75">
 
   <label for="totalCost">Total fuel cost</label>
-  <input type="number" id="totalCost" step="any" min="0" placeholder="e.g., 43.14">
+  <input type="number" id="totalCost" min="0" placeholder="e.g., 43.14">
 
   <button type="submit">Calculate</button>
 </form>

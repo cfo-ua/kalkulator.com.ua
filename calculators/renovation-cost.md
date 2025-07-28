@@ -36,11 +36,11 @@ faq:
 <form id="renovation-cost-form" autocomplete="off">
   <label>
     Площа приміщення (м²):
-    <input type="number" id="renovation-area" min="0" step="any" required>
+    <input type="number" id="renovation-area" min="0" required>
   </label>
   <label>
     Середня ціна ремонту за 1 м²:
-    <input type="number" id="renovation-price" min="0" step="any" required>
+    <input type="number" id="renovation-price" min="0" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

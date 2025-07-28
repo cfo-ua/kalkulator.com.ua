@@ -158,38 +158,38 @@ faq:
   <h3>Cash Compensation</h3>
 
   <label for="baseSalary">Annual Base Salary</label>
-  <input type="number" id="baseSalary" value="120000" min="0" step="1000" placeholder="Annual salary before taxes">
+  <input type="number" id="baseSalary" value="120000" min="0" placeholder="Annual salary before taxes">
 
   <label for="benefitsValue">Annual Benefits Value</label>
-  <input type="number" id="benefitsValue" value="15000" min="0" step="1000" placeholder="Health, retirement, perks value">
+  <input type="number" id="benefitsValue" value="15000" min="0" placeholder="Health, retirement, perks value">
 
   <label for="performanceBonus">Expected Annual Bonus</label>
-  <input type="number" id="performanceBonus" value="10000" min="0" step="1000" placeholder="Performance-based bonus">
+  <input type="number" id="performanceBonus" value="10000" min="0" placeholder="Performance-based bonus">
 
   <h3>Equity Compensation</h3>
 
   <label for="equityPercentage">Equity Percentage (%)</label>
-  <input type="number" id="equityPercentage" value="0.25" min="0" max="10" step="0.01" placeholder="Ownership percentage">
+  <input type="number" id="equityPercentage" value="0.25" min="0" max="10" placeholder="Ownership percentage">
 
   <label for="currentValuation">Current Company Valuation</label>
-  <input type="number" id="currentValuation" value="50000000" min="0" step="1000000" placeholder="Recent funding round valuation">
+  <input type="number" id="currentValuation" value="50000000" min="0" placeholder="Recent funding round valuation">
 
   <label for="vestingYears">Vesting Period (years)</label>
-  <input type="number" id="vestingYears" value="4" min="1" max="6" step="1" placeholder="Total vesting period">
+  <input type="number" id="vestingYears" value="4" min="1" max="6" placeholder="Total vesting period">
 
   <label for="cliffMonths">Cliff Period (months)</label>
-  <input type="number" id="cliffMonths" value="12" min="0" max="24" step="6" placeholder="Months before first vesting">
+  <input type="number" id="cliffMonths" value="12" min="0" max="24" placeholder="Months before first vesting">
 
   <h3>Future Value Projections</h3>
 
   <label for="conservativeMultiple">Conservative Exit Multiple</label>
-  <input type="number" id="conservativeMultiple" value="0.8" min="0.1" max="5" step="0.1" placeholder="Conservative valuation multiple">
+  <input type="number" id="conservativeMultiple" value="0.8" min="0.1" max="5" placeholder="Conservative valuation multiple">
 
   <label for="moderateMultiple">Moderate Exit Multiple</label>
-  <input type="number" id="moderateMultiple" value="3.0" min="0.5" max="10" step="0.5" placeholder="Moderate growth scenario">
+  <input type="number" id="moderateMultiple" value="3.0" min="0.5" max="10" placeholder="Moderate growth scenario">
 
   <label for="optimisticMultiple">Optimistic Exit Multiple</label>
-  <input type="number" id="optimisticMultiple" value="8.0" min="1" max="20" step="0.5" placeholder="High growth scenario">
+  <input type="number" id="optimisticMultiple" value="8.0" min="1" max="20" placeholder="High growth scenario">
 
   <button type="submit">Calculate Compensation Package</button>
 </form>

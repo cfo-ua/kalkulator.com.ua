@@ -191,7 +191,7 @@ faq:
       </label>
       <label>
         Average Product Price ($):
-        <input type="number" id="avg-price" min="0.5" max="10" value="1.8" step="0.1" required>
+        <input type="number" id="avg-price" min="0.5" max="10" value="1.8" required>
       </label>
       <label>
         Product Cost (% of selling price):

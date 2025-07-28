@@ -126,7 +126,7 @@ faq:
 <form id="fence-form" autocomplete="off">
   <label>
     Fence Length (linear feet):
-    <input type="number" id="fence-length" min="0" step="any" required>
+    <input type="number" id="fence-length" min="0" required>
     <small>Total perimeter to be fenced</small>
   </label>
   <label>

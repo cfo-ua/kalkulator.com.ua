@@ -94,13 +94,13 @@ faq:
     <input type="number" id="current-age" min="18" max="80" value="30" required>
     
     <label for="current-savings">Current Investment Savings ($):</label>
-    <input type="number" id="current-savings" min="0" step="1000" value="50000" required>
+    <input type="number" id="current-savings" min="0" value="50000" required>
     
     <label for="annual-income">Current Annual Income ($):</label>
-    <input type="number" id="annual-income" min="0" step="5000" value="75000" required>
+    <input type="number" id="annual-income" min="0" value="75000" required>
     
     <label for="monthly-savings">Monthly Savings/Investing ($):</label>
-    <input type="number" id="monthly-savings" min="0" step="100" value="2000" required>
+    <input type="number" id="monthly-savings" min="0" value="2000" required>
   </div>
 
   <div class="form-section">
@@ -116,7 +116,7 @@ faq:
     </select>
     
     <label for="annual-expenses">Annual Expenses in FIRE ($):</label>
-    <input type="number" id="annual-expenses" min="10000" step="1000" value="50000" required>
+    <input type="number" id="annual-expenses" min="10000" value="50000" required>
     
     <label for="withdrawal-rate">Safe Withdrawal Rate (%):</label>
     <select id="withdrawal-rate" required>
@@ -129,10 +129,10 @@ faq:
   <div class="form-section">
     <h3>Investment Assumptions</h3>
     <label for="expected-return">Expected Annual Investment Return (%):</label>
-    <input type="number" id="expected-return" min="3" max="15" step="0.1" value="7" required>
+    <input type="number" id="expected-return" min="3" max="15" value="7" required>
     
     <label for="inflation-rate">Expected Inflation Rate (%):</label>
-    <input type="number" id="inflation-rate" min="1" max="8" step="0.1" value="3" required>
+    <input type="number" id="inflation-rate" min="1" max="8" value="3" required>
     
     <label for="real-return">Real Return (after inflation):</label>
     <input type="number" id="real-return" readonly>
@@ -141,16 +141,16 @@ faq:
   <div class="form-section">
     <h3>Additional Income in FIRE</h3>
     <label for="rental-income">Annual Rental Income ($):</label>
-    <input type="number" id="rental-income" min="0" step="1000" value="0">
+    <input type="number" id="rental-income" min="0" value="0">
     
     <label for="part-time-income">Annual Part-time Income ($):</label>
-    <input type="number" id="part-time-income" min="0" step="1000" value="0">
+    <input type="number" id="part-time-income" min="0" value="0">
     
     <label for="pension-income">Annual Pension Income ($):</label>
-    <input type="number" id="pension-income" min="0" step="1000" value="0">
+    <input type="number" id="pension-income" min="0" value="0">
     
     <label for="social-security">Expected Annual Social Security ($):</label>
-    <input type="number" id="social-security" min="0" step="1000" value="0">
+    <input type="number" id="social-security" min="0" value="0">
   </div>
 
   <div class="form-section">

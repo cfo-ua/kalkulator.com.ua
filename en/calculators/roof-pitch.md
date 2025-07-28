@@ -118,22 +118,22 @@ faq:
 <form id="roof-pitch-form" autocomplete="off">
   <label>
     Rise (inches):
-    <input type="number" id="roof-rise" min="0" step="any" required>
+    <input type="number" id="roof-rise" min="0" required>
     <small>Vertical rise over horizontal run</small>
   </label>
   <label>
     Run (inches):
-    <input type="number" id="roof-run" min="1" step="any" value="12" required>
+    <input type="number" id="roof-run" min="1" value="12" required>
     <small>Horizontal distance (typically 12 inches)</small>
   </label>
   <label>
     Building Length (ft):
-    <input type="number" id="roof-length" min="0" step="any" required>
+    <input type="number" id="roof-length" min="0" required>
     <small>Length of building for material calculations</small>
   </label>
   <label>
     Building Width (ft):
-    <input type="number" id="roof-width" min="0" step="any" required>
+    <input type="number" id="roof-width" min="0" required>
     <small>Width of building for material calculations</small>
   </label>
   <label>

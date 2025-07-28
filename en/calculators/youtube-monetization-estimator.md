@@ -107,16 +107,16 @@ faq:
 <form id="youtube-monetization-form">
   <h3>📊 Current Channel Status</h3>
   <label for="subscribers">Current Subscribers</label>
-  <input type="number" id="subscribers" value="25000" min="0" step="any" required>
+  <input type="number" id="subscribers" value="25000" min="0" required>
 
   <label for="monthlyViews">Monthly Views</label>
-  <input type="number" id="monthlyViews" value="500000" min="0" step="any" required>
+  <input type="number" id="monthlyViews" value="500000" min="0" required>
 
   <label for="avgViewDuration">Average View Duration (%)</label>
-  <input type="number" id="avgViewDuration" value="45" min="0" max="100" step="1" required>
+  <input type="number" id="avgViewDuration" value="45" min="0" max="100" required>
 
   <label for="videosPerMonth">Videos Published per Month</label>
-  <input type="number" id="videosPerMonth" value="8" min="0" max="100" step="1" required>
+  <input type="number" id="videosPerMonth" value="8" min="0" max="100" required>
 
   <h3>🎯 Content Category & Audience</h3>
   <label for="contentCategory">Content Category</label>
@@ -140,7 +140,7 @@ faq:
   </select>
 
   <label for="engagementRate">Engagement Rate (%)</label>
-  <input type="number" id="engagementRate" value="4.5" min="0" max="20" step="0.1" required>
+  <input type="number" id="engagementRate" value="4.5" min="0" max="20" required>
 
   <h3>💼 Monetization Features</h3>
   <label for="monetizationEnabled">YouTube Partner Program</label>
@@ -156,7 +156,7 @@ faq:
   </select>
 
   <label for="sponsorshipRate">Monthly Sponsorship Opportunities</label>
-  <input type="number" id="sponsorshipRate" value="2" min="0" max="20" step="1">
+  <input type="number" id="sponsorshipRate" value="2" min="0" max="20">
 
   <label for="merchandiseEnabled">Merchandise/Products</label>
   <select id="merchandiseEnabled">
@@ -166,10 +166,10 @@ faq:
 
   <h3>📈 Growth Projections</h3>
   <label for="monthlyGrowthRate">Expected Monthly Growth (%)</label>
-  <input type="number" id="monthlyGrowthRate" value="8" min="0" max="50" step="1" required>
+  <input type="number" id="monthlyGrowthRate" value="8" min="0" max="50" required>
 
   <label for="projectionMonths">Projection Period (months)</label>
-  <input type="number" id="projectionMonths" value="12" min="3" max="24" step="1" required>
+  <input type="number" id="projectionMonths" value="12" min="3" max="24" required>
 
   <button type="submit">Calculate YouTube Revenue</button>
 </form>

@@ -106,10 +106,10 @@ faq:
 
 <form id="roi-form">
   <label for="investment">Investment Amount</label>
-  <input type="number" id="investment" value="100000" min="0" step="any" required>
+  <input type="number" id="investment" value="100000" min="0" required>
 
   <label for="profit">Total Return from Investment</label>
-  <input type="number" id="profit" value="150000" min="0" step="any" required>
+  <input type="number" id="profit" value="150000" min="0" required>
 
   <button type="submit">Calculate ROI</button>
 </form>

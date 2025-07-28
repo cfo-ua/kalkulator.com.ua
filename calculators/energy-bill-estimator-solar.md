@@ -64,22 +64,22 @@ seo:
 
 <form id="solar-calculator-form">
   <label for="monthlyUsage">Щомісячне споживання електроенергії (кВт⋅год)</label>
-  <input type="number" id="monthlyUsage" value="800" min="0" step="any" required>
+  <input type="number" id="monthlyUsage" value="800" min="0" required>
 
   <label for="electricityRate">Тариф на електроенергію (₴ за кВт⋅год)</label>
-  <input type="number" id="electricityRate" value="4.32" min="0" step="0.01" required>
+  <input type="number" id="electricityRate" value="4.32" min="0" required>
 
   <label for="systemSize">Розмір сонячної системи (кВт)</label>
-  <input type="number" id="systemSize" value="8" min="0" step="0.1" required>
+  <input type="number" id="systemSize" value="8" min="0" required>
 
   <label for="installationCost">Загальна вартість встановлення (₴)</label>
-  <input type="number" id="installationCost" value="950000" min="0" step="any" required>
+  <input type="number" id="installationCost" value="950000" min="0" required>
 
   <label for="peakSunHours">Години пікового сонця на день</label>
-  <input type="number" id="peakSunHours" value="4.2" min="0" step="0.1" required>
+  <input type="number" id="peakSunHours" value="4.2" min="0" required>
 
   <label for="systemEfficiency">Ефективність системи (%)</label>
-  <input type="number" id="systemEfficiency" value="85" min="0" max="100" step="1" required>
+  <input type="number" id="systemEfficiency" value="85" min="0" max="100" required>
 
   <button type="submit">Розрахувати економію від сонячних панелей</button>
 </form>

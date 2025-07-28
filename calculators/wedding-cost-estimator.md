@@ -96,7 +96,7 @@ faq:
   <div class="form-section">
     <h3>Основні параметри весілля</h3>
     <label for="guest-count">Кількість гостей:</label>
-    <input type="number" id="guest-count" min="10" max="500" step="5" value="100" required>
+    <input type="number" id="guest-count" min="10" max="500" value="100" required>
     
     <label for="wedding-style">Стиль весілля:</label>
     <select id="wedding-style" required>

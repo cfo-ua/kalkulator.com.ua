@@ -93,15 +93,15 @@ faq:
 <form id="ac-power-form" autocomplete="off">
   <label>
     Room Area (sq ft):
-    <input type="number" id="ac-area" min="0" step="any" required>
+    <input type="number" id="ac-area" min="0" required>
   </label>
   <label>
     Number of People (regular occupants):
-    <input type="number" id="ac-people" min="0" step="1" value="2" required>
+    <input type="number" id="ac-people" min="0" value="2" required>
   </label>
   <label>
     Number of Windows:
-    <input type="number" id="ac-windows" min="0" step="1" value="1" required>
+    <input type="number" id="ac-windows" min="0" value="1" required>
   </label>
   <label>
     Room Type:

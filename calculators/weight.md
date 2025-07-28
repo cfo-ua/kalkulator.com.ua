@@ -38,7 +38,7 @@ faq:
 <form id="weight-form" autocomplete="off">
   <label>
     Маса тіла (кг):
-    <input type="number" id="weight-m" min="0" step="any" value="1" required>
+    <input type="number" id="weight-m" min="0" value="1" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

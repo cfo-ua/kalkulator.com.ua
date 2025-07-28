@@ -127,12 +127,12 @@ faq:
 <form id="gravel-form" autocomplete="off">
   <label>
     Довжина площі (м):
-    <input type="number" id="gravel-length" min="0" step="any" required>
+    <input type="number" id="gravel-length" min="0" required>
     <small>Довжина під'їзду, доріжки або площі</small>
   </label>
   <label>
     Ширина площі (м):
-    <input type="number" id="gravel-width" min="0" step="any" required>
+    <input type="number" id="gravel-width" min="0" required>
     <small>Ширина площі для засипання щебнем</small>
   </label>
   <label>

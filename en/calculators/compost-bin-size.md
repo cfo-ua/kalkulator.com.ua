@@ -100,7 +100,7 @@ seo:
 <form id="compost-size-form" autocomplete="off">
   <label>
     Number of People in Household:
-    <input type="number" id="household-size" min="1" step="1" required>
+    <input type="number" id="household-size" min="1" required>
   </label>
   <label>
     Cooking Habits:

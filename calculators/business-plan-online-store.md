@@ -141,19 +141,19 @@ faq:
       <h4>💰 Стартові інвестиції</h4>
       <label>
         Розробка сайту та дизайн ($):
-        <input type="number" id="website-cost" min="1000" step="500" value="8000" required>
+        <input type="number" id="website-cost" min="1000" value="8000" required>
       </label>
       <label>
         Початковий товарний запас ($):
-        <input type="number" id="inventory-cost" min="5000" step="1000" value="25000" required>
+        <input type="number" id="inventory-cost" min="5000" value="25000" required>
       </label>
       <label>
         Початковий маркетинг та реклама ($):
-        <input type="number" id="initial-marketing" min="1000" step="500" value="5000" required>
+        <input type="number" id="initial-marketing" min="1000" value="5000" required>
       </label>
       <label>
         Додаткові витрати (ліцензії, обладнання) ($):
-        <input type="number" id="additional-costs" min="500" step="500" value="3000" required>
+        <input type="number" id="additional-costs" min="500" value="3000" required>
       </label>
     </div>
 
@@ -161,23 +161,23 @@ faq:
       <h4>📊 Параметри продажів</h4>
       <label>
         Щомісячний трафік (відвідувачі):
-        <input type="number" id="monthly-traffic" min="1000" max="500000" step="1000" value="15000" required>
+        <input type="number" id="monthly-traffic" min="1000" max="500000" value="15000" required>
       </label>
       <label>
         Конверсія сайту (%):
-        <input type="number" id="conversion-rate" min="0.5" max="15" step="0.1" value="2.5" required>
+        <input type="number" id="conversion-rate" min="0.5" max="15" value="2.5" required>
       </label>
       <label>
         Середній чек (AOV) ($):
-        <input type="number" id="average-order" min="10" max="500" step="5" value="75" required>
+        <input type="number" id="average-order" min="10" max="500" value="75" required>
       </label>
       <label>
         Валова маржа (%):
-        <input type="number" id="gross-margin" min="15" max="80" step="5" value="45" required>
+        <input type="number" id="gross-margin" min="15" max="80" value="45" required>
       </label>
       <label>
         Відсоток повторних покупок (%):
-        <input type="number" id="repeat-rate" min="10" max="70" step="5" value="25" required>
+        <input type="number" id="repeat-rate" min="10" max="70" value="25" required>
       </label>
     </div>
 
@@ -185,23 +185,23 @@ faq:
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Маркетинг та реклама ($):
-        <input type="number" id="marketing-cost" min="500" step="200" value="3500" required>
+        <input type="number" id="marketing-cost" min="500" value="3500" required>
       </label>
       <label>
         Логістика та доставка ($):
-        <input type="number" id="logistics-cost" min="300" step="100" value="1200" required>
+        <input type="number" id="logistics-cost" min="300" value="1200" required>
       </label>
       <label>
         Технічне обслуговування сайту ($):
-        <input type="number" id="tech-maintenance" min="100" step="50" value="400" required>
+        <input type="number" id="tech-maintenance" min="100" value="400" required>
       </label>
       <label>
         Зарплати та персонал ($):
-        <input type="number" id="staff-costs" min="500" step="200" value="2000" required>
+        <input type="number" id="staff-costs" min="500" value="2000" required>
       </label>
       <label>
         Інші витрати (комісії, страхування) ($):
-        <input type="number" id="other-expenses" min="200" step="100" value="800" required>
+        <input type="number" id="other-expenses" min="200" value="800" required>
       </label>
     </div>
 

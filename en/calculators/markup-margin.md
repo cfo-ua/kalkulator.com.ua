@@ -138,19 +138,19 @@ faq:
 <form id="markup-margin-form" autocomplete="off">
   <label>
     Cost Price:
-    <input type="number" id="cost" step="any" min="0" placeholder="e.g. 100">
+    <input type="number" id="cost" min="0" placeholder="e.g. 100">
   </label>
   <label>
     Selling Price:
-    <input type="number" id="price" step="any" min="0" placeholder="e.g. 150">
+    <input type="number" id="price" min="0" placeholder="e.g. 150">
   </label>
   <label>
     Margin (%):
-    <input type="number" id="margin" step="any" min="0" max="100" placeholder="e.g. 33.33">
+    <input type="number" id="margin" min="0" max="100" placeholder="e.g. 33.33">
   </label>
   <label>
     Markup (%):
-    <input type="number" id="markup" step="any" min="0" placeholder="e.g. 50">
+    <input type="number" id="markup" min="0" placeholder="e.g. 50">
   </label>
   <button type="submit">Calculate</button>
 </form>

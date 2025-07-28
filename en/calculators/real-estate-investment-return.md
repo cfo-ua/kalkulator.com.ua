@@ -92,70 +92,70 @@ faq:
   <div class="form-section">
     <h3>Property Information</h3>
     <label for="property-value">Property Purchase Price ($):</label>
-    <input type="number" id="property-value" min="0" step="1000" value="300000" required>
+    <input type="number" id="property-value" min="0" value="300000" required>
     
     <label for="down-payment">Down Payment ($):</label>
-    <input type="number" id="down-payment" min="0" step="1000" value="60000" required>
+    <input type="number" id="down-payment" min="0" value="60000" required>
     
     <label for="closing-costs">Closing Costs ($):</label>
-    <input type="number" id="closing-costs" min="0" step="500" value="5000" required>
+    <input type="number" id="closing-costs" min="0" value="5000" required>
     
     <label for="renovation-costs">Renovation/Repair Costs ($):</label>
-    <input type="number" id="renovation-costs" min="0" step="1000" value="15000" required>
+    <input type="number" id="renovation-costs" min="0" value="15000" required>
   </div>
 
   <div class="form-section">
     <h3>Financing Details</h3>
     <label for="interest-rate">Mortgage Interest Rate (% annual):</label>
-    <input type="number" id="interest-rate" min="0" max="20" step="0.01" value="6.5" required>
+    <input type="number" id="interest-rate" min="0" max="20" value="6.5" required>
     
     <label for="loan-term">Loan Term (years):</label>
-    <input type="number" id="loan-term" min="5" max="50" step="1" value="30" required>
+    <input type="number" id="loan-term" min="5" max="50" value="30" required>
     
     <label for="pmi">PMI/Mortgage Insurance ($ monthly):</label>
-    <input type="number" id="pmi" min="0" step="25" value="0" required>
+    <input type="number" id="pmi" min="0" value="0" required>
   </div>
 
   <div class="form-section">
     <h3>Rental Income</h3>
     <label for="monthly-rent">Monthly Rental Income ($):</label>
-    <input type="number" id="monthly-rent" min="0" step="50" value="2500" required>
+    <input type="number" id="monthly-rent" min="0" value="2500" required>
     
     <label for="annual-rent-increase">Annual Rent Increase (%):</label>
-    <input type="number" id="annual-rent-increase" min="0" max="10" step="0.1" value="3" required>
+    <input type="number" id="annual-rent-increase" min="0" max="10" value="3" required>
     
     <label for="vacancy-rate">Vacancy Rate (%):</label>
-    <input type="number" id="vacancy-rate" min="0" max="50" step="1" value="5" required>
+    <input type="number" id="vacancy-rate" min="0" max="50" value="5" required>
   </div>
 
   <div class="form-section">
     <h3>Operating Expenses (Monthly)</h3>
     <label for="property-taxes">Property Taxes ($):</label>
-    <input type="number" id="property-taxes" min="0" step="50" value="400" required>
+    <input type="number" id="property-taxes" min="0" value="400" required>
     
     <label for="insurance">Property Insurance ($):</label>
-    <input type="number" id="insurance" min="0" step="25" value="150" required>
+    <input type="number" id="insurance" min="0" value="150" required>
     
     <label for="maintenance">Maintenance & Repairs ($):</label>
-    <input type="number" id="maintenance" min="0" step="25" value="200" required>
+    <input type="number" id="maintenance" min="0" value="200" required>
     
     <label for="property-management">Property Management ($):</label>
-    <input type="number" id="property-management" min="0" step="25" value="250" required>
+    <input type="number" id="property-management" min="0" value="250" required>
     
     <label for="other-expenses">Other Expenses ($):</label>
-    <input type="number" id="other-expenses" min="0" step="25" value="100" required>
+    <input type="number" id="other-expenses" min="0" value="100" required>
   </div>
 
   <div class="form-section">
     <h3>Investment Analysis</h3>
     <label for="hold-period">Expected Hold Period (years):</label>
-    <input type="number" id="hold-period" min="1" max="50" step="1" value="10" required>
+    <input type="number" id="hold-period" min="1" max="50" value="10" required>
     
     <label for="appreciation-rate">Annual Appreciation Rate (%):</label>
-    <input type="number" id="appreciation-rate" min="0" max="15" step="0.1" value="3" required>
+    <input type="number" id="appreciation-rate" min="0" max="15" value="3" required>
     
     <label for="selling-costs">Selling Costs (% of sale price):</label>
-    <input type="number" id="selling-costs" min="0" max="15" step="0.1" value="8" required>
+    <input type="number" id="selling-costs" min="0" max="15" value="8" required>
   </div>
 
   <button type="submit">Calculate Investment Returns</button>

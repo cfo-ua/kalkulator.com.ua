@@ -81,13 +81,13 @@ faq:
 
 <form id="rent-buy-form">
   <label for="propertyCost">Property Purchase Price</label>
-  <input type="number" id="propertyCost" value="300000" min="0" step="any" required>
+  <input type="number" id="propertyCost" value="300000" min="0" required>
 
   <label for="monthlyRent">Monthly Rent Payment</label>
-  <input type="number" id="monthlyRent" value="2000" min="0" step="any" required>
+  <input type="number" id="monthlyRent" value="2000" min="0" required>
 
   <label for="investmentRate">Annual Investment Return (%)</label>
-  <input type="number" id="investmentRate" value="7" min="0" step="any" required>
+  <input type="number" id="investmentRate" value="7" min="0" required>
 
   <button type="submit">Compare</button>
 </form>

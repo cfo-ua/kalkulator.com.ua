@@ -137,22 +137,22 @@ faq:
     <div>
       <h4>💰 Щомісячні витрати</h4>
       <label for="housingCosts">Житло (оренда/комунальні)</label>
-      <input type="number" id="housingCosts" value="8000" min="0" step="500" required>
+      <input type="number" id="housingCosts" value="8000" min="0" required>
       
       <label for="foodCosts">Харчування</label>
-      <input type="number" id="foodCosts" value="5000" min="0" step="500" required>
+      <input type="number" id="foodCosts" value="5000" min="0" required>
       
       <label for="transportCosts">Транспорт</label>
-      <input type="number" id="transportCosts" value="2000" min="0" step="200" required>
+      <input type="number" id="transportCosts" value="2000" min="0" required>
       
       <label for="healthCosts">Медицина/здоров'я</label>
       <input type="number" id="healthCosts" value="1500" min="0">
       
       <label for="debtPayments">Кредити та борги</label>
-      <input type="number" id="debtPayments" value="0" min="0" step="500">
+      <input type="number" id="debtPayments" value="0" min="0">
       
       <label for="otherExpenses">Інші обов'язкові витрати</label>
-      <input type="number" id="otherExpenses" value="2000" min="0" step="500">
+      <input type="number" id="otherExpenses" value="2000" min="0">
     </div>
     
     <div>
@@ -194,13 +194,13 @@ faq:
     <div>
       <h4>📊 Фінансові параметри</h4>
       <label for="monthlyIncome">Щомісячний дохід (грн)</label>
-      <input type="number" id="monthlyIncome" value="25000" min="0" step="1000" required>
+      <input type="number" id="monthlyIncome" value="25000" min="0" required>
       
       <label for="currentSavings">Поточні накопичення (грн)</label>
-      <input type="number" id="currentSavings" value="10000" min="0" step="1000">
+      <input type="number" id="currentSavings" value="10000" min="0">
       
       <label for="monthlySavings">Можливі щомісячні накопичення (грн)</label>
-      <input type="number" id="monthlySavings" value="2000" min="0" step="500">
+      <input type="number" id="monthlySavings" value="2000" min="0">
       
       <label for="riskTolerance">Толерантність до ризику</label>
       <select id="riskTolerance">

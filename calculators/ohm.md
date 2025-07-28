@@ -32,15 +32,15 @@ faq:
 <form id="ohm-form" autocomplete="off">
   <label>
     Напруга (U, В):
-    <input type="number" id="ohm-u" step="any">
+    <input type="number" id="ohm-u">
   </label>
   <label>
     Сила струму (I, А):
-    <input type="number" id="ohm-i" step="any">
+    <input type="number" id="ohm-i">
   </label>
   <label>
     Опір (R, Ом):
-    <input type="number" id="ohm-r" step="any">
+    <input type="number" id="ohm-r">
   </label>
   <button type="submit">Обчислити</button>
 </form>

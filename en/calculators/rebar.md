@@ -94,11 +94,11 @@ faq:
 <form id="rebar-form" autocomplete="off">
   <label>
     Slab Length (ft):
-    <input type="number" id="rebar-length" min="0" step="any" required>
+    <input type="number" id="rebar-length" min="0" required>
   </label>
   <label>
     Slab Width (ft):
-    <input type="number" id="rebar-width" min="0" step="any" required>
+    <input type="number" id="rebar-width" min="0" required>
   </label>
   <label>
     Rebar Size:

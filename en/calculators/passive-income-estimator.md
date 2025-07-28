@@ -107,38 +107,38 @@ faq:
 <form id="passive-income-form">
   <h3>🏠 Real Estate Income</h3>
   <label for="rentalIncome">Monthly Rental Income ($)</label>
-  <input type="number" id="rentalIncome" value="2500" min="0" step="any">
+  <input type="number" id="rentalIncome" value="2500" min="0">
 
   <label for="rentalGrowth">Annual Growth Rate (%)</label>
-  <input type="number" id="rentalGrowth" value="3" min="0" max="20" step="any">
+  <input type="number" id="rentalGrowth" value="3" min="0" max="20">
 
   <h3>📈 Investment Income</h3>
   <label for="dividendIncome">Monthly Dividend Income ($)</label>
-  <input type="number" id="dividendIncome" value="800" min="0" step="any">
+  <input type="number" id="dividendIncome" value="800" min="0">
 
   <label for="dividendGrowth">Annual Growth Rate (%)</label>
-  <input type="number" id="dividendGrowth" value="5" min="0" max="20" step="any">
+  <input type="number" id="dividendGrowth" value="5" min="0" max="20">
 
   <h3>💼 Business Income</h3>
   <label for="businessIncome">Monthly Business Income ($)</label>
-  <input type="number" id="businessIncome" value="1200" min="0" step="any">
+  <input type="number" id="businessIncome" value="1200" min="0">
 
   <label for="businessGrowth">Annual Growth Rate (%)</label>
-  <input type="number" id="businessGrowth" value="8" min="0" max="30" step="any">
+  <input type="number" id="businessGrowth" value="8" min="0" max="30">
 
   <h3>💡 Digital/Royalty Income</h3>
   <label for="digitalIncome">Monthly Digital Income ($)</label>
-  <input type="number" id="digitalIncome" value="400" min="0" step="any">
+  <input type="number" id="digitalIncome" value="400" min="0">
 
   <label for="digitalGrowth">Annual Growth Rate (%)</label>
-  <input type="number" id="digitalGrowth" value="10" min="0" max="50" step="any">
+  <input type="number" id="digitalGrowth" value="10" min="0" max="50">
 
   <h3>🎯 Planning</h3>
   <label for="monthlyExpenses">Monthly Living Expenses ($)</label>
-  <input type="number" id="monthlyExpenses" value="5000" min="0" step="any" required>
+  <input type="number" id="monthlyExpenses" value="5000" min="0" required>
 
   <label for="yearProjection">Projection Years</label>
-  <input type="number" id="yearProjection" value="10" min="1" max="30" step="1" required>
+  <input type="number" id="yearProjection" value="10" min="1" max="30" required>
 
   <button type="submit">Calculate Passive Income</button>
 </form>

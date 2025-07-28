@@ -203,38 +203,38 @@ faq:
   </select>
 
   <label for="foundingYear">Рік заснування</label>
-  <input type="number" id="foundingYear" value="2022" min="2010" max="2024" step="1">
+  <input type="number" id="foundingYear" value="2022" min="2010" max="2024">
 
   <h3>Фінансові показники</h3>
 
   <label for="currentRevenue">Поточний річний дохід (ARR)</label>
-  <input type="number" id="currentRevenue" value="2000000" min="0" step="100000" placeholder="Річний регулярний дохід">
+  <input type="number" id="currentRevenue" value="2000000" min="0" placeholder="Річний регулярний дохід">
 
   <label for="revenueGrowthRate">Річний темп зростання доходів (%)</label>
-  <input type="number" id="revenueGrowthRate" value="150" min="0" max="1000" step="10" placeholder="Відсоток зростання доходів">
+  <input type="number" id="revenueGrowthRate" value="150" min="0" max="1000" placeholder="Відсоток зростання доходів">
 
   <label for="grossMargin">Валова маржа (%)</label>
-  <input type="number" id="grossMargin" value="80" min="0" max="100" step="5" placeholder="Валова прибутковість">
+  <input type="number" id="grossMargin" value="80" min="0" max="100" placeholder="Валова прибутковість">
 
   <label for="monthlyBurnRate">Щомісячний burn rate</label>
-  <input type="number" id="monthlyBurnRate" value="200000" min="0" step="10000" placeholder="Щомісячні витрати">
+  <input type="number" id="monthlyBurnRate" value="200000" min="0" placeholder="Щомісячні витрати">
 
   <label for="currentCash">Поточний залишок коштів</label>
-  <input type="number" id="currentCash" value="5000000" min="0" step="100000" placeholder="Грошові кошти та еквіваленти">
+  <input type="number" id="currentCash" value="5000000" min="0" placeholder="Грошові кошти та еквіваленти">
 
   <h3>Ринкові метрики</h3>
 
   <label for="totalAddressableMarket">TAM (загальний ринок)</label>
-  <input type="number" id="totalAddressableMarket" value="10000000000" min="0" step="1000000000" placeholder="Розмір загального ринку в доларах">
+  <input type="number" id="totalAddressableMarket" value="10000000000" min="0" placeholder="Розмір загального ринку в доларах">
 
   <label for="activeUsers">Активні користувачі (MAU)</label>
-  <input type="number" id="activeUsers" value="50000" min="0" step="5000" placeholder="Щомісячні активні користувачі">
+  <input type="number" id="activeUsers" value="50000" min="0" placeholder="Щомісячні активні користувачі">
 
   <label for="customerAcquisitionCost">CAC (вартість залучення клієнта)</label>
-  <input type="number" id="customerAcquisitionCost" value="500" min="0" step="50" placeholder="Середня вартість залучення">
+  <input type="number" id="customerAcquisitionCost" value="500" min="0" placeholder="Середня вартість залучення">
 
   <label for="lifetimeValue">LTV (життєва цінність клієнта)</label>
-  <input type="number" id="lifetimeValue" value="2000" min="0" step="100" placeholder="Середня життєва цінність">
+  <input type="number" id="lifetimeValue" value="2000" min="0" placeholder="Середня життєва цінність">
 
   <h3>Команда та конкурентні переваги</h3>
 

@@ -164,19 +164,19 @@ faq:
       </label>
       <label>
         Facility Cost (purchase/down payment) ($):
-        <input type="number" id="property-cost" min="30000" step="5000" value="120000" required>
+        <input type="number" id="property-cost" min="30000" value="120000" required>
       </label>
       <label>
         Equipment & Machines ($):
-        <input type="number" id="equipment-cost" min="20000" step="5000" value="60000" required>
+        <input type="number" id="equipment-cost" min="20000" value="60000" required>
       </label>
       <label>
         Renovation & Design ($):
-        <input type="number" id="renovation-cost" min="10000" step="5000" value="40000" required>
+        <input type="number" id="renovation-cost" min="10000" value="40000" required>
       </label>
       <label>
         Additional Costs (Licenses, Marketing) ($):
-        <input type="number" id="additional-costs" min="5000" step="1000" value="15000" required>
+        <input type="number" id="additional-costs" min="5000" value="15000" required>
       </label>
     </div>
 
@@ -184,11 +184,11 @@ faq:
       <h4>📊 Membership Parameters</h4>
       <label>
         Monthly Membership Fee ($):
-        <input type="number" id="monthly-fee" min="15" max="100" step="5" value="45" required>
+        <input type="number" id="monthly-fee" min="15" max="100" value="45" required>
       </label>
       <label>
         Target Active Members:
-        <input type="number" id="target-members" min="100" max="2000" step="50" value="600" required>
+        <input type="number" id="target-members" min="100" max="2000" value="600" required>
       </label>
       <label>
         Member Retention Rate (%):
@@ -196,11 +196,11 @@ faq:
       </label>
       <label>
         Personal Training Rate ($/session):
-        <input type="number" id="personal-training-rate" min="20" max="80" step="5" value="35" required>
+        <input type="number" id="personal-training-rate" min="20" max="80" value="35" required>
       </label>
       <label>
         Personal Training Sessions/Month:
-        <input type="number" id="personal-sessions" min="50" max="500" step="25" value="200" required>
+        <input type="number" id="personal-sessions" min="50" max="500" value="200" required>
       </label>
     </div>
 
@@ -208,23 +208,23 @@ faq:
       <h4>💸 Monthly Operating Costs</h4>
       <label>
         Facility Rent ($):
-        <input type="number" id="rent-cost" min="1000" step="200" value="4500" required>
+        <input type="number" id="rent-cost" min="1000" value="4500" required>
       </label>
       <label>
         Staff (Trainers, Front Desk) ($):
-        <input type="number" id="staff-costs" min="2000" step="200" value="3500" required>
+        <input type="number" id="staff-costs" min="2000" value="3500" required>
       </label>
       <label>
         Utilities (Electric, Water, HVAC) ($):
-        <input type="number" id="utilities" min="500" step="100" value="1200" required>
+        <input type="number" id="utilities" min="500" value="1200" required>
       </label>
       <label>
         Marketing & Advertising ($):
-        <input type="number" id="marketing" min="300" step="100" value="800" required>
+        <input type="number" id="marketing" min="300" value="800" required>
       </label>
       <label>
         Other Expenses (Maintenance, Insurance) ($):
-        <input type="number" id="other-expenses" min="500" step="100" value="1000" required>
+        <input type="number" id="other-expenses" min="500" value="1000" required>
       </label>
     </div>
 

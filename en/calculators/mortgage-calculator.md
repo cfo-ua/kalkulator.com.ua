@@ -152,10 +152,10 @@ faq:
     <div>
       <h4>🏠 Loan Details</h4>
       <label for="homePrice">Home Price ($)</label>
-      <input type="number" id="homePrice" value="400000" min="50000" step="5000" required>
+      <input type="number" id="homePrice" value="400000" min="50000" required>
       
       <label for="downPayment">Down Payment ($)</label>
-      <input type="number" id="downPayment" value="80000" min="0" step="1000" required>
+      <input type="number" id="downPayment" value="80000" min="0" required>
       
       <label for="loanTerm">Loan Term (years)</label>
       <select id="loanTerm" required>
@@ -167,34 +167,34 @@ faq:
       </select>
       
       <label for="interestRate">Interest Rate (%)</label>
-      <input type="number" id="interestRate" value="6.75" min="0" max="15" step="0.01" required>
+      <input type="number" id="interestRate" value="6.75" min="0" max="15" required>
     </div>
     
     <div>
       <h4>💰 Additional Costs</h4>
       <label for="propertyTax">Annual Property Tax ($)</label>
-      <input type="number" id="propertyTax" value="6000" min="0" step="100" required>
+      <input type="number" id="propertyTax" value="6000" min="0" required>
       
       <label for="homeInsurance">Annual Home Insurance ($)</label>
-      <input type="number" id="homeInsurance" value="1500" min="0" step="50" required>
+      <input type="number" id="homeInsurance" value="1500" min="0" required>
       
       <label for="pmiRate">PMI Rate (% annually)</label>
-      <input type="number" id="pmiRate" value="0.5" min="0" max="2" step="0.1" placeholder="0 if 20%+ down">
+      <input type="number" id="pmiRate" value="0.5" min="0" max="2" placeholder="0 if 20%+ down">
       
       <label for="hoaFees">Monthly HOA Fees ($)</label>
-      <input type="number" id="hoaFees" value="0" min="0" step="25">
+      <input type="number" id="hoaFees" value="0" min="0">
     </div>
     
     <div>
       <h4>📊 Advanced Options</h4>
       <label for="extraPayment">Extra Monthly Payment ($)</label>
-      <input type="number" id="extraPayment" value="0" min="0" step="50">
+      <input type="number" id="extraPayment" value="0" min="0">
       
       <label for="mortgagePoints">Mortgage Points</label>
-      <input type="number" id="mortgagePoints" value="0" min="0" max="4" step="0.25">
+      <input type="number" id="mortgagePoints" value="0" min="0" max="4">
       
       <label for="closingCosts">Closing Costs ($)</label>
-      <input type="number" id="closingCosts" value="8000" min="0" step="500">
+      <input type="number" id="closingCosts" value="8000" min="0">
       
       <div style="margin-top: 1rem;">
         <label>

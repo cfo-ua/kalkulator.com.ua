@@ -120,7 +120,7 @@ seo:
 
   <label>
     Enter your value:
-    <input type="number" id="value" step="any" required placeholder="e.g., 270 or 9.5">
+    <input type="number" id="value" required placeholder="e.g., 270 or 9.5">
   </label>
 
   <button type="submit">Convert Size</button>

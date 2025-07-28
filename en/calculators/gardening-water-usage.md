@@ -96,7 +96,7 @@ seo:
 <form id="water-usage-form" autocomplete="off">
   <label>
     Garden Area (square feet):
-    <input type="number" id="garden-area" min="1" step="1" required>
+    <input type="number" id="garden-area" min="1" required>
   </label>
   <label>
     Garden Type:
@@ -155,11 +155,11 @@ seo:
   </label>
   <label>
     Average Weekly Rainfall (inches):
-    <input type="number" id="rainfall" min="0" step="0.1" value="0">
+    <input type="number" id="rainfall" min="0" value="0">
   </label>
   <label>
     Water Cost ($ per 1000 gallons):
-    <input type="number" id="water-cost" min="0" step="0.01" value="4.00">
+    <input type="number" id="water-cost" min="0" value="4.00">
   </label>
   <label>
     Analysis Period:

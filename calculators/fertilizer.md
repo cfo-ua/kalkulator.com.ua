@@ -50,7 +50,7 @@ seo:
 <form id="fertilizer-form" autocomplete="off">
   <label>
     Площа для удобрення (кв. м):
-    <input type="number" id="fertilizer-area" min="0" step="any" required>
+    <input type="number" id="fertilizer-area" min="0" required>
   </label>
   <label>
     Тип рослин:

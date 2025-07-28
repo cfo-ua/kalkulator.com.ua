@@ -165,15 +165,15 @@ faq:
   <h3>Current Financial Position</h3>
   
   <label for="startingCash">Starting Cash Balance</label>
-  <input type="number" id="startingCash" value="75000" min="0" step="5000" placeholder="Current cash in bank accounts">
+  <input type="number" id="startingCash" value="75000" min="0" placeholder="Current cash in bank accounts">
 
   <label for="monthlyRevenue">Average Monthly Revenue</label>
-  <input type="number" id="monthlyRevenue" value="120000" min="0" step="5000" placeholder="Typical monthly sales">
+  <input type="number" id="monthlyRevenue" value="120000" min="0" placeholder="Typical monthly sales">
 
   <h3>Revenue Patterns</h3>
 
   <label for="seasonalVariation">Seasonal Revenue Variation (%)</label>
-  <input type="number" id="seasonalVariation" value="25" min="0" max="500" step="5" placeholder="Percentage variation from average">
+  <input type="number" id="seasonalVariation" value="25" min="0" max="500" placeholder="Percentage variation from average">
 
   <label for="peakMonth">Peak Revenue Month</label>
   <select id="peakMonth">
@@ -208,35 +208,35 @@ faq:
   </select>
 
   <label for="averageCollectionDays">Average Collection Period (days)</label>
-  <input type="number" id="averageCollectionDays" value="35" min="0" max="365" step="5" placeholder="Days to collect from customers">
+  <input type="number" id="averageCollectionDays" value="35" min="0" max="365" placeholder="Days to collect from customers">
 
   <h3>Monthly Operating Expenses</h3>
 
   <label for="costOfGoodsSold">Cost of Goods Sold (%)</label>
-  <input type="number" id="costOfGoodsSold" value="40" min="0" max="99" step="5" placeholder="COGS as percentage of revenue">
+  <input type="number" id="costOfGoodsSold" value="40" min="0" max="99" placeholder="COGS as percentage of revenue">
 
   <label for="fixedExpenses">Fixed Operating Expenses</label>
-  <input type="number" id="fixedExpenses" value="35000" min="0" step="2500" placeholder="Rent, salaries, insurance, utilities">
+  <input type="number" id="fixedExpenses" value="35000" min="0" placeholder="Rent, salaries, insurance, utilities">
 
   <label for="variableExpenses">Variable Expenses (%)</label>
-  <input type="number" id="variableExpenses" value="15" min="0" max="80" step="0.1" placeholder="Marketing, supplies as % of revenue">
+  <input type="number" id="variableExpenses" value="15" min="0" max="80" placeholder="Marketing, supplies as % of revenue">
 
   <label for="debtPayments">Monthly Debt Payments</label>
-  <input type="number" id="debtPayments" value="8000" min="0" step="500" placeholder="Loan payments, credit cards">
+  <input type="number" id="debtPayments" value="8000" min="0" placeholder="Loan payments, credit cards">
 
   <label for="ownerDraws">Owner Salary/Draws</label>
-  <input type="number" id="ownerDraws" value="12000" min="0" step="1000" placeholder="Owner compensation">
+  <input type="number" id="ownerDraws" value="12000" min="0" placeholder="Owner compensation">
 
   <h3>Other Cash Flow Items</h3>
 
   <label for="quarterlyTaxes">Quarterly Tax Payments</label>
-  <input type="number" id="quarterlyTaxes" value="15000" min="0" step="1000" placeholder="Estimated quarterly tax payments">
+  <input type="number" id="quarterlyTaxes" value="15000" min="0" placeholder="Estimated quarterly tax payments">
 
   <label for="annualExpenses">Annual/Periodic Expenses</label>
-  <input type="number" id="annualExpenses" value="24000" min="0" step="2000" placeholder="Insurance, licenses, equipment">
+  <input type="number" id="annualExpenses" value="24000" min="0" placeholder="Insurance, licenses, equipment">
 
   <label for="plannedCapex">Planned Capital Expenditures</label>
-  <input type="number" id="plannedCapex" value="30000" min="0" step="5000" placeholder="Equipment, improvements, expansion">
+  <input type="number" id="plannedCapex" value="30000" min="0" placeholder="Equipment, improvements, expansion">
 
   <button type="submit">Generate Cash Flow Forecast</button>
 </form>

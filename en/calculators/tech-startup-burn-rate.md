@@ -164,52 +164,52 @@ faq:
   <h3>Current Financial Position</h3>
   
   <label for="currentCash">Current Cash Balance</label>
-  <input type="number" id="currentCash" value="2400000" min="0" step="10000" placeholder="Total cash and cash equivalents">
+  <input type="number" id="currentCash" value="2400000" min="0" placeholder="Total cash and cash equivalents">
 
   <label for="monthlyRevenue">Monthly Recurring Revenue</label>
-  <input type="number" id="monthlyRevenue" value="80000" min="0" step="5000" placeholder="Monthly revenue (if any)">
+  <input type="number" id="monthlyRevenue" value="80000" min="0" placeholder="Monthly revenue (if any)">
 
   <h3>Personnel Costs (Monthly)</h3>
 
   <label for="foundersalaries">Founder Salaries</label>
-  <input type="number" id="foundersalaries" value="25000" min="0" step="2500" placeholder="CEO, CTO, co-founder salaries">
+  <input type="number" id="foundersalaries" value="25000" min="0" placeholder="CEO, CTO, co-founder salaries">
 
   <label for="employeeSalaries">Employee Salaries</label>
-  <input type="number" id="employeeSalaries" value="180000" min="0" step="10000" placeholder="All employee salaries">
+  <input type="number" id="employeeSalaries" value="180000" min="0" placeholder="All employee salaries">
 
   <label for="benefitsTaxes">Benefits & Payroll Taxes</label>
-  <input type="number" id="benefitsTaxes" value="45000" min="0" step="2500" placeholder="Health insurance, taxes, retirement">
+  <input type="number" id="benefitsTaxes" value="45000" min="0" placeholder="Health insurance, taxes, retirement">
 
   <label for="contractorFees">Contractor & Freelancer Fees</label>
-  <input type="number" id="contractorFees" value="15000" min="0" step="2500" placeholder="External talent costs">
+  <input type="number" id="contractorFees" value="15000" min="0" placeholder="External talent costs">
 
   <h3>Operational Expenses (Monthly)</h3>
 
   <label for="technologyCosts">Technology & Software</label>
-  <input type="number" id="technologyCosts" value="12000" min="0" step="1000" placeholder="Cloud, SaaS, development tools">
+  <input type="number" id="technologyCosts" value="12000" min="0" placeholder="Cloud, SaaS, development tools">
 
   <label for="officeRent">Office & Facilities</label>
-  <input type="number" id="officeRent" value="8000" min="0" step="1000" placeholder="Rent, utilities, equipment">
+  <input type="number" id="officeRent" value="8000" min="0" placeholder="Rent, utilities, equipment">
 
   <label for="marketingSpend">Marketing & Advertising</label>
-  <input type="number" id="marketingSpend" value="25000" min="0" step="2500" placeholder="Digital ads, content, events">
+  <input type="number" id="marketingSpend" value="25000" min="0" placeholder="Digital ads, content, events">
 
   <label for="professionalServices">Professional Services</label>
-  <input type="number" id="professionalServices" value="6000" min="0" step="1000" placeholder="Legal, accounting, consulting">
+  <input type="number" id="professionalServices" value="6000" min="0" placeholder="Legal, accounting, consulting">
 
   <label for="adminOther">Administrative & Other</label>
-  <input type="number" id="adminOther" value="4000" min="0" step="500" placeholder="Insurance, banking, misc">
+  <input type="number" id="adminOther" value="4000" min="0" placeholder="Insurance, banking, misc">
 
   <h3>Growth & Planning</h3>
 
   <label for="monthlyGrowthRate">Monthly Burn Growth Rate (%)</label>
-  <input type="number" id="monthlyGrowthRate" value="5.0" min="0" max="25" step="0.5" placeholder="Expected monthly increase in burn rate">
+  <input type="number" id="monthlyGrowthRate" value="5.0" min="0" max="25" placeholder="Expected monthly increase in burn rate">
 
   <label for="targetRunwayMonths">Target Runway (months)</label>
-  <input type="number" id="targetRunwayMonths" value="18" min="6" max="36" step="3" placeholder="Desired cash runway length">
+  <input type="number" id="targetRunwayMonths" value="18" min="6" max="36" placeholder="Desired cash runway length">
 
   <label for="nextFundraisingAmount">Next Fundraising Target</label>
-  <input type="number" id="nextFundraisingAmount" value="5000000" min="0" step="250000" placeholder="Amount to raise in next round">
+  <input type="number" id="nextFundraisingAmount" value="5000000" min="0" placeholder="Amount to raise in next round">
 
   <button type="submit">Calculate Burn Rate & Runway</button>
 </form>

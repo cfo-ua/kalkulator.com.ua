@@ -100,11 +100,11 @@ faq:
 <form id="retaining-wall-form" autocomplete="off">
   <label>
     Wall Length (ft):
-    <input type="number" id="wall-length" min="0" step="any" required>
+    <input type="number" id="wall-length" min="0" required>
   </label>
   <label>
     Wall Height (ft):
-    <input type="number" id="wall-height" min="1" max="8" step="any" required>
+    <input type="number" id="wall-height" min="1" max="8" required>
   </label>
   <label>
     Block Type:

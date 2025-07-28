@@ -48,11 +48,11 @@ seo:
 <form id="transportation-form" autocomplete="off">
   <label>
     Відстань поїздки (км):
-    <input type="number" id="trip-distance" min="0.1" step="0.1" required>
+    <input type="number" id="trip-distance" min="0.1" required>
   </label>
   <label>
     Кількість поїздок на тиждень:
-    <input type="number" id="trips-per-week" min="1" step="1" value="5" required>
+    <input type="number" id="trips-per-week" min="1" value="5" required>
   </label>
   <label>
     Основний вид транспорту:
@@ -90,12 +90,12 @@ seo:
   </label>
   <label>
     Ціна палива (грн за літр):
-    <input type="number" id="fuel-price" min="0" step="0.01" value="55.00">
+    <input type="number" id="fuel-price" min="0" value="55.00">
     <small>Використовується для розрахунку витрат</small>
   </label>
   <label>
     Тариф на електроенергію (грн за кВтг):
-    <input type="number" id="electricity-rate" min="0" step="0.01" value="4.32">
+    <input type="number" id="electricity-rate" min="0" value="4.32">
     <small>Для розрахунків електромобілів</small>
   </label>
   <label>

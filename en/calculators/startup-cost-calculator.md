@@ -137,44 +137,44 @@ faq:
   <h3>One-Time Setup Costs</h3>
   
   <label for="legalCosts">Legal & Compliance Setup</label>
-  <input type="number" id="legalCosts" value="15000" min="0" step="any" placeholder="Business registration, IP, contracts">
+  <input type="number" id="legalCosts" value="15000" min="0" placeholder="Business registration, IP, contracts">
 
   <label for="techInfrastructure">Technology Infrastructure Setup</label>
-  <input type="number" id="techInfrastructure" value="25000" min="0" step="any" placeholder="Development tools, servers, cloud setup">
+  <input type="number" id="techInfrastructure" value="25000" min="0" placeholder="Development tools, servers, cloud setup">
 
   <label for="officeSetup">Office Setup & Equipment</label>
-  <input type="number" id="officeSetup" value="20000" min="0" step="any" placeholder="Equipment, furniture, deposits">
+  <input type="number" id="officeSetup" value="20000" min="0" placeholder="Equipment, furniture, deposits">
 
   <label for="initialMarketing">Initial Marketing & Branding</label>
-  <input type="number" id="initialMarketing" value="30000" min="0" step="any" placeholder="Website, branding, launch campaigns">
+  <input type="number" id="initialMarketing" value="30000" min="0" placeholder="Website, branding, launch campaigns">
 
   <label for="professionalServices">Professional Services Setup</label>
-  <input type="number" id="professionalServices" value="10000" min="0" step="any" placeholder="Accounting, consulting, initial legal">
+  <input type="number" id="professionalServices" value="10000" min="0" placeholder="Accounting, consulting, initial legal">
 
   <h3>Monthly Operating Expenses</h3>
 
   <label for="monthlyPersonnel">Personnel Costs (monthly)</label>
-  <input type="number" id="monthlyPersonnel" value="50000" min="0" step="any" placeholder="Salaries, benefits, contractors">
+  <input type="number" id="monthlyPersonnel" value="50000" min="0" placeholder="Salaries, benefits, contractors">
 
   <label for="monthlyTechnology">Technology Costs (monthly)</label>
-  <input type="number" id="monthlyTechnology" value="5000" min="0" step="any" placeholder="Software, cloud services, tools">
+  <input type="number" id="monthlyTechnology" value="5000" min="0" placeholder="Software, cloud services, tools">
 
   <label for="monthlyOffice">Office Expenses (monthly)</label>
-  <input type="number" id="monthlyOffice" value="8000" min="0" step="any" placeholder="Rent, utilities, internet">
+  <input type="number" id="monthlyOffice" value="8000" min="0" placeholder="Rent, utilities, internet">
 
   <label for="monthlyMarketing">Marketing & Sales (monthly)</label>
-  <input type="number" id="monthlyMarketing" value="15000" min="0" step="any" placeholder="Advertising, content, sales tools">
+  <input type="number" id="monthlyMarketing" value="15000" min="0" placeholder="Advertising, content, sales tools">
 
   <label for="monthlyAdmin">Administrative Costs (monthly)</label>
-  <input type="number" id="monthlyAdmin" value="3000" min="0" step="any" placeholder="Accounting, legal, insurance">
+  <input type="number" id="monthlyAdmin" value="3000" min="0" placeholder="Accounting, legal, insurance">
 
   <h3>Planning Parameters</h3>
 
   <label for="runwayMonths">Desired Runway (months)</label>
-  <input type="number" id="runwayMonths" value="18" min="6" max="36" step="1" placeholder="How long should funding last">
+  <input type="number" id="runwayMonths" value="18" min="6" max="36" placeholder="How long should funding last">
 
   <label for="contingencyPercent">Contingency Buffer (%)</label>
-  <input type="number" id="contingencyPercent" value="15" min="0" max="50" step="1" placeholder="Buffer for unexpected costs">
+  <input type="number" id="contingencyPercent" value="15" min="0" max="50" placeholder="Buffer for unexpected costs">
 
   <button type="submit">Calculate Startup Costs</button>
 </form>

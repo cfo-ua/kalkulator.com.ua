@@ -97,61 +97,61 @@ faq:
     </select>
     
     <label for="household-income">Annual Household Income ($):</label>
-    <input type="number" id="household-income" min="0" step="5000" value="75000" required>
+    <input type="number" id="household-income" min="0" value="75000" required>
     
     <label for="number-of-children">Number of Children to Plan For:</label>
-    <input type="number" id="number-of-children" min="1" max="10" step="1" value="1" required>
+    <input type="number" id="number-of-children" min="1" max="10" value="1" required>
   </div>
 
   <div class="form-section">
     <h3>Childcare & Education (Annual)</h3>
     <label for="infant-childcare">Infant/Toddler Childcare (0-2 years) ($):</label>
-    <input type="number" id="infant-childcare" min="0" step="500" value="12000" required>
+    <input type="number" id="infant-childcare" min="0" value="12000" required>
     
     <label for="preschool">Preschool (3-5 years) ($):</label>
-    <input type="number" id="preschool" min="0" step="500" value="8000" required>
+    <input type="number" id="preschool" min="0" value="8000" required>
     
     <label for="school-age-care">School-Age Care/After-School (6-17 years) ($):</label>
-    <input type="number" id="school-age-care" min="0" step="200" value="3000" required>
+    <input type="number" id="school-age-care" min="0" value="3000" required>
     
     <label for="private-school">Private School (optional, per year) ($):</label>
-    <input type="number" id="private-school" min="0" step="1000" value="0">
+    <input type="number" id="private-school" min="0" value="0">
   </div>
 
   <div class="form-section">
     <h3>Monthly Living Expenses (per child)</h3>
     <label for="food-expenses">Food & Nutrition ($):</label>
-    <input type="number" id="food-expenses" min="0" step="25" value="250" required>
+    <input type="number" id="food-expenses" min="0" value="250" required>
     
     <label for="clothing">Clothing & Shoes ($):</label>
-    <input type="number" id="clothing" min="0" step="1" value="75" required>
+    <input type="number" id="clothing" min="0" value="75" required>
     
     <label for="healthcare">Healthcare (insurance, co-pays, etc.) ($):</label>
-    <input type="number" id="healthcare" min="0" step="25" value="150" required>
+    <input type="number" id="healthcare" min="0" value="150" required>
     
     <label for="activities">Activities & Entertainment ($):</label>
-    <input type="number" id="activities" min="0" step="25" value="100" required>
+    <input type="number" id="activities" min="0" value="100" required>
   </div>
 
   <div class="form-section">
     <h3>Housing & Transportation</h3>
     <label for="housing-increase">Additional Housing Costs (monthly per child) ($):</label>
-    <input type="number" id="housing-increase" min="0" step="50" value="200" required>
+    <input type="number" id="housing-increase" min="0" value="200" required>
     
     <label for="transportation">Additional Transportation Costs (monthly) ($):</label>
-    <input type="number" id="transportation" min="0" step="25" value="75" required>
+    <input type="number" id="transportation" min="0" value="75" required>
   </div>
 
   <div class="form-section">
     <h3>One-Time & Major Expenses</h3>
     <label for="baby-gear">Baby Gear & Setup (first year) ($):</label>
-    <input type="number" id="baby-gear" min="0" step="100" value="2500" required>
+    <input type="number" id="baby-gear" min="0" value="2500" required>
     
     <label for="education-savings">Education Savings (annual) ($):</label>
-    <input type="number" id="education-savings" min="0" step="500" value="2000" required>
+    <input type="number" id="education-savings" min="0" value="2000" required>
     
     <label for="emergency-buffer">Emergency Buffer (% of total costs):</label>
-    <input type="number" id="emergency-buffer" min="0" max="30" step="1" value="10" required>
+    <input type="number" id="emergency-buffer" min="0" max="30" value="10" required>
   </div>
 
   <div class="form-section">

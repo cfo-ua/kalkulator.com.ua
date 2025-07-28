@@ -71,11 +71,11 @@ faq:
     <legend>Concentration (mol/L):</legend>
     <label>
       [H⁺]:
-      <input type="number" id="ph-h" step="any" min="0">
+      <input type="number" id="ph-h" min="0">
     </label>
     <label>
       [OH⁻]:
-      <input type="number" id="ph-oh" step="any" min="0">
+      <input type="number" id="ph-oh" min="0">
     </label>
   </fieldset>
   <button type="submit">Calculate</button>

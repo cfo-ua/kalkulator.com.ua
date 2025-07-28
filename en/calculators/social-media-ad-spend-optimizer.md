@@ -178,7 +178,7 @@ faq:
   <h3>Total Marketing Budget</h3>
   
   <label for="totalMonthlyBudget">Total Monthly Ad Budget</label>
-  <input type="number" id="totalMonthlyBudget" value="15000" min="0" step="500" placeholder="Total social media ad spend">
+  <input type="number" id="totalMonthlyBudget" value="15000" min="0" placeholder="Total social media ad spend">
 
   <label for="businessType">Business Type</label>
   <select id="businessType">
@@ -205,54 +205,54 @@ faq:
 
   <h4>Facebook/Instagram</h4>
   <label for="fbSpend">Current Monthly Spend</label>
-  <input type="number" id="fbSpend" value="6000" min="0" step="100" placeholder="Facebook/Instagram ad spend">
+  <input type="number" id="fbSpend" value="6000" min="0" placeholder="Facebook/Instagram ad spend">
   
   <label for="fbRevenue">Monthly Revenue Generated</label>
-  <input type="number" id="fbRevenue" value="24000" min="0" step="500" placeholder="Revenue from Facebook/Instagram">
+  <input type="number" id="fbRevenue" value="24000" min="0" placeholder="Revenue from Facebook/Instagram">
   
   <label for="fbConversions">Monthly Conversions</label>
-  <input type="number" id="fbConversions" value="120" min="0" step="5" placeholder="Sales/leads from Facebook/Instagram">
+  <input type="number" id="fbConversions" value="120" min="0" placeholder="Sales/leads from Facebook/Instagram">
 
   <h4>Google Ads</h4>
   <label for="googleSpend">Current Monthly Spend</label>
-  <input type="number" id="googleSpend" value="5000" min="0" step="100" placeholder="Google Ads spend">
+  <input type="number" id="googleSpend" value="5000" min="0" placeholder="Google Ads spend">
   
   <label for="googleRevenue">Monthly Revenue Generated</label>
-  <input type="number" id="googleRevenue" value="22500" min="0" step="500" placeholder="Revenue from Google Ads">
+  <input type="number" id="googleRevenue" value="22500" min="0" placeholder="Revenue from Google Ads">
   
   <label for="googleConversions">Monthly Conversions</label>
-  <input type="number" id="googleConversions" value="90" min="0" step="5" placeholder="Sales/leads from Google Ads">
+  <input type="number" id="googleConversions" value="90" min="0" placeholder="Sales/leads from Google Ads">
 
   <h4>LinkedIn Ads</h4>
   <label for="linkedinSpend">Current Monthly Spend</label>
-  <input type="number" id="linkedinSpend" value="2000" min="0" step="100" placeholder="LinkedIn ad spend">
+  <input type="number" id="linkedinSpend" value="2000" min="0" placeholder="LinkedIn ad spend">
   
   <label for="linkedinRevenue">Monthly Revenue Generated</label>
-  <input type="number" id="linkedinRevenue" value="8000" min="0" step="500" placeholder="Revenue from LinkedIn">
+  <input type="number" id="linkedinRevenue" value="8000" min="0" placeholder="Revenue from LinkedIn">
   
   <label for="linkedinConversions">Monthly Conversions</label>
-  <input type="number" id="linkedinConversions" value="25" min="0" step="1" placeholder="Sales/leads from LinkedIn">
+  <input type="number" id="linkedinConversions" value="25" min="0" placeholder="Sales/leads from LinkedIn">
 
   <h4>Other Platforms (TikTok, Twitter, Pinterest)</h4>
   <label for="otherSpend">Current Monthly Spend</label>
-  <input type="number" id="otherSpend" value="2000" min="0" step="100" placeholder="Other platforms ad spend">
+  <input type="number" id="otherSpend" value="2000" min="0" placeholder="Other platforms ad spend">
   
   <label for="otherRevenue">Monthly Revenue Generated</label>
-  <input type="number" id="otherRevenue" value="6000" min="0" step="500" placeholder="Revenue from other platforms">
+  <input type="number" id="otherRevenue" value="6000" min="0" placeholder="Revenue from other platforms">
   
   <label for="otherConversions">Monthly Conversions</label>
-  <input type="number" id="otherConversions" value="30" min="0" step="1" placeholder="Sales/leads from other platforms">
+  <input type="number" id="otherConversions" value="30" min="0" placeholder="Sales/leads from other platforms">
 
   <h3>Business Metrics</h3>
 
   <label for="averageOrderValue">Average Order Value/Deal Size</label>
-  <input type="number" id="averageOrderValue" value="200" min="0" step="10" placeholder="Average revenue per conversion">
+  <input type="number" id="averageOrderValue" value="200" min="0" placeholder="Average revenue per conversion">
 
   <label for="customerLifetimeValue">Customer Lifetime Value</label>
-  <input type="number" id="customerLifetimeValue" value="800" min="0" step="50" placeholder="Total value of customer relationship">
+  <input type="number" id="customerLifetimeValue" value="800" min="0" placeholder="Total value of customer relationship">
 
   <label for="profitMargin">Gross Profit Margin (%)</label>
-  <input type="number" id="profitMargin" value="40" min="5" max="90" step="5" placeholder="Profit margin percentage">
+  <input type="number" id="profitMargin" value="40" min="5" max="90" placeholder="Profit margin percentage">
 
   <button type="submit">Optimize Ad Spend Allocation</button>
 </form>

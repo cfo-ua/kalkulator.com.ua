@@ -129,13 +129,13 @@ faq:
 
 <form id="vat-form" autocomplete="off">
   <label>Price without VAT:
-    <input type="number" id="price-net" min="0" step="0.01" placeholder="e.g. 1000">
+    <input type="number" id="price-net" min="0" placeholder="e.g. 1000">
   </label>
   <label>Price with VAT:
-    <input type="number" id="price-gross" min="0" step="0.01" placeholder="e.g. 1200">
+    <input type="number" id="price-gross" min="0" placeholder="e.g. 1200">
   </label>
   <label>VAT Rate (%):
-    <input type="number" id="vat-rate" min="0" step="0.1" placeholder="e.g. 20" value="20">
+    <input type="number" id="vat-rate" min="0" placeholder="e.g. 20" value="20">
   </label>
   <button type="submit">Calculate</button>
 </form>

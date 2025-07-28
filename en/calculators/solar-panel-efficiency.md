@@ -129,58 +129,58 @@ faq:
       </select>
       
       <label for="ratedPower">Panel Rated Power (Watts)</label>
-      <input type="number" id="ratedPower" value="400" min="100" max="1000" step="10" required>
+      <input type="number" id="ratedPower" value="400" min="100" max="1000" required>
       
       <label for="panelEfficiency">Panel Efficiency (%)</label>
-      <input type="number" id="panelEfficiency" value="20" min="10" max="26" step="0.1" required>
+      <input type="number" id="panelEfficiency" value="20" min="10" max="26" required>
       
       <label for="panelArea">Panel Area (m²)</label>
-      <input type="number" id="panelArea" value="2" min="1" max="5" step="0.1" required>
+      <input type="number" id="panelArea" value="2" min="1" max="5" required>
     </div>
     
     <div>
       <h4>🌍 Environmental Conditions</h4>
       <label for="averageIrradiance">Average Solar Irradiance (W/m²)</label>
-      <input type="number" id="averageIrradiance" value="800" min="200" max="1200" step="10" required>
+      <input type="number" id="averageIrradiance" value="800" min="200" max="1200" required>
       
       <label for="averageTemperature">Average Panel Temperature (°C)</label>
-      <input type="number" id="averageTemperature" value="45" min="0" max="80" step="1" required>
+      <input type="number" id="averageTemperature" value="45" min="0" max="80" required>
       
       <label for="tempCoefficient">Temperature Coefficient (%/°C)</label>
-      <input type="number" id="tempCoefficient" value="-0.4" min="-0.8" max="-0.2" step="0.05" required>
+      <input type="number" id="tempCoefficient" value="-0.4" min="-0.8" max="-0.2" required>
       
       <label for="peakSunHours">Peak Sun Hours per Day</label>
-      <input type="number" id="peakSunHours" value="5.5" min="2" max="8" step="0.1" required>
+      <input type="number" id="peakSunHours" value="5.5" min="2" max="8" required>
     </div>
     
     <div>
       <h4>📐 Installation Parameters</h4>
       <label for="tiltAngle">Panel Tilt Angle (degrees)</label>
-      <input type="number" id="tiltAngle" value="30" min="0" max="90" step="1" required>
+      <input type="number" id="tiltAngle" value="30" min="0" max="90" required>
       
       <label for="azimuthAngle">Azimuth Angle (degrees from south)</label>
-      <input type="number" id="azimuthAngle" value="0" min="-180" max="180" step="5" required>
+      <input type="number" id="azimuthAngle" value="0" min="-180" max="180" required>
       
       <label for="shadingLoss">Shading Loss (%)</label>
-      <input type="number" id="shadingLoss" value="5" min="0" max="50" step="1" required>
+      <input type="number" id="shadingLoss" value="5" min="0" max="50" required>
       
       <label for="inverterEfficiency">Inverter Efficiency (%)</label>
-      <input type="number" id="inverterEfficiency" value="96" min="90" max="99" step="0.5" required>
+      <input type="number" id="inverterEfficiency" value="96" min="90" max="99" required>
     </div>
     
     <div>
       <h4>📊 Performance Analysis</h4>
       <label for="systemAge">System Age (years)</label>
-      <input type="number" id="systemAge" value="0" min="0" max="30" step="1" required>
+      <input type="number" id="systemAge" value="0" min="0" max="30" required>
       
       <label for="degradationRate">Annual Degradation Rate (%)</label>
-      <input type="number" id="degradationRate" value="0.6" min="0.3" max="1.2" step="0.1" required>
+      <input type="number" id="degradationRate" value="0.6" min="0.3" max="1.2" required>
       
       <label for="analysisYears">Analysis Period (years)</label>
-      <input type="number" id="analysisYears" value="25" min="1" max="30" step="1" required>
+      <input type="number" id="analysisYears" value="25" min="1" max="30" required>
       
       <label for="electricityRate">Electricity Rate ($/kWh)</label>
-      <input type="number" id="electricityRate" value="0.12" min="0.05" max="0.50" step="0.01" required>
+      <input type="number" id="electricityRate" value="0.12" min="0.05" max="0.50" required>
     </div>
   </div>
   

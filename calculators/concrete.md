@@ -29,15 +29,15 @@ faq:
 <form id="concrete-form" autocomplete="off">
   <label>
     Довжина (м):
-    <input type="number" id="concrete-length" min="0" step="any" required>
+    <input type="number" id="concrete-length" min="0" required>
   </label>
   <label>
     Ширина (м):
-    <input type="number" id="concrete-width" min="0" step="any" required>
+    <input type="number" id="concrete-width" min="0" required>
   </label>
   <label>
     Висота (м):
-    <input type="number" id="concrete-height" min="0" step="any" required>
+    <input type="number" id="concrete-height" min="0" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

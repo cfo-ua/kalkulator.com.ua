@@ -102,7 +102,7 @@ seo:
     <h3>⚙️ Параметри транзакції</h3>
     
     <label for="amount-usd">Сума транзакції (USD):</label>
-    <input type="number" id="amount-usd" min="0" step="0.01" value="100">
+    <input type="number" id="amount-usd" min="0" value="100">
     <small>Для розрахунку відсотка комісії</small>
 
     <label for="transaction-count">Кількість транзакцій:</label>
@@ -110,7 +110,7 @@ seo:
     <small>Для групових розрахунків</small>
 
     <label for="gas-price">Власна ціна газу (Gwei) - необов'язково:</label>
-    <input type="number" id="gas-price" min="0" step="0.1" placeholder="Автоматично">
+    <input type="number" id="gas-price" min="0" placeholder="Автоматично">
     <small>Залиште порожнім для автоматичної оцінки</small>
   </div>
 

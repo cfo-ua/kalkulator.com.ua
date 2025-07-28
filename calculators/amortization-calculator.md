@@ -206,10 +206,10 @@ faq:
     <h3>💰 Параметри кредиту</h3>
     
     <label for="loan-amount">Сума кредиту (грн):</label>
-    <input type="number" id="loan-amount" min="1000" step="1000" value="500000" required>
+    <input type="number" id="loan-amount" min="1000" value="500000" required>
     
     <label for="annual-rate">Річна процентна ставка (%):</label>
-    <input type="number" id="annual-rate" min="0" max="100" step="0.1" value="20" required>
+    <input type="number" id="annual-rate" min="0" max="100" value="20" required>
     
     <label for="loan-term">Термін кредиту (років):</label>
     <input type="number" id="loan-term" min="1" max="30" value="10" required>
@@ -228,11 +228,11 @@ faq:
     <h3>💡 Дострокові погашення</h3>
     
     <label for="extra-payment">Додатковий щомісячний платіж (грн):</label>
-    <input type="number" id="extra-payment" min="0" step="100" value="0">
+    <input type="number" id="extra-payment" min="0" value="0">
     <small>Сума понад основний платіж щомісяця</small>
     
     <label for="one-time-payment">Одноразовий платіж (грн):</label>
-    <input type="number" id="one-time-payment" min="0" step="1000" value="0">
+    <input type="number" id="one-time-payment" min="0" value="0">
     
     <label for="one-time-payment-month">Місяць одноразового платежу:</label>
     <input type="number" id="one-time-payment-month" min="1" max="360" value="12">
@@ -249,13 +249,13 @@ faq:
     <h3>📊 Додаткові параметри</h3>
     
     <label for="insurance-rate">Страхування (% від суми кредиту на рік):</label>
-    <input type="number" id="insurance-rate" min="0" max="5" step="0.1" value="0.5">
+    <input type="number" id="insurance-rate" min="0" max="5" value="0.5">
     
     <label for="processing-fee">Комісія за оформлення (грн):</label>
-    <input type="number" id="processing-fee" min="0" step="100" value="2500">
+    <input type="number" id="processing-fee" min="0" value="2500">
     
     <label for="monthly-fee">Щомісячна комісія (грн):</label>
-    <input type="number" id="monthly-fee" min="0" step="10" value="0">
+    <input type="number" id="monthly-fee" min="0" value="0">
   </div>
 
   <button type="submit">📊 Розрахувати графік амортизації</button>

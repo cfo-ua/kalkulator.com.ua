@@ -75,7 +75,7 @@ faq:
 
   <label>
     Введіть значення:
-    <input type="number" id="value" step="any" required>
+    <input type="number" id="value" required>
   </label>
 
   <button type="submit">Розрахувати</button>

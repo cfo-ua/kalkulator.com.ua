@@ -62,13 +62,13 @@ faq:
 
 <form id="savings-goal-form">
   <label for="goal">Сума цілі (грн):</label>
-  <input type="number" id="goal" min="0" step="any" required>
+  <input type="number" id="goal" min="0" required>
 
   <label for="initial">Початкова сума (грн):</label>
-  <input type="number" id="initial" min="0" step="any" value="0">
+  <input type="number" id="initial" min="0" value="0">
 
   <label for="months">Кількість місяців для накопичення:</label>
-  <input type="number" id="months" min="1" step="1" required>
+  <input type="number" id="months" min="1" required>
 
   <button type="submit">Розрахувати</button>
 </form>

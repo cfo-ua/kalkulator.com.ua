@@ -66,11 +66,11 @@ faq:
 <form id="business-profit-form" autocomplete="off">
   <label>
     Бажаний місячний прибуток:
-    <input type="number" id="target-profit" min="0" step="any" required>
+    <input type="number" id="target-profit" min="0" required>
   </label>
   <label>
     Маржа бізнесу (%):
-    <input type="number" id="business-margin" min="0" max="100" step="any" required>
+    <input type="number" id="business-margin" min="0" max="100" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

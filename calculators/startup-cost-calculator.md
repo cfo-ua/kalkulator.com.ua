@@ -127,44 +127,44 @@ faq:
   <h3>Одноразові витрати на запуск</h3>
   
   <label for="legalCosts">Юридичне оформлення та реєстрація</label>
-  <input type="number" id="legalCosts" value="150000" min="0" step="any" placeholder="Реєстрація бізнесу, інтелектуальна власність, договори">
+  <input type="number" id="legalCosts" value="150000" min="0" placeholder="Реєстрація бізнесу, інтелектуальна власність, договори">
 
   <label for="techInfrastructure">Налаштування технологічної інфраструктури</label>
-  <input type="number" id="techInfrastructure" value="250000" min="0" step="any" placeholder="Інструменти розробки, сервери, хмарні сервіси">
+  <input type="number" id="techInfrastructure" value="250000" min="0" placeholder="Інструменти розробки, сервери, хмарні сервіси">
 
   <label for="officeSetup">Облаштування офісу та обладнання</label>
-  <input type="number" id="officeSetup" value="200000" min="0" step="any" placeholder="Обладнання, меблі, застави">
+  <input type="number" id="officeSetup" value="200000" min="0" placeholder="Обладнання, меблі, застави">
 
   <label for="initialMarketing">Початковий маркетинг та брендинг</label>
-  <input type="number" id="initialMarketing" value="300000" min="0" step="any" placeholder="Веб-сайт, брендинг, рекламні кампанії запуску">
+  <input type="number" id="initialMarketing" value="300000" min="0" placeholder="Веб-сайт, брендинг, рекламні кампанії запуску">
 
   <label for="professionalServices">Професійні послуги</label>
-  <input type="number" id="professionalServices" value="100000" min="0" step="any" placeholder="Бухгалтерія, консультації, початкові юридичні послуги">
+  <input type="number" id="professionalServices" value="100000" min="0" placeholder="Бухгалтерія, консультації, початкові юридичні послуги">
 
   <h3>Щомісячні операційні витрати</h3>
 
   <label for="monthlyPersonnel">Витрати на персонал (щомісячно)</label>
-  <input type="number" id="monthlyPersonnel" value="500000" min="0" step="any" placeholder="Зарплати, пільги, підрядники">
+  <input type="number" id="monthlyPersonnel" value="500000" min="0" placeholder="Зарплати, пільги, підрядники">
 
   <label for="monthlyTechnology">Технологічні витрати (щомісячно)</label>
-  <input type="number" id="monthlyTechnology" value="50000" min="0" step="any" placeholder="Програмне забезпечення, хмарні сервіси, інструменти">
+  <input type="number" id="monthlyTechnology" value="50000" min="0" placeholder="Програмне забезпечення, хмарні сервіси, інструменти">
 
   <label for="monthlyOffice">Офісні витрати (щомісячно)</label>
-  <input type="number" id="monthlyOffice" value="80000" min="0" step="any" placeholder="Оренда, комунальні послуги, інтернет">
+  <input type="number" id="monthlyOffice" value="80000" min="0" placeholder="Оренда, комунальні послуги, інтернет">
 
   <label for="monthlyMarketing">Маркетинг та продажі (щомісячно)</label>
-  <input type="number" id="monthlyMarketing" value="150000" min="0" step="any" placeholder="Реклама, контент, інструменти продажів">
+  <input type="number" id="monthlyMarketing" value="150000" min="0" placeholder="Реклама, контент, інструменти продажів">
 
   <label for="monthlyAdmin">Адміністративні витрати (щомісячно)</label>
-  <input type="number" id="monthlyAdmin" value="30000" min="0" step="any" placeholder="Бухгалтерія, юридичні послуги, страхування">
+  <input type="number" id="monthlyAdmin" value="30000" min="0" placeholder="Бухгалтерія, юридичні послуги, страхування">
 
   <h3>Параметри планування</h3>
 
   <label for="runwayMonths">Бажаний runway (місяці)</label>
-  <input type="number" id="runwayMonths" value="18" min="6" max="36" step="1" placeholder="Як довго мають тривати кошти">
+  <input type="number" id="runwayMonths" value="18" min="6" max="36" placeholder="Як довго мають тривати кошти">
 
   <label for="contingencyPercent">Буфер на непередбачені витрати (%)</label>
-  <input type="number" id="contingencyPercent" value="15" min="0" max="50" step="1" placeholder="Буфер на несподівані витрати">
+  <input type="number" id="contingencyPercent" value="15" min="0" max="50" placeholder="Буфер на несподівані витрати">
 
   <button type="submit">Розрахувати витрати стартапу</button>
 </form>

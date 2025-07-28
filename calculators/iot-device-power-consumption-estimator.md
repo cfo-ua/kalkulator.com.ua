@@ -77,26 +77,26 @@ seo:
 
   <h3>⚡ Характеристики споживання</h3>
   <label for="active-power">Активне споживання (мА)</label>
-  <input type="number" id="active-power" value="50" min="0" step="0.1" required>
+  <input type="number" id="active-power" value="50" min="0" required>
 
   <label for="sleep-power">Споживання у режимі сну (мА)</label>
-  <input type="number" id="sleep-power" value="0.1" min="0" step="0.01" required>
+  <input type="number" id="sleep-power" value="0.1" min="0" required>
 
   <label for="transmission-power">Споживання при передачі (мА)</label>
-  <input type="number" id="transmission-power" value="100" min="0" step="0.1" required>
+  <input type="number" id="transmission-power" value="100" min="0" required>
 
   <label for="operating-voltage">Робоча напруга (В)</label>
-  <input type="number" id="operating-voltage" value="3.3" min="0" step="0.1" required>
+  <input type="number" id="operating-voltage" value="3.3" min="0" required>
 
   <h3>⏰ Режими роботи</h3>
   <label for="active-time">Час в активному режимі (хвилин на годину)</label>
-  <input type="number" id="active-time" value="5" min="0" max="60" step="0.1" required>
+  <input type="number" id="active-time" value="5" min="0" max="60" required>
 
   <label for="transmission-frequency">Частота передачі (разів на годину)</label>
-  <input type="number" id="transmission-frequency" value="12" min="0" step="1" required>
+  <input type="number" id="transmission-frequency" value="12" min="0" required>
 
   <label for="transmission-duration">Тривалість передачі (секунд)</label>
-  <input type="number" id="transmission-duration" value="10" min="0" step="0.1" required>
+  <input type="number" id="transmission-duration" value="10" min="0" required>
 
   <h3>🔋 Параметри батареї</h3>
   <label for="battery-type">Тип батареї</label>
@@ -112,14 +112,14 @@ seo:
   </select>
 
   <label for="battery-capacity">Ємність батареї (мАг)</label>
-  <input type="number" id="battery-capacity" value="2500" min="0" step="1" required>
+  <input type="number" id="battery-capacity" value="2500" min="0" required>
 
   <label for="battery-voltage">Напруга батареї (В)</label>
-  <input type="number" id="battery-voltage" value="1.5" min="0" step="0.1" required>
+  <input type="number" id="battery-voltage" value="1.5" min="0" required>
 
   <h3>💰 Вартість електроенергії</h3>
   <label for="electricity-rate">Тариф електроенергії (грн за кВт⋅год)</label>
-  <input type="number" id="electricity-rate" value="4.32" min="0" step="0.01" required>
+  <input type="number" id="electricity-rate" value="4.32" min="0" required>
 
   <button type="submit">Розрахувати споживання енергії</button>
 </form>

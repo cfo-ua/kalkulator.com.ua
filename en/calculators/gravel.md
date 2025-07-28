@@ -128,12 +128,12 @@ faq:
 <form id="gravel-form" autocomplete="off">
   <label>
     Area Length (ft):
-    <input type="number" id="gravel-length" min="0" step="any" required>
+    <input type="number" id="gravel-length" min="0" required>
     <small>Length of driveway, path, or area</small>
   </label>
   <label>
     Area Width (ft):
-    <input type="number" id="gravel-width" min="0" step="any" required>
+    <input type="number" id="gravel-width" min="0" required>
     <small>Width of area to be graveled</small>
   </label>
   <label>

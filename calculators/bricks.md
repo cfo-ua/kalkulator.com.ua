@@ -64,23 +64,23 @@ faq:
 <form id="bricks-form" autocomplete="off">
   <label>
     Площа стіни (м²):
-    <input type="number" id="bricks-area" min="0" step="any" required>
+    <input type="number" id="bricks-area" min="0" required>
   </label>
   <label>
     Довжина цегли (мм):
-    <input type="number" id="bricks-length" min="1" step="any" placeholder="250" required>
+    <input type="number" id="bricks-length" min="1" placeholder="250" required>
   </label>
   <label>
     Висота цегли (мм):
-    <input type="number" id="bricks-height" min="1" step="any" placeholder="65" required>
+    <input type="number" id="bricks-height" min="1" placeholder="65" required>
   </label>
   <label>
     Ширина цегли (мм):
-    <input type="number" id="bricks-width" min="1" step="any" placeholder="120" required>
+    <input type="number" id="bricks-width" min="1" placeholder="120" required>
   </label>
   <label>
     Товщина шва (мм):
-    <input type="number" id="bricks-joint" min="0" step="any" value="10" required>
+    <input type="number" id="bricks-joint" min="0" value="10" required>
   </label>
   <label>
     Тип кладки:

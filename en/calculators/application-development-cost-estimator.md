@@ -401,7 +401,7 @@ seo:
 
     <label>
       Contingency Buffer (%):
-      <input type="range" id="contingency" min="0" max="50" value="20" step="5">
+      <input type="range" id="contingency" min="0" max="50" value="20">
       <span id="contingency-display">20%</span>
       <small>Buffer for scope changes and unforeseen complexity</small>
     </label>

@@ -103,11 +103,11 @@ faq:
 <form id="mulch-form" autocomplete="off">
   <label>
     Довжина ділянки (м):
-    <input type="number" id="mulch-length" min="0" step="any" placeholder="напр. 10" required>
+    <input type="number" id="mulch-length" min="0" placeholder="напр. 10" required>
   </label>
   <label>
     Ширина ділянки (м):
-    <input type="number" id="mulch-width" min="0" step="any" placeholder="напр. 3" required>
+    <input type="number" id="mulch-width" min="0" placeholder="напр. 3" required>
   </label>
   <label>
     Тип мульчі:

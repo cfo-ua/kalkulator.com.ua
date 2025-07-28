@@ -75,13 +75,13 @@ faq:
 
 <form id="compound-form">
   <label>Initial Amount</label>
-  <input type="number" id="initial" value="10000" min="0" step="any" required>
+  <input type="number" id="initial" value="10000" min="0" required>
 
   <label>Annual Interest Rate (%)</label>
-  <input type="number" id="rate" value="12" min="0" step="any" required>
+  <input type="number" id="rate" value="12" min="0" required>
 
   <label>Time Period (years)</label>
-  <input type="number" id="years" value="5" min="0" step="any" required>
+  <input type="number" id="years" value="5" min="0" required>
 
   <label>Compounding Frequency</label>
   <select id="compound-frequency">
@@ -92,7 +92,7 @@ faq:
   </select>
 
   <label>Regular Contribution</label>
-  <input type="number" id="contribution" value="0" min="0" step="any">
+  <input type="number" id="contribution" value="0" min="0">
 
   <label>Contribution Frequency</label>
   <select id="contribution-frequency">

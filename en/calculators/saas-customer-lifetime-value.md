@@ -144,34 +144,34 @@ faq:
   <h3>Revenue & Pricing Information</h3>
   
   <label for="monthlyArpu">Average Revenue Per User (ARPU) - Monthly</label>
-  <input type="number" id="monthlyArpu" value="99" min="0" step="0.01" placeholder="Monthly subscription revenue per customer">
+  <input type="number" id="monthlyArpu" value="99" min="0" placeholder="Monthly subscription revenue per customer">
 
   <label for="grossMargin">Gross Margin (%)</label>
-  <input type="number" id="grossMargin" value="80" min="0" max="100" step="1" placeholder="Profit margin after direct costs">
+  <input type="number" id="grossMargin" value="80" min="0" max="100" placeholder="Profit margin after direct costs">
 
   <h3>Customer Retention Metrics</h3>
 
   <label for="monthlyChurn">Monthly Churn Rate (%)</label>
-  <input type="number" id="monthlyChurn" value="3.5" min="0" max="50" step="0.1" placeholder="Percentage of customers lost monthly">
+  <input type="number" id="monthlyChurn" value="3.5" min="0" max="50" placeholder="Percentage of customers lost monthly">
 
   <label for="expansionRate">Monthly Expansion Rate (%)</label>
-  <input type="number" id="expansionRate" value="2.0" min="0" max="20" step="0.1" placeholder="Revenue growth from existing customers">
+  <input type="number" id="expansionRate" value="2.0" min="0" max="20" placeholder="Revenue growth from existing customers">
 
   <h3>Customer Acquisition</h3>
 
   <label for="customerAcquisitionCost">Customer Acquisition Cost (CAC)</label>
-  <input type="number" id="customerAcquisitionCost" value="350" min="0" step="1" placeholder="Total cost to acquire new customer">
+  <input type="number" id="customerAcquisitionCost" value="350" min="0" placeholder="Total cost to acquire new customer">
 
   <label for="newCustomersMonthly">New Customers per Month</label>
-  <input type="number" id="newCustomersMonthly" value="100" min="0" step="1" placeholder="Monthly customer acquisition rate">
+  <input type="number" id="newCustomersMonthly" value="100" min="0" placeholder="Monthly customer acquisition rate">
 
   <h3>Advanced Parameters</h3>
 
   <label for="discountRate">Annual Discount Rate (%)</label>
-  <input type="number" id="discountRate" value="10" min="0" max="30" step="1" placeholder="Cost of capital for NPV calculations">
+  <input type="number" id="discountRate" value="10" min="0" max="30" placeholder="Cost of capital for NPV calculations">
 
   <label for="projectionMonths">Analysis Period (months)</label>
-  <input type="number" id="projectionMonths" value="36" min="12" max="60" step="6" placeholder="Timeframe for CLV analysis">
+  <input type="number" id="projectionMonths" value="36" min="12" max="60" placeholder="Timeframe for CLV analysis">
 
   <button type="submit">Calculate SaaS CLV Metrics</button>
 </form>

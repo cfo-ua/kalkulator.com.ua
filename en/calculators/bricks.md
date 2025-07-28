@@ -77,23 +77,23 @@ faq:
 <form id="bricks-form" autocomplete="off">
   <label>
     Wall Area (sq ft):
-    <input type="number" id="bricks-area" min="0" step="any" required>
+    <input type="number" id="bricks-area" min="0" required>
   </label>
   <label>
     Brick Length (inches):
-    <input type="number" id="bricks-length" min="1" step="any" placeholder="7.625" required>
+    <input type="number" id="bricks-length" min="1" placeholder="7.625" required>
   </label>
   <label>
     Brick Height (inches):
-    <input type="number" id="bricks-height" min="1" step="any" placeholder="2.25" required>
+    <input type="number" id="bricks-height" min="1" placeholder="2.25" required>
   </label>
   <label>
     Brick Width (inches):
-    <input type="number" id="bricks-width" min="1" step="any" placeholder="3.625" required>
+    <input type="number" id="bricks-width" min="1" placeholder="3.625" required>
   </label>
   <label>
     Mortar Joint Thickness (inches):
-    <input type="number" id="bricks-joint" min="0" step="any" value="0.375" required>
+    <input type="number" id="bricks-joint" min="0" value="0.375" required>
   </label>
   <label>
     Wall Type:

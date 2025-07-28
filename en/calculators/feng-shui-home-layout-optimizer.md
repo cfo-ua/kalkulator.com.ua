@@ -321,7 +321,7 @@ seo:
 
     <label>
       Clutter Level:
-      <input type="range" id="clutter-level" min="1" max="5" value="3" step="1">
+      <input type="range" id="clutter-level" min="1" max="5" value="3">
       <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
         <span>Very Clean</span>
         <span id="clutter-display">Moderate</span>
@@ -360,7 +360,7 @@ seo:
 
     <label>
       Plants in Home:
-      <input type="range" id="plant-count" min="0" max="20" value="3" step="1">
+      <input type="range" id="plant-count" min="0" max="20" value="3">
       <span id="plant-display">3 plants</span>
     </label>
 

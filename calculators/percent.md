@@ -65,11 +65,11 @@ faq:
     <legend>1. Знайти X% від Y</legend>
     <label>
       X (%):
-      <input type="number" id="percent-x" value="20" step="any" required>
+      <input type="number" id="percent-x" value="20" required>
     </label>
     <label>
       Y:
-      <input type="number" id="percent-y" value="50" step="any" required>
+      <input type="number" id="percent-y" value="50" required>
     </label>
     <button type="button" id="calc-percent-xy">Розрахувати</button>
     <div id="percent-xy-result"></div>
@@ -78,11 +78,11 @@ faq:
     <legend>2. Скільки % A від B</legend>
     <label>
       A:
-      <input type="number" id="percent-a" value="15" step="any" required>
+      <input type="number" id="percent-a" value="15" required>
     </label>
     <label>
       B:
-      <input type="number" id="percent-b" value="60" step="any" required>
+      <input type="number" id="percent-b" value="60" required>
     </label>
     <button type="button" id="calc-percent-ab">Розрахувати</button>
     <div id="percent-ab-result"></div>

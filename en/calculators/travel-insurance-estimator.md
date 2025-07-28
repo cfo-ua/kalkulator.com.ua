@@ -110,13 +110,13 @@ seo:
   </select>
 
   <label for="duration">Trip Duration (days)</label>
-  <input type="number" id="duration" value="14" min="1" max="365" step="1" required>
+  <input type="number" id="duration" value="14" min="1" max="365" required>
 
   <label for="age">Traveler Age</label>
-  <input type="number" id="age" value="35" min="1" max="100" step="1" required>
+  <input type="number" id="age" value="35" min="1" max="100" required>
 
   <label for="tripValue">Total Trip Value ($)</label>
-  <input type="number" id="tripValue" value="5000" min="100" step="any" required>
+  <input type="number" id="tripValue" value="5000" min="100" required>
 
   <label for="coverage">Coverage Level</label>
   <select id="coverage" required>
@@ -133,7 +133,7 @@ seo:
   </select>
 
   <label for="travelers">Number of Travelers</label>
-  <input type="number" id="travelers" value="2" min="1" max="10" step="1" required>
+  <input type="number" id="travelers" value="2" min="1" max="10" required>
 
   <button type="submit">Calculate Insurance Cost</button>
 </form>

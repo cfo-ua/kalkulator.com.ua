@@ -126,16 +126,16 @@ faq:
 
 <form id="unit-economics-form">
   <label for="unitPrice">Unit Price</label>
-  <input type="number" id="unitPrice" value="500" min="0" step="any" required>
+  <input type="number" id="unitPrice" value="500" min="0" required>
 
   <label for="unitCost">Variable Cost per Unit</label>
-  <input type="number" id="unitCost" value="300" min="0" step="any" required>
+  <input type="number" id="unitCost" value="300" min="0" required>
 
   <label for="fixedCosts">Fixed Costs (per month)</label>
-  <input type="number" id="fixedCosts" value="10000" min="0" step="any" required>
+  <input type="number" id="fixedCosts" value="10000" min="0" required>
 
   <label for="monthlyUnits">Expected Monthly Sales (units)</label>
-  <input type="number" id="monthlyUnits" value="100" min="0" step="1" required>
+  <input type="number" id="monthlyUnits" value="100" min="0" required>
 
   <button type="submit">Calculate</button>
 </form>

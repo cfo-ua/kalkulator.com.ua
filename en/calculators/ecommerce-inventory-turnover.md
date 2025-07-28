@@ -166,16 +166,16 @@ faq:
   <h3>Inventory & Sales Data</h3>
   
   <label for="beginningInventory">Beginning Inventory Value</label>
-  <input type="number" id="beginningInventory" value="450000" min="0" step="5000" placeholder="Inventory value at start of period">
+  <input type="number" id="beginningInventory" value="450000" min="0" placeholder="Inventory value at start of period">
 
   <label for="endingInventory">Ending Inventory Value</label>
-  <input type="number" id="endingInventory" value="380000" min="0" step="5000" placeholder="Current inventory value">
+  <input type="number" id="endingInventory" value="380000" min="0" placeholder="Current inventory value">
 
   <label for="costOfGoodsSold">Cost of Goods Sold (COGS)</label>
-  <input type="number" id="costOfGoodsSold" value="1200000" min="0" step="10000" placeholder="Annual COGS">
+  <input type="number" id="costOfGoodsSold" value="1200000" min="0" placeholder="Annual COGS">
 
   <label for="totalRevenue">Total Revenue</label>
-  <input type="number" id="totalRevenue" value="2000000" min="0" step="10000" placeholder="Annual revenue">
+  <input type="number" id="totalRevenue" value="2000000" min="0" placeholder="Annual revenue">
 
   <label for="analysisType">Analysis Period</label>
   <select id="analysisType">
@@ -210,24 +210,24 @@ faq:
   <h3>Inventory Management</h3>
 
   <label for="deadStock">Dead Stock Value (90+ days no sales)</label>
-  <input type="number" id="deadStock" value="35000" min="0" step="2500" placeholder="Slow-moving inventory value">
+  <input type="number" id="deadStock" value="35000" min="0" placeholder="Slow-moving inventory value">
 
   <label for="averageLeadTime">Average Supplier Lead Time (days)</label>
-  <input type="number" id="averageLeadTime" value="21" min="1" max="120" step="1" placeholder="Days from order to receipt">
+  <input type="number" id="averageLeadTime" value="21" min="1" max="120" placeholder="Days from order to receipt">
 
   <label for="safetyStockDays">Safety Stock (days of supply)</label>
-  <input type="number" id="safetyStockDays" value="14" min="0" max="60" step="1" placeholder="Buffer stock days">
+  <input type="number" id="safetyStockDays" value="14" min="0" max="60" placeholder="Buffer stock days">
 
   <h3>Costs & Financial Impact</h3>
 
   <label for="carryingCostRate">Annual Carrying Cost Rate (%)</label>
-  <input type="number" id="carryingCostRate" value="25" min="10" max="50" step="1" placeholder="Storage, insurance, opportunity cost">
+  <input type="number" id="carryingCostRate" value="25" min="10" max="50" placeholder="Storage, insurance, opportunity cost">
 
   <label for="warehouseCost">Monthly Warehouse/Storage Cost</label>
-  <input type="number" id="warehouseCost" value="8000" min="0" step="500" placeholder="Fixed storage costs">
+  <input type="number" id="warehouseCost" value="8000" min="0" placeholder="Fixed storage costs">
 
   <label for="opportunityCostRate">Opportunity Cost of Capital (%)</label>
-  <input type="number" id="opportunityCostRate" value="12" min="5" max="25" step="1" placeholder="Cost of capital/interest rate">
+  <input type="number" id="opportunityCostRate" value="12" min="5" max="25" placeholder="Cost of capital/interest rate">
 
   <button type="submit">Calculate Inventory Turnover</button>
 </form>

@@ -31,7 +31,7 @@ faq:
 <form id="sphere-form" autocomplete="off">
   <label>
     Радіус (R):
-    <input type="number" id="sphere-r" min="0" step="any" value="1" required>
+    <input type="number" id="sphere-r" min="0" value="1" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

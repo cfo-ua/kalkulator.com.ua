@@ -200,7 +200,7 @@ scripts:
       <div style="display: flex; gap: 10px; align-items: center;">
         <input type="number" name="time-minutes" min="0" max="30" placeholder="1" style="width: 80px;">
         <span>хв</span>
-        <input type="number" name="time-seconds" min="0" max="59.99" step="0.01" placeholder="25.50" required style="width: 100px;">
+        <input type="number" name="time-seconds" min="0" max="59.99" placeholder="25.50" required style="width: 100px;">
         <span>сек</span>
       </div>
       <small style="color: #666;">Введіть свій поточний особистий рекорд</small>

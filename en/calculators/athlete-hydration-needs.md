@@ -189,7 +189,7 @@ scripts:
     <label>
       Body Weight:
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="weight" min="40" max="150" step="0.1" placeholder="70" required style="flex: 1;">
+        <input type="number" name="weight" min="40" max="150" placeholder="70" required style="flex: 1;">
         <select name="weight-unit" required style="width: 80px;">
           <option value="kg">kg</option>
           <option value="lbs">lbs</option>
@@ -287,7 +287,7 @@ scripts:
     <label>
       Your Sweat Rate (if known):
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="sweat-rate" min="0.3" max="4.0" step="0.1" placeholder="Leave empty for estimation" style="flex: 1;">
+        <input type="number" name="sweat-rate" min="0.3" max="4.0" placeholder="Leave empty for estimation" style="flex: 1;">
         <span style="padding: 8px; color: #666;">L/hour</span>
       </div>
       <small style="color: #666;">Optional: Calculate by weighing before/after training (1kg loss = ~1L sweat)</small>

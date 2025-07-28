@@ -195,12 +195,12 @@ faq:
   </label>
   <label>
     Professional Assembly Cost (optional):
-    <input type="number" id="professional-cost" min="0" step="1" placeholder="e.g., 150">
+    <input type="number" id="professional-cost" min="0" placeholder="e.g., 150">
     <small>Local assembly service cost in dollars</small>
   </label>
   <label>
     Your Hourly Value:
-    <input type="number" id="hourly-value" min="0" step="1" value="25" required>
+    <input type="number" id="hourly-value" min="0" value="25" required>
     <small>What your time is worth per hour</small>
   </label>
   <button type="submit">Estimate Assembly Time</button>

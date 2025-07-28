@@ -98,7 +98,7 @@ faq:
   <div id="electric-load-list">
     <div class="electric-load-row">
       <input type="text" class="electric-appliance" placeholder="Appliance name" />
-      <input type="number" class="electric-power" min="0" step="any" placeholder="Power (watts)" />
+      <input type="number" class="electric-power" min="0" placeholder="Power (watts)" />
     </div>
   </div>
   <button type="button" id="add-appliance">Add Appliance</button>

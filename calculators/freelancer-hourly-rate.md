@@ -115,22 +115,22 @@ faq:
 
 <form id="freelancer-rate-form">
   <label for="annualLivingExpenses">Річні витрати на життя (грн)</label>
-  <input type="number" id="annualLivingExpenses" value="400000" min="0" step="any" required>
+  <input type="number" id="annualLivingExpenses" value="400000" min="0" required>
 
   <label for="businessExpenses">Річні бізнес-витрати (грн)</label>
-  <input type="number" id="businessExpenses" value="80000" min="0" step="any" required>
+  <input type="number" id="businessExpenses" value="80000" min="0" required>
 
   <label for="desiredProfit">Бажана маржа прибутку (%)</label>
-  <input type="number" id="desiredProfit" value="25" min="0" max="100" step="any" required>
+  <input type="number" id="desiredProfit" value="25" min="0" max="100" required>
 
   <label for="billableHours">Білінгові години на тиждень</label>
-  <input type="number" id="billableHours" value="25" min="1" max="60" step="any" required>
+  <input type="number" id="billableHours" value="25" min="1" max="60" required>
 
   <label for="vacationWeeks">Тижні відпустки/хвороби на рік</label>
-  <input type="number" id="vacationWeeks" value="4" min="0" max="20" step="any" required>
+  <input type="number" id="vacationWeeks" value="4" min="0" max="20" required>
 
   <label for="taxRate">Очікувана податкова ставка (%)</label>
-  <input type="number" id="taxRate" value="5" min="0" max="50" step="any" required>
+  <input type="number" id="taxRate" value="5" min="0" max="50" required>
 
   <button type="submit">Розрахувати погодинну ставку</button>
 </form>

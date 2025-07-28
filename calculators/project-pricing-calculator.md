@@ -114,10 +114,10 @@ faq:
 <form id="project-pricing-form">
   <h3>📊 Історичний базовий проект</h3>
   <label for="baseProjectCost">Вартість схожого проекту (грн)</label>
-  <input type="number" id="baseProjectCost" value="200000" min="1000" step="any" required>
+  <input type="number" id="baseProjectCost" value="200000" min="1000" required>
 
   <label for="baseProjectHours">Години, витрачені на базовий проект</label>
-  <input type="number" id="baseProjectHours" value="80" min="1" step="any" required>
+  <input type="number" id="baseProjectHours" value="80" min="1" required>
 
   <label for="baseProjectComplexity">Складність базового проекту (1-5)</label>
   <select id="baseProjectComplexity" required>
@@ -171,10 +171,10 @@ faq:
   </select>
 
   <label for="revisions">Раундів ревізій включено</label>
-  <input type="number" id="revisions" value="3" min="0" max="10" step="1" required>
+  <input type="number" id="revisions" value="3" min="0" max="10" required>
 
   <label for="profitMargin">Цільова маржа прибутку (%)</label>
-  <input type="number" id="profitMargin" value="30" min="10" max="100" step="5" required>
+  <input type="number" id="profitMargin" value="30" min="10" max="100" required>
 
   <button type="submit">Розрахувати ціну проекту</button>
 </form>

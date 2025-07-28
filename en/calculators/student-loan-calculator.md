@@ -176,10 +176,10 @@ faq:
     <div>
       <h4>📚 Loan Information</h4>
       <label for="loanBalance">Current Loan Balance ($)</label>
-      <input type="number" id="loanBalance" value="35000" min="0" step="100" required>
+      <input type="number" id="loanBalance" value="35000" min="0" required>
       
       <label for="interestRate">Interest Rate (%)</label>
-      <input type="number" id="interestRate" value="5.5" min="0" max="15" step="0.01" required>
+      <input type="number" id="interestRate" value="5.5" min="0" max="15" required>
       
       <label for="loanType">Loan Type</label>
       <select id="loanType" required>
@@ -190,7 +190,7 @@ faq:
       </select>
       
       <label for="originalAmount">Original Loan Amount ($)</label>
-      <input type="number" id="originalAmount" value="35000" min="0" step="100">
+      <input type="number" id="originalAmount" value="35000" min="0">
     </div>
     
     <div>
@@ -208,19 +208,19 @@ faq:
       </select>
       
       <label for="customPayment">Custom Monthly Payment ($)</label>
-      <input type="number" id="customPayment" value="0" min="0" step="10" placeholder="Enter if using custom plan">
+      <input type="number" id="customPayment" value="0" min="0" placeholder="Enter if using custom plan">
       
       <label for="extraPayment">Extra Monthly Payment ($)</label>
-      <input type="number" id="extraPayment" value="0" min="0" step="25" placeholder="Additional payment to principal">
+      <input type="number" id="extraPayment" value="0" min="0" placeholder="Additional payment to principal">
     </div>
     
     <div>
       <h4>📊 Income Information (for IDR plans)</h4>
       <label for="annualIncome">Annual Gross Income ($)</label>
-      <input type="number" id="annualIncome" value="50000" min="0" step="1000" placeholder="Required for income-driven plans">
+      <input type="number" id="annualIncome" value="50000" min="0" placeholder="Required for income-driven plans">
       
       <label for="familySize">Family Size</label>
-      <input type="number" id="familySize" value="1" min="1" max="10" step="1">
+      <input type="number" id="familySize" value="1" min="1" max="10">
       
       <label for="filingStatus">Tax Filing Status</label>
       <select id="filingStatus">

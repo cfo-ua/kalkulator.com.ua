@@ -169,7 +169,7 @@ faq:
     <label>
       Звичайна тривалість сну на ніч:
       <div style="display: flex; gap: 10px; align-items: center;">
-        <input type="number" name="sleep-hours" min="3" max="12" step="0.5" placeholder="8" required style="flex: 1;">
+        <input type="number" name="sleep-hours" min="3" max="12" placeholder="8" required style="flex: 1;">
         <span>годин</span>
       </div>
     </label>

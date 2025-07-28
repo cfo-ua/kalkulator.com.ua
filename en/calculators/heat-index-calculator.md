@@ -179,7 +179,7 @@ faq:
     <div>
       <h4>🌡️ Current Conditions</h4>
       <label for="temperature">Air Temperature</label>
-      <input type="number" id="temperature" value="85" min="-50" max="150" step="1" required>
+      <input type="number" id="temperature" value="85" min="-50" max="150" required>
       
       <label for="tempUnit">Temperature Unit</label>
       <select id="tempUnit" required>
@@ -188,10 +188,10 @@ faq:
       </select>
       
       <label for="humidity">Relative Humidity (%)</label>
-      <input type="number" id="humidity" value="60" min="0" max="100" step="1" required>
+      <input type="number" id="humidity" value="60" min="0" max="100" required>
       
       <label for="windSpeed">Wind Speed (optional)</label>
-      <input type="number" id="windSpeed" value="0" min="0" max="100" step="1" placeholder="mph or km/h">
+      <input type="number" id="windSpeed" value="0" min="0" max="100" placeholder="mph or km/h">
       
       <label for="windUnit">Wind Unit</label>
       <select id="windUnit">
@@ -228,7 +228,7 @@ faq:
       </select>
       
       <label for="exposureTime">Expected Exposure Time (hours)</label>
-      <input type="number" id="exposureTime" value="2" min="0" max="24" step="0.5">
+      <input type="number" id="exposureTime" value="2" min="0" max="24">
     </div>
     
     <div>
@@ -290,7 +290,7 @@ faq:
       </select>
       
       <label for="elevation">Elevation (feet)</label>
-      <input type="number" id="elevation" value="0" min="0" max="15000" step="100" placeholder="Above sea level">
+      <input type="number" id="elevation" value="0" min="0" max="15000" placeholder="Above sea level">
       
       <div style="margin-top: 1rem;">
         <label>

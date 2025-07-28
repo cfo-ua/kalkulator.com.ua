@@ -32,15 +32,15 @@ faq:
 <form id="energy-form" autocomplete="off">
   <label>
     Маса (кг):
-    <input type="number" id="energy-m" min="0" step="any" value="1" required>
+    <input type="number" id="energy-m" min="0" value="1" required>
   </label>
   <label>
     Висота (м):
-    <input type="number" id="energy-h" step="any" value="1" required>
+    <input type="number" id="energy-h" value="1" required>
   </label>
   <label>
     Швидкість (м/с):
-    <input type="number" id="energy-v" step="any" value="0" required>
+    <input type="number" id="energy-v" value="0" required>
   </label>
   <button type="submit">Обчислити</button>
 </form>

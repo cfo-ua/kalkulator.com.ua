@@ -31,11 +31,11 @@ faq:
 <form id="plaster-form" autocomplete="off">
   <label>
     Площа стін (м²):
-    <input type="number" id="plaster-area" min="0" step="any" required>
+    <input type="number" id="plaster-area" min="0" required>
   </label>
   <label>
     Товщина шару (мм):
-    <input type="number" id="plaster-thickness" min="1" step="any" required>
+    <input type="number" id="plaster-thickness" min="1" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

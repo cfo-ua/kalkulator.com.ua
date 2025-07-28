@@ -124,28 +124,28 @@ faq:
     <div>
       <h4>💰 Доходи (щомісячно)</h4>
       <label for="monthlySalary">Основна зарплата (грн)</label>
-      <input type="number" id="monthlySalary" value="50000" min="0" step="1000" required>
+      <input type="number" id="monthlySalary" value="50000" min="0" required>
       
       <label for="bonuses">Премії та бонуси (грн)</label>
-      <input type="number" id="bonuses" value="0" min="0" step="500">
+      <input type="number" id="bonuses" value="0" min="0">
       
       <label for="additionalIncome">Додаткові доходи (грн)</label>
-      <input type="number" id="additionalIncome" value="0" min="0" step="500">
+      <input type="number" id="additionalIncome" value="0" min="0">
       
       <label for="spouseSalary">Зарплата дружини/чоловіка (грн)</label>
-      <input type="number" id="spouseSalary" value="0" min="0" step="1000">
+      <input type="number" id="spouseSalary" value="0" min="0">
     </div>
     
     <div>
       <h4>💳 Наявні борги та витрати</h4>
       <label for="existingLoans">Поточні кредити (грн/місяць)</label>
-      <input type="number" id="existingLoans" value="0" min="0" step="500">
+      <input type="number" id="existingLoans" value="0" min="0">
       
       <label for="creditCards">Кредитні картки (грн/місяць)</label>
-      <input type="number" id="creditCards" value="0" min="0" step="200">
+      <input type="number" id="creditCards" value="0" min="0">
       
       <label for="monthlyExpenses">Щомісячні витрати (грн)</label>
-      <input type="number" id="monthlyExpenses" value="15000" min="0" step="1000">
+      <input type="number" id="monthlyExpenses" value="15000" min="0">
       
       <label for="dependents">Кількість утриманців</label>
       <select id="dependents">
@@ -160,10 +160,10 @@ faq:
     <div>
       <h4>🏠 Параметри кредиту</h4>
       <label for="downPayment">Первинний внесок (грн)</label>
-      <input type="number" id="downPayment" value="300000" min="0" step="10000" required>
+      <input type="number" id="downPayment" value="300000" min="0" required>
       
       <label for="interestRate">Процентна ставка (%)</label>
-      <input type="number" id="interestRate" value="19.5" min="5" max="30" step="0.1" required>
+      <input type="number" id="interestRate" value="19.5" min="5" max="30" required>
       
       <label for="loanTerm">Термін кредиту (років)</label>
       <select id="loanTerm" required>

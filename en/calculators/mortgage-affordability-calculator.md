@@ -204,13 +204,13 @@ faq:
     <div>
       <h4>💰 Income Information</h4>
       <label for="annualIncome">Annual Gross Income ($)</label>
-      <input type="number" id="annualIncome" value="75000" min="0" step="1000" required>
+      <input type="number" id="annualIncome" value="75000" min="0" required>
       
       <label for="spouseIncome">Spouse/Partner Income ($)</label>
-      <input type="number" id="spouseIncome" value="0" min="0" step="1000" placeholder="If applying jointly">
+      <input type="number" id="spouseIncome" value="0" min="0" placeholder="If applying jointly">
       
       <label for="otherIncome">Other Monthly Income ($)</label>
-      <input type="number" id="otherIncome" value="0" min="0" step="100" placeholder="Rental, investments, etc.">
+      <input type="number" id="otherIncome" value="0" min="0" placeholder="Rental, investments, etc.">
       
       <label for="incomeType">Primary Income Type</label>
       <select id="incomeType" required>
@@ -225,25 +225,25 @@ faq:
     <div>
       <h4>💳 Monthly Debts</h4>
       <label for="creditCards">Credit Card Minimums ($)</label>
-      <input type="number" id="creditCards" value="200" min="0" step="25" required>
+      <input type="number" id="creditCards" value="200" min="0" required>
       
       <label for="autoLoans">Auto Loan Payments ($)</label>
-      <input type="number" id="autoLoans" value="400" min="0" step="25" required>
+      <input type="number" id="autoLoans" value="400" min="0" required>
       
       <label for="studentLoans">Student Loan Payments ($)</label>
-      <input type="number" id="studentLoans" value="0" min="0" step="25" required>
+      <input type="number" id="studentLoans" value="0" min="0" required>
       
       <label for="otherDebts">Other Monthly Debt Payments ($)</label>
-      <input type="number" id="otherDebts" value="0" min="0" step="25" placeholder="Personal loans, alimony, etc.">
+      <input type="number" id="otherDebts" value="0" min="0" placeholder="Personal loans, alimony, etc.">
     </div>
     
     <div>
       <h4>🏦 Loan Details</h4>
       <label for="downPayment">Down Payment ($)</label>
-      <input type="number" id="downPayment" value="60000" min="0" step="5000" required>
+      <input type="number" id="downPayment" value="60000" min="0" required>
       
       <label for="interestRate">Interest Rate (%)</label>
-      <input type="number" id="interestRate" value="6.75" min="0" max="15" step="0.01" required>
+      <input type="number" id="interestRate" value="6.75" min="0" max="15" required>
       
       <label for="loanTerm">Loan Term (years)</label>
       <select id="loanTerm" required>
@@ -265,13 +265,13 @@ faq:
     <div>
       <h4>📍 Location & Costs</h4>
       <label for="propertyTaxRate">Property Tax Rate (%)</label>
-      <input type="number" id="propertyTaxRate" value="1.2" min="0" max="5" step="0.1" required>
+      <input type="number" id="propertyTaxRate" value="1.2" min="0" max="5" required>
       
       <label for="homeInsurance">Annual Home Insurance ($)</label>
-      <input type="number" id="homeInsurance" value="1500" min="0" step="100" required>
+      <input type="number" id="homeInsurance" value="1500" min="0" required>
       
       <label for="hoaFees">Monthly HOA Fees ($)</label>
-      <input type="number" id="hoaFees" value="0" min="0" step="25">
+      <input type="number" id="hoaFees" value="0" min="0">
       
       <label for="creditScore">Credit Score</label>
       <select id="creditScore" required>

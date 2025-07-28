@@ -57,7 +57,7 @@ faq:
 <form id="trig-form" autocomplete="off">
   <label>
     Angle (°):
-    <input type="number" id="trig-angle" min="0" max="360" value="30" step="any" required>
+    <input type="number" id="trig-angle" min="0" max="360" value="30" required>
   </label>
   <button type="submit">Calculate</button>
 </form>

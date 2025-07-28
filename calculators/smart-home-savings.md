@@ -113,39 +113,39 @@ faq:
 <form id="smart-home-form">
   <h3>🏠 Деталі поточного будинку</h3>
   <label for="homeSize">Площа будинку (кв.м)</label>
-  <input type="number" id="homeSize" value="180" min="50" max="1000" step="10" required>
+  <input type="number" id="homeSize" value="180" min="50" max="1000" required>
 
   <label for="monthlyUtility">Щомісячний рахунок за комунальні послуги (грн)</label>
-  <input type="number" id="monthlyUtility" value="3500" min="1000" step="any" required>
+  <input type="number" id="monthlyUtility" value="3500" min="1000" required>
 
   <label for="energyRate">Тариф на електроенергію (грн/кВт·год)</label>
-  <input type="number" id="energyRate" value="4.32" min="1.00" max="15.00" step="0.01" required>
+  <input type="number" id="energyRate" value="4.32" min="1.00" max="15.00" required>
 
   <h3>🔧 Інвестиції в розумні пристрої</h3>
   <label for="thermostatCost">Вартість розумного термостату (грн)</label>
-  <input type="number" id="thermostatCost" value="8500" min="0" step="any">
+  <input type="number" id="thermostatCost" value="8500" min="0">
 
   <label for="lightingCost">Пакет розумного освітлення (грн)</label>
-  <input type="number" id="lightingCost" value="12000" min="0" step="any">
+  <input type="number" id="lightingCost" value="12000" min="0">
 
   <label for="securityCost">Система безпеки (грн)</label>
-  <input type="number" id="securityCost" value="18000" min="0" step="any">
+  <input type="number" id="securityCost" value="18000" min="0">
 
   <label for="plugsCost">Розумні розетки/вимикачі (грн)</label>
-  <input type="number" id="plugsCost" value="6000" min="0" step="any">
+  <input type="number" id="plugsCost" value="6000" min="0">
 
   <label for="waterCost">Управління водою (грн)</label>
-  <input type="number" id="waterCost" value="9000" min="0" step="any">
+  <input type="number" id="waterCost" value="9000" min="0">
 
   <h3>📊 Очікування економії</h3>
   <label for="energySavingsPercent">Очікувана економія енергії (%)</label>
-  <input type="number" id="energySavingsPercent" value="18" min="0" max="50" step="1" required>
+  <input type="number" id="energySavingsPercent" value="18" min="0" max="50" required>
 
   <label for="insuranceDiscount">Знижка на страхування (%)</label>
-  <input type="number" id="insuranceDiscount" value="5" min="0" max="20" step="1">
+  <input type="number" id="insuranceDiscount" value="5" min="0" max="20">
 
   <label for="annualInsurance">Річна вартість страхування (грн)</label>
-  <input type="number" id="annualInsurance" value="15000" min="3000" step="any">
+  <input type="number" id="annualInsurance" value="15000" min="3000">
 
   <button type="submit">Розрахувати рентабельність розумного дому</button>
 </form>

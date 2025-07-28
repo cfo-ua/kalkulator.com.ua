@@ -60,11 +60,11 @@ faq:
 <form id="room-area-form" autocomplete="off">
   <label>
     Room Length (ft):
-    <input type="number" id="room-length" min="0" step="any" required>
+    <input type="number" id="room-length" min="0" required>
   </label>
   <label>
     Room Width (ft):
-    <input type="number" id="room-width" min="0" step="any" required>
+    <input type="number" id="room-width" min="0" required>
   </label>
   <button type="submit">Calculate Area</button>
 </form>

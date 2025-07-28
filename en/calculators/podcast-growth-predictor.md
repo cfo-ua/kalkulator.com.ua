@@ -109,13 +109,13 @@ seo:
 <form id="podcast-growth-form">
   <h3>🎙️ Current Podcast Status</h3>
   <label for="currentListeners">Current Monthly Listeners</label>
-  <input type="number" id="currentListeners" value="150" min="0" step="any" required>
+  <input type="number" id="currentListeners" value="150" min="0" required>
 
   <label for="monthsActive">Months Since Launch</label>
-  <input type="number" id="monthsActive" value="3" min="0" max="60" step="1" required>
+  <input type="number" id="monthsActive" value="3" min="0" max="60" required>
 
   <label for="episodesPublished">Total Episodes Published</label>
-  <input type="number" id="episodesPublished" value="12" min="0" step="1" required>
+  <input type="number" id="episodesPublished" value="12" min="0" required>
 
   <h3>📅 Content Strategy</h3>
   <label for="publishingFrequency">Publishing Schedule</label>
@@ -145,7 +145,7 @@ seo:
 
   <h3>📈 Marketing & Promotion</h3>
   <label for="marketingBudget">Monthly Marketing Budget ($)</label>
-  <input type="number" id="marketingBudget" value="200" min="0" step="any">
+  <input type="number" id="marketingBudget" value="200" min="0">
 
   <label for="socialMediaEffort">Social Media Effort</label>
   <select id="socialMediaEffort" required>
@@ -173,7 +173,7 @@ seo:
   </select>
 
   <label for="projectionMonths">Growth Projection Period</label>
-  <input type="number" id="projectionMonths" value="12" min="3" max="36" step="1" required>
+  <input type="number" id="projectionMonths" value="12" min="3" max="36" required>
 
   <button type="submit">Predict Podcast Growth</button>
 </form>

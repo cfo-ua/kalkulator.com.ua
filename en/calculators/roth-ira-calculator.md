@@ -176,16 +176,16 @@ faq:
     <div>
       <h4>📊 Current Situation</h4>
       <label for="currentAge">Current Age</label>
-      <input type="number" id="currentAge" value="30" min="18" max="100" step="1" required>
+      <input type="number" id="currentAge" value="30" min="18" max="100" required>
       
       <label for="retirementAge">Planned Retirement Age</label>
-      <input type="number" id="retirementAge" value="65" min="50" max="85" step="1" required>
+      <input type="number" id="retirementAge" value="65" min="50" max="85" required>
       
       <label for="currentBalance">Current Roth IRA Balance ($)</label>
-      <input type="number" id="currentBalance" value="0" min="0" step="1000" placeholder="Existing balance">
+      <input type="number" id="currentBalance" value="0" min="0" placeholder="Existing balance">
       
       <label for="annualIncome">Annual Income ($)</label>
-      <input type="number" id="annualIncome" value="75000" min="0" step="1000" required>
+      <input type="number" id="annualIncome" value="75000" min="0" required>
       
       <label for="filingStatus">Tax Filing Status</label>
       <select id="filingStatus" required>
@@ -207,10 +207,10 @@ faq:
       </select>
       
       <label for="annualContribution">Annual Contribution ($)</label>
-      <input type="number" id="annualContribution" value="6000" min="0" max="8000" step="500" required>
+      <input type="number" id="annualContribution" value="6000" min="0" max="8000" required>
       
       <label for="contributionGrowth">Annual Contribution Increase (%)</label>
-      <input type="number" id="contributionGrowth" value="3" min="0" max="10" step="0.5" placeholder="Salary increase adjustment">
+      <input type="number" id="contributionGrowth" value="3" min="0" max="10" placeholder="Salary increase adjustment">
       
       <label for="contributionTiming">Contribution Timing</label>
       <select id="contributionTiming">
@@ -233,10 +233,10 @@ faq:
     <div>
       <h4>📈 Investment Assumptions</h4>
       <label for="expectedReturn">Expected Annual Return (%)</label>
-      <input type="number" id="expectedReturn" value="7" min="1" max="15" step="0.1" required>
+      <input type="number" id="expectedReturn" value="7" min="1" max="15" required>
       
       <label for="inflationRate">Expected Inflation Rate (%)</label>
-      <input type="number" id="inflationRate" value="3" min="0" max="8" step="0.1">
+      <input type="number" id="inflationRate" value="3" min="0" max="8">
       
       <label for="investmentStrategy">Investment Strategy</label>
       <select id="investmentStrategy">
@@ -248,7 +248,7 @@ faq:
       </select>
       
       <label for="expenseRatio">Investment Expense Ratio (%)</label>
-      <input type="number" id="expenseRatio" value="0.15" min="0" max="2" step="0.01" placeholder="Annual fee percentage">
+      <input type="number" id="expenseRatio" value="0.15" min="0" max="2" placeholder="Annual fee percentage">
     </div>
     
     <div>
@@ -276,7 +276,7 @@ faq:
       </select>
       
       <label for="stateTax">State Income Tax Rate (%)</label>
-      <input type="number" id="stateTax" value="5" min="0" max="15" step="0.1" placeholder="Current state tax rate">
+      <input type="number" id="stateTax" value="5" min="0" max="15" placeholder="Current state tax rate">
       
       <div style="margin-top: 1rem;">
         <label>
@@ -295,22 +295,22 @@ faq:
         <summary style="cursor: pointer; font-weight: bold;">Custom Contribution Limits</summary>
         <div style="padding-top: 1rem;">
           <label for="limitUnder50">Contribution Limit (Under 50) ($)</label>
-          <input type="number" id="limitUnder50" value="7000" min="0" step="500" placeholder="Annual limit for under 50">
+          <input type="number" id="limitUnder50" value="7000" min="0" placeholder="Annual limit for under 50">
           
           <label for="limitOver50">Contribution Limit (50+) ($)</label>
-          <input type="number" id="limitOver50" value="8000" min="0" step="500" placeholder="Annual limit for 50 and older">
+          <input type="number" id="limitOver50" value="8000" min="0" placeholder="Annual limit for 50 and older">
           
           <label for="singlePhaseoutStart">Single Phaseout Start ($)</label>
-          <input type="number" id="singlePhaseoutStart" value="138000" min="0" step="1000" placeholder="Income where phaseout begins">
+          <input type="number" id="singlePhaseoutStart" value="138000" min="0" placeholder="Income where phaseout begins">
           
           <label for="singlePhaseoutEnd">Single Phaseout End ($)</label>
-          <input type="number" id="singlePhaseoutEnd" value="153000" min="0" step="1000" placeholder="Income where eligibility ends">
+          <input type="number" id="singlePhaseoutEnd" value="153000" min="0" placeholder="Income where eligibility ends">
           
           <label for="marriedPhaseoutStart">Married Joint Phaseout Start ($)</label>
-          <input type="number" id="marriedPhaseoutStart" value="218000" min="0" step="1000" placeholder="Income where phaseout begins">
+          <input type="number" id="marriedPhaseoutStart" value="218000" min="0" placeholder="Income where phaseout begins">
           
           <label for="marriedPhaseoutEnd">Married Joint Phaseout End ($)</label>
-          <input type="number" id="marriedPhaseoutEnd" value="228000" min="0" step="1000" placeholder="Income where eligibility ends">
+          <input type="number" id="marriedPhaseoutEnd" value="228000" min="0" placeholder="Income where eligibility ends">
         </div>
       </details>
       

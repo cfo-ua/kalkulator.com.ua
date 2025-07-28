@@ -124,7 +124,7 @@ faq:
   </label>
   <label>
     Довжина пиломатеріалу (м):
-    <input type="number" id="lumber-length" min="1" step="any" value="4" required>
+    <input type="number" id="lumber-length" min="1" value="4" required>
   </label>
   <label>
     Кількість штук:

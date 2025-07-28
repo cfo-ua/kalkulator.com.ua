@@ -90,28 +90,28 @@ faq:
   <div class="form-section">
     <h3>Monthly Expenses</h3>
     <label for="housing-costs">Housing (rent/mortgage, utilities) ($):</label>
-    <input type="number" id="housing-costs" min="0" step="50" value="1800" required>
+    <input type="number" id="housing-costs" min="0" value="1800" required>
     
     <label for="food-costs">Food & Groceries ($):</label>
-    <input type="number" id="food-costs" min="0" step="25" value="600" required>
+    <input type="number" id="food-costs" min="0" value="600" required>
     
     <label for="transportation">Transportation (car, gas, public transit) ($):</label>
-    <input type="number" id="transportation" min="0" step="25" value="400" required>
+    <input type="number" id="transportation" min="0" value="400" required>
     
     <label for="insurance">Insurance (health, auto, life) ($):</label>
-    <input type="number" id="insurance" min="0" step="25" value="350" required>
+    <input type="number" id="insurance" min="0" value="350" required>
     
     <label for="debt-payments">Minimum Debt Payments ($):</label>
-    <input type="number" id="debt-payments" min="0" step="25" value="200" required>
+    <input type="number" id="debt-payments" min="0" value="200" required>
     
     <label for="other-essentials">Other Essential Expenses ($):</label>
-    <input type="number" id="other-essentials" min="0" step="25" value="300" required>
+    <input type="number" id="other-essentials" min="0" value="300" required>
   </div>
 
   <div class="form-section">
     <h3>Income & Employment</h3>
     <label for="monthly-income">Monthly Take-Home Income ($):</label>
-    <input type="number" id="monthly-income" min="0" step="100" value="5000" required>
+    <input type="number" id="monthly-income" min="0" value="5000" required>
     
     <label for="income-stability">Income Stability:</label>
     <select id="income-stability" required>
@@ -157,10 +157,10 @@ faq:
   <div class="form-section">
     <h3>Current Emergency Savings</h3>
     <label for="current-emergency-fund">Current Emergency Fund ($):</label>
-    <input type="number" id="current-emergency-fund" min="0" step="100" value="5000" required>
+    <input type="number" id="current-emergency-fund" min="0" value="5000" required>
     
     <label for="savings-rate">Monthly Savings Capacity ($):</label>
-    <input type="number" id="savings-rate" min="0" step="50" value="500" required>
+    <input type="number" id="savings-rate" min="0" value="500" required>
   </div>
 
   <button type="submit">Calculate Emergency Fund Target</button>

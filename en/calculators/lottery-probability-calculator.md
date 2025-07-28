@@ -211,7 +211,7 @@ seo:
       Ticket Cost (optional):
       <div style="display: flex; gap: 10px;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">$</span>
-        <input type="number" name="ticket-cost" min="0.25" max="50" step="0.25" placeholder="2.00" style="flex: 1;">
+        <input type="number" name="ticket-cost" min="0.25" max="50" placeholder="2.00" style="flex: 1;">
       </div>
     </label>
   </div>

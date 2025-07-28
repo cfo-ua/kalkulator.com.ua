@@ -87,7 +87,7 @@ seo:
 
     <label>
       Необхідна ймовірність успіху:
-      <input type="range" id="success-probability" min="50" max="99" value="95" step="5">
+      <input type="range" id="success-probability" min="50" max="99" value="95">
       <span id="success-display">95%</span>
     </label>
   </div>
@@ -201,7 +201,7 @@ seo:
 
     <label>
       Резерв невизначеності (%):
-      <input type="range" id="uncertainty-buffer" min="0" max="100" value="25" step="5">
+      <input type="range" id="uncertainty-buffer" min="0" max="100" value="25">
       <span id="uncertainty-display">25%</span>
       <small>Додатковий резерв для технологічної невизначеності</small>
     </label>

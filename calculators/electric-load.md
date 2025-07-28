@@ -32,13 +32,13 @@ faq:
   <div id="electric-load-list">
     <div class="electric-load-row">
       <input type="text" class="electric-appliance" placeholder="Назва приладу" />
-      <input type="number" class="electric-power" min="0" step="any" placeholder="Потужність, Вт" />
+      <input type="number" class="electric-power" min="0" placeholder="Потужність, Вт" />
     </div>
   </div>
   <button type="button" id="add-appliance">Додати прилад</button>
   <label>
     Коефіцієнт одночасності (0.7–1):
-    <input type="number" id="electric-simultaneous" min="0.5" max="1" step="0.01" value="0.8" required>
+    <input type="number" id="electric-simultaneous" min="0.5" max="1" value="0.8" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

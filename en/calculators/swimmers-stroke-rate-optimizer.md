@@ -225,7 +225,7 @@ scripts:
       <div style="display: flex; gap: 10px; align-items: center;">
         <input type="number" name="time-minutes" min="0" max="30" placeholder="1" style="width: 80px;">
         <span>min</span>
-        <input type="number" name="time-seconds" min="0" max="59.99" step="0.01" placeholder="25.50" required style="width: 100px;">
+        <input type="number" name="time-seconds" min="0" max="59.99" placeholder="25.50" required style="width: 100px;">
         <span>sec</span>
       </div>
       <small style="color: #666;">Enter your current personal best time</small>

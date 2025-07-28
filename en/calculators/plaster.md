@@ -91,7 +91,7 @@ faq:
 <form id="plaster-form" autocomplete="off">
   <label>
     Wall Area (sq ft):
-    <input type="number" id="plaster-area" min="0" step="any" required>
+    <input type="number" id="plaster-area" min="0" required>
   </label>
   <label>
     Plaster Thickness:
@@ -106,7 +106,7 @@ faq:
   </label>
   <label id="custom-thickness-label" style="display: none;">
     Custom Thickness (inches):
-    <input type="number" id="plaster-thickness" min="0.01" step="any">
+    <input type="number" id="plaster-thickness" min="0.01">
   </label>
   <button type="submit">Calculate Plaster</button>
 </form>

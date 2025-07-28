@@ -36,15 +36,15 @@ faq:
 <form id="wallpaper-form" autocomplete="off">
   <label>
     Площа стін (м²):
-    <input type="number" id="wallpaper-wall-area" min="0" step="any" required>
+    <input type="number" id="wallpaper-wall-area" min="0" required>
   </label>
   <label>
     Довжина рулону (м):
-    <input type="number" id="wallpaper-roll-length" min="0" step="any" required>
+    <input type="number" id="wallpaper-roll-length" min="0" required>
   </label>
   <label>
     Ширина рулону (м):
-    <input type="number" id="wallpaper-roll-width" min="0" step="any" required>
+    <input type="number" id="wallpaper-roll-width" min="0" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

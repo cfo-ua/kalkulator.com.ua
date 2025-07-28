@@ -111,7 +111,7 @@ faq:
 <form id="paint-form" autocomplete="off">
   <label>
     Загальна площа стін (м²):
-    <input type="number" id="paint-wall-area" min="0" step="any" required>
+    <input type="number" id="paint-wall-area" min="0" required>
     <small>Довжина × висота всіх стін для фарбування</small>
   </label>
   <label>

@@ -171,7 +171,7 @@ faq:
     <label>
       Поточна вага (необов'язково):
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="current-weight" min="30" max="300" step="0.1" placeholder="70" style="flex: 1;">
+        <input type="number" name="current-weight" min="30" max="300" placeholder="70" style="flex: 1;">
         <select name="weight-unit" style="width: 80px;">
           <option value="kg">кг</option>
           <option value="lbs">фунти</option>

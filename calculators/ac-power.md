@@ -31,15 +31,15 @@ faq:
 <form id="ac-power-form" autocomplete="off">
   <label>
     Площа кімнати (м²):
-    <input type="number" id="ac-area" min="0" step="any" required>
+    <input type="number" id="ac-area" min="0" required>
   </label>
   <label>
     Кількість людей (окрім постійного мешканця):
-    <input type="number" id="ac-people" min="0" step="1" value="0" required>
+    <input type="number" id="ac-people" min="0" value="0" required>
   </label>
   <label>
     Кількість вікон:
-    <input type="number" id="ac-windows" min="0" step="1" value="1" required>
+    <input type="number" id="ac-windows" min="0" value="1" required>
   </label>
   <button type="submit">Розрахувати</button>
 </form>

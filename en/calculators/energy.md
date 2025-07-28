@@ -55,15 +55,15 @@ seo:
 <form id="energy-form" autocomplete="off">
   <label>
     Mass (kg):
-    <input type="number" id="energy-m" min="0" step="any" value="1" required>
+    <input type="number" id="energy-m" min="0" value="1" required>
   </label>
   <label>
     Height (m):
-    <input type="number" id="energy-h" step="any" value="1" required>
+    <input type="number" id="energy-h" value="1" required>
   </label>
   <label>
     Velocity (m/s):
-    <input type="number" id="energy-v" step="any" value="0" required>
+    <input type="number" id="energy-v" value="0" required>
   </label>
   <button type="submit">Calculate</button>
 </form>

@@ -119,31 +119,31 @@ faq:
     <div>
       <h4>🏋️ Gym Membership Costs</h4>
       <label for="gymMembership">Monthly Membership Fee</label>
-      <input type="number" id="gymMembership" value="45" min="0" max="500" step="5" required>
+      <input type="number" id="gymMembership" value="45" min="0" max="500" required>
       
       <label for="initiationFee">Initiation/Signup Fee</label>
-      <input type="number" id="initiationFee" value="100" min="0" max="1000" step="10" required>
+      <input type="number" id="initiationFee" value="100" min="0" max="1000" required>
       
       <label for="annualFee">Annual Fee</label>
-      <input type="number" id="annualFee" value="50" min="0" max="500" step="10" required>
+      <input type="number" id="annualFee" value="50" min="0" max="500" required>
       
       <label for="personalTraining">Personal Training (monthly)</label>
-      <input type="number" id="personalTraining" value="0" min="0" max="1000" step="20" required>
+      <input type="number" id="personalTraining" value="0" min="0" max="1000" required>
     </div>
     
     <div>
       <h4>🚗 Additional Gym Expenses</h4>
       <label for="transportation">Monthly Transportation</label>
-      <input type="number" id="transportation" value="20" min="0" max="200" step="5" required>
+      <input type="number" id="transportation" value="20" min="0" max="200" required>
       
       <label for="parking">Monthly Parking</label>
-      <input type="number" id="parking" value="0" min="0" max="100" step="5" required>
+      <input type="number" id="parking" value="0" min="0" max="100" required>
       
       <label for="gymExtras">Extras (supplements, drinks, etc.)</label>
-      <input type="number" id="gymExtras" value="15" min="0" max="200" step="5" required>
+      <input type="number" id="gymExtras" value="15" min="0" max="200" required>
       
       <label for="timeValue">Time Value ($/hour saved)</label>
-      <input type="number" id="timeValue" value="25" min="0" max="100" step="5" required>
+      <input type="number" id="timeValue" value="25" min="0" max="100" required>
     </div>
     
     <div>
@@ -158,28 +158,28 @@ faq:
       </select>
       
       <label for="customEquipmentCost">Custom Equipment Cost ($)</label>
-      <input type="number" id="customEquipmentCost" value="3000" min="200" max="50000" step="100" style="display:none;">
+      <input type="number" id="customEquipmentCost" value="3000" min="200" max="50000" style="display:none;">
       
       <label for="homeSetupCost">Setup Costs (flooring, mirrors, etc.)</label>
-      <input type="number" id="homeSetupCost" value="500" min="0" max="5000" step="50" required>
+      <input type="number" id="homeSetupCost" value="500" min="0" max="5000" required>
       
       <label for="maintenanceCost">Annual Maintenance (%)</label>
-      <input type="number" id="maintenanceCost" value="5" min="0" max="20" step="1" required>
+      <input type="number" id="maintenanceCost" value="5" min="0" max="20" required>
     </div>
     
     <div>
       <h4>⏱️ Usage & Preferences</h4>
       <label for="workoutFrequency">Workouts per Week</label>
-      <input type="number" id="workoutFrequency" value="4" min="1" max="14" step="1" required>
+      <input type="number" id="workoutFrequency" value="4" min="1" max="14" required>
       
       <label for="commutTime">Gym Commute (minutes round-trip)</label>
-      <input type="number" id="commutTime" value="20" min="0" max="120" step="5" required>
+      <input type="number" id="commutTime" value="20" min="0" max="120" required>
       
       <label for="analysisYears">Analysis Period (years)</label>
-      <input type="number" id="analysisYears" value="5" min="1" max="15" step="1" required>
+      <input type="number" id="analysisYears" value="5" min="1" max="15" required>
       
       <label for="householdMembers">Household Members Using</label>
-      <input type="number" id="householdMembers" value="2" min="1" max="10" step="1" required>
+      <input type="number" id="householdMembers" value="2" min="1" max="10" required>
     </div>
   </div>
   

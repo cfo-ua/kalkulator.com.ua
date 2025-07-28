@@ -162,52 +162,52 @@ faq:
   <h3>Поточна фінансова позиція</h3>
   
   <label for="currentCash">Поточний баланс грошових коштів</label>
-  <input type="number" id="currentCash" value="24000000" min="0" step="100000" placeholder="Загальні грошові кошти та еквіваленти">
+  <input type="number" id="currentCash" value="24000000" min="0" placeholder="Загальні грошові кошти та еквіваленти">
 
   <label for="monthlyRevenue">Щомісячний регулярний дохід</label>
-  <input type="number" id="monthlyRevenue" value="800000" min="0" step="50000" placeholder="Щомісячний дохід (якщо є)">
+  <input type="number" id="monthlyRevenue" value="800000" min="0" placeholder="Щомісячний дохід (якщо є)">
 
   <h3>Витрати на персонал (щомісячно)</h3>
 
   <label for="founderSalaries">Зарплати засновників</label>
-  <input type="number" id="founderSalaries" value="250000" min="0" step="25000" placeholder="Зарплати CEO, CTO, співзасновників">
+  <input type="number" id="founderSalaries" value="250000" min="0" placeholder="Зарплати CEO, CTO, співзасновників">
 
   <label for="employeeSalaries">Зарплати співробітників</label>
-  <input type="number" id="employeeSalaries" value="1800000" min="0" step="100000" placeholder="Усі зарплати співробітників">
+  <input type="number" id="employeeSalaries" value="1800000" min="0" placeholder="Усі зарплати співробітників">
 
   <label for="benefitsTaxes">Пільги та податки на зарплату</label>
-  <input type="number" id="benefitsTaxes" value="450000" min="0" step="25000" placeholder="Медичне страхування, податки, пенсія">
+  <input type="number" id="benefitsTaxes" value="450000" min="0" placeholder="Медичне страхування, податки, пенсія">
 
   <label for="contractorFees">Гонорари підрядників та фрілансерів</label>
-  <input type="number" id="contractorFees" value="150000" min="0" step="25000" placeholder="Витрати на зовнішні таланти">
+  <input type="number" id="contractorFees" value="150000" min="0" placeholder="Витрати на зовнішні таланти">
 
   <h3>Операційні витрати (щомісячно)</h3>
 
   <label for="technologyCosts">Технології та програмне забезпечення</label>
-  <input type="number" id="technologyCosts" value="120000" min="0" step="10000" placeholder="Хмарні сервіси, SaaS, інструменти розробки">
+  <input type="number" id="technologyCosts" value="120000" min="0" placeholder="Хмарні сервіси, SaaS, інструменти розробки">
 
   <label for="officeRent">Офіс та приміщення</label>
-  <input type="number" id="officeRent" value="80000" min="0" step="10000" placeholder="Оренда, комунальні послуги, обладнання">
+  <input type="number" id="officeRent" value="80000" min="0" placeholder="Оренда, комунальні послуги, обладнання">
 
   <label for="marketingSpend">Маркетинг та реклама</label>
-  <input type="number" id="marketingSpend" value="250000" min="0" step="25000" placeholder="Цифрова реклама, контент, заходи">
+  <input type="number" id="marketingSpend" value="250000" min="0" placeholder="Цифрова реклама, контент, заходи">
 
   <label for="professionalServices">Професійні послуги</label>
-  <input type="number" id="professionalServices" value="60000" min="0" step="10000" placeholder="Юридичні, бухгалтерські, консалтингові">
+  <input type="number" id="professionalServices" value="60000" min="0" placeholder="Юридичні, бухгалтерські, консалтингові">
 
   <label for="adminOther">Адміністративні та інші витрати</label>
-  <input type="number" id="adminOther" value="40000" min="0" step="5000" placeholder="Страхування, банківські послуги, різне">
+  <input type="number" id="adminOther" value="40000" min="0" placeholder="Страхування, банківські послуги, різне">
 
   <h3>Зростання та планування</h3>
 
   <label for="monthlyGrowthRate">Щомісячний темп зростання burn (%)</label>
-  <input type="number" id="monthlyGrowthRate" value="5.0" min="0" max="25" step="0.5" placeholder="Очікуване щомісячне збільшення burn rate">
+  <input type="number" id="monthlyGrowthRate" value="5.0" min="0" max="25" placeholder="Очікуване щомісячне збільшення burn rate">
 
   <label for="targetRunwayMonths">Цільовий runway (місяці)</label>
-  <input type="number" id="targetRunwayMonths" value="18" min="6" max="36" step="3" placeholder="Бажана тривалість runway">
+  <input type="number" id="targetRunwayMonths" value="18" min="6" max="36" placeholder="Бажана тривалість runway">
 
   <label for="nextFundraisingAmount">Ціль наступного залучення інвестицій</label>
-  <input type="number" id="nextFundraisingAmount" value="50000000" min="0" step="2500000" placeholder="Сума для залучення в наступному раунді">
+  <input type="number" id="nextFundraisingAmount" value="50000000" min="0" placeholder="Сума для залучення в наступному раунді">
 
   <button type="submit">Розрахувати burn rate та runway</button>
 </form>

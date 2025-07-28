@@ -119,10 +119,10 @@ faq:
     <div>
       <h4>🏠 Інформація про дім</h4>
       <label for="homeSize">Площа дому (м²)</label>
-      <input type="number" id="homeSize" value="185" min="46" max="929" step="5" required>
+      <input type="number" id="homeSize" value="185" min="46" max="929" required>
       
       <label for="homeAge">Вік дому (років)</label>
-      <input type="number" id="homeAge" value="25" min="0" max="150" step="1" required>
+      <input type="number" id="homeAge" value="25" min="0" max="150" required>
       
       <label for="homeType">Тип дому</label>
       <select id="homeType" required>
@@ -143,16 +143,16 @@ faq:
     <div>
       <h4>💡 Поточне споживання енергії</h4>
       <label for="monthlyElectric">Місячний рахунок за електроенергію (грн)</label>
-      <input type="number" id="monthlyElectric" value="3200" min="500" max="25000" step="100" required>
+      <input type="number" id="monthlyElectric" value="3200" min="500" max="25000" required>
       
       <label for="monthlyGas">Місячний рахунок за газ (грн)</label>
-      <input type="number" id="monthlyGas" value="2000" min="0" max="12500" step="100" required>
+      <input type="number" id="monthlyGas" value="2000" min="0" max="12500" required>
       
       <label for="electricRate">Тариф на електроенергію (грн/кВтг)</label>
-      <input type="number" id="electricRate" value="4.32" min="2.00" max="12.00" step="0.10" required>
+      <input type="number" id="electricRate" value="4.32" min="2.00" max="12.00" required>
       
       <label for="gasRate">Тариф на газ (грн/м³)</label>
-      <input type="number" id="gasRate" value="7.96" min="4.00" max="25.00" step="0.10" required>
+      <input type="number" id="gasRate" value="7.96" min="4.00" max="25.00" required>
     </div>
     
     <div>
@@ -167,7 +167,7 @@ faq:
       </select>
       
       <label for="heatingAge">Вік системи опалення (років)</label>
-      <input type="number" id="heatingAge" value="12" min="0" max="50" step="1" required>
+      <input type="number" id="heatingAge" value="12" min="0" max="50" required>
       
       <label for="coolingType">Основне охолодження</label>
       <select id="coolingType">
@@ -225,7 +225,7 @@ faq:
       </select>
       
       <label for="waterHeaterAge">Вік водонагрівача (років)</label>
-      <input type="number" id="waterHeaterAge" value="8" min="0" max="30" step="1" required>
+      <input type="number" id="waterHeaterAge" value="8" min="0" max="30" required>
       
       <label for="waterHeaterInsulation">Утеплення бака</label>
       <select id="waterHeaterInsulation">
@@ -275,10 +275,10 @@ faq:
       </select>
       
       <label for="heatingDegreeeDays">Градусо-дні опалення</label>
-      <input type="number" id="heatingDegreeeDays" value="3200" min="0" max="8000" step="100" required>
+      <input type="number" id="heatingDegreeeDays" value="3200" min="0" max="8000" required>
       
       <label for="coolingDegreeDays">Градусо-дні охолодження</label>
-      <input type="number" id="coolingDegreeDays" value="600" min="0" max="3000" step="50" required>
+      <input type="number" id="coolingDegreeDays" value="600" min="0" max="3000" required>
     </div>
   </div>
   

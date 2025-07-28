@@ -178,51 +178,51 @@ faq:
   </select>
 
   <label for="currentCash">Поточний залишок грошових коштів</label>
-  <input type="number" id="currentCash" value="500000" min="0" step="10000" placeholder="Грошові кошти на початок періоду">
+  <input type="number" id="currentCash" value="500000" min="0" placeholder="Грошові кошти на початок періоду">
 
   <h3>Щомісячні доходи</h3>
 
   <label for="averageRevenue">Середній щомісячний дохід</label>
-  <input type="number" id="averageRevenue" value="800000" min="0" step="10000" placeholder="Валовий дохід від продажів">
+  <input type="number" id="averageRevenue" value="800000" min="0" placeholder="Валовий дохід від продажів">
 
   <label for="cashSalesPercent">Частка готівкових продажів (%)</label>
-  <input type="number" id="cashSalesPercent" value="40" min="0" max="100" step="5" placeholder="Відсоток продажів за готівку">
+  <input type="number" id="cashSalesPercent" value="40" min="0" max="100" placeholder="Відсоток продажів за готівку">
 
   <label for="averageCollectionDays">Середній термін інкасації (дні)</label>
-  <input type="number" id="averageCollectionDays" value="30" min="0" max="120" step="5" placeholder="Дні до отримання оплати від клієнтів">
+  <input type="number" id="averageCollectionDays" value="30" min="0" max="120" placeholder="Дні до отримання оплати від клієнтів">
 
   <h3>Щомісячні операційні витрати</h3>
 
   <label for="salaries">Зарплати та пільги</label>
-  <input type="number" id="salaries" value="300000" min="0" step="5000" placeholder="Витрати на персонал">
+  <input type="number" id="salaries" value="300000" min="0" placeholder="Витрати на персонал">
 
   <label for="rent">Оренда та комунальні послуги</label>
-  <input type="number" id="rent" value="80000" min="0" step="5000" placeholder="Фіксовані витрати на приміщення">
+  <input type="number" id="rent" value="80000" min="0" placeholder="Фіксовані витрати на приміщення">
 
   <label for="supplies">Товари та матеріали</label>
-  <input type="number" id="supplies" value="320000" min="0" step="5000" placeholder="Змінні витрати на товари">
+  <input type="number" id="supplies" value="320000" min="0" placeholder="Змінні витрати на товари">
 
   <label for="marketing">Маркетинг та реклама</label>
-  <input type="number" id="marketing" value="40000" min="0" step="2000" placeholder="Рекламні витрати">
+  <input type="number" id="marketing" value="40000" min="0" placeholder="Рекламні витрати">
 
   <label for="otherExpenses">Інші операційні витрати</label>
-  <input type="number" id="otherExpenses" value="60000" min="0" step="2000" placeholder="Різні операційні витрати">
+  <input type="number" id="otherExpenses" value="60000" min="0" placeholder="Різні операційні витрати">
 
   <h3>Періодичні витрати</h3>
 
   <label for="quarterlyTaxes">Квартальні податкові платежі</label>
-  <input type="number" id="quarterlyTaxes" value="150000" min="0" step="5000" placeholder="Податки що сплачуються щоквартально">
+  <input type="number" id="quarterlyTaxes" value="150000" min="0" placeholder="Податки що сплачуються щоквартально">
 
   <label for="equipmentPurchases">Річні витрати на обладнання</label>
-  <input type="number" id="equipmentPurchases" value="200000" min="0" step="10000" placeholder="Капітальні вкладення в обладнання">
+  <input type="number" id="equipmentPurchases" value="200000" min="0" placeholder="Капітальні вкладення в обладнання">
 
   <label for="annualInsurance">Річне страхування</label>
-  <input type="number" id="annualInsurance" value="60000" min="0" step="5000" placeholder="Страхові платежі">
+  <input type="number" id="annualInsurance" value="60000" min="0" placeholder="Страхові платежі">
 
   <h3>Сезонні фактори</h3>
 
   <label for="seasonalVariation">Сезонні коливання доходів (%)</label>
-  <input type="number" id="seasonalVariation" value="20" min="0" max="100" step="5" placeholder="Максимальне відхилення від середнього">
+  <input type="number" id="seasonalVariation" value="20" min="0" max="100" placeholder="Максимальне відхилення від середнього">
 
   <label for="peakMonths">Місяці пікових продажів</label>
   <select id="peakMonths" multiple>

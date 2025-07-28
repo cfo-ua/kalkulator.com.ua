@@ -56,16 +56,16 @@ faq:
 
 <form id="unit-economics-form">
   <label for="unitPrice">Ціна за одиницю</label>
-  <input type="number" id="unitPrice" value="500" min="0" step="any" required>
+  <input type="number" id="unitPrice" value="500" min="0" required>
 
   <label for="unitCost">Змінна собівартість за одиницю</label>
-  <input type="number" id="unitCost" value="300" min="0" step="any" required>
+  <input type="number" id="unitCost" value="300" min="0" required>
 
   <label for="fixedCosts">Постійні витрати (на місяць)</label>
-  <input type="number" id="fixedCosts" value="10000" min="0" step="any" required>
+  <input type="number" id="fixedCosts" value="10000" min="0" required>
 
   <label for="monthlyUnits">Очікувані продажі (одиниць на місяць)</label>
-  <input type="number" id="monthlyUnits" value="100" min="0" step="1" required>
+  <input type="number" id="monthlyUnits" value="100" min="0" required>
 
   <button type="submit">Розрахувати</button>
 </form>

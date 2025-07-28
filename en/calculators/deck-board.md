@@ -115,12 +115,12 @@ faq:
 <form id="deck-form" autocomplete="off">
   <label>
     Deck Length (ft):
-    <input type="number" id="deck-length" min="4" max="50" step="any" required>
+    <input type="number" id="deck-length" min="4" max="50" required>
     <small>Longest dimension of your deck</small>
   </label>
   <label>
     Deck Width (ft):
-    <input type="number" id="deck-width" min="4" max="50" step="any" required>
+    <input type="number" id="deck-width" min="4" max="50" required>
     <small>Width perpendicular to length</small>
   </label>
   <label>

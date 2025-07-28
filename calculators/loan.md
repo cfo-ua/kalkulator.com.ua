@@ -67,7 +67,7 @@ faq:
 <form id="loan-form">
   <label>
     Сума кредиту
-    <input type="number" id="amount" required min="0" step="100" value="10000">
+    <input type="number" id="amount" required min="0" value="10000">
   </label>
   <label>
     Термін (місяців)
@@ -75,7 +75,7 @@ faq:
   </label>
   <label>
     Ставка (% річних)
-    <input type="number" id="rate" required min="0" step="0.01" value="18">
+    <input type="number" id="rate" required min="0" value="18">
   </label>
   <button type="submit">Розрахувати</button>
 </form>

@@ -235,16 +235,16 @@ faq:
     </select>
     
     <label for="purchase-price">Вартість покупки (USD):</label>
-    <input type="number" id="purchase-price" min="0" step="1000" value="100000" required>
+    <input type="number" id="purchase-price" min="0" value="100000" required>
     
     <label for="down-payment">Первинний внесок (USD):</label>
-    <input type="number" id="down-payment" min="0" step="1000" value="30000" required>
+    <input type="number" id="down-payment" min="0" value="30000" required>
     
     <label for="loan-amount">Сума кредиту (USD):</label>
-    <input type="number" id="loan-amount" min="0" step="1000" value="70000" required>
+    <input type="number" id="loan-amount" min="0" value="70000" required>
     
     <label for="interest-rate">Процентна ставка кредиту (%):</label>
-    <input type="number" id="interest-rate" min="0" max="30" step="0.1" value="18" required>
+    <input type="number" id="interest-rate" min="0" max="30" value="18" required>
     
     <label for="loan-term">Термін кредиту (років):</label>
     <input type="number" id="loan-term" min="1" max="30" value="15" required>
@@ -254,17 +254,17 @@ faq:
     <h3>💰 Доходи від оренди</h3>
     
     <label for="monthly-rent">Щомісячна орендна плата (USD):</label>
-    <input type="number" id="monthly-rent" min="0" step="50" value="800" required>
+    <input type="number" id="monthly-rent" min="0" value="800" required>
     
     <label for="annual-rent-increase">Річне зростання оренди (%):</label>
-    <input type="number" id="annual-rent-increase" min="0" max="20" step="0.5" value="5" required>
+    <input type="number" id="annual-rent-increase" min="0" max="20" value="5" required>
     
     <label for="vacancy-rate">Коефіцієнт вакансій (%):</label>
-    <input type="number" id="vacancy-rate" min="0" max="50" step="1" value="8" required>
+    <input type="number" id="vacancy-rate" min="0" max="50" value="8" required>
     <small>Відсоток часу, коли нерухомість пуста</small>
     
     <label for="other-income">Інші доходи (USD/місяць):</label>
-    <input type="number" id="other-income" min="0" step="10" value="0">
+    <input type="number" id="other-income" min="0" value="0">
     <small>Паркінг, комунальні, додаткові послуги</small>
   </div>
 
@@ -272,42 +272,42 @@ faq:
     <h3>📊 Витрати на утримання</h3>
     
     <label for="property-tax">Податок на нерухомість (USD/рік):</label>
-    <input type="number" id="property-tax" min="0" step="100" value="1000" required>
+    <input type="number" id="property-tax" min="0" value="1000" required>
     
     <label for="insurance">Страхування (USD/рік):</label>
-    <input type="number" id="insurance" min="0" step="50" value="400" required>
+    <input type="number" id="insurance" min="0" value="400" required>
     
     <label for="maintenance">Обслуговування та ремонт (USD/рік):</label>
-    <input type="number" id="maintenance" min="0" step="100" value="2000" required>
+    <input type="number" id="maintenance" min="0" value="2000" required>
     
     <label for="management-fee">Управління (% від оренди або USD/рік):</label>
-    <input type="number" id="management-fee" min="0" step="0.5" value="8" required>
+    <input type="number" id="management-fee" min="0" value="8" required>
     
     <label for="utilities">Комунальні послуги (USD/рік):</label>
-    <input type="number" id="utilities" min="0" step="50" value="600" required>
+    <input type="number" id="utilities" min="0" value="600" required>
     
     <label for="other-expenses">Інші витрати (USD/рік):</label>
-    <input type="number" id="other-expenses" min="0" step="50" value="500">
+    <input type="number" id="other-expenses" min="0" value="500">
   </div>
 
   <div class="form-section">
     <h3>📈 Додаткові параметри</h3>
     
     <label for="appreciation-rate">Річне зростання вартості (%):</label>
-    <input type="number" id="appreciation-rate" min="0" max="20" step="0.5" value="5" required>
+    <input type="number" id="appreciation-rate" min="0" max="20" value="5" required>
     
     <label for="analysis-period">Період аналізу (років):</label>
     <input type="number" id="analysis-period" min="1" max="30" value="10" required>
     
     <label for="closing-costs">Витрати на покупку (USD):</label>
-    <input type="number" id="closing-costs" min="0" step="500" value="3000">
+    <input type="number" id="closing-costs" min="0" value="3000">
     <small>Нотаріус, реєстрація, оцінка</small>
     
     <label for="renovation-costs">Початковий ремонт (USD):</label>
-    <input type="number" id="renovation-costs" min="0" step="1000" value="5000">
+    <input type="number" id="renovation-costs" min="0" value="5000">
     
     <label for="selling-costs">Витрати на продаж (% від вартості):</label>
-    <input type="number" id="selling-costs" min="0" max="10" step="0.5" value="6">
+    <input type="number" id="selling-costs" min="0" max="10" value="6">
     <small>Агентство, податки, юридичні</small>
   </div>
 

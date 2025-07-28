@@ -194,7 +194,7 @@ seo:
 
     <label>
       Рівень безладу:
-      <input type="range" id="clutter-level" min="1" max="5" value="3" step="1">
+      <input type="range" id="clutter-level" min="1" max="5" value="3">
       <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
         <span>Дуже чисто</span>
         <span id="clutter-display">Помірно</span>
@@ -233,7 +233,7 @@ seo:
 
     <label>
       Рослини в домі:
-      <input type="range" id="plant-count" min="0" max="20" value="3" step="1">
+      <input type="range" id="plant-count" min="0" max="20" value="3">
       <span id="plant-display">3 рослини</span>
     </label>
 

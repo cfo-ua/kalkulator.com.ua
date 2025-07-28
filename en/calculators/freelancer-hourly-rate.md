@@ -106,22 +106,22 @@ faq:
 
 <form id="freelancer-rate-form">
   <label for="annualLivingExpenses">Annual Living Expenses ($)</label>
-  <input type="number" id="annualLivingExpenses" value="50000" min="0" step="any" required>
+  <input type="number" id="annualLivingExpenses" value="50000" min="0" required>
 
   <label for="businessExpenses">Annual Business Expenses ($)</label>
-  <input type="number" id="businessExpenses" value="10000" min="0" step="any" required>
+  <input type="number" id="businessExpenses" value="10000" min="0" required>
 
   <label for="desiredProfit">Desired Profit Margin (%)</label>
-  <input type="number" id="desiredProfit" value="25" min="0" max="100" step="any" required>
+  <input type="number" id="desiredProfit" value="25" min="0" max="100" required>
 
   <label for="billableHours">Billable Hours per Week</label>
-  <input type="number" id="billableHours" value="25" min="1" max="60" step="any" required>
+  <input type="number" id="billableHours" value="25" min="1" max="60" required>
 
   <label for="vacationWeeks">Vacation/Sick Weeks per Year</label>
-  <input type="number" id="vacationWeeks" value="4" min="0" max="20" step="any" required>
+  <input type="number" id="vacationWeeks" value="4" min="0" max="20" required>
 
   <label for="taxRate">Expected Tax Rate (%)</label>
-  <input type="number" id="taxRate" value="28" min="0" max="50" step="any" required>
+  <input type="number" id="taxRate" value="28" min="0" max="50" required>
 
   <button type="submit">Calculate Hourly Rate</button>
 </form>

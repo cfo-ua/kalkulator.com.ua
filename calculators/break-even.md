@@ -64,16 +64,16 @@ faq:
 
 <form id="break-even-form">
   <label for="fixedCosts">Постійні місячні витрати</label>
-  <input type="number" id="fixedCosts" value="50000" min="0" step="any" required>
+  <input type="number" id="fixedCosts" value="50000" min="0" required>
 
   <label for="variableCost">Змінні витрати на одиницю</label>
-  <input type="number" id="variableCost" value="200" min="0" step="any" required>
+  <input type="number" id="variableCost" value="200" min="0" required>
 
   <label for="unitPrice">Ціна продажу одиниці</label>
-  <input type="number" id="unitPrice" value="500" min="0" step="any" required>
+  <input type="number" id="unitPrice" value="500" min="0" required>
 
   <label for="monthlySales">Очікувані щомісячні продажі (шт)</label>
-  <input type="number" id="monthlySales" value="200" min="0" step="any" required>
+  <input type="number" id="monthlySales" value="200" min="0" required>
 
   <button type="submit">Розрахувати</button>
 </form>

@@ -168,7 +168,7 @@ faq:
     <label>
       Вартість за один раз:
       <div style="display: flex; gap: 10px;">
-        <input type="number" name="cost" min="0.01" max="50000" step="0.01" placeholder="150" required style="flex: 1;">
+        <input type="number" name="cost" min="0.01" max="50000" placeholder="150" required style="flex: 1;">
         <span style="display: flex; align-items: center; font-size: 1.2rem;">грн</span>
       </div>
     </label>
@@ -192,7 +192,7 @@ faq:
   <div class="form-row" id="custom-frequency" style="display: none;">
     <label>
       Разів на тиждень:
-      <input type="number" name="custom-times" min="0.1" max="21" step="0.1" placeholder="3.5">
+      <input type="number" name="custom-times" min="0.1" max="21" placeholder="3.5">
     </label>
   </div>
   

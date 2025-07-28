@@ -110,22 +110,22 @@ faq:
 <form id="stairs-form" autocomplete="off">
   <label>
     Загальний підйом (см):
-    <input type="number" id="stairs-total-rise" min="0" step="any" placeholder="270" required>
+    <input type="number" id="stairs-total-rise" min="0" placeholder="270" required>
     <small>Вертикальна відстань від нижнього поверху до верхнього</small>
   </label>
   <label>
     Доступний загальний хід (см):
-    <input type="number" id="stairs-total-run" min="0" step="any" placeholder="300" required>
+    <input type="number" id="stairs-total-run" min="0" placeholder="300" required>
     <small>Горизонтальний простір, доступний для сходів (необов'язково)</small>
   </label>
   <label>
     Бажана висота підйому (см):
-    <input type="number" id="stairs-riser" min="14" max="20" step="0.5" value="17" required>
+    <input type="number" id="stairs-riser" min="14" max="20" value="17" required>
     <small>Висота сходинки (14-20 см, ідеально: 15-19)</small>
   </label>
   <label>
     Бажана глибина проступу (см):
-    <input type="number" id="stairs-tread" min="23" max="32" step="0.5" value="27" required>
+    <input type="number" id="stairs-tread" min="23" max="32" value="27" required>
     <small>Глибина сходинки (23-32 см, ідеально: 25-28)</small>
   </label>
   <button type="submit">Розрахувати сходи</button>

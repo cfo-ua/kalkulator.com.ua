@@ -121,49 +121,49 @@ faq:
     <div>
       <h4>💰 Current Information</h4>
       <label for="currentAge">Current Age</label>
-      <input type="number" id="currentAge" value="30" min="18" max="70" step="1" required>
+      <input type="number" id="currentAge" value="30" min="18" max="70" required>
       
       <label for="retirementAge">Retirement Age</label>
-      <input type="number" id="retirementAge" value="65" min="55" max="75" step="1" required>
+      <input type="number" id="retirementAge" value="65" min="55" max="75" required>
       
       <label for="currentBalance">Current 401k Balance ($)</label>
-      <input type="number" id="currentBalance" value="25000" min="0" step="1000" required>
+      <input type="number" id="currentBalance" value="25000" min="0" required>
       
       <label for="annualSalary">Annual Salary ($)</label>
-      <input type="number" id="annualSalary" value="75000" min="0" step="1000" required>
+      <input type="number" id="annualSalary" value="75000" min="0" required>
     </div>
     
     <div>
       <h4>📊 Contributions</h4>
       <label for="employeeContribution">Your Contribution (%)</label>
-      <input type="number" id="employeeContribution" value="6" min="0" max="100" step="0.5" required>
+      <input type="number" id="employeeContribution" value="6" min="0" max="100" required>
       
       <label for="employerMatch">Employer Match (%)</label>
-      <input type="number" id="employerMatch" value="3" min="0" max="20" step="0.5" required>
+      <input type="number" id="employerMatch" value="3" min="0" max="20" required>
       
       <label for="maxMatchPercent">Max Match at (% of salary)</label>
-      <input type="number" id="maxMatchPercent" value="6" min="0" max="20" step="0.5" required>
+      <input type="number" id="maxMatchPercent" value="6" min="0" max="20" required>
       
       <label for="annualRaise">Annual Salary Increase (%)</label>
-      <input type="number" id="annualRaise" value="3" min="0" max="10" step="0.1" required>
+      <input type="number" id="annualRaise" value="3" min="0" max="10" required>
     </div>
     
     <div>
       <h4>📈 Investment Returns</h4>
       <label for="investmentReturn">Expected Annual Return (%)</label>
-      <input type="number" id="investmentReturn" value="7" min="0" max="15" step="0.1" required>
+      <input type="number" id="investmentReturn" value="7" min="0" max="15" required>
       
       <label for="inflationRate">Inflation Rate (%)</label>
-      <input type="number" id="inflationRate" value="2.5" min="0" max="10" step="0.1" required>
+      <input type="number" id="inflationRate" value="2.5" min="0" max="10" required>
       
       <label for="contributionLimit">Annual Contribution Limit ($)</label>
-      <input type="number" id="contributionLimit" value="23500" min="0" step="500" required>
+      <input type="number" id="contributionLimit" value="23500" min="0" required>
       
       <label for="catchUpAge">Catch-up Contributions Start at Age</label>
-      <input type="number" id="catchUpAge" value="50" min="45" max="65" step="1" required>
+      <input type="number" id="catchUpAge" value="50" min="45" max="65" required>
       
       <label for="catchUpAmount">Catch-up Contribution Amount ($)</label>
-      <input type="number" id="catchUpAmount" value="7500" min="0" step="500" required>
+      <input type="number" id="catchUpAmount" value="7500" min="0" required>
     </div>
   </div>
   

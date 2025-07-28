@@ -127,12 +127,12 @@ faq:
 <form id="insulation-form" autocomplete="off">
   <label>
     Довжина площі (м):
-    <input type="number" id="insulation-length" min="0" step="any" required>
+    <input type="number" id="insulation-length" min="0" required>
     <small>Довжина площі для утеплення</small>
   </label>
   <label>
     Ширина площі (м):
-    <input type="number" id="insulation-width" min="0" step="any" required>
+    <input type="number" id="insulation-width" min="0" required>
     <small>Ширина площі для утеплення</small>
   </label>
   <label>

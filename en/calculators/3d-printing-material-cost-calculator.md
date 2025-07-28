@@ -207,7 +207,7 @@ seo:
     <label>
       Material Cost per Unit:
       <div style="display: flex; gap: 10px; align-items: center;">
-        <input type="number" id="material-cost" step="0.01" min="0" max="1000" required>
+        <input type="number" id="material-cost" min="0" max="1000" required>
         <select id="cost-unit">
           <option value="kg">$/kg (filament)</option>
           <option value="liter">$/L (resin)</option>
@@ -221,20 +221,20 @@ seo:
     
     <label>
       Part Volume (cm³):
-      <input type="number" id="part-volume" step="0.1" min="0.1" max="10000" value="50" required>
+      <input type="number" id="part-volume" min="0.1" max="10000" value="50" required>
       <small>From slicer software or CAD model</small>
     </label>
 
     <label>
       Infill Percentage (%):
-      <input type="range" id="infill-percentage" min="0" max="100" value="20" step="5">
+      <input type="range" id="infill-percentage" min="0" max="100" value="20">
       <span id="infill-display">20%</span>
       <small>FDM only - affects material usage</small>
     </label>
 
     <label>
       Support Material (%):
-      <input type="range" id="support-percentage" min="0" max="50" value="15" step="5">
+      <input type="range" id="support-percentage" min="0" max="50" value="15">
       <span id="support-display">15%</span>
       <small>Additional material for supports</small>
     </label>
@@ -246,7 +246,7 @@ seo:
 
     <label>
       Waste Factor (%):
-      <input type="range" id="waste-factor" min="0" max="30" value="10" step="5">
+      <input type="range" id="waste-factor" min="0" max="30" value="10">
       <span id="waste-display">10%</span>
       <small>Failed prints, purging, cleanup</small>
     </label>
@@ -257,7 +257,7 @@ seo:
     
     <label>
       Print Time (hours):
-      <input type="number" id="print-time" step="0.1" min="0.1" max="200" value="5" required>
+      <input type="number" id="print-time" min="0.1" max="200" value="5" required>
       <small>From slicer estimate</small>
     </label>
 
@@ -269,7 +269,7 @@ seo:
 
     <label>
       Electricity Rate ($/kWh):
-      <input type="number" id="electricity-rate" step="0.01" min="0.01" max="1" value="0.12">
+      <input type="number" id="electricity-rate" min="0.01" max="1" value="0.12">
     </label>
 
     <label>
@@ -290,33 +290,33 @@ seo:
     
     <label>
       Labor Rate ($/hour):
-      <input type="number" id="labor-rate" step="0.50" min="0" max="200" value="25">
+      <input type="number" id="labor-rate" min="0" max="200" value="25">
       <small>Your time or service rate</small>
     </label>
 
     <label>
       Machine Cost (Depreciation $/hour):
-      <input type="number" id="machine-cost" step="0.01" min="0" max="50" value="2">
+      <input type="number" id="machine-cost" min="0" max="50" value="2">
       <small>Equipment depreciation per hour</small>
     </label>
 
     <label>
       Overhead Rate (%):
-      <input type="range" id="overhead-rate" min="0" max="100" value="30" step="5">
+      <input type="range" id="overhead-rate" min="0" max="100" value="30">
       <span id="overhead-display">30%</span>
       <small>Facility, utilities, insurance</small>
     </label>
 
     <label>
       Profit Margin (%):
-      <input type="range" id="profit-margin" min="0" max="200" value="50" step="10">
+      <input type="range" id="profit-margin" min="0" max="200" value="50">
       <span id="profit-display">50%</span>
       <small>Desired profit on total cost</small>
     </label>
 
     <label>
       Failure Rate (%):
-      <input type="range" id="failure-rate" min="0" max="50" value="10" step="5">
+      <input type="range" id="failure-rate" min="0" max="50" value="10">
       <span id="failure-display">10%</span>
       <small>Expected print failure rate</small>
     </label>

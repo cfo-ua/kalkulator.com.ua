@@ -170,16 +170,16 @@ faq:
   <h3>Business Information</h3>
   
   <label for="businessAge">Time in Business (years)</label>
-  <input type="number" id="businessAge" value="3" min="0" max="150" step="0.5" placeholder="How long has your business been operating">
+  <input type="number" id="businessAge" value="3" min="0" max="150" placeholder="How long has your business been operating">
 
   <label for="annualRevenue">Annual Revenue</label>
-  <input type="number" id="annualRevenue" value="500000" min="0" step="10000" placeholder="Gross annual business revenue">
+  <input type="number" id="annualRevenue" value="500000" min="0" placeholder="Gross annual business revenue">
 
   <label for="monthlyRevenue">Average Monthly Revenue</label>
-  <input type="number" id="monthlyRevenue" value="42000" min="0" step="1000" placeholder="Average monthly business income">
+  <input type="number" id="monthlyRevenue" value="42000" min="0" placeholder="Average monthly business income">
 
   <label for="monthlyCashFlow">Average Monthly Cash Flow</label>
-  <input type="number" id="monthlyCashFlow" value="8000" min="-50000" step="1000" placeholder="Monthly profit after expenses">
+  <input type="number" id="monthlyCashFlow" value="8000" min="-50000" placeholder="Monthly profit after expenses">
 
   <label for="industryType">Industry Type</label>
   <select id="industryType">
@@ -198,24 +198,24 @@ faq:
   <h3>Credit & Financial Profile</h3>
 
   <label for="personalCreditScore">Personal Credit Score</label>
-  <input type="number" id="personalCreditScore" value="720" min="300" max="850" step="10" placeholder="Your personal FICO score">
+  <input type="number" id="personalCreditScore" value="720" min="300" max="850" placeholder="Your personal FICO score">
 
   <label for="businessCreditScore">Business Credit Score (if known)</label>
-  <input type="number" id="businessCreditScore" value="75" min="0" max="100" step="5" placeholder="Business credit score (0-100)">
+  <input type="number" id="businessCreditScore" value="75" min="0" max="100" placeholder="Business credit score (0-100)">
 
   <label for="existingBusinessDebt">Existing Business Debt</label>
-  <input type="number" id="existingBusinessDebt" value="50000" min="0" step="5000" placeholder="Current business debt obligations">
+  <input type="number" id="existingBusinessDebt" value="50000" min="0" placeholder="Current business debt obligations">
 
   <label for="personalDebt">Personal Debt (excluding mortgage)</label>
-  <input type="number" id="personalDebt" value="25000" min="0" step="5000" placeholder="Personal loans, credit cards, etc.">
+  <input type="number" id="personalDebt" value="25000" min="0" placeholder="Personal loans, credit cards, etc.">
 
   <label for="personalIncome">Personal Annual Income</label>
-  <input type="number" id="personalIncome" value="80000" min="0" step="5000" placeholder="Personal income outside the business">
+  <input type="number" id="personalIncome" value="80000" min="0" placeholder="Personal income outside the business">
 
   <h3>Loan Requirements</h3>
 
   <label for="loanAmount">Desired Loan Amount</label>
-  <input type="number" id="loanAmount" value="100000" min="1000" step="1" placeholder="How much funding do you need">
+  <input type="number" id="loanAmount" value="100000" min="1000" placeholder="How much funding do you need">
 
   <label for="loanPurpose">Loan Purpose</label>
   <select id="loanPurpose">
@@ -230,7 +230,7 @@ faq:
   </select>
 
   <label for="collateralValue">Available Collateral Value</label>
-  <input type="number" id="collateralValue" value="75000" min="0" step="5000" placeholder="Real estate, equipment, inventory value">
+  <input type="number" id="collateralValue" value="75000" min="0" placeholder="Real estate, equipment, inventory value">
 
   <button type="submit">Check Loan Eligibility</button>
 </form>

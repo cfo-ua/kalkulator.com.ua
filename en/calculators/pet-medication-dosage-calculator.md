@@ -158,7 +158,7 @@ faq:
     <label>
       Pet Weight:
       <div style="display: flex; gap: 10px; align-items: center;">
-        <input type="number" id="pet-weight" step="0.1" min="0.1" max="200" required>
+        <input type="number" id="pet-weight" min="0.1" max="200" required>
         <select id="weight-unit">
           <option value="lbs">lbs</option>
           <option value="kg">kg</option>

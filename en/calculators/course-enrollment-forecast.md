@@ -113,10 +113,10 @@ seo:
 <form id="course-enrollment-form">
   <h3>📚 Course Details</h3>
   <label for="coursePrice">Course Price ($)</label>
-  <input type="number" id="coursePrice" value="297" min="10" step="any" required>
+  <input type="number" id="coursePrice" value="297" min="10" required>
 
   <label for="courseDuration">Course Duration (hours)</label>
-  <input type="number" id="courseDuration" value="6" min="0.5" max="100" step="0.5" required>
+  <input type="number" id="courseDuration" value="6" min="0.5" max="100" required>
 
   <label for="courseQuality">Course Quality Level</label>
   <select id="courseQuality" required>
@@ -167,7 +167,7 @@ seo:
 
   <h3>📈 Marketing Strategy</h3>
   <label for="marketingBudget">Monthly Marketing Budget ($)</label>
-  <input type="number" id="marketingBudget" value="500" min="0" step="any">
+  <input type="number" id="marketingBudget" value="500" min="0">
 
   <label for="marketingChannels">Primary Marketing Channel</label>
   <select id="marketingChannels" required>
@@ -205,7 +205,7 @@ seo:
   </select>
 
   <label for="projectionMonths">Forecast Period (months)</label>
-  <input type="number" id="projectionMonths" value="12" min="3" max="24" step="1" required>
+  <input type="number" id="projectionMonths" value="12" min="3" max="24" required>
 
   <button type="submit">Forecast Course Enrollment</button>
 </form>

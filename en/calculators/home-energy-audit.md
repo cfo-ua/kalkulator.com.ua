@@ -119,10 +119,10 @@ faq:
     <div>
       <h4>🏠 Home Information</h4>
       <label for="homeSize">Home Size (sq ft)</label>
-      <input type="number" id="homeSize" value="2000" min="500" max="10000" step="50" required>
+      <input type="number" id="homeSize" value="2000" min="500" max="10000" required>
       
       <label for="homeAge">Home Age (years)</label>
-      <input type="number" id="homeAge" value="25" min="0" max="150" step="1" required>
+      <input type="number" id="homeAge" value="25" min="0" max="150" required>
       
       <label for="homeType">Home Type</label>
       <select id="homeType" required>
@@ -143,16 +143,16 @@ faq:
     <div>
       <h4>💡 Current Energy Usage</h4>
       <label for="monthlyElectric">Monthly Electric Bill ($)</label>
-      <input type="number" id="monthlyElectric" value="120" min="20" max="1000" step="5" required>
+      <input type="number" id="monthlyElectric" value="120" min="20" max="1000" required>
       
       <label for="monthlyGas">Monthly Gas Bill ($)</label>
-      <input type="number" id="monthlyGas" value="80" min="0" max="500" step="5" required>
+      <input type="number" id="monthlyGas" value="80" min="0" max="500" required>
       
       <label for="electricRate">Electric Rate ($/kWh)</label>
-      <input type="number" id="electricRate" value="0.13" min="0.05" max="0.50" step="0.01" required>
+      <input type="number" id="electricRate" value="0.13" min="0.05" max="0.50" required>
       
       <label for="gasRate">Gas Rate ($/therm)</label>
-      <input type="number" id="gasRate" value="1.20" min="0.50" max="5.00" step="0.05" required>
+      <input type="number" id="gasRate" value="1.20" min="0.50" max="5.00" required>
     </div>
     
     <div>
@@ -167,7 +167,7 @@ faq:
       </select>
       
       <label for="heatingAge">Heating System Age (years)</label>
-      <input type="number" id="heatingAge" value="12" min="0" max="50" step="1" required>
+      <input type="number" id="heatingAge" value="12" min="0" max="50" required>
       
       <label for="coolingType">Primary Cooling</label>
       <select id="coolingType">
@@ -225,7 +225,7 @@ faq:
       </select>
       
       <label for="waterHeaterAge">Water Heater Age (years)</label>
-      <input type="number" id="waterHeaterAge" value="8" min="0" max="30" step="1" required>
+      <input type="number" id="waterHeaterAge" value="8" min="0" max="30" required>
       
       <label for="waterHeaterInsulation">Tank Insulation</label>
       <select id="waterHeaterInsulation">
@@ -275,10 +275,10 @@ faq:
       </select>
       
       <label for="heatingDegreeeDays">Heating Degree Days</label>
-      <input type="number" id="heatingDegreeeDays" value="4500" min="0" max="12000" step="100" required>
+      <input type="number" id="heatingDegreeeDays" value="4500" min="0" max="12000" required>
       
       <label for="coolingDegreeDays">Cooling Degree Days</label>
-      <input type="number" id="coolingDegreeDays" value="1200" min="0" max="5000" step="50" required>
+      <input type="number" id="coolingDegreeDays" value="1200" min="0" max="5000" required>
     </div>
   </div>
   

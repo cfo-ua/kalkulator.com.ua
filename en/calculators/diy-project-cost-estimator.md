@@ -143,7 +143,7 @@ faq:
       </select>
       
       <label for="projectArea">Project Area (sq ft)</label>
-      <input type="number" id="projectArea" value="400" min="10" max="10000" step="10" required>
+      <input type="number" id="projectArea" value="400" min="10" max="10000" required>
       
       <label for="projectComplexity">Project Complexity</label>
       <select id="projectComplexity">
@@ -171,7 +171,7 @@ faq:
       </select>
       
       <label for="wasteBuffer">Waste/Overage Buffer (%)</label>
-      <input type="number" id="wasteBuffer" value="10" min="5" max="25" step="1" required>
+      <input type="number" id="wasteBuffer" value="10" min="5" max="25" required>
       
       <label for="laborComparison">Include Labor Comparison</label>
       <select id="laborComparison">
@@ -206,7 +206,7 @@ faq:
       </select>
       
       <label for="projectDuration">Estimated Duration (days)</label>
-      <input type="number" id="projectDuration" value="3" min="1" max="30" step="1" required>
+      <input type="number" id="projectDuration" value="3" min="1" max="30" required>
       
       <label for="includeSafety">Include Safety Equipment</label>
       <select id="includeSafety">

@@ -171,19 +171,19 @@ faq:
       <h4>💰 Initial Investment</h4>
       <label>
         Website Development & Design ($):
-        <input type="number" id="website-cost" min="1000" step="500" value="8000" required>
+        <input type="number" id="website-cost" min="1000" value="8000" required>
       </label>
       <label>
         Initial Inventory ($):
-        <input type="number" id="inventory-cost" min="5000" step="1000" value="25000" required>
+        <input type="number" id="inventory-cost" min="5000" value="25000" required>
       </label>
       <label>
         Initial Marketing & Advertising ($):
-        <input type="number" id="initial-marketing" min="1000" step="500" value="5000" required>
+        <input type="number" id="initial-marketing" min="1000" value="5000" required>
       </label>
       <label>
         Additional Costs (Licenses, Equipment) ($):
-        <input type="number" id="additional-costs" min="500" step="500" value="3000" required>
+        <input type="number" id="additional-costs" min="500" value="3000" required>
       </label>
     </div>
 
@@ -191,23 +191,23 @@ faq:
       <h4>📊 Sales Parameters</h4>
       <label>
         Monthly Website Traffic (visitors):
-        <input type="number" id="monthly-traffic" min="1000" max="500000" step="1000" value="15000" required>
+        <input type="number" id="monthly-traffic" min="1000" max="500000" value="15000" required>
       </label>
       <label>
         Conversion Rate (%):
-        <input type="number" id="conversion-rate" min="0.5" max="15" step="0.1" value="2.5" required>
+        <input type="number" id="conversion-rate" min="0.5" max="15" value="2.5" required>
       </label>
       <label>
         Average Order Value (AOV) ($):
-        <input type="number" id="average-order" min="10" max="500" step="5" value="75" required>
+        <input type="number" id="average-order" min="10" max="500" value="75" required>
       </label>
       <label>
         Gross Margin (%):
-        <input type="number" id="gross-margin" min="15" max="80" step="5" value="45" required>
+        <input type="number" id="gross-margin" min="15" max="80" value="45" required>
       </label>
       <label>
         Repeat Purchase Rate (%):
-        <input type="number" id="repeat-rate" min="10" max="70" step="5" value="25" required>
+        <input type="number" id="repeat-rate" min="10" max="70" value="25" required>
       </label>
     </div>
 
@@ -215,23 +215,23 @@ faq:
       <h4>💸 Monthly Operating Costs</h4>
       <label>
         Marketing & Advertising ($):
-        <input type="number" id="marketing-cost" min="500" step="200" value="3500" required>
+        <input type="number" id="marketing-cost" min="500" value="3500" required>
       </label>
       <label>
         Fulfillment & Shipping ($):
-        <input type="number" id="logistics-cost" min="300" step="100" value="1200" required>
+        <input type="number" id="logistics-cost" min="300" value="1200" required>
       </label>
       <label>
         Technology & Hosting ($):
-        <input type="number" id="tech-maintenance" min="100" step="50" value="400" required>
+        <input type="number" id="tech-maintenance" min="100" value="400" required>
       </label>
       <label>
         Staff & Personnel ($):
-        <input type="number" id="staff-costs" min="500" step="200" value="2000" required>
+        <input type="number" id="staff-costs" min="500" value="2000" required>
       </label>
       <label>
         Other Expenses (Fees, Insurance) ($):
-        <input type="number" id="other-expenses" min="200" step="100" value="800" required>
+        <input type="number" id="other-expenses" min="200" value="800" required>
       </label>
     </div>
 

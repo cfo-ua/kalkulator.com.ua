@@ -195,13 +195,13 @@ faq:
         <input type="text" id="debt-name-1" placeholder="Кредитна картка ПриватБанк" required>
         
         <label for="debt-balance-1">Поточний баланс (грн):</label>
-        <input type="number" id="debt-balance-1" min="0" step="100" placeholder="25000" required>
+        <input type="number" id="debt-balance-1" min="0" placeholder="25000" required>
         
         <label for="debt-rate-1">Процентна ставка (% річних):</label>
-        <input type="number" id="debt-rate-1" min="0" max="100" step="0.1" placeholder="35" required>
+        <input type="number" id="debt-rate-1" min="0" max="100" placeholder="35" required>
         
         <label for="debt-minimum-1">Мінімальний платіж (грн):</label>
-        <input type="number" id="debt-minimum-1" min="0" step="50" placeholder="1250" required>
+        <input type="number" id="debt-minimum-1" min="0" placeholder="1250" required>
       </div>
     </div>
     
@@ -213,7 +213,7 @@ faq:
     <h3>💰 Додаткові платежі</h3>
     
     <label for="extra-payment">Додатковий щомісячний платіж (грн):</label>
-    <input type="number" id="extra-payment" min="0" step="100" value="1000" required>
+    <input type="number" id="extra-payment" min="0" value="1000" required>
     <small>Сума понад мінімальні платежі, яку ви можете виділити на погашення боргів</small>
     
     <label for="strategy-preference">Ваша мотивація:</label>

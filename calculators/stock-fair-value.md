@@ -163,32 +163,32 @@ faq:
     
     <label>
       Поточна ціна акції ($):
-      <input type="number" id="current-price" min="0" step="0.01" required placeholder="Введіть поточну ринкову ціну">
+      <input type="number" id="current-price" min="0" required placeholder="Введіть поточну ринкову ціну">
     </label>
 
     <label>
       Прибуток на акцію (EPS) - Останні 12 місяців:
-      <input type="number" id="eps" min="0" step="0.01" required placeholder="Введіть прибуток на акцію">
+      <input type="number" id="eps" min="0" required placeholder="Введіть прибуток на акцію">
     </label>
 
     <label>
       Балансова вартість на акцію ($):
-      <input type="number" id="book-value" min="0" step="0.01" required placeholder="Введіть балансову вартість на акцію">
+      <input type="number" id="book-value" min="0" required placeholder="Введіть балансову вартість на акцію">
     </label>
 
     <label>
       Річний дивіденд на акцію ($):
-      <input type="number" id="dividend" min="0" step="0.01" placeholder="Введіть річний дивіденд (0 якщо немає)">
+      <input type="number" id="dividend" min="0" placeholder="Введіть річний дивіденд (0 якщо немає)">
     </label>
 
     <label>
       Очікуваний темп зростання EPS (% річних):
-      <input type="number" id="growth-rate" min="-50" max="100" step="0.1" placeholder="Очікуваний темп зростання прибутків">
+      <input type="number" id="growth-rate" min="-50" max="100" placeholder="Очікуваний темп зростання прибутків">
     </label>
 
     <label>
       Загальний коефіцієнт боргу до капіталу (%):
-      <input type="number" id="debt-equity" min="0" max="500" step="1" placeholder="Введіть відсоток боргу до капіталу">
+      <input type="number" id="debt-equity" min="0" max="500" placeholder="Введіть відсоток боргу до капіталу">
     </label>
   </div>
 
@@ -249,7 +249,7 @@ faq:
     
     <label>
       Необхідна норма прибутку (% річних):
-      <input type="number" id="required-return" min="5" max="30" step="0.1" value="12" placeholder="Ваша необхідна норма прибутку">
+      <input type="number" id="required-return" min="5" max="30" value="12" placeholder="Ваша необхідна норма прибутку">
     </label>
 
     <label>
