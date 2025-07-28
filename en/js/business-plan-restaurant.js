@@ -112,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
         recommendations.push('🍷 Add alcoholic beverages and high-margin desserts');
         recommendations.push('🎉 Create special offers and set menus');
       }
-      }
 
       const data = {
         totalInvestment,
