@@ -114,67 +114,78 @@ faq:
 
 <div class="calculator-container">
   <form id="clothing-store-form" autocomplete="off">
-    <label>
-      Store Size (sq ft):
-      <input type="number" id="area" min="300" max="3000" value="800" required>
-    </label>
-    <label>
-      Store Type:
-      <select id="store-type" required>
-        <option value="mass">Mass Market</option>
-        <option value="mid" selected>Mid-Range</option>
-        <option value="premium">Premium</option>
-        <option value="boutique">Boutique</option>
-      </select>
-    </label>
-    <label>
-      Initial Inventory ($):
-      <input type="number" id="inventory-cost" min="20000" step="5000" value="45000" required>
-    </label>
-    <label>
-      Equipment & Fixtures ($):
-      <input type="number" id="equipment-cost" min="5000" step="2000" value="15000" required>
-    </label>
-    <label>
-      Renovation & Design ($):
-      <input type="number" id="renovation-cost" min="8000" step="2000" value="20000" required>
-    </label>
-    <label>
-      Additional Costs - licenses, working capital ($):
-      <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
-    </label>
-    <label>
-      Monthly Rent ($):
-      <input type="number" id="monthly-rent" min="1500" step="500" value="5000" required>
-    </label>
-    <label>
-      Markup Percentage (%):
-      <input type="number" id="markup-percent" min="80" max="400" value="180" required>
-    </label>
-    <label>
-      Monthly Cost of Goods Sold ($):
-      <input type="number" id="monthly-sales-cost" min="3000" step="1000" value="12000" required>
-    </label>
-    <label>
-      Inventory Turnover (times per year):
-      <input type="number" id="inventory-turnover" min="2" max="12" step="0.5" value="5" required>
-    </label>
-    <label>
-      Staff Salaries ($):
-      <input type="number" id="staff-salaries" min="1500" step="500" value="4500" required>
-    </label>
-    <label>
-      Utilities ($):
-      <input type="number" id="utilities" min="200" step="100" value="400" required>
-    </label>
-    <label>
-      Marketing & Advertising ($):
-      <input type="number" id="marketing" min="300" step="200" value="800" required>
-    </label>
-    <label>
-      Other Expenses (banking, insurance, taxes) ($):
-      <input type="number" id="other-expenses" min="300" step="200" value="700" required>
-    </label>
+    <div class="input-group">
+      <h4>💰 Initial Investment</h4>
+      <label>
+        Store Size (sq ft):
+        <input type="number" id="area" min="1" value="800" required>
+      </label>
+      <label>
+        Store Type:
+        <select id="store-type" required>
+          <option value="mass">Mass Market</option>
+          <option value="mid" selected>Mid-Range</option>
+          <option value="premium">Premium</option>
+          <option value="boutique">Boutique</option>
+        </select>
+      </label>
+      <label>
+        Initial Inventory ($):
+        <input type="number" id="inventory-cost" min="1000" step="1000" value="45000" required>
+      </label>
+      <label>
+        Equipment & Fixtures ($):
+        <input type="number" id="equipment-cost" min="1000" step="1000" value="15000" required>
+      </label>
+      <label>
+        Renovation & Design ($):
+        <input type="number" id="renovation-cost" min="1000" step="1000" value="20000" required>
+      </label>
+      <label>
+        Additional Costs - licenses, working capital ($):
+        <input type="number" id="additional-costs" min="1000" step="1000" value="10000" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>📊 Operating Parameters</h4>
+      <label>
+        Markup Percentage (%):
+        <input type="number" id="markup-percent" min="1" max="1000" value="180" required>
+      </label>
+      <label>
+        Monthly Cost of Goods Sold ($):
+        <input type="number" id="monthly-sales-cost" min="100" step="100" value="12000" required>
+      </label>
+      <label>
+        Inventory Turnover (times per year):
+        <input type="number" id="inventory-turnover" min="0.1" max="50" step="0.1" value="5" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>💸 Monthly Expenses</h4>
+      <label>
+        Monthly Rent ($):
+        <input type="number" id="monthly-rent" min="100" step="100" value="5000" required>
+      </label>
+      <label>
+        Staff Salaries ($):
+        <input type="number" id="staff-salaries" min="500" step="100" value="4500" required>
+      </label>
+      <label>
+        Utilities ($):
+        <input type="number" id="utilities" min="50" step="50" value="400" required>
+      </label>
+      <label>
+        Marketing & Advertising ($):
+        <input type="number" id="marketing" min="100" step="100" value="800" required>
+      </label>
+      <label>
+        Other Expenses (banking, insurance, taxes) ($):
+        <input type="number" id="other-expenses" min="100" step="100" value="700" required>
+      </label>
+    </div>
 
     <button type="submit">👗 Calculate Clothing Store Business Plan</button>
   </form>

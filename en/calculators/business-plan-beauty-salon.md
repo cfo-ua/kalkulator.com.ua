@@ -105,62 +105,73 @@ faq:
 
 <div class="calculator-container">
   <form id="beauty-salon-form" autocomplete="off">
-    <label>
-      Salon Size (sq ft):
-      <input type="number" id="area" min="400" max="2000" value="800" required>
-    </label>
-    <label>
-      Number of Workstations:
-      <input type="number" id="workstations" min="3" max="15" value="6" required>
-    </label>
-    <label>
-      Equipment & Tools ($):
-      <input type="number" id="equipment-cost" min="15000" step="5000" value="35000" required>
-    </label>
-    <label>
-      Renovation & Design ($):
-      <input type="number" id="renovation-cost" min="10000" step="5000" value="25000" required>
-    </label>
-    <label>
-      Furniture & Décor ($):
-      <input type="number" id="furniture-cost" min="5000" step="2000" value="15000" required>
-    </label>
-    <label>
-      Additional Costs - licenses, working capital ($):
-      <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
-    </label>
-    <label>
-      Monthly Rent ($):
-      <input type="number" id="monthly-rent" min="1500" step="500" value="4500" required>
-    </label>
-    <label>
-      Average Service Price ($):
-      <input type="number" id="avg-check" min="15" max="80" step="2" value="35" required>
-    </label>
-    <label>
-      Clients per Day:
-      <input type="number" id="clients-per-day" min="10" max="60" value="25" required>
-    </label>
-    <label>
-      Operating Days per Month:
-      <input type="number" id="working-days" min="22" max="30" value="26" required>
-    </label>
-    <label>
-      Staff Salaries ($):
-      <input type="number" id="staff-salaries" min="3000" step="1000" value="9000" required>
-    </label>
-    <label>
-      Supplies & Products ($):
-      <input type="number" id="supplies" min="500" step="200" value="1500" required>
-    </label>
-    <label>
-      Utilities ($):
-      <input type="number" id="utilities" min="200" step="100" value="400" required>
-    </label>
-    <label>
-      Other Expenses (marketing, banking, insurance) ($):
-      <input type="number" id="other-expenses" min="300" step="200" value="800" required>
-    </label>
+    <div class="input-group">
+      <h4>💰 Initial Investment</h4>
+      <label>
+        Salon Size (sq ft):
+        <input type="number" id="area" min="1" value="800" required>
+      </label>
+      <label>
+        Number of Workstations:
+        <input type="number" id="workstations" min="1" value="6" required>
+      </label>
+      <label>
+        Equipment & Tools ($):
+        <input type="number" id="equipment-cost" min="1000" step="1000" value="35000" required>
+      </label>
+      <label>
+        Renovation & Design ($):
+        <input type="number" id="renovation-cost" min="1000" step="1000" value="25000" required>
+      </label>
+      <label>
+        Furniture & Décor ($):
+        <input type="number" id="furniture-cost" min="1000" step="1000" value="15000" required>
+      </label>
+      <label>
+        Additional Costs - licenses, working capital ($):
+        <input type="number" id="additional-costs" min="1000" step="1000" value="10000" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>📊 Operating Parameters</h4>
+      <label>
+        Average Service Price ($):
+        <input type="number" id="avg-check" min="1" step="0.5" value="35" required>
+      </label>
+      <label>
+        Clients per Day:
+        <input type="number" id="clients-per-day" min="1" value="25" required>
+      </label>
+      <label>
+        Operating Days per Month:
+        <input type="number" id="working-days" min="1" max="31" value="26" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>💸 Monthly Expenses</h4>
+      <label>
+        Monthly Rent ($):
+        <input type="number" id="monthly-rent" min="100" step="100" value="4500" required>
+      </label>
+      <label>
+        Staff Salaries ($):
+        <input type="number" id="staff-salaries" min="500" step="100" value="9000" required>
+      </label>
+      <label>
+        Supplies & Products ($):
+        <input type="number" id="supplies" min="100" step="100" value="1500" required>
+      </label>
+      <label>
+        Utilities ($):
+        <input type="number" id="utilities" min="50" step="50" value="400" required>
+      </label>
+      <label>
+        Other Expenses (marketing, banking, insurance) ($):
+        <input type="number" id="other-expenses" min="100" step="100" value="800" required>
+      </label>
+    </div>
 
     <button type="submit">💅 Calculate Beauty Salon Business Plan</button>
   </form>

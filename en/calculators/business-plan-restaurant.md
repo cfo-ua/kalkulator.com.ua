@@ -107,62 +107,73 @@ faq:
 
 <div class="calculator-container">
   <form id="restaurant-form" autocomplete="off">
-    <label>
-      Restaurant Size (sq ft):
-      <input type="number" id="area" min="600" max="5000" value="1500" required>
-    </label>
-    <label>
-      Seating Capacity:
-      <input type="number" id="seats" min="25" max="200" value="60" required>
-    </label>
-    <label>
-      Kitchen Equipment ($):
-      <input type="number" id="equipment-cost" min="30000" step="10000" value="80000" required>
-    </label>
-    <label>
-      Renovation Cost ($):
-      <input type="number" id="renovation-cost" min="20000" step="10000" value="60000" required>
-    </label>
-    <label>
-      Furniture & Interior ($):
-      <input type="number" id="furniture-cost" min="15000" step="5000" value="40000" required>
-    </label>
-    <label>
-      Additional Costs - licenses, working capital ($):
-      <input type="number" id="additional-costs" min="15000" step="5000" value="35000" required>
-    </label>
-    <label>
-      Monthly Rent ($):
-      <input type="number" id="monthly-rent" min="3000" step="1000" value="12000" required>
-    </label>
-    <label>
-      Average Check ($):
-      <input type="number" id="avg-check" min="10" max="80" step="2" value="28" required>
-    </label>
-    <label>
-      Customers per Day:
-      <input type="number" id="clients-per-day" min="40" max="300" value="95" required>
-    </label>
-    <label>
-      Operating Days per Month:
-      <input type="number" id="working-days" min="25" max="31" value="28" required>
-    </label>
-    <label>
-      Staff Salaries ($):
-      <input type="number" id="staff-salaries" min="6000" step="1000" value="18000" required>
-    </label>
-    <label>
-      Food Cost (% of revenue):
-      <input type="number" id="cogs-percent" min="28" max="40" value="32" required>
-    </label>
-    <label>
-      Utilities ($):
-      <input type="number" id="utilities" min="600" step="200" value="1400" required>
-    </label>
-    <label>
-      Other Expenses (marketing, banking, insurance) ($):
-      <input type="number" id="other-expenses" min="800" step="300" value="2500" required>
-    </label>
+    <div class="input-group">
+      <h4>💰 Initial Investment</h4>
+      <label>
+        Restaurant Size (sq ft):
+        <input type="number" id="area" min="1" value="1500" required>
+      </label>
+      <label>
+        Seating Capacity:
+        <input type="number" id="seats" min="1" value="60" required>
+      </label>
+      <label>
+        Kitchen Equipment ($):
+        <input type="number" id="equipment-cost" min="1000" step="1000" value="80000" required>
+      </label>
+      <label>
+        Renovation Cost ($):
+        <input type="number" id="renovation-cost" min="1000" step="1000" value="60000" required>
+      </label>
+      <label>
+        Furniture & Interior ($):
+        <input type="number" id="furniture-cost" min="1000" step="1000" value="40000" required>
+      </label>
+      <label>
+        Additional Costs - licenses, working capital ($):
+        <input type="number" id="additional-costs" min="1000" step="1000" value="35000" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>📊 Operating Parameters</h4>
+      <label>
+        Average Check ($):
+        <input type="number" id="avg-check" min="1" step="0.5" value="28" required>
+      </label>
+      <label>
+        Customers per Day:
+        <input type="number" id="clients-per-day" min="1" value="95" required>
+      </label>
+      <label>
+        Operating Days per Month:
+        <input type="number" id="working-days" min="1" max="31" value="28" required>
+      </label>
+      <label>
+        Food Cost (% of revenue):
+        <input type="number" id="cogs-percent" min="1" max="100" value="32" required>
+      </label>
+    </div>
+
+    <div class="input-group">
+      <h4>💸 Monthly Expenses</h4>
+      <label>
+        Monthly Rent ($):
+        <input type="number" id="monthly-rent" min="100" step="100" value="12000" required>
+      </label>
+      <label>
+        Staff Salaries ($):
+        <input type="number" id="staff-salaries" min="500" step="100" value="18000" required>
+      </label>
+      <label>
+        Utilities ($):
+        <input type="number" id="utilities" min="50" step="50" value="1400" required>
+      </label>
+      <label>
+        Other Expenses (marketing, banking, insurance) ($):
+        <input type="number" id="other-expenses" min="100" step="100" value="2500" required>
+      </label>
+    </div>
 
     <button type="submit">🍽️ Calculate Restaurant Business Plan</button>
   </form>
