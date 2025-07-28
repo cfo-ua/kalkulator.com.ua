@@ -34,6 +34,25 @@ seo:
     - точні обчислення
     - приватність
     - конфіденційність
+    - бізнес план калькулятор
+    - калькулятори для підприємців
+    - стартап калькулятор
+    - бізнес планування онлайн
+    - розрахунок прибутковості бізнесу
+    - калькулятор витрат стартапу
+    - бізнес модель калькулятор
+    - планування бізнесу україна
+    - підприємництво калькулятори
+    - інвестиції в бізнес калькулятор
+    - точка беззбитковості калькулятор
+    - ROI калькулятор
+    - окупність бізнесу
+    - фінансове планування
+    - ресторан бізнес план
+    - кафе бізнес план
+    - клінінгова компанія план
+    - маркетингове агентство план
+    - фітнес центр бізнес план
 ---
 
 <h1>Онлайн калькулятори українською 🇺🇦</h1>
@@ -130,6 +149,56 @@ seo:
     <div style="background: var(--card-bg); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
       <h4 style="margin: 0 0 0.5rem 0; color: var(--accent);"><a href="/calculators/compound-interest.html" style="color: var(--accent); text-decoration: none;">💰 Калькулятор складних відсотків</a></h4>
       <p style="margin: 0; font-size: 0.9rem; color: #666;">Дізнайтеся, як ростуть ваші інвестиції з часом завдяки силі складних відсотків.</p>
+    </div>
+  </div>
+
+  <div class="business-plan-section" style="background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(21, 122, 255, 0.1); margin: 2.5rem 0;">
+    <h3 style="margin: 0 0 1rem 0; color: var(--accent); text-align: center;">🚀 Бізнес-план калькулятори для підприємців</h3>
+    <p style="margin: 0 0 2rem 0; color: #555; text-align: center; font-size: 1.1rem;">Детальні <strong>бізнес-плани</strong> та <strong>розрахунки прибутковості</strong> для успішного запуску вашого підприємства. Від <strong>стартапів</strong> до <strong>традиційного бізнесу</strong> — оцініть перспективи та сплануйте інвестиції.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/business-plan-restaurant.html" style="color: var(--accent); text-decoration: none;">🍽️ Ресторанний бізнес</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Розрахуйте <strong>стартові витрати ресторану</strong>, прогнозовані доходи, терміни <strong>окупності</strong> та щомісячний прибуток. Ідеально для HoReCa бізнесу.</p>
+        <div style="font-size: 0.85rem; color: #888;">💰 Інвестиції • 📊 ROI • ⏱️ Окупність</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/business-plan-cafe.html" style="color: var(--accent); text-decoration: none;">☕ Кафе та кав'ярня</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Детальний <strong>бізнес-план кав'ярні</strong> з розрахунками обладнання, оренди, персоналу та прогнозом <strong>прибутковості</strong>.</p>
+        <div style="font-size: 0.85rem; color: #888;">☕ Обладнання • 🏢 Оренда • 👥 Персонал</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/business-plan-marketing-agency.html" style="color: var(--accent); text-decoration: none;">📈 Маркетингове агентство</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;"><strong>Digital агентство</strong> планування: витрати на команду, інструменти, клієнтську базу та <strong>прогноз доходів</strong> від послуг.</p>
+        <div style="font-size: 0.85rem; color: #888;">💻 Digital • 🎯 SMM • 🔍 SEO</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/startup-cost-calculator.html" style="color: var(--accent); text-decoration: none;">🚀 Витрати стартапу</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Комплексний розрахунок <strong>початкових інвестицій</strong>, операційних витрат та потреб у <strong>фінансуванні стартапу</strong>.</p>
+        <div style="font-size: 0.85rem; color: #888;">💡 Ідея • 💰 Інвестиції • 📊 Модель</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/business-plan-cleaning-service.html" style="color: var(--accent); text-decoration: none;">🧹 Клінінгова компанія</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Планування <strong>клінінгового сервісу</strong>: обладнання, засоби, персонал та розрахунок <strong>ціни послуг</strong>.</p>
+        <div style="font-size: 0.85rem; color: #888;">🧽 Обладнання • 🏢 Офіси • 🏠 Квартири</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(21, 122, 255, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: var(--accent); font-size: 1.1rem;"><a href="/calculators/business-plan-gym.html" style="color: var(--accent); text-decoration: none;">💪 Фітнес-центр</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Розрахунок <strong>відкриття тренажерного залу</strong>: обладнання, оренда, абонементи та модель <strong>прибутковості</strong>.</p>
+        <div style="font-size: 0.85rem; color: #888;">🏋️ Тренажери • 🎫 Абонементи • 💪 Фітнес</div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/categories/business/" style="background: var(--accent); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(21, 122, 255, 0.3); transition: all 0.3s ease;">
+        📈 Переглянути всі 26 бізнес-планів
+      </a>
+      <p style="margin: 1rem 0 0 0; font-size: 0.9rem; color: #777;">Від <strong>стартапів</strong> до <strong>традиційного бізнесу</strong> • <strong>Детальні розрахунки</strong> • <strong>Українські реалії</strong></p>
     </div>
   </div>
 
