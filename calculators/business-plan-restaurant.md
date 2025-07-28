@@ -106,73 +106,62 @@ faq:
 
 <div class="calculator-container">
   <form id="restaurant-form" autocomplete="off">
-    <div class="input-group">
-      <h4>💰 Стартові інвестиції</h4>
-      <label>
-        Площа ресторану (м²):
-        <input type="number" id="area" min="60" max="500" value="150" required>
-      </label>
-      <label>
-        Кількість посадкових місць:
-        <input type="number" id="seats" min="25" max="200" value="60" required>
-      </label>
-      <label>
-        Кухонне обладнання ($):
-        <input type="number" id="equipment-cost" min="30000" step="10000" value="80000" required>
-      </label>
-      <label>
-        Вартість ремонту ($):
-        <input type="number" id="renovation-cost" min="20000" step="10000" value="60000" required>
-      </label>
-      <label>
-        Меблі та інтер'єр ($):
-        <input type="number" id="furniture-cost" min="15000" step="5000" value="40000" required>
-      </label>
-      <label>
-        Додаткові витрати - ліцензії, початковий капітал ($):
-        <input type="number" id="additional-costs" min="15000" step="5000" value="35000" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>📊 Операційні параметри</h4>
-      <label>
-        Щомісячна оренда ($):
-        <input type="number" id="monthly-rent" min="3000" step="1000" value="12000" required>
-      </label>
-      <label>
-        Середній чек ($):
-        <input type="number" id="avg-check" min="10" max="80" step="2" value="28" required>
-      </label>
-      <label>
-        Клієнтів на день:
-        <input type="number" id="clients-per-day" min="40" max="300" value="95" required>
-      </label>
-      <label>
-        Робочих днів на місяць:
-        <input type="number" id="working-days" min="25" max="31" value="28" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>👥 Персонал та витрати</h4>
-      <label>
-        Зарплати персоналу ($):
-        <input type="number" id="staff-salaries" min="6000" step="1000" value="18000" required>
-      </label>
-      <label>
-        Собівартість продуктів (% від виручки):
-        <input type="number" id="cogs-percent" min="28" max="40" value="32" required>
-      </label>
-      <label>
-        Комунальні послуги ($):
-        <input type="number" id="utilities" min="600" step="200" value="1400" required>
-      </label>
-      <label>
-        Інші витрати (реклама, банк, страхування) ($):
-        <input type="number" id="other-expenses" min="800" step="300" value="2500" required>
-      </label>
-    </div>
+    <label>
+      Площа ресторану (м²):
+      <input type="number" id="area" min="60" max="500" value="150" required>
+    </label>
+    <label>
+      Кількість посадкових місць:
+      <input type="number" id="seats" min="25" max="200" value="60" required>
+    </label>
+    <label>
+      Кухонне обладнання ($):
+      <input type="number" id="equipment-cost" min="30000" step="10000" value="80000" required>
+    </label>
+    <label>
+      Вартість ремонту ($):
+      <input type="number" id="renovation-cost" min="20000" step="10000" value="60000" required>
+    </label>
+    <label>
+      Меблі та інтер'єр ($):
+      <input type="number" id="furniture-cost" min="15000" step="5000" value="40000" required>
+    </label>
+    <label>
+      Додаткові витрати - ліцензії, початковий капітал ($):
+      <input type="number" id="additional-costs" min="15000" step="5000" value="35000" required>
+    </label>
+    <label>
+      Щомісячна оренда ($):
+      <input type="number" id="monthly-rent" min="3000" step="1000" value="12000" required>
+    </label>
+    <label>
+      Середній чек ($):
+      <input type="number" id="avg-check" min="10" max="80" step="2" value="28" required>
+    </label>
+    <label>
+      Клієнтів на день:
+      <input type="number" id="clients-per-day" min="40" max="300" value="95" required>
+    </label>
+    <label>
+      Робочих днів на місяць:
+      <input type="number" id="working-days" min="25" max="31" value="28" required>
+    </label>
+    <label>
+      Зарплати персоналу ($):
+      <input type="number" id="staff-salaries" min="6000" step="1000" value="18000" required>
+    </label>
+    <label>
+      Собівартість продуктів (% від виручки):
+      <input type="number" id="cogs-percent" min="28" max="40" value="32" required>
+    </label>
+    <label>
+      Комунальні послуги ($):
+      <input type="number" id="utilities" min="600" step="200" value="1400" required>
+    </label>
+    <label>
+      Інші витрати (реклама, банк, страхування) ($):
+      <input type="number" id="other-expenses" min="800" step="300" value="2500" required>
+    </label>
 
     <button type="submit">🍽️ Розрахувати бізнес-план ресторану</button>
   </form>

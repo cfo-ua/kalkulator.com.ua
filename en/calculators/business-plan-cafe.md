@@ -106,73 +106,62 @@ faq:
 
 <div class="calculator-container">
   <form id="cafe-form" autocomplete="off">
-    <div class="input-group">
-      <h4>💰 Startup Investment</h4>
-      <label>
-        Location Size (sq ft):
-        <input type="number" id="area" min="300" max="3000" value="800" required>
-      </label>
-      <label>
-        Seating Capacity:
-        <input type="number" id="seats" min="15" max="100" value="35" required>
-      </label>
-      <label>
-        Equipment Cost ($):
-        <input type="number" id="equipment-cost" min="20000" step="5000" value="45000" required>
-      </label>
-      <label>
-        Renovation Cost ($):
-        <input type="number" id="renovation-cost" min="10000" step="5000" value="32000" required>
-      </label>
-      <label>
-        Furniture & Interior ($):
-        <input type="number" id="furniture-cost" min="5000" step="2000" value="14000" required>
-      </label>
-      <label>
-        Additional Costs - licenses, working capital ($):
-        <input type="number" id="additional-costs" min="5000" step="2000" value="12000" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>📊 Operating Parameters</h4>
-      <label>
-        Monthly Rent ($):
-        <input type="number" id="monthly-rent" min="1500" step="500" value="5000" required>
-      </label>
-      <label>
-        Average Transaction ($):
-        <input type="number" id="avg-check" min="4" max="25" step="1" value="9" required>
-      </label>
-      <label>
-        Customers per Day:
-        <input type="number" id="clients-per-day" min="50" max="300" value="120" required>
-      </label>
-      <label>
-        Operating Days per Month:
-        <input type="number" id="working-days" min="25" max="31" value="28" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>👥 Staff & Expenses</h4>
-      <label>
-        Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="3000" step="500" value="7500" required>
-      </label>
-      <label>
-        Cost of Goods Sold (% of revenue):
-        <input type="number" id="cogs-percent" min="25" max="45" value="32" required>
-      </label>
-      <label>
-        Utilities ($):
-        <input type="number" id="utilities" min="300" step="100" value="600" required>
-      </label>
-      <label>
-        Other Expenses (marketing, banking, insurance) ($):
-        <input type="number" id="other-expenses" min="400" step="200" value="1200" required>
-      </label>
-    </div>
+    <label>
+      Location Size (sq ft):
+      <input type="number" id="area" min="300" max="3000" value="800" required>
+    </label>
+    <label>
+      Seating Capacity:
+      <input type="number" id="seats" min="15" max="100" value="35" required>
+    </label>
+    <label>
+      Equipment Cost ($):
+      <input type="number" id="equipment-cost" min="20000" step="5000" value="45000" required>
+    </label>
+    <label>
+      Renovation Cost ($):
+      <input type="number" id="renovation-cost" min="10000" step="5000" value="32000" required>
+    </label>
+    <label>
+      Furniture & Interior ($):
+      <input type="number" id="furniture-cost" min="5000" step="2000" value="14000" required>
+    </label>
+    <label>
+      Additional Costs - licenses, working capital ($):
+      <input type="number" id="additional-costs" min="5000" step="2000" value="12000" required>
+    </label>
+    <label>
+      Monthly Rent ($):
+      <input type="number" id="monthly-rent" min="1500" step="500" value="5000" required>
+    </label>
+    <label>
+      Average Transaction ($):
+      <input type="number" id="avg-check" min="4" max="25" step="1" value="9" required>
+    </label>
+    <label>
+      Customers per Day:
+      <input type="number" id="clients-per-day" min="50" max="300" value="120" required>
+    </label>
+    <label>
+      Operating Days per Month:
+      <input type="number" id="working-days" min="25" max="31" value="28" required>
+    </label>
+    <label>
+      Staff Salaries ($):
+      <input type="number" id="staff-salaries" min="3000" step="500" value="7500" required>
+    </label>
+    <label>
+      Cost of Goods Sold (% of revenue):
+      <input type="number" id="cogs-percent" min="25" max="45" value="32" required>
+    </label>
+    <label>
+      Utilities ($):
+      <input type="number" id="utilities" min="300" step="100" value="600" required>
+    </label>
+    <label>
+      Other Expenses (marketing, banking, insurance) ($):
+      <input type="number" id="other-expenses" min="400" step="200" value="1200" required>
+    </label>
 
     <button type="submit">☕ Calculate Café Business Plan</button>
   </form>

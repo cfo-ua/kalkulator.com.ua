@@ -104,73 +104,62 @@ faq:
 
 <div class="calculator-container">
   <form id="beauty-salon-form" autocomplete="off">
-    <div class="input-group">
-      <h4>💰 Стартові інвестиції</h4>
-      <label>
-        Площа салону (м²):
-        <input type="number" id="area" min="40" max="200" value="80" required>
-      </label>
-      <label>
-        Кількість робочих місць:
-        <input type="number" id="workstations" min="3" max="15" value="6" required>
-      </label>
-      <label>
-        Обладнання та інструменти ($):
-        <input type="number" id="equipment-cost" min="15000" step="5000" value="35000" required>
-      </label>
-      <label>
-        Ремонт та дизайн ($):
-        <input type="number" id="renovation-cost" min="10000" step="5000" value="25000" required>
-      </label>
-      <label>
-        Меблі та декор ($):
-        <input type="number" id="furniture-cost" min="5000" step="2000" value="15000" required>
-      </label>
-      <label>
-        Додаткові витрати - ліцензії, початковий капітал ($):
-        <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>📊 Операційні параметри</h4>
-      <label>
-        Щомісячна оренда ($):
-        <input type="number" id="monthly-rent" min="1500" step="500" value="4500" required>
-      </label>
-      <label>
-        Середній чек ($):
-        <input type="number" id="avg-check" min="15" max="80" step="2" value="35" required>
-      </label>
-      <label>
-        Клієнтів на день:
-        <input type="number" id="clients-per-day" min="10" max="60" value="25" required>
-      </label>
-      <label>
-        Робочих днів на місяць:
-        <input type="number" id="working-days" min="22" max="30" value="26" required>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <h4>👥 Персонал та витрати</h4>
-      <label>
-        Зарплати майстрів ($):
-        <input type="number" id="staff-salaries" min="3000" step="1000" value="9000" required>
-      </label>
-      <label>
-        Матеріали та косметика ($):
-        <input type="number" id="supplies" min="500" step="200" value="1500" required>
-      </label>
-      <label>
-        Комунальні послуги ($):
-        <input type="number" id="utilities" min="200" step="100" value="400" required>
-      </label>
-      <label>
-        Інші витрати (реклама, банк, страхування) ($):
-        <input type="number" id="other-expenses" min="300" step="200" value="800" required>
-      </label>
-    </div>
+    <label>
+      Площа салону (м²):
+      <input type="number" id="area" min="40" max="200" value="80" required>
+    </label>
+    <label>
+      Кількість робочих місць:
+      <input type="number" id="workstations" min="3" max="15" value="6" required>
+    </label>
+    <label>
+      Обладнання та інструменти ($):
+      <input type="number" id="equipment-cost" min="15000" step="5000" value="35000" required>
+    </label>
+    <label>
+      Ремонт та дизайн ($):
+      <input type="number" id="renovation-cost" min="10000" step="5000" value="25000" required>
+    </label>
+    <label>
+      Меблі та декор ($):
+      <input type="number" id="furniture-cost" min="5000" step="2000" value="15000" required>
+    </label>
+    <label>
+      Додаткові витрати - ліцензії, початковий капітал ($):
+      <input type="number" id="additional-costs" min="5000" step="2000" value="10000" required>
+    </label>
+    <label>
+      Щомісячна оренда ($):
+      <input type="number" id="monthly-rent" min="1500" step="500" value="4500" required>
+    </label>
+    <label>
+      Середній чек ($):
+      <input type="number" id="avg-check" min="15" max="80" step="2" value="35" required>
+    </label>
+    <label>
+      Клієнтів на день:
+      <input type="number" id="clients-per-day" min="10" max="60" value="25" required>
+    </label>
+    <label>
+      Робочих днів на місяць:
+      <input type="number" id="working-days" min="22" max="30" value="26" required>
+    </label>
+    <label>
+      Зарплати майстрів ($):
+      <input type="number" id="staff-salaries" min="3000" step="1000" value="9000" required>
+    </label>
+    <label>
+      Матеріали та косметика ($):
+      <input type="number" id="supplies" min="500" step="200" value="1500" required>
+    </label>
+    <label>
+      Комунальні послуги ($):
+      <input type="number" id="utilities" min="200" step="100" value="400" required>
+    </label>
+    <label>
+      Інші витрати (реклама, банк, страхування) ($):
+      <input type="number" id="other-expenses" min="300" step="200" value="800" required>
+    </label>
 
     <button type="submit">💅 Розрахувати бізнес-план салону краси</button>
   </form>
