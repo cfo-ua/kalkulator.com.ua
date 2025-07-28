@@ -130,19 +130,19 @@ faq:
       </label>
       <label>
         Початковий товарний запас ($):
-        <input type="number" id="inventory-cost" min="1000" step="1000" value="45000" required>
+        <input type="number" id="inventory-cost" min="1000" value="45000" required>
       </label>
       <label>
         Обладнання та меблі ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="15000" required>
+        <input type="number" id="equipment-cost" min="1000" value="15000" required>
       </label>
       <label>
         Ремонт та дизайн ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="20000" required>
+        <input type="number" id="renovation-cost" min="1000" value="20000" required>
       </label>
       <label>
         Додаткові витрати - ліцензії, робочий капітал ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="10000" required>
+        <input type="number" id="additional-costs" min="1000" value="10000" required>
       </label>
     </div>
 
@@ -154,11 +154,11 @@ faq:
       </label>
       <label>
         Щомісячні продажі товару (собівартість) ($):
-        <input type="number" id="monthly-sales-cost" min="100" step="100" value="12000" required>
+        <input type="number" id="monthly-sales-cost" min="100" value="12000" required>
       </label>
       <label>
         Оборотність товару (разів на рік):
-        <input type="number" id="inventory-turnover" min="0.1" max="50" step="0.1" value="5" required>
+        <input type="number" id="inventory-turnover" min="0.1" max="50" value="5" required>
       </label>
     </div>
 
@@ -166,23 +166,23 @@ faq:
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Щомісячна оренда ($):
-        <input type="number" id="monthly-rent" min="100" step="100" value="5000" required>
+        <input type="number" id="monthly-rent" min="100" value="5000" required>
       </label>
       <label>
         Зарплати персоналу ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="4500" required>
+        <input type="number" id="staff-salaries" min="500" value="4500" required>
       </label>
       <label>
         Комунальні послуги ($):
-        <input type="number" id="utilities" min="50" step="50" value="400" required>
+        <input type="number" id="utilities" min="50" value="400" required>
       </label>
       <label>
         Реклама та маркетинг ($):
-        <input type="number" id="marketing" min="100" step="100" value="800" required>
+        <input type="number" id="marketing" min="100" value="800" required>
       </label>
       <label>
         Інші витрати (банк, страхування, податки) ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="700" required>
+        <input type="number" id="other-expenses" min="100" value="700" required>
       </label>
     </div>
 

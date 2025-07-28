@@ -90,7 +90,7 @@ seo:
 
     <p>Use our calculator to create a realistic <strong>clothing store business plan</strong> and make informed investment decisions in fashion retail.</p>
 scripts:
-  - /assets/js/business-plan-clothing-store.js
+  - /en/js/business-plan-clothing-store.js
 faq:
   - question: "How much does it cost to open a clothing store?"
     answer: "Startup costs range from $50,000 to $150,000, including initial inventory ($25,000-$80,000), equipment ($8,000-$25,000), renovation ($10,000-$35,000), and working capital ($7,000-$15,000)."
@@ -131,19 +131,19 @@ faq:
       </label>
       <label>
         Initial Inventory ($):
-        <input type="number" id="inventory-cost" min="1000" step="1000" value="45000" required>
+        <input type="number" id="inventory-cost" min="1000" value="45000" required>
       </label>
       <label>
         Equipment & Fixtures ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="15000" required>
+        <input type="number" id="equipment-cost" min="1000" value="15000" required>
       </label>
       <label>
         Renovation & Design ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="20000" required>
+        <input type="number" id="renovation-cost" min="1000" value="20000" required>
       </label>
       <label>
         Additional Costs - licenses, working capital ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="10000" required>
+        <input type="number" id="additional-costs" min="1000" value="10000" required>
       </label>
     </div>
 
@@ -155,11 +155,11 @@ faq:
       </label>
       <label>
         Monthly Cost of Goods Sold ($):
-        <input type="number" id="monthly-sales-cost" min="100" step="100" value="12000" required>
+        <input type="number" id="monthly-sales-cost" min="100" value="12000" required>
       </label>
       <label>
         Inventory Turnover (times per year):
-        <input type="number" id="inventory-turnover" min="0.1" max="50" step="0.1" value="5" required>
+        <input type="number" id="inventory-turnover" min="0.1" max="50" value="5" required>
       </label>
     </div>
 
@@ -167,23 +167,23 @@ faq:
       <h4>💸 Monthly Expenses</h4>
       <label>
         Monthly Rent ($):
-        <input type="number" id="monthly-rent" min="100" step="100" value="5000" required>
+        <input type="number" id="monthly-rent" min="100" value="5000" required>
       </label>
       <label>
         Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="4500" required>
+        <input type="number" id="staff-salaries" min="500" value="4500" required>
       </label>
       <label>
         Utilities ($):
-        <input type="number" id="utilities" min="50" step="50" value="400" required>
+        <input type="number" id="utilities" min="50" value="400" required>
       </label>
       <label>
         Marketing & Advertising ($):
-        <input type="number" id="marketing" min="100" step="100" value="800" required>
+        <input type="number" id="marketing" min="100" value="800" required>
       </label>
       <label>
         Other Expenses (banking, insurance, taxes) ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="700" required>
+        <input type="number" id="other-expenses" min="100" value="700" required>
       </label>
     </div>
 

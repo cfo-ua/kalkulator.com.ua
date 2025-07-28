@@ -118,19 +118,19 @@ faq:
       </label>
       <label>
         Equipment Cost ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="45000" required>
+        <input type="number" id="equipment-cost" min="1000" value="45000" required>
       </label>
       <label>
         Renovation Cost ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="32000" required>
+        <input type="number" id="renovation-cost" min="1000" value="32000" required>
       </label>
       <label>
         Furniture & Interior ($):
-        <input type="number" id="furniture-cost" min="1000" step="1000" value="14000" required>
+        <input type="number" id="furniture-cost" min="1000" value="14000" required>
       </label>
       <label>
         Additional Costs - licenses, working capital ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="12000" required>
+        <input type="number" id="additional-costs" min="1000" value="12000" required>
       </label>
     </div>
 
@@ -138,7 +138,7 @@ faq:
       <h4>📊 Operating Parameters</h4>
       <label>
         Average Transaction ($):
-        <input type="number" id="avg-check" min="1" step="0.5" value="9" required>
+        <input type="number" id="avg-check" min="1" value="9" required>
       </label>
       <label>
         Customers per Day:
@@ -158,19 +158,19 @@ faq:
       <h4>💸 Monthly Expenses</h4>
       <label>
         Monthly Rent ($):
-        <input type="number" id="monthly-rent" min="100" step="100" value="5000" required>
+        <input type="number" id="monthly-rent" min="100" value="5000" required>
       </label>
       <label>
         Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="7500" required>
+        <input type="number" id="staff-salaries" min="500" value="7500" required>
       </label>
       <label>
         Utilities ($):
-        <input type="number" id="utilities" min="50" step="50" value="600" required>
+        <input type="number" id="utilities" min="50" value="600" required>
       </label>
       <label>
         Other Expenses (marketing, banking, insurance) ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="1200" required>
+        <input type="number" id="other-expenses" min="100" value="1200" required>
       </label>
     </div>
 

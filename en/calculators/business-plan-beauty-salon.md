@@ -81,7 +81,7 @@ seo:
 
     <p>Use our calculator to create a realistic <strong>beauty salon business plan</strong> and make informed investment decisions in the beauty industry.</p>
 scripts:
-  - /assets/js/business-plan-beauty-salon.js
+  - /en/js/business-plan-beauty-salon.js
 faq:
   - question: "How much does it cost to open a beauty salon?"
     answer: "Startup costs range from $50,000 to $130,000, including equipment ($20,000-$60,000), renovation ($15,000-$45,000), furniture ($8,000-$25,000), and working capital ($7,000-$15,000)."
@@ -117,19 +117,19 @@ faq:
       </label>
       <label>
         Equipment & Tools ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="35000" required>
+        <input type="number" id="equipment-cost" min="1000" value="35000" required>
       </label>
       <label>
         Renovation & Design ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="25000" required>
+        <input type="number" id="renovation-cost" min="1000" value="25000" required>
       </label>
       <label>
         Furniture & Décor ($):
-        <input type="number" id="furniture-cost" min="1000" step="1000" value="15000" required>
+        <input type="number" id="furniture-cost" min="1000" value="15000" required>
       </label>
       <label>
         Additional Costs - licenses, working capital ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="10000" required>
+        <input type="number" id="additional-costs" min="1000" value="10000" required>
       </label>
     </div>
 
@@ -137,7 +137,7 @@ faq:
       <h4>📊 Operating Parameters</h4>
       <label>
         Average Service Price ($):
-        <input type="number" id="avg-check" min="1" step="0.5" value="35" required>
+        <input type="number" id="avg-check" min="1" value="35" required>
       </label>
       <label>
         Clients per Day:
@@ -153,23 +153,23 @@ faq:
       <h4>💸 Monthly Expenses</h4>
       <label>
         Monthly Rent ($):
-        <input type="number" id="monthly-rent" min="100" step="100" value="4500" required>
+        <input type="number" id="monthly-rent" min="100" value="4500" required>
       </label>
       <label>
         Staff Salaries ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="9000" required>
+        <input type="number" id="staff-salaries" min="500" value="9000" required>
       </label>
       <label>
         Supplies & Products ($):
-        <input type="number" id="supplies" min="100" step="100" value="1500" required>
+        <input type="number" id="supplies" min="100" value="1500" required>
       </label>
       <label>
         Utilities ($):
-        <input type="number" id="utilities" min="50" step="50" value="400" required>
+        <input type="number" id="utilities" min="50" value="400" required>
       </label>
       <label>
         Other Expenses (marketing, banking, insurance) ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="800" required>
+        <input type="number" id="other-expenses" min="100" value="800" required>
       </label>
     </div>
 

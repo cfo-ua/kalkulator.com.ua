@@ -117,19 +117,19 @@ faq:
       </label>
       <label>
         Вартість траку ($):
-        <input type="number" id="truck-cost" min="1000" step="1000" value="75000" required>
+        <input type="number" id="truck-cost" min="1000" value="75000" required>
       </label>
       <label>
         Кухонне обладнання ($):
-        <input type="number" id="equipment-cost" min="1000" step="1000" value="25000" required>
+        <input type="number" id="equipment-cost" min="1000" value="25000" required>
       </label>
       <label>
         Переобладнання та дизайн ($):
-        <input type="number" id="renovation-cost" min="1000" step="1000" value="20000" required>
+        <input type="number" id="renovation-cost" min="1000" value="20000" required>
       </label>
       <label>
         Дозволи, ліцензії, початковий капітал ($):
-        <input type="number" id="additional-costs" min="1000" step="1000" value="12000" required>
+        <input type="number" id="additional-costs" min="1000" value="12000" required>
       </label>
     </div>
 
@@ -145,7 +145,7 @@ faq:
       </label>
       <label>
         Середній чек ($):
-        <input type="number" id="avg-check" min="1" step="0.25" value="8" required>
+        <input type="number" id="avg-check" min="1" value="8" required>
       </label>
       <label>
         Клієнтів на годину:
@@ -161,15 +161,15 @@ faq:
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Зарплати персоналу ($):
-        <input type="number" id="staff-salaries" min="500" step="100" value="4500" required>
+        <input type="number" id="staff-salaries" min="500" value="4500" required>
       </label>
       <label>
         Паливо та обслуговування ($):
-        <input type="number" id="fuel-maintenance" min="100" step="100" value="1200" required>
+        <input type="number" id="fuel-maintenance" min="100" value="1200" required>
       </label>
       <label>
         Страхування, дозволи, інші витрати ($):
-        <input type="number" id="other-expenses" min="100" step="100" value="800" required>
+        <input type="number" id="other-expenses" min="100" value="800" required>
       </label>
     </div>
 
