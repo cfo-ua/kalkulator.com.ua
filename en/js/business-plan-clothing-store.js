@@ -144,7 +144,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       result.innerHTML = `
-        <div class="insight-cards">
+        <div class="business-plan-results">
+          <h3>👗 Clothing Store Business Plan Analysis</h3>
+          
+          <div class="insight-cards">
           ${createInsightCard(
             '💰 Total Investment',
             formatNumber(totalInvestment),
@@ -230,13 +233,14 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         ` : ''}
 
-        <div class="action-buttons">
-          <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
-          <button onclick="downloadCSV()" class="btn-primary">📊 Download CSV Data</button>
+        <div class="print-section">
+          <button onclick="window.print()" class="print-btn">🖨️ Print Business Plan</button>
+          <button onclick="downloadCSV()" class="download-btn">📥 Download Data (CSV)</button>
         </div>
 
         <div class="disclaimer">
           <p><small>⚠️ Calculations are approximate and based on input data. Actual results may vary depending on market conditions, location, and management efficiency.</small></p>
+        </div>
         </div>
       `;
 
