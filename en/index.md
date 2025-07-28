@@ -3,7 +3,7 @@ layout: default
 title: "Online Calculators — Finance, Сonversion, Construction, School"
 seo:
   title: "Online Calculators — Finance, Сonversion, Construction, School"
-  description: "100+ free online calculators for instant results. Mortgage payments, daily calories, business analytics, school math, health metrics, unit conversions & more. No registration required."
+  description: "100+ free online calculators for instant results. Mortgage payments, daily calories, business analytics, school math, health metrics, unit conversions & more. No registration required. Complete privacy — no data collected."
   keywords:
     - online calculators
     - free calculators
@@ -203,6 +203,11 @@ seo:
   <p style="margin-bottom: 1.5rem;">
     No registration required, completely free to use, and optimized for both desktop and mobile devices.
   </p>
+
+  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent); margin: 2rem 0;">
+    <h4 style="margin: 0 0 0.5rem 0; color: var(--accent);">🔒 Your Privacy is Our Priority</h4>
+    <p style="margin: 0; color: #555;">We DO NOT COLLECT any personal information. All calculations are performed locally in your browser. No data is transmitted to our servers, ensuring complete confidentiality of your calculations.</p>
+  </div>
 
   <div style="background: linear-gradient(135deg, #f8faff 0%, #eaf3ff 100%); padding: 2rem; border-radius: 18px; border: 1px solid rgba(21, 122, 255, 0.1); text-align: center; margin: 2rem 0;">
     <h3 style="margin: 0 0 1rem 0; color: var(--accent);">🚀 Start Calculating Now</h3>
