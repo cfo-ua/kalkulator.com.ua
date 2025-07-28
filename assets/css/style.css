@@ -2801,6 +2801,46 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   }
 }
 
+/* Business Plan Section Mobile Responsiveness */
+@media (max-width: 768px) {
+  .business-plan-section {
+    padding: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  /* Override inline grid styles for mobile */
+  .business-plan-section div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .business-plan-section div[style*="background: white"] {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-plan-section {
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    border-radius: 12px !important;
+  }
+  
+  .business-plan-section h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .business-plan-section p {
+    font-size: 1rem !important;
+  }
+  
+  .business-plan-section div[style*="background: white"] {
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+  }
+}
+
 /* ============================= */
 /* Real Estate Cash Flow Chart    */
 /* ============================= */
