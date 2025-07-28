@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('restaurant-form');
-  const result = document.getElementById('restaurant-result');
+  const form = document.getElementById('clothing-store-form');
+  const result = document.getElementById('clothing-store-result');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (value >= 1_000) {
       return `$${(value / 1_000).toFixed(0)}K`;
     } else {
-      return value.toLocaleString('uk-UA', { 
+      return value.toLocaleString('en-US', { 
         style: 'currency', 
         currency: 'USD',
         minimumFractionDigits: 0, 
@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCSVData(data) {
     const csvData = [
-      ['Показник', 'Значення'],
-      ['Загальні стартові інвестиції', `$${data.totalInvestment.toLocaleString()}`],
-      ['Щомісячний дохід', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Щомісячні витрати', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Щомісячний чистий прибуток', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Річний дохід', `$${data.annualRevenue.toLocaleString()}`],
-      ['Річний чистий прибуток', `$${data.annualProfit.toLocaleString()}`],
-      ['Термін окупності (років)', data.paybackPeriod.toFixed(1)],
+      ['Metric', 'Value'],
+      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
+      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
+      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
+      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
+      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
+      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
+      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
       ['ROI (%)', data.roi.toFixed(1)],
-      ['Маржа прибутку (%)', data.profitMargin.toFixed(1)]
+      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
     ];
     
     return csvData.map(row => row.join(',')).join('\n');
@@ -54,9 +54,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'restaurant_business_plan.csv';
+    a.download = 'clothing_store_business_plan.csv';
     a.click();
     window.URL.revokeObjectURL(url);
+  }
+
+  // Update markup based on store type selection
+  const storeTypeSelect = document.getElementById('store-type');
+  const markupInput = document.getElementById('markup-percent');
+
+  if (storeTypeSelect && markupInput) {
+    storeTypeSelect.addEventListener('change', function() {
+      const type = this.value;
+      switch(type) {
+        case 'mass':
+          markupInput.value = 120;
+          break;
+        case 'mid':
+          markupInput.value = 180;
+          break;
+        case 'premium':
+          markupInput.value = 250;
+          break;
+        case 'boutique':
+          markupInput.value = 300;
+          break;
+      }
+    });
   }
 
   if (form) {
@@ -64,29 +88,28 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const area = parseFloat(document.getElementById('area').value);
-      const seats = parseFloat(document.getElementById('seats').value);
+      const storeType = document.getElementById('store-type').value;
+      const inventoryCost = parseFloat(document.getElementById('inventory-cost').value);
       const equipmentCost = parseFloat(document.getElementById('equipment-cost').value);
       const renovationCost = parseFloat(document.getElementById('renovation-cost').value);
-      const furnitureCost = parseFloat(document.getElementById('furniture-cost').value);
       const additionalCosts = parseFloat(document.getElementById('additional-costs').value);
       const monthlyRent = parseFloat(document.getElementById('monthly-rent').value);
-      const avgCheck = parseFloat(document.getElementById('avg-check').value);
-      const clientsPerDay = parseFloat(document.getElementById('clients-per-day').value);
-      const workingDays = parseFloat(document.getElementById('working-days').value);
+      const markupPercent = parseFloat(document.getElementById('markup-percent').value);
+      const monthlySalesCost = parseFloat(document.getElementById('monthly-sales-cost').value);
+      const inventoryTurnover = parseFloat(document.getElementById('inventory-turnover').value);
       const staffSalaries = parseFloat(document.getElementById('staff-salaries').value);
-      const cogsPercent = parseFloat(document.getElementById('cogs-percent').value);
       const utilities = parseFloat(document.getElementById('utilities').value);
+      const marketing = parseFloat(document.getElementById('marketing').value);
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
 
       // Calculate total startup investment
-      const totalInvestment = equipmentCost + renovationCost + furnitureCost + additionalCosts;
+      const totalInvestment = inventoryCost + equipmentCost + renovationCost + additionalCosts;
 
-      // Calculate monthly revenue
-      const monthlyRevenue = avgCheck * clientsPerDay * workingDays;
+      // Calculate monthly revenue (Cost + Markup)
+      const monthlyRevenue = monthlySalesCost * (1 + markupPercent / 100);
 
       // Calculate monthly expenses
-      const monthlyCoGS = monthlyRevenue * (cogsPercent / 100);
-      const monthlyExpenses = monthlyRent + staffSalaries + monthlyCoGS + utilities + otherExpenses;
+      const monthlyExpenses = monthlyRent + staffSalaries + monthlySalesCost + utilities + marketing + otherExpenses;
 
       // Calculate profit metrics
       const monthlyProfit = monthlyRevenue - monthlyExpenses;
@@ -99,47 +122,61 @@ document.addEventListener("DOMContentLoaded", function () {
       const profitMargin = monthlyRevenue > 0 ? (monthlyProfit / monthlyRevenue) * 100 : 0;
 
       // Calculate efficiency metrics
-      const revenuePerSeat = monthlyRevenue / seats;
       const revenuePerSqUnit = monthlyRevenue / area;
-      const seatTurnover = clientsPerDay / seats;
+      const grossMargin = ((monthlyRevenue - monthlySalesCost) / monthlyRevenue) * 100;
+      const averageInventoryValue = inventoryCost;
+      const inventoryTurnoverMonthly = inventoryTurnover / 12;
 
-      // Restaurant-specific analysis
-      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
+      // Retail specific analysis
       const rentPercent = (monthlyRent / monthlyRevenue) * 100;
+      const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
+      const cogsPercent = (monthlySalesCost / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
       let viabilityMessage = 'Потребує оптимізації';
-      if (roi >= 15 && profitMargin >= 12) {
+      if (roi >= 20 && profitMargin >= 15) {
         viabilityType = 'success';
-        viabilityMessage = 'Високоприбутковий ресторан';
-      } else if (roi >= 8 && profitMargin >= 6) {
+        viabilityMessage = 'Високоприбутковий магазин';
+      } else if (roi >= 12 && profitMargin >= 8) {
         viabilityType = 'info';
         viabilityMessage = 'Стабільний бізнес';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 8) {
-        recommendations.push('📈 Підвищіть середній чек через меню преміум-позиції');
-        recommendations.push('💰 Оптимізуйте витрати на продукти (цільовий показник 28-32%)');
+      if (profitMargin < 10) {
+        recommendations.push('📈 Підвищіть наукову на товари або знизьте витрати');
+        recommendations.push('🛒 Зосередьтеся на товарах з вищою маржею');
       }
-      if (laborCostPercent > 35) {
-        recommendations.push('👥 Оптимізуйте штат персоналу (цільовий показник 25-32% від виручки)');
-        recommendations.push('🤖 Впровадьте автоматизацію для зменшення потреби в персоналі');
-      }
-      if (rentPercent > 10) {
+      if (rentPercent > 15) {
         recommendations.push('🏢 Розгляньте переїзд у приміщення з меншою орендою');
-        recommendations.push('📦 Додайте доставку для збільшення оборотності без додаткових місць');
+        recommendations.push('📦 Додайте онлайн-продажі для збільшення оборотності');
       }
-      if (seatTurnover < 2) {
-        recommendations.push('⏰ Збільшіть оборотність столів через швидший сервіс');
-        recommendations.push('🎯 Проведіть маркетингові кампанії для залучення клієнтів');
+      if (inventoryTurnover < 4) {
+        recommendations.push('📊 Покращіте управління запасами');
+        recommendations.push('💰 Проводьте розпродажі застарілих товарів');
       }
-      if (avgCheck < 20) {
-        recommendations.push('🍷 Додайте алкогольні напої та десерти з високою маржею');
-        recommendations.push('🎉 Створіть спеціальні пропозиції та сети-меню');
+      if (laborCostPercent > 20) {
+        recommendations.push('👥 Оптимізуйте графік роботи персоналу');
+        recommendations.push('🤖 Впровадьте самообслуговування де можливо');
       }
+      if (revenuePerSqUnit < 60) {
+        recommendations.push('🎯 Покращіть мерчандайзинг та викладку товарів');
+        recommendations.push('📱 Активізуйте маркетинг для залучення клієнтів');
+      }
+      if (grossMargin < 50) {
+        recommendations.push('💎 Додайте товари преміум-сегменту');
+        recommendations.push('🏷️ Переглянте ціноутворення та постачальників');
+      }
+
+      // Store type specific insights
+      const storeTypeNames = {
+        'mass': 'Масовий сегмент',
+        'mid': 'Середній сегмент', 
+        'premium': 'Преміум сегмент',
+        'boutique': 'Бутік'
+      };
 
       const data = {
         totalInvestment,
@@ -164,13 +201,13 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '📈 Щомісячний дохід',
             formatNumber(monthlyRevenue),
-            `${clientsPerDay} клієнтів × ${avgCheck}$ × ${workingDays} днів`,
+            `${storeTypeNames[storeType]}, наукова ${markupPercent}%`,
             'success'
           )}
           ${createInsightCard(
             '💸 Щомісячні витрати',
             formatNumber(monthlyExpenses),
-            `Включно з ${formatPercent(cogsPercent)} собівартості`,
+            `Включно з собівартістю ${formatNumber(monthlySalesCost)}`,
             'warning'
           )}
           ${createInsightCard(
@@ -182,8 +219,8 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '⏳ Окупність',
             `${paybackPeriod.toFixed(1)} років`,
-            paybackPeriod < 4 ? 'Швидка окупність' : paybackPeriod < 6 ? 'Помірна окупність' : 'Повільна окупність',
-            paybackPeriod < 4 ? 'success' : paybackPeriod < 6 ? 'info' : 'warning'
+            paybackPeriod < 3 ? 'Швидка окупність' : paybackPeriod < 5 ? 'Помірна окупність' : 'Повільна окупність',
+            paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
           )}
           ${createInsightCard(
             '📊 ROI',
@@ -194,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Детальний аналіз ресторану</h4>
+          <h4>📋 Детальний аналіз магазину одягу</h4>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-label">Річний дохід:</span>
@@ -205,28 +242,28 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід на місце:</span>
-              <span class="metric-value">${formatNumber(revenuePerSeat)}/місяць</span>
-            </div>
-            <div class="metric-item">
               <span class="metric-label">Дохід на м²:</span>
               <span class="metric-value">${formatNumber(revenuePerSqUnit)}/місяць</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Оборотність столів:</span>
-              <span class="metric-value">${seatTurnover.toFixed(1)} за день</span>
+              <span class="metric-label">Валова маржа:</span>
+              <span class="metric-value">${formatPercent(grossMargin)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на персонал:</span>
-              <span class="metric-value">${formatPercent(laborCostPercent)} від доходу</span>
+              <span class="metric-label">Оборотність запасів:</span>
+              <span class="metric-value">${inventoryTurnover.toFixed(1)} разів/рік</span>
             </div>
             <div class="metric-item">
               <span class="metric-label">Витрати на оренду:</span>
               <span class="metric-value">${formatPercent(rentPercent)} від доходу</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Собівартість продуктів:</span>
-              <span class="metric-value">${formatNumber(monthlyCoGS)}/місяць</span>
+              <span class="metric-label">Витрати на персонал:</span>
+              <span class="metric-value">${formatPercent(laborCostPercent)} від доходу</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Собівартість товарів:</span>
+              <span class="metric-value">${formatPercent(cogsPercent)} від доходу</span>
             </div>
           </div>
         </div>
@@ -246,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="disclaimer">
-          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації та ефективності управління ресторану.</small></p>
+          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від сезонності, трендів моди, ефективності закупівель та управління запасами.</small></p>
         </div>
       `;
 

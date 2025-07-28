@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('food-truck-form');
-  const result = document.getElementById('food-truck-result');
+  const form = document.getElementById('restaurant-form');
+  const result = document.getElementById('restaurant-result');
 
   function formatNumber(value) {
     if (value >= 1_000_000) {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (value >= 1_000) {
       return `$${(value / 1_000).toFixed(0)}K`;
     } else {
-      return value.toLocaleString('uk-UA', { 
+      return value.toLocaleString('en-US', { 
         style: 'currency', 
         currency: 'USD',
         minimumFractionDigits: 0, 
@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCSVData(data) {
     const csvData = [
-      ['Показник', 'Значення'],
-      ['Загальні стартові інвестиції', `$${data.totalInvestment.toLocaleString()}`],
-      ['Щомісячний дохід', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Щомісячні витрати', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Щомісячний чистий прибуток', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Річний дохід', `$${data.annualRevenue.toLocaleString()}`],
-      ['Річний чистий прибуток', `$${data.annualProfit.toLocaleString()}`],
-      ['Термін окупності (років)', data.paybackPeriod.toFixed(1)],
+      ['Metric', 'Value'],
+      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
+      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
+      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
+      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
+      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
+      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
+      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
       ['ROI (%)', data.roi.toFixed(1)],
-      ['Маржа прибутку (%)', data.profitMargin.toFixed(1)]
+      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
     ];
     
     return csvData.map(row => row.join(',')).join('\n');
@@ -54,59 +54,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'food_truck_business_plan.csv';
+    a.download = 'restaurant_business_plan.csv';
     a.click();
     window.URL.revokeObjectURL(url);
-  }
-
-  // Update truck cost based on type selection
-  const truckTypeSelect = document.getElementById('truck-type');
-  const truckCostInput = document.getElementById('truck-cost');
-
-  if (truckTypeSelect && truckCostInput) {
-    truckTypeSelect.addEventListener('change', function() {
-      const type = this.value;
-      switch(type) {
-        case 'used':
-          truckCostInput.value = 45000;
-          break;
-        case 'new':
-          truckCostInput.value = 75000;
-          break;
-        case 'custom':
-          truckCostInput.value = 115000;
-          break;
-      }
-    });
   }
 
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const truckCost = parseFloat(document.getElementById('truck-cost').value);
+      const area = parseFloat(document.getElementById('area').value);
+      const seats = parseFloat(document.getElementById('seats').value);
       const equipmentCost = parseFloat(document.getElementById('equipment-cost').value);
       const renovationCost = parseFloat(document.getElementById('renovation-cost').value);
+      const furnitureCost = parseFloat(document.getElementById('furniture-cost').value);
       const additionalCosts = parseFloat(document.getElementById('additional-costs').value);
-      const workingDaysWeek = parseFloat(document.getElementById('working-days-week').value);
-      const workingHours = parseFloat(document.getElementById('working-hours').value);
+      const monthlyRent = parseFloat(document.getElementById('monthly-rent').value);
       const avgCheck = parseFloat(document.getElementById('avg-check').value);
-      const clientsPerHour = parseFloat(document.getElementById('clients-per-hour').value);
+      const clientsPerDay = parseFloat(document.getElementById('clients-per-day').value);
+      const workingDays = parseFloat(document.getElementById('working-days').value);
       const staffSalaries = parseFloat(document.getElementById('staff-salaries').value);
       const cogsPercent = parseFloat(document.getElementById('cogs-percent').value);
-      const fuelMaintenance = parseFloat(document.getElementById('fuel-maintenance').value);
+      const utilities = parseFloat(document.getElementById('utilities').value);
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
 
       // Calculate total startup investment
-      const totalInvestment = truckCost + equipmentCost + renovationCost + additionalCosts;
+      const totalInvestment = equipmentCost + renovationCost + furnitureCost + additionalCosts;
 
-      // Calculate monthly revenue (4.33 weeks per month on average)
-      const weeksPerMonth = 4.33;
-      const monthlyRevenue = avgCheck * clientsPerHour * workingHours * workingDaysWeek * weeksPerMonth;
+      // Calculate monthly revenue
+      const monthlyRevenue = avgCheck * clientsPerDay * workingDays;
 
       // Calculate monthly expenses
       const monthlyCoGS = monthlyRevenue * (cogsPercent / 100);
-      const monthlyExpenses = staffSalaries + monthlyCoGS + fuelMaintenance + otherExpenses;
+      const monthlyExpenses = monthlyRent + staffSalaries + monthlyCoGS + utilities + otherExpenses;
 
       // Calculate profit metrics
       const monthlyProfit = monthlyRevenue - monthlyExpenses;
@@ -119,47 +99,46 @@ document.addEventListener("DOMContentLoaded", function () {
       const profitMargin = monthlyRevenue > 0 ? (monthlyProfit / monthlyRevenue) * 100 : 0;
 
       // Calculate efficiency metrics
-      const dailyRevenue = monthlyRevenue / (workingDaysWeek * weeksPerMonth);
-      const hourlyRevenue = dailyRevenue / workingHours;
-      const revenuePerCustomer = avgCheck;
-      const customersPerDay = clientsPerHour * workingHours;
+      const revenuePerSeat = monthlyRevenue / seats;
+      const revenuePerSqUnit = monthlyRevenue / area;
+      const seatTurnover = clientsPerDay / seats;
 
-      // Food truck specific analysis
+      // Restaurant-specific analysis
       const laborCostPercent = (staffSalaries / monthlyRevenue) * 100;
-      const fuelCostPercent = (fuelMaintenance / monthlyRevenue) * 100;
+      const rentPercent = (monthlyRent / monthlyRevenue) * 100;
 
       // Determine business viability
       let viabilityType = 'warning';
       let viabilityMessage = 'Потребує оптимізації';
-      if (roi >= 20 && profitMargin >= 18) {
+      if (roi >= 15 && profitMargin >= 12) {
         viabilityType = 'success';
-        viabilityMessage = 'Високоприбутковий фуд-трак';
-      } else if (roi >= 12 && profitMargin >= 10) {
+        viabilityMessage = 'Високоприбутковий ресторан';
+      } else if (roi >= 8 && profitMargin >= 6) {
         viabilityType = 'info';
         viabilityMessage = 'Стабільний бізнес';
       }
 
       // Generate recommendations
       let recommendations = [];
-      if (profitMargin < 12) {
-        recommendations.push('📈 Підвищіть середній чек через комбо-пропозиції');
-        recommendations.push('💰 Оптимізуйте витрати на продукти (цільовий показник 25-30%)');
+      if (profitMargin < 8) {
+        recommendations.push('📈 Підвищіть середній чек через меню преміум-позиції');
+        recommendations.push('💰 Оптимізуйте витрати на продукти (цільовий показник 28-32%)');
       }
-      if (laborCostPercent > 25) {
-        recommendations.push('👥 Оптимізуйте штат персоналу для пікових годин');
-        recommendations.push('🤖 Впровадьте систему попереднього замовлення');
+      if (laborCostPercent > 35) {
+        recommendations.push('👥 Оптимізуйте штат персоналу (цільовий показник 25-32% від виручки)');
+        recommendations.push('🤖 Впровадьте автоматизацію для зменшення потреби в персоналі');
       }
-      if (customersPerDay < 50) {
-        recommendations.push('📍 Змініть локації або розклад роботи');
-        recommendations.push('📱 Активізуйте маркетинг в соціальних мережах');
+      if (rentPercent > 10) {
+        recommendations.push('🏢 Розгляньте переїзд у приміщення з меншою орендою');
+        recommendations.push('📦 Додайте доставку для збільшення оборотності без додаткових місць');
       }
-      if (hourlyRevenue < 80) {
-        recommendations.push('⚡ Прискорьте сервіс для обслуговування більше клієнтів');
-        recommendations.push('🎯 Зосередьтеся на найприбутковіших позиціях меню');
+      if (seatTurnover < 2) {
+        recommendations.push('⏰ Збільшіть оборотність столів через швидший сервіс');
+        recommendations.push('🎯 Проведіть маркетингові кампанії для залучення клієнтів');
       }
-      if (fuelCostPercent > 8) {
-        recommendations.push('🚚 Оптимізуйте маршрути та локації для економії палива');
-        recommendations.push('📍 Шукайте постійні локації зі стабільним трафіком');
+      if (avgCheck < 20) {
+        recommendations.push('🍷 Додайте алкогольні напої та десерти з високою маржею');
+        recommendations.push('🎉 Створіть спеціальні пропозиції та сети-меню');
       }
 
       const data = {
@@ -185,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '📈 Щомісячний дохід',
             formatNumber(monthlyRevenue),
-            `${Math.round(customersPerDay)} клієнтів/день × ${avgCheck}$`,
+            `${clientsPerDay} клієнтів × ${avgCheck}$ × ${workingDays} днів`,
             'success'
           )}
           ${createInsightCard(
@@ -203,8 +182,8 @@ document.addEventListener("DOMContentLoaded", function () {
           ${createInsightCard(
             '⏳ Окупність',
             `${paybackPeriod.toFixed(1)} років`,
-            paybackPeriod < 3 ? 'Швидка окупність' : paybackPeriod < 5 ? 'Помірна окупність' : 'Повільна окупність',
-            paybackPeriod < 3 ? 'success' : paybackPeriod < 5 ? 'info' : 'warning'
+            paybackPeriod < 4 ? 'Швидка окупність' : paybackPeriod < 6 ? 'Помірна окупність' : 'Повільна окупність',
+            paybackPeriod < 4 ? 'success' : paybackPeriod < 6 ? 'info' : 'warning'
           )}
           ${createInsightCard(
             '📊 ROI',
@@ -215,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="analysis-section">
-          <h4>📋 Детальний аналіз фуд-траку</h4>
+          <h4>📋 Детальний аналіз ресторану</h4>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-label">Річний дохід:</span>
@@ -226,28 +205,28 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="metric-value">${formatNumber(annualProfit)}</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід за годину:</span>
-              <span class="metric-value">${formatNumber(hourlyRevenue)}</span>
+              <span class="metric-label">Дохід на місце:</span>
+              <span class="metric-value">${formatNumber(revenuePerSeat)}/місяць</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Дохід за день:</span>
-              <span class="metric-value">${formatNumber(dailyRevenue)}</span>
+              <span class="metric-label">Дохід на м²:</span>
+              <span class="metric-value">${formatNumber(revenuePerSqUnit)}/місяць</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Клієнтів за день:</span>
-              <span class="metric-value">${Math.round(customersPerDay)}</span>
+              <span class="metric-label">Оборотність столів:</span>
+              <span class="metric-value">${seatTurnover.toFixed(1)} за день</span>
             </div>
             <div class="metric-item">
               <span class="metric-label">Витрати на персонал:</span>
               <span class="metric-value">${formatPercent(laborCostPercent)} від доходу</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Витрати на паливо:</span>
-              <span class="metric-value">${formatPercent(fuelCostPercent)} від доходу</span>
+              <span class="metric-label">Витрати на оренду:</span>
+              <span class="metric-value">${formatPercent(rentPercent)} від доходу</span>
             </div>
             <div class="metric-item">
-              <span class="metric-label">Робочих годин/тиждень:</span>
-              <span class="metric-value">${workingHours * workingDaysWeek} годин</span>
+              <span class="metric-label">Собівартість продуктів:</span>
+              <span class="metric-value">${formatNumber(monthlyCoGS)}/місяць</span>
             </div>
           </div>
         </div>
@@ -267,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="disclaimer">
-          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від сезонності, локацій, погодних умов та ефективності управління фуд-траком.</small></p>
+          <p><small>⚠️ Розрахунки є приблизними і базуються на введених даних. Реальні показники можуть відрізнятися залежно від ринкових умов, локації та ефективності управління ресторану.</small></p>
         </div>
       `;
 

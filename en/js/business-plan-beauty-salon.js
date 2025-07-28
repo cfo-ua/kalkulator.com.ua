@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (value >= 1_000) {
       return `$${(value / 1_000).toFixed(0)}K`;
     } else {
-      return value.toLocaleString('uk-UA', { 
+      return value.toLocaleString('en-US', { 
         style: 'currency', 
         currency: 'USD',
         minimumFractionDigits: 0, 
@@ -36,16 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function generateCSVData(data) {
     const csvData = [
-      ['Показник', 'Значення'],
-      ['Загальні стартові інвестиції', `$${data.totalInvestment.toLocaleString()}`],
-      ['Щомісячний дохід', `$${data.monthlyRevenue.toLocaleString()}`],
-      ['Щомісячні витрати', `$${data.monthlyExpenses.toLocaleString()}`],
-      ['Щомісячний чистий прибуток', `$${data.monthlyProfit.toLocaleString()}`],
-      ['Річний дохід', `$${data.annualRevenue.toLocaleString()}`],
-      ['Річний чистий прибуток', `$${data.annualProfit.toLocaleString()}`],
-      ['Термін окупності (років)', data.paybackPeriod.toFixed(1)],
+      ['Metric', 'Value'],
+      ['Total Startup Investment', `$${data.totalInvestment.toLocaleString()}`],
+      ['Monthly Revenue', `$${data.monthlyRevenue.toLocaleString()}`],
+      ['Monthly Expenses', `$${data.monthlyExpenses.toLocaleString()}`],
+      ['Monthly Net Profit', `$${data.monthlyProfit.toLocaleString()}`],
+      ['Annual Revenue', `$${data.annualRevenue.toLocaleString()}`],
+      ['Annual Net Profit', `$${data.annualProfit.toLocaleString()}`],
+      ['Payback Period (years)', data.paybackPeriod.toFixed(1)],
       ['ROI (%)', data.roi.toFixed(1)],
-      ['Маржа прибутку (%)', data.profitMargin.toFixed(1)]
+      ['Profit Margin (%)', data.profitMargin.toFixed(1)]
     ];
     
     return csvData.map(row => row.join(',')).join('\n');
