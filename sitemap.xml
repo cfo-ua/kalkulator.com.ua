@@ -10,10 +10,10 @@ permalink: /sitemap.xml
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-{%- assign collections = site.collections | where_exp:'collection','collection.output != false' -%}
-{%- for collection in collections -%}
+{%- assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+{% for collection in collections -%}
   {%- assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' -%}
-  {%- for doc in docs -%}
+  {% for doc in docs -%}
     {%- comment -%} Security: Skip documents with script content or suspicious patterns {%- endcomment -%}
     {%- assign content_lower = doc.content | downcase -%}
     {%- unless content_lower contains '<script' or content_lower contains 'javascript:' or content_lower contains 'vbscript:' -%}
@@ -23,12 +23,12 @@ permalink: /sitemap.xml
     <lastmod>{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }}</lastmod>
     {%- endif -%}
   </url>
-    {%- endunless -%}
-  {%- endfor -%}
-{%- endfor -%}
+    {%- endunless %}
+  {% endfor %}
+{% endfor %}
 
-{%- assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404.html"' -%}
-{%- for page in pages -%}
+{%- assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404.html"' %}
+{% for page in pages -%}
   {%- comment -%} Security: Skip pages with script content or suspicious patterns {%- endcomment -%}
   {%- assign content_lower = page.content | downcase -%}
   {%- comment -%} Skip technical/administrative files {%- endcomment -%}
@@ -40,13 +40,13 @@ permalink: /sitemap.xml
     <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
     {%- endif -%}
   </url>
-  {%- endunless -%}
-{%- endfor -%}
+  {%- endunless %}
+{% endfor %}
 
-{%- assign static_files = site.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' -%}
+{%- assign static_files = site.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' %}
 {%- comment -%} Only include PDF files - exclude technical txt files like ads.txt, robots.txt {%- endcomment -%}
-{%- assign allowed_extensions = 'pdf' | split: ',' -%}
-{%- for file in static_files -%}
+{%- assign allowed_extensions = 'pdf' | split: ',' %}
+{% for file in static_files -%}
   {%- assign file_ext = file.extname | remove: '.' -%}
   {%- assign file_name = file.name | downcase -%}
   {%- comment -%} Exclude specific technical files even if they match extension {%- endcomment -%}
@@ -57,6 +57,6 @@ permalink: /sitemap.xml
     <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
   </url>
     {%- endif -%}
-  {%- endunless -%}
-{%- endfor -%}
+  {%- endunless %}
+{% endfor %}
 </urlset>
