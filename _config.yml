@@ -12,15 +12,24 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - .jekyll-metadata
+
+# Sitemap configuration to prevent script injection
+sitemap:
+  exclude:
+    - "/404.html"
+    - "/ads.txt"
+  file: "/sitemap.xml"
 collections:
   calculators:
     output: true
     permalink: /:collection/:name/
 markdown: kramdown
 
-# Enable Jekyll plugins on GitHub Pages (autogenerates sitemap.xml and robots.txt)
-plugins:
-  - jekyll-sitemap
+# Enable Jekyll plugins on GitHub Pages
+# Note: Using custom sitemap.xml template instead of jekyll-sitemap plugin
+# to prevent potential script injection issues
+plugins: []
+  # - jekyll-sitemap  # Disabled - using custom sitemap.xml
 
 # Set timezone for proper date handling
 timezone: Europe/Kiev
