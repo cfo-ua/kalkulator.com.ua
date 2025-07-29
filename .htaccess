@@ -2,17 +2,25 @@
 <Files "sitemap.xml">
     Header set Content-Type "application/xml; charset=utf-8"
     Header set X-Content-Type-Options "nosniff"
-    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'"
+    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'; child-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'"
     Header set X-Frame-Options "DENY"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "no-referrer"
     Header set Cache-Control "public, max-age=3600, must-revalidate"
+    Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
+    Header unset Server
+    Header unset X-Powered-By
 </Files>
 
 # Prevent any script execution in XML files with maximum security
 <FilesMatch "\.(xml)$">
     Header set X-Content-Type-Options "nosniff"
-    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'"
+    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'; child-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'"
     Header set X-Frame-Options "DENY"
     Header set X-XSS-Protection "1; mode=block"
+    Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
+    # Additional protection against code injection
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header unset Server
+    Header unset X-Powered-By
 </FilesMatch>
