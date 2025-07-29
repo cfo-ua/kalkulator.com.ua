@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Search within all words - case insensitive
     const searchTerm = query.toLowerCase();
     return calculators.filter(calc => 
-      calc.title.toLowerCase().includes(searchTerm)
+      calc.title && calc.title.toLowerCase().includes(searchTerm)
     );
   }
   
