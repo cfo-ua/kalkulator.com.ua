@@ -16,19 +16,27 @@ if [ ! -f "$SITEMAP_FILE" ]; then
     exit 1
 fi
 
-# Check for script tags (case insensitive)
+# Check for script tags (case insensitive) - Multiple patterns
 echo "Checking for script tags..."
-if grep -i "<script" "$SITEMAP_FILE" > /dev/null; then
-    echo "❌ CRITICAL: Script tags found in sitemap:"
-    grep -i "<script" "$SITEMAP_FILE" | head -5
-    EXIT_CODE=1
-else
-    echo "✅ No script tags found"
+SCRIPT_PATTERNS=("<script" "javascript:" "vbscript:" "data:text/html" "onclick=" "onload=" "onerror=")
+SCRIPT_FOUND=0
+
+for pattern in "${SCRIPT_PATTERNS[@]}"; do
+    if grep -i "$pattern" "$SITEMAP_FILE" > /dev/null; then
+        echo "❌ CRITICAL: Script-like content found in sitemap (pattern: $pattern):"
+        grep -i "$pattern" "$SITEMAP_FILE" | head -3
+        SCRIPT_FOUND=1
+        EXIT_CODE=1
+    fi
+done
+
+if [ $SCRIPT_FOUND -eq 0 ]; then
+    echo "✅ No script tags or script-like content found"
 fi
 
 # Check for other suspicious HTML tags
 echo "Checking for HTML tags..."
-SUSPICIOUS_TAGS=("iframe" "object" "embed" "form" "input" "meta" "link" "style")
+SUSPICIOUS_TAGS=("iframe" "object" "embed" "form" "input" "meta" "link" "style" "img" "div" "span" "p" "a" "button")
 for tag in "${SUSPICIOUS_TAGS[@]}"; do
     if grep -i "<$tag" "$SITEMAP_FILE" > /dev/null; then
         echo "⚠️  WARNING: Found <$tag> tag in sitemap"
@@ -36,6 +44,25 @@ for tag in "${SUSPICIOUS_TAGS[@]}"; do
         EXIT_CODE=1
     fi
 done
+
+# Check that file only contains valid sitemap elements
+echo "Checking for invalid XML elements..."
+VALID_TAGS=("urlset" "url" "loc" "lastmod" "changefreq" "priority")
+while IFS= read -r line; do
+    # Skip XML declaration, comments, and empty lines
+    if [[ "$line" =~ ^[[:space:]]*$ ]] || [[ "$line" =~ ^\<\?xml ]] || [[ "$line" =~ ^\<\!-- ]]; then
+        continue
+    fi
+    # Check if line contains a tag that's not in the valid list (only opening tags)
+    if echo "$line" | grep -o '<[^/][^>]*>' > /dev/null; then
+        tag=$(echo "$line" | grep -o '<[^/][^>]*>' | head -1 | sed 's/<\([^ >]*\).*/\1/')
+        if [[ ! " ${VALID_TAGS[@]} " =~ " ${tag} " ]]; then
+            echo "⚠️  WARNING: Found unexpected opening tag: $tag"
+            echo "Line: $line"
+            EXIT_CODE=1
+        fi
+    fi
+done < "$SITEMAP_FILE"
 
 # Check XML structure
 echo "Validating XML structure..."
@@ -77,6 +104,24 @@ echo "  File size: $(du -h "$SITEMAP_FILE" | cut -f1)"
 EMPTY_URLS=$(grep -c "<loc></loc>" "$SITEMAP_FILE" || true)
 if [ "$EMPTY_URLS" -gt 0 ]; then
     echo "⚠️  WARNING: Found $EMPTY_URLS empty URL entries"
+    EXIT_CODE=1
+fi
+
+# Check for technical files that should not be indexed
+echo "Checking for technical files that should be excluded..."
+TECH_FILES=("ads.txt" "robots.txt")
+for tech_file in "${TECH_FILES[@]}"; do
+    if grep -E "<loc>.*$tech_file.*</loc>" "$SITEMAP_FILE" > /dev/null; then
+        echo "⚠️  WARNING: Technical file found in sitemap URLs: $tech_file"
+        grep -E "<loc>.*$tech_file.*</loc>" "$SITEMAP_FILE" | head -3
+        EXIT_CODE=1
+    fi
+done
+
+# Check for SITEMAP_ files in URLs (separate check due to wildcard)
+if grep -E "<loc>.*SITEMAP_.*</loc>" "$SITEMAP_FILE" > /dev/null; then
+    echo "⚠️  WARNING: SITEMAP_ files found in sitemap URLs:"
+    grep -E "<loc>.*SITEMAP_.*</loc>" "$SITEMAP_FILE" | head -3
     EXIT_CODE=1
 fi
 
