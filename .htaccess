@@ -1,11 +1,18 @@
-# Ensure sitemap.xml is served with correct content type
+# Ensure sitemap.xml is served with correct content type and maximum security
 <Files "sitemap.xml">
     Header set Content-Type "application/xml; charset=utf-8"
     Header set X-Content-Type-Options "nosniff"
+    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "no-referrer"
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
 </Files>
 
-# Prevent any script execution in XML files
+# Prevent any script execution in XML files with maximum security
 <FilesMatch "\.(xml)$">
     Header set X-Content-Type-Options "nosniff"
-    Header set Content-Security-Policy "default-src 'none'"
+    Header set Content-Security-Policy "default-src 'none'; script-src 'none'; object-src 'none'; style-src 'none'; img-src 'none'; connect-src 'none'; font-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
 </FilesMatch>

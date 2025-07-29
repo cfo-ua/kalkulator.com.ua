@@ -20,17 +20,21 @@ sitemap:
     - "/404.html"
     - "/ads.txt"
   file: "/sitemap.xml"
+
+# Collections configuration
 collections:
   calculators:
     output: true
     permalink: /:collection/:name/
+
+# Markdown processor
 markdown: kramdown
 
-# Enable Jekyll plugins on GitHub Pages
+# Security: Explicitly disable any plugins that might modify XML output
 # Note: Using custom sitemap.xml template instead of jekyll-sitemap plugin
 # to prevent potential script injection issues
 plugins: []
-  # - jekyll-sitemap  # Disabled - using custom sitemap.xml
+  # - jekyll-sitemap  # Disabled - using custom sitemap.xml to prevent script injection
 
 # Set timezone for proper date handling
 timezone: Europe/Kiev
