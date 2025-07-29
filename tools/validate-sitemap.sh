@@ -107,6 +107,24 @@ if [ "$EMPTY_URLS" -gt 0 ]; then
     EXIT_CODE=1
 fi
 
+# Check for technical files that should not be indexed
+echo "Checking for technical files that should be excluded..."
+TECH_FILES=("ads.txt" "robots.txt")
+for tech_file in "${TECH_FILES[@]}"; do
+    if grep -E "<loc>.*$tech_file.*</loc>" "$SITEMAP_FILE" > /dev/null; then
+        echo "⚠️  WARNING: Technical file found in sitemap URLs: $tech_file"
+        grep -E "<loc>.*$tech_file.*</loc>" "$SITEMAP_FILE" | head -3
+        EXIT_CODE=1
+    fi
+done
+
+# Check for SITEMAP_ files in URLs (separate check due to wildcard)
+if grep -E "<loc>.*SITEMAP_.*</loc>" "$SITEMAP_FILE" > /dev/null; then
+    echo "⚠️  WARNING: SITEMAP_ files found in sitemap URLs:"
+    grep -E "<loc>.*SITEMAP_.*</loc>" "$SITEMAP_FILE" | head -3
+    EXIT_CODE=1
+fi
+
 # Final result
 if [ $EXIT_CODE -eq 0 ]; then
     echo "🎉 Sitemap validation passed - sitemap is secure and valid!"
