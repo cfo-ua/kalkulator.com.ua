@@ -4,6 +4,7 @@ baseurl: "" # Required for GitHub Pages
 url: "https://kalkulator.com.ua"
 exclude: 
   - README.md
+  - SEARCH_SYSTEM.md
   - vendor/
   - .bundle/
   - Gemfile
