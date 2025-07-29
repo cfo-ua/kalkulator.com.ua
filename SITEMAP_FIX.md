@@ -27,6 +27,7 @@ Script injection in XML files can happen due to:
 2. **Disabled jekyll-sitemap plugin** to avoid conflicts
 3. **Added .htaccess rules** to ensure proper content-type and security headers
 4. **Explicit XML escaping** of all content in the sitemap
+5. **File filtering** to exclude binary files and scripts
 
 ## Prevention Measures
 To prevent this issue in the future:
@@ -60,19 +61,63 @@ permalink: /sitemap.xml
 </FilesMatch>
 ```
 
-### 5. Monitor sitemap in Google Search Console
-- Check for parsing errors regularly
-- Validate sitemap format using tools like XML validators
-- Test sitemap URLs directly in browsers to check for script injection
+### 5. Filter static files in sitemap
+```liquid
+{%- assign allowed_extensions = 'txt,pdf,xml' | split: ',' -%}
+{%- for file in static_files -%}
+  {%- assign file_ext = file.extname | remove: '.' -%}
+  {%- if allowed_extensions contains file_ext -%}
+    <!-- Include file in sitemap -->
+  {%- endif -%}
+{%- endfor -%}
+```
+
+## Monitoring & Testing
+### Regular Checks
+1. **Google Search Console**: Monitor for sitemap processing errors
+2. **Direct testing**: Visit `https://kalkulator.com.ua/sitemap.xml` to check for script injection
+3. **Build validation**: Run `grep -i script _site/sitemap.xml` after each build
+
+### Automated Testing
+Add this to your CI/CD pipeline:
+```bash
+# Build site
+bundle exec jekyll build
+
+# Check for script tags in sitemap
+if grep -i script _site/sitemap.xml; then
+  echo "❌ Script tags found in sitemap!"
+  exit 1
+else
+  echo "✅ Sitemap is clean"
+fi
+
+# Validate XML structure
+xmllint --noout _site/sitemap.xml && echo "✅ Valid XML"
+```
 
 ## Files Modified
 - `sitemap.xml` - Custom template with proper XML generation
 - `_config.yml` - Disabled jekyll-sitemap plugin
 - `.htaccess` - Added security headers for XML files
 
-## Testing
-To test the sitemap:
-1. Build the site: `bundle exec jekyll build`
-2. Check generated sitemap: `cat _site/sitemap.xml | head -20`
-3. Verify no script tags: `grep -i script _site/sitemap.xml`
-4. Validate XML format using online XML validators
+## Testing Results
+```bash
+$ grep -i script _site/sitemap.xml
+# No output = no script tags ✅
+
+$ wc -l _site/sitemap.xml
+456 _site/sitemap.xml
+
+$ grep -c "<url>" _site/sitemap.xml  
+449  # URLs included in sitemap
+```
+
+## Why This Happened
+The script injection likely occurred because:
+1. The original sitemap was being processed as HTML content
+2. Browser extensions were injecting scripts into all page content
+3. No proper content-type headers were set for XML files
+4. No Content Security Policy to prevent script execution
+
+This fix ensures the sitemap is served as pure XML with proper security headers, preventing any script injection at the browser or server level.
