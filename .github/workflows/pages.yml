@@ -41,9 +41,12 @@ jobs:
           echo "🔍 Running comprehensive sitemap validation..."
           chmod +x ./tools/validate-sitemap.sh
           chmod +x ./tools/test-sitemap-security.sh
+          chmod +x ./tools/validate-calculator-sitemap.sh
           ./tools/validate-sitemap.sh
           echo "🔒 Running extended security tests..."
           ./tools/test-sitemap-security.sh
+          echo "🧮 Validating all calculator pages are included..."
+          ./tools/validate-calculator-sitemap.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
