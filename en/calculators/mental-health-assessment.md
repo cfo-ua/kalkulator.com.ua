@@ -437,6 +437,6 @@ faq:
     <li><strong>National Suicide Prevention Lifeline:</strong> 988 (US)</li>
     <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
     <li><strong>Emergency Services:</strong> 911</li>
-    <li><strong>International Association for Suicide Prevention:</strong> <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank">Crisis Centers Directory</a></li>
+    <li><strong>International Association for Suicide Prevention:</strong> <a href="https://findahelpline.com/i/iasp" target="_blank">find support near you</a></li>
   </ul>
 </div>
