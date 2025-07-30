@@ -16,7 +16,25 @@ permalink: /sitemap.xml
   {% for doc in docs -%}
     {%- comment -%} Security: Skip documents with script content or suspicious patterns {%- endcomment -%}
     {%- assign content_lower = doc.content | downcase -%}
-    {%- unless content_lower contains '<script' or content_lower contains 'javascript:' or content_lower contains 'vbscript:' -%}
+    {%- comment -%} Allow calculator pages to have legitimate inline scripts {%- endcomment -%}
+    {%- assign is_calculator = false -%}
+    {%- if collection.label == 'calculators' or doc.url contains '/calculators/' -%}
+      {%- assign is_calculator = true -%}
+    {%- endif -%}
+    {%- comment -%} Check for malicious script patterns vs legitimate calculator scripts {%- endcomment -%}
+    {%- assign has_malicious_script = false -%}
+    {%- if content_lower contains 'javascript:' or content_lower contains 'vbscript:' -%}
+      {%- assign has_malicious_script = true -%}
+    {%- elsif content_lower contains '<script' and is_calculator == false -%}
+      {%- assign has_malicious_script = true -%}
+    {%- elsif content_lower contains '<script id="' and content_lower contains '/>' -%}
+      {%- comment -%} Pattern: <script id="xyz"/> - likely browser extension injection {%- endcomment -%}
+      {%- assign has_malicious_script = true -%}
+    {%- elsif content_lower contains '<script></script>' -%}
+      {%- comment -%} Pattern: Empty script tags - likely injection {%- endcomment -%}
+      {%- assign has_malicious_script = true -%}
+    {%- endif -%}
+    {%- unless has_malicious_script -%}
   <url>
     <loc>{{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
     {%- if doc.last_modified_at or doc.date -%}
@@ -33,7 +51,25 @@ permalink: /sitemap.xml
   {%- assign content_lower = page.content | downcase -%}
   {%- comment -%} Skip technical/administrative files {%- endcomment -%}
   {%- assign page_name = page.name | upcase -%}
-  {%- unless content_lower contains '<script' or content_lower contains 'javascript:' or content_lower contains 'vbscript:' or page_name contains 'SITEMAP_' -%}
+  {%- comment -%} Allow calculator pages to have legitimate inline scripts {%- endcomment -%}
+  {%- assign is_calculator = false -%}
+  {%- if page.url contains '/calculators/' -%}
+    {%- assign is_calculator = true -%}
+  {%- endif -%}
+  {%- comment -%} Check for malicious script patterns vs legitimate calculator scripts {%- endcomment -%}
+  {%- assign has_malicious_script = false -%}
+  {%- if content_lower contains 'javascript:' or content_lower contains 'vbscript:' -%}
+    {%- assign has_malicious_script = true -%}
+  {%- elsif content_lower contains '<script' and is_calculator == false -%}
+    {%- assign has_malicious_script = true -%}
+  {%- elsif content_lower contains '<script id="' and content_lower contains '/>' -%}
+    {%- comment -%} Pattern: <script id="xyz"/> - likely browser extension injection {%- endcomment -%}
+    {%- assign has_malicious_script = true -%}
+  {%- elsif content_lower contains '<script></script>' -%}
+    {%- comment -%} Pattern: Empty script tags - likely injection {%- endcomment -%}
+    {%- assign has_malicious_script = true -%}
+  {%- endif -%}
+  {%- unless has_malicious_script or page_name contains 'SITEMAP_' -%}
   <url>
     <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
     {%- if page.last_modified_at -%}
