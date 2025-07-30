@@ -4059,3 +4059,164 @@ input[type="date"]::-moz-focus-inner {
     max-width: 300px;
   }
 }
+
+/* ============================= */
+/* Bra Size Calculator Results   */
+/* ============================= */
+
+.size-results {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.bra-size {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e91e63;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  border-radius: 12px;
+  border: 2px solid #e91e63;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.bra-size-result {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e91e63;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+  border-radius: 12px;
+  border: 2px solid #e91e63;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.clothing-sizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.size-item {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.size-item:hover {
+  background: var(--card-bg);
+  border-color: var(--accent);
+}
+
+.size-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.measurements-summary, .measurement-note {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent);
+}
+
+.measurements-summary h4, .measurement-note h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--main-color);
+}
+
+.measurements-summary ul, .measurement-note ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.measurements-summary li, .measurement-note li {
+  margin-bottom: 0.25rem;
+}
+
+.tips, .size-advice {
+  background: #e8f5e9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid #28a745;
+}
+
+.tips h4, .size-advice h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--main-color);
+}
+
+.tips ul, .size-advice ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.tips li, .size-advice li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.no-match {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+  margin: 1rem 0;
+}
+
+.no-match h3 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+}
+
+.no-match ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.no-match li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.measurement-summary {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.measurement-summary h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .bra-size, .bra-size-result {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+  
+  .clothing-sizes {
+    grid-template-columns: 1fr;
+  }
+  
+  .size-results {
+    padding: 1rem;
+  }
+}

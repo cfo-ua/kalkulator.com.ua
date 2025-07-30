@@ -134,14 +134,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let cupSize = '';
     
     if (difference < 10) cupSize = 'AA';
-    else if (difference < 12.5) cupSize = 'A';
-    else if (difference < 15) cupSize = 'B';
-    else if (difference < 17.5) cupSize = 'C';
-    else if (difference < 20) cupSize = 'D';
-    else if (difference < 22.5) cupSize = 'DD';
-    else if (difference < 25) cupSize = 'E';
-    else if (difference < 27.5) cupSize = 'F';
-    else if (difference < 30) cupSize = 'FF';
+    else if (difference >= 10 && difference < 12.5) cupSize = 'A';
+    else if (difference >= 12.5 && difference < 15) cupSize = 'B';
+    else if (difference >= 15 && difference < 17.5) cupSize = 'C';
+    else if (difference >= 17.5 && difference < 20) cupSize = 'D';
+    else if (difference >= 20 && difference < 22.5) cupSize = 'DD';
+    else if (difference >= 22.5 && difference < 25) cupSize = 'E';
+    else if (difference >= 25 && difference < 27.5) cupSize = 'F';
+    else if (difference >= 27.5 && difference < 30) cupSize = 'FF';
     else cupSize = 'G';
     
     return `${bandSize}${cupSize}`;
