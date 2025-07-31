@@ -204,7 +204,76 @@ seo:
     <p><strong>Note:</strong> Nutritional values are based on USDA food composition data and popular brand information. Actual values may vary slightly depending on preparation methods, brand variations, and natural variations in fresh foods. Use this calculator as a guide for meal planning and dietary awareness.</p>
 scripts:
   - /en/js/food-calories.js
+faq:
+  - question: "How does the food calorie calculator work?"
+    answer: "Enter ingredient names, select from suggestions, specify weights or quantities. The calculator finds nutritional data and calculates calories, protein, fat, and carbs for each ingredient and totals for your recipe."
+  - question: "Can I use this calculator for weight loss or muscle building?"
+    answer: "Yes! This is a versatile tool perfect for calorie counting during weight loss, muscle building, or weight maintenance. Track your food intake and monitor total calories and macros."
+  - question: "How do I calculate calories in a multi-ingredient recipe?"
+    answer: "Add each ingredient separately with its weight or quantity. The calculator automatically sums calories and macronutrients from all ingredients to show total recipe nutrition."
+  - question: "Is the food nutrition calculator free to use?"
+    answer: "Absolutely! This online food calorie calculator is completely free with no registration required. Use it unlimited times on any device."
+  - question: "What food brands are included in the database?"
+    answer: "Our database includes popular US and UK brands like McDonald's, KFC, Starbucks, Coca-Cola, plus fresh foods, whole ingredients, and common packaged items."
+  - question: "How accurate are the calorie calculations?"
+    answer: "Values are based on USDA food composition data and verified brand information. Results are highly accurate for meal planning and dietary tracking purposes."
+  - question: "Can I see nutrition facts per 100g or per serving?"
+    answer: "Yes, calculations are based on standard nutrition per 100g, then adjusted for your specified portion size. You can easily calculate per-serving nutrition by dividing totals."
+  - question: "How do I track macronutrients (protein, carbs, fat)?"
+    answer: "The calculator automatically shows protein, carbohydrates, and fat for each ingredient and recipe totals. Perfect for macro tracking and balanced meal planning."
+  - question: "What if I can't find a specific food item?"
+    answer: "Our database is regularly updated. If you need a specific food added, contact us and we'll include it in future updates."
+  - question: "Can I save my recipes for later use?"
+    answer: "Currently recipes aren't saved, but we're planning to add recipe saving and PDF export features in future updates."
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Food Calorie Calculator",
+  "description": "Calculate calories, protein, fat, and carbs in recipes and meals. Free online nutrition calculator for meal planning and diet tracking.",
+  "url": "https://kalkulator.com.ua/en/calculators/food-calories.html",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free online food calorie calculator"
+  },
+  "featureList": [
+    "Recipe calorie calculation",
+    "Nutrition facts analysis",
+    "US/UK food database",
+    "Multi-ingredient recipes",
+    "Mobile friendly"
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "Kalkulator.com.ua"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq_item in page.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ faq_item.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq_item.answer }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
 
 <div class="calculator-section">
   <div id="food-rows">
