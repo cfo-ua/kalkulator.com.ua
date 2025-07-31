@@ -149,40 +149,8 @@ seo:
     </ul>
 
     <p>Використовуйте цей калькулятор для аналізу різних сценаріїв і знаходження іпотечного платежу, який відповідає вашому бюджету. Пам'ятайте про додаткові витрати на утримання житла: комунальні послуги, ремонт та обслуговування.</p>
-  structured_data: |
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Іпотечний калькулятор",
-      "description": "Розрахуйте щомісячний іпотечний платіж, загальну переплату та перегляньте графік погашення. Порівняйте умови кредиту, первинний внесок та додаткові витрати.",
-      "url": "https://kalkulator.com.ua/calculators/mortgage-calculator/",
-      "inLanguage": "uk",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "UAH"
-      },
-      "featureList": [
-        "Розрахунок щомісячного іпотечного платежу",
-        "Обчислення загальної переплати",
-        "Графік погашення кредиту",
-        "Врахування страхування та комісій",
-        "Аналіз дострокового погашення",
-        "Порівняння різних умов кредитування"
-      ],
-      "targetAudience": {
-        "@type": "Audience",
-        "audienceType": "Покупці нерухомості"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "kalkulator.com.ua",
-        "url": "https://kalkulator.com.ua"
-      }
-    }
 scripts:
+  - /assets/js/mortgage-calculator.js
   - /assets/js/mortgage-calculator.js
 faq:
   - question: "Скільки я можу собі дозволити витрачати на іпотеку?"

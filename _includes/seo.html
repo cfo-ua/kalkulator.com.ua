@@ -85,33 +85,75 @@
   },
   "featureList": [
     {% if page.categories contains 'financial' %}
+      {% if page.url contains '/en/' %}
+    "Financial calculations",
+    "Automatic computations",
+    "Instant results"
+      {% else %}
     "Фінансові розрахунки",
     "Автоматичні обчислення",
     "Миттєві результати"
+      {% endif %}
     {% elsif page.categories contains 'health' %}
+      {% if page.url contains '/en/' %}
+    "Health calculations",
+    "Personalized recommendations",
+    "Scientifically-based formulas"
+      {% else %}
     "Розрахунки для здоров'я",
     "Персоналізовані рекомендації",
     "Науково обґрунтовані формули"
+      {% endif %}
     {% elsif page.categories contains 'construction' %}
+      {% if page.url contains '/en/' %}
+    "Construction calculations",
+    "Material estimates",
+    "Cost savings on purchases"
+      {% else %}
     "Будівельні розрахунки",
     "Розрахунок матеріалів",
     "Економія на закупівлях"
+      {% endif %}
     {% elsif page.categories contains 'school' %}
+      {% if page.url contains '/en/' %}
+    "Educational calculations",
+    "Step-by-step solutions",
+    "Homework verification"
+      {% else %}
     "Навчальні розрахунки",
     "Покрокові рішення",
     "Перевірка домашніх завдань"
+      {% endif %}
     {% elsif page.categories contains 'salary-taxes' %}
+      {% if page.url contains '/en/' %}
+    "Tax calculations",
+    "Current rates",
+    "Legal compliance"
+      {% else %}
     "Податкові розрахунки",
     "Актуальні ставки",
     "Відповідність законодавству"
+      {% endif %}
     {% elsif page.categories contains 'business' %}
+      {% if page.url contains '/en/' %}
+    "Business calculations",
+    "Profitability analysis",
+    "Investment planning"
+      {% else %}
     "Бізнес-розрахунки",
     "Аналіз прибутковості",
     "Планування інвестицій"
+      {% endif %}
     {% else %}
+      {% if page.url contains '/en/' %}
+    "Quick calculations",
+    "Accurate results",
+    "User-friendly interface"
+      {% else %}
     "Швидкі розрахунки",
     "Точні результати",
     "Зручний інтерфейс"
+      {% endif %}
     {% endif %}
   ],
   "provider": {
