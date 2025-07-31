@@ -27,6 +27,125 @@
 <meta name="twitter:image" content="{{ '/assets/img/logo.svg' | absolute_url }}">
 
 <!-- Structured Data -->
+{% comment %} Organization Schema {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ '/assets/img/logo.svg' | absolute_url }}",
+  "sameAs": [],
+  "foundingDate": "2023",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ukraine"
+  },
+  "knowsLanguage": ["uk", "en"]
+}
+</script>
+
+{% comment %} Website Schema {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "inLanguage": "{% if page.url contains '/en/' %}en{% else %}uk{% endif %}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{% comment %} Calculator WebApplication Schema {% endcomment %}
+{% if layout.name == 'calculator' or page.layout == 'calculator' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "{{ page.title }}",
+  "description": "{{ page.seo.description | default: page.title }}",
+  "url": "{{ page.url | absolute_url }}",
+  "inLanguage": "{% if page.url contains '/en/' %}en{% else %}uk{% endif %}",
+  "applicationCategory": "{% if page.categories contains 'financial' %}FinanceApplication{% elsif page.categories contains 'health' %}HealthApplication{% elsif page.categories contains 'school' %}EducationalApplication{% elsif page.categories contains 'construction' %}BusinessApplication{% elsif page.categories contains 'salary-taxes' %}FinanceApplication{% elsif page.categories contains 'business' %}BusinessApplication{% else %}CalculatorApplication{% endif %}",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "UAH"
+  },
+  "featureList": [
+    {% if page.categories contains 'financial' %}
+    "Фінансові розрахунки",
+    "Автоматичні обчислення",
+    "Миттєві результати"
+    {% elsif page.categories contains 'health' %}
+    "Розрахунки для здоров'я",
+    "Персоналізовані рекомендації",
+    "Науково обґрунтовані формули"
+    {% elsif page.categories contains 'construction' %}
+    "Будівельні розрахунки",
+    "Розрахунок матеріалів",
+    "Економія на закупівлях"
+    {% elsif page.categories contains 'school' %}
+    "Навчальні розрахунки",
+    "Покрокові рішення",
+    "Перевірка домашніх завдань"
+    {% elsif page.categories contains 'salary-taxes' %}
+    "Податкові розрахунки",
+    "Актуальні ставки",
+    "Відповідність законодавству"
+    {% elsif page.categories contains 'business' %}
+    "Бізнес-розрахунки",
+    "Аналіз прибутковості",
+    "Планування інвестицій"
+    {% else %}
+    "Швидкі розрахунки",
+    "Точні результати",
+    "Зручний інтерфейс"
+    {% endif %}
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+{% endif %}
+
+{% comment %} FAQ Schema {% endcomment %}
+{% if page.faq and page.faq.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% comment %} Custom Structured Data {% endcomment %}
 {% if page.seo.structured_data %}
 <script type="application/ld+json">
 {{ page.seo.structured_data | strip_newlines }}

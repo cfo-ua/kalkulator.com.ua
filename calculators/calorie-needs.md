@@ -63,6 +63,40 @@ seo:
       <li>Отримайте точний розрахунок норми калорій, білків, жирів і вуглеводів</li>
       <li>Використовуйте підказки для складання меню (раціон на день/тиждень)</li>
     </ol>
+  structured_data: |
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Калькулятор добової норми калорій",
+      "description": "Онлайн калькулятор калорій допоможе розрахувати добову норму калорій для схуднення, набору чи підтримки ваги. Враховує вік, стать, ріст, вагу, рівень активності.",
+      "url": "https://kalkulator.com.ua/calculators/calorie-needs/",
+      "inLanguage": "uk",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UAH"
+      },
+      "featureList": [
+        "Розрахунок BMR (базального метаболізму)",
+        "Обчислення TDEE (добових витрат енергії)",
+        "Калькулятор дефіциту калорій для схуднення",
+        "Розрахунок надлишку калорій для набору маси",
+        "Рекомендації по білках, жирах, вуглеводах (БЖУ)",
+        "Персоналізовані поради по харчуванню",
+        "Урахування рівня фізичної активності"
+      ],
+      "targetAudience": {
+        "@type": "Audience",
+        "audienceType": "Люди, які стежать за вагою та здоров'ям"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "kalkulator.com.ua",
+        "url": "https://kalkulator.com.ua"
+      }
+    }
 scripts:
   - /assets/js/calorie-needs.js
 faq:

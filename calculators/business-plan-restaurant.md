@@ -102,6 +102,53 @@ faq:
     answer: "Типовий штат: 2-4 кухарі, 3-8 офіціантів, 1-2 бармени, 1 адміністратор. Загалом 8-20 працівників залежно від розміру."
   - question: "Яка оптимальна собівартість страв?"
     answer: "Цільова собівартість продуктів 28-35% від виручки. Алкогольні напої 18-25%. Загальні витрати на продукти не повинні перевищувати 35%."
+  structured_data: |
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Калькулятор бізнес-плану ресторану",
+      "description": "Розрахуйте прибутковість ресторану: стартові витрати, щомісячні доходи, терміни окупності. Детальний бізнес-план для відкриття ресторану в Україні.",
+      "url": "https://kalkulator.com.ua/calculators/business-plan-restaurant/",
+      "inLanguage": "uk",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UAH"
+      },
+      "featureList": [
+        "Розрахунок стартових інвестицій ресторану",
+        "Планування операційних витрат",
+        "Прогноз щомісячних доходів",
+        "Обчислення терміну окупності",
+        "Аналіз ROI та рентабельності",
+        "Планування штату та зарплат",
+        "Розрахунок собівартості страв",
+        "Прогноз прибутковості за рік"
+      ],
+      "targetAudience": {
+        "@type": "Audience",
+        "audienceType": "Підприємці HoReCa сектору"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Ресторанний бізнес",
+          "description": "Громадське харчування та обслуговування"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Бізнес-планування",
+          "description": "Фінансове планування підприємства"
+        }
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "kalkulator.com.ua",
+        "url": "https://kalkulator.com.ua"
+      }
+    }
 ---
 
 <div class="calculator-container">

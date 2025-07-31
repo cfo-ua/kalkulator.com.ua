@@ -28,6 +28,39 @@ seo:
       <li><strong>3 група:</strong> ЄП 5% або 3% (з ПДВ), військовий збір 1% від доходу</li>
     </ul>
     <p>Цей інструмент допоможе підприємцям швидко зорієнтуватись у щомісячних та щоквартальних платежах, уникнути помилок у звітності та планувати витрати.</p>
+  structured_data: |
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Калькулятор податків ФОП",
+      "description": "Розрахуйте щомісячні та щоквартальні податки ФОП онлайн: єдиний податок, ЄСВ, військовий збір для 1, 2 та 3 груп. Актуальні ставки на 2025 рік.",
+      "url": "https://kalkulator.com.ua/calculators/fop-taxes/",
+      "inLanguage": "uk",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UAH"
+      },
+      "featureList": [
+        "Розрахунок єдиного податку для ФОП 1, 2, 3 груп",
+        "Обчислення ЄСВ (єдиного соціального внеску)",
+        "Розрахунок військового збору",
+        "Актуальні податкові ставки на 2025 рік",
+        "Щомісячні та щоквартальні платежі",
+        "Планування податкових витрат"
+      ],
+      "targetAudience": {
+        "@type": "Audience",
+        "audienceType": "Підприємці (ФОП)"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "kalkulator.com.ua",
+        "url": "https://kalkulator.com.ua"
+      }
+    }
 scripts:
   - /assets/js/fop-taxes.js
 faq:

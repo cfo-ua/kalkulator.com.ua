@@ -14,6 +14,40 @@ seo:
   content: |
     <h2>Калькулятор квадратного рівняння</h2>
     <p>Введіть коефіцієнти <b>a</b>, <b>b</b>, <b>c</b> для рівняння <b>ax² + bx + c = 0</b> і дізнайтеся розвʼязки.</p>
+  structured_data: |
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Калькулятор квадратного рівняння",
+      "description": "Розвʼязуйте квадратне рівняння онлайн та знаходьте корені за допомогою простого калькулятора для школярів.",
+      "url": "https://kalkulator.com.ua/calculators/quadratic/",
+      "inLanguage": "uk",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UAH"
+      },
+      "featureList": [
+        "Розвʼязання квадратних рівнянь",
+        "Обчислення дискримінанта",
+        "Знаходження коренів рівняння",
+        "Покрокові рішення",
+        "Перевірка домашніх завдань"
+      ],
+      "targetAudience": {
+        "@type": "Audience",
+        "audienceType": "Школярі, студенти, викладачі"
+      },
+      "educationalLevel": "SecondaryEducation",
+      "learningResourceType": "Calculator",
+      "provider": {
+        "@type": "Organization",
+        "name": "kalkulator.com.ua",
+        "url": "https://kalkulator.com.ua"
+      }
+    }
 scripts:
   - /assets/js/quadratic.js
 faq:
