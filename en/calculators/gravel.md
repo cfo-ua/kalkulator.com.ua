@@ -197,10 +197,10 @@ faq:
     <h4>🚗 Common Driveway Presets</h4>
     <p>Quick calculations for standard driveway sizes:</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
-      <button type="button" onclick="setPreset(10, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Single Car (10×20 ft)</button>
-      <button type="button" onclick="setPreset(20, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Double Car (20×20 ft)</button>
-      <button type="button" onclick="setPreset(12, 50, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Long Drive (12×50 ft)</button>
-      <button type="button" onclick="setPreset(16, 30, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Standard (16×30 ft)</button>
+      <button type="button" onclick="setPreset(10, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Single Car (10×20 ft)</button>
+      <button type="button" onclick="setPreset(20, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Double Car (20×20 ft)</button>
+      <button type="button" onclick="setPreset(12, 50, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Long Drive (12×50 ft)</button>
+      <button type="button" onclick="setPreset(16, 30, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Standard (16×30 ft)</button>
     </div>
   </div>
 
