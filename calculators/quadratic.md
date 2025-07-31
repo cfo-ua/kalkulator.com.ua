@@ -16,7 +16,6 @@ seo:
     <p>Введіть коефіцієнти <b>a</b>, <b>b</b>, <b>c</b> для рівняння <b>ax² + bx + c = 0</b> і дізнайтеся розвʼязки.</p>
 scripts:
   - /assets/js/quadratic.js
-  - /assets/js/quadratic.js
 faq:
   - question: Як знайти корені квадратного рівняння?
     answer: "Використовуйте формулу дискримінанта: x = (-b ± √D) / 2a, де D = b² - 4ac."

@@ -65,7 +65,6 @@ seo:
     </ol>
 scripts:
   - /assets/js/calorie-needs.js
-  - /assets/js/calorie-needs.js
 faq:
   - question: "Яка формула використовується для розрахунку калорій (BMR, TDEE)?"
     answer: "Використовується формула Mifflin-St Jeor для BMR (основного обміну речовин), множення на відповідний коефіцієнт активності для розрахунку TDEE (total daily energy expenditure)."
