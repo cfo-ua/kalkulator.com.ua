@@ -197,10 +197,10 @@ faq:
     <h4>🚗 Типові розміри під'їздів</h4>
     <p>Швидкі розрахунки для стандартних розмірів під'їздів:</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
-      <button type="button" onclick="setPreset(3, 6, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Одна машина (3×6 м)</button>
-      <button type="button" onclick="setPreset(6, 6, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Дві машини (6×6 м)</button>
-      <button type="button" onclick="setPreset(4, 15, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Довгий під'їзд (4×15 м)</button>
-      <button type="button" onclick="setPreset(5, 10, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Стандартний (5×10 м)</button>
+      <button type="button" onclick="setPreset(3, 6, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Одна машина (3×6 м)</button>
+      <button type="button" onclick="setPreset(6, 6, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Дві машини (6×6 м)</button>
+      <button type="button" onclick="setPreset(4, 15, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Довгий під'їзд (4×15 м)</button>
+      <button type="button" onclick="setPreset(5, 10, 10)" style="padding: 8px; border: 1px solid #2c5530; background: white; color: #2c5530; border-radius: 4px; cursor: pointer; font-weight: 500;">Стандартний (5×10 м)</button>
     </div>
   </div>
 
