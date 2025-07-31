@@ -3,8 +3,8 @@ layout: calculator
 title: "Gravel Calculator"
 categories: [construction]
 seo:
-  title: "Gravel Calculator | Cubic Yards & Tons of Gravel Needed for Driveways"
-  description: "Calculate gravel needed for driveways, paths, and landscaping. Professional gravel calculator estimates cubic yards, tons, and costs for pea gravel, crushed stone, and more."
+  title: "Gravel Calculator | How Much Gravel Do I Need? Cubic Yards to Tons"
+  description: "Free gravel calculator estimates exact amount needed for driveways, paths & landscaping. Calculate cubic yards, convert tons, get costs for pea gravel, crushed stone. Get instant results!"
   keywords:
     - gravel calculator
     - gravel estimator
@@ -29,8 +29,26 @@ seo:
     - gravel weight calculator
     - gravel volume calculator
   content: |
-    <h2>Gravel Calculator</h2>
+    <h2>Gravel Calculator - How Much Gravel Do I Need?</h2>
     <p>Calculate the exact amount of <strong>gravel needed</strong> for your driveway, pathway, or landscaping project. This professional gravel calculator estimates cubic yards, tons, and costs for all types of gravel and crushed stone.</p>
+
+    <div class="quick-conversions">
+      <h3>Quick Gravel Conversions</h3>
+      <ul>
+        <li><strong>Cubic Yards to Tons:</strong> 1 cubic yard = 1.3-1.7 tons (varies by gravel type)</li>
+        <li><strong>Pea Gravel:</strong> 1 cubic yard = 1.3 tons | 1 ton covers ~100 sq ft at 3"</li>
+        <li><strong>Crushed Stone:</strong> 1 cubic yard = 1.5 tons | 1 ton covers ~80 sq ft at 3"</li>
+        <li><strong>River Rock:</strong> 1 cubic yard = 1.2 tons | 1 ton covers ~110 sq ft at 3"</li>
+      </ul>
+    </div>
+
+    <h3>How Much Gravel Do I Need? Common Scenarios:</h3>
+    <ul>
+      <li><strong>Standard driveway (12×50 ft):</strong> 22 cubic yards or 33 tons of crushed stone</li>
+      <li><strong>Walkway (4×50 ft):</strong> 2.5 cubic yards or 3.3 tons of pea gravel</li>
+      <li><strong>Patio base (16×16 ft):</strong> 3.2 cubic yards or 5 tons of crusher run</li>
+      <li><strong>French drain (100 ft):</strong> 4.6 cubic yards or 5.5 tons of drainage gravel</li>
+    </ul>
 
     <h3>How to Calculate Gravel Requirements:</h3>
     <ol>
@@ -49,14 +67,25 @@ seo:
       <li><strong>Parking areas:</strong> 6-8 inches (heavy vehicles, commercial)</li>
     </ul>
 
-    <h3>Types of Gravel & Their Uses:</h3>
+    <h3>Gravel Types & Weight Calculator Guide:</h3>
     <ul>
-      <li><strong>Pea gravel (3/8"):</strong> decorative, walkways, drainage - 1.3 tons/yard</li>
-      <li><strong>Crushed stone (3/4"):</strong> driveways, base material - 1.5 tons/yard</li>
-      <li><strong>River rock (1-3"):</strong> landscaping, drainage - 1.2 tons/yard</li>
-      <li><strong>Decomposed granite:</strong> paths, patio base - 1.4 tons/yard</li>
-      <li><strong>Crusher run:</strong> driveway base, compacts well - 1.6 tons/yard</li>
-      <li><strong>Marble chips:</strong> decorative, bright white - 1.4 tons/yard</li>
+      <li><strong>Pea gravel (3/8"):</strong> decorative, walkways, drainage - 1.3 tons/yard - $30-45/ton</li>
+      <li><strong>Crushed stone (3/4"):</strong> driveways, base material - 1.5 tons/yard - $25-35/ton</li>
+      <li><strong>River rock (1-3"):</strong> landscaping, drainage - 1.2 tons/yard - $35-55/ton</li>
+      <li><strong>Decomposed granite:</strong> paths, patio base - 1.4 tons/yard - $40-50/ton</li>
+      <li><strong>Crusher run:</strong> driveway base, compacts well - 1.6 tons/yard - $20-30/ton</li>
+      <li><strong>Marble chips:</strong> decorative, bright white - 1.4 tons/yard - $50-80/ton</li>
+      <li><strong>3/4 minus gravel:</strong> compact base, roads - 1.6 tons/yard - $22-32/ton</li>
+      <li><strong>Drain rock:</strong> french drains, septic - 1.2 tons/yard - $35-45/ton</li>
+    </ul>
+
+    <h3>Driveway Gravel Calculator Guide:</h3>
+    <ul>
+      <li><strong>Single car driveway (10×20 ft):</strong> 7.4 cubic yards or 11 tons</li>
+      <li><strong>Double car driveway (20×20 ft):</strong> 14.8 cubic yards or 22 tons</li>
+      <li><strong>Long driveway (12×100 ft):</strong> 44 cubic yards or 66 tons</li>
+      <li><strong>Circular driveway (40 ft diameter):</strong> 47 cubic yards or 70 tons</li>
+      <li><strong>Calculate depth:</strong> 4-6 inches recommended for car traffic</li>
     </ul>
 
     <h3>Gravel Coverage Rates:</h3>
@@ -112,20 +141,41 @@ scripts:
   - /en/js/gravel.js
 faq:
   - question: How much gravel do I need for a 20x40 foot driveway?
-    answer: "For a 20×40 ft driveway (800 sq ft) at 4\" deep: you need about 10 cubic yards or 15 tons of gravel. This includes 10% extra for compaction and waste."
-  - question: What's the difference between cubic yards and tons of gravel?
-    answer: "Cubic yards measure volume, tons measure weight. 1 cubic yard of crushed stone ≈ 1.5 tons. Use cubic yards for volume calculations, tons for ordering from suppliers."
+    answer: "For a 20×40 ft driveway (800 sq ft) at 4\" deep: you need about 10 cubic yards or 15 tons of gravel. This includes 10% extra for compaction and waste. Use our gravel calculator above for exact measurements."
+  - question: How do I convert cubic yards to tons of gravel?
+    answer: "Cubic yards to tons conversion depends on gravel type: Crushed stone = 1.5 tons/yard, Pea gravel = 1.3 tons/yard, River rock = 1.2 tons/yard, Crusher run = 1.6 tons/yard. Multiply cubic yards by the conversion factor for your gravel type."
+  - question: How much does a ton of gravel cover?
+    answer: "1 ton of gravel covers: 70-100 sq ft at 3\" deep (varies by type). Crushed stone covers ~80 sq ft, pea gravel covers ~100 sq ft, river rock covers ~110 sq ft. Use deeper coverage for driveways (4-6\")."
+  - question: What's the best gravel calculator for driveways?
+    answer: "Our gravel calculator above handles all driveway types. Enter length, width, depth (4-6\" recommended), select gravel type, and get exact cubic yards, tons, and costs. Includes delivery estimates and installation tips."
   - question: How deep should gravel be for a driveway?
-    answer: "4-6 inches for residential driveways with car traffic. Use 6-8 inches for heavy vehicles or commercial use. Include base layer of crusher run plus finish layer."
+    answer: "4-6 inches for residential driveways with car traffic. Use 6-8 inches for heavy vehicles or commercial use. Include base layer of crusher run plus finish layer of decorative gravel."
+  - question: How much gravel do I need calculator - pea gravel vs crushed stone?
+    answer: "Pea gravel: 1.3 tons/cubic yard, decorative/walkways. Crushed stone: 1.5 tons/cubic yard, driveways/base. For same area, crushed stone needs 15% more weight but provides better compaction and stability."
   - question: Can I install gravel directly on grass?
-    answer: "No! Excavate 4-6 inches deep, remove all organic material, and install landscape fabric. Gravel on grass will sink and create mud problems."
-  - question: What's the best gravel type for driveways?
-    answer: "Crusher run or 3/4\" crushed stone for base layers (compacts well). Top with 3/8\" pea gravel or decorative stone for appearance and stability."
+    answer: "No! Excavate 4-6 inches deep, remove all organic material, and install landscape fabric. Gravel on grass will sink and create mud problems. Proper base preparation is essential."
   - question: How often do I need to add more gravel?
-    answer: "Add 1/2-1 inch of fresh gravel annually. High-traffic areas may need more frequent top-ups. Proper base preparation reduces maintenance needs."
+    answer: "Add 1/2-1 inch of fresh gravel annually. High-traffic areas may need more frequent top-ups. Proper base preparation reduces maintenance needs. Budget $200-500 annually for typical driveway."
+  - question: Gravel cost calculator - what affects pricing?
+    answer: "Factors: Gravel type ($20-80/ton), delivery distance ($50-150), quantity discounts, local availability, seasonal demand. Our calculator includes current regional pricing estimates."
+  - question: How many tons of gravel for driveway - standard sizes?
+    answer: "Single car (10×20 ft): 11 tons, Double car (20×20 ft): 22 tons, Long driveway (12×100 ft): 66 tons. These assume 4\" depth with 10% compaction factor included."
 ---
 
 <form id="gravel-form" autocomplete="off">
+  
+  <!-- Quick Preset Calculator for Common Driveways -->
+  <div class="preset-calculator" style="background: #e8f5e8; padding: 15px; margin-bottom: 20px; border-radius: 8px;">
+    <h4>🚗 Common Driveway Presets</h4>
+    <p>Quick calculations for standard driveway sizes:</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+      <button type="button" onclick="setPreset(10, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Single Car (10×20 ft)</button>
+      <button type="button" onclick="setPreset(20, 20, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Double Car (20×20 ft)</button>
+      <button type="button" onclick="setPreset(12, 50, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Long Drive (12×50 ft)</button>
+      <button type="button" onclick="setPreset(16, 30, 4)" style="padding: 8px; border: 1px solid #2c5530; background: white; border-radius: 4px; cursor: pointer;">Standard (16×30 ft)</button>
+    </div>
+  </div>
+
   <label>
     Area Length (ft):
     <input type="number" id="gravel-length" min="0" required>
