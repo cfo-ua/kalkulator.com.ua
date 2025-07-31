@@ -28,6 +28,34 @@ seo:
     - rock calculator
     - gravel weight calculator
     - gravel volume calculator
+  structured_data: |
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Gravel Calculator",
+      "description": "Free gravel calculator estimates exact amount needed for driveways, paths & landscaping. Calculate cubic yards, convert tons, get costs for pea gravel, crushed stone.",
+      "url": "https://kalkulator.com.ua/en/calculators/gravel/",
+      "applicationCategory": "CalculatorApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Calculate gravel quantity in cubic yards and tons",
+        "Convert cubic yards to tons for different gravel types", 
+        "Estimate gravel costs and delivery fees",
+        "Driveway gravel calculator with preset sizes",
+        "Pea gravel, crushed stone, and river rock calculations",
+        "Coverage calculator for landscaping projects"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Kalkulator.com.ua",
+        "url": "https://kalkulator.com.ua"
+      }
+    }
   content: |
     <h2>Gravel Calculator - How Much Gravel Do I Need?</h2>
     <p>Calculate the exact amount of <strong>gravel needed</strong> for your driveway, pathway, or landscaping project. This professional gravel calculator estimates cubic yards, tons, and costs for all types of gravel and crushed stone.</p>
