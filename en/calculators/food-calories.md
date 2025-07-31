@@ -202,6 +202,32 @@ seo:
     </ul>
 
     <p><strong>Note:</strong> Nutritional values are based on USDA food composition data and popular brand information. Actual values may vary slightly depending on preparation methods, brand variations, and natural variations in fresh foods. Use this calculator as a guide for meal planning and dietary awareness.</p>
+
+    <h3>Popular Recipe Examples & Calculations</h3>
+    <p>Our <strong>food nutrition calculator</strong> works perfectly for common recipes and meals:</p>
+    
+    <h4>Breakfast Ideas</h4>
+    <ul>
+      <li><strong>Scrambled Eggs with Toast:</strong> 2 eggs, 1 tbsp butter, 2 slices whole wheat bread</li>
+      <li><strong>Oatmeal with Fruit:</strong> 1/2 cup oats, 1 cup milk, 1 medium banana, 1 tbsp honey</li>
+      <li><strong>Greek Yogurt Parfait:</strong> 1 cup Greek yogurt, 1/4 cup granola, 1/2 cup berries</li>
+    </ul>
+
+    <h4>Lunch & Dinner Examples</h4>
+    <ul>
+      <li><strong>Chicken Caesar Salad:</strong> 4 oz grilled chicken, 2 cups romaine, Caesar dressing, croutons</li>
+      <li><strong>Spaghetti Bolognese:</strong> 100g pasta, 100g ground beef, tomato sauce, parmesan</li>
+      <li><strong>Grilled Salmon with Rice:</strong> 6 oz salmon fillet, 1 cup brown rice, steamed vegetables</li>
+    </ul>
+
+    <h4>Fast Food & Restaurant Tracking</h4>
+    <p>Calculate calories from popular chains:</p>
+    <ul>
+      <li><strong>McDonald's Big Mac:</strong> Pre-loaded with accurate nutrition data</li>
+      <li><strong>Starbucks Drinks:</strong> Complete coffee and frappuccino database</li>
+      <li><strong>Subway Sandwiches:</strong> Build your sandwich with all ingredients</li>
+      <li><strong>Pizza Calculations:</strong> Different crusts, toppings, and sizes</li>
+    </ul>
 scripts:
   - /en/js/food-calories.js
 faq:
