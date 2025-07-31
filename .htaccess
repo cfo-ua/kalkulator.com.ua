@@ -2,7 +2,6 @@
 # This fixes 404 errors where Google indexed EN pages with .html endings
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^en/calculators/([^/]+)\.html$ /en/calculators/$1/ [R=301,L]
 
 # Ensure sitemap.xml is served with correct content type and maximum security
