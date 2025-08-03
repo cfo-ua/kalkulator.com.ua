@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // IQ Test data
-  const iqTestQuestions = [
+  // Wrap everything in a namespace to avoid conflicts
+  (function() {
+    // IQ Test data
+    const iqTestQuestions = [
     {
       question: "🔢 Продовжте числову послідовність: 2, 6, 18, 54, ?",
       options: [
@@ -509,4 +511,5 @@ document.addEventListener("DOMContentLoaded", function () {
     answerReview.style.display = "none";
     quizResults.style.display = "block";
   });
+  })(); // End namespace wrapper
 });

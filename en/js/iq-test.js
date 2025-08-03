@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // IQ Test data
-  const iqTestQuestions = [
+  // Wrap everything in a namespace to avoid conflicts
+  (function() {
+    // IQ Test data
+    const enIqTestQuestions = [
     {
       question: "🔢 Continue the number sequence: 2, 6, 18, 54, ?",
       options: [
@@ -223,11 +225,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  let iqCurrentQuestion = 0;
-  let iqUserAnswers = [];
-  let iqQuizData = {
-    questions: iqTestQuestions,
-    iqUserAnswers: [],
+  let enIqCurrentQuestion = 0;
+  let enIqUserAnswers = [];
+  let enIqQuizData = {
+    questions: enIqTestQuestions,
+    enIqUserAnswers: [],
     score: 0,
     startTime: null,
     endTime: null
@@ -236,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // DOM elements
   const startButton = document.getElementById("start-quiz");
   const quizIntro = document.getElementById("quiz-intro");
-  const iqTestQuestions = document.getElementById("quiz-questions");
+  const enIqTestQuestions = document.getElementById("quiz-questions");
   const quizResults = document.getElementById("quiz-results");
   const answerReview = document.getElementById("answer-review");
   const questionContainer = document.getElementById("question-container");
@@ -258,11 +260,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize quiz
   function initQuiz() {
-    iqCurrentQuestion = 0;
-    iqUserAnswers = [];
-    iqQuizData.iqUserAnswers = [];
-    iqQuizData.score = 0;
-    iqQuizData.startTime = new Date();
+    enIqCurrentQuestion = 0;
+    enIqUserAnswers = [];
+    enIqQuizData.enIqUserAnswers = [];
+    enIqQuizData.score = 0;
+    enIqQuizData.startTime = new Date();
     
     // Show first question
     showQuestion();
@@ -271,13 +273,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Show quiz questions section
     quizIntro.style.display = "none";
-    iqTestQuestions.style.display = "block";
+    enIqTestQuestions.style.display = "block";
     quizResults.style.display = "none";
     answerReview.style.display = "none";
   }
 
   function showQuestion() {
-    const question = iqQuizData.questions[iqCurrentQuestion];
+    const question = enIqQuizData.questions[enIqCurrentQuestion];
     
     questionContainer.innerHTML = `
       <div class="question-title">${question.question}</div>
@@ -285,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ${question.options.map((option, index) => `
           <li class="answer-option">
             <label>
-              <input type="radio" name="answer" value="${index}" ${iqUserAnswers[iqCurrentQuestion] === index ? 'checked' : ''}>
+              <input type="radio" name="answer" value="${index}" ${enIqUserAnswers[enIqCurrentQuestion] === index ? 'checked' : ''}>
               <span class="answer-text">${option}</span>
             </label>
           </li>
@@ -297,23 +299,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const radioButtons = questionContainer.querySelectorAll('input[type="radio"]');
     radioButtons.forEach(radio => {
       radio.addEventListener('change', function() {
-        iqUserAnswers[iqCurrentQuestion] = parseInt(this.value);
+        enIqUserAnswers[enIqCurrentQuestion] = parseInt(this.value);
         updateNavigation();
       });
     });
   }
 
   function updateProgress() {
-    const progress = ((iqCurrentQuestion + 1) / iqQuizData.questions.length) * 100;
+    const progress = ((enIqCurrentQuestion + 1) / enIqQuizData.questions.length) * 100;
     progressFill.style.width = `${progress}%`;
-    questionCounter.textContent = `Question ${iqCurrentQuestion + 1} of ${iqQuizData.questions.length}`;
+    questionCounter.textContent = `Question ${enIqCurrentQuestion + 1} of ${enIqQuizData.questions.length}`;
   }
 
   function updateNavigation() {
-    prevButton.disabled = iqCurrentQuestion === 0;
+    prevButton.disabled = enIqCurrentQuestion === 0;
     
-    const isLastQuestion = iqCurrentQuestion === iqQuizData.questions.length - 1;
-    const hasAnswer = iqUserAnswers[iqCurrentQuestion] !== undefined;
+    const isLastQuestion = enIqCurrentQuestion === enIqQuizData.questions.length - 1;
+    const hasAnswer = enIqUserAnswers[enIqCurrentQuestion] !== undefined;
     
     if (isLastQuestion) {
       nextButton.style.display = "none";
@@ -328,15 +330,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function calculateIQ() {
     let correctAnswers = 0;
     
-    iqQuizData.questions.forEach((question, index) => {
-      if (iqUserAnswers[index] === question.correct) {
+    enIqQuizData.questions.forEach((question, index) => {
+      if (enIqUserAnswers[index] === question.correct) {
         correctAnswers++;
       }
     });
 
     // IQ calculation based on percentage correct
     // Standard IQ scale: average = 100, standard deviation = 15
-    const percentage = correctAnswers / iqQuizData.questions.length;
+    const percentage = correctAnswers / enIqQuizData.questions.length;
     let iq;
     
     if (percentage >= 0.95) iq = 140;      // Genius level
@@ -348,14 +350,14 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (percentage >= 0.20) iq = 80;  // Low average
     else iq = 70;                          // Below normal
 
-    iqQuizData.score = iq;
-    iqQuizData.iqUserAnswers = [...iqUserAnswers];
-    iqQuizData.endTime = new Date();
+    enIqQuizData.score = iq;
+    enIqQuizData.enIqUserAnswers = [...enIqUserAnswers];
+    enIqQuizData.endTime = new Date();
     
     return {
       iq: iq,
       correctAnswers: correctAnswers,
-      totalQuestions: iqQuizData.questions.length,
+      totalQuestions: enIqQuizData.questions.length,
       percentage: Math.round(percentage * 100)
     };
   }
@@ -439,13 +441,13 @@ document.addEventListener("DOMContentLoaded", function () {
     `).join('');
     
     // Show results section
-    iqTestQuestions.style.display = "none";
+    enIqTestQuestions.style.display = "none";
     quizResults.style.display = "block";
   }
 
   function showReview() {
-    reviewContainer.innerHTML = iqQuizData.questions.map((question, index) => {
-      const userAnswer = iqQuizData.iqUserAnswers[index];
+    reviewContainer.innerHTML = enIqQuizData.questions.map((question, index) => {
+      const userAnswer = enIqQuizData.enIqUserAnswers[index];
       const isCorrect = userAnswer === question.correct;
       
       return `
@@ -468,10 +470,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetQuiz() {
-    iqCurrentQuestion = 0;
-    iqUserAnswers = [];
-    iqQuizData.iqUserAnswers = [];
-    iqQuizData.score = 0;
+    enIqCurrentQuestion = 0;
+    enIqUserAnswers = [];
+    enIqQuizData.enIqUserAnswers = [];
+    enIqQuizData.score = 0;
     
     quizResults.style.display = "none";
     answerReview.style.display = "none";
@@ -482,8 +484,8 @@ document.addEventListener("DOMContentLoaded", function () {
   startButton.addEventListener("click", initQuiz);
   
   prevButton.addEventListener("click", function() {
-    if (iqCurrentQuestion > 0) {
-      iqCurrentQuestion--;
+    if (enIqCurrentQuestion > 0) {
+      enIqCurrentQuestion--;
       showQuestion();
       updateProgress();
       updateNavigation();
@@ -491,8 +493,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   nextButton.addEventListener("click", function() {
-    if (iqCurrentQuestion < iqQuizData.questions.length - 1 && iqUserAnswers[iqCurrentQuestion] !== undefined) {
-      iqCurrentQuestion++;
+    if (enIqCurrentQuestion < enIqQuizData.questions.length - 1 && enIqUserAnswers[enIqCurrentQuestion] !== undefined) {
+      enIqCurrentQuestion++;
       showQuestion();
       updateProgress();
       updateNavigation();
@@ -509,4 +511,5 @@ document.addEventListener("DOMContentLoaded", function () {
     answerReview.style.display = "none";
     quizResults.style.display = "block";
   });
+  })(); // End namespace wrapper
 });
