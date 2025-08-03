@@ -2,7 +2,7 @@
 layout: calculator
 title: IQ Test - Free Intelligence Quotient Assessment
 categories:
-- education
+- school
 faq:
 - answer: IQ test measures intelligence quotient on a standard scale. The average score is 100 points. Results from 90-110 are considered normal, 110-120 above average, 120+ high.
   question: How to interpret IQ test results?
