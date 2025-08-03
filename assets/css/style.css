@@ -536,6 +536,26 @@ h1 {
   word-break: break-word;
 }
 
+/* CLS Fix: Reserve space for compatibility results to prevent layout shift */
+#compatibility-result {
+  min-height: 800px; /* Reserve space for typical results */
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+#compatibility-result:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive min-height for mobile devices */
+@media (max-width: 768px) {
+  #compatibility-result {
+    min-height: 1200px; /* More space needed on mobile due to stacked layout */
+  }
+}
+
 .trip-row {
   display: flex;
   align-items: center;
