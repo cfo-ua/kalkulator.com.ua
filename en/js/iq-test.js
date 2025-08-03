@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // DOM elements
   const startButton = document.getElementById("start-quiz");
   const quizIntro = document.getElementById("quiz-intro");
-  const enIqTestQuestions = document.getElementById("quiz-questions");
+  const quizQuestions = document.getElementById("quiz-questions");
   const quizResults = document.getElementById("quiz-results");
   const answerReview = document.getElementById("answer-review");
   const questionContainer = document.getElementById("question-container");
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Show quiz questions section
     quizIntro.style.display = "none";
-    enIqTestQuestions.style.display = "block";
+    quizQuestions.style.display = "block";
     quizResults.style.display = "none";
     answerReview.style.display = "none";
   }
@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `).join('');
     
     // Show results section
-    enIqTestQuestions.style.display = "none";
+    quizQuestions.style.display = "none";
     quizResults.style.display = "block";
   }
 
