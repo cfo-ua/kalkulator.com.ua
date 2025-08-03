@@ -168,6 +168,18 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Show loading state to improve UX and reduce CLS
+    result.innerHTML = `
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; text-align: center;">
+        <h3 style="margin: 0 0 20px 0; font-size: 1.8em;">Calculating Compatibility...</h3>
+        <div style="font-size: 1.2em; margin-bottom: 15px;">${person1Name} & ${person2Name}</div>
+        <div style="font-size: 1.1em; opacity: 0.9;">Analyzing birth chart synastry...</div>
+      </div>
+    `;
+
+    // Use setTimeout to show loading state briefly, improving perceived performance
+    setTimeout(() => {
+
     const sign1 = getZodiacSign(date1);
     const sign2 = getZodiacSign(date2);
     const compatibilityScore = calculateCompatibility(sign1, sign2, person1Time, person2Time);
@@ -236,5 +248,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </p>
       </div>
     `;
+    }, 500); // 500ms delay to show loading state
   });
 });
