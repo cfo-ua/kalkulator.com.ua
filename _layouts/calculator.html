@@ -6,7 +6,19 @@
 <html lang="{{ lang }}">
 <head>
   {% include seo.html %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="{{ '/assets/css/style.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}"></noscript>
+  
+  <!-- Fallback for critical CSS if preload not supported -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}">
+  
   {%- if page.seo.analytics -%}
     {{ page.seo.analytics }}
   {%- endif -%}
@@ -75,10 +87,15 @@
     {% endif %}
   </main>
   {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  
+  <!-- Defer JavaScript loading -->
+  <script src="{{ '/assets/js/main.min.js' | relative_url }}" defer></script>
   {%- if page.scripts %}
   {%- for script in page.scripts %}
-  <script src="{{ script | relative_url }}"></script>
+    {%- comment %} Check if minified version exists {% endcomment -%}
+    {%- assign script_name = script | split: '/' | last | replace: '.js', '' -%}
+    {%- assign minified_script = '/assets/js/min/' | append: script_name | append: '.min.js' -%}
+    <script src="{{ minified_script | relative_url }}" defer></script>
   {%- endfor %}
   {%- endif %}
 </body>

@@ -3126,6 +3126,8 @@ button.chart-range-btn.active:active {
 .food-row-grid .food-qty:hover {
   border-color: #d0d0d0;
 }
+
+.food-row-grid .food-item {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -3826,7 +3828,7 @@ input[type="date"]::-moz-focus-inner {
   .table-container {
     -webkit-overflow-scrolling: touch;
   }
-}
+
   .calculator-block div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
     gap: 15px !important;

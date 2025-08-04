@@ -6,7 +6,18 @@
 <html lang="{{ lang }}">
 <head>
   {% include seo.html %}
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- DNS prefetch for external domains -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="{{ '/assets/css/style.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}"></noscript>
+  
+  <!-- Fallback for critical CSS if preload not supported -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% include google-analytics.html %}
   {% include google-adsense.html %}
@@ -18,7 +29,9 @@
     {{ content }}
   </main>
   {% include footer.html %}
-  <script src="{{ '/assets/js/search-data.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  
+  <!-- Defer JavaScript loading -->
+  <script src="{{ '/assets/js/search-data.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/main.min.js' | relative_url }}" defer></script>
 </body>
 </html>
