@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Belt Size Calculator"
-categories: [clothing]
+categories: [other]
 seo:
   title: "Belt Size Calculator Online — Find Your Perfect Belt Size"
   description: "Find the right belt size online: convert between European, American, and other sizing systems. Learn how to measure and choose the perfect belt size."
