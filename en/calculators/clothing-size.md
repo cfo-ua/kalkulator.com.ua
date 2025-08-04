@@ -2,7 +2,7 @@
 layout: calculator
 title: Breast Size & Clothing Size Calculator
 categories:
-- clothing
+- other
 faq:
 - answer: Our calculator uses standardized international size charts and provides
     accurate recommendations based on your measurements. It calculates both bra sizes and clothing sizes. However, sizes can vary between
