@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Flip a Coin Online — Heads or Tails Random Decision Generator"
-categories: [other]
+categories: [entertainment]
 seo:
   title: "Flip a Coin Online — Heads or Tails Random Decision Generator"
   description: "Flip a virtual coin online for random decisions. Heads or tails, fair choice for sports, games and everyday questions. Animated 3D coin with realistic flipping physics."
