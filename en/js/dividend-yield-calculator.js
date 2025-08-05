@@ -263,3 +263,12 @@ function renderDividendChart(data) {
     }
   });
 }
+
+// Chart.js loader
+function ensureChartJs(callback) {
+  if (window.Chart) return callback();
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/chart.js";
+  script.onload = callback;
+  document.body.appendChild(script);
+}
