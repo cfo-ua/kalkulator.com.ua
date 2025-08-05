@@ -3,7 +3,7 @@ layout: calculator
 title: "Margin of Safety Calculator"
 categories: [financial]
 scripts:
-  - /js/margin-of-safety-calculator.js
+  - /en/js/margin-of-safety-calculator.js
 seo:
   title: "Margin of Safety Calculator - Safe Investing, Stock Risk Analysis"
   description: "Calculate margin of safety for stock investments. Determine optimal purchase price, analyze investment risks, and make informed decisions for value investing."

@@ -3,7 +3,7 @@ layout: calculator
 title: "Intrinsic Value Calculator"
 categories: [financial]
 scripts:
-  - /js/intrinsic-value-calculator.js
+  - /en/js/intrinsic-value-calculator.js
 seo:
   title: "Intrinsic Value Calculator - DCF, P/E Analysis, Stock Valuation Tool"
   description: "Calculate fair value of stocks using DCF model, P/E analysis, and dividend yield methods. Professional tool for fundamental analysis and investment valuation decisions."

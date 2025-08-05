@@ -3,7 +3,7 @@ layout: calculator
 title: "Cash Back Calculator"
 categories: [financial]
 scripts:
-  - /js/cash-back-calculator.js
+  - /en/js/cash-back-calculator.js
 seo:
   title: "Cash Back Calculator - Credit Card Rewards and Loyalty Program Returns"
   description: "Calculate cash back from credit cards, loyalty programs, and purchases. Compare different offers and maximize your rewards from everyday spending."
