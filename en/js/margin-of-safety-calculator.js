@@ -1,10 +1,11 @@
 // Margin of Safety Calculator JavaScript (English Version)
 function calculateMarginOfSafety() {
     // Get input values
-    const currentPrice = parseFloat(document.getElementById('currentPrice').value) || 100;
-    const fairValue = parseFloat(document.getElementById('fairValue').value) || 120;
+    const currentPrice = parseFloat(document.getElementById('marketPrice').value) || 100;
+    const fairValue = parseFloat(document.getElementById('intrinsicValue').value) || 120;
     const riskTolerance = document.getElementById('riskTolerance').value;
-    const investmentAmount = parseFloat(document.getElementById('investmentAmount').value) || 10000;
+    const sharesQuantity = parseFloat(document.getElementById('sharesQuantity').value) || 100;
+    const investmentAmount = currentPrice * sharesQuantity;
     
     // Calculate margin of safety
     const marginOfSafety = ((fairValue - currentPrice) / fairValue * 100);
