@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "TV Series Duration Calculator — Watch Time & Completion Date"
-categories: [other]
+categories: [entertainment]
 seo:
   title: "TV Series Duration Calculator — Watch Time & Completion Date"
   description: "Calculate total TV series watch time and completion date. Plan your binge-watching sessions with episode count, seasons, and viewing pace considerations."

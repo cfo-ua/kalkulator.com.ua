@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Tent Size Calculator — Choose Perfect Tent for Camping"
-categories: [other]
+categories: [travel]
 seo:
   title: "Tent Size Calculator — Choose Perfect Tent for Camping"
   description: "Calculate optimal tent size for your trip. Consider number of people, camping type and personal needs. Get recommendations for tent dimensions, capacity and type."

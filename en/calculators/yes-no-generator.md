@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Yes or No Generator — Random Decision Maker Online"
-categories: [other]
+categories: [entertainment]
 seo:
   title: "Yes or No Generator — Random Decision Maker Online"
   description: "Get random Yes or No answers to any question. Fair random decision generator for quick choices. Unbiased algorithm for decision making."
