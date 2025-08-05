@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Tie Length Calculator — Perfect Tie Length for Your Height"
-categories: [other]
+categories: [clothing]
 seo:
   title: "Tie Length Calculator — Find Perfect Tie Size for Your Height Online"
   description: "Determine the ideal tie length based on your height and body type. Our calculator helps you choose the right tie size for any outfit and occasion with expert style advice."

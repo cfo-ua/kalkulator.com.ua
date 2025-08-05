@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Ring Size Converter"
-categories: [other]
+categories: [clothing]
 seo:
   title: "Ring Size Converter Online - Convert Between US, EU, UK, JP Ring Sizes"
   description: "Convert ring sizes between international systems with our precise ring size calculator. Measure finger diameter or circumference to find perfect ring fit across US, EU, UK, and Japanese sizing."
