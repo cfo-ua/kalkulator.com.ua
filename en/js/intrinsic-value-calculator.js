@@ -209,7 +209,7 @@ function displayResults(data) {
         </div>
     `;
 
-    document.getElementById('intrinsic-value-result').innerHTML = resultsHTML;
+    document.getElementById('results').innerHTML = resultsHTML;
 }
 
 function updateValuationChart(data) {
