@@ -1,16 +1,16 @@
-// Cash Back Calculator JavaScript (Ukrainian Version)
+// Cash Back Calculator JavaScript (English Version)
 function calculateCashBack() {
     // Get input values
     const cardAnnualFee = parseFloat(document.getElementById('cardAnnualFee').value) || 0;
-    const totalSpending = parseFloat(document.getElementById('totalSpending').value) || 720000; // 60,000 UAH/month default
+    const totalSpending = parseFloat(document.getElementById('totalSpending').value) || 24000; // $2000/month default
     
     // Category spending amounts
     const categories = {
-        groceries: parseFloat(document.getElementById('groceriesSpending').value) || 108000,
-        gas: parseFloat(document.getElementById('gasSpending').value) || 72000,
-        dining: parseFloat(document.getElementById('diningSpending').value) || 72000,
-        travel: parseFloat(document.getElementById('travelSpending').value) || 36000,
-        online: parseFloat(document.getElementById('onlineSpending').value) || 54000,
+        groceries: parseFloat(document.getElementById('groceriesSpending').value) || 3600,
+        gas: parseFloat(document.getElementById('gasSpending').value) || 2400,
+        dining: parseFloat(document.getElementById('diningSpending').value) || 2400,
+        travel: parseFloat(document.getElementById('travelSpending').value) || 1200,
+        online: parseFloat(document.getElementById('onlineSpending').value) || 1800,
         other: 0 // Will be calculated
     };
     
@@ -72,30 +72,30 @@ function generateOptimization(categories, rates, totalSpending) {
     const recommendations = [];
     
     // Check for high-rate categories with low spending
-    if (categories.groceries < 90000 && rates.groceries >= 3) {
+    if (categories.groceries < 3000 && rates.groceries >= 3) {
         recommendations.push({
             type: 'increase',
-            category: 'Продукти',
-            message: 'Розгляньте можливість більшого використання цієї картки для покупки продуктів, щоб максимізувати винагороди 3%+',
-            potential: ((90000 - categories.groceries) * rates.groceries / 100).toFixed(0)
+            category: 'Groceries',
+            message: 'Consider using this card more for groceries to maximize 3%+ rewards',
+            potential: ((3000 - categories.groceries) * rates.groceries / 100).toFixed(0)
         });
     }
     
-    if (categories.gas < 60000 && rates.gas >= 3) {
+    if (categories.gas < 2000 && rates.gas >= 3) {
         recommendations.push({
             type: 'increase',
-            category: 'Паливо',
-            message: 'Максимізуйте покупки палива на цій картці для більших винагород',
-            potential: ((60000 - categories.gas) * rates.gas / 100).toFixed(0)
+            category: 'Gas',
+            message: 'Maximize gas purchases on this card for higher rewards',
+            potential: ((2000 - categories.gas) * rates.gas / 100).toFixed(0)
         });
     }
     
     // Check for low-rate categories with high spending
-    if (categories.other > 90000 && rates.other <= 1) {
+    if (categories.other > 3000 && rates.other <= 1) {
         recommendations.push({
             type: 'alternative',
-            category: 'Інші покупки',
-            message: 'Розгляньте іншу картку для загальних покупок для збільшення винагород',
+            category: 'Other purchases',
+            message: 'Consider a different card for general purchases to increase rewards',
             potential: (categories.other * 0.015).toFixed(0) // Potential with 1.5% card
         });
     }
@@ -111,8 +111,8 @@ function generateOptimization(categories, rates, totalSpending) {
     if (effectiveRate < 1.5) {
         recommendations.push({
             type: 'strategy',
-            category: 'Загальна стратегія',
-            message: 'Ваша ефективна ставка нижче 1.5%. Розгляньте оптимізацію витрат за категоріями',
+            category: 'Overall',
+            message: 'Your effective rate is below 1.5%. Consider optimizing category spending',
             potential: (totalSpending * 0.02 - totalSpending * effectiveRate / 100).toFixed(0)
         });
     }
@@ -122,12 +122,12 @@ function generateOptimization(categories, rates, totalSpending) {
 
 function displayCashBackResults(data) {
     const categoryLabels = {
-        groceries: 'Продукти',
-        gas: 'Паливо',
-        dining: 'Ресторани',
-        travel: 'Подорожі',
-        online: 'Онлайн покупки',
-        other: 'Інші покупки'
+        groceries: 'Groceries',
+        gas: 'Gas/Fuel',
+        dining: 'Dining',
+        travel: 'Travel',
+        online: 'Online Shopping',
+        other: 'Other Purchases'
     };
     
     // Generate category breakdown table
@@ -141,9 +141,9 @@ function displayCashBackResults(data) {
         categoryRows += `
             <tr class="${category === 'other' ? 'other-spending' : ''}">
                 <td>${categoryLabels[category]}</td>
-                <td>₴${spending.toFixed(0)}</td>
+                <td>$${spending.toFixed(0)}</td>
                 <td>${rate.toFixed(1)}%</td>
-                <td>₴${cashback.toFixed(0)}</td>
+                <td>$${cashback.toFixed(0)}</td>
                 <td>${percentage.toFixed(1)}%</td>
             </tr>
         `;
@@ -151,83 +151,83 @@ function displayCashBackResults(data) {
     
     const resultsHTML = `
         <div class="results-container">
-            <h3>💳 Аналіз повернення коштів</h3>
+            <h3>💳 Cash Back Analysis</h3>
             
             <div class="insight-cards">
                 <div class="insight-card ${data.netAnnualBenefit >= 0 ? 'success' : 'warning'}">
-                    <h4>💰 Чиста річна вигода</h4>
-                    <div class="value-large">₴${data.netAnnualBenefit.toFixed(0)}</div>
-                    <p>Після ₴${data.cardAnnualFee} річної плати</p>
+                    <h4>💰 Net Annual Benefit</h4>
+                    <div class="value-large">$${data.netAnnualBenefit.toFixed(0)}</div>
+                    <p>After $${data.cardAnnualFee} annual fee</p>
                 </div>
                 
                 <div class="insight-card info">
-                    <h4>📊 Ефективна ставка повернення</h4>
+                    <h4>📊 Effective Cash Back Rate</h4>
                     <div class="value-large">${data.effectiveRate.toFixed(2)}%</div>
-                    <p>Зважене середнє по всіх витратах</p>
+                    <p>Weighted average across all spending</p>
                 </div>
                 
                 <div class="insight-card success">
-                    <h4>📅 Місячна вигода</h4>
-                    <div class="value-large">₴${data.monthlyBenefit.toFixed(0)}</div>
-                    <p>Середня місячна вартість повернення коштів</p>
+                    <h4>📅 Monthly Benefit</h4>
+                    <div class="value-large">$${data.monthlyBenefit.toFixed(0)}</div>
+                    <p>Average monthly cash back value</p>
                 </div>
             </div>
 
             <div class="detailed-results">
-                <h4>🔍 Розбивка за категоріями</h4>
+                <h4>🔍 Category Breakdown</h4>
                 
                 <table class="results-table">
                     <thead>
                         <tr>
-                            <th>Категорія</th>
-                            <th>Річні витрати</th>
-                            <th>Ставка повернення</th>
-                            <th>Річні винагороди</th>
-                            <th>% від загальних</th>
+                            <th>Category</th>
+                            <th>Annual Spending</th>
+                            <th>Cash Back Rate</th>
+                            <th>Annual Rewards</th>
+                            <th>% of Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         ${categoryRows}
                         <tr class="totals-row">
-                            <td><strong>Всього</strong></td>
-                            <td><strong>₴${data.totalSpending.toFixed(0)}</strong></td>
+                            <td><strong>Total</strong></td>
+                            <td><strong>$${data.totalSpending.toFixed(0)}</strong></td>
                             <td><strong>${data.effectiveRate.toFixed(2)}%</strong></td>
-                            <td><strong>₴${data.totalCashBack.toFixed(0)}</strong></td>
+                            <td><strong>$${data.totalCashBack.toFixed(0)}</strong></td>
                             <td><strong>100.0%</strong></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div class="annual-projection">
-                    <h5>📈 Річний прогноз</h5>
+                    <h5>📈 Annual Projection</h5>
                     <div class="projection-grid">
                         <div class="projection-item">
-                            <div class="label">Загальне повернення</div>
-                            <div class="value">₴${data.totalCashBack.toFixed(0)}</div>
+                            <div class="label">Total Cash Back</div>
+                            <div class="value">$${data.totalCashBack.toFixed(0)}</div>
                         </div>
                         <div class="projection-item">
-                            <div class="label">Річна плата</div>
-                            <div class="value">-₴${data.cardAnnualFee.toFixed(0)}</div>
+                            <div class="label">Annual Fee</div>
+                            <div class="value">-$${data.cardAnnualFee.toFixed(0)}</div>
                         </div>
                         <div class="projection-item positive">
-                            <div class="label">Чиста вигода</div>
-                            <div class="value">₴${data.netAnnualBenefit.toFixed(0)}</div>
+                            <div class="label">Net Benefit</div>
+                            <div class="value">$${data.netAnnualBenefit.toFixed(0)}</div>
                         </div>
                         <div class="projection-item">
-                            <div class="label">Точка беззбитковості</div>
-                            <div class="value">₴${data.breakEvenSpending.toFixed(0)}</div>
+                            <div class="label">Break-even Spending</div>
+                            <div class="value">$${data.breakEvenSpending.toFixed(0)}</div>
                         </div>
                     </div>
                 </div>
 
                 ${data.optimization.length > 0 ? `
                 <div class="recommendations">
-                    <h5>🎯 Рекомендації з оптимізації</h5>
+                    <h5>🎯 Optimization Recommendations</h5>
                     <ul>
                         ${data.optimization.map(rec => `
                             <li class="recommendation ${rec.type === 'increase' ? 'success' : rec.type === 'alternative' ? 'improvement' : 'warning'}">
                                 <strong>${rec.category}:</strong> ${rec.message}
-                                ${rec.potential ? ` (Потенціал: +₴${rec.potential} річно)` : ''}
+                                ${rec.potential ? ` (Potential: +$${rec.potential} annually)` : ''}
                             </li>
                         `).join('')}
                     </ul>
@@ -235,20 +235,20 @@ function displayCashBackResults(data) {
                 ` : ''}
 
                 <div class="interpretation">
-                    <h5>💡 Аналітичні висновки</h5>
+                    <h5>💡 Analysis Insights</h5>
                     <ul>
-                        <li>💳 <strong>Цінність картки:</strong> ${data.netAnnualBenefit >= 3000 ? 'Відмінна цінність для вашої моделі витрат' : 
-                            data.netAnnualBenefit >= 0 ? 'Хороша цінність, покриває річну плату' : 
-                            'Розгляньте, чи виправдана річна плата'}</li>
-                        <li>📊 <strong>Ефективна ставка:</strong> ${data.effectiveRate >= 2 ? 'Відмінна' : 
-                            data.effectiveRate >= 1.5 ? 'Хороша' : 'Нижче середньої'} загальна дохідність</li>
-                        <li>🎯 <strong>Оптимізація:</strong> Зосередьте витрати на ${data.effectiveRate >= 2 ? 'підтриманні поточних' : 'вищих ставок'} категоріях</li>
-                        <li>💰 <strong>Місячна цінність:</strong> Ця картка забезпечує приблизно ₴${data.monthlyBenefit.toFixed(0)} місячних переваг</li>
+                        <li>💳 <strong>Card Value:</strong> ${data.netAnnualBenefit >= 100 ? 'Excellent value for your spending pattern' : 
+                            data.netAnnualBenefit >= 0 ? 'Good value, covers the annual fee' : 
+                            'Consider if annual fee is justified'}</li>
+                        <li>📊 <strong>Effective Rate:</strong> ${data.effectiveRate >= 2 ? 'Excellent' : 
+                            data.effectiveRate >= 1.5 ? 'Good' : 'Below average'} overall return rate</li>
+                        <li>🎯 <strong>Optimization:</strong> Focus spending on ${data.effectiveRate >= 2 ? 'maintaining current' : 'higher-rate'} categories</li>
+                        <li>💰 <strong>Monthly Value:</strong> This card provides approximately $${data.monthlyBenefit.toFixed(0)} in monthly benefits</li>
                         ${data.effectiveRate >= 2.5 ? 
-                            '<li>⭐ <strong>Відмінний вибір:</strong> Ця картка добре підходить до ваших витратних звичок</li>' : 
+                            '<li>⭐ <strong>Excellent Choice:</strong> This card is well-suited to your spending habits</li>' : 
                             data.effectiveRate < 1 ? 
-                            '<li>⚠️ <strong>Розгляньте альтернативи:</strong> Інша картка може запропонувати кращі винагороди</li>' : 
-                            '<li>✅ <strong>Прийнятна цінність:</strong> Картка забезпечує розумні винагороди за ваші витрати</li>'}
+                            '<li>⚠️ <strong>Consider Alternatives:</strong> A different card might offer better rewards</li>' : 
+                            '<li>✅ <strong>Decent Value:</strong> Card provides reasonable rewards for your spending</li>'}
                     </ul>
                 </div>
             </div>
@@ -283,14 +283,14 @@ function updateCashBackChart(cashBack, categories) {
         other: '#95a5a6'
     };
     
-    // Category labels in Ukrainian
+    // Category labels
     const labels = {
-        groceries: 'Продукти',
-        gas: 'Паливо',
-        dining: 'Ресторани',
-        travel: 'Подорожі',
-        online: 'Онлайн',
-        other: 'Інше'
+        groceries: 'Groceries',
+        gas: 'Gas/Fuel',
+        dining: 'Dining',
+        travel: 'Travel',
+        online: 'Online',
+        other: 'Other'
     };
     
     // Draw pie chart
@@ -323,7 +323,7 @@ function updateCashBackChart(cashBack, categories) {
             ctx.font = '12px Arial';
             ctx.textAlign = 'center';
             ctx.fillText(`${labels[category]}`, labelX, labelY);
-            ctx.fillText(`₴${cashBack[category].toFixed(0)} (${percentage}%)`, labelX, labelY + 15);
+            ctx.fillText(`$${cashBack[category].toFixed(0)} (${percentage}%)`, labelX, labelY + 15);
             
             currentAngle += sliceAngle;
         }
@@ -333,8 +333,8 @@ function updateCashBackChart(cashBack, categories) {
     ctx.fillStyle = '#2c3e50';
     ctx.font = 'bold 16px Arial';
     ctx.textAlign = 'center';
-    ctx.fillText('Розподіл річного повернення коштів', centerX, 30);
-    ctx.fillText(`Всього: ₴${total.toFixed(0)}`, centerX, height - 20);
+    ctx.fillText('Annual Cash Back Distribution', centerX, 30);
+    ctx.fillText(`Total: $${total.toFixed(0)}`, centerX, height - 20);
 }
 
 // Initialize calculator when DOM is loaded
