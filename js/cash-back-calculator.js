@@ -269,12 +269,30 @@ function displayCashBackResults(data) {
 }
 
 function updateCashBackChart(cashBack, categories) {
-    const canvas = document.getElementById('cashBackChart');
-    if (!canvas) return;
+    const canvas = document.getElementById('cashbackChart');
+    if (!canvas) {
+        console.error('Canvas element with id "cashbackChart" not found');
+        return;
+    }
     
     const ctx = canvas.getContext('2d');
-    const width = canvas.width = 500;
-    const height = canvas.height = 400;
+    
+    // Set canvas size to match container while maintaining aspect ratio
+    const container = canvas.parentElement;
+    const containerWidth = container.clientWidth;
+    const aspectRatio = 500 / 400;
+    
+    let width = Math.min(containerWidth, 500);
+    let height = width / aspectRatio;
+    
+    // Ensure minimum size for mobile
+    if (width < 300) {
+        width = 300;
+        height = width / aspectRatio;
+    }
+    
+    canvas.width = width;
+    canvas.height = height;
     
     // Clear canvas
     ctx.fillStyle = '#ffffff';
@@ -282,6 +300,15 @@ function updateCashBackChart(cashBack, categories) {
     
     // Calculate total for percentages
     const total = Object.values(cashBack).reduce((sum, value) => sum + value, 0);
+    
+    // If no cash back, show a message
+    if (total === 0) {
+        ctx.fillStyle = '#666666';
+        ctx.font = '16px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Немає даних для відображення', width / 2, height / 2);
+        return;
+    }
     
     // Colors for each category
     const colors = {
@@ -349,6 +376,19 @@ function updateCashBackChart(cashBack, categories) {
 
 // Initialize calculator when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Calculate with default values on page load
+    calculateCashback();
+    
+    // Add event listeners to inputs for real-time updates
+    const inputs = document.querySelectorAll('#monthlySpending, #groceryAmount, #groceryCashback, #fuelAmount, #fuelCashback, #restaurantAmount, #restaurantCashback, #onlineAmount, #onlineCashback, #utilitiesAmount, #utilitiesCashback, #annualFee');
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            // Debounce the calculation to avoid too frequent updates
+            clearTimeout(this.calcTimeout);
+            this.calcTimeout = setTimeout(calculateCashback, 500);
+        });
+    });
+    
     const form = document.querySelector('#cash-back-form');
     if (form) {
         form.addEventListener('submit', function(e) {
