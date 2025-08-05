@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Spin the Wheel Online — Random Choice Generator with Custom Options"
-categories: [other]
+categories: [entertainment]
 seo:
   title: "Spin the Wheel Online — Random Choice Generator with Custom Options"
   description: "Create a custom wheel of fortune online with your options. Add any choices, spin the wheel and get random results. Perfect for games, decisions and giveaways."
