@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Toothpaste Calculator - Usage Duration Calculator"
-categories: [health]
+categories: [environment]
 seo:
   title: "Toothpaste Calculator - Usage Duration and Cost Calculator"
   description: "Calculate how long a tube of toothpaste lasts, plan purchases and save on oral hygiene. Personalized recommendations for dental health."

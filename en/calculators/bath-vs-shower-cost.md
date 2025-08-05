@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Bath vs Shower Cost Calculator - Water Usage Comparison"
-categories: [health]
+categories: [environment]
 seo:
   title: "Bath vs Shower Cost Calculator - Water Usage and Cost Comparison"
   description: "Compare water consumption and costs between baths and showers. Calculate water savings, utility costs, and environmental impact. Optimize your home water usage with science-based calculations."
