@@ -2641,10 +2641,18 @@ footer {
   display: block;
 }
 
+#cashbackChart {
+  width: 100% !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  display: block;
+}
+
 /* Responsive chart adjustments */
 @media (max-width: 768px) {
   #payoff-chart canvas,
-  #passive-income-chart canvas {
+  #passive-income-chart canvas,
+  #cashbackChart {
     height: 300px !important;
     max-height: 300px !important;
   }
@@ -2657,7 +2665,8 @@ footer {
 
 @media (max-width: 480px) {
   #payoff-chart canvas,
-  #passive-income-chart canvas {
+  #passive-income-chart canvas,
+  #cashbackChart {
     height: 250px !important;
     max-height: 250px !important;
   }
