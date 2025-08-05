@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Tire Size Calculator"
-categories: [other]
+categories: [travel]
 seo:
   title: "Tire Size Calculator Online — Calculate Diameter & Specifications"
   description: "Calculate tire parameters online: diameter, width, sidewall height, circumference. Compare different tire sizes and learn about compatibility."
