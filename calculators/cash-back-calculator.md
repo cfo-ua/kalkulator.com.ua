@@ -144,5 +144,5 @@ faq:
 <!--CHART_SPLIT-->
 
 <div class="chart-container">
-  <canvas id="cashbackChart" width="400" height="200"></canvas>
+  <canvas id="cashbackChart" width="500" height="400"></canvas>
 </div>

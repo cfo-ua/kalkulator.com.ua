@@ -2642,10 +2642,10 @@ footer {
 }
 
 #cashbackChart {
-  width: 100% !important;
-  height: 400px !important;
-  max-height: 400px !important;
+  max-width: 100%;
+  height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* Responsive chart adjustments */
@@ -2653,13 +2653,13 @@ footer {
   #payoff-chart canvas,
   #passive-income-chart canvas,
   #cashbackChart {
-    height: 300px !important;
-    max-height: 300px !important;
+    max-width: 100%;
+    height: auto;
   }
   
   #portfolio-composition canvas {
-    height: 250px !important;
-    max-height: 250px !important;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -2667,13 +2667,13 @@ footer {
   #payoff-chart canvas,
   #passive-income-chart canvas,
   #cashbackChart {
-    height: 250px !important;
-    max-height: 250px !important;
+    max-width: 100%;
+    height: auto;
   }
   
   #portfolio-composition canvas {
-    height: 200px !important;
-    max-height: 200px !important;
+    max-width: 100%;
+    height: auto;
   }
 }
 
