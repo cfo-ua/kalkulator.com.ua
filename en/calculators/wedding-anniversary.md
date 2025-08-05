@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Wedding Anniversary Calculator Online"
-categories: [other]
+categories: [entertainment]
 seo:
   title: "Wedding Anniversary Calculator — Traditional Anniversary Gifts by Year"
   description: "Calculate your wedding anniversary and discover traditional gifts for each year. Complete guide to anniversary names, symbols, and gift ideas for every milestone."
