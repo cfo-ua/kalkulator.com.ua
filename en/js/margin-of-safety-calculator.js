@@ -236,7 +236,7 @@ function displayMarginResults(data) {
         </div>
     `;
 
-    document.getElementById('margin-safety-result').innerHTML = resultsHTML;
+    document.getElementById('results').innerHTML = resultsHTML;
 }
 
 function updateMarginChart(data) {

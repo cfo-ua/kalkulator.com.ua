@@ -1,40 +1,50 @@
 // Cash Back Calculator JavaScript (Ukrainian Version)
-function calculateCashBack() {
+function calculateCashback() {
     // Get input values
-    const cardAnnualFee = parseFloat(document.getElementById('cardAnnualFee').value) || 0;
-    const totalSpending = parseFloat(document.getElementById('totalSpending').value) || 720000; // 60,000 UAH/month default
+    const monthlySpending = parseFloat(document.getElementById('monthlySpending').value) || 15000;
+    const totalSpending = monthlySpending * 12;
+    const cardAnnualFee = parseFloat(document.getElementById('annualFee').value) || 0;
     
     // Category spending amounts
     const categories = {
-        groceries: parseFloat(document.getElementById('groceriesSpending').value) || 108000,
-        gas: parseFloat(document.getElementById('gasSpending').value) || 72000,
-        dining: parseFloat(document.getElementById('diningSpending').value) || 72000,
-        travel: parseFloat(document.getElementById('travelSpending').value) || 36000,
-        online: parseFloat(document.getElementById('onlineSpending').value) || 54000,
+        groceries: parseFloat(document.getElementById('groceryAmount').value) || 6000,
+        gas: parseFloat(document.getElementById('fuelAmount').value) || 3000,
+        dining: parseFloat(document.getElementById('restaurantAmount').value) || 2000,
+        online: parseFloat(document.getElementById('onlineAmount').value) || 2500,
+        utilities: parseFloat(document.getElementById('utilitiesAmount').value) || 1500,
         other: 0 // Will be calculated
     };
     
     // Category cash back rates (%)
     const rates = {
-        groceries: parseFloat(document.getElementById('groceriesRate').value) || 3,
-        gas: parseFloat(document.getElementById('gasRate').value) || 3,
-        dining: parseFloat(document.getElementById('diningRate').value) || 2,
-        travel: parseFloat(document.getElementById('travelRate').value) || 2,
-        online: parseFloat(document.getElementById('onlineRate').value) || 1.5,
-        other: parseFloat(document.getElementById('otherRate').value) || 1
+        groceries: parseFloat(document.getElementById('groceryCashback').value) || 2.0,
+        gas: parseFloat(document.getElementById('fuelCashback').value) || 5.0,
+        dining: parseFloat(document.getElementById('restaurantCashback').value) || 10.0,
+        online: parseFloat(document.getElementById('onlineCashback').value) || 3.0,
+        utilities: parseFloat(document.getElementById('utilitiesCashback').value) || 1.0,
+        other: 1.0
     };
     
-    // Calculate other spending
-    const categorizedSpending = categories.groceries + categories.gas + categories.dining + 
-                               categories.travel + categories.online;
-    categories.other = Math.max(0, totalSpending - categorizedSpending);
+    // Calculate other spending (convert monthly amounts to annual)
+    const annualCategories = {
+        groceries: categories.groceries * 12,
+        gas: categories.gas * 12,
+        dining: categories.dining * 12,
+        online: categories.online * 12,
+        utilities: categories.utilities * 12,
+        other: 0
+    };
+    
+    const categorizedSpending = annualCategories.groceries + annualCategories.gas + annualCategories.dining + 
+                               annualCategories.online + annualCategories.utilities;
+    annualCategories.other = Math.max(0, totalSpending - categorizedSpending);
     
     // Calculate cash back for each category
     const cashBack = {};
     let totalCashBack = 0;
     
-    Object.keys(categories).forEach(category => {
-        cashBack[category] = (categories[category] * rates[category]) / 100;
+    Object.keys(annualCategories).forEach(category => {
+        cashBack[category] = (annualCategories[category] * rates[category]) / 100;
         totalCashBack += cashBack[category];
     });
     
@@ -51,7 +61,7 @@ function calculateCashBack() {
     
     // Display results
     displayCashBackResults({
-        categories,
+        categories: annualCategories,
         rates,
         cashBack,
         totalSpending,
@@ -65,7 +75,7 @@ function calculateCashBack() {
     });
     
     // Update chart
-    updateCashBackChart(cashBack, categories);
+    updateCashBackChart(cashBack, annualCategories);
 }
 
 function generateOptimization(categories, rates, totalSpending) {
@@ -104,8 +114,8 @@ function generateOptimization(categories, rates, totalSpending) {
     const effectiveRate = ((categories.groceries * rates.groceries + 
                            categories.gas * rates.gas + 
                            categories.dining * rates.dining + 
-                           categories.travel * rates.travel + 
-                           categories.online * rates.online + 
+                           categories.online * rates.online +
+                           categories.utilities * rates.utilities + 
                            categories.other * rates.other) / 100) / totalSpending * 100;
     
     if (effectiveRate < 1.5) {
@@ -125,8 +135,8 @@ function displayCashBackResults(data) {
         groceries: 'Продукти',
         gas: 'Паливо',
         dining: 'Ресторани',
-        travel: 'Подорожі',
         online: 'Онлайн покупки',
+        utilities: 'Комунальні послуги',
         other: 'Інші покупки'
     };
     
@@ -255,7 +265,7 @@ function displayCashBackResults(data) {
         </div>
     `;
 
-    document.getElementById('cash-back-result').innerHTML = resultsHTML;
+    document.getElementById('results').innerHTML = resultsHTML;
 }
 
 function updateCashBackChart(cashBack, categories) {
@@ -278,8 +288,8 @@ function updateCashBackChart(cashBack, categories) {
         groceries: '#e74c3c',
         gas: '#3498db',
         dining: '#2ecc71',
-        travel: '#f39c12',
         online: '#9b59b6',
+        utilities: '#f39c12',
         other: '#95a5a6'
     };
     
@@ -288,8 +298,8 @@ function updateCashBackChart(cashBack, categories) {
         groceries: 'Продукти',
         gas: 'Паливо',
         dining: 'Ресторани',
-        travel: 'Подорожі',
         online: 'Онлайн',
+        utilities: 'Комунальні',
         other: 'Інше'
     };
     
@@ -343,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            calculateCashBack();
+            calculateCashback();
         });
     }
 });
