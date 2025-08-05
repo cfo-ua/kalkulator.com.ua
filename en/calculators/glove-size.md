@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Glove (Hand) Size Calculator"
-categories: [other]
+categories: [clothing]
 seo:
   title: "Glove Size Calculator Online - Find Your Perfect Hand Size (EU, US, UK)"
   description: "Calculate your perfect glove size with our hand measurement calculator. Get accurate glove sizing for winter, work, sports, and medical gloves across international sizing systems."

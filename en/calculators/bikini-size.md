@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Swimsuit (Bikini) Size Calculator"
-categories: [other]
+categories: [clothing]
 seo:
   title: "Bikini Size Calculator Online - Find Your Perfect Swimsuit Size (US, EU, UK, AU)"
   description: "Calculate your perfect bikini and swimsuit size with our comprehensive calculator. Get accurate measurements for bikini tops and bottoms across international sizing systems."

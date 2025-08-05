@@ -92,6 +92,10 @@ seo:
     <span>🏗️</span>
     <div>Construction<br><small>Concrete, drywall, fencing, electrical</small></div>
   </a>
+  <a class="category-card" href="/en/categories/clothing/">
+    <span>👗</span>
+    <div>Clothing & Footwear<br><small>Sizes, charts, converters</small></div>
+  </a>
   <a class="category-card" href="/en/categories/time-date/">
     <span>⏰</span>
     <div>Time & Date<br><small>Calendar, age, time difference</small></div>

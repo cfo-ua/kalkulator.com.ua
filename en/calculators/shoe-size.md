@@ -2,7 +2,7 @@
 layout: calculator
 title: Shoe Size Converter
 categories:
-- other
+- clothing
 faq:
 - answer: Stand barefoot on paper against a wall, mark the longest point of your foot,
     and measure from the wall to the mark in millimeters. Do this for both feet and
