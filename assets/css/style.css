@@ -4240,3 +4240,336 @@ input[type="date"]::-moz-focus-inner {
     padding: 1rem;
   }
 }
+
+/* Financial Calculator Specific Styles */
+.calculator-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.calculator-inputs {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(21, 122, 255, 0.1);
+}
+
+.calculate-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.calculate-btn:active {
+  transform: translateY(0);
+}
+
+/* Category Input Styles for Cash Back Calculator */
+.categories-section {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: white;
+}
+
+.categories-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+  font-size: 1.1rem;
+}
+
+.category-input {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-input:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.category-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.category-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.category-controls input {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Results Display Styles */
+.results-container {
+  margin-top: 1.5rem;
+}
+
+.results-container h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--main-color);
+}
+
+.detailed-results {
+  margin-top: 2rem;
+}
+
+.detailed-results h4, .detailed-results h5 {
+  margin: 1.5rem 0 1rem 0;
+  color: var(--main-color);
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.results-table th, .results-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.results-table th {
+  background: var(--card-bg);
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.results-table .totals-row {
+  background: var(--card-bg);
+  font-weight: 600;
+}
+
+.results-table .other-spending {
+  background: #f8f9fa;
+  font-style: italic;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.metric-item {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.chart-container {
+  margin: 2rem 0;
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Interpretation and Recommendations */
+.interpretation, .recommendations {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent);
+}
+
+.interpretation h5, .recommendations h5 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+}
+
+.interpretation ul, .recommendations ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.interpretation li, .recommendations li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.recommendation.success {
+  color: #28a745;
+}
+
+.recommendation.warning {
+  color: #dc3545;
+}
+
+.recommendation.improvement {
+  color: #007bff;
+}
+
+/* Break-even and Projection Styles */
+.break-even-analysis, .annual-projection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.projection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projection-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.projection-item.positive {
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f8e8 100%);
+  border: 1px solid #28a745;
+}
+
+.projection-item .label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.projection-item .value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* Scenario Grid */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.scenario {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.scenario.success {
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f8e8 100%);
+  border-color: #28a745;
+}
+
+.scenario.neutral {
+  background: var(--card-bg);
+}
+
+.scenario .profit {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.scenario .loss {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.scenario .neutral {
+  color: #666;
+  font-weight: bold;
+}
+
+/* Responsive Design for Financial Calculators */
+@media (max-width: 768px) {
+  .category-controls {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projection-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-inputs {
+    padding: 1rem;
+  }
+  
+  .results-table {
+    font-size: 0.9rem;
+  }
+  
+  .results-table th, .results-table td {
+    padding: 0.5rem;
+  }
+}
