@@ -5,6 +5,8 @@ url: "https://kalkulator.com.ua"
 exclude: 
   - README.md
   - SEARCH_SYSTEM.md
+  - SCHEMA_ORG_IMPLEMENTATION.md
+  - SITEMAP_*.md
   - vendor/
   - .bundle/
   - Gemfile
