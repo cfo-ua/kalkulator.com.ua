@@ -99,4 +99,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+  
+  // Auto-calculate with default values on page load
+  setTimeout(() => {
+    if (loanAmount.value && interestRate.value && loanTerm.value) {
+      calculateLoan();
+    }
+  }, 100);
 });

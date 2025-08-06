@@ -270,3 +270,11 @@ function updateDownPaymentInfo() {
     }
   }
 }
+
+// Auto-calculate with default values on page load
+setTimeout(() => {
+  const form = document.getElementById("mortgage-form");
+  if (form) {
+    form.dispatchEvent(new Event('submit'));
+  }
+}, 100);

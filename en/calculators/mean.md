@@ -54,7 +54,7 @@ faq:
 <form id="mean-form" autocomplete="off">
   <label>
     Numbers (separated by commas):
-    <input type="text" id="mean-input" placeholder="Example: 3, 5, 7" required>
+    <input type="text" id="mean-input" value="10, 15, 20, 25, 30" placeholder="Example: 3, 5, 7" required>
   </label>
   <button type="submit">Calculate</button>
 </form>

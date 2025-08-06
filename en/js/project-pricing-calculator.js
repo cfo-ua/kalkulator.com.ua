@@ -185,4 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
   });
+  
+  // Auto-calculate with default values on page load
+  setTimeout(() => {
+    form.dispatchEvent(new Event('submit'));
+  }, 100);
 });

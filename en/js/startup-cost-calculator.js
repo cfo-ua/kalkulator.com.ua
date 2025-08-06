@@ -191,6 +191,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Auto-calculate with default values on page load
+setTimeout(() => {
+  const form = document.getElementById("startup-cost-form");
+  if (form) {
+    form.dispatchEvent(new Event('submit'));
+  }
+}, 100);
+
 // Dynamic loader for Chart.js
 function ensureChartJs(callback) {
   if (window.Chart) return callback();

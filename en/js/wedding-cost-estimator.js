@@ -764,4 +764,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cost < 60000) return "Large Wedding";
     return "Luxury Wedding";
   }
+  
+  // Auto-calculate with default values on page load
+  setTimeout(() => {
+    calculateWeddingCosts();
+  }, 100);
 });

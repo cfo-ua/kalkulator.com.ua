@@ -14,5 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const mean = sum / numbers.length;
       result.innerHTML = `<b>Arithmetic Mean:</b> ${mean.toFixed(4)}`;
     });
+    
+    // Calculate with default values on page load
+    form.dispatchEvent(new Event('submit'));
   }
 });

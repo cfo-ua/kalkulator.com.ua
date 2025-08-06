@@ -30,15 +30,15 @@ faq:
     <h3>Loan Details</h3>
     <div class="input-group">
       <label for="loanAmount">Loan Amount ($):</label>
-      <input type="number" id="loanAmount" min="0" placeholder="Enter loan amount">
+      <input type="number" id="loanAmount" value="25000" min="0" placeholder="Enter loan amount">
     </div>
     <div class="input-group">
       <label for="interestRate">Annual Interest Rate (%):</label>
-      <input type="number" id="interestRate" min="0" max="50" placeholder="Enter interest rate">
+      <input type="number" id="interestRate" value="7.5" min="0" max="50" placeholder="Enter interest rate">
     </div>
     <div class="input-group">
       <label for="loanTerm">Loan Term (years):</label>
-      <input type="number" id="loanTerm" min="1" max="50" placeholder="Enter loan term">
+      <input type="number" id="loanTerm" value="5" min="1" max="50" placeholder="Enter loan term">
     </div>
     <button type="button" id="calculateBtn" class="btn-primary">Calculate</button>
     <div class="result" id="loanResult"></div>
