@@ -4249,3 +4249,51 @@ input[type="date"]::-moz-focus-inner {
     padding: 1rem;
   }
 }
+
+/* ============================= */
+/* Calculator Modes              */
+/* ============================= */
+
+.calculator-modes {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.mode-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--border);
+  background: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--main-color);
+}
+
+.mode-btn:hover {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.mode-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.mode-section {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .calculator-modes {
+    flex-direction: column;
+  }
+  
+  .mode-btn {
+    text-align: center;
+  }
+}
