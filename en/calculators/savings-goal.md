@@ -82,13 +82,13 @@ faq:
 
 <form id="savings-goal-form">
   <label for="goal">Target Amount ($):</label>
-  <input type="number" id="goal" min="0" required placeholder="e.g., 10000">
+  <input type="number" id="goal" value="10000" min="0" required placeholder="e.g., 10000">
 
   <label for="initial">Current Savings ($):</label>
-  <input type="number" id="initial" min="0" value="0" placeholder="e.g., 2000">
+  <input type="number" id="initial" min="0" value="2000" placeholder="e.g., 2000">
 
   <label for="months">Number of Months to Save:</label>
-  <input type="number" id="months" min="1" required placeholder="e.g., 12">
+  <input type="number" id="months" value="12" min="1" required placeholder="e.g., 12">
 
   <button type="submit">Calculate</button>
 </form>

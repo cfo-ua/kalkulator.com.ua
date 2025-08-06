@@ -42,11 +42,11 @@ faq:
     <h3>What is X% of Y?</h3>
     <div class="input-group">
       <label for="percent1">Percentage (%):</label>
-      <input type="number" id="percent1" placeholder="Enter percentage">
+      <input type="number" id="percent1" value="15" placeholder="Enter percentage">
     </div>
     <div class="input-group">
       <label for="number1">Number:</label>
-      <input type="number" id="number1" placeholder="Enter number">
+      <input type="number" id="number1" value="200" placeholder="Enter number">
     </div>
     <div class="result" id="result1"></div>
   </div>

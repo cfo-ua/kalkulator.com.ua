@@ -46,7 +46,7 @@ faq:
 ---
 
 <form id="area-converter-form" class="converter-form">
-  <input type="number" id="area-input" placeholder="Enter area value" required>
+  <input type="number" id="area-input" value="100" placeholder="Enter area value" required>
   <select id="area-from">
     <option value="m2" selected>square meters (m²)</option>
     <option value="cm2">square centimeters (cm²)</option>

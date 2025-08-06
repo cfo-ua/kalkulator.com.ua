@@ -192,4 +192,11 @@ document.addEventListener("DOMContentLoaded", function () {
       day: 'numeric'
     });
   }
+  
+  // Auto-calculate with default values on page load
+  setTimeout(() => {
+    if (goalInput.value && monthsInput.value) {
+      calculateSavingsGoal();
+    }
+  }, 100);
 });

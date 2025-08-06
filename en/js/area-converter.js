@@ -33,4 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   input.addEventListener("input", convertArea);
   from.addEventListener("change", convertArea);
   to.addEventListener("change", convertArea);
+  
+  // Auto-convert with default value on page load
+  setTimeout(convertArea, 100);
 });

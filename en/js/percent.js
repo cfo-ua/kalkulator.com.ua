@@ -69,4 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
     oldValue.addEventListener('input', calculatePercentageChange);
     newValue.addEventListener('input', calculatePercentageChange);
   }
+  
+  // Auto-calculate with default values on page load
+  setTimeout(() => {
+    if (percent1 && number1 && percent1.value && number1.value) {
+      calculatePercentOf();
+    }
+  }, 100);
 });

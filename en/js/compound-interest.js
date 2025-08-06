@@ -113,3 +113,11 @@ function ensureChartJs(callback) {
     document.head.appendChild(script);
   }
 }
+
+// Auto-calculate with default values on page load
+setTimeout(() => {
+  const form = document.getElementById("compound-form");
+  if (form) {
+    form.dispatchEvent(new Event('submit'));
+  }
+}, 100);
