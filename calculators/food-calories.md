@@ -134,24 +134,7 @@ faq:
 }
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for faq_item in page.faq %}
-    {
-      "@type": "Question",
-      "name": "{{ faq_item.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ faq_item.answer }}"
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+
 
 <div class="calculator-section">
   <div id="food-rows">
