@@ -4229,3 +4229,105 @@ input[type="date"]::-moz-focus-inner {
     padding: 1rem;
   }
 }
+
+/* VAT Calculator Specific Styles */
+.rate-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rate-btn {
+  background: #f8f9fa;
+  color: var(--main-color);
+  border: 2px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+.rate-btn:hover {
+  background: #e9ecef;
+  border-color: var(--accent);
+}
+
+.rate-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+}
+
+.action-buttons button:hover {
+  background: #5a6268;
+}
+
+.action-buttons button.active {
+  background: var(--accent);
+}
+
+.action-buttons button.active:hover {
+  background: var(--accent-hover);
+}
+
+#vat-result {
+  margin-top: 2rem;
+}
+
+#vat-result h3 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+#vat-result h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .rate-buttons {
+    gap: 0.25rem;
+  }
+  
+  .rate-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    min-width: 50px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .action-buttons button {
+    flex: none;
+    max-width: none;
+  }
+}
