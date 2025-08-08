@@ -67,7 +67,7 @@ seo:
         "description": "Безкоштовні калькулятори для фінансів, будівництва, здоров'я, освіти"
       },
       "mainEntity": {
-        "@type": "CollectionPage",
+        "@type": "ItemList",
         "name": "Калькулятори",
         "description": "Колекція спеціалізованих онлайн калькуляторів",
         "numberOfItems": 100
