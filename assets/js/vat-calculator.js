@@ -56,7 +56,7 @@ function numberToWords(num) {
   }
   
   const remainder = integerPart % 1000;
-  if (remainder > 0 || integerPart === 0) {
+  if (remainder > 0) {
     result += convertHundreds(remainder) + " ";
   }
   
