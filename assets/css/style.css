@@ -4229,3 +4229,124 @@ input[type="date"]::-moz-focus-inner {
     padding: 1rem;
   }
 }
+
+/* AI Share Buttons Styles */
+.ai-share-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.ai-share-intro {
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  color: var(--main-color);
+  font-size: 1rem;
+}
+
+.ai-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ai-share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.ai-share-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.ai-icon {
+  flex-shrink: 0;
+}
+
+/* Individual AI platform styles */
+.ai-share-button.chatgpt {
+  background: #74aa9c;
+  color: white;
+  border-color: #74aa9c;
+}
+
+.ai-share-button.chatgpt:hover {
+  background: #5a8a7d;
+  border-color: #5a8a7d;
+  color: white;
+}
+
+.ai-share-button.perplexity {
+  background: #20808d;
+  color: white;
+  border-color: #20808d;
+}
+
+.ai-share-button.perplexity:hover {
+  background: #1a6b76;
+  border-color: #1a6b76;
+  color: white;
+}
+
+.ai-share-button.claude {
+  background: #cc785c;
+  color: white;
+  border-color: #cc785c;
+}
+
+.ai-share-button.claude:hover {
+  background: #b5654a;
+  border-color: #b5654a;
+  color: white;
+}
+
+.ai-share-button.google-ai {
+  background: #4285f4;
+  color: white;
+  border-color: #4285f4;
+}
+
+.ai-share-button.google-ai:hover {
+  background: #3367d6;
+  border-color: #3367d6;
+  color: white;
+}
+
+/* Responsive design for AI buttons */
+@media (max-width: 768px) {
+  .ai-buttons-row {
+    flex-direction: column;
+  }
+  
+  .ai-share-button {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .ai-share-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-share-intro {
+    font-size: 0.9rem;
+  }
+  
+  .ai-share-button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
