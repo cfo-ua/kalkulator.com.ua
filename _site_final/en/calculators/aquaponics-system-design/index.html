@@ -1,0 +1,958 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aquaponics System Design Calculator | Aquaponics Planning Calculator</title>
+<meta name="description" content="Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.">
+<meta name="keywords" content="aquaponics calculator, aquaponics system design, aquaponics sizing calculator, fish tank calculator aquaponics, grow bed calculator aquaponics, aquaponics planning calculator, aquaponics cost calculator, aquaponics equipment calculator, aquaponics pump calculator, aquaponics ratio calculator, aquaponics design tool, aquaponics system planner, aquaponics setup calculator, sustainable farming calculator, hydroponic aquaponics calculator, aquaponics production calculator, aquaponics ROI calculator, aquaponics business calculator, commercial aquaponics calculator, home aquaponics calculator">
+
+<link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://kalkulator.com.ua/en/calculators/aquaponics-system-design/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aquaponics System Design Calculator | Aquaponics Planning Calculator">
+<meta property="og:description" content="Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.">
+<meta property="og:url" content="https://kalkulator.com.ua/en/calculators/aquaponics-system-design/">
+<meta property="og:site_name" content="kalkulator.com.ua">
+<meta property="og:image" content="https://kalkulator.com.ua/assets/img/logo.svg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aquaponics System Design Calculator | Aquaponics Planning Calculator">
+<meta name="twitter:description" content="Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.">
+<meta name="twitter:image" content="https://kalkulator.com.ua/assets/img/logo.svg">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "kalkulator.com.ua",
+  "description": "Онлайн калькулятори для України",
+  "url": "https://kalkulator.com.ua",
+  "logo": "https://kalkulator.com.ua/assets/img/logo.svg",
+  "sameAs": [],
+  "foundingDate": "2023",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Ukraine"
+  },
+  "knowsLanguage": ["uk", "en"]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "kalkulator.com.ua",
+  "description": "Онлайн калькулятори для України",
+  "url": "https://kalkulator.com.ua",
+  "inLanguage": "en",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://kalkulator.com.ua/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Aquaponics System Design Calculator",
+  "description": "Calculate aquaponics system requirements, sizing, and costs. Design efficient aquaponics systems for fish and plant production with proper ratios and equipment.",
+  "url": "https://kalkulator.com.ua/en/calculators/aquaponics-system-design/",
+  "inLanguage": "en",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "UAH"
+  },
+  "featureList": [
+    
+      
+    "Quick calculations",
+    "Accurate results",
+    "User-friendly interface"
+      
+    
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "kalkulator.com.ua",
+    "url": "https://kalkulator.com.ua"
+  }
+}
+</script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    
+    {
+      "@type": "Question",
+      "name": "What size fish tank do I need for aquaponics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For beginners, start with 100-300 gallons. The tank should support 1 lb of fish per 5-10 gallons, with grow bed volume equal to or greater than tank volume."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "How many plants can I grow in my aquaponics system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, 1 lb of fish feed supports 1-2 square feet of leafy greens. A 200-gallon system with 20 lbs of fish can support 20-40 sq ft of growing space."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What&#39;s the best fish-to-plant ratio for aquaponics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with 1:1 fish tank to grow bed volume ratio. As fish grow and produce more waste, you can increase grow bed area up to 2:1 ratio."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "How often should water circulate in aquaponics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Water should circulate through the entire system every 1-2 hours. This ensures adequate nutrient delivery and waste removal for both fish and plants."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "Can aquaponics be profitable on a small scale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, small systems (100-500 sq ft) can generate $2000-8000 annually with proper management, focusing on high-value crops like herbs and leafy greens."
+      }
+    },
+    
+    {
+      "@type": "Question",
+      "name": "What are the main costs of running an aquaponics system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Main costs include electricity (pumps, lighting), fish feed, seeds/seedlings, and occasional equipment replacement. Expect $2-5 per square foot in annual operating costs."
+      }
+    }
+    
+  ]
+}
+</script>
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/style.css"><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKXJVGWX6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PKXJVGWX6X');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7612530865647476"
+     crossorigin="anonymous"></script>
+
+  <!-- Ahrefs Web Analytics -->
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="zAplT4bKzyqU2npnd5md5A" async></script>
+
+</head>
+<body>
+  
+
+<header>
+  <nav class="nav">
+    <a href="/en/" class="logo" aria-label="Home">
+      <img src="/assets/img/logo.svg" alt="логотип" height="32" style="margin-right:10px;">
+      kalkulator.com.ua
+    </a>
+    <button class="menu-btn" aria-label="Menu" tabindex="0">&#9776;</button>
+    <div class="nav-links">
+      
+      
+        
+        
+        
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              
+              
+              
+        
+          <a href="/en/categories/environment/">← Environment Calculators</a>
+        
+      
+      <div class="lang-switcher">
+        
+          
+          
+          
+            
+            
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                
+          
+          
+            <a href="/calculators/aquaponics-system-design.html" title="Українська">🇺🇦 UA</a>
+          
+        
+      </div>
+    </div>
+  </nav>
+</header>
+  <main>
+    <h1>Aquaponics System Design Calculator</h1><div class="calculator-block">
+        <form id="aquaponics-design-form" autocomplete="off">
+  <label>
+    System Type:
+    <select id="system-type" required="">
+      <option value="">Select system type...</option>
+      <option value="media-bed,1.0">Media Bed (gravel/clay pebbles)</option>
+      <option value="dwc,1.3">Deep Water Culture (floating rafts)</option>
+      <option value="nft,1.2">Nutrient Film Technique</option>
+      <option value="vertical,1.5">Vertical Growing System</option>
+      <option value="hybrid,1.4">Hybrid System (multiple methods)</option>
+    </select>
+  </label>
+  <label>
+    Production Goal:
+    <select id="production-goal" required="">
+      <option value="">Select production goal...</option>
+      <option value="hobby,50">Hobby/Family (50-100 sq ft)</option>
+      <option value="small-commercial,200">Small Commercial (200-500 sq ft)</option>
+      <option value="commercial,1000">Commercial (1000+ sq ft)</option>
+      <option value="educational,100">Educational/Demonstration</option>
+    </select>
+  </label>
+  <label>
+    Available Space (square feet):
+    <input type="number" id="available-space" min="10" required="" />
+  </label>
+  <label>
+    Fish Species:
+    <select id="fish-species" required="">
+      <option value="">Select fish species...</option>
+      <option value="tilapia,0.15,8">Tilapia (hardy, warm water, $8/lb)</option>
+      <option value="trout,0.12,12">Trout (cold water, premium, $12/lb)</option>
+      <option value="catfish,0.18,6">Catfish (tolerant, easy, $6/lb)</option>
+      <option value="bass,0.13,10">Bass (sport fish, $10/lb)</option>
+      <option value="goldfish,0.08,2">Goldfish (ornamental, $2/lb)</option>
+    </select>
+  </label>
+  <label>
+    Primary Crops:
+    <select id="primary-crops" required="">
+      <option value="">Select primary crops...</option>
+      <option value="leafy-greens,2.5">Leafy Greens (lettuce, spinach, kale)</option>
+      <option value="herbs,4.0">Herbs (basil, cilantro, parsley)</option>
+      <option value="microgreens,8.0">Microgreens (fast turnover)</option>
+      <option value="fruiting,1.5">Fruiting Plants (tomatoes, peppers)</option>
+      <option value="mixed,2.0">Mixed Vegetables</option>
+    </select>
+  </label>
+  <label>
+    Climate Control:
+    <select id="climate-control" required="">
+      <option value="">Select climate control...</option>
+      <option value="outdoor,1.0">Outdoor (seasonal)</option>
+      <option value="greenhouse,1.8">Greenhouse (controlled)</option>
+      <option value="indoor,2.5">Indoor (year-round)</option>
+    </select>
+  </label>
+  <label>
+    Experience Level:
+    <select id="experience-level" required="">
+      <option value="">Select experience...</option>
+      <option value="beginner,0.8">Beginner (first aquaponics system)</option>
+      <option value="intermediate,1.0">Intermediate (some experience)</option>
+      <option value="advanced,1.2">Advanced (experienced grower)</option>
+    </select>
+  </label>
+  <label>
+    Budget Level:
+    <select id="budget-level" required="">
+      <option value="">Select budget level...</option>
+      <option value="minimal,0.7">Minimal (DIY, used equipment)</option>
+      <option value="moderate,1.0">Moderate (new basic equipment)</option>
+      <option value="premium,1.5">Premium (high-quality equipment)</option>
+      <option value="commercial,2.0">Commercial (professional grade)</option>
+    </select>
+  </label>
+  <label>
+    Local Fish Price ($ per pound):
+    <input type="number" id="fish-price" min="0" value="8.00" required="" />
+  </label>
+  <label>
+    Local Vegetable Price ($ per pound):
+    <input type="number" id="vegetable-price" min="0" value="4.00" required="" />
+  </label>
+  <button type="submit">Design Aquaponics System</button>
+</form>
+<div id="aquaponics-design-result" class="result"></div>
+
+      </div><section class="seo-content">
+      <h2>Aquaponics System Design Calculator</h2>
+<p>Calculate the <strong>optimal design specifications</strong> for your aquaponics system. Determine proper tank sizes, grow bed dimensions, pump requirements, and system ratios for efficient fish and plant production.</p>
+
+<h3>Why Proper Aquaponics Design Matters:</h3>
+<ul>
+  <li><strong>System balance:</strong> correct fish-to-plant ratios ensure system stability</li>
+  <li><strong>Efficiency optimization:</strong> proper sizing maximizes production in available space</li>
+  <li><strong>Cost management:</strong> right-sized equipment reduces unnecessary expenses</li>
+  <li><strong>Water quality:</strong> adequate filtration and circulation maintain healthy environment</li>
+  <li><strong>Production planning:</strong> calculate expected yields for business planning</li>
+  <li><strong>Energy efficiency:</strong> optimal pump sizing reduces operating costs</li>
+</ul>
+
+<h3>Key Aquaponics Ratios:</h3>
+<ul>
+  <li><strong>Fish tank to grow bed:</strong> 1:1 to 1:2 ratio by volume</li>
+  <li><strong>Stocking density:</strong> 1 lb of fish per 5-10 gallons of water</li>
+  <li><strong>Feed to plant ratio:</strong> 1 lb of fish feed supports 1-2 sq ft of plants</li>
+  <li><strong>Water circulation:</strong> entire volume should circulate every 1-2 hours</li>
+  <li><strong>Growing media:</strong> 12 inches deep for optimal root development</li>
+</ul>
+
+<h3>Common Aquaponics Methods:</h3>
+<ul>
+  <li><strong>Media beds:</strong> gravel or clay pebbles, good for beginners</li>
+  <li><strong>Deep Water Culture (DWC):</strong> plants in floating rafts, high production</li>
+  <li><strong>Nutrient Film Technique (NFT):</strong> shallow water flow, space efficient</li>
+  <li><strong>Vertical systems:</strong> tower gardens, maximum space utilization</li>
+  <li><strong>Hybrid systems:</strong> combination of methods for optimization</li>
+</ul>
+
+<h3>Fish Species for Aquaponics:</h3>
+<ul>
+  <li><strong>Tilapia:</strong> hardy, fast-growing, 75-85°F water temperature</li>
+  <li><strong>Trout:</strong> cold-water fish, 50-65°F, premium market value</li>
+  <li><strong>Catfish:</strong> tolerant, easy to raise, warm water 75-85°F</li>
+  <li><strong>Bass:</strong> sport fish, good growth rate, 70-80°F</li>
+  <li><strong>Goldfish:</strong> ornamental, very hardy, 65-75°F</li>
+</ul>
+
+<h3>Plant Categories for Aquaponics:</h3>
+<ul>
+  <li><strong>Leafy greens:</strong> lettuce, kale, spinach - fast growth, high value</li>
+  <li><strong>Herbs:</strong> basil, cilantro, parsley - premium prices, continuous harvest</li>
+  <li><strong>Fruiting plants:</strong> tomatoes, peppers, cucumbers - require mature system</li>
+  <li><strong>Root vegetables:</strong> radishes, carrots - work well in media beds</li>
+  <li><strong>Microgreens:</strong> very fast turnover, high value per square foot</li>
+</ul>
+
+<h3>System Components:</h3>
+<ul>
+  <li><strong>Fish tank:</strong> fiberglass, food-grade plastic, or concrete</li>
+  <li><strong>Grow beds:</strong> gravel, expanded clay, or raft systems</li>
+  <li><strong>Water pump:</strong> sized for complete circulation every 1-2 hours</li>
+  <li><strong>Plumbing:</strong> PVC pipes, valves, and fittings for water flow</li>
+  <li><strong>Aeration:</strong> air pumps and stones for dissolved oxygen</li>
+  <li><strong>Monitoring:</strong> pH, temperature, dissolved oxygen meters</li>
+</ul>
+
+<h3>Economic Considerations:</h3>
+<ul>
+  <li><strong>Initial investment:</strong> $3-15 per gallon of system capacity</li>
+  <li><strong>Operating costs:</strong> electricity, fish feed, maintenance</li>
+  <li><strong>Production value:</strong> $8-25 per square foot annually</li>
+  <li><strong>Payback period:</strong> typically 2-5 years depending on scale</li>
+  <li><strong>Market factors:</strong> local demand for fresh fish and vegetables</li>
+</ul>
+
+    </section>
+    
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <details>
+        <summary>What size fish tank do I need for aquaponics?</summary>
+        <div>For beginners, start with 100-300 gallons. The tank should support 1 lb of fish per 5-10 gallons, with grow bed volume equal to or greater than tank volume.</div>
+      </details>
+      
+      <details>
+        <summary>How many plants can I grow in my aquaponics system?</summary>
+        <div>Generally, 1 lb of fish feed supports 1-2 square feet of leafy greens. A 200-gallon system with 20 lbs of fish can support 20-40 sq ft of growing space.</div>
+      </details>
+      
+      <details>
+        <summary>What's the best fish-to-plant ratio for aquaponics?</summary>
+        <div>Start with 1:1 fish tank to grow bed volume ratio. As fish grow and produce more waste, you can increase grow bed area up to 2:1 ratio.</div>
+      </details>
+      
+      <details>
+        <summary>How often should water circulate in aquaponics?</summary>
+        <div>Water should circulate through the entire system every 1-2 hours. This ensures adequate nutrient delivery and waste removal for both fish and plants.</div>
+      </details>
+      
+      <details>
+        <summary>Can aquaponics be profitable on a small scale?</summary>
+        <div>Yes, small systems (100-500 sq ft) can generate $2000-8000 annually with proper management, focusing on high-value crops like herbs and leafy greens.</div>
+      </details>
+      
+      <details>
+        <summary>What are the main costs of running an aquaponics system?</summary>
+        <div>Main costs include electricity (pumps, lighting), fish feed, seeds/seedlings, and occasional equipment replacement. Expect $2-5 per square foot in annual operating costs.</div>
+      </details>
+      
+    </section>
+    
+
+    <section class="ai-share-section">
+  <div class="ai-share-buttons">
+    <p class="ai-share-intro">Get AI insights about this calculator:</p>
+    <div class="ai-buttons-row">
+      <a class="ai-share-button chatgpt" 
+         href="https://chat.openai.com/?q=Analyze+and+provide+insights+about+this+calculator%3A+Aquaponics+System+Design+Calculator+at+https%3A%2F%2Fkalkulator.com.ua%2Fen%2Fcalculators%2Faquaponics-system-design%2F.+Provide+practical+tips+and+explain+how+to+use+this+calculator+effectively." 
+         target="_blank" 
+         rel="nofollow noopener"
+         title="Analyze with ChatGPT">
+        <svg class="ai-icon" viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        ChatGPT
+      </a>
+      
+      <a class="ai-share-button perplexity" 
+         href="https://www.perplexity.ai/search/new?q=Analyze+and+provide+insights+about+this+calculator%3A+Aquaponics+System+Design+Calculator+at+https%3A%2F%2Fkalkulator.com.ua%2Fen%2Fcalculators%2Faquaponics-system-design%2F.+Provide+practical+tips+and+explain+how+to+use+this+calculator+effectively." 
+         target="_blank" 
+         rel="nofollow noopener"
+         title="Search with Perplexity">
+        <svg class="ai-icon" viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M12 2L2 7v10l10 5 10-5V7l-10-5zM12 4.73L19.05 8 12 11.27 4.95 8 12 4.73zM4 9.68l7 3.5v6.09l-7-3.5V9.68zm16 0v6.09l-7 3.5v-6.09l7-3.5z"/>
+        </svg>
+        Perplexity
+      </a>
+      
+      <a class="ai-share-button claude" 
+         href="https://claude.ai/new?q=Analyze+and+provide+insights+about+this+calculator%3A+Aquaponics+System+Design+Calculator+at+https%3A%2F%2Fkalkulator.com.ua%2Fen%2Fcalculators%2Faquaponics-system-design%2F.+Provide+practical+tips+and+explain+how+to+use+this+calculator+effectively." 
+         target="_blank" 
+         rel="nofollow noopener"
+         title="Chat with Claude">
+        <svg class="ai-icon" viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        Claude
+      </a>
+      
+      <a class="ai-share-button google-ai" 
+         href="https://gemini.google.com/app?q=Analyze+and+provide+insights+about+this+calculator%3A+Aquaponics+System+Design+Calculator+at+https%3A%2F%2Fkalkulator.com.ua%2Fen%2Fcalculators%2Faquaponics-system-design%2F.+Provide+practical+tips+and+explain+how+to+use+this+calculator+effectively." 
+         target="_blank" 
+         rel="nofollow noopener"
+         title="Ask Google Gemini">
+        <svg class="ai-icon" viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+        </svg>
+        Gemini
+      </a>
+    </div>
+  </div>
+</section>
+    <section class="related">
+      <h2>Similar Calculators</h2>
+      <ul>
+        
+        <li><a href="/en/calculators/bath-vs-shower-cost/">Bath vs Shower Cost Calculator - Water Usage Comparison</a></li>
+        
+        <li><a href="/en/calculators/beekeeping-honey-production/">Beekeeping Honey Production Calculator</a></li>
+        
+        <li><a href="/en/calculators/carbon-offset-business/">Carbon Offset Calculator for Businesses</a></li>
+        
+        <li><a href="/en/calculators/compost-bin-size/">Compost Bin Size Calculator</a></li>
+        
+        <li><a href="/en/calculators/eco-friendly-product-impact-calculator/">Eco-Friendly Product Impact Calculator | Environmental Footprint Assessment</a></li>
+        
+      </ul>
+    </section>
+    
+  </main>
+  
+
+<footer>
+  <div class="footer-content">
+    &copy; <span id="year"></span> kalkulator.com.ua
+    <a href="mailto:kalkulator.com.ua@gmail.com" class="footer-email-link" aria-label="Write email">
+      <svg class="footer-email-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </a>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/en/js/aquaponics-system-design.js"></script>
+</body>
+</html>

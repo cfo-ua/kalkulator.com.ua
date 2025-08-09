@@ -44,6 +44,8 @@
     </section>
     {% endif %}
 
+    {% include ai-share-buttons.html %}
+
     {%- assign current_category = page.category | default: page.categories[0] -%}
     {%- assign related_by_cat = site.pages | where_exp: "item", "item.categories contains current_category" -%}
     {%- assign related_calcs = "" | split: "" -%}
