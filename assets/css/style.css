@@ -4255,7 +4255,6 @@ input[type="date"]::-moz-focus-inner {
 .ai-share-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
   text-decoration: none;
@@ -4269,10 +4268,6 @@ input[type="date"]::-moz-focus-inner {
 .ai-share-button:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow);
-}
-
-.ai-icon {
-  flex-shrink: 0;
 }
 
 /* Individual AI platform styles */
