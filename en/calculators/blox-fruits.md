@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Blox Fruits Calculator"
-categories: [rozvagy]
+categories: [entertainment]
 seo:
   title: "Blox Fruits Calculator — Level, Experience, and Stats Calculator Online"
   description: "Calculate experience, levels, stats distribution, and optimal builds in Blox Fruits. Complete leveling and stat point calculator for the popular Roblox game."
