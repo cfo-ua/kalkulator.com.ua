@@ -110,7 +110,7 @@ faq:
   
   <div class="form-group">
     <label>
-      🥃 Об'єм споженого (мл):
+      🥃 Об'єм спожитого (мл):
       <input type="number" id="volume" placeholder="500" value="500" step="10" min="0" required>
     </label>
   </div>

@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const metabolismRate = 0.15; // grams per hour per kg
       
       // Peak BAC calculation
-      const peakBAC = gramsOfAlcohol / (weight * bodyWaterConstant) * 1000; // in permille
+      const peakBAC = gramsOfAlcohol / (weight * bodyWaterConstant); // in permille
       
       // Time to peak (assumption: during consumption + 30 minutes for absorption)
       const timeToPeak = timePeriod + 30;
@@ -76,16 +76,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalTimeElapsed = timeSince + timeToPeak;
       const metabolizedAlcohol = (metabolismRate * weight * totalTimeElapsed) / 60; // convert to hours
       const currentGramsInSystem = Math.max(0, gramsOfAlcohol - metabolizedAlcohol);
-      const currentBAC = Math.max(0, currentGramsInSystem / (weight * bodyWaterConstant) * 1000);
+      const currentBAC = Math.max(0, currentGramsInSystem / (weight * bodyWaterConstant));
       
       // Time to reach safe driving limit (0.2 permille)
       const safeLimit = 0.2;
       const timeToSafeBAC = currentBAC > safeLimit ? 
-        ((currentBAC - safeLimit) * weight * bodyWaterConstant / 1000) / (metabolismRate * weight / 60) : 0;
+        ((currentBAC - safeLimit) * weight * bodyWaterConstant) / (metabolismRate * weight / 60) : 0;
       
       // Time to completely sober (0.0 BAC)
       const timeToZeroBAC = currentBAC > 0 ? 
-        (currentBAC * weight * bodyWaterConstant / 1000) / (metabolismRate * weight / 60) : 0;
+        (currentBAC * weight * bodyWaterConstant) / (metabolismRate * weight / 60) : 0;
       
       // Impairment level assessment
       let impairmentLevel, impairmentDescription, impairmentColor;

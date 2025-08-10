@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const metabolismRate = 0.15; // grams per hour per kg
       
       // Peak BAC calculation
-      const peakBAC = gramsOfAlcohol / (weight * bodyWaterConstant) * 1000; // in permille
+      const peakBAC = gramsOfAlcohol / (weight * bodyWaterConstant); // in permille
       
       // Time to peak (assumption: during consumption + 30 minutes for absorption)
       const timeToPeak = timePeriod + 30;
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalTimeElapsed = timeSince + timeToPeak;
       const metabolizedAlcohol = (metabolismRate * weight * totalTimeElapsed) / 60; // convert to hours
       const currentGramsInSystem = Math.max(0, gramsOfAlcohol - metabolizedAlcohol);
-      const currentBAC = Math.max(0, currentGramsInSystem / (weight * bodyWaterConstant) * 1000);
+      const currentBAC = Math.max(0, currentGramsInSystem / (weight * bodyWaterConstant));
       
       // Convert permille to percentage for display
       const currentBACPercent = currentBAC / 10;
@@ -86,14 +86,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const legalLimit05 = 0.5; // 0.05% = 0.5‰
       
       const timeTo08BAC = currentBAC > legalLimit08 ? 
-        ((currentBAC - legalLimit08) * weight * bodyWaterConstant / 1000) / (metabolismRate * weight / 60) : 0;
+        ((currentBAC - legalLimit08) * weight * bodyWaterConstant) / (metabolismRate * weight / 60) : 0;
         
       const timeTo05BAC = currentBAC > legalLimit05 ? 
-        ((currentBAC - legalLimit05) * weight * bodyWaterConstant / 1000) / (metabolismRate * weight / 60) : 0;
+        ((currentBAC - legalLimit05) * weight * bodyWaterConstant) / (metabolismRate * weight / 60) : 0;
       
       // Time to completely sober (0.0 BAC)
       const timeToZeroBAC = currentBAC > 0 ? 
-        (currentBAC * weight * bodyWaterConstant / 1000) / (metabolismRate * weight / 60) : 0;
+        (currentBAC * weight * bodyWaterConstant) / (metabolismRate * weight / 60) : 0;
       
       // Impairment level assessment
       let impairmentLevel, impairmentDescription, impairmentColor;
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="limits-grid">
             <div><strong>🇺🇸 USA:</strong> 0.08% BAC ${timeTo08BAC > 0 ? `(${formatTime(timeTo08BAC)} to reach)` : '✅'}</div>
             <div><strong>🇪🇺 EU/🇦🇺 Australia:</strong> 0.05% BAC ${timeTo05BAC > 0 ? `(${formatTime(timeTo05BAC)} to reach)` : '✅'}</div>
-            <div><strong>🇸🇪 Sweden/🇵🇱 Poland:</strong> 0.02% BAC ${currentBACPercent > 0.02 ? `(${formatTime((currentBACPercent - 0.02) * 10 * weight * bodyWaterConstant / 1000 / (metabolismRate * weight / 60))} to reach)` : '✅'}</div>
+            <div><strong>🇸🇪 Sweden/🇵🇱 Poland:</strong> 0.02% BAC ${currentBACPercent > 0.02 ? `(${formatTime((currentBACPercent - 0.02) * 10 * weight * bodyWaterConstant / (metabolismRate * weight / 60))} to reach)` : '✅'}</div>
           </div>
         </div>
         
