@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Calculator Emoji - Copy Math Symbols"
-categories: [rozvagy]
+categories: [entertainment]
 seo:
   title: "Calculator Emoji Collection — Copy Math Symbols and Emojis Online"
   description: "Collection of calculator emojis, mathematical symbols, and numbers. One-click copy for social media, messages, and documents."
