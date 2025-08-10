@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Calculator Meme Generator"
-categories: [rozvagy]
+categories: [entertainment]
 seo:
   title: "Calculator Meme Generator — Create Math Memes Online"
   description: "Create funny memes about math and calculators. Choose a template, add your text, and download your custom meme for free."
