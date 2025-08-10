@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Jet Lag Recovery Calculator"
-categories: [health]
+categories: [travel]
 seo:
   title: "Jet Lag Recovery Calculator — Time Zone Adaptation and Sleep Planning Tool"
   description: "Calculate your jet lag recovery time and get personalized tips for quick adaptation to new time zones. Plan your sleep schedule for international travel."
