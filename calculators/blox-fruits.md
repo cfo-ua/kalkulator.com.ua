@@ -1,7 +1,7 @@
 ---
 layout: calculator
 title: "Калькулятор Blox Fruits"
-categories: [rozvagy]
+categories: [entertainment]
 seo:
   title: "Калькулятор Blox Fruits — Розрахунок рівня, досвіду та фруктів онлайн"
   description: "Розрахуйте досвід, рівні, статистики та оптимальне розподілення очок у Blox Fruits. Калькулятор прокачки, фруктів та бою для Roblox гри."
