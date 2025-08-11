@@ -22,7 +22,7 @@ faq:
   question: Who is this test suitable for?
 - answer: High typing skills increase work productivity, reduce fatigue, help in learning and career development, especially in IT and office professions.
   question: What are the benefits of fast typing?
-- answer: Yes, the test works on all modern devices with keyboards: computers, laptops, tablets with connected keyboards. Results may vary on mobile devices.
+- answer: "Yes, the test works on all modern devices with keyboards: computers, laptops, tablets with connected keyboards. Results may vary on mobile devices."
   question: Does the test work on mobile devices?
 scripts:
 - /en/js/typing-speed-test.js
