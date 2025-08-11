@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         question: "🌱 I'm attracted to working with nature or ecology",
-        type: "realistic",
+        type: "investigative",
         answers: [
           { text: "Strongly agree", score: 3 },
           { text: "Somewhat agree", score: 2 },

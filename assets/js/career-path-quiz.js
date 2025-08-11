@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         question: "🌱 Мене приваблює робота з природою або екологією",
-        type: "realistic",
+        type: "investigative",
         answers: [
           { text: "Повністю погоджуюся", score: 3 },
           { text: "Скоріше погоджуюся", score: 2 },
@@ -490,7 +490,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Convert to percentages
-      const maxScore = careerQuestions.filter(q => q.type === 'realistic').length * 3; // Max score per type
       Object.keys(scores).forEach(type => {
         const typeMaxScore = careerQuestions.filter(q => q.type === type).length * 3;
         scores[type] = Math.round((scores[type] / typeMaxScore) * 100);
