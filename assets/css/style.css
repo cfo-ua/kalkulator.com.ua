@@ -3816,6 +3816,137 @@ input[type="date"]::-moz-focus-inner {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* TV Distance Calculator Specific Styles */
+.calculator-inputs {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.calculator-inputs .input-group {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.calculator-inputs .input-group:last-child {
+  margin-bottom: 0;
+}
+
+.calculator-inputs select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: var(--main-color);
+  transition: border-color 0.3s ease;
+}
+
+.calculator-inputs select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 122, 255, 0.1);
+}
+
+.calculator-inputs button[type="submit"] {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.calculator-inputs button[type="submit"]:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(21, 122, 255, 0.3);
+}
+
+.distance-chart {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.distance-table {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.distance-table h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+#comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#comparison-table th,
+#comparison-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+#comparison-table th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#comparison-table tbody tr:hover {
+  background: var(--card-bg);
+  transition: background 0.2s ease;
+}
+
+#comparison-table tbody tr:nth-child(even) {
+  background: rgba(247, 248, 250, 0.5);
+}
+
+@media (max-width: 768px) {
+  .calculator-inputs {
+    padding: 1.5rem;
+  }
+  
+  .distance-chart,
+  .distance-table {
+    padding: 1rem;
+  }
+  
+  #comparison-table th,
+  #comparison-table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
   .calculator-block div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
