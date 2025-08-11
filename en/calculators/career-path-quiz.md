@@ -14,7 +14,7 @@ faq:
   question: How long does it take to complete?
 - answer: The test is suitable for high school students, college students, graduates, people who want to change careers, and anyone seeking professional guidance.
   question: Who is this test suitable for?
-- answer: The test is based on Holland's 6 personality types theory: realistic, investigative, artistic, social, enterprising, and conventional.
+- answer: "The test is based on Holland's 6 personality types theory - realistic, investigative, artistic, social, enterprising, and conventional."
   question: What theory is the test based on?
 - answer: Yes, the test is adapted for the international job market and includes current professions and fields of activity.
   question: Is the test adapted for the job market?
