@@ -378,14 +378,40 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.answerOptions.innerHTML = '';
       question.options.forEach((option, optionIndex) => {
         const button = document.createElement('button');
-        button.className = 'answer-option';
         button.textContent = option.text;
         button.dataset.optionIndex = optionIndex;
         
-        // Check if this option was previously selected
-        if (quizState.answers[index] === optionIndex) {
-          button.classList.add('selected');
-        }
+        // Apply inline styling similar to reference quizzes
+        button.style.cssText = `
+          background: ${quizState.answers[index] === optionIndex ? '#88d8a3' : '#f8f9fa'};
+          color: ${quizState.answers[index] === optionIndex ? 'white' : '#333'};
+          border: 2px solid ${quizState.answers[index] === optionIndex ? '#88d8a3' : '#e9ecef'};
+          padding: 12px 15px;
+          border-radius: 8px;
+          cursor: pointer;
+          text-align: left;
+          transition: all 0.3s ease;
+          font-size: 0.95em;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+          width: 100%;
+          font-weight: ${quizState.answers[index] === optionIndex ? '600' : '400'};
+        `;
+        
+        // Add hover effects
+        button.addEventListener('mouseover', () => {
+          if (quizState.answers[index] !== optionIndex) {
+            button.style.background = '#e8f5e8';
+            button.style.borderColor = '#88d8a3';
+          }
+        });
+        
+        button.addEventListener('mouseout', () => {
+          if (quizState.answers[index] !== optionIndex) {
+            button.style.background = '#f8f9fa';
+            button.style.borderColor = '#e9ecef';
+          }
+        });
         
         button.addEventListener('click', () => selectAnswer(index, optionIndex));
         elements.answerOptions.appendChild(button);
@@ -403,10 +429,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function selectAnswer(questionIndex, optionIndex) {
       quizState.answers[questionIndex] = optionIndex;
       
-      // Update visual selection
-      const options = elements.answerOptions.querySelectorAll('.answer-option');
+      // Update visual selection for all options
+      const options = elements.answerOptions.querySelectorAll('button');
       options.forEach((option, index) => {
-        option.classList.toggle('selected', index === optionIndex);
+        if (index === optionIndex) {
+          // Selected option
+          option.style.background = '#88d8a3';
+          option.style.color = 'white';
+          option.style.borderColor = '#88d8a3';
+          option.style.fontWeight = '600';
+        } else {
+          // Unselected options
+          option.style.background = '#f8f9fa';
+          option.style.color = '#333';
+          option.style.borderColor = '#e9ecef';
+          option.style.fontWeight = '400';
+        }
       });
       
       updateNextButton();
@@ -602,20 +640,94 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       
       localStorage.setItem('personalityTestResults', JSON.stringify(results));
-      showNotification('Результати збережено!');
+      
+      // Show enhanced notification with more feedback
+      showNotification('✅ Результати успішно збережено! Ви можете знайти їх у своєму браузері.');
+      
+      // Also create a downloadable backup
+      const resultsText = `
+Тест типу особистості - Результати
+Дата: ${new Date().toLocaleDateString('uk-UA')}
+
+Ваш тип особистості: ${mbtiType} - ${typeInfo.title}
+
+Опис: ${typeInfo.description}
+
+Сильні сторони:
+${typeInfo.strengths.map(s => `• ${s}`).join('\n')}
+
+Області для розвитку:
+${typeInfo.development.map(d => `• ${d}`).join('\n')}
+
+Рекомендовані професії:
+${typeInfo.careers.map(c => `• ${c}`).join('\n')}
+
+Оцінки за основними вимірами:
+• Екстраверсія: ${quizState.scores.E}
+• Інтроверсія: ${quizState.scores.I}
+• Сенсорність: ${quizState.scores.S}
+• Інтуїція: ${quizState.scores.N}
+• Мислення: ${quizState.scores.T}
+• Почуття: ${quizState.scores.F}
+• Судження: ${quizState.scores.J}
+• Сприйняття: ${quizState.scores.P}
+• Відкритість: ${quizState.scores.O}
+• Сумлінність: ${quizState.scores.C}
+• Прихильність: ${quizState.scores.A}
+
+Збережено з kalkulator.com.ua
+      `.trim();
+      
+      // Store detailed results for potential download
+      localStorage.setItem('personalityTestResultsText', resultsText);
     }
 
     function showNotification(message) {
       const notification = document.createElement('div');
       notification.className = 'copy-notification';
       notification.textContent = message;
-      notification.style.backgroundColor = '#28a745';
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #28a745;
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        font-weight: 500;
+        max-width: 300px;
+        animation: slideIn 0.3s ease;
+      `;
+      
+      // Add keyframe animation
+      if (!document.querySelector('#notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+          @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+          }
+          @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
       
       document.body.appendChild(notification);
       
       setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 2000);
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            document.body.removeChild(notification);
+          }
+        }, 300);
+      }, 3000);
     }
     
   })();
