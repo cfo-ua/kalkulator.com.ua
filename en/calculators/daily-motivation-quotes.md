@@ -8,7 +8,7 @@ faq:
   question: How many quotes does the generator contain?
 - answer: Quotes are updated automatically, and you can get new ones daily. There's also the option to generate quotes by categories or get random ones.
   question: How often are quotes updated?
-- answer: Quotes are divided into categories: success, motivation, inspiration, wisdom, career, personal development, happiness, love, friendship, and general life advice.
+- answer: "Quotes are divided into categories: success, motivation, inspiration, wisdom, career, personal development, happiness, love, friendship, and general life advice."
   question: What quote categories are available?
 - answer: Yes! You can save favorite quotes, share them on social media, or send them to friends. You can also create personal collections.
   question: Can I save favorite quotes?
