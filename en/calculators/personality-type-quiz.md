@@ -2,7 +2,7 @@
 layout: calculator
 title: Personality Type Quiz - MBTI and Big Five Assessment
 categories:
-- rozvagy
+- entertainment
 faq:
 - answer: The test combines elements of MBTI typology (16 personality types) and the Big Five model (5 major traits). The result shows your primary psychological type and personality profile.
   question: What is the personality type test?
