@@ -29,10 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function calculateDistance() {
+    console.log('calculateDistance called');
     const tvSize = parseFloat(document.getElementById("tv-size").value);
     const resolution = document.getElementById("resolution").value;
     const viewingType = document.getElementById("viewing-type").value;
     const units = document.getElementById("units").value;
+
+    console.log('Inputs:', { tvSize, resolution, viewingType, units });
 
     if (!tvSize || tvSize < 20 || tvSize > 150) {
       alert("Будь ласка, введіть коректний розмір телевізора (20-150 дюймів)");
@@ -41,9 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calculate distances in inches first
     const distances = calculateDistances(tvSize, resolution, viewingType);
+    console.log('Calculated distances:', distances);
     
     // Convert to display units
     const convertedDistances = convertUnits(distances, units);
+    console.log('Converted distances:', convertedDistances);
     
     // Display results
     displayResults(convertedDistances, units, tvSize);
@@ -54,8 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show comparison table
     createComparisonTable(convertedDistances, units);
     
-    result.style.display = "block";
-    result.scrollIntoView({ behavior: "smooth" });
+    const resultContainer = document.getElementById("tv-distance-result");
+    if (resultContainer) {
+      resultContainer.style.display = "block";
+      resultContainer.scrollIntoView({ behavior: "smooth" });
+      console.log('Results displayed');
+    } else {
+      console.error('Result container not found');
+    }
   }
 
   function calculateDistances(tvSizeInches, resolution, viewingType) {
@@ -148,7 +159,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createDistanceChart(distances, units) {
-    const ctx = document.getElementById('distanceChart').getContext('2d');
+    // Only create chart if Chart.js is available
+    if (typeof Chart === 'undefined') {
+      console.warn('Chart.js not loaded, skipping chart creation');
+      return;
+    }
+    
+    const ctx = document.getElementById('distanceChart');
+    if (!ctx) {
+      console.warn('Chart canvas element not found');
+      return;
+    }
+    
+    const ctxContext = ctx.getContext('2d');
     
     if (distanceChart) {
       distanceChart.destroy();
@@ -208,7 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
 
-    distanceChart = new Chart(ctx, config);
+    try {
+      distanceChart = new Chart(ctxContext, config);
+    } catch (error) {
+      console.error('Error creating chart:', error);
+    }
   }
 
   function createComparisonTable(distances, units) {
