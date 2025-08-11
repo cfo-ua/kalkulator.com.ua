@@ -2,7 +2,7 @@
 layout: calculator
 title: Daily Motivation Quote Generator - Inspirational Quotes
 categories:
-- rozvagy
+- entertainment
 faq:
 - answer: The generator contains over 500 unique motivational quotes from famous personalities, philosophers, writers, and successful people from various fields of life.
   question: How many quotes does the generator contain?
