@@ -2,52 +2,6 @@ function initTripleIntegralCalculator() {
   const form = document.getElementById("triple-integral-form");
   const result = document.getElementById("triple-integral-result");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      
-      try {
-        const functionStr = document.getElementById("function").value.trim();
-        const xLower = parseFloat(document.getElementById("x-lower").value.trim());
-        const xUpper = parseFloat(document.getElementById("x-upper").value.trim());
-        const yLower = parseFloat(document.getElementById("y-lower").value.trim());
-        const yUpper = parseFloat(document.getElementById("y-upper").value.trim());
-        const zLower = parseFloat(document.getElementById("z-lower").value.trim());
-        const zUpper = parseFloat(document.getElementById("z-upper").value.trim());
-        const precision = parseInt(document.getElementById("precision").value);
-
-        // Validate inputs
-        if (isNaN(xLower) || isNaN(xUpper) || isNaN(yLower) || isNaN(yUpper) || isNaN(zLower) || isNaN(zUpper)) {
-          throw new Error("Всі межі інтегрування повинні бути числами");
-        }
-
-        // Create function evaluator
-        const f = createFunctionEvaluator(functionStr);
-        
-        const bounds = {
-          x: [xLower, xUpper],
-          y: [yLower, yUpper],
-          z: [zLower, zUpper]
-        };
-
-        // Calculate triple integral using numerical integration (Monte Carlo method)
-        const integralResult = calculateTripleIntegral(f, bounds, precision * 1000);
-        
-        // Display result
-        displayResult(integralResult, functionStr, bounds);
-        
-      } catch (error) {
-        result.innerHTML = `
-          <div class="insight-card warning">
-            <h6>❌ Помилка обчислення</h6>
-            <p>Перевірте правильність введеного виразу та меж інтегрування.</p>
-            <p><strong>Деталі:</strong> ${error.message}</p>
-          </div>
-        `;
-      }
-    });
-  }
-
   function createFunctionEvaluator(functionStr) {
     // Basic function parser and evaluator
     const normalizedFunction = functionStr
@@ -168,6 +122,53 @@ function initTripleIntegralCalculator() {
     `;
     
     result.innerHTML = html;
+  }
+
+  // Set up the form event listener after all helper functions are defined
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      try {
+        const functionStr = document.getElementById("function").value.trim();
+        const xLower = parseFloat(document.getElementById("x-lower").value.trim());
+        const xUpper = parseFloat(document.getElementById("x-upper").value.trim());
+        const yLower = parseFloat(document.getElementById("y-lower").value.trim());
+        const yUpper = parseFloat(document.getElementById("y-upper").value.trim());
+        const zLower = parseFloat(document.getElementById("z-lower").value.trim());
+        const zUpper = parseFloat(document.getElementById("z-upper").value.trim());
+        const precision = parseInt(document.getElementById("precision").value);
+
+        // Validate inputs
+        if (isNaN(xLower) || isNaN(xUpper) || isNaN(yLower) || isNaN(yUpper) || isNaN(zLower) || isNaN(zUpper)) {
+          throw new Error("Всі межі інтегрування повинні бути числами");
+        }
+
+        // Create function evaluator
+        const f = createFunctionEvaluator(functionStr);
+        
+        const bounds = {
+          x: [xLower, xUpper],
+          y: [yLower, yUpper],
+          z: [zLower, zUpper]
+        };
+
+        // Calculate triple integral using numerical integration (Monte Carlo method)
+        const integralResult = calculateTripleIntegral(f, bounds, precision * 1000);
+        
+        // Display result
+        displayResult(integralResult, functionStr, bounds);
+        
+      } catch (error) {
+        result.innerHTML = `
+          <div class="insight-card warning">
+            <h6>❌ Помилка обчислення</h6>
+            <p>Перевірте правильність введеного виразу та меж інтегрування.</p>
+            <p><strong>Деталі:</strong> ${error.message}</p>
+          </div>
+        `;
+      }
+    });
   }
 }
 
