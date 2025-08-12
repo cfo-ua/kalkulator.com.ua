@@ -4563,3 +4563,85 @@ input[type="date"]::-moz-focus-inner {
     font-size: 0.9rem;
   }
 }
+
+/* ====== GEOMETRY SHAPES CALCULATOR STYLES ====== */
+.geometry-calculator {
+  max-width: 100%;
+}
+
+.shape-selector {
+  margin-bottom: 2rem;
+}
+
+.shape-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.shape-btn {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--border);
+  background: var(--card-bg);
+  color: var(--main-color);
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  min-width: 120px;
+  text-align: center;
+  user-select: none;
+}
+
+.shape-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.shape-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.shape-btn.active:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.shape-form {
+  display: none;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+.shape-form.active {
+  display: block;
+}
+
+.shape-form h4 {
+  margin-top: 0;
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+/* Responsive design for geometry calculator */
+@media (max-width: 768px) {
+  .shape-buttons {
+    flex-direction: column;
+  }
+  
+  .shape-btn {
+    min-width: auto;
+    width: 100%;
+  }
+}
