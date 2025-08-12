@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Calculator Test</title>
+    <style>
+        .geometry-calculator {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .shape-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .shape-btn {
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            background: #f9f9f9;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .shape-btn.active {
+            background: #007cba;
+            color: white;
+            border-color: #007cba;
+        }
+        .shape-form {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .shape-form.active {
+            display: block;
+        }
+        .shape-form label {
+            display: block;
+            margin: 10px 0;
+        }
+        .shape-form input {
+            width: 100px;
+            padding: 5px;
+            margin: 0 10px;
+        }
+        .shape-form button {
+            background: #007cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .calculation-details h4 {
+            margin-top: 0;
+        }
+        .parameters span {
+            display: block;
+            margin: 5px 0;
+        }
+        .results div {
+            margin: 10px 0;
+        }
+        small {
+            color: #666;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="geometry-calculator">
+        <div class="shape-selector">
+            <h3>🎯 Select Geometric Shape:</h3>
+            <div class="shape-buttons">
+                <button class="shape-btn active" data-shape="prism">📦 Prism</button>
+                <button class="shape-btn" data-shape="cylinder">🥤 Cylinder</button>
+                <button class="shape-btn" data-shape="cone">🏔️ Cone</button>
+                <button class="shape-btn" data-shape="pyramid">🔺 Pyramid</button>
+            </div>
+        </div>
+
+        <!-- Rectangular Prism -->
+        <div id="prism-form" class="shape-form active">
+            <h4>📦 Rectangular Prism</h4>
+            <form autocomplete="off">
+                <label>
+                    Length (a):
+                    <input type="number" id="prism-length" value="5" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <label>
+                    Width (b):
+                    <input type="number" id="prism-width" value="3" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <label>
+                    Height (h):
+                    <input type="number" id="prism-height" value="4" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <button type="submit">🧮 Calculate</button>
+            </form>
+        </div>
+
+        <!-- Cylinder -->
+        <div id="cylinder-form" class="shape-form">
+            <h4>🥤 Cylinder</h4>
+            <form autocomplete="off">
+                <label>
+                    Base Radius (r):
+                    <input type="number" id="cylinder-radius" value="3" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <label>
+                    Height (h):
+                    <input type="number" id="cylinder-height" value="6" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <button type="submit">🧮 Calculate</button>
+            </form>
+        </div>
+
+        <!-- Cone -->
+        <div id="cone-form" class="shape-form">
+            <h4>🏔️ Cone</h4>
+            <form autocomplete="off">
+                <label>
+                    Base Radius (r):
+                    <input type="number" id="cone-radius" value="4" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <label>
+                    Height (h):
+                    <input type="number" id="cone-height" value="8" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <button type="submit">🧮 Calculate</button>
+            </form>
+        </div>
+
+        <!-- Pyramid -->
+        <div id="pyramid-form" class="shape-form">
+            <h4>🔺 Pyramid</h4>
+            <form autocomplete="off">
+                <label>
+                    Base Area (A):
+                    <input type="number" id="pyramid-base" value="16" step="0.01" min="0.01">
+                    <span class="unit">cm²</span>
+                </label>
+                <label>
+                    Height (h):
+                    <input type="number" id="pyramid-height" value="6" step="0.01" min="0.01">
+                    <span class="unit">cm</span>
+                </label>
+                <button type="submit">🧮 Calculate</button>
+            </form>
+        </div>
+
+        <div id="geometry-result" class="result"></div>
+    </div>
+
+    <script src="/en/js/geometry-shapes-calculator.js"></script>
+</body>
+</html>
