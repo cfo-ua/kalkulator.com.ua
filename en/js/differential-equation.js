@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Plot solution if requested
         if (plotSolution && solution.solved) {
+          // Generate numerical points for plotting even if we have analytical solution
+          if (!solution.points) {
+            const numericalSolution = solveNumerical(parsedEquation, x0, y0);
+            if (numericalSolution.points) {
+              solution.points = numericalSolution.points;
+            }
+          }
           plotDESolution(solution, x0, y0, directionField);
         }
         
@@ -129,30 +136,32 @@ document.addEventListener("DOMContentLoaded", function () {
     // For simple cases like dy/dx = f(x)
     if (!expr.includes("y")) {
       try {
-        const f = math.parse(expr);
-        // Integrate f(x)
-        const antiderivative = `integrate(${expr}, x)`;
-        const general = `y = ${antiderivative} + C`;
-        
-        // Find particular solution
-        const C = y0; // Simplified
-        const particular = `y = ${antiderivative} + ${C}`;
-        
-        return {
-          solved: true,
-          type: "separable",
-          general: general,
-          particular: particular,
-          steps: [
-            "1. Separable variables equation",
-            "2. dy = f(x)dx",
-            "3. ∫dy = ∫f(x)dx",
-            `4. y = ∫(${expr})dx + C`,
-            `5. Using y(${x0}) = ${y0}, find C`
-          ]
-        };
+        // Handle basic integration cases without Math.js
+        const integration = getBasicIntegral(expr);
+        if (integration.success) {
+          const general = `y = ${integration.result} + C`;
+          
+          // Find particular solution using initial condition
+          const C = integration.canEvaluate ? 
+            (y0 - evaluateBasicExpression(integration.result, x0)) : y0;
+          const particular = `y = ${integration.result} + ${C}`;
+          
+          return {
+            solved: true,
+            type: "separable",
+            general: general,
+            particular: particular,
+            steps: [
+              "1. Separable variables equation",
+              "2. dy = f(x)dx",
+              "3. ∫dy = ∫f(x)dx",
+              `4. y = ∫(${expr})dx + C`,
+              `5. Using y(${x0}) = ${y0}, find C = ${C}`
+            ]
+          };
+        }
       } catch (e) {
-        return { solved: false, error: "Failed to integrate" };
+        // Fall through to numerical solution
       }
     }
     
@@ -284,6 +293,48 @@ document.addEventListener("DOMContentLoaded", function () {
     return descriptions[type] || type;
   }
 
+  function getBasicIntegral(expr) {
+    // Handle basic integration patterns
+    const normalizedExpr = expr.replace(/\s+/g, '');
+    
+    // Common patterns
+    const patterns = [
+      { regex: /^(\d*)\*?x$/, result: (m) => `${m[1] || '1'} * x^2 / 2` },
+      { regex: /^(\d+)\*?x\^(\d+)$/, result: (m) => `${m[1]} * x^${parseInt(m[2]) + 1} / ${parseInt(m[2]) + 1}` },
+      { regex: /^x\^(\d+)$/, result: (m) => `x^${parseInt(m[1]) + 1} / ${parseInt(m[1]) + 1}` },
+      { regex: /^(\d+)$/, result: (m) => `${m[1]} * x` },
+      { regex: /^x$/, result: () => 'x^2 / 2' },
+      { regex: /^2\*x$/, result: () => 'x^2' },
+      { regex: /^3\*x$/, result: () => '3 * x^2 / 2' }
+    ];
+    
+    for (const pattern of patterns) {
+      const match = normalizedExpr.match(pattern.regex);
+      if (match) {
+        return {
+          success: true,
+          result: pattern.result(match),
+          canEvaluate: true
+        };
+      }
+    }
+    
+    return { success: false };
+  }
+  
+  function evaluateBasicExpression(expr, x) {
+    // Simple expression evaluator for basic cases
+    try {
+      const normalized = expr
+        .replace(/\^/g, '**')
+        .replace(/x/g, `(${x})`);
+      
+      return Function('"use strict"; return (' + normalized + ')')();
+    } catch (e) {
+      return 0;
+    }
+  }
+  
   function createDEFunctionEvaluator(functionStr) {
     // Basic function parser and evaluator for differential equations
     const normalizedFunction = functionStr
