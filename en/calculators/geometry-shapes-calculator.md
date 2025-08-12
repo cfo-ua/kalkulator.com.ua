@@ -66,8 +66,6 @@ faq:
     answer: "Base area depends on the shape: square - a², rectangle - a×b, triangle - (1/2)×a×h, circle - π×r²."
   - question: Why is the volume of cone and pyramid divided by 3?
     answer: "This is a mathematical fact: the volume of a cone or pyramid is always 1/3 of the volume of a cylinder or prism with the same base and height."
-  - question: Can I use different units for different measurements?
-    answer: "No, all measurements must be in the same units. Convert all values to the same unit system before calculating."
 ---
 
 <div class="geometry-calculator">
