@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initTripleIntegralCalculator() {
   const form = document.getElementById("triple-integral-form");
   const result = document.getElementById("triple-integral-result");
 
@@ -169,4 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
     result.innerHTML = html;
   }
-});
+}
+
+// Initialize the calculator when DOM is ready or immediately if already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTripleIntegralCalculator);
+} else {
+  initTripleIntegralCalculator();
+}
