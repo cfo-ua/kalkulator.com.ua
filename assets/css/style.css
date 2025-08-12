@@ -4806,3 +4806,407 @@ input[type="date"]::-moz-focus-inner {
     width: 100%;
   }
 }
+
+/* ========================================= */
+/* NEW CALCULATORS STYLES */
+/* ========================================= */
+
+/* Base Converter Calculator */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.option-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.option-item input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.btn-secondary {
+  background: var(--card-bg);
+  color: var(--main-color);
+  border: 2px solid var(--border);
+  padding: 0.68em 1.5em;
+  font-size: 1.05em;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.additional-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.bit-analysis {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.bit-analysis p {
+  margin: 0.5rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+/* Stoichiometry Calculator */
+.reaction-setup {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.calculation-setup {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.preset-btn {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.preset-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.examples-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.example-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.substance-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.calculation-explanation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fdff 0%, #e8f8fc 100%);
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+}
+
+.ratio-explanation {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.ratio-line {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Chemical Equation Balancer */
+.input-section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.preset-section {
+  margin-top: 1.5rem;
+}
+
+.preset-section h4 {
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.options-section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.equation-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 600;
+}
+
+.equation-display.balanced {
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f8e8 100%);
+  border-color: #28a745;
+  color: #155724;
+}
+
+.coefficients-breakdown {
+  margin: 2rem 0;
+}
+
+.verification-details {
+  overflow-x: auto;
+}
+
+.balance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.balance-table th,
+.balance-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.balance-table th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.balance-table tr.balanced {
+  background: #f8fff9;
+  color: #155724;
+}
+
+.balance-table tr.unbalanced {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.balance-summary {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.balance-summary.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.balance-summary.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.steps-explanation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.steps-list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.steps-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.tips-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff8e1 0%, #f5f5dc 100%);
+  border-radius: 12px;
+  border: 1px solid #ffc107;
+}
+
+.tips-section ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.tips-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Conversion Examples styling */
+.conversion-examples {
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design for New Calculators */
+@media (max-width: 768px) {
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .preset-buttons {
+    flex-direction: column;
+  }
+  
+  .preset-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .example-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .options-group {
+    padding: 0.75rem;
+  }
+  
+  .equation-display {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+  
+  .balance-table {
+    font-size: 0.8rem;
+  }
+  
+  .balance-table th,
+  .balance-table td {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Info section styling for all new calculators */
+.info-section {
+  margin-top: 2rem;
+}
+
+.info-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+  text-align: center;
+}
+
+/* Additional responsive fixes */
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1rem;
+  }
+  
+  .reaction-setup,
+  .calculation-setup,
+  .input-section {
+    padding: 1rem;
+  }
+  
+  .insight-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .additional-info,
+  .calculation-explanation,
+  .steps-explanation {
+    padding: 1rem;
+  }
+}
