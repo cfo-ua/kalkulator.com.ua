@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const expr = parsedEq.rightSide;
     
     try {
-      const f = math.parse(expr);
+      const f = createDEFunctionEvaluator(expr);
       const h = 0.1; // Step size
       const points = [];
       
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < 50; i++) {
         points.push({ x: x, y: y });
         
-        const slope = f.evaluate({ x: x, y: y });
+        const slope = f(x, y);
         y = y + h * slope;
         x = x + h;
       }
@@ -284,32 +284,60 @@ document.addEventListener("DOMContentLoaded", function () {
     return descriptions[type] || type;
   }
 
+  function createDEFunctionEvaluator(functionStr) {
+    // Basic function parser and evaluator for differential equations
+    const normalizedFunction = functionStr
+      .replace(/\^/g, '**')  // Replace ^ with **
+      .replace(/sin/g, 'Math.sin')
+      .replace(/cos/g, 'Math.cos')
+      .replace(/tan/g, 'Math.tan')
+      .replace(/sqrt/g, 'Math.sqrt')
+      .replace(/ln/g, 'Math.log')
+      .replace(/log/g, 'Math.log10')
+      .replace(/exp/g, 'Math.exp');
+
+    return function(x, y) {
+      try {
+        // Use Function constructor to evaluate expression
+        // Replace variables with actual values
+        const expr = normalizedFunction
+          .replace(/x/g, `(${x})`)
+          .replace(/y/g, `(${y})`);
+        
+        return Function('"use strict"; return (' + expr + ')')();
+      } catch (e) {
+        throw new Error("Invalid function format");
+      }
+    };
+  }
+
   function plotDESolution(solution, x0, y0, showDirectionField) {
-    if (!solution.points || !plotDiv) return;
+    if (!solution.points) return;
     
-    const xData = solution.points.map(p => p.x);
-    const yData = solution.points.map(p => p.y);
+    // Create a simple text-based representation since Plotly is not available
+    let plotHtml = `
+      <div class="insight-card">
+        <h6>📈 Solution Graph</h6>
+        <p>Solution points (x, y):</p>
+        <div style="max-height: 200px; overflow-y: auto; font-family: monospace; font-size: 0.9em;">
+    `;
     
-    const trace = {
-      x: xData,
-      y: yData,
-      type: 'scatter',
-      mode: 'lines+markers',
-      name: 'Solution',
-      line: { color: 'blue', width: 3 },
-      marker: { size: 4 }
-    };
+    solution.points.slice(0, 10).forEach(point => {
+      plotHtml += `<div>(${point.x.toFixed(3)}, ${point.y.toFixed(3)})</div>`;
+    });
     
-    const data = [trace];
+    if (solution.points.length > 10) {
+      plotHtml += `<div>... and ${solution.points.length - 10} more points</div>`;
+    }
     
-    const layout = {
-      title: 'Differential Equation Solution Graph',
-      xaxis: { title: 'x' },
-      yaxis: { title: 'y' },
-      showlegend: true,
-      height: 400
-    };
+    plotHtml += `
+        </div>
+        <p><small>Note: For full visualization, we recommend using specialized mathematical software.</small></p>
+      </div>
+    `;
     
-    Plotly.newPlot(plotDiv, data, layout);
+    if (plotDiv) {
+      plotDiv.innerHTML = plotHtml;
+    }
   }
 });

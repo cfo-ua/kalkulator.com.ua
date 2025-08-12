@@ -54,7 +54,6 @@ seo:
     
     <p><strong>Examples:</strong> (x^2-1)/(x-1), sin(x)/x, (1+1/x)^x, ln(x), e^x/x^2</p>
 scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js
   - /en/js/limit-calculator.js
 faq:
   - question: "What is a function limit?"

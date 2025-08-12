@@ -16,11 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // Parse function
         let f;
         try {
-          // Replace common notations
+          // Replace common notations and create function evaluator
           const normalizedFunction = functionStr
             .replace(/\bln\(/g, "log(")
-            .replace(/\be\^/g, "exp(");
-          f = math.parse(normalizedFunction);
+            .replace(/\be\^/g, "exp(")
+            .replace(/\^/g, '**')
+            .replace(/sin/g, 'Math.sin')
+            .replace(/cos/g, 'Math.cos')
+            .replace(/tan/g, 'Math.tan')
+            .replace(/sqrt/g, 'Math.sqrt')
+            .replace(/log/g, 'Math.log')
+            .replace(/exp/g, 'Math.exp');
+          
+          f = function(x) {
+            try {
+              const expr = normalizedFunction.replace(/x/g, `(${x})`);
+              return Function('"use strict"; return (' + expr + ')')();
+            } catch (e) {
+              throw new Error("Невірний формат функції");
+            }
+          };
         } catch (e) {
           throw new Error("Невірний формат функції");
         }
@@ -111,14 +126,19 @@ document.addEventListener("DOMContentLoaded", function () {
     
     for (let i = 0; i < steps; i++) {
       const x = point + h;
-      const value = f.evaluate({ x: x });
-      
-      if (typeof value !== 'number' || isNaN(value) || !isFinite(value)) {
+      try {
+        const value = f(x);
+        
+        if (typeof value !== 'number' || isNaN(value) || !isFinite(value)) {
+          h /= 10;
+          continue;
+        }
+        
+        return value;
+      } catch (e) {
         h /= 10;
         continue;
       }
-      
-      return value;
     }
     
     return null;
@@ -132,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 1; i <= 5; i++) {
       const x = start * Math.pow(10, i);
       try {
-        const value = f.evaluate({ x: x });
+        const value = f(x);
         if (typeof value === 'number' && !isNaN(value)) {
           values.push(value);
         }
@@ -150,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkFunctionContinuity(f, point) {
     try {
-      const functionValue = f.evaluate({ x: point });
+      const functionValue = f(point);
       const limitResult = calculateLimit(f, point, 'both');
       
       const isContinuous = limitResult.exists && 

@@ -56,8 +56,6 @@ seo:
     
     <p><strong>Examples:</strong> dy/dx = 2*x, dy/dx = y, dy/dx = x/y, dy/dx + y = x</p>
 scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js
-  - https://cdn.plot.ly/plotly-latest.min.js
   - /en/js/differential-equation.js
 faq:
   - question: "What is a differential equation?"

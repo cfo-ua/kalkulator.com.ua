@@ -47,7 +47,6 @@ seo:
     
     <p><strong>Function examples:</strong> x*y*z, x^2 + y^2 + z^2, sin(x)*cos(y)*z, sqrt(x^2 + y^2)</p>
 scripts:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js
   - /en/js/triple-integral.js
 faq:
   - question: "What is a triple integral?"
