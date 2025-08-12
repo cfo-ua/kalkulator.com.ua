@@ -2,6 +2,12 @@ function initTripleIntegralCalculator() {
   const form = document.getElementById("triple-integral-form");
   const result = document.getElementById("triple-integral-result");
 
+  // Guard against missing DOM elements
+  if (!form || !result) {
+    console.warn('Triple integral calculator: Required DOM elements not found');
+    return;
+  }
+
   function createFunctionEvaluator(functionStr) {
     // Basic function parser and evaluator
     const normalizedFunction = functionStr
@@ -125,19 +131,35 @@ function initTripleIntegralCalculator() {
   }
 
   // Set up the form event listener after all helper functions are defined
-  if (form) {
+  if (form && !form.hasAttribute('data-calculator-initialized')) {
+    form.setAttribute('data-calculator-initialized', 'true');
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       
       try {
-        const functionStr = document.getElementById("function").value.trim();
-        const xLower = parseFloat(document.getElementById("x-lower").value.trim());
-        const xUpper = parseFloat(document.getElementById("x-upper").value.trim());
-        const yLower = parseFloat(document.getElementById("y-lower").value.trim());
-        const yUpper = parseFloat(document.getElementById("y-upper").value.trim());
-        const zLower = parseFloat(document.getElementById("z-lower").value.trim());
-        const zUpper = parseFloat(document.getElementById("z-upper").value.trim());
-        const precision = parseInt(document.getElementById("precision").value);
+        const functionInput = document.getElementById("function");
+        const xLowerInput = document.getElementById("x-lower");
+        const xUpperInput = document.getElementById("x-upper");
+        const yLowerInput = document.getElementById("y-lower");
+        const yUpperInput = document.getElementById("y-upper");
+        const zLowerInput = document.getElementById("z-lower");
+        const zUpperInput = document.getElementById("z-upper");
+        const precisionInput = document.getElementById("precision");
+
+        // Validate all input elements exist
+        if (!functionInput || !xLowerInput || !xUpperInput || !yLowerInput || 
+            !yUpperInput || !zLowerInput || !zUpperInput || !precisionInput) {
+          throw new Error("Деякі поля форми не знайдено");
+        }
+
+        const functionStr = functionInput.value.trim();
+        const xLower = parseFloat(xLowerInput.value.trim());
+        const xUpper = parseFloat(xUpperInput.value.trim());
+        const yLower = parseFloat(yLowerInput.value.trim());
+        const yUpper = parseFloat(yUpperInput.value.trim());
+        const zLower = parseFloat(zLowerInput.value.trim());
+        const zUpper = parseFloat(zUpperInput.value.trim());
+        const precision = parseInt(precisionInput.value);
 
         // Validate inputs
         if (isNaN(xLower) || isNaN(xUpper) || isNaN(yLower) || isNaN(yUpper) || isNaN(zLower) || isNaN(zUpper)) {
@@ -172,9 +194,44 @@ function initTripleIntegralCalculator() {
   }
 }
 
-// Initialize the calculator when DOM is ready or immediately if already loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initTripleIntegralCalculator);
-} else {
-  initTripleIntegralCalculator();
+// Robust initialization that handles external script interference
+let initializationAttempts = 0;
+const maxInitializationAttempts = 10;
+
+function safeInitTripleIntegralCalculator() {
+  // Prevent infinite retry loops
+  if (initializationAttempts >= maxInitializationAttempts) {
+    console.warn('Triple integral calculator: Maximum initialization attempts reached');
+    return;
+  }
+  
+  initializationAttempts++;
+  
+  // Check if required DOM elements exist before initialization
+  const form = document.getElementById("triple-integral-form");
+  const result = document.getElementById("triple-integral-result");
+  
+  if (form && result) {
+    try {
+      initTripleIntegralCalculator();
+      console.log('Triple integral calculator initialized successfully');
+    } catch (error) {
+      console.warn('Triple integral calculator initialization failed:', error);
+      // Retry after a short delay
+      setTimeout(safeInitTripleIntegralCalculator, 500);
+    }
+  } else {
+    // Elements not found, retry after a short delay
+    setTimeout(safeInitTripleIntegralCalculator, 100);
+  }
 }
+
+// Multiple initialization attempts to handle timing issues
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', safeInitTripleIntegralCalculator);
+} else {
+  safeInitTripleIntegralCalculator();
+}
+
+// Fallback initialization in case external scripts interfere
+setTimeout(safeInitTripleIntegralCalculator, 1000);
