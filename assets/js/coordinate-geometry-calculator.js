@@ -84,23 +84,6 @@ window.calculateCoordinateGeometry = function() {
   }
   
   details += `
-      <div class="all-results">
-        <h5>🔍 Всі розрахунки:</h5>
-        <div class="results-grid">
-          <div class="result-item">
-            📏 <span>Відстань:</span> <strong>${distance.toFixed(4)}</strong>
-          </div>
-          <div class="result-item">
-            📍 <span>Середина:</span> <strong>(${midX.toFixed(2)}, ${midY.toFixed(2)})</strong>
-          </div>
-          <div class="result-item">
-            📐 <span>Нахил:</span> <strong>${slopeText}</strong>
-          </div>
-          <div class="result-item">
-            🔄 <span>Кут:</span> <strong>${angleText}</strong>
-          </div>
-        </div>
-      </div>
     </div>
   `;
   

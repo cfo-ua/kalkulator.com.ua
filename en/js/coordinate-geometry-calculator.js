@@ -84,23 +84,6 @@ window.calculateCoordinateGeometry = function() {
   }
   
   details += `
-      <div class="all-results">
-        <h5>🔍 All Calculations:</h5>
-        <div class="results-grid">
-          <div class="result-item">
-            📏 <span>Distance:</span> <strong>${distance.toFixed(4)}</strong>
-          </div>
-          <div class="result-item">
-            📍 <span>Midpoint:</span> <strong>(${midX.toFixed(2)}, ${midY.toFixed(2)})</strong>
-          </div>
-          <div class="result-item">
-            📐 <span>Slope:</span> <strong>${slopeText}</strong>
-          </div>
-          <div class="result-item">
-            🔄 <span>Angle:</span> <strong>${angleText}</strong>
-          </div>
-        </div>
-      </div>
     </div>
   `;
   

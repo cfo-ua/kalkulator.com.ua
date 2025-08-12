@@ -101,7 +101,7 @@ faq:
       </div>
     </div>
     
-    <button class="calculate-btn" onclick="calculateCoordinateGeometry()">🧮 Розрахувати всі параметри</button>
+    <button class="calculate-btn" onclick="calculateCoordinateGeometry()">🧮 Розрахувати</button>
   </div>
 
   <div id="coordinate-result" class="result insight-card"></div>
