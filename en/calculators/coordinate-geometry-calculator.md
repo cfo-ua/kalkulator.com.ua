@@ -105,7 +105,7 @@ faq:
       </div>
     </div>
     
-    <button class="calculate-btn" onclick="calculateCoordinateGeometry()">🧮 Calculate All Parameters</button>
+    <button class="calculate-btn" onclick="calculateCoordinateGeometry()">🧮 Calculate</button>
   </div>
 
   <div id="coordinate-result" class="result insight-card"></div>
