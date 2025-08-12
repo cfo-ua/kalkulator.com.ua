@@ -4563,3 +4563,164 @@ input[type="date"]::-moz-focus-inner {
     font-size: 0.9rem;
   }
 }
+
+/* Mathematical Calculator Styles */
+.calculator-container {
+  margin: 2rem 0;
+}
+
+.bounds-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.bounds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bound-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bound-group label {
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.bound-group input {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.bound-group span {
+  font-weight: 500;
+  color: #666;
+}
+
+.initial-conditions {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f1f8ff;
+  border-radius: 8px;
+  border: 1px solid #b3d9ff;
+}
+
+.condition-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.condition-group label {
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.condition-group input {
+  width: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.advanced-options {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #fff8e1;
+  border-radius: 8px;
+  border: 1px solid #ffcc02;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+}
+
+.math-expression {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border-left: 4px solid var(--accent);
+  margin: 0.5rem 0;
+}
+
+.main-result {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0fff0 100%);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #28a745;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.main-result p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #155724;
+}
+
+.result-display {
+  text-align: left;
+}
+
+.result-display ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.plot-container {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .bounds-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bound-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .bound-group label {
+    min-width: auto;
+  }
+  
+  .condition-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .condition-group input {
+    width: 100%;
+  }
+}
