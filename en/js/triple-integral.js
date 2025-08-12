@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initTripleIntegralCalculator() {
   const form = document.getElementById("triple-integral-form");
   const result = document.getElementById("triple-integral-result");
 
@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       
       try {
         const functionStr = document.getElementById("function").value.trim();
-        const xLower = document.getElementById("x-lower").value.trim();
-        const xUpper = document.getElementById("x-upper").value.trim();
-        const yLower = document.getElementById("y-lower").value.trim();
-        const yUpper = document.getElementById("y-upper").value.trim();
-        const zLower = document.getElementById("z-lower").value.trim();
-        const zUpper = document.getElementById("z-upper").value.trim();
+        const xLower = parseFloat(document.getElementById("x-lower").value.trim());
+        const xUpper = parseFloat(document.getElementById("x-upper").value.trim());
+        const yLower = parseFloat(document.getElementById("y-lower").value.trim());
+        const yUpper = parseFloat(document.getElementById("y-upper").value.trim());
+        const zLower = parseFloat(document.getElementById("z-lower").value.trim());
+        const zUpper = parseFloat(document.getElementById("z-upper").value.trim());
         const precision = parseInt(document.getElementById("precision").value);
 
         // Validate inputs
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create function evaluator
         const f = createFunctionEvaluator(functionStr);
         const bounds = {
-          x: [parseFloat(xLower), parseFloat(xUpper)],
-          y: [parseFloat(yLower), parseFloat(yUpper)],
-          z: [parseFloat(zLower), parseFloat(zUpper)]
+          x: [xLower, xUpper],
+          y: [yLower, yUpper],
+          z: [zLower, zUpper]
         };
 
         // Calculate triple integral using numerical integration (Monte Carlo method)
@@ -168,4 +168,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
     result.innerHTML = html;
   }
-});
+}
+
+// Initialize the calculator when DOM is ready or immediately if already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTripleIntegralCalculator);
+} else {
+  initTripleIntegralCalculator();
+}
