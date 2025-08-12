@@ -4,29 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById('coordinate-canvas');
   const ctx = canvas.getContext('2d');
   
-  // Calculation type selection
-  calcButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      calcButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      calculateCoordinateGeometry();
-    });
-  });
-  
-  // Auto-calculate on input change
-  const inputs = document.querySelectorAll('#x1, #y1, #x2, #y2');
-  inputs.forEach(input => {
-    input.addEventListener('input', calculateCoordinateGeometry);
-  });
-  
+  // Define the main calculation function first
   window.calculateCoordinateGeometry = function() {
+    // Get elements each time to ensure they're available
+    const result = document.getElementById('coordinate-result');
+    const canvas = document.getElementById('coordinate-canvas');
+    const ctx = canvas ? canvas.getContext('2d') : null;
+    
     const x1 = parseFloat(document.getElementById('x1').value);
     const y1 = parseFloat(document.getElementById('y1').value);
     const x2 = parseFloat(document.getElementById('x2').value);
     const y2 = parseFloat(document.getElementById('y2').value);
     
     if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
-      result.innerHTML = '<div class="error">⚠️ Введіть коректні значення для всіх координат</div>';
+      if (result) result.innerHTML = '<div class="error">⚠️ Введіть коректні значення для всіх координат</div>';
       return;
     }
     
@@ -118,11 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
     
-    result.innerHTML = details;
-    drawCoordinatePlane(x1, y1, x2, y2, midX, midY);
+    if (result) result.innerHTML = details;
+    if (ctx) drawCoordinatePlane(x1, y1, x2, y2, midX, midY);
   };
   
   function drawCoordinatePlane(x1, y1, x2, y2, midX, midY) {
+    const canvas = document.getElementById('coordinate-canvas');
+    const ctx = canvas ? canvas.getContext('2d') : null;
+    if (!ctx) return;
+    
     const width = canvas.width;
     const height = canvas.height;
     const centerX = width / 2;
@@ -213,6 +208,21 @@ document.addEventListener("DOMContentLoaded", function () {
     ctx.fillText(`M(${midX.toFixed(1)}, ${midY.toFixed(1)})`, pmidX + 10, pmidY - 10);
   }
   
+  // Calculation type selection
+  calcButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      calcButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      calculateCoordinateGeometry();
+    });
+  });
+  
+  // Auto-calculate on input change
+  const inputs = document.querySelectorAll('#x1, #y1, #x2, #y2');
+  inputs.forEach(input => {
+    input.addEventListener('input', calculateCoordinateGeometry);
+  });
+
   // Initial calculation
   calculateCoordinateGeometry();
 });
