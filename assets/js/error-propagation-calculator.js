@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Formula
     html += '<div class="formula-section">';
     html += '<h4>📐 Формула:</h4>';
-    html += `<p class="formula"><code>${formula}</code></p>';
+    html += `<p class="formula"><code>${formula}</code></p>`;
     html += '</div>';
     
     // Calculation steps

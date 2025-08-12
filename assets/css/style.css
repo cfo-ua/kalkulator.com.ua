@@ -528,6 +528,59 @@ h1 {
 .calculator-block .btn:focus {
   outline: none;
 }
+
+/* Calculator tabs styling */
+.calculator-tabs {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab-button {
+  background: transparent;
+  color: var(--main-color);
+  border: none;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  transition: all var(--transition);
+  position: relative;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  box-shadow: none;
+}
+
+.tab-button:hover {
+  background: rgba(21, 122, 255, 0.05);
+  color: var(--accent);
+  transform: none;
+}
+
+.tab-button.active {
+  background: var(--accent);
+  color: #fff;
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(21, 122, 255, 0.2);
+}
+
+.tab-button.active:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+/* Tab content styling */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
 .result {
   font-size: 1.18em;
   color: var(--accent);
