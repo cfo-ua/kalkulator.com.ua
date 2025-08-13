@@ -255,34 +255,18 @@ faq:
 }
 
 .word-btn {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  color: #8b5cf6;
-  padding: 0.4rem 0.7rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 32px;
-  min-height: 32px;
+  font-size: 0.7rem;
+  transition: background 0.2s;
 }
 
 .word-btn:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #7c3aed;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.word-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .idea-cards {
@@ -329,36 +313,6 @@ faq:
   font-size: 0.9rem;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
-}
-
-.favorite-word:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
-}
-
-.favorite-word button {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  color: white !important;
-  margin-left: 0.5rem !important;
-  cursor: pointer !important;
-  border-radius: 50% !important;
-  width: 20px !important;
-  height: 20px !important;
-  font-size: 0.8rem !important;
-  font-weight: bold !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.2s ease !important;
-}
-
-.favorite-word button:hover {
-  background: rgba(255, 255, 255, 0.4) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  transform: scale(1.1) !important;
 }
 
 .copy-notification {
