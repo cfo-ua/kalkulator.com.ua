@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="insight-card info">
                     <h6>📐 Room Requirements</h6>
-                    <div class="big-number">${roomWidthNeeded}"×${roomLengthNeeded}"</div>
+                    <div class="big-number">${room.widthNeeded}"×${room.lengthNeeded}"</div>
                     <p>Minimum room dimensions</p>
                 </div>
                 
