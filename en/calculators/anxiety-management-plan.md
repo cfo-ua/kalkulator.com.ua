@@ -168,6 +168,25 @@ seo:
     <p><strong>Important Note:</strong> This anxiety management plan generator provides evidence-based self-help strategies and is not a substitute for professional mental health treatment. If you're experiencing severe anxiety, panic attacks, or thoughts of self-harm, please seek immediate professional help. Always consult with a healthcare provider before making significant changes to anxiety treatment.</p>
 scripts:
   - /en/js/anxiety-management-plan.js
+faq:
+  - question: Is this anxiety management plan a replacement for therapy?
+    answer: "No, this plan generator provides evidence-based self-help strategies but is not a replacement for professional therapy or medical treatment. If you're experiencing severe anxiety, persistent symptoms, or thoughts of self-harm, please consult a mental health professional for proper diagnosis and treatment."
+  - question: How long does it take to see results from an anxiety management plan?
+    answer: "Results vary by individual, but many people notice some improvement in 2-4 weeks with consistent practice. Significant changes typically occur over 6-12 weeks. Some techniques like breathing exercises provide immediate relief, while others like cognitive restructuring require more time to develop."
+  - question: What should I do if my anxiety gets worse while using these strategies?
+    answer: "If anxiety worsens or you experience new symptoms like panic attacks, chest pain, or thoughts of self-harm, stop using the strategies and seek professional help immediately. Some anxiety management techniques may initially increase awareness of symptoms before providing relief."
+  - question: Can I use this plan alongside anxiety medication?
+    answer: "These self-help strategies generally complement anxiety medication well and many are recommended by healthcare providers. However, always discuss any changes to your anxiety management with your prescribing doctor, especially if you plan to modify medication based on symptom improvements."
+  - question: Which anxiety management techniques work fastest?
+    answer: "Breathing exercises, grounding techniques (5-4-3-2-1 method), and progressive muscle relaxation can provide relief within minutes. Physical movement and mindfulness also offer relatively quick benefits. Cognitive techniques and lifestyle changes take longer but provide more lasting results."
+  - question: How often should I practice anxiety management techniques?
+    answer: "Practice prevention techniques daily, even when feeling calm, to build skills for when anxiety arises. During anxious periods, use coping strategies as needed. Most people benefit from 10-30 minutes of daily practice, with shorter techniques used multiple times throughout the day."
+  - question: What if I can't stick to my anxiety management plan?
+    answer: "Start with just one or two techniques that feel most manageable. Consistency with simple strategies is better than sporadically using complex plans. Adjust the plan to fit your lifestyle and capabilities. Consider working with a therapist for accountability and motivation."
+  - question: Are there any risks to using anxiety management techniques?
+    answer: "Most anxiety management techniques are safe for general use. However, some people may initially feel increased anxiety when starting mindfulness or exposure exercises. If you have trauma history, severe mental health conditions, or physical health issues, consult a professional before beginning new practices."
+  - question: How do I know if my anxiety management plan is working?
+    answer: "Track changes in anxiety frequency, intensity, and duration. Notice improvements in daily functioning, sleep quality, and ability to handle previously difficult situations. Keep a mood diary or use anxiety tracking apps. If you see no improvement after 6-8 weeks of consistent practice, consider professional help."
 ---
 
 <form id="anxiety-plan-form" autocomplete="off">

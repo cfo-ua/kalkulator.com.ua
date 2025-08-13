@@ -162,6 +162,25 @@ seo:
     <p><strong>Important:</strong> This fitness age calculator provides estimates based on research data and population norms. It's a motivational tool and general health indicator, not a medical diagnosis. For precise fitness assessment, consider professional testing with VO2 max measurement. Consult healthcare providers before starting new exercise programs, especially if you have health conditions.</p>
 scripts:
   - /en/js/fitness-age.js
+faq:
+  - question: How accurate is the fitness age calculator?
+    answer: "The calculator provides estimates based on scientific research and population data, typically accurate within 3-5 years for most people. However, it cannot replace professional fitness testing with VO2 max measurement. Individual variations in genetics, health conditions, and exercise efficiency can affect accuracy."
+  - question: What does it mean if my fitness age is older than my chronological age?
+    answer: "A fitness age older than your chronological age suggests your cardiovascular fitness is below average for your age group. This indicates opportunity for improvement through regular exercise, particularly cardiovascular activities like walking, jogging, cycling, or swimming."
+  - question: Can I improve my fitness age quickly?
+    answer: "Yes, fitness age can improve relatively quickly with consistent exercise. Most people see improvements within 6-12 weeks of regular activity. Cardiovascular fitness responds faster than strength, so aerobic activities like brisk walking, cycling, or swimming can lower fitness age in 2-3 months."
+  - question: Is fitness age more important than chronological age for health?
+    answer: "Fitness age is often a better predictor of health risks and longevity than chronological age alone. Research shows that people with younger fitness ages have lower risks of cardiovascular disease, diabetes, and premature death, regardless of their actual age."
+  - question: What's the best way to lower my fitness age?
+    answer: "Focus on cardiovascular exercise: aim for 150+ minutes of moderate activity or 75+ minutes of vigorous activity weekly. Include strength training 2-3 times per week. High-intensity interval training (HIIT) can be particularly effective for improving VO2 max and lowering fitness age."
+  - question: Why does resting heart rate affect fitness age?
+    answer: "Lower resting heart rate typically indicates better cardiovascular fitness and heart efficiency. Well-trained hearts pump more blood per beat, so they don't need to beat as frequently at rest. Athletes often have resting heart rates in the 40-60 range, while sedentary people may be 70-90."
+  - question: Can medical conditions affect my fitness age calculation?
+    answer: "Yes, conditions like heart disease, diabetes, thyroid disorders, or medications (like beta-blockers) can affect heart rate and exercise capacity, potentially skewing fitness age results. The calculator works best for healthy individuals without significant medical conditions."
+  - question: How often should I recalculate my fitness age?
+    answer: "Recalculate every 3-6 months to track progress, especially if you've started a new exercise program. Fitness improvements are most rapid in the first 3 months of training, then continue at a slower pace with consistent activity."
+  - question: What if my fitness age seems too young or old compared to how I feel?
+    answer: "The calculator uses population averages and may not perfectly reflect individual differences. Factors like genetics, body type, training history, and health conditions can influence results. Use it as a general guide and motivation tool rather than an absolute measure."
 ---
 
 <form id="fitness-age-form" autocomplete="off">

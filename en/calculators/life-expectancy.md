@@ -152,6 +152,25 @@ seo:
     <p><strong>Important Disclaimer:</strong> This calculator provides estimates based on statistical data and research. Individual life expectancy can vary significantly due to unforeseen circumstances, medical advances, lifestyle changes, and genetic factors. This tool is for educational purposes and should not replace professional medical advice.</p>
 scripts:
   - /en/js/life-expectancy.js
+faq:
+  - question: How accurate are life expectancy calculators?
+    answer: "Life expectancy calculators provide statistical estimates based on population data and research, but cannot predict individual outcomes. They're most accurate for general trends and comparisons. Accuracy improves with more detailed health and lifestyle information, but unexpected events, medical advances, and genetic factors can significantly impact individual results."
+  - question: What factors most significantly affect life expectancy?
+    answer: "Major factors include: genetics (20-30%), lifestyle choices (smoking, diet, exercise), chronic diseases (heart disease, diabetes, cancer), socioeconomic status, education level, social relationships, mental health, environmental factors, and access to healthcare. Lifestyle factors are often the most modifiable."
+  - question: Can lifestyle changes actually increase my life expectancy?
+    answer: "Yes, significant lifestyle improvements can add years to life expectancy. Quitting smoking can add 10+ years, regular exercise adds 3-7 years, maintaining healthy weight adds 2-6 years, and following a Mediterranean diet adds 2-5 years. The earlier changes are made, the greater the potential benefit."
+  - question: How does gender affect life expectancy calculations?
+    answer: "Women typically live 3-7 years longer than men globally due to biological factors (hormones, genetics), lower rates of risky behaviors, better healthcare utilization, and stronger social connections. However, the gender gap has been narrowing in developed countries as lifestyle factors become more similar."
+  - question: Do life expectancy predictions change as I age?
+    answer: "Yes, life expectancy estimates become more accurate and often increase as you age without developing major health issues. For example, reaching age 65 in good health means you've already survived many potential causes of early death, improving your projected longevity beyond what was predicted at birth."
+  - question: How do chronic diseases affect life expectancy calculations?
+    answer: "Chronic diseases like diabetes, heart disease, and cancer can significantly reduce life expectancy, but the impact varies greatly based on disease severity, management quality, and other health factors. Well-managed chronic conditions may have minimal impact, while poorly controlled diseases can reduce life expectancy by 5-20 years."
+  - question: What role does genetics play in life expectancy?
+    answer: "Genetics accounts for about 20-30% of life expectancy variation. Having long-lived parents and grandparents is a positive indicator, but lifestyle factors often outweigh genetic predisposition. Even with poor genetic factors, healthy lifestyle choices can still significantly extend life."
+  - question: How reliable are life expectancy trends for future predictions?
+    answer: "Life expectancy trends help predict population patterns but individual outcomes vary widely. Medical advances, emerging diseases, environmental changes, and lifestyle evolution can alter trends. Current calculations are based on existing data and may not account for future medical breakthroughs or global changes."
+  - question: Should I make major life decisions based on life expectancy calculations?
+    answer: "Life expectancy calculations are useful for general planning and motivation for healthy choices, but shouldn't drive major decisions alone. Use them as one factor among many for retirement planning, insurance decisions, and health prioritization, while remembering that individual outcomes can vary significantly from statistical predictions."
 ---
 
 <form id="life-expectancy-form" autocomplete="off">

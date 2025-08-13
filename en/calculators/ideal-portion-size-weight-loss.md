@@ -164,6 +164,25 @@ seo:
     <p><strong>Important Note:</strong> This calculator provides general portion guidance based on established nutrition principles. Individual needs may vary based on medical conditions, medications, genetics, and other factors. Consult with a registered dietitian or healthcare provider for personalized nutrition advice, especially if you have medical conditions.</p>
 scripts:
   - /en/js/ideal-portion-size-weight-loss.js
+faq:
+  - question: How do I determine the right portion sizes for weight loss?
+    answer: "Right portion sizes depend on your total daily calorie needs, weight loss goals, and food choices. Generally, aim for smaller portions than you currently eat while maintaining balanced nutrition. Use measuring tools initially, then learn to estimate with visual cues like palm-sized proteins and fist-sized carbohydrates."
+  - question: What's the difference between portion size and serving size?
+    answer: "Serving size is the standardized amount listed on nutrition labels, while portion size is the amount you actually eat. Portions can be larger or smaller than servings. For weight loss, focus on appropriate portion sizes for your goals rather than just following label serving sizes."
+  - question: Can I lose weight just by controlling portion sizes?
+    answer: "Yes, portion control is one of the most effective weight loss strategies. Reducing portion sizes by 15-25% can create the calorie deficit needed for weight loss while still eating foods you enjoy. Combine with choosing more nutrient-dense foods for better results and satisfaction."
+  - question: How can I control portions when eating out?
+    answer: "Restaurant portions are often 2-3 times larger than needed. Ask for half portions, share meals, or immediately box half for later. Choose appetizers as main courses, ask for dressings/sauces on the side, and focus on vegetables and lean proteins. Many restaurants offer 'light' or portion-controlled menu options."
+  - question: What are good visual cues for healthy portion sizes?
+    answer: "Use these visual guides: palm-sized lean protein (3-4 oz), fist-sized vegetables, cupped hand of grains/starches, thumb-sized healthy fats. A standard plate should be ½ vegetables, ¼ lean protein, ¼ whole grains. These cues help estimate portions without constant measuring."
+  - question: Should portion sizes be the same for all meals?
+    answer: "Not necessarily. Many people benefit from larger breakfasts and lunches with smaller dinners, or eating smaller, more frequent meals. The key is total daily calorie intake and choosing portions that keep you satisfied without overeating. Experiment to find what works for your schedule and hunger patterns."
+  - question: How do I deal with hunger when reducing portion sizes?
+    answer: "Eat slowly to allow satiety signals to register (20 minutes). Include protein and fiber at each meal for satiety. Drink water before meals. Choose volume-rich, low-calorie foods like vegetables. Ensure you're not cutting portions too drastically - gradual reduction is more sustainable."
+  - question: Do portion needs change based on activity level?
+    answer: "Yes, more active individuals need larger portions, especially of carbohydrates and protein around workouts. Athletes may need 2-3 times more calories than sedentary people. Adjust portions based on your activity level, but maintain the same balanced proportions of nutrients."
+  - question: How long does it take to get used to smaller portion sizes?
+    answer: "Most people adapt to smaller portions within 2-4 weeks. Initially, you may feel hungry, but your stomach will gradually adjust. Focus on eating slowly, staying hydrated, and choosing satisfying, nutrient-dense foods. The adjustment period varies but gets easier with consistency."
 ---
 
 <form id="portion-size-form" autocomplete="off">
