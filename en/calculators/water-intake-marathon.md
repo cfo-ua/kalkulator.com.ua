@@ -142,6 +142,25 @@ seo:
     <p><strong>Important:</strong> This calculator provides general guidelines based on sports science research. Individual hydration needs can vary significantly. Practice your hydration strategy during training, and consult with sports medicine professionals for personalized advice, especially if you have medical conditions or unusual sweat patterns.</p>
 scripts:
   - /en/js/water-intake-marathon.js
+faq:
+  - question: How much water should I drink during a marathon?
+    answer: "Most runners need 150-250ml (5-8 oz) every 15-20 minutes during a marathon, but this varies greatly based on sweat rate, weather, and individual needs. The key is replacing 75-150% of fluid losses without overdrinking. Practice your hydration strategy during long training runs."
+  - question: When should I start hydrating before a marathon?
+    answer: "Begin hydrating 2-3 days before the race, aiming for pale yellow urine. Drink 16-20 oz of fluid 2-3 hours before the start, then 7-10 oz about 15-20 minutes before starting. Avoid overhydrating immediately before the race to prevent bathroom breaks during the run."
+  - question: What's the best type of drink for marathon hydration?
+    answer: "For runs over 60-90 minutes, sports drinks with 6-8% carbohydrates and electrolytes are ideal. They provide energy and replace losses better than water alone. For shorter distances or cooler weather, water may be sufficient. Practice with your chosen drinks during training."
+  - question: How do I know if I'm drinking too much during a marathon?
+    answer: "Signs of overhydration include gaining weight during the race, feeling sloshy or nauseous, or frequent urination. Overhydration can lead to dangerous hyponatremia. Aim to lose 2-3% of body weight during the marathon, not maintain or gain weight."
+  - question: What are the signs of dehydration during a marathon?
+    answer: "Early signs include increased thirst, dry mouth, and fatigue. Advanced dehydration causes decreased performance, dizziness, rapid heart rate, and dark urine. Severe dehydration can be dangerous. Monitor your body and adjust fluid intake based on conditions and how you feel."
+  - question: How does weather affect my marathon hydration needs?
+    answer: "Hot and humid conditions dramatically increase fluid needs - you may need 2-3 times more than in cool weather. Cold weather can mask thirst and dehydration. Adjust your hydration plan based on temperature, humidity, and sun exposure on race day."
+  - question: Should I use electrolyte supplements during a marathon?
+    answer: "For marathons, electrolyte replacement is crucial, especially sodium. Aim for 200-300mg of sodium per hour. Sports drinks provide this, but you may need additional electrolyte supplements for hot conditions or if you're a heavy sweater. Practice your electrolyte strategy in training."
+  - question: Can I rely on aid stations for all my hydration needs?
+    answer: "Aid stations are spaced every 2-3 miles in most marathons, which may not meet your hydration schedule. Many runners carry their own fluids or use a hydration belt for better control. Know the aid station locations and what fluids they provide when planning your strategy."
+  - question: How do I practice marathon hydration during training?
+    answer: "Practice drinking while running during long training runs. Test different fluid types, amounts, and timing. Simulate race conditions including temperature and humidity when possible. Learn to drink from cups while moving and develop a rhythm that works for your running style."
 ---
 
 <form id="water-intake-marathon-form" autocomplete="off">

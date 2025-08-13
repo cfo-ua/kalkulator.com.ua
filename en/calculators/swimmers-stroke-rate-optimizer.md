@@ -185,6 +185,25 @@ seo:
     <p><strong>Important:</strong> This calculator provides stroke rate guidance based on swimming science and competitive standards. Optimal stroke rate is highly individual and depends on technique, physiology, and training background. Work with a qualified swimming coach for personalized stroke rate development and technique refinement. Always prioritize proper swimming mechanics over stroke rate numbers.</p>
 scripts:
   - /en/js/swimmers-stroke-rate-optimizer.js
+faq:
+  - question: What is stroke rate and why does it matter in swimming?
+    answer: "Stroke rate is the number of strokes you take per minute. It directly affects your swimming speed and efficiency. Optimal stroke rate balances speed with energy conservation - too slow wastes potential speed, too fast wastes energy through poor technique. Finding your optimal rate improves performance and endurance."
+  - question: How do I measure my current stroke rate?
+    answer: "Count your strokes for 15 seconds and multiply by 4, or use a swim watch with stroke rate tracking. Count each complete stroke cycle (both arms for freestyle). Practice counting during different paces and distances to understand your natural stroke rate patterns."
+  - question: Should stroke rate be the same for all swimming strokes?
+    answer: "No, optimal stroke rates vary significantly between strokes. Freestyle typically ranges 60-90 strokes/minute, backstroke 50-80, breaststroke 30-50, and butterfly 40-60. Each stroke has different mechanics and energy demands requiring different optimal rates."
+  - question: How does stroke rate change with swimming distance?
+    answer: "Generally, shorter distances use higher stroke rates for maximum speed, while longer distances use lower rates for efficiency and endurance. Sprint events (50-100m) use peak rates, middle distance (200-400m) moderate rates, and distance swimming (800m+) focuses on sustainable, efficient rates."
+  - question: Can I improve my stroke rate without sacrificing technique?
+    answer: "Yes, but technique must come first. Work on stroke rate gradually in small increments (2-3 strokes/minute at a time). Use tempo trainers or metronomes to practice consistent rates. Focus on maintaining stroke length and efficiency as you adjust rate. Poor technique at any rate is counterproductive."
+  - question: How does body size affect optimal stroke rate?
+    answer: "Taller swimmers with longer arms often use lower stroke rates but longer strokes, while shorter swimmers may use higher rates with shorter strokes. The calculator considers height because longer levers (arms) can be more efficient at lower rates, while shorter levers may need higher rates for optimal speed."
+  - question: What's the relationship between stroke rate and stroke length?
+    answer: "Swimming speed equals stroke rate × stroke length. You can swim faster by increasing either factor, but there's usually an optimal balance. Very high rates often sacrifice stroke length (distance per stroke), while very low rates may not generate enough propulsion. Elite swimmers optimize both."
+  - question: How do I practice different stroke rates effectively?
+    answer: "Use a tempo trainer set to your target rate and practice maintaining that pace. Start with short distances (25-50m) to focus on technique, then gradually increase distance. Practice rates both above and below your target to develop flexibility and better rate control during races."
+  - question: When should I work with a coach on stroke rate optimization?
+    answer: "Consider coaching if you're: serious about competitive swimming, plateau in performance, have significant technique issues, preparing for specific events, or want to optimize training. A qualified coach can analyze your stroke mechanics and help develop a personalized rate strategy based on your goals and physiology."
 ---
 
 <form id="swimmers-stroke-rate-optimizer-form" autocomplete="off">

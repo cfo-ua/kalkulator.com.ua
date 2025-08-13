@@ -245,6 +245,25 @@ seo:
     <p><strong>Important:</strong> This lean body mass calculator provides estimates based on scientific data. Results should be used as guidance for training and nutrition planning. For the most accurate body composition assessment, professional DEXA testing or other laboratory methods are recommended.</p>
 scripts:
   - /en/js/lean-body-mass-calculator.js
+faq:
+  - question: How accurate is the lean body mass calculator?
+    answer: "The calculator provides estimates typically accurate within 5-10% using validated formulas based on anthropometric measurements. However, it cannot account for individual variations in bone density and organ mass. Professional DEXA scans or hydrostatic weighing provide more precise measurements."
+  - question: What's the difference between lean body mass and muscle mass?
+    answer: "Lean body mass includes all body mass except fat: muscles, bones, organs, connective tissue, and water. Muscle mass is only the skeletal muscle tissue. Lean body mass is typically 15-20% higher than muscle mass alone due to bones and organs."
+  - question: Can I increase my lean body mass?
+    answer: "Yes, through strength training and adequate protein intake (1.6-2.2g per kg body weight). Resistance exercise stimulates muscle growth, while proper nutrition provides building materials. Expect 0.5-2 pounds of muscle gain per month with consistent training."
+  - question: Why is lean body mass important for weight loss?
+    answer: "Higher lean body mass increases your metabolic rate, helping burn more calories at rest. Preserving muscle during weight loss ensures you're losing fat, not muscle. This leads to better body composition and prevents metabolic slowdown common in rapid weight loss."
+  - question: What factors affect lean body mass?
+    answer: "Age (muscle mass naturally declines after 30), gender (men typically have more muscle), genetics, physical activity level, nutrition (especially protein intake), hormones, and training history all influence lean body mass development and maintenance."
+  - question: How often should I calculate my lean body mass?
+    answer: "Monthly calculations can track progress trends, but significant changes in lean body mass occur slowly (over 8-12 weeks). Focus on consistent training and nutrition rather than frequent measurements. Professional body composition testing every 3-6 months provides better accuracy."
+  - question: What's a healthy body fat percentage relative to lean body mass?
+    answer: "Healthy body fat ranges: Men 10-20%, Women 16-24%. Essential fat minimums are 3-5% for men, 10-13% for women. Extremely low body fat can compromise health, hormone production, and immune function. Balance is key for optimal health and performance."
+  - question: Can older adults still build lean body mass?
+    answer: "Yes! While muscle building slows with age due to hormonal changes, people in their 60s, 70s, and beyond can still gain muscle mass through resistance training. Older adults may need higher protein intake (1.2-1.6g per kg) and longer recovery periods."
+  - question: How does lean body mass affect my daily calorie needs?
+    answer: "Each pound of muscle burns about 6-10 calories per day at rest, while fat burns only 2-3 calories. Higher lean body mass significantly increases your total daily energy expenditure, making weight management easier and allowing for higher calorie intake."
 ---
 
 <form id="lean-body-mass-form" autocomplete="off">

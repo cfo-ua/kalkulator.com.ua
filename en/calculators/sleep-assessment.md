@@ -148,6 +148,25 @@ seo:
     <p><strong>Important:</strong> This assessment provides general guidance based on sleep research and clinical guidelines. It's not a substitute for professional medical diagnosis. If you have persistent sleep problems or suspect a sleep disorder, consult a healthcare provider or sleep specialist.</p>
 scripts:
   - /en/js/sleep-assessment.js
+faq:
+  - question: How accurate is this sleep quality assessment?
+    answer: "This assessment is based on established sleep research and clinical guidelines, providing a general evaluation of sleep quality. However, it cannot replace professional sleep studies or medical diagnosis. For persistent sleep issues, consult a sleep specialist for comprehensive evaluation."
+  - question: What constitutes good sleep quality?
+    answer: "Good sleep quality includes: falling asleep within 15-20 minutes, sleeping 7-9 hours for adults, waking up no more than once per night, feeling refreshed upon waking, and maintaining consistent sleep/wake times. Quality is as important as quantity for restorative sleep."
+  - question: How can I improve my sleep quality score?
+    answer: "Focus on sleep hygiene: maintain consistent bedtime/wake times, create a cool dark bedroom, avoid screens 1 hour before bed, limit caffeine after 2 PM, exercise regularly but not close to bedtime, and establish a relaxing bedtime routine. Small changes can significantly impact sleep quality."
+  - question: Why is sleep quality more important than just sleep duration?
+    answer: "Sleep quality determines how restorative your sleep is. Poor quality sleep with frequent awakenings or insufficient deep sleep stages leaves you tired despite adequate hours. Quality sleep ensures proper brain detoxification, memory consolidation, and physical recovery."
+  - question: When should I see a doctor about my sleep?
+    answer: "Consult a healthcare provider if you experience: persistent difficulty falling or staying asleep, chronic fatigue despite adequate sleep time, loud snoring or breathing interruptions, excessive daytime sleepiness, or if sleep problems affect daily functioning for more than 2-3 weeks."
+  - question: Can stress affect my sleep quality assessment results?
+    answer: "Yes, stress significantly impacts sleep quality by increasing cortisol levels, making it harder to fall asleep and reducing deep sleep stages. The assessment considers stress levels as they're crucial for understanding sleep patterns and developing improvement strategies."
+  - question: How often should I assess my sleep quality?
+    answer: "Monitor sleep quality weekly or monthly to track patterns and improvement progress. Daily tracking can create anxiety about sleep. Use the assessment when making lifestyle changes, experiencing sleep difficulties, or every few months for general health monitoring."
+  - question: What if my assessment shows poor sleep quality?
+    answer: "Poor sleep quality indicates areas for improvement. Start with basic sleep hygiene changes: consistent schedule, bedroom environment optimization, and stress management. If issues persist after 2-4 weeks of lifestyle changes, consider consulting a healthcare provider or sleep specialist."
+  - question: Do sleep quality needs change with age?
+    answer: "Yes, sleep architecture changes with age. Older adults may experience lighter sleep, more frequent awakenings, and earlier bedtimes. The assessment considers age-appropriate expectations while maintaining focus on restorative sleep quality rather than just duration."
 ---
 
 <form id="sleep-assessment-form" autocomplete="off">

@@ -191,6 +191,25 @@ seo:
     <p><strong>Important:</strong> This FFMI calculator provides estimates based on scientific data and population norms. Results should be interpreted considering individual characteristics, goals, and health status. For the most accurate body composition assessment, consider professional testing. Consult qualified professionals when planning changes to training or nutrition programs.</p>
 scripts:
   - /en/js/ffmi-calculator.js
+faq:
+  - question: What is FFMI and how is it different from BMI?
+    answer: "FFMI (Fat-Free Mass Index) measures muscle mass relative to height, while BMI includes both muscle and fat. FFMI is more useful for athletes and bodybuilders since it distinguishes between muscle and fat weight. A high BMI could indicate muscle mass (good) or excess fat (concerning), but FFMI clarifies this distinction."
+  - question: What are normal FFMI ranges for men and women?
+    answer: "For men: 16-17 (below average), 18-20 (average), 21-23 (above average), 24-25 (excellent). For women: 13-14 (below average), 15-16 (average), 17-18 (above average), 19-20 (excellent). Values above 25 for men or 22 for women are rare without exceptional genetics or performance-enhancing substances."
+  - question: Can FFMI help determine if someone is using steroids?
+    answer: "FFMI can provide clues but isn't definitive proof. Natural males rarely exceed FFMI of 25, and natural females rarely exceed 22. However, exceptional genetics, training, and nutrition can produce higher values naturally. FFMI should be considered alongside other factors, not used as sole evidence."
+  - question: How accurate is the FFMI calculator?
+    answer: "The calculator provides estimates based on formulas and population data, typically accurate within reasonable ranges for most people. However, it requires accurate body fat percentage, which can be difficult to measure precisely. Professional body composition testing (DEXA, hydrostatic weighing) provides more accurate results."
+  - question: How can I improve my FFMI naturally?
+    answer: "Increase muscle mass through consistent strength training, adequate protein intake (1.6-2.2g per kg body weight), progressive overload, sufficient sleep for recovery, and patience - muscle growth takes time. Reducing body fat while maintaining muscle also improves FFMI. Focus on compound exercises and consistent training over years."
+  - question: Is there an upper limit to natural FFMI?
+    answer: "Research suggests natural limits around FFMI 25 for men and 22 for women, though rare individuals may exceed these naturally. Factors include genetics, training age, nutrition, and body structure. These limits help distinguish between natural and potentially enhanced physiques in competitive contexts."
+  - question: How does age affect FFMI?
+    answer: "FFMI typically peaks in the 20s-30s and gradually declines with age due to natural muscle loss (sarcopenia). However, resistance training can maintain or even increase FFMI well into older age. Older adults who strength train can have higher FFMI than sedentary younger people."
+  - question: Should I focus on increasing my FFMI?
+    answer: "For athletes, bodybuilders, or those seeking muscle gain, FFMI is a useful metric to track progress. However, health and functionality matter more than numbers. Focus on strength, performance, and overall wellbeing rather than achieving specific FFMI values. Sustainable, healthy approaches to fitness are most important."
+  - question: How often should I calculate my FFMI?
+    answer: "Calculate FFMI every 3-6 months when body composition changes, as muscle gain occurs slowly. More frequent calculations may not show meaningful changes and could create unnecessary frustration. Focus on consistent training and nutrition rather than frequent measurement."
 ---
 
 <form id="ffmi-form" autocomplete="off">

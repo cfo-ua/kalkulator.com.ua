@@ -182,6 +182,25 @@ seo:
     <p><strong>Important:</strong> This calculator provides hydration guidelines based on sports science research and established protocols. Individual responses to hydration strategies can vary significantly. Test all hydration protocols during training before using in competition. Consult sports medicine professionals for specific medical conditions or if you experience persistent hydration-related issues.</p>
 scripts:
   - /en/js/athlete-hydration-needs.js
+faq:
+  - question: How much water should athletes drink per hour during exercise?
+    answer: "Athletes typically need 16-24 oz (500-750ml) of fluid per hour during exercise, but this varies greatly based on sweat rate, temperature, humidity, and exercise intensity. The best approach is to calculate individual sweat rate and replace 150% of fluid losses during and after exercise."
+  - question: When should athletes start hydrating before exercise?
+    answer: "Begin hydrating 2-3 hours before exercise with 16-20 oz of fluid, then 7-10 oz about 15-20 minutes before starting. Pre-hydration is especially important in hot weather or for long-duration activities where maintaining fluid balance is challenging."
+  - question: What's the best type of drink for athletic hydration?
+    answer: "For exercise under 60 minutes, water is usually sufficient. For longer activities, sports drinks containing 6-8% carbohydrates and electrolytes help maintain performance and replace losses. Avoid drinks with high caffeine or alcohol content as primary hydration sources."
+  - question: How can athletes calculate their individual sweat rate?
+    answer: "Weigh yourself before and after exercise (nude, dry). Each pound lost equals about 16 oz of fluid. For accuracy, account for fluid consumed during exercise and add it to the weight loss. This gives your hourly sweat rate for similar conditions."
+  - question: What are signs of dehydration in athletes?
+    answer: "Early signs include thirst, dry mouth, fatigue, and decreased performance. Advanced dehydration causes dark urine, dizziness, rapid heartbeat, and confusion. Monitor urine color - it should be pale yellow. Severe dehydration requires immediate medical attention."
+  - question: Should athletes drink electrolyte supplements?
+    answer: "Athletes exercising over 60 minutes or in hot conditions benefit from electrolyte replacement, especially sodium (200-300mg per hour). For shorter activities, a balanced diet usually provides adequate electrolytes. Heavy sweaters may need additional sodium replacement."
+  - question: Can athletes drink too much water?
+    answer: "Yes, overhydration (hyponatremia) can be dangerous, causing nausea, headache, confusion, and in severe cases, seizures. Don't drink more than your sweat rate, and include electrolytes during long activities. Aim to lose 2-3% body weight during exercise, not gain weight."
+  - question: How does climate affect athlete hydration needs?
+    answer: "Hot and humid conditions dramatically increase sweat rates and hydration needs. Cold weather can mask thirst and dehydration. Altitude increases respiratory water losses. Athletes should adjust hydration strategies based on environmental conditions and acclimatization status."
+  - question: When should athletes seek medical advice about hydration?
+    answer: "Consult healthcare providers if you experience: persistent cramping despite adequate hydration, frequent heat illness, difficulty maintaining performance despite following hydration guidelines, or any concerning symptoms during or after exercise."
 ---
 
 <form id="athlete-hydration-needs-form" autocomplete="off">

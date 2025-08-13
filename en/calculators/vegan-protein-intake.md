@@ -172,6 +172,25 @@ seo:
     <p><strong>Important:</strong> This calculator provides protein intake guidance based on scientific research for plant-based diets. Individual needs may vary based on genetics, health status, and specific goals. Consult with a registered dietitian familiar with plant-based nutrition for personalized guidance, especially during pregnancy, breastfeeding, or with medical conditions.</p>
 scripts:
   - /en/js/vegan-protein-intake.js
+faq:
+  - question: Do vegans need more protein than non-vegans?
+    answer: "Research suggests vegans may need 10-15% more protein than non-vegans due to the lower digestibility of some plant proteins. However, this is easily achieved with a varied plant-based diet including legumes, grains, nuts, seeds, and protein-rich vegetables."
+  - question: Can you get complete proteins from plant sources?
+    answer: "Yes! Complete proteins (containing all essential amino acids) are found in quinoa, buckwheat, hemp seeds, chia seeds, spirulina, and soy products. You can also create complete proteins by combining different plant foods like rice and beans throughout the day."
+  - question: What are the best vegan protein sources?
+    answer: "Top vegan protein sources include: legumes (lentils, chickpeas, beans), soy products (tofu, tempeh, edamame), seitan, nutritional yeast, quinoa, nuts and seeds, hemp hearts, spirulina, and protein-rich vegetables like broccoli and spinach."
+  - question: How much protein powder do vegans need?
+    answer: "Protein powder isn't necessary for most vegans eating a varied diet. However, it can be convenient for athletes, those with higher protein needs, or people struggling to meet requirements through whole foods. 20-30g of plant protein powder can supplement daily intake if needed."
+  - question: Is it harder to build muscle on a vegan diet?
+    answer: "No, research shows vegans can build muscle just as effectively as non-vegans when consuming adequate protein (1.6-2.2g per kg body weight for athletes). The key is eating enough calories, diverse protein sources, and timing protein intake around workouts."
+  - question: What happens if vegans don't get enough protein?
+    answer: "Protein deficiency can lead to muscle loss, fatigue, slow recovery, weakened immunity, and poor wound healing. However, protein deficiency is rare in developed countries when eating adequate calories from varied plant foods."
+  - question: Do vegan athletes need different protein calculations?
+    answer: "Yes, vegan athletes typically need 1.6-2.2g protein per kg body weight (vs 1.2-1.6g for non-athletes). Endurance athletes need slightly less than strength athletes. The calculator adjusts for activity level and specific athletic goals."
+  - question: Can children get enough protein on vegan diets?
+    answer: "Yes, children can thrive on well-planned vegan diets with adequate protein. Growing children need 1.0-1.2g protein per kg body weight. Include protein-rich foods at each meal and consult a pediatric dietitian for personalized guidance."
+  - question: How should vegans time their protein intake?
+    answer: "Distribute protein throughout the day, aiming for 20-30g per meal for optimal muscle protein synthesis. Include protein-rich foods or supplements within 2 hours after workouts for best recovery and muscle building results."
 ---
 
 <form id="vegan-protein-intake-form" autocomplete="off">

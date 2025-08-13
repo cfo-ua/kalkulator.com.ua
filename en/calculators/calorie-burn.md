@@ -172,6 +172,25 @@ seo:
     <p><strong>Note:</strong> Calorie burn estimates are based on average MET values and may vary between individuals. Factors like fitness level, body composition, and exercise efficiency can affect actual calorie expenditure. Use these estimates as a general guide and adjust based on your personal results and goals.</p>
 scripts:
   - /en/js/calorie-burn.js
+faq:
+  - question: How accurate is the calories burned calculator?
+    answer: "The calculator uses scientifically validated MET (Metabolic Equivalent) values and provides estimates accurate within 10-20% for most people. However, individual factors like fitness level, body composition, genetics, and exercise efficiency can affect actual calorie burn. Use these estimates as a guide and adjust based on your personal results."
+  - question: Why do heavier people burn more calories during exercise?
+    answer: "Heavier individuals burn more calories because it requires more energy to move greater body mass. The calculation formula includes body weight as a key factor since larger bodies need more fuel to perform the same movements and activities."
+  - question: Which exercises burn the most calories?
+    answer: "High-intensity activities typically burn the most calories: running (600-900 cal/hour), swimming (400-700 cal/hour), cycling fast (500-750 cal/hour), and HIIT workouts (500-800 cal/hour). However, the best exercise is one you can do consistently long-term."
+  - question: Does muscle mass affect calorie burn during exercise?
+    answer: "Yes, people with more muscle mass generally burn more calories during exercise and at rest. Muscle tissue is metabolically active and requires more energy to maintain and use. This is why strength training is beneficial for long-term calorie management."
+  - question: How long after exercise do I continue burning extra calories?
+    answer: "After intense exercise, your body continues burning extra calories through EPOC (Excess Post-Exercise Oxygen Consumption) for 15 minutes to 48 hours, depending on exercise intensity and duration. High-intensity workouts can increase calorie burn for up to 24 hours post-exercise."
+  - question: Should I eat back the calories I burn during exercise?
+    answer: "This depends on your goals. For weight loss, create a moderate calorie deficit by not eating back all exercise calories. For weight maintenance or muscle building, you may need to eat back some or all calories burned. Consult a nutritionist for personalized guidance."
+  - question: Can I use this calculator for weight loss planning?
+    answer: "Yes, this calculator helps estimate calories burned for weight loss planning. Since 1 pound of fat equals approximately 3,500 calories, you can use these estimates to plan how much exercise is needed to create a calorie deficit. Combine with dietary changes for best results."
+  - question: Why does exercise intensity matter for calorie burn?
+    answer: "Exercise intensity directly affects calorie burn rate. Higher intensity activities use more energy per minute and can trigger EPOC (afterburn effect), where your body continues burning extra calories after exercise. However, you can sustain lower intensities for longer periods."
+  - question: How do I track my actual calorie burn more accurately?
+    answer: "For more accurate tracking, use a heart rate monitor, fitness tracker, or smart watch that considers your heart rate, age, weight, and gender. These devices provide more personalized estimates than general MET calculations."
 ---
 
 <form id="calorie-burn-form" autocomplete="off">

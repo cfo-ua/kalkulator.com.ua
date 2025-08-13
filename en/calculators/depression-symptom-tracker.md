@@ -182,6 +182,25 @@ seo:
     <p><strong>Important Disclaimer:</strong> This depression symptom tracker is for educational and self-monitoring purposes only. It is not a diagnostic tool and cannot replace professional mental health evaluation. If you are experiencing thoughts of self-harm or significant depression symptoms, please seek immediate professional help from a qualified healthcare provider or mental health professional.</p>
 scripts:
   - /en/js/depression-symptom-tracker.js
+faq:
+  - question: Is this depression tracker a substitute for professional diagnosis?
+    answer: "No, this tracker is for self-monitoring and education only. It cannot diagnose depression or replace professional evaluation. If you're experiencing persistent depression symptoms, thoughts of self-harm, or significant life impairment, please consult a mental health professional for proper assessment and treatment."
+  - question: How often should I use this depression symptom tracker?
+    answer: "Weekly tracking is often most helpful for monitoring patterns and changes over time. Daily tracking can be useful during treatment or crisis periods, but avoid obsessive monitoring which could increase anxiety. The goal is to gain insight into your mental health patterns, not to become fixated on daily fluctuations."
+  - question: What should I do if my depression score is high?
+    answer: "High scores suggest you may be experiencing significant depression symptoms. This is a signal to seek professional help from a therapist, counselor, or your primary care physician. Don't wait for symptoms to worsen - early intervention leads to better outcomes."
+  - question: Can this tracker help me communicate with my healthcare provider?
+    answer: "Yes, tracking your symptoms over time provides valuable information for healthcare providers. Bring your tracking results to appointments to help your doctor or therapist understand your symptom patterns, triggers, and how you're responding to treatment."
+  - question: What if I'm having thoughts of self-harm?
+    answer: "If you're having thoughts of suicide or self-harm, seek immediate help. Contact the National Suicide Prevention Lifeline (988), Crisis Text Line (text HOME to 741741), or emergency services (911). These feelings are treatable, and help is available 24/7."
+  - question: How can I improve my depression symptoms between professional visits?
+    answer: "While professional treatment is essential, self-care activities can help: maintain regular sleep schedules, engage in physical activity, practice stress management, stay connected with supportive people, limit alcohol, and engage in meaningful activities. However, don't rely solely on self-help for significant depression."
+  - question: Can depression symptoms fluctuate significantly?
+    answer: "Yes, depression symptoms often fluctuate daily or weekly. Factors like sleep, stress, hormones, season, and life events can influence symptoms. This is why tracking over time is more meaningful than single assessments. Look for overall patterns rather than day-to-day variations."
+  - question: What's the difference between sadness and clinical depression?
+    answer: "Sadness is a normal emotion that usually passes within days and doesn't significantly impair functioning. Clinical depression involves persistent symptoms lasting two weeks or more that interfere with daily life, work, relationships, and self-care. Depression affects thinking, energy, appetite, sleep, and overall functioning."
+  - question: Should family members or friends use this tracker?
+    answer: "If you're concerned about a loved one, this tracker can help you understand depression symptoms and encourage them to seek help. However, don't try to diagnose others. Instead, express care, offer support, help them connect with professional resources, and take any suicide threats seriously."
 ---
 
 <form id="depression-tracker-form" autocomplete="off">

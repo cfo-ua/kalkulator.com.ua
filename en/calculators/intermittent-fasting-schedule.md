@@ -161,6 +161,25 @@ seo:
     <p><strong>Important:</strong> This calculator provides general intermittent fasting guidance based on common protocols and research. It's not medical advice. Consult healthcare professionals before starting IF, especially if you have medical conditions, take medications, or have a history of eating disorders. Start gradually and listen to your body.</p>
 scripts:
   - /en/js/intermittent-fasting-schedule.js
+faq:
+  - question: Is intermittent fasting safe for everyone?
+    answer: "Intermittent fasting is generally safe for healthy adults, but it's not suitable for everyone. Avoid IF if you're pregnant, breastfeeding, under 18, have a history of eating disorders, diabetes requiring medication, or certain medical conditions. Always consult healthcare providers before starting IF."
+  - question: Which intermittent fasting method is best for beginners?
+    answer: "The 16:8 method (16-hour fast, 8-hour eating window) is most beginner-friendly. Start with 12:12, then gradually extend to 14:10, then 16:8 over several weeks. This allows your body to adapt slowly and makes the transition more sustainable."
+  - question: Can I drink beverages during the fasting window?
+    answer: "During fasting windows, stick to water, black coffee, plain tea, and sparkling water. Avoid beverages with calories like juice, milk, sugar, or cream, as these break the fast. Some people include diet sodas, but artificial sweeteners may affect some individuals' results."
+  - question: What should I eat during my eating window?
+    answer: "Focus on nutrient-dense, whole foods: lean proteins, healthy fats, vegetables, fruits, and complex carbohydrates. Don't use eating windows as an excuse to binge on junk food. Quality nutrition is crucial for IF success and overall health benefits."
+  - question: How long does it take to see results from intermittent fasting?
+    answer: "Some people notice increased energy and reduced hunger within 1-2 weeks. Weight loss typically begins within 2-4 weeks. Metabolic benefits like improved insulin sensitivity may take 4-8 weeks. Full adaptation to IF usually occurs within 6-8 weeks of consistent practice."
+  - question: Can I exercise while intermittent fasting?
+    answer: "Yes, exercising during fasted states can enhance fat burning. Start with light activities like walking, then progress to more intense workouts as your body adapts. Some prefer exercising at the end of fasting periods, while others do better exercising during eating windows."
+  - question: What if I feel dizzy or unwell during fasting?
+    answer: "Mild hunger is normal, but dizziness, severe fatigue, or feeling unwell may indicate IF isn't right for you or you're pushing too hard. Break your fast immediately if you feel unwell, stay hydrated, and consider shorter fasting periods or consulting a healthcare provider."
+  - question: Can intermittent fasting slow down my metabolism?
+    answer: "Short-term IF (up to 48 hours) typically doesn't slow metabolism and may actually boost it slightly. However, very long fasting periods or combining IF with severe calorie restriction could potentially affect metabolic rate. Focus on adequate nutrition during eating windows."
+  - question: How do I handle social situations while intermittent fasting?
+    answer: "Be flexible - occasional schedule adjustments won't ruin your progress. Plan social meals during your eating window when possible. Communicate your goals to friends and family. Remember that consistency matters more than perfection, and occasional deviations are okay."
 ---
 
 <form id="intermittent-fasting-schedule-form" autocomplete="off">
