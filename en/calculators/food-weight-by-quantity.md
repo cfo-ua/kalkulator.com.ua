@@ -217,6 +217,25 @@ seo:
     <p><strong>Note:</strong> Weight estimates are based on USDA standard references and industry averages. Actual weights can vary significantly based on variety, growing conditions, seasonality, and individual size variations. Use these estimates as a general guide for planning purposes, and weigh items when precise measurements are needed for nutrition tracking or recipe development.</p>
 scripts:
   - /en/js/food-weight-by-quantity.js
+faq:
+  - question: How accurate are food weight estimates by quantity?
+    answer: "Weight estimates are based on USDA standards and industry averages, typically accurate within 15-25% for most foods. However, actual weights vary significantly based on variety, size, ripeness, growing conditions, and preparation method. Use estimates for planning, but weigh items for precise nutrition tracking."
+  - question: Why do food weights vary so much between items?
+    answer: "Natural variation is normal - fruits and vegetables grow in different sizes, densities vary by variety and growing conditions, and water content changes with ripeness and storage. Even processed foods can have weight variations within acceptable manufacturing tolerances."
+  - question: Should I use weight or volume measurements for cooking?
+    answer: "Weight measurements are more accurate for baking and precise recipes, while volume works fine for cooking where exact amounts aren't critical. For nutrition tracking, weight is more reliable since the same volume of different foods can have vastly different calorie and nutrient contents."
+  - question: How do I convert between different quantity units?
+    answer: "The calculator helps convert between units like pieces, cups, pounds, and grams. For home cooking, know common conversions: 1 cup of most chopped vegetables ≈ 4-6 oz, 1 medium apple ≈ 6 oz, 1 large egg ≈ 2 oz. Keep a kitchen scale handy for accuracy."
+  - question: Do cooking methods affect food weight calculations?
+    answer: "Yes, cooking can significantly change food weight. Vegetables lose water when cooked (reducing weight), while grains and pasta absorb water (increasing weight). The calculator typically provides raw weights unless specified. Account for cooking changes when meal planning."
+  - question: How can I estimate food weights when shopping?
+    answer: "Learn visual and tactile cues: a medium apple fits in your palm, a deck of cards ≈ 3 oz of meat, your fist ≈ 1 cup of vegetables. Many grocery stores have scales available for customer use. Over time, you'll develop better estimation skills."
+  - question: Why is food weight important for nutrition tracking?
+    answer: "Nutrition information is typically provided per weight unit (100g or per ounce). Accurate food weights ensure accurate calorie, protein, carb, and micronutrient calculations. Small errors in portion estimation can add up to significant differences in daily nutrition intake."
+  - question: How do I handle foods with inedible parts?
+    answer: "The calculator typically provides edible portions only. For foods with peels, pits, or bones, the weight usually refers to the edible portion. When in doubt, weigh the food after removing inedible parts, or look for 'edible portion' specifications in nutrition databases."
+  - question: Can I use this calculator for meal prep planning?
+    answer: "Absolutely! The calculator helps estimate how much food to buy and prepare for multiple meals. Calculate total weights needed for your meal prep, then add 10-15% extra to account for variations and ensure you have enough ingredients for all planned meals."
 ---
 
 <div class="calculator-section">

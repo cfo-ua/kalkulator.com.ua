@@ -84,6 +84,25 @@ seo:
     <p><strong>Note:</strong> This calculator provides estimates based on scientific formulas. Individual metabolism can vary. Consult healthcare professionals for personalized medical advice, especially if you have health conditions or are considering significant dietary changes.</p>
 scripts:
   - /en/js/calorie-needs.js
+faq:
+  - question: How accurate is the daily calorie needs calculator?
+    answer: "The calculator uses scientifically validated formulas (Harris-Benedict, Mifflin-St Jeor) that are accurate within 10-15% for most people. However, individual metabolism can vary based on genetics, body composition, hormones, medications, and metabolic efficiency. Use the results as a starting point and adjust based on your actual weight change."
+  - question: What's the difference between BMR and TDEE?
+    answer: "BMR (Basal Metabolic Rate) is the calories your body burns at rest for basic functions like breathing and organ function. TDEE (Total Daily Energy Expenditure) includes BMR plus calories burned through daily activities and exercise. TDEE is what you need for weight maintenance."
+  - question: Should I eat exactly the number of calories calculated?
+    answer: "Use the calculation as a starting point. Monitor your weight for 2-3 weeks at this calorie level. If you're gaining/losing weight unexpectedly, adjust by 100-200 calories and reassess. Individual metabolism varies, and the calculation provides an educated estimate, not an exact requirement."
+  - question: How do I use this calculator for weight loss?
+    answer: "For weight loss, create a calorie deficit by eating 300-500 calories below your maintenance TDEE. This typically results in 0.5-1 pound of weight loss per week. Avoid extreme deficits below 1200 calories for women or 1500 for men without medical supervision."
+  - question: Does muscle mass affect my calorie needs?
+    answer: "Yes, muscle tissue burns more calories than fat tissue, even at rest. People with more muscle mass will have higher calorie needs. This is why the calculator considers body composition factors and why strength training can help increase your metabolic rate."
+  - question: How often should I recalculate my calorie needs?
+    answer: "Recalculate every 10-15 pounds of weight change, when you significantly change your activity level, or every 3-6 months. As you lose weight, your calorie needs decrease, and as you gain muscle or increase activity, they may increase."
+  - question: Why do my calorie needs change with age?
+    answer: "Metabolism typically slows with age due to muscle mass loss, hormonal changes, and decreased activity levels. The calculator accounts for age-related metabolic changes. However, regular exercise and strength training can help maintain higher metabolic rates as you age."
+  - question: Can medical conditions affect my calorie needs?
+    answer: "Yes, conditions like thyroid disorders, diabetes, PCOS, medications, and metabolic disorders can significantly impact calorie needs. If you have medical conditions or take medications that affect metabolism, consult healthcare providers for personalized calorie recommendations."
+  - question: How does exercise intensity affect my daily calorie needs?
+    answer: "More intense exercise burns more calories and increases your TDEE. The calculator uses activity level multipliers, but actual burn varies by exercise type, intensity, duration, and individual fitness level. Consider using a heart rate monitor or fitness tracker for more accurate exercise calorie estimates."
 ---
 
 <form id="calorie-needs-form" autocomplete="off">

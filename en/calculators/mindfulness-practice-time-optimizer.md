@@ -167,6 +167,25 @@ seo:
     <p><strong>Important Note:</strong> This mindfulness practice optimizer provides general guidance based on established meditation research and teaching principles. Individual needs may vary, and it's beneficial to learn from qualified mindfulness instructors when possible. If you have mental health concerns, consult with healthcare providers about incorporating mindfulness into your wellness plan.</p>
 scripts:
   - /en/js/mindfulness-practice-time-optimizer.js
+faq:
+  - question: How long should I practice mindfulness each day?
+    answer: "For beginners, start with 5-10 minutes daily. Research shows benefits begin with just 10 minutes per day, with optimal effects around 20-30 minutes for most people. Consistency is more important than duration - daily 10-minute practice is better than sporadic hour-long sessions."
+  - question: What's the best time of day for mindfulness practice?
+    answer: "The best time is when you can practice consistently. Many find morning meditation sets a positive tone for the day, while evening practice helps with relaxation and sleep. Experiment to find what works with your schedule and natural energy patterns."
+  - question: Can mindfulness help with anxiety and stress?
+    answer: "Yes, research consistently shows mindfulness reduces anxiety, stress, and depression symptoms. Regular practice helps develop awareness of thought patterns, improves emotional regulation, and activates the body's relaxation response. However, it's not a replacement for professional mental health treatment when needed."
+  - question: Do I need special equipment or apps for mindfulness practice?
+    answer: "No special equipment is required - you can practice anywhere with just your breath and attention. However, guided meditation apps, timers, or cushions can be helpful tools, especially for beginners. The key is consistent practice, not perfect conditions or equipment."
+  - question: What if my mind wanders during mindfulness practice?
+    answer: "Mind wandering is completely normal and expected, especially for beginners. When you notice your mind has wandered, simply acknowledge it without judgment and gently return attention to your chosen focus (breath, body, sounds). This 'noticing and returning' is actually the practice itself."
+  - question: How long does it take to see benefits from mindfulness practice?
+    answer: "Some people notice immediate effects like feeling calmer after a single session. Measurable changes in stress levels often appear within 2-4 weeks of regular practice. Significant neuroplasticity changes and lasting benefits typically develop over 8-12 weeks of consistent practice."
+  - question: Can I practice mindfulness if I have difficulty sitting still?
+    answer: "Absolutely! Try walking meditation, mindful movement, or shorter sitting sessions. Some people find lying down comfortable, though this may increase drowsiness. Start with just 3-5 minutes and gradually increase duration as your ability to sit still improves."
+  - question: What's the difference between mindfulness and meditation?
+    answer: "Mindfulness is awareness of present-moment experience without judgment. Meditation is a formal practice that often cultivates mindfulness, but mindfulness can also be practiced informally throughout daily activities like eating, walking, or listening. Meditation is one way to develop mindfulness skills."
+  - question: Should I practice mindfulness if I have trauma or PTSD?
+    answer: "Mindfulness can be beneficial for trauma recovery, but approach carefully. Some trauma survivors may find certain practices triggering. Start with eyes open, shorter sessions, or movement-based practices. Always work with trauma-informed mental health professionals when addressing PTSD or significant trauma."
 ---
 
 <form id="mindfulness-optimizer-form" autocomplete="off">

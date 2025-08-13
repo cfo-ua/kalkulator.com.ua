@@ -180,6 +180,25 @@ seo:
     <p><strong>Important Note:</strong> This stress assessment is designed to help you understand your current stress levels and patterns. It's not a diagnostic tool for medical or mental health conditions. If you're experiencing severe stress, physical symptoms, or thoughts of self-harm, please consult with a healthcare professional or mental health provider immediately.</p>
 scripts:
   - /en/js/stress-level-assessment.js
+faq:
+  - question: How accurate is this stress level assessment?
+    answer: "This assessment uses evidence-based questions to evaluate stress levels and provides a general indication of your stress status. However, it's not a medical diagnostic tool. Individual stress experiences vary greatly, and the assessment should be used as a starting point for understanding your stress patterns and considering next steps."
+  - question: What's the difference between normal stress and problematic stress?
+    answer: "Normal stress is temporary, manageable, and often motivating. Problematic stress is persistent, overwhelming, interferes with daily functioning, and may cause physical symptoms like headaches, sleep problems, or digestive issues. If stress consistently impacts your work, relationships, or health, it's time to seek help."
+  - question: How often should I assess my stress levels?
+    answer: "Weekly or monthly assessments can help you track stress patterns and identify triggers. During stressful periods, more frequent monitoring might be helpful. The goal is to develop awareness of your stress levels and patterns, not to become anxious about the assessment itself."
+  - question: What can I do immediately if my stress score is high?
+    answer: "For immediate relief, try deep breathing exercises, progressive muscle relaxation, short walks, or mindfulness techniques. Address urgent stressors if possible, and prioritize self-care. If high stress persists for weeks or causes physical symptoms, consider professional help from a counselor or healthcare provider."
+  - question: Can chronic stress affect my physical health?
+    answer: "Yes, chronic stress can significantly impact physical health, contributing to cardiovascular disease, weakened immune system, digestive problems, headaches, muscle tension, and sleep disorders. It can also worsen existing health conditions. Managing stress is crucial for both mental and physical wellbeing."
+  - question: What are effective stress management techniques?
+    answer: "Effective techniques include: regular exercise, adequate sleep, healthy eating, mindfulness or meditation, time management, social support, hobby engagement, relaxation techniques, and setting boundaries. The best approach combines multiple strategies tailored to your lifestyle and stress triggers."
+  - question: When should I seek professional help for stress?
+    answer: "Seek help if stress: persists for weeks despite self-help efforts, significantly impacts work or relationships, causes physical symptoms, leads to substance use, or triggers thoughts of self-harm. Mental health professionals can provide specialized strategies and, if needed, treatment for underlying conditions."
+  - question: Can stress management techniques really make a difference?
+    answer: "Absolutely! Research consistently shows that stress management techniques can significantly reduce stress levels, improve physical health, enhance emotional wellbeing, and increase resilience. The key is finding techniques that work for you and practicing them consistently, not just during crisis periods."
+  - question: How can I identify my personal stress triggers?
+    answer: "Keep a stress journal noting situations, thoughts, or events that precede stress responses. Common triggers include work deadlines, relationship conflicts, financial concerns, health issues, major changes, or perfectionist thinking. Identifying patterns helps you develop targeted coping strategies."
 ---
 
 <form id="stress-assessment-form" autocomplete="off">
