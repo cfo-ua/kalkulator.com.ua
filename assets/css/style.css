@@ -5605,3 +5605,413 @@ input[type="range"]::-moz-range-thumb {
     align-items: center;
   }
 }
+
+/* ========================================= */
+/* STREAMING & AFFILIATE REVENUE VISUALIZATIONS */
+/* ========================================= */
+
+/* Revenue breakdown charts */
+.revenue-breakdown, .earnings-breakdown {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.revenue-chart, .earnings-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.revenue-item, .earning-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.revenue-item:hover, .earning-item:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revenue-label, .earning-label {
+  font-weight: 600;
+  color: var(--main-color);
+  flex: 1;
+}
+
+.revenue-amount, .earning-value {
+  font-weight: 700;
+  color: var(--accent);
+  margin-left: 1rem;
+}
+
+.revenue-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.revenue-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #28a745);
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+
+.earning-item.total {
+  background: linear-gradient(135deg, #f8fdff 0%, #e8f8fc 100%);
+  border-color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.earning-item.cost {
+  background: linear-gradient(135deg, #fff8e1 0%, #f5f5dc 100%);
+  border-color: #ffc107;
+}
+
+/* Streaming and affiliate statistics */
+.streaming-stats, .key-metrics {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+.stats-grid, .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-item, .metric-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.stat-item strong, .metric-item strong {
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Recommendations sections */
+.recommendations, .optimization-tips {
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f8e8 100%);
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.recommendations h4, .optimization-tips h4 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recommendations ul, .optimization-tips ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.recommendations li, .optimization-tips li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #2d5a3d;
+}
+
+/* Warning sections for loss-making campaigns */
+.warning-section {
+  background: linear-gradient(135deg, #fff3cd 0%, #f5f5dc 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.warning-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.warning-section ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.warning-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #856404;
+}
+
+/* Form styling for new calculators */
+.calculator-form {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(21, 122, 255, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+.form-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.calculate-btn {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.calculate-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(21, 122, 255, 0.3);
+}
+
+/* Result section styling */
+.result-section {
+  margin-top: 2rem;
+}
+
+.result-details {
+  margin-top: 2rem;
+}
+
+.result-details h4 {
+  margin-bottom: 1rem;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Comparison tables */
+.comparison-table, .age-comparison {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.comparison-table table, .age-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td,
+.age-comparison th, .age-comparison td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th, .age-comparison th {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table tbody tr:hover, .age-comparison tbody tr:hover {
+  background: var(--card-bg);
+}
+
+/* Pet age converter specific styles */
+.recommendation-box {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  margin: 1rem 0;
+}
+
+.tips-section {
+  margin-top: 2rem;
+}
+
+.tips-section h4 {
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.tips-section ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.tips-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Info cards for additional information */
+.info-section {
+  margin-top: 2rem;
+}
+
+.info-section h3 {
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+  text-align: center;
+}
+
+/* Disclaimer sections */
+.disclaimer {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.disclaimer h4 {
+  margin: 0 0 1rem 0;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.disclaimer ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.disclaimer li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Responsive design for new calculator features */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid, .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-form {
+    padding: 1.5rem;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .revenue-item, .earning-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .revenue-amount, .earning-value {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-form {
+    padding: 1rem;
+  }
+  
+  .insight-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table, .age-comparison {
+    font-size: 0.9rem;
+  }
+  
+  .comparison-table th, .comparison-table td,
+  .age-comparison th, .age-comparison td {
+    padding: 0.5rem 0.25rem;
+  }
+}
