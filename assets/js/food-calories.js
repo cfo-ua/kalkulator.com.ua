@@ -323,8 +323,91 @@ function calculateTotals() {
           <li>Значення є приблизними, базуються на стандартних даних складу продуктів</li>
         </ul>
       </div>
+      
+      <div style="background:white;padding:20px;border-radius:6px;margin-top:15px;border-left:4px solid #28a745;">
+        <h4 style="margin-top:0;color:#28a745;">Рекомендації по харчуванню</h4>
+        ${generateNutritionRecommendations(totalCalories, totalProtein, totalFat, totalCarbs, totalWeight)}
+      </div>
+      
+      <div style="background:white;padding:20px;border-radius:6px;margin-top:15px;border-left:4px solid #007bff;">
+        <h4 style="margin-top:0;color:#007bff;">Ідеї для додавання до страви</h4>
+        ${generateMealSuggestions(itemsBreakdown)}
+      </div>
     </div>
   `;
+}
+
+function generateNutritionRecommendations(calories, protein, fat, carbs, weight) {
+  let recommendations = [];
+  
+  // Calorie density assessment
+  const caloriesPerGram = calories / weight;
+  if (caloriesPerGram > 4) {
+    recommendations.push("📊 Висока калорійність страви - підходить для набору ваги або інтенсивних тренувань");
+  } else if (caloriesPerGram < 1.5) {
+    recommendations.push("✅ Низькокалорійна страва - чудово підходить для схуднення");
+  } else {
+    recommendations.push("⚖️ Помірна калорійність - підходить для підтримки ваги");
+  }
+  
+  // Protein assessment
+  const proteinPercent = (protein * 4 / calories) * 100;
+  if (proteinPercent > 30) {
+    recommendations.push("💪 Високий вміст білка - відмінно для м'язової маси та відновлення");
+  } else if (proteinPercent < 15) {
+    recommendations.push("🥩 Додайте білкові продукти: м'ясо, рибу, яйця або бобові");
+  }
+  
+  // Fat assessment
+  const fatPercent = (fat * 9 / calories) * 100;
+  if (fatPercent > 35) {
+    recommendations.push("🥑 Високий вміст жирів - контролюйте порції для схуднення");
+  }
+  
+  // Carb assessment
+  const carbPercent = (carbs * 4 / calories) * 100;
+  if (carbPercent > 60) {
+    recommendations.push("🍞 Багато вуглеводів - підходить перед тренуванням або фізичною активністю");
+  }
+  
+  // Portion recommendations
+  if (calories > 800) {
+    recommendations.push("🍽️ Розділіть на 2-3 порції для комфортного споживання");
+  } else if (calories < 300) {
+    recommendations.push("🥗 Підходить як легкий перекус або гарнір");
+  }
+  
+  return `<ul style="margin:5px 0;color:#666;font-size:0.9em;">${recommendations.map(r => `<li>${r}</li>`).join('')}</ul>`;
+}
+
+function generateMealSuggestions(items) {
+  const hasProtein = items.some(item => item.name.includes('м\'ясо') || item.name.includes('курка') || item.name.includes('яйце'));
+  const hasVegetables = items.some(item => item.name.includes('огірок') || item.name.includes('помідор') || item.name.includes('морква'));
+  const hasGrains = items.some(item => item.name.includes('рис') || item.name.includes('гречка') || item.name.includes('хліб'));
+  
+  let suggestions = [];
+  
+  if (!hasProtein) {
+    suggestions.push("🍗 Додайте білок: куряче філе, риба, яйця, сир або бобові");
+  }
+  
+  if (!hasVegetables) {
+    suggestions.push("🥬 Додайте овочі: огірки, помідори, капуста, морква для вітамінів");
+  }
+  
+  if (!hasGrains) {
+    suggestions.push("🌾 Додайте складні вуглеводи: рис, гречка, вівсянка для енергії");
+  }
+  
+  // Healthy additions
+  suggestions.push("🥑 Корисні добавки: авокадо, горіхи, насіння для здорових жирів");
+  suggestions.push("🌿 Зелень та спеції: петрушка, кріп, часник для смаку та користі");
+  
+  if (suggestions.length === 2) { // Only the healthy additions
+    suggestions = ["✅ Збалансована страва! Містить основні групи нутрієнтів", ...suggestions];
+  }
+  
+  return `<ul style="margin:5px 0;color:#666;font-size:0.9em;">${suggestions.map(s => `<li>${s}</li>`).join('')}</ul>`;
 }
 
 // Auto-calculation on input changes
