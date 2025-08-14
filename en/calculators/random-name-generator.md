@@ -28,6 +28,31 @@ seo:
     - cool name generator
     - name generator tool
     - random name picker
+    - name randomizer generator
+    - name randomizer
+    - name picker
+    - random name selector
+    - name generator
+    - pick a name
+    - choose a name
+    - name wheel
+    - name selector
+    - random name picker from list
+    - random name selector from list
+    - list of random names generator
+    - random list of names generator
+    - name out of a hat generator
+    - pick name out of hat
+    - names in a hat generator
+    - name order randomizer
+    - random name order generator
+    - name and number generator
+    - random name and number generator
+    - name number generator
+    - random name picker list
+    - name picker from list
+    - name picker generator
+    - miniwebtool random name picker
     - name randomizer
     - generator for names
     - instant name generator

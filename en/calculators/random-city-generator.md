@@ -28,6 +28,22 @@ seo:
     - wanderlust generator
     - destination generator
     - city explorer
+    - random city picker
+    - city selector
+    - pick a random city
+    - city wheel
+    - urban generator
+    - metropolitan generator
+    - world city picker
+    - global city generator
+    - destination randomizer
+    - travel randomizer
+    - random vacation destination
+    - location picker
+    - place generator
+    - random coordinate generator
+    - geographic generator
+    - travel challenge generator
     - random vacation spots
     - travel surprise
     - adventure generator

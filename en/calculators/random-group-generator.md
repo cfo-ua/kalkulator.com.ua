@@ -28,6 +28,24 @@ seo:
     - children team division
     - random pairs
     - study groups
+    - random group generator
+    - team picker
+    - group randomizer
+    - team randomizer
+    - random team generator
+    - group selector
+    - team formation
+    - random pairing
+    - group formation tool
+    - team building tool
+    - random assignment tool
+    - group maker
+    - team maker
+    - random allocation
+    - group divider
+    - team divider
+    - classroom groups
+    - workshop groups
     - team assignment
     - sports team generator
     - pair division

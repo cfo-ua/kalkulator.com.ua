@@ -26,6 +26,23 @@ seo:
     - future dates
     - date format generator
     - random events
+    - random date
+    - give me a random date
+    - pick a random date
+    - random calendar date generator
+    - random day generator
+    - random month generator
+    - date randomizer
+    - random date picker
+    - random date and time generator
+    - generate random date
+    - random birthday
+    - random anniversary
+    - fake birthday generator
+    - test date generator
+    - mock date generator
+    - date simulation
+    - random timeline
   content: |
     <h2>Random Date Generator for Any Purpose</h2>
     <p>Create random dates in various formats and ranges for software testing, form filling, and educational projects.</p>

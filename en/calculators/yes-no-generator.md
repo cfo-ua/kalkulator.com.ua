@@ -28,6 +28,24 @@ seo:
     - yes no oracle
     - random decision generator
     - yes no picker online
+    - randomizer
+    - random picker
+    - random choice
+    - pick random
+    - random selector
+    - random generator
+    - yes no randomizer
+    - coin flip generator
+    - flip coin online
+    - heads or tails
+    - random boolean
+    - true false generator
+    - either or generator
+    - choose for me
+    - decision wheel
+    - random option picker
+    - option chooser
+    - random option chooser
     - binary decision tool
     - yes no randomizer
     - decision coin flip

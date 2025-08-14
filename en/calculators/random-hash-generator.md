@@ -28,6 +28,20 @@ seo:
     - control sum generator
     - hash for development
     - algorithm testing
+    - generate hash
+    - random hash
+    - random md5
+    - hash generator
+    - generate random hash
+    - random hex code
+    - random hex color
+    - random hex color generator
+    - hex generator
+    - hash randomizer
+    - crypto hash
+    - random checksum
+    - hash maker
+    - hash creator
     - digital fingerprint generator
     - random hash codes
     - developer tools

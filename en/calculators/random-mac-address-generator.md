@@ -28,6 +28,17 @@ seo:
     - unicast MAC generator
     - local MAC address
     - test MAC address
+    - random mac address
+    - mac address generator
+    - fake mac address
+    - generate mac address
+    - mac randomizer
+    - random hardware address
+    - network mac generator
+    - random device address
+    - random adapter address
+    - mac address creator
+    - random nic address
     - device simulation
     - OUI generator
     - random vendor ID
