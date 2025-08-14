@@ -146,45 +146,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   calculateBtn.addEventListener("click", function () {
-    // Add loading state
-    calculateBtn.disabled = true;
-    calculateBtn.innerHTML = 'Calculating... ✨';
-    result.innerHTML = '<div style="text-align: center; padding: 20px; color: #667eea;"><div style="display: inline-block; width: 20px; height: 20px; border: 2px solid #667eea; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite;"></div> Analyzing cosmic compatibility...</div>';
+    const person1Name = document.getElementById("person1Name").value || "Person 1";
+    const person1Date = document.getElementById("person1Date").value;
+    const person1Time = document.getElementById("person1Time").value;
     
-    // Add CSS animation
-    if (!document.getElementById('compatibility-styles')) {
-      const style = document.createElement('style');
-      style.id = 'compatibility-styles';
-      style.textContent = `
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .share-button { 
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-          color: white; border: none; padding: 8px 16px; border-radius: 20px; 
-          cursor: pointer; margin: 5px; font-size: 0.9em; 
-          transition: transform 0.2s ease;
-        }
-        .share-button:hover { transform: translateY(-2px); }
-      `;
-      document.head.appendChild(style);
+    const person2Name = document.getElementById("person2Name").value || "Person 2";
+    const person2Date = document.getElementById("person2Date").value;
+    const person2Time = document.getElementById("person2Time").value;
+
+    if (!person1Date || !person2Date) {
+      result.innerHTML = '<p style="color: #e74c3c;">Please enter both birth dates.</p>';
+      return;
     }
-    
-    setTimeout(() => {
-      const person1Name = document.getElementById("person1Name").value || "Person 1";
-      const person1Date = document.getElementById("person1Date").value;
-      const person1Time = document.getElementById("person1Time").value;
-      
-      const person2Name = document.getElementById("person2Name").value || "Person 2";
-      const person2Date = document.getElementById("person2Date").value;
-      const person2Time = document.getElementById("person2Time").value;
-
-      // Reset button
-      calculateBtn.disabled = false;
-      calculateBtn.innerHTML = 'Calculate Compatibility';
-
-      if (!person1Date || !person2Date) {
-        result.innerHTML = '<p style="color: #e74c3c;">Please enter both birth dates.</p>';
-        return;
-      }
 
     const date1 = new Date(person1Date);
     const date2 = new Date(person2Date);
@@ -262,49 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <em>Compatibility is just one aspect of relationships. Love, communication, mutual respect, and shared values are equally important for relationship success. Use these insights to better understand and appreciate each other's unique qualities.</em>
         </p>
       </div>
-      
-      <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; margin-top: 15px; border: 1px solid #e9ecef;">
-        <h4 style="margin: 0 0 15px 0; color: #495057;">Share Your Compatibility Results</h4>
-        <div>
-          <button class="share-button" onclick="shareResult('twitter', '${person1Name}', '${person2Name}', ${compatibilityScore}, '${scoreDescription}')">Share on Twitter</button>
-          <button class="share-button" onclick="shareResult('facebook', '${person1Name}', '${person2Name}', ${compatibilityScore}, '${scoreDescription}')">Share on Facebook</button>
-          <button class="share-button" onclick="copyCompatibilityResult('${person1Name}', '${person2Name}', ${compatibilityScore}, '${scoreDescription}')">Copy Link</button>
-        </div>
-        <p style="margin: 10px 0 0 0; font-size: 0.8em; color: #6c757d;">Share your cosmic connection with friends!</p>
-      </div>
     `;
-    
-    }, 1500); // 1.5 second delay for dramatic effect
   });
-
-  // Share functionality
-  window.shareResult = function(platform, name1, name2, score, description) {
-    const url = window.location.href;
-    const text = `${name1} & ${name2} have ${score}% compatibility! ${description} ✨ Check your compatibility at:`;
-    
-    if (platform === 'twitter') {
-      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-    } else if (platform === 'facebook') {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`, '_blank');
-    }
-  };
-
-  window.copyCompatibilityResult = function(name1, name2, score, description) {
-    const text = `${name1} & ${name2} have ${score}% compatibility! ${description} ✨\n\nCheck your compatibility at: ${window.location.href}`;
-    
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert('Compatibility result copied to clipboard! Share it with your friends.');
-      });
-    } else {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      alert('Compatibility result copied to clipboard! Share it with your friends.');
-    }
-  };
 });
