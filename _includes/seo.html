@@ -1,11 +1,19 @@
 <title>{% if page.seo.title %}{{ page.seo.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{% if page.seo.description %}{{ page.seo.description | escape }}{% else %}{{ site.description | escape }}{% endif %}">
 <meta name="keywords" content="{% if page.seo.keywords %}{{ page.seo.keywords | join: ', ' | escape }}{% endif %}">
+{% comment %} Category-specific meta tags {% endcomment %}
+{% if page.categories and page.categories.size > 0 %}
+<meta name="category" content="{% if page.categories contains 'financial' %}{% if page.url contains '/en/' %}Finance{% else %}Фінанси{% endif %}{% elsif page.categories contains 'health' %}{% if page.url contains '/en/' %}Health{% else %}Здоров'я{% endif %}{% elsif page.categories contains 'school' %}{% if page.url contains '/en/' %}Education{% else %}Освіта{% endif %}{% elsif page.categories contains 'business' %}{% if page.url contains '/en/' %}Business{% else %}Бізнес{% endif %}{% elsif page.categories contains 'construction' %}{% if page.url contains '/en/' %}Construction{% else %}Будівництво{% endif %}{% elsif page.categories contains 'salary-taxes' %}{% if page.url contains '/en/' %}Taxes{% else %}Податки{% endif %}{% else %}{% if page.url contains '/en/' %}Calculators{% else %}Калькулятори{% endif %}{% endif %}">
+{% endif %}
 
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/logo.svg' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/logo.svg' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/logo.svg' | relative_url }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="author" content="kalkulator.com.ua">
 {% if page.url contains '/en/' %}
 <meta name="language" content="English">
@@ -15,6 +23,16 @@
 <meta name="rating" content="General">
 <meta name="revisit-after" content="7 days">
 <meta name="distribution" content="global">
+<meta name="theme-color" content="#157aff">
+<meta name="msapplication-TileColor" content="#157aff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<!-- DNS Prefetch and Preconnect for performance -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//googletagmanager.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {% comment %} Generate canonical URL - ensure EN calculator pages use directory structure {% endcomment %}
 {%- assign canonical_url = page.url -%}
 {%- comment %} Fix canonical URL for EN calculator pages to use directory structure instead of .html {% endcomment -%}

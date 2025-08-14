@@ -59,6 +59,33 @@
         </div>
       {% endif %}
     </div>
+    
+    <!-- Category CollectionPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "{{ page.title }}",
+      "description": "{% if page.seo.description %}{{ page.seo.description | escape }}{% else %}{% if lang == 'en' %}Collection of {{ page.title | downcase }} calculators{% else %}Колекція {{ page.title | downcase }} калькуляторів{% endif %}{% endif %}",
+      "url": "{{ page.url | absolute_url }}",
+      "inLanguage": "{{ lang }}",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "{{ page.title }}",
+        "numberOfItems": {{ calcs.size }},
+        "itemListElement": [
+          {% for calc in calcs %}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": "{{ calc.url | absolute_url }}",
+            "name": "{{ calc.title }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+    }
+    </script>
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
