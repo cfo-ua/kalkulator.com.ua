@@ -504,9 +504,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Глобальні функції для кнопок
     window.copyMAC = function(mac) {
         navigator.clipboard.writeText(mac).then(() => {
-            const notification = event.target.closest('.mac-item').querySelector('.copy-notification');
-            notification.classList.add('show');
-            setTimeout(() => notification.classList.remove('show'), 2000);
+            // Find the MAC item that contains this specific MAC address
+            const macItems = document.querySelectorAll('.mac-item');
+            for (let item of macItems) {
+                if (item.getAttribute('data-mac') === mac) {
+                    const notification = item.querySelector('.copy-notification');
+                    if (notification) {
+                        notification.classList.add('show');
+                        setTimeout(() => notification.classList.remove('show'), 2000);
+                    }
+                    break;
+                }
+            }
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
         });
     };
     

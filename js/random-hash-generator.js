@@ -397,9 +397,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Глобальні функції для кнопок
     window.copyHash = function(hash) {
         navigator.clipboard.writeText(hash).then(() => {
-            const notification = event.target.closest('.hash-item').querySelector('.copy-notification');
-            notification.classList.add('show');
-            setTimeout(() => notification.classList.remove('show'), 2000);
+            // Find the hash item that contains this specific hash value
+            const hashItems = document.querySelectorAll('.hash-item');
+            for (let item of hashItems) {
+                if (item.getAttribute('data-hash') === hash) {
+                    const notification = item.querySelector('.copy-notification');
+                    if (notification) {
+                        notification.classList.add('show');
+                        setTimeout(() => notification.classList.remove('show'), 2000);
+                    }
+                    break;
+                }
+            }
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
         });
     };
     
