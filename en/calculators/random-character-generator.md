@@ -26,6 +26,26 @@ seo:
     - test data
     - random special symbols
     - character generator tool
+    - random characters generator
+    - random alphanumeric generator
+    - random letter and number generator
+    - letters and numbers generator
+    - letter and number generator
+    - generate characters
+    - random character
+    - alphanumeric generator
+    - alphanumeric code generator
+    - random string generator
+    - create random string
+    - text randomizer
+    - random letters numbers
+    - character picker
+    - symbol generator
+    - random keyboard
+    - random ascii
+    - random unicode
+    - text generator
+    - character randomizer
   content: |
     <h2>Random Character Generator for Any Purpose</h2>
     <p>Create random characters, letters, and special symbols for passwords, software testing, and other development tasks.</p>

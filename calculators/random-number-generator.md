@@ -36,6 +36,32 @@ seo:
     - послідовність випадкових чисел
     - генератор чисел статистика
     - рандом з історією
+    - random number generator
+    - number generator
+    - rng generator
+    - random counter
+    - random gen
+    - random no generator
+    - rng number generator
+    - random number
+    - randomizer
+    - random picker
+    - number picker
+    - google random number generator
+    - random number picker
+    - 1 10 number generator
+    - 1 100 number generator
+    - choose a number between 1 and 10
+    - choose a number between 1 and 100
+    - pick a number between 1 and 10
+    - pick a number between 1 and 100
+    - random generator
+    - true random number generator
+    - online number generator
+    - free number generator
+    - best random number generator
+    - google number generator
+    - random org number generator
   content: |
     <h2>Потужний генератор випадкових чисел для будь-яких потреб</h2>
     <p>Наш генератор використовує криптографічно захищений алгоритм для створення справедливих випадкових чисел в будь-якому діапазоні. Ідеально підходить для лотерей, ігор, наукових досліджень та розваг.</p>

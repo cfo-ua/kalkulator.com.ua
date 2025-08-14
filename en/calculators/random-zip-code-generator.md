@@ -26,6 +26,20 @@ seo:
     - test zip codes
     - development postal codes
     - software testing codes
+    - random zip code
+    - random postal code
+    - zip code randomizer
+    - postal code randomizer
+    - fake postal code
+    - generate zip code
+    - random address generator
+    - postcode generator
+    - area code generator
+    - location code generator
+    - geographic code generator
+    - random region code
+    - zip picker
+    - postal picker
   content: |
     <h2>Random ZIP Code Generator for Any Purpose</h2>
     <p>Create random postal codes in various formats for software testing, form filling, prototyping, and development needs.</p>
