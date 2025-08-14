@@ -23,3 +23,8 @@ vendor/
 # Temporary analysis files
 /tmp/
 *.backup
+
+# Security audit temporary files
+security-backup/
+vulnerable_files.txt
+audit-temp/
