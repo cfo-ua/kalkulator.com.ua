@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             hideError();
         }
+        
+        return isValid;
     }
     
     function generateHashes() {
@@ -366,19 +368,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(message) {
-        // Show error
+        // Create or update error message element
+        let errorElement = document.getElementById('errorMessage');
+        if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.id = 'errorMessage';
+            errorElement.style.cssText = `
+                background: #dc3545;
+                color: white;
+                padding: 0.75rem;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            `;
+            document.querySelector('.calculator-form').insertBefore(errorElement, document.querySelector('.convert-buttons'));
+        }
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
     }
     
     function hideError() {
-        // Hide error
+        const errorElement = document.getElementById('errorMessage');
+        if (errorElement) {
+            errorElement.style.display = 'none';
+        }
     }
     
     // Global functions for buttons
     window.copyHash = function(hash) {
         navigator.clipboard.writeText(hash).then(() => {
-            const notification = event.target.closest('.hash-item').querySelector('.copy-notification');
-            notification.classList.add('show');
-            setTimeout(() => notification.classList.remove('show'), 2000);
+            // Find the hash item that contains this specific hash value
+            const hashItems = document.querySelectorAll('.hash-item');
+            for (let item of hashItems) {
+                if (item.getAttribute('data-hash') === hash) {
+                    const notification = item.querySelector('.copy-notification');
+                    if (notification) {
+                        notification.classList.add('show');
+                        setTimeout(() => notification.classList.remove('show'), 2000);
+                    }
+                    break;
+                }
+            }
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
         });
     };
     

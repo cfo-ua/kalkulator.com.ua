@@ -100,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             hideError();
         }
+        
+        return isValid;
     }
     
     function generateMACs() {
@@ -473,19 +475,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(message) {
-        // Show error
+        // Create or update error message element
+        let errorElement = document.getElementById('errorMessage');
+        if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.id = 'errorMessage';
+            errorElement.style.cssText = `
+                background: #dc3545;
+                color: white;
+                padding: 0.75rem;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            `;
+            document.querySelector('.calculator-form').insertBefore(errorElement, document.querySelector('.convert-buttons'));
+        }
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
     }
     
     function hideError() {
-        // Hide error
+        const errorElement = document.getElementById('errorMessage');
+        if (errorElement) {
+            errorElement.style.display = 'none';
+        }
     }
     
     // Global functions for buttons
     window.copyMAC = function(mac) {
         navigator.clipboard.writeText(mac).then(() => {
-            const notification = event.target.closest('.mac-item').querySelector('.copy-notification');
-            notification.classList.add('show');
-            setTimeout(() => notification.classList.remove('show'), 2000);
+            // Find the MAC item that contains this specific MAC address
+            const macItems = document.querySelectorAll('.mac-item');
+            for (let item of macItems) {
+                if (item.getAttribute('data-mac') === mac) {
+                    const notification = item.querySelector('.copy-notification');
+                    if (notification) {
+                        notification.classList.add('show');
+                        setTimeout(() => notification.classList.remove('show'), 2000);
+                    }
+                    break;
+                }
+            }
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
         });
     };
     
