@@ -28,6 +28,15 @@ seo:
     - класичні імена генератор
     - екзотичні імена генератор
     - короткі імена генератор
+    - random name generator
+    - name generator
+    - name randomizer generator
+    - name randomizer
+    - name picker
+    - random name picker
+    - username generator
+    - nickname generator
+    - character name generator
     - довгі імена генератор
     - популярні імена генератор
     - рідкісні імена генератор

@@ -28,6 +28,15 @@ seo:
     - випадковий радник так ні
     - генератор так ні українською
     - онлайн так чи ні
+    - yes or no generator
+    - yes no decision maker
+    - random yes no answer
+    - decision generator
+    - randomizer
+    - random picker
+    - random choice
+    - random selector
+    - random generator
     - цифровий генератор так ні
     - рандом так чи ні
     - генератор бінарного вибору

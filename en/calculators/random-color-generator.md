@@ -28,6 +28,25 @@ seo:
     - web colors
     - safe colors
     - bright colors
+    - random color name generator
+    - random color code
+    - random hex color
+    - random hex color generator
+    - hex generator
+    - color randomizer
+    - random color picker
+    - color wheel generator
+    - random colors
+    - generate random color
+    - color generator tool
+    - random shade
+    - random hue
+    - color inspiration tool
+    - random palette generator
+    - rgb generator
+    - hsl generator
+    - random design colors
+    - color scheme generator
     - pastel colors
     - dark colors
     - light colors

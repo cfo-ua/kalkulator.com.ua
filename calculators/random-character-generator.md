@@ -26,6 +26,15 @@ seo:
     - тестові дані
     - випадкові спецсимволи
     - генератор знаків
+    - random character generator
+    - random symbols
+    - random letters
+    - character generator
+    - random characters
+    - generate characters
+    - random string generator
+    - password generator
+    - letter generator
   content: |
     <h2>Генератор випадкових символів для будь-яких потреб</h2>
     <p>Створюйте випадкові символи, літери та спеціальні знаки для паролів, тестування програмного забезпечення та інших завдань розробки.</p>

@@ -28,6 +28,22 @@ seo:
     - exotic animal generator
     - world animals generator
     - virtual zoo
+    - animal randomizer
+    - animal selector
+    - pick a random animal
+    - animal wheel
+    - animal spinner
+    - random animal facts
+    - animal discovery
+    - nature generator
+    - wildlife generator
+    - random species
+    - animal picker
+    - creature generator
+    - random pet generator
+    - zoo generator
+    - safari generator
+    - animal challenge
     - animals for kids
     - educational animal generator
     - animal facts

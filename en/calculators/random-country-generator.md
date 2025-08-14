@@ -28,6 +28,23 @@ seo:
     - world nations
     - sovereign countries
     - independent states
+    - random country picker
+    - country randomizer
+    - pick a random country
+    - country selector
+    - random location generator
+    - world country picker
+    - global generator
+    - nation picker
+    - random geography
+    - continent generator
+    - random continent generator
+    - world randomizer
+    - country wheel
+    - geography picker
+    - random place generator
+    - world picker
+    - nation selector
     - world nationalities
     - cultural diversity
     - world geography

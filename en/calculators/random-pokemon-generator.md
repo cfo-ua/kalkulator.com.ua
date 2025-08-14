@@ -28,6 +28,22 @@ seo:
     - legendary pokemon
     - starter pokemon
     - pokemon evolution
+    - fake pokemon generator
+    - pokemon randomizer
+    - pokemon selector
+    - pick a random pokemon
+    - pokemon wheel
+    - pokemon spinner
+    - random pokemon team generator
+    - pokemon team randomizer
+    - random pokemon picker online
+    - pokemon generator tool
+    - random pokedex
+    - generate random pokemon
+    - pokemon random selector
+    - pokemon name generator
+    - random pokemon facts
+    - pokemon challenge generator
     - pokemon database
     - pokemon encyclopedia
     - pokedex generator
