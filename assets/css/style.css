@@ -6569,13 +6569,24 @@ input[type="range"]::-moz-range-thumb {
   .calc-btn {
     min-height: 50px;
     font-size: 1rem;
+    padding: 0.75rem;
   }
   
   .simple-calculator {
     padding: 1rem;
+    max-width: 100%;
+    margin: 0 0.5rem;
   }
   
   .calc-display {
     padding: 1rem;
+  }
+  
+  .calc-row {
+    gap: 0.25rem;
+  }
+  
+  .calc-buttons {
+    gap: 0.25rem;
   }
 }
