@@ -100,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             hideError();
         }
+        
+        return isValid;
     }
     
     function generateMACs() {
@@ -473,11 +475,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function showError(message) {
-        // Show error
+        // Create or update error message element
+        let errorElement = document.getElementById('errorMessage');
+        if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.id = 'errorMessage';
+            errorElement.style.cssText = `
+                background: #dc3545;
+                color: white;
+                padding: 0.75rem;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            `;
+            document.querySelector('.calculator-form').insertBefore(errorElement, document.querySelector('.convert-buttons'));
+        }
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
     }
     
     function hideError() {
-        // Hide error
+        const errorElement = document.getElementById('errorMessage');
+        if (errorElement) {
+            errorElement.style.display = 'none';
+        }
     }
     
     // Global functions for buttons
