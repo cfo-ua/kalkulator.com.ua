@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             hideError();
         }
+        
+        return isValid;
     }
     
     function applyTemplate() {
