@@ -5,7 +5,7 @@
 <header>
   <nav class="nav">
     <a href="{% if lang == 'en' %}/en/{% else %}/{% endif %}" class="logo" aria-label="{% if lang == 'en' %}Home{% else %}Головна{% endif %}">
-      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="логотип" height="32" style="margin-right:10px;">
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="{% if lang == 'en' %}kalkulator.com.ua - Online Calculators{% else %}kalkulator.com.ua - Онлайн калькулятори{% endif %}" height="32" style="margin-right:10px;">
       kalkulator.com.ua
     </a>
     <button class="menu-btn" aria-label="{% if lang == 'en' %}Menu{% else %}Меню{% endif %}" tabindex="0">&#9776;</button>
