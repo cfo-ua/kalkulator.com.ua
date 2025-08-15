@@ -63,60 +63,60 @@ faq:
 ---
 
 <div class="calculator-container">
-  <div class="simple-calculator">
+  <div class="simple-calculator" style="max-width: 100%; width: 100%; box-sizing: border-box;">
     <div class="calc-display">
       <div class="calc-history" id="calc-history"></div>
       <div class="calc-screen" id="calc-screen">0</div>
       <div class="calc-memory" id="calc-memory" style="display: none;">M</div>
     </div>
     
-    <div class="calc-buttons">
+    <div class="calc-buttons" style="width: 100%; box-sizing: border-box; overflow: hidden;">
       <!-- Memory and Clear Row -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn memory-btn" data-action="mc">MC</button>
-        <button type="button" class="calc-btn memory-btn" data-action="mr">MR</button>
-        <button type="button" class="calc-btn memory-btn" data-action="m-plus">M+</button>
-        <button type="button" class="calc-btn memory-btn" data-action="m-minus">M-</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn memory-btn" data-action="mc" style="min-width: 0; overflow: hidden; text-overflow: ellipsis;">MC</button>
+        <button type="button" class="calc-btn memory-btn" data-action="mr" style="min-width: 0; overflow: hidden; text-overflow: ellipsis;">MR</button>
+        <button type="button" class="calc-btn memory-btn" data-action="m-plus" style="min-width: 0; overflow: hidden; text-overflow: ellipsis;">M+</button>
+        <button type="button" class="calc-btn memory-btn" data-action="m-minus" style="min-width: 0; overflow: hidden; text-overflow: ellipsis;">M-</button>
       </div>
       
       <!-- Clear and Backspace Row -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn clear-btn" data-action="clear">C</button>
-        <button type="button" class="calc-btn clear-btn" data-action="clear-entry">CE</button>
-        <button type="button" class="calc-btn clear-btn" data-action="backspace">⌫</button>
-        <button type="button" class="calc-btn operator-btn" data-action="divide">÷</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn clear-btn" data-action="clear" style="min-width: 0;">C</button>
+        <button type="button" class="calc-btn clear-btn" data-action="clear-entry" style="min-width: 0;">CE</button>
+        <button type="button" class="calc-btn clear-btn" data-action="backspace" style="min-width: 0;">⌫</button>
+        <button type="button" class="calc-btn operator-btn" data-action="divide" style="min-width: 0;">÷</button>
       </div>
       
       <!-- Numbers Row 1 -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn number-btn" data-number="7">7</button>
-        <button type="button" class="calc-btn number-btn" data-number="8">8</button>
-        <button type="button" class="calc-btn number-btn" data-number="9">9</button>
-        <button type="button" class="calc-btn operator-btn" data-action="multiply">×</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn number-btn" data-number="7" style="min-width: 0;">7</button>
+        <button type="button" class="calc-btn number-btn" data-number="8" style="min-width: 0;">8</button>
+        <button type="button" class="calc-btn number-btn" data-number="9" style="min-width: 0;">9</button>
+        <button type="button" class="calc-btn operator-btn" data-action="multiply" style="min-width: 0;">×</button>
       </div>
       
       <!-- Numbers Row 2 -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn number-btn" data-number="4">4</button>
-        <button type="button" class="calc-btn number-btn" data-number="5">5</button>
-        <button type="button" class="calc-btn number-btn" data-number="6">6</button>
-        <button type="button" class="calc-btn operator-btn" data-action="subtract">-</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn number-btn" data-number="4" style="min-width: 0;">4</button>
+        <button type="button" class="calc-btn number-btn" data-number="5" style="min-width: 0;">5</button>
+        <button type="button" class="calc-btn number-btn" data-number="6" style="min-width: 0;">6</button>
+        <button type="button" class="calc-btn operator-btn" data-action="subtract" style="min-width: 0;">-</button>
       </div>
       
       <!-- Numbers Row 3 -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn number-btn" data-number="1">1</button>
-        <button type="button" class="calc-btn number-btn" data-number="2">2</button>
-        <button type="button" class="calc-btn number-btn" data-number="3">3</button>
-        <button type="button" class="calc-btn operator-btn" data-action="add">+</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn number-btn" data-number="1" style="min-width: 0;">1</button>
+        <button type="button" class="calc-btn number-btn" data-number="2" style="min-width: 0;">2</button>
+        <button type="button" class="calc-btn number-btn" data-number="3" style="min-width: 0;">3</button>
+        <button type="button" class="calc-btn operator-btn" data-action="add" style="min-width: 0;">+</button>
       </div>
       
       <!-- Bottom Row -->
-      <div class="calc-row">
-        <button type="button" class="calc-btn number-btn zero-btn" data-number="0">0</button>
-        <button type="button" class="calc-btn number-btn" data-action="decimal">.</button>
-        <button type="button" class="calc-btn special-btn" data-action="percent">%</button>
-        <button type="button" class="calc-btn equals-btn" data-action="equals">=</button>
+      <div class="calc-row" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; width: 100%; box-sizing: border-box;">
+        <button type="button" class="calc-btn number-btn zero-btn" data-number="0" style="min-width: 0;">0</button>
+        <button type="button" class="calc-btn number-btn" data-action="decimal" style="min-width: 0;">.</button>
+        <button type="button" class="calc-btn special-btn" data-action="percent" style="min-width: 0;">%</button>
+        <button type="button" class="calc-btn equals-btn" data-action="equals" style="min-width: 0;">=</button>
       </div>
     </div>
     

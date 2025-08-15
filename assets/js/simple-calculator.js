@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Calculate result
-  function calculate(firstOperand, secondOperand, operator) {
+  function calculate(firstOperand, secondOperand, operatorParam) {
     if (arguments.length === 0) {
       // Called from equals button
       if (operator && previousInput !== '') {
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    return performCalculation(firstOperand, secondOperand, operator);
+    return performCalculation(firstOperand, secondOperand, operatorParam);
   }
 
   // Perform actual calculation
