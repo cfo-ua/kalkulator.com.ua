@@ -222,6 +222,56 @@ seo:
     </div>
   </div>
 
+  <div class="random-generator-section" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(139, 69, 199, 0.1); margin: 2.5rem 0;">
+    <h3 style="margin: 0 0 1rem 0; color: #8b45c7; text-align: center;">🎲 Генератори випадкових даних для творчості</h3>
+    <p style="margin: 0 0 2rem 0; color: #555; text-align: center; font-size: 1.1rem;">Потужні <strong>генератори випадкових даних</strong> для творчих проектів, ігор та професійних завдань. Від <strong>випадкових чисел</strong> до <strong>кольорових палітр</strong> — натхнення та ідеї одним кліком.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-number-generator.html" style="color: #8b45c7; text-decoration: none;">🔢 Генератор чисел</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Генеруйте <strong>випадкові числа</strong> для лотерей, ігор, наукових досліджень та прийняття рішень. Налаштовуємий діапазон.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎰 Лотереї • 🎮 Ігри • 🔬 Дослідження</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-color-generator.html" style="color: #8b45c7; text-decoration: none;">🎨 Генератор кольорів</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Створюйте <strong>випадкові кольори</strong> для дизайну, веб-розробки та творчих проектів. HEX, RGB, HSL коди.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎨 Дизайн • 💻 Веб • 🖌️ Творчість</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-name-generator.html" style="color: #8b45c7; text-decoration: none;">👤 Генератор імен</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Генеруйте <strong>випадкові імена</strong> для персонажів, проектів, команд та творчих завдань різними мовами.</p>
+        <div style="font-size: 0.85rem; color: #888;">📚 Письменство • 🎮 Ігри • 👥 Команди</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-word-generator.html" style="color: #8b45c7; text-decoration: none;">📝 Генератор слів</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Отримайте <strong>випадкові слова</strong> для брейнштормингу, письменства, ігор у слова та розвитку творчості.</p>
+        <div style="font-size: 0.85rem; color: #888;">💡 Ідеї • ✍️ Письменство • 🧠 Мозковий штурм</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-animal-generator.html" style="color: #8b45c7; text-decoration: none;">🐾 Генератор тварин</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Відкрийте <strong>випадкових тварин</strong> з усього світу для освітніх проектів, ігор та розваг.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎓 Освіта • 🎮 Ігри • 🌍 Природа</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/calculators/random-string-generator.html" style="color: #8b45c7; text-decoration: none;">🔐 Генератор рядків</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Створюйте <strong>випадкові рядки</strong> для паролів, токенів, ідентифікаторів та тестування програм.</p>
+        <div style="font-size: 0.85rem; color: #888;">🔒 Безпека • 💻 Програмування • 🧪 Тестування</div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/categories/entertainment/" style="background: #8b45c7; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(139, 69, 199, 0.3); transition: all 0.3s ease;">
+        🎲 Переглянути всі генератори
+      </a>
+      <p style="margin: 1rem 0 0 0; font-size: 0.9rem; color: #777;">Від <strong>простих чисел</strong> до <strong>складних даних</strong> • <strong>Миттєві результати</strong> • <strong>Необмежене використання</strong></p>
+    </div>
+  </div>
+
   <h3>Категорії калькуляторів</h3>
 
   <p style="margin-bottom: 1.5rem;">
