@@ -204,6 +204,56 @@ seo:
     </div>
   </div>
 
+  <div class="random-generator-section" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(139, 69, 199, 0.1); margin: 2.5rem 0;">
+    <h3 style="margin: 0 0 1rem 0; color: #8b45c7; text-align: center;">🎲 Random Data Generators for Creativity & Development</h3>
+    <p style="margin: 0 0 2rem 0; color: #555; text-align: center; font-size: 1.1rem;">Powerful <strong>random data generators</strong> for creative projects, games, and professional tasks. From <strong>random numbers</strong> to <strong>color palettes</strong> — inspiration and ideas with one click.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-number-generator/" style="color: #8b45c7; text-decoration: none;">🔢 Number Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Generate <strong>random numbers</strong> for lotteries, games, scientific research, and decision making. Customizable range and algorithms.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎰 Lotteries • 🎮 Games • 🔬 Research</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-color-generator/" style="color: #8b45c7; text-decoration: none;">🎨 Color Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Create <strong>random colors</strong> for design, web development, and creative projects. HEX, RGB, HSL color codes included.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎨 Design • 💻 Web • 🖌️ Creative</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-name-generator/" style="color: #8b45c7; text-decoration: none;">👤 Name Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Generate <strong>random names</strong> for characters, projects, teams, and creative tasks in multiple languages and styles.</p>
+        <div style="font-size: 0.85rem; color: #888;">📚 Writing • 🎮 Gaming • 👥 Teams</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-word-generator/" style="color: #8b45c7; text-decoration: none;">📝 Word Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Get <strong>random words</strong> for brainstorming, creative writing, word games, and sparking creative inspiration.</p>
+        <div style="font-size: 0.85rem; color: #888;">💡 Ideas • ✍️ Writing • 🧠 Brainstorming</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-animal-generator/" style="color: #8b45c7; text-decoration: none;">🐾 Animal Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Discover <strong>random animals</strong> from around the world for educational projects, games, and entertainment.</p>
+        <div style="font-size: 0.85rem; color: #888;">🎓 Education • 🎮 Games • 🌍 Nature</div>
+      </div>
+      
+      <div style="background: white; padding: 1.8rem; border-radius: 15px; border: 1px solid rgba(139, 69, 199, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+        <h4 style="margin: 0 0 0.8rem 0; color: #8b45c7; font-size: 1.1rem;"><a href="/en/calculators/random-string-generator/" style="color: #8b45c7; text-decoration: none;">🔐 String Generator</a></h4>
+        <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666; line-height: 1.5;">Create <strong>random strings</strong> for passwords, tokens, identifiers, and software testing purposes.</p>
+        <div style="font-size: 0.85rem; color: #888;">🔒 Security • 💻 Programming • 🧪 Testing</div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/en/categories/entertainment/" style="background: #8b45c7; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; box-shadow: 0 4px 12px rgba(139, 69, 199, 0.3); transition: all 0.3s ease;">
+        🎲 Explore All Random Generators
+      </a>
+      <p style="margin: 1rem 0 0 0; font-size: 0.9rem; color: #777;">From <strong>simple numbers</strong> to <strong>complex data</strong> • <strong>Instant results</strong> • <strong>Unlimited usage</strong></p>
+    </div>
+  </div>
+
   <h3>Categories of calculators</h3>
 
   <p style="margin-bottom: 1.5rem;">
