@@ -204,7 +204,7 @@ seo:
     </div>
   </div>
 
-  <div class="random-generator-section" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(139, 69, 199, 0.1); margin: 2.5rem 0;">
+  <div class="business-plan-section" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2.5rem; border-radius: 18px; border: 1px solid rgba(139, 69, 199, 0.1); margin: 2.5rem 0;">
     <h3 style="margin: 0 0 1rem 0; color: #8b45c7; text-align: center;">🎲 Random Data Generators for Creativity & Development</h3>
     <p style="margin: 0 0 2rem 0; color: #555; text-align: center; font-size: 1.1rem;">Powerful <strong>random data generators</strong> for creative projects, games, and professional tasks. From <strong>random numbers</strong> to <strong>color palettes</strong> — inspiration and ideas with one click.</p>
     
