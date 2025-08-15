@@ -2903,6 +2903,46 @@ body, main, .categories, .category-card, .page-404, .calculator-block, .seo-cont
   }
 }
 
+/* Random Generator Section Mobile Responsiveness */
+@media (max-width: 768px) {
+  .random-generator-section {
+    padding: 1.5rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  
+  /* Override inline grid styles for mobile */
+  .random-generator-section div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .random-generator-section div[style*="background: white"] {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .random-generator-section {
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    border-radius: 12px !important;
+  }
+  
+  .random-generator-section h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .random-generator-section p {
+    font-size: 1rem !important;
+  }
+  
+  .random-generator-section div[style*="background: white"] {
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+  }
+}
+
 /* ============================= */
 /* Real Estate Cash Flow Chart    */
 /* ============================= */
