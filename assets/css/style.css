@@ -4372,6 +4372,17 @@ input[type="date"]::-moz-focus-inner {
   color: white;
 }
 
+.ai-share-button.grok {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+.ai-share-button.grok:hover {
+  background: #111;
+  border-color: #111;
+  color: white;
+}
+
 /* Responsive design for AI buttons */
 @media (max-width: 768px) {
   .ai-buttons-row {
