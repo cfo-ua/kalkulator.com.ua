@@ -2,6 +2,9 @@
 AI Share Buttons Component
 Generates AI platform share buttons with the current page context
 Supports both Ukrainian and English languages
+Updated: Direct links to destination (fixes Ahrefs "Page has links to redirect")
+- ChatGPT: use https://chatgpt.com/?prompt=...
+- Grok: use https://x.ai/ (no prompt passing possible)
 {% endcomment %}
 
 {%- assign current_url = page.url | absolute_url -%}
@@ -15,7 +18,7 @@ Supports both Ukrainian and English languages
 {%- else -%}
   {%- assign is_english = false -%}
   {%- assign ai_intro_text = 'Отримайте допомогу ШІ з цим калькулятором:' -%}
-  {%- assign ai_query = 'Проаналізуйте та надайте поради щодо цього калькулятора: ' | append: page.title | append: ' на сторінці ' | append: full_url | append: '. Надайте практичні поради та поясніть, як ефективно використовувати цей калькулятор.' -%}
+  {%- assign ai_query = 'Проаналізуйте та надайте поради щодо цього калькулятора: ' | append: page.title | append: ' на сторінці ' | append: full_url | append: '. Дайте практичні поради та поясніть, як ефективно користуватися цим калькулятором.' -%}
 {%- endif -%}
 
 {%- assign encoded_query = ai_query | url_encode -%}
@@ -24,8 +27,9 @@ Supports both Ukrainian and English languages
   <div class="ai-share-buttons">
     <p class="ai-share-intro">{{ ai_intro_text }}</p>
     <div class="ai-buttons-row">
+      <!-- ChatGPT direct link (no redirect) -->
       <a class="ai-share-button chatgpt" 
-         href="https://chat.openai.com/?q={{ encoded_query }}" 
+         href="https://chatgpt.com/?prompt={{ encoded_query }}" 
          target="_blank" 
          rel="nofollow noopener"
          title="{% if is_english %}Analyze with ChatGPT{% else %}Аналіз з ChatGPT{% endif %}">
@@ -56,8 +60,9 @@ Supports both Ukrainian and English languages
         Gemini
       </a>
 
+      <!-- Grok: only direct to https://x.ai/, cannot pass prompt (no redirect) -->
       <a class="ai-share-button grok" 
-         href="https://grok.x.ai/?q={{ encoded_query }}"
+         href="https://x.ai/"
          target="_blank"
          rel="nofollow noopener"
          title="{% if is_english %}Ask Grok{% else %}Запитати Grok{% endif %}">
