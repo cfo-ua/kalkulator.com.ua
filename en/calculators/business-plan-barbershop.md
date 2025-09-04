@@ -160,59 +160,57 @@ faq:
       <h4>💰 Initial Investment</h4>
       <label>
         Number of Workstations:
-        <input type="number" id="workstations" min="1" max="8" value="3" required>
+        <input type="number" id="workstations" value="3" required>
       </label>
       <label>
         Renovation & Design ($):
-        <input type="number" id="renovation-cost" min="3000" value="8000" required>
+        <input type="number" id="renovation-cost" value="8000" required>
       </label>
       <label>
         Equipment & Furniture ($):
-        <input type="number" id="equipment-cost" min="5000" value="12000" required>
+        <input type="number" id="equipment-cost" value="12000" required>
       </label>
       <label>
         Licenses & Working Capital ($):
-        <input type="number" id="working-capital" min="2000" value="6000" required>
+        <input type="number" id="working-capital" value="6000" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>📊 Operational Parameters</h4>
       <label>
         Average Haircut Price ($):
-        <input type="number" id="avg-haircut-price" min="5" max="50" value="15" required>
+        <input type="number" id="avg-haircut-price" value="15" required>
       </label>
       <label>
         Clients per Day (per station):
-        <input type="number" id="clients-per-day" min="8" max="30" value="18" required>
+        <input type="number" id="clients-per-day" value="8" required>
       </label>
       <label>
         Working Days per Week:
-        <input type="number" id="working-days" min="5" max="7" value="6" required>
+        <input type="number" id="working-days" value="6" required>
       </label>
       <label>
         Barber Commission Share (%):
-        <input type="number" id="barber-commission" min="40" max="70" value="50" required>
+        <input type="number" id="barber-commission" value="50" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>💸 Monthly Operating Costs</h4>
       <label>
         Rent ($):
-        <input type="number" id="monthly-rent" min="600" value="1800" required>
+        <input type="number" id="monthly-rent" value="1800" required>
       </label>
       <label>
         Utilities (Electric, Water, Internet) ($):
-        <input type="number" id="utilities" min="200" value="400" required>
+        <input type="number" id="utilities" value="400" required>
       </label>
       <label>
         Supplies & Products ($):
-        <input type="number" id="supplies" min="300" value="600" required>
+        <input type="number" id="supplies" value="600" required>
       </label>
       <label>
         Other Expenses (Marketing, Insurance, Phone) ($):
-        <input type="number" id="other-expenses" min="200" value="500" required>
+        <input type="number" id="other-expenses" value="500" required>
       </label>
     </div>
 
