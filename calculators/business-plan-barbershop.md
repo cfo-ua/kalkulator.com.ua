@@ -135,59 +135,57 @@ faq:
       <h4>💰 Стартові інвестиції</h4>
       <label>
         Кількість робочих місць:
-        <input type="number" id="workstations" min="1" max="8" value="3" required>
+        <input type="number" id="workstations" value="3" required>
       </label>
       <label>
         Ремонт та дизайн ($):
-        <input type="number" id="renovation-cost" min="3000" value="8000" required>
+        <input type="number" id="renovation-cost" value="8000" required>
       </label>
       <label>
         Обладнання та меблі ($):
-        <input type="number" id="equipment-cost" min="5000" value="12000" required>
+        <input type="number" id="equipment-cost" value="12000" required>
       </label>
       <label>
         Ліцензії та оборотні кошти ($):
-        <input type="number" id="working-capital" min="2000" value="6000" required>
+        <input type="number" id="working-capital" value="6000" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>📊 Операційні параметри</h4>
       <label>
         Середня ціна стрижки ($):
-        <input type="number" id="avg-haircut-price" min="5" max="50" value="15" required>
+        <input type="number" id="avg-haircut-price" value="15" required>
       </label>
       <label>
         Клієнтів на день (на одне місце):
-        <input type="number" id="clients-per-day" min="8" max="30" value="18" required>
+        <input type="number" id="clients-per-day" value="8" required>
       </label>
       <label>
         Робочих днів на тиждень:
-        <input type="number" id="working-days" min="5" max="7" value="6" required>
+        <input type="number" id="working-days" value="6" required>
       </label>
       <label>
         Частка майстра від виручки (%):
-        <input type="number" id="barber-commission" min="40" max="70" value="50" required>
+        <input type="number" id="barber-commission" value="50" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Оренда приміщення ($):
-        <input type="number" id="monthly-rent" min="600" value="1800" required>
+        <input type="number" id="monthly-rent" value="1800" required>
       </label>
       <label>
         Комунальні послуги ($):
-        <input type="number" id="utilities" min="200" value="400" required>
+        <input type="number" id="utilities" value="400" required>
       </label>
       <label>
         Витратні матеріали та косметика ($):
-        <input type="number" id="supplies" min="300" value="600" required>
+        <input type="number" id="supplies" value="600" required>
       </label>
       <label>
         Інші витрати (реклама, страхування, зв'язок) ($):
-        <input type="number" id="other-expenses" min="200" value="500" required>
+        <input type="number" id="other-expenses" value="500" required>
       </label>
     </div>
 
