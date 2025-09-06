@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const highSeasonMonths = parseFloat(document.getElementById('high-season-months').value);
       const staffCosts = parseFloat(document.getElementById('staff-costs').value);
       const utilities = parseFloat(document.getElementById('utilities').value);
-      const marketing = parseFloat(document.getElementById('marketing').value);
+      const marketingPercent = parseFloat(document.getElementById('marketing').value); // % of revenue
       const otherExpenses = parseFloat(document.getElementById('other-expenses').value);
 
       if (rooms <= 0 || avgNightlyRate <= 0 || highSeasonOccupancy <= 0 || lowSeasonOccupancy <= 0) {
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const avgMonthlyRevenueWithExtras = totalRevenueWithExtras / 12;
 
       // Monthly expenses
+      const marketing = (totalRevenueWithExtras / 12) * (marketingPercent / 100);
       const totalMonthlyExpenses = staffCosts + utilities + marketing + otherExpenses;
       const annualExpenses = totalMonthlyExpenses * 12;
       
@@ -181,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <span>${formatNumber(utilities)}</span>
                 </div>
                 <div class="breakdown-row">
-                  <span>Маркетинг та комісії платформ</span>
+                  <span>Маркетинг та комісії платформ (${marketingPercent}% від доходу)</span>
                   <span>${formatNumber(marketing)}</span>
                 </div>
                 <div class="breakdown-row">
