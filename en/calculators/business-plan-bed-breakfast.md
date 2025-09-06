@@ -28,7 +28,7 @@ seo:
     - tourism business calculator
   content: |
     <h2>Bed & Breakfast Business Plan Calculator</h2>
-    <p>Planning to open a <strong>bed & breakfast</strong> or start an <strong>AirBnB business</strong>? Our calculator helps you analyze <strong>B&B profitability</strong>, startup costs, and payback periods for your hospitality venture.</p>
+    <p>Planning to open a <strong>bed & breakfast</strong> or start an <strong>AirBnB business</strong>? Our calculator helps you analyze <strong>B&B profitability</strong>, startup costs, and payback[...]
 
     <h3>What the Calculator Provides:</h3>
     <ul>
@@ -192,8 +192,8 @@ faq:
         <input type="number" id="utilities" value="1200" required>
       </label>
       <label>
-        Marketing & Platform Commissions ($):
-        <input type="number" id="marketing" value="800" required>
+        Marketing & Platform Commissions (% of revenue):
+        <input type="number" id="marketing" value="10" required>
       </label>
       <label>
         Other Expenses (Insurance, Supplies) ($):
