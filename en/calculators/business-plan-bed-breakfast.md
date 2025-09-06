@@ -147,59 +147,57 @@ faq:
       <h4>💰 Initial Investment</h4>
       <label>
         Number of Rooms:
-        <input type="number" id="rooms" min="1" max="20" value="6" required>
+        <input type="number" id="rooms" value="6" required>
       </label>
       <label>
         Property Cost ($):
-        <input type="number" id="property-cost" min="50000" value="200000" required>
+        <input type="number" id="property-cost" value="200000" required>
       </label>
       <label>
         Renovation & Furnishing ($):
-        <input type="number" id="renovation-cost" min="10000" value="50000" required>
+        <input type="number" id="renovation-cost" value="50000" required>
       </label>
       <label>
         Additional Costs - Licenses, Equipment ($):
-        <input type="number" id="additional-costs" min="2000" value="8000" required>
+        <input type="number" id="additional-costs" value="8000" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>📊 Operational Parameters</h4>
       <label>
         Average Nightly Rate ($):
-        <input type="number" id="avg-nightly-rate" min="20" max="300" value="65" required>
+        <input type="number" id="avg-nightly-rate" value="65" required>
       </label>
       <label>
         High Season Occupancy (%):
-        <input type="number" id="high-season-occupancy" min="50" max="95" value="75" required>
+        <input type="number" id="high-season-occupancy" value="75" required>
       </label>
       <label>
         Low Season Occupancy (%):
-        <input type="number" id="low-season-occupancy" min="20" max="70" value="45" required>
+        <input type="number" id="low-season-occupancy" value="45" required>
       </label>
       <label>
         High Season Months:
-        <input type="number" id="high-season-months" min="3" max="9" value="6" required>
+        <input type="number" id="high-season-months" value="6" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>💸 Monthly Operating Costs</h4>
       <label>
         Staff (Housekeeping, Front Desk) ($):
-        <input type="number" id="staff-costs" min="1000" value="2500" required>
+        <input type="number" id="staff-costs" value="2500" required>
       </label>
       <label>
         Utilities (Electric, Water, Internet) ($):
-        <input type="number" id="utilities" min="500" value="1200" required>
+        <input type="number" id="utilities" value="1200" required>
       </label>
       <label>
         Marketing & Platform Commissions ($):
-        <input type="number" id="marketing" min="200" value="800" required>
+        <input type="number" id="marketing" value="800" required>
       </label>
       <label>
         Other Expenses (Insurance, Supplies) ($):
-        <input type="number" id="other-expenses" min="300" value="600" required>
+        <input type="number" id="other-expenses" value="600" required>
       </label>
     </div>
 
