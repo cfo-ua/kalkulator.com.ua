@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.currentAccuracy.textContent = `${accuracy}%`;
       
       // Store WPM for chart
-      testState.wpmHistory.push({ time: elapsedMinutes, wpm: wmp });
+      testState.wpmHistory.push({ time: elapsedMinutes, wpm: wpm });
     }
 
     function restartTest() {
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.fillStyle = '#157aff';
       testState.wpmHistory.forEach((point, index) => {
         const x = padding + (index / (testState.wpmHistory.length - 1)) * chartWidth;
-        const y = height - padding - (point.wmp / maxWpm) * chartHeight;
+        const y = height - padding - (point.wpm / maxWpm) * chartHeight;
         
         ctx.beginPath();
         ctx.arc(x, y, 3, 0, 2 * Math.PI);
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.currentAccuracy.textContent = `${accuracy}%`;
       
       // Store WPM for chart (fix the typo here)
-      testState.wpmHistory.push({ time: elapsedMinutes, wmp: wpm });
+      testState.wpmHistory.push({ time: elapsedMinutes, wpm: wpm });
     }
     
     // Fix the typo in drawPerformanceChart function
@@ -489,8 +489,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.lineWidth = 2;
       ctx.beginPath();
       
-      testState.wmpHistory.forEach((point, index) => {
-        const x = padding + (index / (testState.wmpHistory.length - 1)) * chartWidth;
+      testState.wpmHistory.forEach((point, index) => {
+        const x = padding + (index / (testState.wpmHistory.length - 1)) * chartWidth;
         const y = height - padding - (point.wpm / maxWpm) * chartHeight;
         
         if (index === 0) {
@@ -504,8 +504,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
       // Draw points
       ctx.fillStyle = '#157aff';
-      testState.wmpHistory.forEach((point, index) => {
-        const x = padding + (index / (testState.wmpHistory.length - 1)) * chartWidth;
+      testState.wpmHistory.forEach((point, index) => {
+        const x = padding + (index / (testState.wpmHistory.length - 1)) * chartWidth;
         const y = height - padding - (point.wpm / maxWpm) * chartHeight;
         
         ctx.beginPath();
