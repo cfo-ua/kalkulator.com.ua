@@ -116,71 +116,68 @@ faq:
       <h4>💰 Стартові інвестиції</h4>
       <label>
         Площа магазину (кв.м):
-        <input type="number" id="shop-area" min="50" max="500" value="120" required>
+        <input type="number" id="shop-area" value="120" required>
       </label>
       <label>
         Початкові товарні запаси ($):
-        <input type="number" id="initial-inventory" min="15000" value="50000" required>
+        <input type="number" id="initial-inventory" value="50000" required>
       </label>
       <label>
         Ремонт та обладнання ($):
-        <input type="number" id="renovation-equipment" min="5000" value="15000" required>
+        <input type="number" id="renovation-equipment" value="15000" required>
       </label>
       <label>
-        Додаткові витрати - ліцензії, реклама ($):
-        <input type="number" id="additional-costs" min="2000" value="8000" required>
+        Додаткові витрати - податки, реклама ($):
+        <input type="number" id="additional-costs" value="8000" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>📊 Операційні параметри</h4>
       <label>
         Середня ціна велосипеду ($):
-        <input type="number" id="avg-bike-price" min="200" max="2000" value="450" required>
+        <input type="number" id="avg-bike-price" value="450" required>
       </label>
       <label>
         Велосипедів на місяць - високий сезон:
-        <input type="number" id="high-season-bikes" min="10" max="100" value="35" required>
+        <input type="number" id="high-season-bikes" value="35" required>
       </label>
       <label>
         Велосипедів на місяць - низький сезон:
-        <input type="number" id="low-season-bikes" min="5" max="60" value="15" required>
+        <input type="number" id="low-season-bikes" value="15" required>
       </label>
       <label>
         Місяців високого сезону:
-        <input type="number" id="high-season-months" min="4" max="10" value="7" required>
+        <input type="number" id="high-season-months" value="7" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>💸 Щомісячні витрати</h4>
       <label>
         Оренда приміщення ($):
-        <input type="number" id="rent" min="800" value="2500" required>
+        <input type="number" id="rent" value="2500" required>
       </label>
       <label>
         Персонал (зарплати) ($):
-        <input type="number" id="staff-costs" min="1000" value="2200" required>
+        <input type="number" id="staff-costs" value="2200" required>
       </label>
       <label>
         Комунальні послуги ($):
-        <input type="number" id="utilities" min="200" value="500" required>
+        <input type="number" id="utilities" value="500" required>
       </label>
       <label>
         Маркетинг та інші витрати ($):
-        <input type="number" id="marketing-other" min="300" value="800" required>
+        <input type="number" id="marketing-other" value="800" required>
       </label>
     </div>
-
     <div class="input-group">
       <h4>🔧 Додаткові послуги</h4>
       <label>
         Щомісячний дохід від ремонту ($):
-        <input type="number" id="repair-revenue" min="0" value="1500" required>
+        <input type="number" id="repair-revenue" value="1500" required>
       </label>
       <label>
         Щомісячний дохід від аксесуарів ($):
-        <input type="number" id="accessories-revenue" min="0" value="2200" required>
+        <input type="number" id="accessories-revenue" value="2200" required>
       </label>
     </div>
 
