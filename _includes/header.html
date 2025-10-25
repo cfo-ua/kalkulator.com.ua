@@ -45,6 +45,13 @@
      
       <a href="{% if lang == 'en' %}/en/{% else %}/{% endif %}">{% if lang == 'en' %}Home{% else %}На головну{% endif %}</a>
       
+      {% comment %} Support / Підтримка button: language-specific external payment links {% endcomment %}
+      {% if lang == 'en' %}
+        <a href="https://secure.wayforpay.com/button/b8327de6ff214">Support</a>
+      {% else %}
+        <a href="https://secure.wayforpay.com/button/b9ec384d7899f">Підтримка</a>
+      {% endif %}
+      
       <div class="lang-switcher">
         {% if lang == 'en' %}
           {% assign uk_url = page.url | replace: '/en/', '/' %}
